@@ -1106,3 +1106,4 @@ historical_rival = HAB
 		mil = 1
 	}
 }
+}

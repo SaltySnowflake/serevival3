@@ -13,3 +13,4 @@ historical_friend = PAP
 		adm = 3
 		mil = 3
 	}
+}
