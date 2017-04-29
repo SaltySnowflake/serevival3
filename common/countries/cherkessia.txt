@@ -70,7 +70,6 @@ monarch_names = {
 	"Tachbsaroukov" = 0
 	"Cholokh" = 0
 	"Mait" = 0
-	"Otchikan" = 0
 	"Baachik" = 0
 	"Tachat" = 0
 	"Smbat" = 0
