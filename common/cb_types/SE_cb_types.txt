@@ -1,0 +1,17 @@
+# Defected province
+cb_free_occitan_mission = {
+
+	is_triggered_only = yes
+	months = 300
+	
+	war_goal = free_occitan_province
+}
+
+# Convert Heretics
+cb_cathar_crusade = {
+
+	is_triggered_only = yes
+	months = 300
+	
+	war_goal = cathar_crusade
+}

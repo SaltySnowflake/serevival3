@@ -1,0 +1,29 @@
+#1835 - Mino
+
+owner = TKI
+controller = TKI
+culture = chubu
+religion = shinto
+capital = "Inabayama"
+trade_goods = barley
+hre = no
+base_tax = 3
+base_manpower = 3
+base_production = 4
+is_city = yes
+add_core = TKI
+add_core = KGK
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+1440.1.1 = { fort_15th = yes } # Inabayama (later Gifu) Castle, Estimation
+1542.1.1 = { discovered_by = POR }
+1561.1.1 = { add_core = ODA }
+1567.10.1 = { owner = ODA controller = ODA remove_core = TKI remove_core = KGK }
+1567.10.1 = { capital = "Gifu" } # Oda Nobunaga changed the name of city.
+1573.7.3 = { add_core = JAP owner = JAP controller = JAP remove_core = ODA }
+1600.9.15 = { fort_15th = no } # Gifu Castle was taken down

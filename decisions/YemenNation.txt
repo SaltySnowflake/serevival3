@@ -1,0 +1,85 @@
+country_decisions = {
+
+	yemen_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			primary_culture = yemeni_culture
+			NOT = { exists = ADE }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = ARB }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 388
+			owns_core_province = 390
+			owns_core_province = 387
+			owns_core_province = 391
+			owns_core_province = 2345
+			owns_core_province = 2344
+			owns_core_province = 2343
+			owns_core_province = 389
+			owns_core_province = 402
+		}
+		effect = {
+			change_tag = ADE
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			random_owned_province = {
+				limit = { primary_culture = yemeni_culture }
+				add_base_tax = 1
+			}
+			yemen_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ADE
+			}
+			hadramut_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ADE
+			}
+			sarat_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ADE
+			}
+			add_permanent_claim = 1099
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { NOT = { has_idea_group = ADE_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

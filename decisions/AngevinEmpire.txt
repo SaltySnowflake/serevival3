@@ -1,0 +1,223 @@
+country_decisions = {
+
+	angevin_union = {
+		major = yes
+
+		potential = {
+			OR = {
+				culture_group = british
+				culture_group = french
+				primary_culture = breton
+			}
+			OR = {
+				capital_scope = { region = france_region }
+				capital_scope = { region = british_isles_region }
+			}
+			OR = {
+				dynasty = "Plantagenet"
+				dynasty = "York"
+				dynasty = "Lancaster"
+				dynasty = "de Valois"
+				dynasty = "de Anjou"
+				dynasty = "de Dreux"
+				dynasty = "de Artois"
+				dynasty = "de Bourbon"
+				dynasty = "Turpen" #Why not ahhaah
+			}
+			NOT = { exists = ANV }
+			NOT = { exists = GBR }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = CEL }
+			NOT = { tag = HBE }
+			OR = {
+				ai = no
+				OR = {
+					owns_core_province = 183	# Ile-de-France
+					owns_core_province = 236	# Middlesex
+					owns_core_province = 178	# Anjou
+					num_of_cities = 10
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			has_regency = no
+			brittany_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			normandy_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			poitou_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			guyenne_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			pyrenees_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			wessex_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			essex_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			mercia_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			northern_england_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			lancashire_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			wales_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			cornwall_area = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+			177 = { country_or_vassal_holds = ROOT }	# Maine
+			178 = { country_or_vassal_holds = ROOT }	# Anjou
+			3109 = { country_or_vassal_holds = ROOT }	# Le Marche
+			195 = { country_or_vassal_holds = ROOT }	# Limousin
+			199 = { country_or_vassal_holds = ROOT }	# Auvergne
+		}
+		effect = {
+			change_tag = ANV
+			if = {
+				limit = { is_part_of_hre = yes }
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			if = {
+				limit = { senior_union_with = FRA }
+				break_union = FRA
+				vassalize = FRA
+			}
+			random_owned_province = { add_base_tax = 1 }
+			custom_tooltip = bretonassim
+			custom_tooltip = cornishassim
+			custom_tooltip = welshassim
+			hidden_effect = {
+				if = {
+					limit = { primary_culture = breton }
+					change_primary_culture = bretonfrench
+				}
+				every_core_province = { 
+					limit = { culture = breton }
+					change_culture = bretonfrench
+				}
+				every_core_province = { 
+					limit = { culture = welsh }
+					change_culture = welshbrit
+				}
+				every_core_province = { 
+					limit = { culture = cornish }
+					change_culture = cornishbrit
+				}
+			}
+			capital_scope = {
+				if = {
+					limit = { NOT = { culture = ROOT } }
+					tooltip = { change_culture = ROOT }
+					hidden_effect = {
+						if = { 
+							limit = { owner = { primary_culture = bretonfrench } }
+							change_culture = bretonfrench
+						}
+						if = { 
+							limit = { owner = { NOT = { primary_culture = bretonfrench } } }
+							change_culture = ROOT
+						}
+					}
+				}
+			}
+			if = {
+				limit = { culture_group = french }
+				add_accepted_culture = english
+				add_accepted_culture = northumbrian
+				add_accepted_culture = scottish
+				add_accepted_culture = welshbrit
+				add_accepted_culture = cornishbrit
+			}
+			if = {
+				limit = { culture_group = british }
+				add_accepted_culture = cosmopolitan_french
+				add_accepted_culture = gascon
+				add_accepted_culture = normand
+				add_accepted_culture = occitain
+				add_accepted_culture = arpitan
+				add_accepted_culture = bretonfrench
+			}
+			every_owned_province = {
+				limit = { 
+					NOT = { is_core = ROOT } 
+					OR = {
+						culture_group = british
+						culture_group = french
+					}
+				}
+				add_core = ANV
+			}
+			france_region = {
+				limit = { NOT = { is_core = ROOT } }
+				add_permanent_claim = ANV
+			}
+			british_isles_region = {
+				limit = { NOT = { is_core = ROOT } }
+				add_permanent_claim = ANV 
+			}
+			ireland_area = {
+				limit = { NOT = { is_core = ROOT } }
+				add_permanent_claim = ANV 
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 50
+		}
+
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

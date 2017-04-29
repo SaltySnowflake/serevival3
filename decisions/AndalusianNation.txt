@@ -1,0 +1,190 @@
+country_decisions = {
+
+	andalusian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = SPA }
+			NOT = { tag = ADU }
+			NOT = { tag = MGB }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				primary_culture = andalucian
+				culture_group = maghrebi
+			}
+			religion_group = muslim
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = ADU }
+					num_of_cities = 15 #6
+					any_owned_province = {
+						OR = {
+							area = upper_andalucia_area
+							area = lower_andalucia_area
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			NOT = { exists = ADU }
+			is_nomad = no
+			is_subject = no
+			is_at_war = no
+			is_tribal = no
+			owns_core_province = 221			# Murcia
+			owns_core_province = 223			# Granada
+			owns_core_province = 224			# Andalucia
+			owns_core_province = 225			# Cordoba
+			owns_core_province = 226			# Gibraltar
+			owns_core_province = 1748			# Jaen
+			owns_core_province = 1749			# Cadiz
+			owns_core_province = 218			# Badajoz
+			owns_core_province = 222			# Almeria
+			owns_core_province = 3096			# Albacete
+			owns_core_province = 3097			# Malaga
+			owns_core_province = 3098			# Huelva
+			owns_core_province = 3099			# Merida
+			OR = {
+				AND = {
+					owns_core_province = 230			# Algarve
+					owns_core_province = 229			# Alentejo
+				}
+				AND = {
+					owns_core_province = 1750			# Alicante
+					owns_core_province = 220			# Valencia
+				}
+			}
+		}
+		effect = {
+			change_tag = ADU
+			if = {
+				limit = {
+					OR = {
+						government = tribal_kingdom
+						government = tribal_despotism
+						government = tribal_federation
+						government = tribal_democracy
+					}
+				}
+				change_government = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture_group = maghrebi
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+					}
+				}
+				every_owned_province = {
+					limit = { 
+						culture_group = maghrebi
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+					}
+					change_culture = andalucian
+				}
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = andalucian }
+				}
+				change_primary_culture = andalucian
+			}
+			random_owned_province = {
+				limit = { culture = andalucian }
+				add_base_tax = 1
+			}
+			225 = {
+			 	add_base_tax = 1
+				add_base_production = 1
+			 	add_base_manpower = 1
+			}
+			set_capital = 225 # Cordoba
+			lower_andalucia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ADU
+			}
+			upper_andalucia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ADU
+			}
+			toledo_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ADU
+			}
+			murcia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ADU
+			}
+			extremadura_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ADU
+			}
+			add_permanent_claim = 230
+			add_permanent_claim = 229
+			add_permanent_claim = 218
+			add_permanent_claim = 220
+			add_permanent_claim = 1750
+			add_permanent_claim = 1747
+			add_prestige = 25
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+}

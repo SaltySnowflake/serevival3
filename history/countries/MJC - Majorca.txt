@@ -1,0 +1,17 @@
+government = catalan_monarchy
+government_rank = 1
+primary_culture = catalan
+religion = catholic
+technology_group = western
+capital = 333 # Baleares
+
+1444.11.01 = {
+	monarch = {
+		name = "John Jacob"
+		dynasty = "Palaiologos"
+		birth_date = 1395.3.23
+		adm = 1
+		dip = 2
+		mil = 6
+	}
+}

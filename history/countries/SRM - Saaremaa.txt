@@ -1,0 +1,17 @@
+government = feudal_monarchy
+government_rank = 1
+primary_culture = estonian
+religion = finnish_pagan_reformed
+technology_group = western
+historical_friend = KUR
+capital = 35 #Saaremaa
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

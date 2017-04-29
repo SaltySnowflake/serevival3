@@ -1,0 +1,5 @@
+government = administrative_republic
+primary_culture = ezo_japanese
+religion = shinto
+technology_group = chinese
+capital = 1847	# Ishikari

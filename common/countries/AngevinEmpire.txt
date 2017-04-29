@@ -1,0 +1,238 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 105 40 188 }
+
+historical_idea_groups = {
+	quality_ideas
+	economic_ideas
+	trade_ideas
+	offensive_ideas	
+	exploration_ideas
+	administrative_ideas
+	diplomatic_ideas
+	naval_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	chevauchee
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	french_caracolle
+	irish_charge
+	anglofrench_line
+	french_dragoon
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+preferred_religion = reformed
+
+monarch_names = {
+	"Henry #2" = 100
+	"Edward #0" = 60
+	"Charles #0" = 40
+	"James #0" = 40
+	"William #0" = 20
+	"Richard #2" = 20
+	"Mary #0" = -20
+	"Philip #0" = 20
+	"Henry #0 Frederick" = 10
+	"Anne #0" = -10
+	"Arthur #0" = 10
+	"Charles #0 James" = 10
+	"Edgar #0" = 10
+	"Elizabeth #0" = -10
+	"Jane #0" = -10
+	"Thomas #0" = 10
+	"Edmund #0" = 5
+	"George #0" = 5
+	"Margaret #0" = -1
+	"John #2" = 1
+	"Jacob #0" = 0
+	"Humphrey #0" = 0
+	"Stephen #0" = 1
+	"Adam #0" = 0
+	"Alexander #0" = 0
+	"Albert #0" = 0
+	"Alfred #0" = 0
+	"Ambrose #0" = 0
+	"Andrew #0" = 0
+	"Anthony #0" = 0
+	"Archibald #0" = 0
+	"Benjamin #0" = 0
+	"Christopher #0" = 0
+	"Daniel #0" = 0
+	"David #0" = 0
+	"Ernest #0" = 0
+	"Francis #0" = 0
+	"Geoffrey #0" = 0
+	"Guy #0" = 0
+	"Horatio #0" = 0
+	"Hugh #0" = 0
+	"Isaac #0" = 0
+	"Jeremy #0" = 0
+	"Jonathan #0" = 0
+	"Joseph #0" = 0
+	"Lawrence #0" = 0
+	"Matthew #0" = 0
+	"Nehemiah #0" = 0
+	"Oliver #0" = 0
+	"Samuel #0" = 0
+	"Sydney #0" = 0
+	"Louis #10" = 160
+	"Charles #5" = 80
+	"Henri #1" = 60
+	"François #0" = 40
+	"Philippe #0" = 10
+	"Jean #0" = 10
+	"Gaston #0" = 10
+	"Nicolas #0 Henri" = 10
+	"Louis François #0" = 5
+	"Jacques #0" = 5
+	"Joachim #0" = 5
+	"Xavier #0" = 5
+	"Robert #0" = 1
+	"Hughes #0" = 1
+	"Raoul #0" = 1
+	"Alexandre #0" = 0
+	"Alphonse #0" = 0
+	"Ambroise #0" = 0
+	"Armand #0" = 0
+	"Augustin #0" = 0
+	"Barthélémy #0" = 0
+	"Benoît #0" = 0
+	"Bernard #0" = 0
+	"Blaise #0" = 0
+	"Claude #0" = 0
+	"Clément #0" = 0
+	"Denis #0" = 0
+	"Étienne #0" = 0
+	"Firmin #0" = 0
+	"Georges #0" = 0
+	"Gui #0" = 0
+	"Guillaume #0" = 0
+	"Ignace #0" = 0
+	"Jean-Antoine #0" = 0
+	"Jean-Baptiste #0" = 0
+	"Jean-Jacques #0" = 0
+	"Jean-Philippe #0" = 0
+	"Josquin #0" = 0
+	"Jules #0" = 0
+	"Marc #0" = 0
+	"Maurice #0" = 0
+	"Maximiliem #0" = 0
+	"Michel #0" = 0
+	"Nicolas #0" = 0
+	"Pascal #0" = 0
+	"Pierre #0" = 0
+	"René #0" = 0
+	"Sébastien #0" = 0
+	"Simon #0" = 0
+	"Joan #0" = -1
+}
+
+leader_names = {
+	Albemarle Amherst Anson
+	Buckingham Braddock Byron Burgoyne Beresford Brock Benbow Blake Bedford Boscawen Baffin Button
+	Clarence "de Clifford" Cromwell Cumberland Clinton Cornwallis Clive Cabot Carleton Cavendish Cook
+	Dampier Davis Drake
+	Essex
+	Fairfax Frobisher
+	Gloucester Gilbert
+	Howe Howard Herbert Hawke Hood Hastings Hudson
+	Leicester
+	Marlborough Middleton Moore
+	Northumberland Norfolk
+	Procter
+	Rooke Rodney Raleigh
+	Salisbury Somerset Suffolk Saunders Smith
+	Talbot Tarleton
+	Uxbridge
+	Warwick Wolfe
+	York
+	d'Ambleteuse d'Aulnay
+	"de Beauharnais" "de Bercy" "de Béthune" "de Boissieu" "de Bonnefoy" "de Bonneuil" "du Bosquet" "de la Bretonnière" "de Broglie"
+	"de Castaing" "de Caumartin" "de Chambly" "de Chambronne" "de Champmartin" "de Chevigny" "des Coulons" "de CrÃ¨vecoeur" "de Crussol"
+	"de Dampierre" Desgouttes Duquesne
+	"des Ecures" d'Entraigues d'Estrées
+	"du Fournay"
+	"de Galard"
+	"des Herbiers"
+	"de La Barthe" "de La Ferrandie" "de La Galissonière" "de La Mothe" "de La Motte d'Airan" "de La Porte" "Le Tellier" "de Lhéry" "de Luynes"
+	"de Marguerye" "de Maurepas"
+	"de Neufchâtel"
+	"d'Ornano"
+	"de Pellefort"
+	"de Richemont" "de Rochechouart" "de Rochemaure" "de Rieu"
+	"de Saint Chamond" "de Saint Esprit" "de Saint Germain" "de Saint Omer" "de Siorac"
+	"de Tocqueville" "de la Tour d'Auvergne" "de Tréville"
+	"d'Usson"
+	"du Valentinois" "de Vergennes" "de Vibien" "de Vigny" "de Villeneuve"
+}
+
+ship_names = {
+	Achille Adventure Ajax Albemarle Alexander "Anne Gallant" Antelope "Ark Royal" Assurance Audacious "Anne Royal"
+	Bear Bellerophon Bonaventure Boyne Britannia Buckingham
+	Charles Christ Constant Convertine Culloden Cumberland Crane Crescent
+	Defence Defiance Destiny Dragon Dreadnought
+	"Edward Howard" Elizabeth Eltham Essex Expedition Eleanor Eagle
+	Foresight Foudroyant Falcon Fortune Fellowship
+	"Gabriel Royal" Garland George Gibraltar Gloucester Goliath "Grace Dieu" Grafton "Grand Mistress" "Great Barbara" "Great Bark" "Great Elizabeth"
+	"Great Harry" "Great Nicholas" Guernsey Greyhound Globe
+	Haarlem "Happy Entrance" Hector "Henrietta Maria" Hope Hart
+	James "John Baptist" Jennet
+	"Katherine Forteleza" Kent
+	Leander Leopard Lion Lizard
+	Majestic Margaret Mary "Mary Rose" Mercury Merhonour Michael Minion Minotaur 
+	Nonpareil Nonsuch Northumberland Nottingham
+	Orion
+	Peter Providence "Prince Frederick" Primrose "Prince Royal" Phoenix Pelican
+	"Queen Charlotte"
+	Rainbow "Red Lion" Regent Renown Repulse Revenge "Royal Anne" "Royal Charles" "Royal Prince" Recovery
+	"Scourge of Malice" Sovereign "Sovereign o the Seas" "St Andrew" "St Esprit" "St George" "St Matthew" Suffolk Superb Swallow Swiftsure
+	Speedwell Scout "Seven Stars" "St Anne" Swan Star Satisfaction
+	Theseus Tigre Tramontana Triumph Trinity Tiger
+	Unicorn
+	Vanguard Victory
+	Warspite Worcester Weymouth
+	l'Actif l'Actionnaire l'Aigle l'Alcide l'Alexandre l'Ambitieux l'Amphion l'Ardente l'Arrogant l'ArtÃ©sien l'AssurÃ© l'AstrÃ©e
+	"la Belle Poule" "le Bourbon" "le Brillant" "le Bien AimÃ©" "la Bizarre" "la Bretagne" "la BorÃ©e" "la Bourgogne" "le Brave" 
+	"le Caton" "le Conquérant" "le Content" "la Couronne" 
+	"le Dauphin Royal" "le Destin" "le DiadÃ¨me" "le Duc de Bourgogne" 
+	"l'Eveillé" "l'Eméillon"
+	"le Fantasque" "le Fendant" "le Fier" "le Flamant" "la Fleur de Lis" "le Fleuron" "le Foudroyant"
+	"le Glorieux"
+	"le Hardi" l'Hermione
+	"le Gaillard" "la Grande Hermine" "le Héros"
+	"l'Illustre" "l'Indien" "l'Intrépide" "l'Invincible" 
+	"le Languedoc" "la Licorne" "le Lys"
+	"le Magnanime" "le Magnifique" "le Majestueux" "la Marie-Catherine" "le Marquis" "le Mars" "le Marseillais" "le Minotaure" "le Monarque"
+	"le Neptune"
+	l'Océan l'Oiseau l'Orient
+	"le Pélican" "le Protecteur" "le Prothée" "la Provence" 
+	"la Railleuse" "le Redoutable" "le RéflÃ©chi" "la RÃ©gente" "le Robuste" "le Roland" "le Royal Louis"
+	"le Sagittaire" "la Sainte Anne" "le Saint Esprit" "le Saint Michel" "le Saint Philippe" "le Sceptre" "le Seigneur Chat" "le Sévère" "le Soleil Royal" "le Solitaire" "le Souverain" "le Sphinx" "la Superbe"
+	"le Téméraire" "le Terrible" "la Thérèse" "le Triomphant" "le Tonnant"
+	"la Trombe" "le Triton" 
+	"Union" 
+	"la Victoire" "Ville de Paris" 
+	"le Zélé" "le Zodiaque"
+}
+
+army_names = {
+	"Royal Army" "Army of England" "Army of Scotland" "Army of Ireland" "Armée Royale" "Armée des Flandres" "Armée du Nord" "Armée de l'Est" "Armée du Jura" "Armée du Lyonnais" "Armée des Alpes"
+	"Armée du Midi" "Armée des Pyrenées" "Armée de l'Atlantique" "Armée de Bretagne" "Armée d'Italie"
+}
+
+fleet_names = {
+	"Royal Navy" "Blue Squadron" "Red Squadron" "White Squadron" "North Sea Squadron" "Channel Squadron" "Escadre Bleue" "Escadre Rouge" "Escadre Blanche" "Escadre de la Manche" "Escadre de l'Atlantique" "Escade de MÃ©diterranÃ©e" "Escadre de Gascogne"
+}

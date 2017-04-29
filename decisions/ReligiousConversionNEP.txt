@@ -1,0 +1,975 @@
+########################################
+# Religious conversion decisions
+#
+# Written by Neprut
+########################################
+
+country_decisions = {
+
+	convert_norse_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = norse_pagan_reformed value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = scandinavian
+						culture_group = british
+						primary_culture = normand
+					}
+					num_of_religion = { religion = norse_pagan_reformed value = 0.5 }
+				}
+				num_of_religion = { religion = norse_pagan_reformed value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = scandinavian
+						culture_group = british
+						primary_culture = normand
+					}
+					num_of_religion = { religion = norse_pagan_reformed value = 0.75 }
+				}
+				num_of_religion = { religion = norse_pagan_reformed value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = norse_pagan_reformed
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_norse
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = norse_pagan_reformed
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+	
+	convert_gaelic_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = gaelic_pagan value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = gaelic
+						culture_group = brythonic
+						culture_group = unified_celtic_group
+						culture_group = french
+						culture_group = iberian
+						primary_culture = scottish
+						primary_culture = swiss
+					}
+					num_of_religion = { religion = gaelic_pagan value = 0.5 }
+				}
+				num_of_religion = { religion = gaelic_pagan value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = gaelic
+						culture_group = brythonic
+						culture_group = unified_celtic_group
+						culture_group = french
+						culture_group = iberian
+						primary_culture = scottish
+						primary_culture = swiss
+					}
+					num_of_religion = { religion = gaelic_pagan value = 0.75 }
+				}
+				num_of_religion = { religion = gaelic_pagan value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = gaelic_pagan
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_gaelic
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = gaelic_pagan
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+
+	convert_finnish_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = finnish_pagan_reformed value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					culture_group = finno_ugric
+					num_of_religion = { religion = finnish_pagan_reformed value = 0.5 }
+				}
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.75 }
+			}
+			OR = {
+				ai = no
+				AND = {
+					tag = PRM
+					stability = 2
+				}
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					culture_group = finno_ugric
+					num_of_religion = { religion = finnish_pagan_reformed value = 0.75 }
+				}
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = finnish_pagan_reformed
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_finnish
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = finnish_pagan_reformed
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+		
+	convert_slavic_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = slavic_pagan_reformed value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = east_slavic
+						culture_group = south_slavic
+						culture_group = west_slavic
+					}
+					num_of_religion = { religion = slavic_pagan_reformed value = 0.5 }
+				}
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = east_slavic
+						culture_group = south_slavic
+						culture_group = west_slavic
+					}
+					num_of_religion = { religion = slavic_pagan_reformed value = 0.75 }
+				}
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = slavic_pagan_reformed
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_slavic
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = slavic_pagan_reformed
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+
+	convert_baltic_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = baltic_pagan_reformed value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = baltic
+						primary_culture = prussian
+					}
+					num_of_religion = { religion = baltic_pagan_reformed value = 0.5 }
+				}
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = baltic
+						primary_culture = prussian
+					}
+					num_of_religion = { religion = baltic_pagan_reformed value = 0.75 }
+				}
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = baltic_pagan_reformed
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_baltic
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = baltic_pagan_reformed
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+
+	convert_tengri_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = tengri_pagan_reformed value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = carpathian
+						culture_group = dacian
+						culture_group = turkish_g
+						culture_group = tartar
+						culture_group = altaic
+						culture_group = evenks
+					}
+					num_of_religion = { religion = tengri_pagan_reformed value = 0.5 }
+				}
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = carpathian
+						culture_group = dacian
+						culture_group = turkish_g
+						culture_group = tartar
+						culture_group = altaic
+						culture_group = evenks
+					}
+					num_of_religion = { religion = tengri_pagan_reformed value = 0.75 }
+				}
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = tengri_pagan_reformed
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_tengri
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = tengri_pagan_reformed
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+	
+	convert_hellenic_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = hellenic value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = byzantine
+						culture_group = caucasian
+						culture_group = south_slavic
+						culture_group = illyrian
+						culture_group = latin
+						culture_group = occitanocatala
+						primary_culture = turkish
+					}
+					num_of_religion = { religion = hellenic value = 0.5 }
+				}
+				num_of_religion = { religion = hellenic value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = byzantine
+						culture_group = caucasian
+						culture_group = south_slavic
+						culture_group = illyrian
+						culture_group = latin
+						culture_group = occitanocatala
+						primary_culture = turkish
+					}
+					num_of_religion = { religion = hellenic value = 0.75 }
+				}
+				num_of_religion = { religion = hellenic value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = hellenic
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_hellenic
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = hellenic
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+	
+	convert_zoroastrian_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = zoroastrian value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = iranian
+						culture_group = turkish_g
+						primary_culture = al_suryah_arabic
+						primary_culture = al_iraqiya_arabic
+					}
+					num_of_religion = { religion = zoroastrian value = 0.5 }
+				}
+				num_of_religion = { religion = zoroastrian value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = iranian
+						culture_group = turkish_g
+						primary_culture = al_suryah_arabic
+						primary_culture = al_iraqiya_arabic
+					}
+					num_of_religion = { religion = zoroastrian value = 0.75 }
+				}
+				num_of_religion = { religion = zoroastrian value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = zoroastrian
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_zoroastrian
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = zoroastrian
+				add_reform_center = zoroastrian
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					religion_group = muslim
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+	
+	convert_germanic_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = germanic value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = germanic
+						culture_group = british
+					}
+					num_of_religion = { religion = germanic value = 0.5 }
+				}
+				num_of_religion = { religion = germanic value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = germanic
+						culture_group = british
+					}
+					num_of_religion = { religion = germanic value = 0.75 }
+				}
+				num_of_religion = { religion = germanic value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = germanic
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_germanic
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = germanic
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+	
+	convert_egyptian_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = egyptian value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						primary_culture = al_misr_arabic
+						primary_culture = saidi
+					}
+					num_of_religion = { religion = egyptian value = 0.5 }
+				}
+				num_of_religion = { religion = egyptian value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						primary_culture = al_misr_arabic
+						primary_culture = saidi
+					}
+					num_of_religion = { religion = egyptian value = 0.75 }
+				}
+				num_of_religion = { religion = egyptian value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = egyptian
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_egyptian
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = egyptian
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+
+	convert_south_arabian_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = south_arabian value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						primary_culture = bedouin_arabic
+						primary_culture = omani_culture
+						primary_culture = yemeni_culture
+					}
+					num_of_religion = { religion = south_arabian value = 0.5 }
+				}
+				num_of_religion = { religion = south_arabian value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						primary_culture = bedouin_arabic
+						primary_culture = omani_culture
+						primary_culture = yemeni_culture
+					}
+					num_of_religion = { religion = south_arabian value = 0.75 }
+				}
+				num_of_religion = { religion = south_arabian value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = south_arabian
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_south_arabian
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = south_arabian
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+
+	convert_amanaiism_pagan = {
+		
+		potential = {
+			num_of_religion = { religion = amanaiism value = 0.3 }
+			NOT = { is_pagan_trigger = yes }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = maghrebi
+						culture_group = berber_group
+						primary_culture = andalucian
+					}
+					num_of_religion = { religion = amanaiism value = 0.5 }
+				}
+				num_of_religion = { religion = amanaiism value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = maghrebi
+						culture_group = berber_group
+						primary_culture = andalucian
+					}
+					num_of_religion = { religion = amanaiism value = 0.75 }
+				}
+				num_of_religion = { religion = amanaiism value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = amanaiism
+			if = { 
+				limit = { has_global_flag = pagans_are_back }
+				set_country_flag = pagan_revival
+				set_country_flag = pagan_revival_south_amanaiism
+			}
+			add_stability = -1
+			add_prestige = -50
+			capital_scope = {  
+				change_religion = amanaiism
+			}
+			add_country_modifier = {
+				name = "conversion_zeal_SCA"
+				duration = 3650
+			}
+			every_country = {
+				limit = {
+					NOT = { is_pagan_trigger = yes }
+					is_neighbor_of = ROOT
+				}
+				add_opinion = { 
+					modifier = heretics_in_the_north_SCA
+					who = ROOT
+				}
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+	
+	convert_bogomilism = {
+		
+		potential = {
+			num_of_religion = { religion = bogomilist value = 0.3 }
+			religion_group = christian
+			NOT = { religion = bogomilist }
+			OR = {
+				AND = {
+					culture_group = south_slavic
+					num_of_religion = { religion = bogomilist value = 0.5 }
+				}
+				num_of_religion = { religion = bogomilist value = 0.75 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					culture_group = south_slavic
+					num_of_religion = { religion = bogomilist value = 0.75 }
+				}
+				num_of_religion = { religion = bogomilist value = 0.9 }
+			}
+			stability = 0
+		}
+		effect = {	
+			change_religion = bogomilist
+			add_stability = -1
+			add_prestige = -100
+			capital_scope = { change_religion = bogomilist }
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+	
+	convert_waldensian = {
+		
+		potential = {
+			num_of_religion = { religion = waldensian value = 0.3 }
+			religion_group = christian
+			NOT = { religion = waldensian }
+			num_of_religion = { religion = waldensian value = 0.75 }
+		}
+		allow = {
+			num_of_religion = { religion = waldensian value = 0.9 }
+			stability = 0
+		}
+		effect = {	
+			change_religion = waldensian
+			add_stability = -1
+			add_prestige = -100
+			capital_scope = { change_religion = waldensian }
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = unified_islam
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = theocracy
+			}
+		}
+	}
+
+}

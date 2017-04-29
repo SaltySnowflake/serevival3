@@ -1,0 +1,15 @@
+government = iqta
+primary_culture = azerbaijani
+religion = shiite
+technology_group = muslim
+capital = 420
+government_rank = 1
+
+1444.1.1 = {	
+	monarch = {		
+		name = "Ismail"		
+		adm = 4	
+		dip = 3	
+		mil = 4
+	}
+}

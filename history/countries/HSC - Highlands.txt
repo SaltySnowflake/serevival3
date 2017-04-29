@@ -1,0 +1,17 @@
+government = feudal_monarchy
+primary_culture = highland_scottish
+religion = catholic
+technology_group = western
+capital = 252 # Inverness
+
+1419.7.31 = {
+	monarch = {
+		name = "Marc"
+		dynasty = "Potter"
+		adm = 4
+		dip = 4
+		mil = 6
+	}
+}
+
+1444.11.11 = { government_rank = 1 }

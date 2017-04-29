@@ -1,0 +1,21 @@
+government = feudal_monarchy
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = finnish
+add_accepted_culture = swedish
+capital = 28	# Nyland
+
+historical_friend = SMI
+
+1444.11.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Lexxe"
+		dynasty = "Sukka"
+		birth_date = 1414.1.1
+		adm = 4
+		dip = 2
+		mil = 5
+	}
+}

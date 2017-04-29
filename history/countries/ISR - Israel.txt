@@ -1,0 +1,6 @@
+# Israel
+government = feudal_monarchy
+technology_group = eastern
+primary_culture = jewish
+religion = jewish
+capital = 1855

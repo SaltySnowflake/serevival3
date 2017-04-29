@@ -1,0 +1,63 @@
+turkish_foothold = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = { 
+		OR = {
+			province_id = 319 
+			province_id = 5162
+			province_id = 5160
+			province_id = 318
+			province_id = 5134
+		}
+		NOT = {
+			owner = { alliance_with = ROOT }
+			owned_by = ROOT	
+		}
+	}
+
+	allow = {
+		NOT = { has_country_modifier = military_victory }
+		tag = KNI
+		is_subject = no
+		owns = 320 # Rhodes
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_monarch_leader = yes
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			remove_claim = ROOT
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+	}
+}

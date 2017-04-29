@@ -1,0 +1,56 @@
+# No previous file for Baachinena
+
+culture = apache #wichita
+religion = wakan_tanka
+capital = "Baachinena"
+trade_goods = maize
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = QQJ
+	controller = QQJ
+	add_core = QQJ
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = QQJ
+	controller = QQJ
+	add_core = QQJ
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = QQJ
+	controller = QQJ
+	add_core = QQJ
+	is_city = yes
+}
+
+1541.1.1 = { discovered_by = SPA } # Francisco Vásquez de Coronado
+
+1760.1.1 = {
+	owner = ARP
+	controller = ARP
+	add_core = ARP
+	culture = arapaho
+	remove_core = QQJ
+} #Great Plain tribes spread over vast territories

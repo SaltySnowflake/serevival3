@@ -1,0 +1,15 @@
+government = iqta
+primary_culture = saidi
+religion = sunni
+technology_group = muslim
+capital = 360 # Qina
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

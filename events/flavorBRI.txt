@@ -1,0 +1,299 @@
+namespace = breton
+
+# Etates of Brittany. Allow Brittany to retain some autonomy?
+
+country_event = {
+	id = breton.1
+	title = "breton.EVTNAME1"
+	desc = "breton.EVTDESC1"
+	picture = REFORM_eventPicture
+
+	trigger = {
+		OR = {
+			culture_group = french
+			tag = FRA
+			tag = ANV
+		}
+		NOT = {	exists = BRI }
+		NOT = { primary_culture = breton }
+		NOT = { primary_culture = bretonfrench }
+		capital_scope = { continent = europe }
+		any_owned_province = {
+			OR = {
+				culture = breton
+				culture = bretonfrench
+			}
+		}
+		NOT = { has_country_flag = had_bri1 }
+	}
+	mean_time_to_happen = { months = 36 }
+	
+	immediate = { set_country_flag = had_bri1 }	
+	
+	option = {
+		name = "breton.EVTOPTA1"
+		ai_chance = { factor = 5 }
+		every_owned_province = {
+			limit = { 
+				OR = {
+					culture = breton
+					culture = bretonfrench
+				}
+			}
+			add_province_modifier = {
+				name = "breton_estates"
+				duration = 36500
+			}
+		}
+	}
+	option = {
+		name = "breton.EVTOPB1"
+		ai_chance = { factor = 1 }
+		every_owned_province = {
+			limit = { 
+				OR = {
+					culture = breton
+					culture = bretonfrench
+				}
+			}
+			add_unrest = 10
+		}
+		add_stability = -1
+	}
+}
+
+# revolt of the Bonnets rouges 1675
+country_event = {
+	id = breton.2
+	title = "breton.EVTNAME2"
+	desc = "breton.EVTDESC2"
+	picture = CIVIL_WAR_eventPicture
+
+	trigger = {
+		OR = {
+			culture_group = french
+			tag = FRA
+			tag = ANV
+		}
+		NOT = { primary_culture = breton }
+		NOT = { primary_culture = bretonfrench }
+		capital_scope = { continent = europe }
+		is_year = 1665
+		war_with = NED
+		NOT = { is_year = 1685 }
+		NOT = { exists = BRI }
+		any_owned_province = {
+			OR = {
+				culture = breton
+				culture = bretonfrench
+			}
+		}
+		NOT = { has_country_flag = had_bri2 }
+	}
+	mean_time_to_happen = { years = 5 }
+	
+	immediate = { set_country_flag = had_bri2 }
+	
+	option = {
+		name = "breton.EVTOPTA2"
+		ai_chance = { factor = 40 }
+		random_owned_province = {
+			limit = { 
+				OR = {
+					culture = breton
+					culture = bretonfrench
+				}
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 4
+			}
+		}
+	}
+	option = {
+		name = "breton.EVTOPTB2"
+		ai_chance = { factor = 10 }
+		add_years_of_income = -0.5
+	}
+}
+		
+# 1631 Brest naval base
+country_event = {
+	id = breton.3
+	title = "breton.EVTNAME3"
+	desc = "breton.EVTDESC3"
+	picture = NAVAL_MILITARY_eventPicture
+
+	trigger = {
+		is_year = 1621
+		NOT = { is_year = 1641 }
+		full_idea_group = naval_ideas
+		OR = {
+			culture_group = french
+			primary_culture = breton
+			tag = FRA
+			tag = ANV
+		}
+		capital_scope = { continent = europe }
+		owns_core_province = 170
+		170 = {
+			OR = {
+				NOT = { has_building = grand_shipyard }
+				NOT = { has_building = drydock }
+			}
+		}
+		NOT = { has_country_flag = had_bri3 }
+	}
+	mean_time_to_happen = { years = 10 }
+	
+	immediate = { set_country_flag = had_bri3 }	
+	
+	option = {
+		name = "breton.EVTOPTA3"
+		170 = {
+			add_building = grand_shipyard
+			add_building = drydock
+		}
+		add_treasury = -100
+	}
+	option = {
+		name = "breton.EVTOPTB3"
+		add_prestige = -5
+	}
+}
+
+# Pontcallec Conspiracy 1718
+
+country_event = {
+	id = breton.4
+	title = "breton.EVTNAME4"
+	desc = "breton.EVTDESC4"
+	picture = CIVIL_WAR_eventPicture
+
+	trigger = {
+		OR = {
+			culture_group = french
+			tag = FRA
+			tag = ANV
+		}
+		NOT = { primary_culture = breton }
+		NOT = { primary_culture = bretonfrench }
+		capital_scope = { continent = europe }
+		is_year = 1708
+		NOT = { is_year = 1728 }
+		NOT = { exists = BRI }
+		any_owned_province = {
+			OR = {
+				culture = breton
+				culture = bretonfrench
+			}
+		}
+		OR = {
+			exists = CAS
+			exists = SPA
+		}
+		OR = {
+			AND = {
+				NOT = { exists = SPA }
+				NOT = { has_opinion = { who = CAS value = -100 } }
+			}
+			AND = {
+				exists = SPA
+				NOT = { has_opinion = { who = SPA value = -100 } }
+			}
+		}
+		NOT = { has_country_flag = had_bri4 }
+	}
+	mean_time_to_happen = { years = 10 }
+	
+	immediate = { set_country_flag = had_bri4 }
+	
+	option = {
+		name = "breton.EVTOPTA4"
+		random_owned_province = {
+			limit = { 
+				OR = {
+					culture = breton
+					culture = bretonfrench
+				}
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 6
+			}
+		}
+	}
+}
+
+# 1466 publication of the Catholicon
+
+country_event = {
+	id = breton.5
+	title = "breton.EVTNAME5"
+	desc = "breton.EVTDESC5"
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			primary_culture = breton
+			primary_culture = bretonfrench
+		}
+		is_year = 1461
+		NOT = { is_year = 1471 }
+		NOT = { war_with = FRA }
+		NOT = { war_with = PRS }
+		NOT = { has_country_modifier = the_statue_in_restraint_of_appeals }
+	}
+	mean_time_to_happen = { years = 5 }
+	
+	option = {
+		name = "breton.EVTOPTA5"
+		FRA = { add_opinion = { who = ROOT modifier = opinion_good_relations } }
+		add_opinion = { who = FRA modifier = opinion_good_relations }
+		PRS = { add_opinion = { who = ROOT modifier = opinion_good_relations } }
+		add_opinion = { who = PRS modifier = opinion_good_relations }
+		PAP = { add_opinion = { who = ROOT modifier = opinion_good_relations } }
+		add_opinion = { who = PAP modifier = opinion_good_relations }
+		add_stability_or_adm_power = yes
+	}
+}
+
+
+# 1469 smashing of the ducal ring of Normandy
+
+country_event = {
+	id = breton.6
+	title = "breton.EVTNAME6"
+	desc = "breton.EVTDESC6"
+	picture = REFORM_eventPicture
+
+	trigger = {
+		culture_group = french
+		NOT = { primary_culture = normand }
+		capital_scope = { region = france_region }
+		owns_core_province = 167
+		owns_core_province = 168
+		owns_core_province = 3073
+		owns_core_province = 3074
+		any_owned_province = { is_core = NRM }
+		is_year = 1459
+		NOT = { is_year = 1479 }
+		NOT = { war_with = ENG }
+		NOT = { has_country_flag = had_bri6 }
+	}
+	mean_time_to_happen = { years = 5 }
+	
+	immediate = { set_country_flag = had_bri6 }	
+	
+	option = {
+		name = "breton.EVTOPTA6"
+		add_adm_power = -100
+		every_owned_province = { remove_core = NRM }
+	}
+	option = {
+		name = "breton.EVTOPTB6"
+		add_prestige = -5
+	}
+}

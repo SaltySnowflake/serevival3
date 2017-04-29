@@ -1,0 +1,23 @@
+government = occitan_monarchy
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = arpitan
+add_accepted_culture = occitain
+capital = 204	# Grenoble
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+1515.1.1 = { government = despotic_monarchy }
+
+1589.8.3 = { government = administrative_monarchy }
+
+1661.3.9 = { government = absolute_monarchy }

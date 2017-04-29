@@ -1,0 +1,7 @@
+government = feudal_monarchy
+primary_culture = lombard
+add_accepted_culture = greek
+add_accepted_culture = turkish
+religion = catholic
+technology_group = eastern
+capital = 151 # Thrace

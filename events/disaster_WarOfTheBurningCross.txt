@@ -1,0 +1,1245 @@
+namespace = war_of_the_burning_cross
+
+# Random Events
+# For our ancestors!
+country_event = {
+	id = war_of_the_burning_cross.1
+	title = war_of_the_burning_cross.1.t
+	picture = CONQUEST_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.1.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.1.dnorse
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = ancestors_SCA }
+			had_country_flag = { flag = ancestors_SCA days = 180 }
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = { set_country_flag = ancestors_SCA }
+	
+	option = {		# The time for war is now
+		name = war_of_the_burning_cross.1.a
+		add_treasury = 200
+	}
+}
+
+#Christian Stronghold!
+province_event = {
+	id = war_of_the_burning_cross.2
+	title = war_of_the_burning_cross.2.t
+	picture = FORT_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.2.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.2.dnorse
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion_group = christian
+		is_overseas = no
+		NOT = { has_province_modifier = christian_stronghold_SCA }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Curses
+		name = war_of_the_burning_cross.2.a
+		add_province_modifier = {
+			name = "christian_stronghold_SCA"
+			duration = 1460
+		}
+		every_neighbor_province = {
+			limit = {
+				religion_group = christian
+				NOT = { has_province_modifier = christian_stronghold_SCA }
+				owner = { tag = ROOT }
+				is_colony = no
+			}
+			add_province_modifier = {
+				name = "christian_stronghold_SCA"
+				duration = 1460
+			}
+		}
+	}
+}
+
+#Muslim Stronghold!
+province_event = {
+	id = war_of_the_burning_cross.2a
+	title = war_of_the_burning_cross.2a.t
+	desc = war_of_the_burning_cross.2a.d
+	picture = FORT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		religion_group = muslim
+		is_overseas = no
+		NOT = { has_province_modifier = muslim_stronghold_SCA }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Curses
+		name = war_of_the_burning_cross.2a.a
+		add_province_modifier = {
+			name = "muslim_stronghold_SCA"
+			duration = 1460
+		}
+		every_neighbor_province = {
+			limit = {
+				religion_group = muslim
+				NOT = { has_province_modifier = muslim_stronghold_SCA }
+				owner = { tag = ROOT }
+				is_colony = no
+			}
+			add_province_modifier = {
+				name = "muslim_stronghold_SCA"
+				duration = 1460
+			}
+		}
+	}
+}
+
+#Religious Stronghold!
+province_event = {
+	id = war_of_the_burning_cross.2b
+	title = war_of_the_burning_cross.2b.t
+	desc = war_of_the_burning_cross.2b.d
+	picture = FORT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { religion_group = muslim }
+		NOT = { religion_group = christian }
+		NOT = { is_pagan_trigger = yes }
+		is_overseas = no
+		NOT = { has_province_modifier = muslim_stronghold_SCA }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Curses
+		name = war_of_the_burning_cross.2b.a
+		add_province_modifier = {
+			name = "muslim_stronghold_SCA"
+			duration = 1460
+		}
+		every_neighbor_province = {
+			limit = {
+				NOT = { religion_group = muslim }
+				NOT = { religion_group = christian }
+				NOT = { is_pagan_trigger = yes }
+				NOT = { has_province_modifier = muslim_stronghold_SCA }
+				owner = { tag = ROOT }
+				is_colony = no
+			}
+			add_province_modifier = {
+				name = "muslim_stronghold_SCA"
+				duration = 1460
+			}
+		}
+	}
+}
+
+# Priests oppose us!
+country_event = {
+	id = war_of_the_burning_cross.3a
+	title = war_of_the_burning_cross.3.t
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.3.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.3.dnorse
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = priests_are_up_in_arms_SCA }
+			had_country_flag = { flag = priests_are_up_in_arms_SCA days = 365 }
+		}
+	}
+	
+	immediate = { set_country_flag = priests_are_up_in_arms_SCA }
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Curses
+		name = war_of_the_burning_cross.3.a
+		random_owned_province = {
+			limit = {
+				is_overseas = no
+				NOT = { is_pagan_trigger = yes }
+			}
+			spawn_rebels = {
+				type = religious_rebels
+				size = 1
+			}
+		}
+	}
+}
+
+# Priests oppose us!
+country_event = {
+	id = war_of_the_burning_cross.3b
+	title = war_of_the_burning_cross.3.t
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.3.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.3.dnorse
+	}
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = priests_are_up_in_arms_SCA }
+			had_country_flag = { flag = priests_are_up_in_arms_SCA days = 365 }
+		}
+	}
+	
+	immediate = { set_country_flag = priests_are_up_in_arms_SCA }
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Curses
+		name = war_of_the_burning_cross.3.a
+		random_owned_province = {
+			limit = {
+				is_overseas = no
+				NOT = { is_pagan_trigger = yes }
+				NOT = { base_tax = 10 }
+			}
+			spawn_rebels = {
+				type = religious_rebels
+				size = 2
+			}
+		}
+	}
+}
+
+# Priests oppose us!
+country_event = {
+	id = war_of_the_burning_cross.3c
+	title = war_of_the_burning_cross.3.t
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.3.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.3.dnorse
+	}
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = priests_are_up_in_arms_SCA }
+			had_country_flag = { flag = priests_are_up_in_arms_SCA days = 365 }
+		}
+	}
+	
+	immediate = { set_country_flag = priests_are_up_in_arms_SCA }
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Curses
+		name = war_of_the_burning_cross.3.a
+		random_owned_province = {
+			limit = {
+				is_overseas = no
+				NOT = { is_pagan_trigger = yes }
+				NOT = { base_tax = 7 }
+			}
+			spawn_rebels = {
+				type = religious_rebels
+				size = 3
+			}
+		}
+	}
+}
+
+# Local Lords betray our nation
+province_event = {
+	id = war_of_the_burning_cross.4a
+	title = war_of_the_burning_cross.4.t
+	picture = LAND_MILITARY_eventPicture
+	
+	desc = {
+		trigger = { 
+			religion_group = christian
+			NOT = { culture_group = scandinavian }
+		}
+		desc = war_of_the_burning_cross.4.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.4.dnorse
+	}
+	desc = {
+		trigger = { religion_group = muslim }
+		desc = war_of_the_burning_cross.4.dmuslim
+	}
+	desc = {
+		trigger = { 
+			NOT = { religion_group = muslim }
+			NOT = { religion_group = christian }
+		}
+		desc = war_of_the_burning_cross.4.dgeneric
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_overseas = no
+		owner = {
+			OR = {
+				NOT = { has_country_flag = jarls_are_up_in_arms_SCA }
+				had_country_flag = { flag = jarls_are_up_in_arms_SCA days = 365 }
+			}
+		}
+	}
+	
+	immediate = { owner= { set_country_flag = jarls_are_up_in_arms_SCA } }
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# The time for war is now
+		name = war_of_the_burning_cross.4.a
+		spawn_rebels = {
+			type = religious_rebels
+			size = 1
+		}
+	}
+}
+
+# Local Lords betray our nation
+province_event = {
+	id = war_of_the_burning_cross.4b
+	title = war_of_the_burning_cross.4.t
+	picture = LAND_MILITARY_eventPicture
+	
+	desc = {
+		trigger = { 
+			religion_group = christian
+			NOT = { culture_group = scandinavian }
+		}
+		desc = war_of_the_burning_cross.4.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.4.dnorse
+	}
+	desc = {
+		trigger = { religion_group = muslim }
+		desc = war_of_the_burning_cross.4.dmuslim
+	}
+	desc = {
+		trigger = { 
+			NOT = { religion_group = muslim }
+			NOT = { religion_group = christian }
+		}
+		desc = war_of_the_burning_cross.4.dgeneric
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_overseas = no
+		owner = {
+			OR = {
+				NOT = { has_country_flag = jarls_are_up_in_arms_SCA }
+				had_country_flag = { flag = jarls_are_up_in_arms_SCA days = 365 }
+			}
+		}
+	}
+	
+	immediate = { owner= { set_country_flag = jarls_are_up_in_arms_SCA } }
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# The time for war is now
+		name = war_of_the_burning_cross.4.a
+		spawn_rebels = {
+			type = religious_rebels
+			size = 2
+		}
+	}
+}
+
+# Local Lords betray our nation
+province_event = {
+	id = war_of_the_burning_cross.4c
+	title = war_of_the_burning_cross.4.t
+	picture = LAND_MILITARY_eventPicture
+	
+	desc = {
+		trigger = { 
+			religion_group = christian
+			NOT = { culture_group = scandinavian }
+		}
+		desc = war_of_the_burning_cross.4.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.4.dnorse
+	}
+	desc = {
+		trigger = { religion_group = muslim }
+		desc = war_of_the_burning_cross.4.dmuslim
+	}
+	desc = {
+		trigger = { 
+			NOT = { religion_group = muslim }
+			NOT = { religion_group = christian }
+		}
+		desc = war_of_the_burning_cross.4.dgeneric
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_overseas = no
+		NOT = { is_pagan_revival_trigger = yes }
+		owner = {
+			OR = {
+				NOT = { has_country_flag = jarls_are_up_in_arms_SCA }
+				had_country_flag = { flag = jarls_are_up_in_arms_SCA days = 365 }
+			}
+		}
+	}
+	
+	immediate = { owner= { set_country_flag = jarls_are_up_in_arms_SCA } }
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# The time for war is now
+		name = war_of_the_burning_cross.4.a
+		spawn_rebels = {
+			type = religious_rebels
+			size = 3
+		}
+	}
+}
+
+# Converts flock to our banner!
+country_event = {
+	id = war_of_the_burning_cross.5
+	title = war_of_the_burning_cross.5.t
+	picture = MILITARY_CAMP_eventPicture
+	
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.5.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.5.dnorse
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = converts_and_our_banner }
+			had_country_flag = { flag = converts_and_our_banner days = 365 }
+		}
+	}
+	
+	immediate = { set_country_flag = converts_and_our_banner }
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# The time for war is now
+		name = war_of_the_burning_cross.5.a
+		trigger = { NOT = { has_country_modifier = converts_flock_to_the_banner } }
+		add_country_modifier = { 
+			name = converts_flock_to_the_banner
+			duration = 730
+		}
+	}
+	
+	option = {		# The time for war is now
+		name = war_of_the_burning_cross.5.a
+		trigger = { has_country_modifier = converts_flock_to_the_banner }
+		add_yearly_manpower = 0.5
+	}
+}
+
+# Blood floods the street
+province_event = {
+	id = war_of_the_burning_cross.6
+	title = war_of_the_burning_cross.6.t
+	desc = war_of_the_burning_cross.6.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_overseas = no
+		NOT = { has_province_modifier = blood_floods_street_SCA }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Curses
+		name = war_of_the_burning_cross.6.a
+		add_province_modifier = {
+			name = "blood_floods_street_SCA"
+			duration = 730
+		}
+	}
+}
+
+# Great Gathering
+country_event = {
+	id = war_of_the_burning_cross.7
+	title = war_of_the_burning_cross.7.d
+	picture = COMET_SIGHTED_eventPicture
+	
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.7.d
+	}
+	desc = {
+		trigger = { 
+			OR = {
+				culture_group = scandinavian
+				primary_culture = normand
+			}
+		}
+		desc = war_of_the_burning_cross.7.dnorse
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = great_pagan_gathering }
+			had_country_flag = { flag = great_pagan_gathering days = 730 }
+		}
+	}
+	
+	immediate = { set_country_flag = great_pagan_gathering }
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# The time for war is now
+		trigger = { 
+			NOT = { culture_group = scandinavian }
+			NOT = {	primary_culture = normand }
+		}
+		name = war_of_the_burning_cross.7.a
+		add_country_modifier = { 
+			name = great_pagan_gathering
+			duration = 730
+		}
+	}
+
+	option = {		# The time for war is now
+		trigger = { 
+			OR = {
+				culture_group = scandinavian
+				primary_culture = normand
+			}
+		}
+		name = war_of_the_burning_cross.7.anorse
+		add_country_modifier = { 
+			name = trollkyrka_blot_SCA
+			duration = 730
+		}
+	}
+
+}
+
+# Religious Stronghold Spawns Host
+province_event = {
+	id = war_of_the_burning_cross.8
+	title = war_of_the_burning_cross.8.t
+	picture = LAND_MILITARY_eventPicture
+
+	desc = {
+		trigger = { 
+			religion_group = christian
+			NOT = { culture_group = scandinavian }
+		}
+		desc = war_of_the_burning_cross.8.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.8.dnorse
+	}
+	desc = {
+		trigger = { religion_group = muslim }
+		desc = war_of_the_burning_cross.8.dmuslim
+	}
+	desc = {
+		trigger = { 
+			NOT = { religion_group = muslim }
+			NOT = { religion_group = christian }
+		}
+		desc = war_of_the_burning_cross.8.dgeneric
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_overseas = no
+		NOT = { is_pagan_revival_trigger = yes }
+		OR = {
+			has_province_modifier = christian_stronghold_SCA
+			has_province_modifier = muslim_stronghold_SCA
+			has_province_modifier = religious_stronghold_SCA
+		}
+		OR = {
+			NOT = { has_province_flag = host_spawned_SCA }
+			had_province_flag = { flag = host_spawned_SCA days = 365 }
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Curses
+		name = war_of_the_burning_cross.8.a
+		spawn_rebels = {
+			type = religious_rebels
+			size = 1
+		}
+		set_province_flag = host_spawned_SCA
+		every_neighbor_province = {
+			limit = {
+				OR = {
+					has_province_modifier = christian_stronghold_SCA
+					has_province_modifier = muslim_stronghold_SCA
+					has_province_modifier = religious_stronghold_SCA
+				}
+				OR = {
+					NOT = { has_province_flag = host_spawned_SCA }
+					had_province_flag = { flag = host_spawned_SCA days = 1095 }
+				}
+				is_colony = no
+			}
+			spawn_rebels = {
+				type = religious_rebels
+				size = 1
+			}
+			set_province_flag = host_spawned_SCA
+		}
+	}
+}
+
+# One Time Events
+
+# The Templar and the Hirdman
+country_event = {
+	id = war_of_the_burning_cross.9
+	title = war_of_the_burning_cross.9.t
+	picture = BATTLE_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.9.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.9.dnorse
+	}
+	
+	trigger = {
+		has_country_flag = war_of_the_burning_cross
+		NOT = { has_country_flag = templar_hirdman_SCA }
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = hellenic value = 0.6 }
+				num_of_religion = { religion = zoroastrian value = 0.6 }
+				num_of_religion = { religion = gaelic_pagan value = 0.6 }
+				num_of_religion = { religion = germanic value = 0.6 }
+				num_of_religion = { religion = egyptian value = 0.6 }
+				num_of_religion = { religion = south_arabian value = 0.6 }
+				num_of_religion = { religion = amanaiism value = 0.6 }
+				
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = hellenic value = 0.65 }
+				num_of_religion = { religion = zoroastrian value = 0.65 }
+				num_of_religion = { religion = gaelic_pagan value = 0.65 }
+				num_of_religion = { religion = germanic value = 0.65 }
+				num_of_religion = { religion = egyptian value = 0.65 }
+				num_of_religion = { religion = south_arabian value = 0.65 }
+				num_of_religion = { religion = amanaiism value = 0.65 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = hellenic value = 0.7 }
+				num_of_religion = { religion = zoroastrian value = 0.7 }
+				num_of_religion = { religion = gaelic_pagan value = 0.7 }
+				num_of_religion = { religion = germanic value = 0.7 }
+				num_of_religion = { religion = egyptian value = 0.7 }
+				num_of_religion = { religion = south_arabian value = 0.7 }
+				num_of_religion = { religion = amanaiism value = 0.7 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = hellenic value = 0.75 }
+				num_of_religion = { religion = zoroastrian value = 0.75 }
+				num_of_religion = { religion = gaelic_pagan value = 0.75 }
+				num_of_religion = { religion = germanic value = 0.75 }
+				num_of_religion = { religion = egyptian value = 0.75 }
+				num_of_religion = { religion = south_arabian value = 0.75 }
+				num_of_religion = { religion = amanaiism value = 0.75 }
+			}
+		}
+	}
+	
+	option = {		# The time for war is now
+		name = "war_of_the_burning_cross.9.a"
+		create_general = 100
+		add_prestige = 25
+		set_country_flag = templar_hirdman_SCA
+	}
+}
+
+# Neighbours Loathe Us
+country_event = {
+	id = war_of_the_burning_cross.10
+	title = "war_of_the_burning_cross.10.t"
+	desc = "war_of_the_burning_cross.10.d"
+	picture = ASSASSINATION_eventPicture
+	
+	trigger = {
+		has_country_flag = war_of_the_burning_cross
+		NOT = { has_country_flag = neighbours_is_very_upset_with_you_SCA }
+	}
+	immediate = { set_country_flag = neighbours_is_very_upset_with_you_SCA }
+	
+	mean_time_to_happen = { months = 8 }
+	
+	option = {		# What do we care?
+		name = "war_of_the_burning_cross.10.a"
+		every_country = {
+			limit = {
+				NOT = { is_pagan_trigger = yes }
+				is_neighbor_of = ROOT
+			}
+			add_opinion = { 
+				modifier = heretics_in_the_north_SCA
+				who = ROOT
+			}
+		}
+	}
+}
+
+# Elders favour our war
+country_event = {
+	id = war_of_the_burning_cross.11
+	title = war_of_the_burning_cross.11.t
+	picture = MILITARY_CAMP_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.11.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.11.dnorse
+	}
+	
+	trigger = {
+		has_country_flag = war_of_the_burning_cross
+		NOT = { has_ruler_modifier = favour_of_the_shaman }
+		NOT = { has_ruler_modifier = favour_of_the_godi_SCA }
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.6 }
+				num_of_religion = { religion = hellenic value = 0.6 }
+				num_of_religion = { religion = zoroastrian value = 0.6 }
+				num_of_religion = { religion = gaelic_pagan value = 0.6 }
+				num_of_religion = { religion = germanic value = 0.6 }
+				num_of_religion = { religion = egyptian value = 0.6 }
+				num_of_religion = { religion = south_arabian value = 0.6 }
+				num_of_religion = { religion = amanaiism value = 0.6 }
+				
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.65 }
+				num_of_religion = { religion = hellenic value = 0.65 }
+				num_of_religion = { religion = zoroastrian value = 0.65 }
+				num_of_religion = { religion = gaelic_pagan value = 0.65 }
+				num_of_religion = { religion = germanic value = 0.65 }
+				num_of_religion = { religion = egyptian value = 0.65 }
+				num_of_religion = { religion = south_arabian value = 0.65 }
+				num_of_religion = { religion = amanaiism value = 0.65 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.7 }
+				num_of_religion = { religion = hellenic value = 0.7 }
+				num_of_religion = { religion = zoroastrian value = 0.7 }
+				num_of_religion = { religion = gaelic_pagan value = 0.7 }
+				num_of_religion = { religion = germanic value = 0.7 }
+				num_of_religion = { religion = egyptian value = 0.7 }
+				num_of_religion = { religion = south_arabian value = 0.7 }
+				num_of_religion = { religion = amanaiism value = 0.7 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.75 }
+				num_of_religion = { religion = hellenic value = 0.75 }
+				num_of_religion = { religion = zoroastrian value = 0.75 }
+				num_of_religion = { religion = gaelic_pagan value = 0.75 }
+				num_of_religion = { religion = germanic value = 0.75 }
+				num_of_religion = { religion = egyptian value = 0.75 }
+				num_of_religion = { religion = south_arabian value = 0.75 }
+				num_of_religion = { religion = amanaiism value = 0.75 }
+			}
+		}
+	}
+	
+	option = {		# The time for war is now
+		trigger = { NOT = { culture_group = scandinavian } }
+		name = "war_of_the_burning_cross.11.a"
+		add_ruler_modifier = { 
+			name = favour_of_the_shaman
+			duration = -1
+		}
+	}
+
+	option = {		# The time for war is now
+		trigger = { culture_group = scandinavian }
+		name = "war_of_the_burning_cross.11.a"
+		add_ruler_modifier = { 
+			name = favour_of_the_godi_SCA
+			duration = -1
+		}
+	}
+
+}
+
+# Subject Issues
+
+# Chaos from liege spreads to us
+province_event = {
+	id = war_of_the_burning_cross.12
+	title = war_of_the_burning_cross.12.t
+	desc = war_of_the_burning_cross.12.d
+	picture = STREET_SPEECH_eventPicture
+
+	trigger = {
+		overlord = {
+			has_country_flag = pagan_revival_start
+			NOT = { has_country_flag = war_of_the_burning_cross }
+			NOT = { has_country_flag = ride_of_the_valkyries_SCA }
+		}
+		is_colony = no
+		OR = {
+			continent = europe
+			continent = asia
+			continent = africa
+		}
+		NOT = { has_province_modifier = christian_stronghold_SCA }
+		NOT = { has_province_modifier = muslim_stronghold_SCA }
+	}
+	
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.75
+			owner = { adm = 5 }
+		}
+		modifier = {
+			factor = 0.2
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 0.70
+			any_neighbor_province = { is_pagan_trigger = yes }
+		}
+		modifier = {
+			factor = 0.75
+			any_neighbor_province = {
+				is_pagan_trigger = yes
+				culture_group = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_province_modifier = "heresy"
+		}
+		modifier = {
+			factor = 0.8
+			owner = { 
+				is_pagan_trigger = yes
+				has_idea_group = religious_ideas
+			}
+		}		
+		modifier = {
+			factor = 0.5
+			owner = { is_pagan_trigger = yes }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { has_idea_group = innovativeness_ideas }
+		}
+
+		# Negative modifiers
+		
+		modifier = {
+			factor = 3
+			owner = { 
+				NOT = { is_pagan_trigger = yes }
+				has_idea_group = religious_ideas
+			}
+		}
+		modifier = {
+			factor = 5
+			owner = { 
+				NOT = { is_pagan_trigger = yes }
+				is_defender_of_faith = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			owner = { 
+				NOT = { is_pagan_trigger = yes }
+				government = theocratic_government 
+			}
+		}
+		modifier = {
+			factor = 3.0
+			owner = { num_of_cardinals = 1 }
+		}
+		modifier = {
+			factor = 5.0
+			owner = { num_of_cardinals = 2 }
+		}
+		modifier = {
+			factor = 10.0
+			owner = { num_of_cardinals = 3 }
+		}		
+		modifier = {
+			factor = 4.0
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 6.0
+			owner = { has_country_modifier = counter_reformation }
+		}
+	}
+	
+	option = {		# Excellent
+		name = "war_of_the_burning_cross.12.a"
+		change_variable = { which = "pagan_sentiment" value = 11 }
+		every_neighbor_province = {
+			limit = {
+				NOT = { has_province_modifier = christian_stronghold_SCA }
+				NOT = { has_province_modifier = muslim_stronghold_SCA }
+				NOT = { has_province_modifier = religious_stronghold_SCA }
+				is_colony = no
+			}
+			change_variable = { which = "pagan_sentiment" value = 11 }
+		}
+	}
+	
+}
+
+# Support liege or attack?
+country_event = {
+	id = war_of_the_burning_cross.13
+	title = "war_of_the_burning_cross.13.t"
+	desc = "war_of_the_burning_cross.13.d"
+	picture = ANGRY_MOB_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = support_or_attack_SCA }
+		overlord = { has_country_flag = war_of_the_burning_cross_SCA }
+
+	}
+	immediate = { set_country_flag = support_or_attack_SCA }
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {		# Support
+		name = "war_of_the_burning_cross.13.a"
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_norse } }
+			change_religion = norse_pagan_reformed
+		}
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_finnish } }
+			change_religion = finnish_pagan_reformed
+		}
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_slavic } }
+			change_religion = slavic_pagan_reformed
+		}
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_baltic } }
+			change_religion = baltic_pagan_reformed
+		}
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_tengri } }
+			change_religion = tengri_pagan_reformed
+		}
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_hellenic } }
+			change_religion = hellenic
+		}
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_zoroastrian } }
+			change_religion = zoroastrian
+		}
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_gaelic } }
+			change_religion = gaelic_pagan
+		}
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_germanic } }
+			change_religion = germanic
+		}		
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_egyptian } }
+			change_religion = egyptian
+		}		
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_south_arabian } }
+			change_religion = south_arabian
+		}		
+		if = {
+			limit = { overlord = { has_country_flag = pagan_revival_amanaiism } }
+			change_religion = amanaiism
+		}
+		add_country_modifier = {
+			name = "conversion_zeal_SCA"
+			duration = 3650
+		}	
+	}
+	option = {		#  Attack
+		name = "war_of_the_burning_cross.13.b"
+		random_owned_province = {
+			limit = { is_overseas = no }
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 4
+			}
+		}
+		random_owned_province = {
+			limit = { is_overseas = no }
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 4
+			}
+		}
+	}
+}
+
+# Win or Lose?
+
+# Ride of the Valkyries
+country_event = {
+	id = war_of_the_burning_cross.14
+	title = war_of_the_burning_cross.14.t
+	picture = COMET_SIGHTED_eventPicture
+	
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = war_of_the_burning_cross.14.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = war_of_the_burning_cross.14.dnorse
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Victory
+		name = "war_of_the_burning_cross.14.a"
+		add_prestige = 50
+		add_country_modifier = { 
+			name = conversion_zeal_SCA
+			duration = 1826
+		}
+		set_country_flag = ride_of_the_valkyries_SCA
+		clr_country_flag = war_of_the_burning_cross
+	}
+}
+
+# Deus Vult
+country_event = {
+	id = war_of_the_burning_cross.15
+	title = "war_of_the_burning_cross.15.t"
+	desc = "war_of_the_burning_cross.15.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+
+	desc = {
+		trigger = { NOT = { religion_group = christian } }
+		desc = war_of_the_burning_cross.4.d
+	}
+	desc = {
+		trigger = { religion_group = christian }
+		desc = war_of_the_burning_cross.4.dchristian
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = ride_of_the_valkyries_SCA }
+		had_country_flag = { flag = war_of_the_burning_cross days = 90 }
+		has_disaster = war_of_the_burning_cross
+		NOT = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = { end_disaster = war_of_the_burning_cross }
+	
+	option = {		# 
+		name = "war_of_the_burning_cross.15.a"
+		kill_ruler = yes
+		add_prestige = -50
+		set_country_flag = ride_of_the_valkyries_SCA
+		clr_country_flag = war_of_the_burning_cross
+		clr_country_flag = pagan_revival
+		if = {
+			limit = { has_country_flag = pagan_revival_norse }
+			clr_country_flag = pagan_revival_norse
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_gaelic }
+			clr_country_flag = pagan_revival_gaelic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_finnish }
+			clr_country_flag = pagan_revival_finnish
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_slavic }
+			clr_country_flag = pagan_revival_slavic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_baltic }
+			clr_country_flag = pagan_revival_baltic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_tengri }
+			clr_country_flag = pagan_revival_tengri
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_hellenic }
+			clr_country_flag = pagan_revival_hellenic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_zoroastrian }
+			clr_country_flag = pagan_revival_zoroastrian
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_germanic }
+			clr_country_flag = pagan_revival_germanic
+		}		
+		if = {
+			limit = { has_country_flag = pagan_revival_egyptian }
+			clr_country_flag = pagan_revival_egyptian
+		}		
+		if = {
+			limit = { has_country_flag = pagan_revival_south_arabian }
+			clr_country_flag = pagan_revival_south_arabian
+		}		
+		if = {
+			limit = { has_country_flag = pagan_revival_amanaiism }
+			clr_country_flag = pagan_revival_amanaiism
+		}
+	}
+}

@@ -1,0 +1,22 @@
+#3010 - Iwami
+
+owner = YMN
+controller = YMN
+culture = chugoku
+religion = shinto
+capital = "Izumo"
+trade_goods = copper
+hre = no
+base_tax = 1
+base_production = 4
+base_manpower = 2
+add_core = YMN
+add_core = KGK
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1444.11.01 = { remove_core = YMN add_core = AMA owner = AMA }
+1444.11.11 = { remove_core = AMA add_core = YMN owner = YMN add_local_autonomy = -30 }

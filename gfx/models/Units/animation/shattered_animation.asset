@@ -1,0 +1,40 @@
+
+animation = {
+	name = "french_polearm_twohanded_armor_moving_animation"
+	file = "french_polearm_twohanded_armor_moving.anim"
+}
+
+
+animation = {
+	name = "french_polearm_twohanded_attack_animation"
+	file = "french_polearm_twohanded_attack.anim"
+}
+
+
+animation = {
+	name = "french_polearm_twohanded_idle_animation"
+	file = "french_polearm_twohanded_idle.anim"
+}
+
+
+animation = {
+	name = "french_polearm_twohanded_death_animation"
+	file = "french_polearm_twohanded_death.anim"
+}
+
+
+
+animation = {
+	name = "french_cavalry_rider_attack_animation"
+	file = "french_cavalry_rider_attack.anim"
+}
+
+animation = {
+	name = "french_cavalry_rider_idle_animation"
+	file = "french_cavalry_rider_idle.anim"
+}
+
+animation = {
+	name = "french_cavalry_rider_moving_animation"
+	file = "french_cavalry_rider_moving.anim"
+}

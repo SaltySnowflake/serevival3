@@ -1,0 +1,160 @@
+# rome restored???
+
+country_decisions = {
+
+	triumph_greece = {
+		potential = {
+			OR = {
+				tag = BYZ
+				tag = LAE
+				tag = ROM
+			}
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			has_dlc = "Purple Phoenix"
+			NOT = { has_country_flag = triumph_greece }
+			OR = {
+				morea_area = { owned_by = ROOT }
+				northern_greece_area = { owned_by = ROOT }
+			}
+		}
+		allow = {
+			northern_greece_area = { type = all owned_by = ROOT }
+			morea_area = { type = all owned_by = ROOT }
+		}
+		effect = {
+			add_prestige = 10
+			add_army_tradition = 25
+			set_country_flag = triumph_greece
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	triumph_balkans = {
+		potential = {
+			OR = {
+				tag = BYZ
+				tag = LAE
+				tag = ROM
+			}
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			has_dlc = "Purple Phoenix"
+			NOT = { has_country_flag = triumph_balkans }
+			balkan_region = { owned_by = ROOT }
+		}
+		allow = {
+			balkan_region = { type = all owned_by = ROOT }
+		}
+		effect = {
+			add_prestige = 20
+			add_army_tradition = 25
+			set_country_flag = triumph_balkans
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	triumph_asia = {
+		potential = {
+			OR = {
+				tag = BYZ
+				tag = LAE
+				tag = ROM
+			}
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			has_dlc = "Purple Phoenix"
+			NOT = { has_country_flag = triumph_asia }
+			OR = {
+				karasi_area = { owned_by = ROOT }
+				aydin_area = { owned_by = ROOT }
+				hudavendigar_area = { owned_by = ROOT }
+			}
+		}
+		allow = {
+			karasi_area = { type = all owned_by = ROOT }
+			aydin_area = { type = all owned_by = ROOT }
+			hudavendigar_area = { type = all owned_by = ROOT }
+		}
+		effect = {
+			add_prestige = 10
+			add_army_tradition = 25
+			set_country_flag = triumph_asia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	triumph_anatolia = {
+		potential = {
+			OR = {
+				tag = BYZ
+				tag = LAE
+				tag = ROM
+			}
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			has_dlc = "Purple Phoenix"
+			NOT = { has_country_flag = triumph_anatolia }
+			anatolia_region = { owned_by = ROOT }
+		}
+		allow = {
+			anatolia_region = { type = all owned_by = ROOT }
+		}
+		effect = {
+			add_prestige = 20
+			add_army_tradition = 25
+			set_country_flag = triumph_anatolia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	triumph_italy = {
+		potential = {
+			OR = {
+				tag = BYZ
+				tag = LAE
+				tag = ROM
+			}
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			has_dlc = "Purple Phoenix"
+			NOT = { has_country_flag = triumph_italy }
+			italy_region = { owned_by = ROOT }
+		}
+		allow = {
+			italy_region = { type = all owned_by = ROOT }
+		}
+		effect = {
+			add_prestige = 35
+			add_army_tradition = 25
+			set_country_flag = triumph_italy
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

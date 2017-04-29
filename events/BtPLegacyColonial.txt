@@ -1,0 +1,104 @@
+namespace = BtPLegacyColonial
+
+#Beothuk Encounter
+province_event = {
+	id = BtPLegacyColonial.1
+	title = "BtPLegacyColonial.EVTNAME1"
+	desc = "BtPLegacyColonial.EVTDESC1"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		colonial_region = colonial_newfoundland
+		is_colony  = yes
+		NOT = { owner = { primitives = yes } }
+		NOT = { culture = beothuk }
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = { # Cooperate with them.
+		name = "BtPLegacyColonial.EVTOPTA1"
+		trigger = {
+			owner = {
+				dip_power = 30
+			}
+		}
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 2.0
+				owner = { has_idea_group = trade_ideas }	#Traders love to trade
+			}
+			modifier = {
+				factor = 3.0
+				owner = { ruler_has_personality = entrepreneur_personality }	#1.18 ruler traits influence
+			}
+		}
+		add_prestige = -5
+		add_dip_power = -30
+		add_base_production = 1
+		change_native_hostileness = -2
+	}
+	
+	option = { # Ignore them
+		name = "BtPLegacyColonial.EVTOPTB1"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2.0
+				owner = { has_idea_group = humanist_ideas }	#Humanist governments dealt with natives less harshly
+			}
+			modifier = {
+				factor = 2.0
+				owner = { ruler_has_personality = careful_personality }	#1.18 ruler traits influence
+			}
+		}
+		change_native_hostileness = -1
+	}
+	
+	option = { # Purge the savages!
+		name = "BtPLegacyColonial.EVTOPTC1"
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 2.0
+				owner = { has_idea_group = expansion_ideas }	#Expansionist governments dealt with natives more harshly
+			}
+			modifier = {
+				factor = 3.0
+				owner = { ruler_has_personality = expansionist_personality }	#1.18 ruler traits influence
+			}
+			modifier = {
+				factor = 2.0
+				owner = { ruler_has_personality = conqueror_personality }	#1.18 ruler traits influence
+			}
+			modifier = {
+				factor = 2.0
+				owner = { ruler_has_personality = cruel_personality }	#1.18 ruler traits influence
+			}
+			modifier = {
+				factor = 0.3
+				owner = { ruler_has_personality = tolerant_personality }	#1.18 ruler traits influence
+			}
+			modifier = {
+				factor = 0.3
+				owner = { ruler_has_personality = kind_hearted_personality }	#1.18 ruler traits influence
+			}
+			modifier = {
+				factor = 0.5
+				owner = { ruler_has_personality = benevolent_personality }	#1.18 ruler traits influence
+			}
+			modifier = {
+				factor = 0.5
+				owner = { ruler_has_personality = just_personality }	#1.18 ruler traits influence
+			}
+		}
+		change_native_hostileness = 1
+		create_native = 1
+		change_native_size = -2
+	}
+}

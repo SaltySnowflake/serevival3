@@ -1,0 +1,16 @@
+government = aboriginal_native_council
+government_rank = 1
+primary_culture = aboriginal
+religion = tjukurpa
+technology_group = aboriginal
+capital = 3883 # Garawa
+
+1444.1.1 = {
+	monarch = {
+		name = "Midge"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	
+}

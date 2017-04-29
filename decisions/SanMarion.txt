@@ -1,0 +1,23 @@
+country_decisions = {
+
+	restore_diarchy = {
+		major = yes
+		potential = {
+			NOT = { government = roman_diarchy }
+			tag = SAN
+		}
+		allow =  {
+			stability = 1
+			is_at_war = no 
+			is_subject = no
+		}
+		effect = {
+			change_government = roman_diarchy
+			add_stability = -2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

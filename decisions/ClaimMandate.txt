@@ -1,0 +1,80 @@
+country_decisions = {
+
+	claim_mandate = {
+		major = yes
+		potential = {
+			OR = {
+				all_country = { 
+					NOT = { government = celestial_empire }
+					NOT = { government = celestial_empire_SE }
+				}
+				any_country = {
+					OR = {
+						government = celestial_empire
+						government = celestial_empire_SE
+					}
+					NOT = { num_of_cities = 10 }
+				}
+			}
+			NOT = { government = celestial_empire }
+			NOT = { government = celestial_empire_SE }
+			AND = {
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+					primary_culture = bai
+					primary_culture = zhuang
+					culture_group = east_asian
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			legitimacy = 90
+			num_of_cities = 15
+			capital_scope = { 
+				OR = {
+					region = south_china_region
+					region = xinan_region
+					region = north_china_region
+				}
+			}
+		}
+		effect = {
+			every_country = {
+				limit = {
+					OR = {
+						government = celestial_empire
+						government = celestial_empire_SE
+					}
+				}
+				declare_war_with_cb = {
+					who = ROOT
+					casus_belli = cb_insult
+				}
+				change_government = despotic_monarchy
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			change_government = celestial_empire_SE
+			#set_government_rank = 3
+			if = {
+				limit = { owns = 1816 }
+				set_capital = 1816
+				if = {
+					limit = { NOT = { culture = ROOT } }
+					change_culture = ROOT
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 20 }
+			}
+		}
+	}
+
+}

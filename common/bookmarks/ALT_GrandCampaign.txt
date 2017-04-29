@@ -1,0 +1,23 @@
+bookmark =
+{
+	name = "EUROSCENARIO_NAME"
+	desc = "EUROSCENARIO_DESC"
+	date = 1444.11.01
+	
+	center = 112
+	default = yes
+	
+	country = TUN
+	country = CHP
+	country = LOD
+	country = GAL
+	country = GEL
+	country = EST
+	country = CUM
+	country = CIL
+	country = PAX
+	country = BHT
+	
+	easy_country = TUN
+	easy_country = CHP
+}

@@ -1,0 +1,85 @@
+country_decisions = {
+
+	form_ainu = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = ANU }
+			NOT = { tag = JME }
+			primary_culture = ainu
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			owns_core_province = 1031  # Soya
+			owns_core_province = 1847  # Ishikari
+			owns_core_province = 1852  # Tokachi
+			owns_core_province = 3718  # Nutaku
+			OR = { 
+				owns_core_province = 1032 # Kuril
+				owns_core_province = 3717 # Karput
+				}
+		}
+		effect = {
+			change_tag = ANU
+			change_government = tribal_kingdom
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_prestige = 25		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_jomon = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			tag = ANU
+			NOT = { exists = JME }
+			OR = {
+				ai = no
+				num_of_cities = 5
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			owns = 1020		# Kyoto
+			owns = 1025		# Dewa
+			owns = 1026		# Mutsu
+			owns = 1028		# Musashi
+		}
+		effect = {
+			change_tag = JME			
+			change_government = feudal_monarchy
+			set_government_rank = 3
+			japan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = JME
+			}
+			add_country_modifier = {
+				name = "hmn_jomon_culture_conversion"
+				duration = 1825
+			}
+			add_prestige = 50
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,102 @@
+namespace = BtPLegacyIrishReligious
+
+#Written by Driaocht 16-10-26
+
+# Keeping AI Ireland Catholic
+province_event = {
+	id = BtPLegacyIrishReligious.1
+	title = "BtPLegacyIrishReligious.EVTNAME1"
+	desc = "BtPLegacyIrishReligious.EVTDESC1"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	trigger = {
+		culture = irish
+		religion = catholic
+		owner = {
+			culture_group = british
+			religion_group = christian
+		}
+		has_missionary = yes
+		NOT = { has_province_modifier = irish_catholicism_not_allowed }
+		NOT = { has_province_modifier = irish_catholicism_allowed }
+	}	#Fires if there is a missionary active in an Irish Catholic province and the owners primary culture is British and religion is christian
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = { # Push forward
+		name = "BtPLegacyIrishReligious.EVTOPTA1"
+		trigger = {
+			owner = {
+				adm_power = 30
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+				owner = { tag = KOI }
+			}
+		}
+		add_province_modifier = {
+			name = irish_catholicism_not_allowed
+			duration = 10950
+		}
+		owner = { add_adm_power = -30 }
+	}
+	option = { # Oh well
+		name = "BtPLegacyIrishReligious.EVTOPTB1"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.3
+				owner = { ruler_has_personality = zealot_personality }	#1.18 ruler traits influence
+			}
+			modifier = {
+				factor = 1.5
+				owner = { ruler_has_personality = tolerant_personality }	#1.18 ruler traits influence
+			}
+		}
+		add_province_modifier = {
+			name = irish_catholicism_allowed
+			duration = 10950
+		}
+	}
+}
+
+#Removing modifiers once conversion is complete or if 'Irish Caothlic' for whatever reason no longer applies
+province_event = {
+	id = BtPLegacyIrishReligious.2
+	title = "BtPLegacyIrishReligious.EVTNAME2"
+	desc = "BtPLegacyIrishReligious.EVTDESC2"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+
+	trigger = {
+		OR = {
+			NOT = { culture = irish }
+			NOT = { religion = catholic }
+		}
+		OR = {
+			has_province_modifier = irish_catholicism_not_allowed
+			has_province_modifier = irish_catholicism_allowed
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # Good to know
+		name = "BtPLegacyIrishReligious.EVTOPTA2"
+		if = {
+			limit = { has_province_modifier = irish_catholicism_not_allowed }
+			remove_province_modifier = irish_catholicism_not_allowed
+		}
+		if = {
+			limit = { has_province_modifier = irish_catholicism_allowed }
+			remove_province_modifier = irish_catholicism_allowed
+		}
+		owner = { add_prestige = 5 }
+	}
+}

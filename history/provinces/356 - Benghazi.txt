@@ -1,0 +1,30 @@
+#356 - Cyrenaica
+
+owner = MAM
+controller = MAM
+culture = al_misr_arabic
+religion = sunni
+capital = "Benghazi"
+trade_goods = wool
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 2
+add_local_autonomy = 50
+is_city = yes
+add_core = MAM
+
+
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.01 = { add_core = CYR remove_core = MAM owner = CYR }
+1444.11.11 = { add_core = MAM owner = MAM add_local_autonomy = -16 }
+
+1517.1.1 = {	owner = TUR
+	controller = TUR
+	add_core = TUR
+} # Conquered by Ottoman troops

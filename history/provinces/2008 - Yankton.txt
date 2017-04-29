@@ -1,0 +1,67 @@
+#2008 - Yankton
+
+culture = atsina #pawnee #Old plains people
+religion = wakan_tanka
+capital = "Lakota"
+trade_goods = horses
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 1
+native_ferocity = 1
+native_hostileness = 1
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = AAI
+	controller = AAI
+	add_core = AAI
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = AAI
+	controller = AAI
+	add_core = AAI
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = AAI
+	controller = AAI
+	add_core = AAI
+	is_city = yes
+}
+
+1735.1.1 = {
+	owner = ARP
+	controller = ARP
+	add_core = ARP 
+} #Arapaho migrate south
+
+1760.1.1 = {
+	owner = CHY
+	controller = CHY
+	add_core = CHY
+	remove_core = ARP
+	culture = cheyenne
+} #Great Plain tribes spread over vast territories
+1810.1.1 = {
+	remove_core = AAI
+	owner = SIO
+	controller = SIO
+	add_core = SIO
+	culture = dakota 
+} #Lakota pushes west across the Missouri

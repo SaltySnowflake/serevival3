@@ -1,0 +1,20 @@
+bookmark =
+{
+	name = "TROBADOR_BOOKMARK"
+	desc = "TROBADOR_BOOKMARK_DESC"
+	date = 1444.11.01
+	
+	center = 212
+	default = yes
+	
+	country = TOU
+	country = PRO
+	country = AVI
+	country = GUY
+	country = FOI
+	country = AMG
+	country = CAT
+	country = VAL
+	country = MJC
+	
+}

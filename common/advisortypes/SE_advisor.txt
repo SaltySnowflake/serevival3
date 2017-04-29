@@ -1,0 +1,185 @@
+
+######################################################
+trobador = {
+	monarch_power = DIP
+	
+	# Bonus
+	prestige = 2
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.2
+			NOT = { culture_group = occitanocatala }
+			NOT = { culture = occitain }
+			NOT = { culture = arpitan }
+			NOT = { culture = gascon }
+			NOT = { culture = catalan }
+		}
+		modifier = {
+			factor = 0.2
+			NOT = { culture_group = occitanocatala }
+			NOT = { culture_group = latin }
+			NOT = { culture_group = french }
+			NOT = { culture_group = iberian }
+		}
+		modifier = {
+			factor = 0.2
+			NOT = { owner = { capital_scope = { continent = europe } } }
+		}
+		modifier = {
+			factor = 0.2
+			NOT = {
+				any_country = { culture_group = occitanocatala }
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { 
+				owner = { # just for PREV
+					any_province = {
+						has_discovered = PREV
+						OR = {
+							culture_group = occitanocatala
+							culture = occitain
+							culture = arpitan
+							culture = gascon
+							culture = catalan
+						}
+					}
+				}
+			}
+			#owner = { NOT = { has_discovered = 196 } } # Toulouse is a simpler test
+		}
+		modifier = {
+			factor = 2
+			owner = { has_idea = paratge_traditions }
+		}
+		modifier = {
+			factor = 2
+			owner = { has_idea = occitan_renaissance }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+######################################################
+mahometan_scholar = {
+	monarch_power = ADM
+	
+	# Bonus
+	technology_cost = -0.05
+	#tolerance_heathen = 2
+	#tolerance_heretic = 1
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	chance = {
+		factor = 1 
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { continent = europe }
+				NOT = { owner = { religion_group = christian } }
+				owner = {
+					num_of_owned_provinces_with = {
+					value = 1
+					religion = sunni
+					}
+				}
+				has_port = no
+				owner = {
+					NOT = {
+						any_country = {
+							religion_group = muslim
+							has_opinion = { who = PREV value = 0 }
+						}
+					}
+				}
+				NOT = {
+					owner = {
+						any_active_trade_node = {
+							continent = africa
+							any_neighbor_province = {
+								religion_group = muslim
+								culture_group = maghrebi
+							}
+						}
+					}
+				}
+				owner = { tag = PAP }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			owner = { sunni = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { sunni = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { sunni = 3 }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { sunni = 4 }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { has_idea_group = innovativeness_ideas }
+		}
+		modifier = {
+			factor = 0.80
+			owner = { has_idea_group = religious_ideas }
+		}
+		modifier = {
+			factor = 1.50
+			has_building = university
+		}
+		modifier = {
+			factor = 0.80
+			owner = {
+				all_country = {
+					OR = {
+						NOT = { religion_group = muslim }
+						border_distance = { who = PREV distance = 100 }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.65
+			owner = {
+				all_country = {
+					OR = {
+						NOT = { religion_group = muslim }
+						border_distance = { who = PREV distance = 200 }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.50
+			owner = {
+				all_country = {
+					OR = {
+						NOT = { religion_group = muslim }
+						border_distance = { who = PREV distance = 300 }
+					}
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

@@ -1,0 +1,91 @@
+country_decisions = {
+
+	irish_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = CEL }
+			NOT = { tag = KOI }
+			NOT = { tag = TNA }
+			NOT = { tag = IRE }
+			NOT = { tag = KOI }
+			primary_culture = irish
+			OR = {
+				tag = LEI
+				tag = ULS
+				tag = MNS
+				tag = CNN
+				num_of_owned_provinces_with = {
+					value = 9
+					region = ireland_area
+				}	#over half of Ireland to see if not one of the four primary provincial kingdoms		
+			}
+			NOT = { government = irish_clann }			#Clans and Lordships need to create provincial kingdom
+			NOT = { government = norman_lordship }			#Clans and Lordships need to create provincial kingdom
+			NOT = { government_rank = 3 }			#If for some bizarre reason an empire level can form Ireland, dont let it.
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = IRE }
+			NOT = { exists = KOI }
+			num_of_owned_provinces_with = {
+				value = 12
+				region = ireland_area
+			}	#requires roughly two thirds of Ireland to form, so KOI can be formed without the west or IRE can be formed without Leinster and the NE plantations
+		}
+		effect = {
+			change_tag = IRE
+			change_government = high_kingship
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

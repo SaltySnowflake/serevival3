@@ -1,0 +1,65 @@
+# Switzerland-Grey Leagues relations
+
+vassal = {
+	first = SWI
+	second = GRL
+	start_date = 1497.1.1
+	end_date = 1520.1.1
+}
+
+#Irish overhaul by Draiocht
+# Pope Paul IV issued a papal bull in 1555, Ilius, per quem Reges regnant, recognising Philip and Mary as King and Queen of England and its dominions including Ireland.
+# Over the course of the next two centuries, the Papacy and Europe's Catholic rulers continued to recognise Ireland as a Kingdom in its own right, whilst at the same time asserting its Protestant monarchy as illegitimate.
+# Until 1801, Ireland continued to exist as a Kingdom in its own right, with its own Parliament; however, its government remained in English hands even after Grattan's constitution came into effect in the 1780s.
+# Experimenting with KOI as a junior partner in PU under England, until proper union in 1800-1801-1802. May change it back due to sub input, or may even reconsider on my own.
+
+union = {
+	first = ENG
+	second = KOI
+	start_date = 1541.6.18			#Creation
+	end_date = 1642.3.17			#Confederate Ireland
+}	#Creation of the Kingdom of Ireland
+
+union = {
+	first = ENG
+	second = KOI
+	start_date = 1652.4.21
+	end_date = 1801.1.1
+}	#Reestablishment of the Kingdom of Ireland, after Cromwellian reconquest of Ireland
+
+union = {
+	first = GBR
+	second = KOI
+	start_date = 1707.5.12
+	end_date = 1801.1.1
+}	#Union, creation of the United Kingdoms
+
+#Other Old World Alliances, vassals, etc.
+
+vassal = {
+	first = TRE
+	second = FEO
+	start_date = 1444.11.11
+	end_date = 1461.1.1
+}	#Evidence I found says feo was a vassal state of the empire of Trebizond, and Trenizond's last remaining holding before the Ottomans completely took over.
+
+vassal = {
+	first = KAR
+	second = ALI
+	start_date = 1444.11.11
+	end_date = 1471.1.1
+}	#From start date to date Karaman takes over fully, followed by Ottomans
+
+royal_marriage = {
+	first = FRA
+	second = BRI
+	start_date = 1440.1.1
+	end_date = 1500.1.1
+}	#To encourage France getting a PU over Brittany. Bug report says France rarely if ever expands this way. Between (historical) older, infertile heir, and France having the first RM, AI France has a chance to inherit as junior. Not too bad historically, great deal of intermarriage, and the dukes of Brittany were a French dynasty anyhow
+
+royal_marriage = {
+	first = SCO
+	second = BRI
+	start_date = 1444.11.11
+	end_date = 1450.7.19
+}

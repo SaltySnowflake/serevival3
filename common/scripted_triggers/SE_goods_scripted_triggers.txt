@@ -1,0 +1,1081 @@
+#checks for basic grains, for develop custom triggers
+crops_trigger = {
+		#checks for crops, many goods need these to spawn
+	OR = {
+		trade_goods = grain
+		trade_goods = barley
+		trade_goods = rye
+		trade_goods = millet
+		trade_goods = sorghum
+		trade_goods = maize
+		trade_goods = rice
+		trade_goods = potatoes
+		trade_goods = olives
+		trade_goods = citrus
+		trade_goods = hemp
+	}
+}
+tropical_woods_trigger = {
+		#checks for tropical woods
+	OR = {
+		trade_goods = mahogany
+		trade_goods = teak
+		trade_goods = ebony
+		trade_goods = sandal
+		trade_goods = tropical_wood
+		trade_goods = bloodwood
+	}
+}
+
+gems_trigger = {
+		#checks for gems
+	OR = {
+		trade_goods = jade
+		trade_goods = gems
+		trade_goods = gold
+		trade_goods = silver
+		trade_goods = obsidian
+	}
+}
+
+ores_trigger = {
+		#checks for ores
+	OR = {
+		trade_goods = iron
+		trade_goods = copper
+		trade_goods = lead
+		trade_goods = tin
+		trade_goods = zinc
+		trade_goods = mercury
+		trade_goods = coal
+	}
+}
+salts_trigger = {
+		#checks for 'salts'
+	OR = {
+		trade_goods = salt
+		trade_goods = sulphur
+	}
+}
+spices_trigger = {
+		#checks for spices
+	OR = {
+		trade_goods = spices
+		trade_goods = cinnamon
+		trade_goods = clove
+		trade_goods = nutmeg
+		trade_goods = ginger
+		trade_goods = vanilla
+	}
+}
+
+
+#triggers for developing goods
+#mostly same triggers as for spawning in empty provinces
+#some are inverted, i.e. if they are TRUE they can NOT be developed with that good
+wheat_dev = {		#inverted
+	OR = {
+		trade_goods = grain
+		has_terrain = desert
+		has_terrain = glacier
+		has_terrain = coastline
+		has_climate = arid
+		has_climate = arctic
+		has_climate = tropical
+		has_winter = severe_winter
+		region = central_asia_region
+		region = siberia_region
+		NOT = { 
+			OR = { 
+				owner = { barley = 1 }
+				owner = { rice = 1 }
+				owner = { millet = 1 }
+			}
+		}	 #simpler crops first
+		AND = {
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+			}
+			NOT = { is_year = 1550 }	#no old world crops too early
+		}
+	}
+}
+barley_dev = {		#inverted
+	OR = {
+		trade_goods = barley
+		has_terrain = desert
+		has_terrain = glacier
+		has_terrain = coastline
+		has_climate = arid
+		has_climate = arctic
+		has_climate = tropical
+		has_winter = severe_winter
+		AND = {
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+			}
+			NOT = { is_year = 1550 }	#no old world crops too early
+		}
+	}
+}
+rye_dev = {		#inverted
+	OR = {
+		trade_goods = rye
+		has_terrain = desert
+		has_terrain = glacier
+		has_terrain = coastline
+		has_terrain = farmlands
+		AND = { 
+			has_climate = arctic
+			NOT = { region = canada_region }
+			NOT = { region = scandinavia_region }
+		}
+		has_climate = arid
+		has_climate = tropical	
+		has_winter = mild_winter
+		has_winter = no_winter	
+		NOT = { 
+			OR = {
+				has_winter = normal_winter
+				has_winter = mild_winter
+				has_winter = severe_winter
+			}
+		}	
+		AND = {
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+			}
+			NOT = { is_year = 1550 }	#no old world crops too early
+		}
+	}
+}
+maize_dev = {		#inverted
+	OR = {
+		trade_goods = maize
+		has_terrain = desert
+		has_terrain = glacier
+		has_terrain = coastline
+		has_terrain = jungle
+		has_climate = arctic
+		has_climate = arid
+		AND = {
+			NOT = {
+				OR = {
+					continent = new_world
+					continent = north_america
+					continent = south_america
+				}
+			}
+			NOT = { is_year = 1550 }	#corn spread to the old world
+		}
+	}
+}
+rice_dev = {		#inverted
+	OR = {
+		trade_goods = rice
+		has_climate = arid
+		has_climate = actic
+		NOT = {
+			OR = {
+				continent = asia
+				area = banda_oriental_area
+				area = rio_grande_do_sol_area
+				area = buenos_aires_area
+				area = beni_area
+				area = paraguay_area
+				area = sao_paolo_area
+				area = mississippi_area
+				area = lower_louisiana_area
+				is_year = 1550
+			}
+		}
+		AND = {
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+			}
+			NOT = { is_year = 1550 }	#no old world crops too early
+		}
+	}
+}
+millet_dev = {		#inverted
+	OR = {
+		trade_goods = millet
+		has_terrain = glacier
+		has_terrain = desert
+		has_climate = arctic
+		AND = {
+			has_climate = temperate
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+		}
+		AND = {
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+			}
+			NOT = { is_year = 1550 }	#no old world crops too early
+		}
+	}
+}
+sorghum_dev = {		#inverted
+	OR = {
+		trade_goods = sorghum
+		continent = europe
+		has_terrain = glacier
+		has_terrain = jungle
+		has_terrain = farmlands
+		NOT = { has_climate = arid }
+		AND = {
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+			}
+			NOT = { is_year = 1550 }	#no old world crops too early
+		}
+	}
+}
+olives_dev = {		#inverted
+	OR = {
+		trade_goods = olives
+		NOT = {
+			OR = {
+				region = balkan_region
+				region = italy_region
+				region = iberia_region
+				region = maghreb_region
+				region = egypt_region
+				region = mashriq_region
+				region = anatolia_region
+				area = california_area
+				area = baja_california_area
+				area = sonora_y_sinaloa_area
+				area = central_valley_area
+			}
+		}
+		AND = {
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+			}
+			NOT = { is_year = 1550 }	#no old world crops too early
+		}
+		AND = {
+			NOT = {
+				OR = {
+					area = california_area
+					area = baja_california_area
+					area = sonora_y_sinaloa_area
+					area = central_valley_area
+				}
+			}
+			OR = {
+				has_climate = arid
+				has_terrain = mountain
+				has_terrain = desert
+				has_terrain = highlands
+			}
+		}
+	}
+}
+palm_oil_dev = {
+	region = west_africa_region		
+	has_climate = tropical
+	NOT = { trade_goods = palm_oil }
+}
+potatoes_dev = {
+	OR = {
+		AND = {
+			is_year = 1550
+			OR = {
+				continent = europe
+				superregion = china_superregion
+			}
+		}
+		AND = {
+			region = peru_region
+			is_random_new_world = no
+		}
+		AND = {
+			is_random_new_world = yes
+			continent = new_world
+			has_terrain = mountain
+		}
+	}
+	NOT = { trade_goods = potatoes }
+}
+citrus_dev = {			#inverted
+	OR = {
+		trade_goods = citrus
+		has_climate = arid
+		has_climate = arctic
+		has_terrain = glacier
+		has_terrain = forest
+		has_terrain = mountain
+		has_terrain = hills
+		has_terrain = desert
+		has_terrain = highlands
+		has_winter = severe_winter
+		has_winter = normal_winter
+		has_winter = mild_winter
+		AND = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+			NOT = {
+				OR = {
+					area = california_area
+					area = baja_california_area
+					area = sonora_y_sinaloa_area
+					area = central_valley_area
+				}
+			}
+		}
+		AND = {
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+			}
+			NOT = { is_year = 1550 }	#no old world crops too early
+		}
+	}
+}
+coffee_dev = {			#inverted
+	OR = {
+		AND = { is_overseas = no crops_trigger = no }		#if not overseas, only on provinces with crops
+		AND = {
+			NOT = { continent = new_world }
+			NOT = { region = indonesia_region }
+			NOT = { region = east_africa_region }
+			NOT = { region = horn_of_africa_region }
+			NOT = { region = west_africa_region }
+			NOT = { region = la_plata_region }
+			NOT = { region = peru_region }
+			NOT = { region = brazil_region }
+			NOT = { region = carribeans_region }
+			NOT = { region = central_america_region }
+			NOT = { region = mexico_region }
+			NOT = { region = colombia_region }
+		}
+		continent = europe
+		has_terrain = glacier
+		has_terrain = forest
+		has_terrain = desert
+		has_climate = arctic
+		has_climate = arid
+		has_winter = severe_winter
+		has_winter = normal_winter
+		has_winter = mild_winter
+		trade_goods = coffee
+	}
+}
+sugar_dev = {			#inverted
+	OR = {
+		AND = { is_overseas = no crops_trigger = no }
+		has_climate = arid
+		continent = europe
+		trade_goods = sugar
+		AND = {
+			NOT = { has_climate = tropical }
+			OR = {
+				has_winter = severe_winter
+				has_winter = normal_winter
+				has_winter = mild_winter
+				has_terrain = desert
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+				has_terrain = forest
+				has_terrain = steppe
+			}
+		}
+	}
+}
+cocoa_dev = {		#inverted
+	OR = {
+		AND = { is_overseas = no crops_trigger = no }
+		trade_goods = cocoa
+		has_terrain = glacier
+		has_terrain = steppe
+		has_terrain = forest
+		has_terrain = woods
+		has_terrain = marsh
+		has_climate = arid
+		has_climate = arctic
+		has_winter = mild_winter
+		has_winter = normal_winter
+		has_winter = severe_winter
+		AND = {
+			NOT = { region = central_america_region }
+			NOT = { region = colombia_region }
+			NOT = { region = peru_region }
+			NOT = { region = brazil_region }
+			NOT = { continent = new_world }
+		}
+	}
+}
+tobacco_dev = {			#inverted
+	OR = {
+		AND = { is_overseas = no crops_trigger = no }
+		trade_goods = tobacco
+		has_terrain = glacier
+		has_terrain = steppe
+		has_terrain = forest
+		has_climate = arid
+		has_climate = arctic
+		has_winter = mild_winter
+		has_winter = normal_winter
+		has_winter = severe_winter
+		AND = {
+			NOT = { continent = south_ameirca }
+			NOT = { continent = north_america }
+			NOT = { continent = new_world }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+		}
+	}
+}
+tea_dev = {			#inverted
+	OR = {
+		AND = { is_overseas = no crops_trigger = no }
+		trade_goods = tea
+		has_terrain = glacier
+		has_terrain = steppe
+		has_terrain = forest
+		has_terrain = woods
+		has_terrain = marsh
+		has_climate = arid
+		has_climate = arctic
+		has_winter = mild_winter
+		has_winter = normal_winter
+		has_winter = severe_winter
+		AND = {
+			NOT = { continent = new_world }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+			NOT = { region = japan_region }
+			NOT = { area = taiwan_area }
+			NOT = { area = assam_area }
+			NOT = { area = banda_oriental_area } #Yerba Mate
+			NOT = { area = rio_grande_do_sol_area } #Yerba Mate
+			NOT = { area = buenos_aires_area } #Yerba Mate
+			NOT = { area = beni_area } #Yerba Mate
+			NOT = { area = paraguay_area } #Yerba Mate
+			NOT = { area = sao_paolo_area } #Yerba Mate
+		}
+	}
+}
+opium_dev = {			#inverted
+	OR = {
+		AND = { is_overseas = no crops_trigger = no }
+		AND = {
+			NOT = { superregion = china_superregion }
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = persia_superregion }
+			NOT = { superregion = near_east_superregion }
+			NOT = { region = khorasan_region }
+			NOT = { region = burma_region }
+			NOT = { region = indo_china_region }
+			NOT = { region = baluchistan_region }
+			NOT = { region = xinan_region }
+		}
+		trade_goods = opium
+	}
+}
+livestock_dev = {
+	OR = {
+		crops_trigger = yes
+		trade_goods = wool
+		trade_goods = horses
+		trade_goods = cheese
+	}
+	NOT = { has_terrain = desert }
+	NOT = { has_terrain = glacier }
+	NOT = { has_climate = arctic }
+}
+cheese_dev = {
+	trade_goods = livestock
+}
+horses_dev = {
+	trade_goods = livestock
+	NOT = { has_terrain = desert }
+	NOT = { has_terrain = jungle }
+	NOT = { has_terrain = glacier }
+	NOT = { has_climate = arid }
+	NOT = { has_climate = arctic }
+	OR = {
+		AND = {
+			NOT = { continent = new_world }
+			NOT = { continent = north_america }
+			NOT = { continent = south_america }
+			NOT = { continent = oceania }
+		}
+		is_year = 1550	#no horses in pre-columbian americas
+	}
+}
+apiculture_dev = {
+	OR = {
+		crops_trigger = yes
+		trade_goods = wool
+		trade_goods = fur
+		trade_goods = lumber
+		trade_goods = woad
+		trade_goods = wine
+		trade_goods = beer
+		AND = { trade_goods = carmine has_global_flag = mexican_cochineal_happened }
+	}
+}
+fish_dev = {
+	has_port = yes
+	NOT = { has_terrain = farmlands }
+	NOT = { trade_goods = fish }
+}
+whaling_dev = {
+	has_port = yes 
+	NOT = { trade_goods = whaling }
+	OR = {
+		has_climate = arctic
+		has_terrain = glacier
+		region = canada_region
+		region = carribeans_region
+		region = oceanea_region
+		region = new_zealand_region
+		area = patagonia_area
+		area = south_atlantic_islands_area
+		area = southern_chile_area
+		trade_goods = naval_supplies
+	}
+	NOT = { has_terrain = farmlands }
+}
+wine_dev = {
+	crops_trigger = yes
+	OR = {
+		NOT = { has_climate = arctic }
+		NOT = { has_climate = arid }
+		NOT = { has_terrain = desert }
+		NOT = { has_terrain = glacier }
+		NOT = { has_terrain = mountain }
+		NOT = { has_terrain = highlands }
+		NOT = { has_terrain = desert }
+		
+	}
+}
+beer_dev = {
+	crops_trigger = yes
+}
+rum_dev = {
+	trade_goods = sugar
+}
+wool_dev = {
+	NOT = { trade_goods = wool }
+	NOT = { has_terrain = glacier }
+	NOT = { has_terrain = jungle }
+	NOT = { has_terrain = farmlands }
+	OR = { NOT = { has_terrain = desert } continent = oceania }
+	NOT = { has_climate = arctic }
+	NOT = { has_winter = severe_winter }
+}
+
+cashmere_dev = {
+	OR = {
+		trade_goods = wool		#need to have a tradition of wool before you can get cashmere
+		trade_goods = camel
+	}
+	OR = {
+		region = tibet_region
+		region = mongolia_region
+		region = australia_region
+		superregion = china_superregion
+		superregion = india_superregion
+		area = kashmir_area
+		area = gansu_area
+	}
+}
+camel_dev = {
+	NOT = { trade_goods = camel }
+	OR = { has_terrain = desert has_climate = arid }
+	NOT = {
+		OR = {
+			continent = new_world
+			continent = north_america
+			continent = south_america
+			continent = oceania
+			continent = europe
+			region = central_asia_region
+			region = south_africa_region
+		}
+	}
+}
+cotton_dev = {
+	NOT = { trade_goods = cotton }
+	OR = {
+		superregion = china_superregion
+		superregion = india_superregion
+		superregion = persia_superregion
+		superregion = near_east_superregion
+		region = khorasan_region
+		region = burma_region
+		region = indo_china_region
+		region = baluchistan_region
+		region = xinan_region
+		continent = south_america
+	}
+	OR = { is_overseas = yes AND = { is_overseas = no crops_trigger = yes } }
+}
+cloth_dev = {
+	OR = {
+		trade_goods = wool
+		trade_goods = woad
+		trade_goods = carmine
+		trade_goods = dyes
+		trade_goods = bloodwood
+		trade_goods = hemp
+		trade_goods = linen
+		trade_goods = camel
+		trade_goods = leather
+	}
+}
+silk_dev = {
+	OR = {
+		trade_goods = cloth
+		trade_goods = cashmere
+		trade_goods = carmine
+		trade_goods = bloodwood
+		trade_goods = dyes
+		trade_goods = carpet
+	}
+}
+linen_dev = {
+	has_climate = temperate
+	NOT = { has_terrain = desert }
+	NOT = { has_terrain = glacier }
+	NOT = { trade_goods = linen }
+	NOT = { trade_goods = naval_supplies }
+}
+hemp_dev = {
+	NOT = { has_climate = tropical }
+	NOT = { has_climate = arctic }
+	NOT = { AND = { has_climate = arid NOT = { has_port = yes } } }
+	NOT = { AND = { has_terrain = desert NOT = { has_port = yes } } }
+	NOT = { trade_goods = hemp }
+	NOT = { trade_goods = naval_supplies }
+}
+fur_dev = {		#inverted
+	OR = {
+		trade_goods = fur
+		AND = {
+			OR = {
+				has_climate = tropical
+				has_climate = arid
+				has_terrain = drylands
+				has_terrain = steppe
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = coastline
+				has_terrain = farmlands
+				has_terrain = mountain
+			}
+			NOT = { has_winter = normal_winter }
+			NOT = { has_winter = severe_winter }
+		}
+		continent = south_america
+		region = carribeans_region
+		region = south_africa_region
+		region = australia_region
+		region = new_zealand_region
+	}
+}
+
+leather_dev = {
+	OR = {
+		trade_goods = horses
+		trade_goods = livestock
+		trade_goods = whaling
+	}
+}
+
+naval_supplies_dev = {
+	OR = {
+		trade_goods = fish
+		trade_goods = lumber
+		trade_goods = whaling
+		trade_goods = tar
+		trade_goods = hemp
+		trade_goods = linen
+		trade_goods = salt
+	}
+	OR = {
+		AND = { development = 25 has_port = no }
+		AND = { development = 15 has_port = yes }
+	}
+		
+}
+tar_dev = {
+	NOT = { has_climate = tropical }
+	NOT = { has_climate = arid }
+	NOT = { trade_goods = tar }
+	NOT = { trade_goods = whaling }
+	NOT = { trade_goods = naval_supplies }
+	OR = {
+		has_terrain = drylands
+		has_terrain = steppe
+		has_terrain = desert
+		has_terrain = marsh
+		has_terrain = forest
+		has_terrain = highlands
+		has_terrain = hills
+		has_terrain = mountain
+		has_terrain = woods
+	}
+}
+lumber_dev = {
+	OR = {
+		has_terrain = marsh
+		has_terrain = forest
+		has_terrain = hills
+		has_terrain = mountain
+		has_terrain = woods
+	}
+	NOT = { has_climate = tropical }
+	NOT = { trade_goods = lumber }
+	NOT = { trade_goods = naval_supplies }
+	NOT = {
+		AND = {
+			OR = { 
+				continent = europe 
+				region = japan_region 			#Japan also became deforested
+			}
+			NOT = { 
+				OR = { 
+					region = baltic_region 
+					region = scandinavia_region 
+					region = russia_region
+				} 
+			}
+			has_global_flag = deforestation_happened	#cannot develop lumber in deforested Europe
+		}
+	}
+}
+tropical_wood_dev = {
+	OR = {			#in tropics, do not spawn lumber; in jungle, do not spawn lumber
+		AND = { has_terrain = forest has_climate = tropical }
+		AND = { has_terrain = woods has_climate = tropical }
+		AND = { trade_goods = lumber has_climate = tropical }
+		has_terrain = jungle
+	}
+	tropical_woods_trigger = no		#checks for tropical woods
+}
+indigo_dev = {
+	OR = { is_overseas = yes AND = { is_overseas = no crops_trigger = yes } }
+	NOT = { trade_goods = dyes }
+	NOT = { trade_goods = carmine }
+	tropical_woods_trigger = no
+	OR = {
+		has_terrain = jungle
+		superregion = persia_superregion
+		superregion = india_superregion
+	}
+	OR = {
+		region = west_africa_region
+		region = kongo_region
+		region = central_africa_region
+		superregion = persia_superregion
+		superregion = india_superregion
+	}
+	NOT = {
+		OR = {
+			has_climate = arid
+			has_climate = arctic
+			has_winter = mild_winter
+			has_winter = normal_winter
+			has_winter = severe_winter
+		}
+	}
+}
+woad_dev = {
+	NOT = { trade_goods = woad }
+	NOT = { trade_goods = carmine }
+	NOT = { trade_goods = dyes }
+	OR = {
+		continent = europe
+		region = central_asia_region
+	}
+	NOT = { has_climate = arid }
+	NOT = { has_climate = arctic }
+	NOT = { has_winter = severe_winter }
+	NOT = { has_global_flag = decline_woad_happened }	#after decline, rather worthless
+}
+carmine_dev = {
+	NOT = { trade_goods = carmine }
+	NOT = { trade_goods = dyes }
+	NOT = { trade_goods = bloodwood }
+	tropical_woods_trigger = no
+	OR = { 
+		region = poland_region
+		region = caucasia_region
+		region = colombia_region 	
+		superregion = central_america_superregion
+	}
+	OR = {
+		NOT = { has_global_flag = mexican_cochineal_happened }		#after decline, can't spawn in europe
+		region = colombia_region 
+		superregion = central_america_superregion
+	}
+	OR = { 
+		is_overseas = yes
+		AND = {
+			is_overseas = no
+			crops_trigger = yes
+		}
+	}
+}
+
+ivory_dev = {
+		#can spawn in arctics and siberia; mammoth ivory and walrus
+	NOT = { trade_goods = whaling }
+	NOT = { trade_goods = ivory }
+	NOT = { region = indonesia_region }
+	OR = {
+		continent = asia
+		continent = africa
+		area = subarctic_islands_area
+		region = greenland_region
+		region = siberia_region
+		region = canada_region
+	}
+	OR = {
+		NOT = { region = canada_region }
+		AND = {
+			region = canada_region
+			has_port = yes
+		}
+	}
+	OR = {
+		has_terrain = jungle
+		has_terrain = savannah
+		has_terrain = glacier
+		has_climate = arctic
+		has_winter = severe_winter
+		island = yes
+	}
+}
+marble_dev = {
+	development = 20
+	NOT = { owner = { marble = 3 } }
+	NOT = { trade_goods = marble }
+}
+glass_dev = {
+	development = 20
+	NOT = { trade_goods = glass }
+	OR = {
+			#can't have too much glass
+		AND = { NOT = { owner = { glass = 1 } } owner = { total_development = 100 } }
+		AND = { NOT = { owner = { glass = 2 } } owner = { total_development = 200 } }
+		AND = { NOT = { owner = { glass = 3 } } owner = { total_development = 400 } }
+		AND = { NOT = { owner = { glass = 4 } } owner = { total_development = 750 } }
+		AND = { NOT = { owner = { glass = 5 } } owner = { total_development = 999 } }
+		development = 35
+	}
+}
+prec_stone_dev = {
+	OR = {
+		has_terrain = mountain
+		has_terrain = highlands
+		has_terrain = hills
+	}
+		#can't have too many precious stones
+	NOT = {
+		owner = {
+			num_of_owned_provinces_with = {
+				value = 3
+				gems_trigger = yes
+			}
+		}
+	}
+	NOT = {	gems_trigger = yes }
+}
+chinaware_dev = {
+		#can develop easily in Europe after Bottger (event prices.3)
+	OR = {
+		AND = { 
+			OR = {
+				superregion = china_superregion
+				region = japan_region
+				region = korea_region
+			}
+			development = 10
+		}
+		AND = {
+			continent = asia
+			is_year = 1550
+			development = 15
+		}
+		AND = {
+			continent = europe
+			has_global_flag = bottger_happened
+			development = 10
+		}
+		AND = {
+			NOT = { continent = europe }
+			has_global_flag = bottger_happened
+			development = 15
+		}
+	}
+	NOT = { trade_goods = chinaware }
+}
+carpet_dev = {
+	development = 18
+	OR = {
+		trade_goods = cloth
+		trade_goods = linen		#unlike silk, coarser fa
+		trade_goods = cashmere
+		trade_goods = carmine
+		trade_goods = dyes
+		trade_goods = silk
+	}
+}
+ores_dev = {
+	OR = {
+		has_terrain = mountain
+		has_terrain = highlands
+		has_terrain = hills
+	}
+	NOT = {	ores_trigger = yes }
+}
+coal_dev = {			#inverted
+	OR = {
+		has_terrain = glacier
+		has_terrain = farmlands
+		has_terrain = savannah
+		has_terrain = steppe
+		has_winter = severe_winter
+		has_climate = arctic
+		island = yes
+		NOT = { is_year = 1650 }
+		AND = {
+			has_terrain = desert
+			NOT = { region = australia_region }
+		}
+	}
+}
+salts_dev = {
+	OR = {
+		has_terrain = desert
+		has_terrain = marsh
+		has_terrain = drylands
+		has_terrain = mountain
+		has_terrain = highlands
+		island = yes
+	}
+	NOT = {	salts_trigger = yes }
+	NOT = {
+		owner = {
+			num_of_owned_provinces_with = {
+				value = 5
+				salts_trigger = yes
+			}
+		}
+	}
+}
+spices_dev = {
+	OR = {
+		superregion = india_superregion
+		region = east_africa_region
+		region = west_africa_region
+		superregion = east_indies_superregion
+		superregion = china_superregion
+		region = mexico_region
+		AND = { continent = europe is_year = 1750 }
+		region = brazil_region
+	}
+	OR = {
+		is_overseas = yes 
+		AND = { is_overseas = no crops_trigger = yes development = 15 }
+	}
+	owner = { 		#need to own several spice provinces before developint it
+		num_of_owned_provinces_with = {
+			value = 4
+			spices_trigger = yes
+		}
+	}
+	OR = {
+		has_climate = tropical 
+		superregion = central_america_superregion
+		AND = { continent = europe is_year = 1750 }
+	}
+	NOT = { has_climate = arctic }
+	NOT = { has_winter = severe_winter }
+	NOT = { has_winter = normal_winter }
+}
+saffron_dev = {		#separate due to its nature
+	NOT = { has_climate = arctic }
+	NOT = { has_winter = severe_winter }
+	development = 15
+	owner = { saffron = 1 }
+	NOT = { trade_goods = saffron }
+	OR = {
+		AND = { NOT = { owner = { saffron = 1 } } owner = { total_development = 100 } }
+		AND = { NOT = { owner = { saffron = 2 } } owner = { total_development = 200 } }
+		AND = { NOT = { owner = { saffron = 3 } } owner = { total_development = 400 } }
+		AND = { NOT = { owner = { saffron = 4 } } owner = { total_development = 750 } }
+		AND = { NOT = { owner = { saffron = 5 } } owner = { total_development = 999 } }
+		development = 30
+	}
+}
+steel_dev = {
+	development = 18
+	is_overseas = no
+	OR = {
+		ores_trigger = yes
+		trade_goods = sulphur
+	}
+}
+paper_dev = {
+	development = 18
+	is_overseas = no
+}
+
+jewelry_dev = {
+	OR = {
+		AND = { development = 25 }
+		gems_trigger = yes
+	}
+	development = 40
+
+}
+industrial_dev = {
+	is_overseas = no
+	OR = {
+		development = 35
+		AND = { 
+			development = 20 
+			OR = {
+				trade_goods = steel
+				ores_trigger = yes
+				trade_goods = sulphur
+				trade_goods = paper
+				trade_goods = naval_supplies
+				has_province_modifier = ind_rev_mod
+			}
+		}
+	}
+}
+

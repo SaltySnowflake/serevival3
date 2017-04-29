@@ -1,0 +1,20 @@
+government = iqta
+government_rank = 1
+technology_group = muslim
+primary_culture = shilha
+religion = sunni
+capital = 2470			#Haha
+fixed_capital = 2470
+
+
+#May fill in later, but very unlikely anyone will care
+
+1441.11.01 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

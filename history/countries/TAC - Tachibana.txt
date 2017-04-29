@@ -1,0 +1,17 @@
+government = daimyo
+government_rank = 1
+primary_culture = kyushuan
+religion = shinto
+technology_group = chinese
+capital = 1818 # Chikuzen
+
+1444.11.01 = {
+	monarch = {
+		name = "Shinzen"
+		dynasty = "Tachibana"
+		birth_date = 1425.4.20
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

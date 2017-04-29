@@ -1,0 +1,6 @@
+263 = "Raciborz" #NepNEp
+264 = "Vratislav"
+2966 = "Gloguw"
+3140 = "Lignica"
+3141 = "Uopole"
+3142 = "Uopawa"

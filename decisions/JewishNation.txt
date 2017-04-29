@@ -1,0 +1,77 @@
+country_decisions = {
+
+	kingdom_of_israel = {
+		major = yes
+		potential = {
+			religion = jewish
+			NOT = { exists = ISR }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 1854
+			owns_core_province = 364
+			owns_core_province = 379
+			379 = { religion = jewish }
+		}
+		effect = {
+			change_tag = ISR
+			every_owned_province = {
+				limit = { culture = ROOT }
+				change_culture = jewish
+			}
+			change_primary_culture = jewish
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+						technology_group = eastern
+					}
+				}
+				change_technology_group = eastern
+				change_unit_type = eastern
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 379
+			if = {
+				limit = { NOT = { has_global_flag = jews_restored } }
+				379 = {
+					add_base_tax = 4
+					add_base_production = 4
+					add_base_manpower = 3
+					change_culture = jewish
+				}
+				set_global_flag = jews_restored
+			}
+			mashriq_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ISR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				Duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+}

@@ -1,0 +1,31 @@
+#1105 - Vestbygden
+#Region - Scandinavia
+#Area - Greenland
+
+add_core = THL
+owner = THL
+controller = THL
+culture = kalaallisut
+religion = angakkunngurniq
+capital = "Vestbygden"
+trade_goods = whaling
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 2
+native_hostileness = 9
+is_city = yes
+discovered_by = THL
+discovered_by = GNL
+
+1720.1.1 = { discovered_by = DAN }
+
+1721.1.1 = {
+	owner = DAN
+	controller = DAN
+	add_core = DAN
+	culture = danish
+	religion = protestant
+}

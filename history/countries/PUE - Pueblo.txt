@@ -1,0 +1,17 @@
+government = native_noblecouncil 
+government_rank = 1
+primary_culture = keres
+religion = kachina
+technology_group = north_american
+capital = 2495
+
+
+1444.11.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

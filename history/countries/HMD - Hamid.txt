@@ -1,0 +1,30 @@
+government = ghazi_state
+government_rank = 1
+primary_culture = turkish
+religion = sunni
+technology_group = ottoman
+capital = 326
+
+1439.1.1 = {
+	monarch = {
+		name = "Dündar I"
+		dynasty = "Anakroglu"
+		birth_date = 1415.1.1
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+1439.1.1 = {
+	heir = {
+		name = "Ömer"
+		monarch_name = "Ömer I"
+		dynasty = "Anakroglu"
+		birth_date = 1439.1.1
+		death_date = 1485.1.1
+		adm = 1
+		dip = 4
+		mil = 3
+	}
+}

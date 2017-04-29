@@ -1,0 +1,158 @@
+country_decisions = {
+
+	french_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = FRA }
+			NOT = { tag = PAP }
+			NOT = { tag = SPA }		# Basque is a valid culture for both FRA and SPA
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = ANV }
+			NOT = { tag = OCC }
+			NOT = { tag = CEL }
+			NOT = { tag = HBE }
+			OR = {
+				ai = no
+				NOT = { exists = FRA }
+			}
+			OR = {
+				culture_group = french
+				primary_culture = basque
+				primary_culture = breton
+				AND = {
+					primary_culture = corsican
+					OR = {
+						dynasty = "Buonaparte"
+						dynasty = "Bonaparte"
+					}
+				}
+			}
+			OR = {
+				num_of_cities = 6
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no			
+			NOT = { exists = FRA }
+			owns_core_province = 177	# Maine
+			owns_core_province = 179	# Blois
+			owns_core_province = 182	# Vermandois
+			owns_core_province = 183	# Île-de-France
+			owns_core_province = 184	# Orléannais
+			owns_core_province = 185	# Othe
+			owns_core_province = 186	# Champagne		
+		}
+		effect = {
+			change_tag = FRA
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			if = {
+				limit = { primary_culture = corsican }
+				change_primary_culture = cosmopolitan_french #should corsican join french group?
+			}
+			if = {
+				limit = { any_core_province = { culture = breton } }
+				custom_tooltip = bretonassim
+				hidden_effect = {
+					if = {
+						limit = { primary_culture = breton }
+						change_primary_culture = bretonfrench
+					}
+					every_core_province = {
+						limit = { culture = breton }
+						change_culture = bretonfrench
+					}
+				}
+			}
+			if = {
+				limit = { primary_culture = basque }
+				custom_tooltip = fbasqueassim
+				hidden_effect = {
+					change_primary_culture = basquefrench
+					every_core_province = { 
+						limit = { culture = basque }
+						change_culture = basquefrench
+					}
+				}
+			}
+			set_capital = 183
+			183 = {
+				if = {
+					limit = { NOT = { culture = ROOT } }
+					tooltip = { change_culture = ROOT }
+					hidden_effect = {
+						if = { 
+							limit = { owner = { primary_culture = bretonfrench } }
+							change_culture = bretonfrench
+						}
+						if = { 
+							limit = { owner = { primary_culture = basquefrench } }
+							change_culture = basquefrench
+						}
+						if = { 
+							limit = {
+								owner = {
+									NOT = {
+										primary_culture = bretonfrench
+										primary_culture = basquefrench
+									}
+								}
+							}
+							change_culture = ROOT
+						}
+					}
+				}
+			}
+			france_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = FRA
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { NOT = { has_idea_group = FRA_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

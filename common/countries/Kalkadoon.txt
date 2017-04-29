@@ -1,0 +1,98 @@
+#Wurundjeri
+
+graphical_culture = africangfx
+
+color = { 255 107 104 }
+
+historical_idea_groups = {
+	exploration_ideas
+	expansion_ideas
+	offensive_ideas
+	quality_ideas
+	influence_ideas
+	maritime_ideas
+	defensive_ideas
+	plutocracy_ideas
+}
+
+historical_units = {
+	native_indian_archer
+	native_indian_tribal_warfare
+	algonkin_tomahawk_charge
+	commanche_swarm
+	native_indian_mountain_warfare
+	sioux_dragoon
+	american_western_franchise_warfare
+}
+
+monarch_names = {
+	"Amaranga #2" = 40
+	"Ballil #4" = 20
+	"Barnergu #1" = 20
+	"Beera Yarra #0" = 20
+	"Billingulbut #11" = 10
+	"Bingmea #0" = 10
+	"Budgtysome #0" = -10
+	"Cagi #0" = -10
+	"Carrabiddy #0" = -5
+	"Doolabin #0" = -5
+	"Drice #4" = 1
+	"Dungallah #2" = 1
+	"Eirewallah #1" = 1
+	"Erecharna #0" = 0
+	"Erramulla #0" = 0
+	"Eyaboo #0" = 0
+	"Flowie #0" = 0
+	"Eualagie #0" = 0
+	"Garebung #0" = 0
+	"Gddjup #0" = 0
+	"Georgie #0" = 0
+	"Gidarra #0" = 0
+	"Ginmugga #0" = 0
+	"Gnoolbann #0" = 0
+	"Goonamana #0" = 0
+	"Illgidy #0" = 0
+	"Ischoongoban #0" = 0
+	"Jalyeanic #0" = 0
+	"Jandy Joma #0" = 0
+	"Janrmayarie #0" = 0
+	"Ignacio #0" = 0
+	"Kheiladoo #0" = 0
+	"Kooran Boko #0" = 0
+	"Limeral #0" = 0
+	"Mangangooma #0" = 0
+	"Mareeda #0" = 0
+	"Narragee #0" = 0
+	"Niabatteroo #0" = 0
+	"Tandawiy #0" = 0
+	"Tilianne #0" = 0
+	"Gatjil #0" = 10
+	"Lowitja #0" = 10
+	"Galarrwuy #0" = 10
+	"Mandawuy #0" = 10
+	"Yagan #0" = 10
+	"Pemulwuy #0" = 10
+	"Windradyne #0" = 10
+}
+	
+leader_names = {
+	"Tobagee Tjalor" "Waggin Waingannee" "Walbreieu"
+	"Yamadie Yallerman" "Yungurra" 
+	"Angiwarra Angao" "Aimery Bingarrie" 
+	"Bolubung Brinsee" "Bulgbarn Burgily" 
+	"Cockamarra Coromar" "Dowemuga Governurra" 
+	Jeeung "Jungobiddy Lofgun" Manurah
+	"Morlbiny Msua" Mullerwula Murdilgon Nyan 
+	"Nya Rogermulla" Woosh Tuvix
+	Tulget Wjan Wylrabiddy Wunagoora Yezelo
+}
+
+ship_names = {
+	Crow Waa Baiame Balayang Bunyip Bunjil Karagurk Nargun Pundjel Thinan Wambeen Akurra Ngintaka Muldjewangk
+	Anjea I'Wai Yalungur Dhakhan Yhi Wuluwaid Wollunqua Wawalag Nogomain Mokoi Minawara Karora Galeru 
+	Bobbi Onur Ankotainja Wurrunna Dirawong 
+}
+
+fleet_names = {
+	"Bunyip Fleet"
+}

@@ -1,0 +1,33 @@
+#1019 - Harima
+
+owner = YMN
+controller = YMN
+culture = yamato
+religion = shinto
+capital = "Himeji"
+trade_goods = steel
+hre = no
+base_tax = 3
+base_manpower = 2
+base_production = 3
+fort_15th = yes
+is_city = yes
+add_core = YMN
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1444.11.01 = { remove_core = YMN add_core = IKE owner = IKE }
+1444.11.11 = { add_core = YMN remove_core = IKE owner = YMN add_local_autonomy = -40 }
+
+1468.1.1 = { owner = HSK controller = HSK }
+1488.1.1 = { remove_core = YMN}
+1520.1.1 = { add_core = AMA }
+1532.1.1 = { owner = AMA controller = AMA }
+1542.1.1 = { discovered_by = POR }
+1566.11.28 = { owner = HSK controller = HSK }
+1578.5.1 = { add_core = JAP owner = JAP controller = JAP }
+1581.1.1 = { fort_15th = yes } # Himeji Castle
+1600.9.15 = { add_core = IKE owner = IKE controller = IKE remove_core = JAP }

@@ -1,0 +1,20 @@
+government = feudal_monarchy
+technology_group = western
+religion = catholic
+primary_culture = livonian
+capital = 3228
+historical_friend = EST
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+1542.1.1 = {
+	religion = protestant
+}

@@ -1,0 +1,119 @@
+namespace = neon
+#Migration of the Kalmyks
+
+# Kalmyks arrive
+country_event = {
+	id = neon.1
+	title = "neon.EVTNAME1"
+	desc = "neon.EVTDESC1"
+	picture = BUDDHA_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 2417
+		culture_group = east_slavic
+		is_year = 1620
+	}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	option = {
+		name = "neon.EVTOPTA1"
+		2417 = {
+			change_religion = vajrayana
+			change_culture = kalmyk
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_unrest = -10
+		}
+	}
+	option = {
+		name = "neon.EVTOPTB1"
+		add_stability = -1
+	}
+}
+
+# Giacomo Jaquerio
+country_event = {
+	id = neon.2
+	title = "neon.EVTNAME2"
+	desc = "neon.EVTDESC2"
+	picture = IMPORTANT_STATUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SAV
+		NOT = { is_year = 1453 }
+	}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	option = {
+		name = "neon.EVTOPTA2"
+		add_adm_power = 10
+		add_prestige = 10
+		define_advisor = {
+			type = artist
+			name = "Giacomo Jaquerio"
+			skill = 2
+			discount = yes
+		}
+	}
+}
+
+# FERT
+country_event = {
+	id = neon.3
+	title = "neon.EVTNAME3"
+	desc = "neon.EVTDESC3"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { tag = SPI }
+	
+	mean_time_to_happen = {	months = 1 }
+	
+	option = {
+		name = "neon.EVTOPTA3"
+		add_stability_or_adm_power = yes
+		add_dip_power = 150
+		add_mil_power = 150
+		add_prestige = 15
+		add_country_modifier = {
+			name = "happy_people"
+			duration = 3650
+		}
+	}
+}
+
+# Spread of Bosnian
+country_event = {
+	id = neon.4
+	title = "neon.EVTNAME4"
+	desc = "neon.EVTDESC4"
+	picture = REFORM_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			culture = serbian
+			religion = sunni
+		}
+	}
+	
+	mean_time_to_happen = { months = 600 }
+	
+	option = {
+		name = "OK"
+		random_owned_province = {
+			limit = {
+				culture = serbian
+				religion = sunni
+			}
+			change_culture = bosnian
+		}
+	}
+}

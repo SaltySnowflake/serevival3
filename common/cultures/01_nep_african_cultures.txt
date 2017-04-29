@@ -1,0 +1,212 @@
+sudanese = {
+	graphical_culture = africangfx
+	
+	dinka = {
+		dynasty_names = {
+			Gok Agaar Pakam Nyang Aliab Clec Bor Nyarweng Hol
+		}
+		male_names = {
+			Kapalei Koinet Komeyicin Kurary Leboo Legeny Legishon Lemaron Lemashon Lemayian Lembui Lemuanik 
+			Lolkerra Maitera Masigonde Mbiraru Mejooli Meticiki Murunga Naengop Nampazo Ntimama Oloishona 
+			Parneres Sabore Sankei Sankale Santamo Simel Sironka Surum Tonkei
+		}
+		female_names = {
+			Isina Kingasunye Kiserian Lankenua Liloe Malazo Naeku Naimutiae Naipanoi Naisaruru Naisenya Naisiae
+			Naisianoi Nalangu Nalutuesha NamelokNamunyak Naramal Naserian Nataana Nkasiogi Peresian Pion Resson
+			Sankau Segeyian Semeyian Siglal Siatamei Simaloi Simu Sintamei Sipanto Sopiato Tanei Tentoyia Terenua
+			Tigisi
+		}
+	}
+}
+
+kongo_group = {
+	graphical_culture = africangfx
+	
+	northern_bantu = {
+		dynasty_names = { 
+			Biya Maigari Ayang Hayatou Musonge Inoni
+		}
+	}
+	gbaya = {
+		dynasty_names = { 
+			Bambote Goyemide
+		}
+	}
+	herero = {
+	}	
+	ovimbundu = {
+		dynasty_names = { 
+			Mwantiyavwa Mbunda
+		}
+	}
+	mongo = {
+	}
+	fang = {
+		dynasty_names = { 
+			Mbene Mombo Bongo M'ba
+		}
+	}
+}
+
+khoisan = {
+	graphical_culture = africangfx
+	
+	khoi = {
+		male_names = {
+			"/Han kass'o" Wilta "!Kau-/kutten" Kebbi-an "!Kwabba-an" "/Hari Kafsho" Mansse "!Kau/noan" /Abbe-ttu //Khwai-/ha 
+			Tssatssi "!Nanni" "!Kweiten-ta-//ken" /Uma Xa-a-tin /Ing/ke "/Kham-Ka-!k'e" //Ng!ke "!O !kung" Buga-Kxoe Dzu'oasi
+			G//aakhwe "G!inkwe" Gi/kxigwi Hei-//om K''am-Ka-Kwe Kung Kxoe Lxloukxle N//hai Ng//-/e Ohongo Xko Xo-Kxoe 
+			"!Nanseb" "!Gae-nub" "!Khorebeb-//Naixab" "!Nanib"
+		}
+		female_names = {
+			/Auni /Nanani //Xegwe "!Kabee" Amankgqwigqwi Danisi Dxana Gxanna Kora Mohisa N/oo Zu/asi
+		}
+	}
+	san = {
+		male_names = {
+			"/Han kass'o" Wilta "!Kau-/kutten" Kebbi-an "!Kwabba-an" "/Hari Kafsho" Mansse "!Kau/noan" /Abbe-ttu //Khwai-/ha 
+			Tssatssi "!Nanni" "!Kweiten-ta-//ken" /Uma Xa-a-tin /Ing/ke "/Kham-Ka-!k'e" //Ng!ke "!O !kung" Buga-Kxoe Dzu'oasi
+			G//aakhwe "G!inkwe" Gi/kxigwi Hei-//om K''am-Ka-Kwe Kung Kxoe Lxloukxle N//hai Ng//-/e Ohongo Xko Xo-Kxoe 
+			"!Nanseb" "!Gae-nub" "!Khorebeb-//Naixab" "!Nanib"
+		}
+		female_names = {
+			/Auni /Nanani //Xegwe "!Kabee" Amankgqwigqwi Danisi Dxana Gxanna Kora Mohisa N/oo Zu/asi
+		}
+	}
+	male_names = { Sekgoma Munjuku Tjamuaha Maharero  }
+	female_names = { Behati }
+	dynasty_names = {
+		Herero Namaqua Khai//khaun "!Gomen" "!Kharakhoen" //Habowen "!Aman" //Ogain //Khau/goan "Kharo!oan" /Khowesin
+	}
+}
+
+southern_african = {
+	graphical_culture = africangfx
+
+	tonga = {
+	}
+	chewa = {
+		dynasty_names = { 
+			Mutharika Chakwera Banda Muluzi Chibambo
+		}
+	}	
+}
+
+african = {
+	graphical_culture = africangfx
+	
+	eastern_bantu = {
+		dynasty_names = { 
+			Ndahindurwa Rudahigwa Musinga Rutarindwa Rwabugiri
+		}
+	}
+}
+
+berber_group = {
+	tuareg = {
+		primary = AIR
+		dynasty_names = {
+			Magsharen Stanbulewa "Ait Loaien" "Dag Rali" Iregenaten
+			"Kel Rela" "Kel Silet" Taituq "Tgéhé Millet" "Kel Afella"
+			"Kel Taghlit" "Kel Essouk" "Kel Ouzzeyn" Ifergoumessen Iriyaken
+			"Taghat Mellet" Idnan
+		}
+		male_names = {
+			Agg-Abba al-Amin al-Wali al-Mu'min Uthman Agg-A'isha Humad Guma al-Adil ad-Dani al-Baqiri Waffa Ibrahim 
+			Waffa al-Qadir ar-Raffa ad-Dusuki Mikitan ar-Rahman Umaru ag-Ibrahim Salah al-Khir Yunus Ag Mama al-Hajj 
+			Ahmad Aytarel Attici Musa Akhamuk Meslar Bayy
+		}
+		female_names = {
+			"Tin Hinan" Takama Tanteflest Tarayna Aygul Aygün AylIn Aynur Aysel Fatma FIdan Firuza Gulnar Gulnara 
+			Günay Günel Konul Leyla Parvana Parvin Sevda SevInc SevInj Tarana Vüsala Zemfira Zeynab
+		}
+	}	
+	
+	berber = {
+		primary = TLC
+		dynasty_names = {
+			"al-Ilighi" "al-Tadsi" "Zayyanid" Maatka Wattasid Atfayyish "Beni Isguen" "al-Afdali" "Mzabi"
+			Tabghurin "al-Malshuti"
+		}
+		male_names = {
+			"Abu Abdallah" "Abu Abbas Ahmad" "Abu Tashufin" "Abu Hammu" "Abu Muh" "Abu Zayyan" "Abu Malek" "Abul Hadjdjadj"
+			"Abu Thabid" "Abu Said" "'Abd al-Karim" Barakat Basir Dawud Faris Haidar Hashim Jabbar 
+			Junayd Najib Qasim Rahim Rashîd Safi Sakhr Wahid Zahir Jamal Mustafa Muzaffaraddin N'Guna Nasr Nazar Niptasan 
+			Nizamaddin Ptolemee Ptolemy Qutaiba Rashid Sa'id Salah Salla Salomon Solomon Sammer Sayyid Seghada Sekla Shamsaddin 
+			Sifaks Sifal Sinbad Sisso Stembanos Suggut Sultan T'ar'iq Tabat Tacfin Taffounnout Tahir Takfarinas Tanan Tariq 
+			Tegama Thabitah Tifan Theophanus Tiljad Ugdada Ugwistan Umar Umar Uqess'un Uregh Urtilian Urz'ig Uzmir Uzza Wahab 
+			Watt'as Xamida Yabdas Yaghmurasen Yahya Yahya Yattuy Yeften Yeh'lem Yiliyen Yuba Yugerten Yugurthen Youkhanna John 
+			Yunes Yusuf Joseph Yuva Z'effun Zafir Zalelsan Zayar Zer'wal Zigza Ziri Zubeyr
+		}
+		female_names = {
+			Randa Tabassum 	Dema Dimah Dinara Dua Durra Durriyya Edza Eleonorka Eleanor Faghissa Fahriya Fariza Fedada 
+			Tazenkwedt Tazirit Tazrurt Tella Temzi Tfit Tigmi Tikinas Tilelli Timmi Tinhinan Tintadefi 
+			Tintifawin Tinzert Tisent Tislit Titbirt Titrit Tizemt Tiziri Triya Tudert Tuh'r'ict Tureght 
+		}
+	}
+	shilha = {
+		primary = SOS
+		dynasty_names = {
+			"al-Ilighi" "al-Tadsi" "Zayyanid" Maatka Wattasid Atfayyish "Beni Isguen" "al-Afdali" "Mzabi"
+			Tabghurin "al-Malshuti"
+		}
+		male_names = {
+			"Abu Abdallah" "Abu Abbas Ahmad" "Abu Tashufin" "Abu Hammu" "Abu Muh" "Abu Zayyan" "Abu Malek" "Abul Hadjdjadj"
+			"Abu Thabid" "Abu Said" "'Abd al-Karim" Barakat Basir Dawud Faris Haidar Hashim Jabbar 
+			Junayd Najib Qasim Rahim Rashîd Safi Sakhr Wahid Zahir Jamal Mustafa Muzaffaraddin N'Guna Nasr Nazar Niptasan 
+			Nizamaddin Ptolemee Ptolemy Qutaiba Rashid Sa'id Salah Salla Salomon Solomon Sammer Sayyid Seghada Sekla Shamsaddin 
+			Sifaks Sifal Sinbad Sisso Stembanos Suggut Sultan T'ar'iq Tabat Tacfin Taffounnout Tahir Takfarinas Tanan Tariq 
+			Tegama Thabitah Tifan Theophanus Tiljad Ugdada Ugwistan Umar Umar Uqess'un Uregh Urtilian Urz'ig Uzmir Uzza Wahab 
+			Watt'as Xamida Yabdas Yaghmurasen Yahya Yahya Yattuy Yeften Yeh'lem Yiliyen Yuba Yugerten Yugurthen Youkhanna John 
+			Yunes Yusuf Joseph Yuva Z'effun Zafir Zalelsan Zayar Zer'wal Zigza Ziri Zubeyr
+		}
+		female_names = {
+			Randa Tabassum 	Dema Dimah Dinara Dua Durra Durriyya Edza Eleonorka Eleanor Faghissa Fahriya Fariza Fedada 
+			Tazenkwedt Tazirit Tazrurt Tella Temzi Tfit Tigmi Tikinas Tilelli Timmi Tinhinan Tintadefi 
+			Tintifawin Tinzert Tisent Tislit Titbirt Titrit Tizemt Tiziri Triya Tudert Tuh'r'ict Tureght 
+		}
+	}
+	riffian = {
+		primary = RIF
+		dynasty_names = {
+			"al-Ilighi" "al-Tadsi" "Zayyanid" Maatka Wattasid Atfayyish "Beni Isguen" "al-Afdali" "Mzabi"
+			Tabghurin "al-Malshuti"
+		}
+		male_names = {
+			"Abu Abdallah" "Abu Abbas Ahmad" "Abu Tashufin" "Abu Hammu" "Abu Muh" "Abu Zayyan" "Abu Malek" "Abul Hadjdjadj"
+			"Abu Thabid" "Abu Said" "'Abd al-Karim" Barakat Basir Dawud Faris Haidar Hashim Jabbar 
+			Junayd Najib Qasim Rahim Rashîd Safi Sakhr Wahid Zahir Jamal Mustafa Muzaffaraddin N'Guna Nasr Nazar Niptasan 
+			Nizamaddin Ptolemee Ptolemy Qutaiba Rashid Sa'id Salah Salla Salomon Solomon Sammer Sayyid Seghada Sekla Shamsaddin 
+			Sifaks Sifal Sinbad Sisso Stembanos Suggut Sultan T'ar'iq Tabat Tacfin Taffounnout Tahir Takfarinas Tanan Tariq 
+			Tegama Thabitah Tifan Theophanus Tiljad Ugdada Ugwistan Umar Umar Uqess'un Uregh Urtilian Urz'ig Uzmir Uzza Wahab 
+			Watt'as Xamida Yabdas Yaghmurasen Yahya Yahya Yattuy Yeften Yeh'lem Yiliyen Yuba Yugerten Yugurthen Youkhanna John 
+			Yunes Yusuf Joseph Yuva Z'effun Zafir Zalelsan Zayar Zer'wal Zigza Ziri Zubeyr
+		}
+		female_names = {
+			Randa Tabassum 	Dema Dimah Dinara Dua Durra Durriyya Edza Eleonorka Eleanor Faghissa Fahriya Fariza Fedada 
+			Tazenkwedt Tazirit Tazrurt Tella Temzi Tfit Tigmi Tikinas Tilelli Timmi Tinhinan Tintadefi 
+			Tintifawin Tinzert Tisent Tislit Titbirt Titrit Tizemt Tiziri Triya Tudert Tuh'r'ict Tureght 
+		}
+	}
+	guanche = {
+		dynasty_names = {
+			"al-Ilighi" "al-Tadsi" "Zayyanid" Maatka Wattasid Atfayyish "Beni Isguen" "al-Afdali" "Mzabi"
+			Tabghurin "al-Malshuti"
+		}
+		male_names = {
+			"Abu Abdallah" "Abu Abbas Ahmad" "Abu Tashufin" "Abu Hammu" "Abu Muh" "Abu Zayyan" "Abu Malek" "Abul Hadjdjadj"
+			"Abu Thabid" "Abu Said" "'Abd al-Karim" Barakat Basir Dawud Faris Haidar Hashim Jabbar 
+			Junayd Najib Qasim Rahim Rashîd Safi Sakhr Wahid Zahir Jamal Mustafa Muzaffaraddin N'Guna Nasr Nazar Niptasan 
+			Nizamaddin Ptolemee Ptolemy Qutaiba Rashid Sa'id Salah Salla Salomon Solomon Sammer Sayyid Seghada Sekla Shamsaddin 
+			Sifaks Sifal Sinbad Sisso Stembanos Suggut Sultan T'ar'iq Tabat Tacfin Taffounnout Tahir Takfarinas Tanan Tariq 
+			Tegama Thabitah Tifan Theophanus Tiljad Ugdada Ugwistan Umar Umar Uqess'un Uregh Urtilian Urz'ig Uzmir Uzza Wahab 
+			Watt'as Xamida Yabdas Yaghmurasen Yahya Yahya Yattuy Yeften Yeh'lem Yiliyen Yuba Yugerten Yugurthen Youkhanna John 
+			Yunes Yusuf Joseph Yuva Z'effun Zafir Zalelsan Zayar Zer'wal Zigza Ziri Zubeyr
+		}
+		female_names = {
+			Randa Tabassum 	Dema Dimah Dinara Dua Durra Durriyya Edza Eleonorka Eleanor Faghissa Fahriya Fariza Fedada 
+			Tazenkwedt Tazirit Tazrurt Tella Temzi Tfit Tigmi Tikinas Tilelli Timmi Tinhinan Tintadefi 
+			Tintifawin Tinzert Tisent Tislit Titbirt Titrit Tizemt Tiziri Triya Tudert Tuh'r'ict Tureght 
+		}
+	}
+}

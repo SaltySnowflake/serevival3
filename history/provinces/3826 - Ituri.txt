@@ -1,0 +1,13 @@
+#3826 - Ituri
+
+culture = mongo
+religion = bumuntu
+capital = "Ituri"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+native_size = 90
+native_ferocity = 3
+native_hostileness = 9

@@ -1,0 +1,95 @@
+country_decisions = {
+
+	btpl_scottish_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = CEL }
+			NOT = { tag = GBR }			#Scottish gbr shouldn't see this
+			NOT = { tag = TNA }
+			NOT = { tag = YYK }
+			NOT = { tag = ROM }
+			OR = {
+				primary_culture = scottish
+				primary_culture = gallgaidheil
+				primary_culture = highland_scottish
+			}	#One of the Scottish cultures
+			OR = {
+				tag = ILE
+				tag = HSC
+				num_of_owned_provinces_with = {
+					value = 9
+					OR = {
+						area = lowlands_area
+						area = western_lowlands_area
+						area = highlands_area
+						area = southern_isles_area
+					}
+				}	#over half of Scotland to see if not one of the two major Gaelic polities in the Highlands-Islands	
+			}
+			NOT = { government_rank = 3 }			#If for some bizarre reason an empire level can form Scotland, dont let it.
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = SCO }
+			num_of_owned_provinces_with = {
+				value = 12
+				OR = {
+					area = lowlands_area
+					area = western_lowlands_area
+					area = highlands_area
+					area = southern_isles_area
+				}
+			}	#requires roughly two thirds of Scotland to form, matching Ireland's decision
+		}
+		effect = {
+			change_tag = SCO
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			add_prestige = 10
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

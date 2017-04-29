@@ -1,0 +1,19 @@
+# Jomsvikings
+government = theocratic_government
+technology_group = western
+primary_culture = norwegian
+religion = norse_pagan_reformed
+capital = 1858
+1397.8.13 = {
+	monarch = {
+		name = "Ragnarr"
+		dynasty = "af Ringsted"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	add_treasury = 36
+	add_prestige = 150
+}

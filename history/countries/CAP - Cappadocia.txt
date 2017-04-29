@@ -1,0 +1,18 @@
+government = despotic_monarchy 
+primary_culture = cappadocian
+religion = orthodox
+technology_group = eastern
+capital = 5155						# Rough guess
+historical_friend = BYZ
+historical_friend = TRE
+historical_friend = CIL
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

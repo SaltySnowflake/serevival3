@@ -1,0 +1,27 @@
+government = feudal_monarchy
+primary_culture = georgian
+religion = orthodox
+technology_group = eastern
+capital = 462
+government_rank = 1
+
+1444.11.1 = {
+	monarch = {
+		name = "Liparit I"
+		dynasty = "Dadiani"
+		birth_date = 1427.1.1 # To stop heir from being 1000 years old.
+		#death_date = 1470.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	heir = {
+		name = "Samsan ud-Daula"
+		monarch_name = "Samsan ud-Daula"
+		birth_date = 1447.1.1 # To stop heir from being 1000 years old.
+		dynasty = "Dadiani"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}

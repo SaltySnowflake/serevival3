@@ -1,0 +1,128 @@
+########################################
+# Events for London
+#
+# written by Neprut
+########################################
+
+namespace = flavor_lod
+
+# War of the Roses 1444
+country_event = {
+	id = flavor_lod.1
+	title = flavor_lod.1.t
+	desc = flavor_lod.1.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = LOD
+		has_regency = yes
+		is_year = 1444
+		NOT = { is_year = 1450 }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		ai_chance = { factor = 85 }
+		name = flavor_lod.1.a
+		define_ruler = {
+			dynasty = "York"
+			adm = 4
+			dip = 2
+			mil = 5
+		}
+		define_general = {
+			name = "Richard Plantagenet"
+			fire = 2
+			shock = 4
+			manuever = 3
+			siege = 0
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				dynasty = "Lancaster"
+			}
+			add_opinion = {
+				who = root
+				modifier = lod_lancaster_spurned
+			}				
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				dynasty = "York"
+			}
+			add_opinion = {
+				who = root
+				modifier = lod_yorkists_sided
+			}				
+		}
+		hidden_effect = {
+			YRK = { add_historical_friend = LOD }
+			add_historical_friend = YRK
+			LNC = { add_historical_rival = LOD }
+			add_historical_rival = LNC
+			WSX = { add_historical_rival = LOD }
+			add_historical_rival = WSX
+		}
+	}
+
+	option = {
+		name = flavor_lod.1.b
+		ai_chance = { factor = 10 }
+		define_ruler = {
+			dynasty = "Lancaster"
+			ADM = 3
+			DIP = 3			
+			MIL = 5
+		}
+		define_general = {
+			name = "Edmund Beaufort"
+			fire = 3
+			shock = 2
+			manuever = 2
+			siege = 2
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				dynasty = "Lancaster"
+			}
+			add_opinion = {
+				who = root
+				modifier = lod_lancaster_sided
+			}				
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				dynasty = "York"
+			}
+			add_opinion = {
+				who = root
+				modifier = lod_yorkists_spurned
+			}				
+		}
+		hidden_effect = {
+			LNC = { add_historical_friend = LOD }
+			add_historical_friend = LNC
+			WSX = { add_historical_friend = LOD }
+			add_historical_friend = WSX
+			YRK = { add_historical_rival = LOD }
+			add_historical_rival = YRK
+		}
+	}
+	
+	option = {
+		name = flavor_lod.1.c
+		ai_chance = { factor = 5 }
+		change_government = merchant_republic
+		kill_ruler = yes
+		add_stability = -1
+	}
+}

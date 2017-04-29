@@ -1,0 +1,29 @@
+#230 - Algarve
+#Region - Iberia
+#Area - Alentejo
+
+owner = POR
+controller = POR
+culture = portugese
+religion = catholic
+capital = "Faro"
+trade_goods = sugar
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 1
+is_city = yes 
+add_core = POR
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.01 = { culture = andalucian religion = sunni remove_core = POR add_core = SEV owner = SEV add_local_autonomy = 0 }
+1444.11.11 = { culture = portugese religion = catholic add_core = POR remove_core = SEV owner = POR add_local_autonomy = -30 }
+
+1640.1.1 = { unrest = 8 } # Revolt headed by John of Bragança
+1640.12.1 = { unrest = 0 }
+1807.11.30 = { controller = FRA } # Occupied by troops led by Manuel Godoy
+1808.6.18 = { controller = POR } # Revolt in Olhão

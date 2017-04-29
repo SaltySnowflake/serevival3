@@ -1,0 +1,117 @@
+tiwaz = 
+{
+	discipline = 0.05
+	infantry_power = 0.10
+	
+	allow = { religion = germanic }
+	sprite = 58
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+wodan =
+{
+	land_morale = 0.1
+	core_creation = -0.10
+	
+	allow = { religion = germanic }
+	sprite = 59
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}		
+}
+
+dunar = 
+{
+	defensiveness = 0.2
+	leader_land_shock = 1
+	
+	allow = { religion = germanic }
+	sprite = 60
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+frijjo = 
+{
+	diplomatic_upkeep = 1
+	improve_relation_modifier = 0.10
+	
+	allow = { religion = germanic }
+	sprite = 61
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+austro = 
+{
+	production_efficiency = 0.1
+	manpower_recovery_speed = 0.20
+	
+	allow = { religion = germanic }
+	sprite = 62
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}		
+	}	
+}
+
+fraujaz = 
+{
+	global_trade_goods_size = 0.1
+	land_attrition = -0.10
+	
+	allow = { religion = germanic }
+	sprite = 63
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}		
+	}	
+}

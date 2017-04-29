@@ -1,0 +1,35 @@
+#2674 - Peureulak
+
+owner = PSA
+controller = PSA
+culture = acehnese
+religion = sunni
+capital = "Peureulak"
+trade_goods = spices
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = PSA
+
+add_permanent_province_modifier = {
+	name = pepper_centre
+	duration = -1
+}
+
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+
+1405.1.1 = { discovered_by = MNG }
+
+1471.1.1 = { add_core = ATJ }
+1509.1.1 = { discovered_by = POR }
+1521.1.1 = {
+	owner = ATJ
+	controller = ATJ
+	remove_core = PSA
+}
+

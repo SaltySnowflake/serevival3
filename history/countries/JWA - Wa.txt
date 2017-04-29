@@ -1,0 +1,8 @@
+government = celestial_empire_SE
+technology_group = chinese
+primary_culture = yamato
+culture_group_union = japanese_g 
+religion = shinto
+capital = 1020 # Kyoto
+historical_rival = KOR
+historical_rival = MNG

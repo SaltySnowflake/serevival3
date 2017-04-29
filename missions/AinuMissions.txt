@@ -1,0 +1,115 @@
+conquer_ezochi = {
+
+	type = country
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			province_id = 1031		#Soya/Kamikawa
+			province_id = 1847		#Ishikari
+			province_id = 1852		#Tokachi
+			province_id = 3718		#Nutaku
+		}
+		NOT = { owned_by = ROOT	}
+	}
+	allow = {
+		tag = JAP
+		NOT = { has_country_modifier = military_victory }
+		is_subject = no
+		num_of_ports = 1
+		OR = {
+			1031 = { NOT = { owned_by = ROOT } }
+			1847 = { NOT = { owned_by = ROOT } }
+			1852 = { NOT = { owned_by = ROOT } }
+			3718 = { NOT = { owned_by = ROOT } }
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+		}
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			remove_claim = ROOT
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+	}
+}
+
+unite_ainu = {
+	
+	type = country
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			province_id = 1031		#Soya (vanilla Kamikawa)
+			province_id = 1032		#Kurils
+			province_id = 1847		#Ishikari
+			province_id = 1852		#Tokachi
+			province_id = 3718		#Nutaku
+		}
+		NOT = {	owned_by = ROOT	}
+	}
+	allow = {
+		NOT = { exists = ANU }
+		primary_culture = ainu
+		NOT = { has_country_modifier = military_victory }
+		is_subject = no
+		OR = {
+			1031 = { NOT = { owned_by = ROOT } }
+			1032 = { NOT = { owned_by = ROOT } }
+			1847 = { NOT = { owned_by = ROOT } }
+			1852 = { NOT = { owned_by = ROOT } }
+			3718 = { NOT = { owned_by = ROOT } }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 700
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			remove_claim = ROOT
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+	}
+}

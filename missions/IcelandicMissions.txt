@@ -1,0 +1,222 @@
+control_faroarna = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		NOT = { has_country_modifier = military_victory }
+		normal_or_historical_nations = yes
+		tag = ICE
+		is_subject = no
+		1979 = { NOT = { owned_by = ROOT } }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		owns = 1979
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_monarch_leader = yes
+		}
+	}
+	immediate = {
+		add_claim = 1979
+	}
+	abort_effect = {
+		remove_claim = 1979
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+	}
+}
+
+control_nororeyjar = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = { 
+		OR = {
+			province_id = 369 
+			province_id = 1978 
+		}
+		NOT = { owned_by = ROOT	}
+	}
+
+	allow = {
+		NOT = { has_country_modifier = military_victory }
+		normal_or_historical_nations = yes
+		tag = ICE
+		is_subject = no
+		owns = 1979 # Faroarna
+		OR = {
+			369 = { NOT = {	owned_by = ROOT	} }
+			1978 = { NOT = { owned_by = ROOT } }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_monarch_leader = yes
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			remove_claim = ROOT
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+	}
+}
+
+control_outer_hebrides = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		NOT = { has_country_modifier = military_victory }
+		normal_or_historical_nations = yes
+		tag = ICE
+		is_subject = no
+		OR = {
+			owns = 1979 # Faroarna
+			ICE = { alliance_with = NOR }
+		}
+		253 = { NOT = { owned_by = ROOT	} }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		owns = 253
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_monarch_leader = yes
+		}
+	}
+	immediate = {
+		add_claim = 253
+	}
+	abort_effect = {
+		remove_claim = 253
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+	}
+}
+
+control_suoreyjar = {
+
+	type = country
+
+	category = MIL
+	ai_mission = yes
+
+	target_provinces = {
+		OR = {
+			province_id = 5099
+			province_id = 3018
+			province_id = 3016
+		}
+		NOT = {	owned_by = ROOT	}
+	}
+
+	allow = {
+		normal_or_historical_nations = yes
+		NOT = { has_country_modifier = military_victory }
+		tag = ICE
+		is_subject = no
+		owns = 253 # Western Isles
+		OR = {
+			5099 = { NOT = {	owned_by = ROOT	} }
+			3018 = { NOT = { owned_by = ROOT } }
+			3016 = { NOT = { owned_by = ROOT } }
+		}
+	}	
+
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_monarch_leader = yes
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			remove_claim = ROOT
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+	}
+}

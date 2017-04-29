@@ -1,0 +1,54 @@
+country_decisions = {
+
+	unite_korea = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = KOR }
+			primary_culture = korean
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			#adm_tech = 7
+			owns_core_province = 732 	#Hamgyeong
+			owns_core_province = 733 	#Hwanghae
+			owns_core_province = 734 	#Gangwon
+			owns_core_province = 735 	#Gyeonggi
+			owns_core_province = 736 	#Gyeonsang
+			owns_core_province = 737 	#Jeolla
+			owns_core_province = 1013 	#Chungcheong
+			owns_core_province = 1845 	#Pyongan
+		}
+		effect = {
+			change_tag = KOR
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 735
+			random_owned_province = {
+				limit = { culture = korean }
+				add_base_tax = 1
+			}
+			korea_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = KOR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

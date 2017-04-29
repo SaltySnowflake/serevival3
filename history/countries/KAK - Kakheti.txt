@@ -1,0 +1,17 @@
+government = feudal_monarchy
+primary_culture = georgian
+religion = orthodox
+technology_group = eastern
+capital = 2203
+government_rank = 1
+
+1444.11.1 = {
+	monarch = {
+		name = "Aleksandri I"
+		dynasty = "Bagrationi"
+		birth_date = 1424.11.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

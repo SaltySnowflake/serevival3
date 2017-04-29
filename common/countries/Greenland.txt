@@ -1,0 +1,118 @@
+#Greenland
+
+graphical_culture = westerngfx
+
+color = { 180 240 220 }
+
+historical_score = 0
+
+preferred_religion = protestant
+
+historical_idea_groups = {
+
+	exploration_ideas
+	plutocracy_ideas
+	economic_ideas
+	trade_ideas
+	quality_ideas
+	naval_ideas
+	religious_ideas
+	influence_ideas
+
+}
+
+historical_units = {
+
+	western_medieval_infantry
+	western_medieval_knights
+	gaelic_galloglaigh
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	scottish_highlander
+	british_redcoat
+	prussian_uhlan
+	french_impulse
+	open_order_cavalry
+	austrian_jaeger
+
+}
+
+monarch_names = {
+
+	"Hakon #0" = 0
+	"Olav #0" = 0
+	"Erik #0" = 0
+	"Magnus #0" = 0
+	"Thorfinn #0" = 0
+	"Sigurd #0" = 0
+	"Aksel #0" = 0
+	"Alf #0" = 0
+	"Thorkell #0" = 0
+	"Ansgard #0" = 0
+	"Arvid #0" = 0
+	"Bernt #0" = 0
+	"Birger #0" = 0
+	"Bjorn #0" = 0
+	"Eilert #0" = 0
+	"Einar #0" = 0
+	"Erlend #0" = 0
+	"Esben #0" = 0
+	"Folke #0" = 0
+	"Gunnar #0" = 0
+	"Finnur #0" = 0
+	"Kollgrim #0" = 0
+	"Knut #0" = 0
+	"Mats #0" = 0
+	"Mikael #0" = 0
+	"Njald #0" = 0
+	"Njord #0" = 0
+	"Oddmund #0" = 0
+	"Snorri #0" = 0
+	"Soren #0" = 0
+	"Tollak #0" = 0
+
+}
+
+leader_names = {
+
+	Arnason
+	Bjelke
+	Egilsson
+	Eriksson
+	Eyjolfsson
+	Farserkr
+	Hrafnsson
+	Karlsefni
+	Leifsson
+	Loptsson
+	Magnusson
+	Nansen
+	Norheim
+	Olavsson
+	Sverresson
+	Sigurdsson
+	Thorgilsson
+	Thorsteinsson
+
+}
+
+ship_names = {
+
+	Grampus
+	Narwhal
+	Rorwhal
+	Beluga
+	Walrus
+	"Eirikr Rauthi"
+	Thorfinssuthinn
+	Thorvaldssuthinn
+	Leifssuthinn
+	Freydis
+	Gudridr
+	"Nicolas den Helgi"
+	"Peder den Helgi"
+	"Anders den Helgi"
+	"Olaf den Helgi"
+
+}

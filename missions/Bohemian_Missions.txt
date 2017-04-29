@@ -1,0 +1,84 @@
+defend_bohemia_against_hungary = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		owned_by = HUN
+		OR = {
+			area = bohemia_area
+			area = erzgebirge_area
+			area = moravia_area
+		}
+	}
+	
+	allow = {
+		normal_or_historical_nations = yes
+		tag = BOH
+		exists = HUN
+		is_subject = no
+		is_neighbor_of = HUN
+		OR = {
+			erzgebirge_area = {
+				owned_by = HUN
+			}
+			bohemia_area = {
+				owned_by = HUN
+			}
+			moravia_area = {
+				owned_by = HUN
+			}
+		}
+		HUN = {
+			NOT = { alliance_with = ROOT }
+		}
+		NOT = { has_country_flag = fought_back_hun }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	immediate = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_core = ROOT } }
+				add_claim = ROOT
+			}
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	chance = {
+		factor = 4000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			HUN = { NOT = { mil = 2 } }
+		}
+	}
+	effect = {
+		set_country_flag = fought_back_hun
+		add_country_modifier = {
+			name = "fought_back_the_hungarians"
+			duration = 3650
+		}
+	}
+}

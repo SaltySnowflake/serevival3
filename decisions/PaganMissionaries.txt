@@ -1,0 +1,217 @@
+########################################
+# Pagan Missionaries
+#
+# Written by Neprut
+########################################
+
+
+country_decisions = {
+
+	spreading_of_finnish_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_finnish_rituals }
+			religion = finnish_pagan_reformed
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_finnish_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_slavic_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_slavic_rituals }
+			religion = slavic_pagan_reformed
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_slavic_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_baltic_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_baltic_rituals }
+			religion = baltic_pagan_reformed
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_baltic_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_hellenic_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_hellenic_rituals }
+			religion = hellenic
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_hellenic_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_gaelic_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_gaelic_rituals }
+			religion = gaelic_pagan
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_gaelic_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_germanic_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_germanic_rituals }
+			religion = germanic
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_germanic_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_egyptian_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_egyptian_rituals }
+			religion = egyptian
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_egyptian_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_south_arabian_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_south_arabian_rituals }
+			religion = south_arabian
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_south_arabian_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_amanaiism_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_amanaiism_rituals }
+			religion = amanaiism
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_amanaiism_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+
+}

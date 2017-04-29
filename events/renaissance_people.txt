@@ -1,0 +1,355 @@
+namespace = leonardo
+
+##########
+#Leonardo
+##########
+
+# Leonardo active
+country_event = {
+	id = leonardo.1
+	title = "leonardo.EVTNAME1"
+	desc = "flavor_mlo.9.d"
+	picture = PAINTER_ARTIST_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 116 #florence
+#		culture_group = latin
+		is_year = 1466
+		NOT = { is_year = 1519 }
+	}
+	mean_time_to_happen = { months = 1 }
+	
+	immediate = { set_global_flag = leonardo_exists }
+	
+	option = { # hire immediately
+		name = "leonardo.EVTOPTA1"
+		add_treasury = -100
+		country_event = { # choose role
+			id = leonardo.2
+			days = 1
+		}
+	}
+	option = { # don't hire
+		name = "leonardo.EVTOPB1"
+		add_prestige = -5
+	}
+}
+
+# Employ Leonardo
+country_event = {
+	id = leonardo.2
+	title = "leonardo.EVTNAME2"
+	desc = "leonardo.EVTDESC2"
+	picture = PAINTER_ARTIST_eventPicture
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 1 }
+	
+	# hire length is 5 years
+	option = { # artist
+		name = "leonardo.EVOPTA2"
+		add_country_modifier = {
+			name = "leonardo_adm"
+			duration = 1826
+		}
+	}
+	option = { # naval
+		name = "leonardo.EVTOPTB2"
+		add_country_modifier = {
+			name = "leonardo_dip"
+			duration = 1826
+		}
+	}
+	option = { # 
+		name = "leonardo.EVTOPC2"
+		add_country_modifier = {
+			name = "leonardo_mil"
+			duration = 1826
+		}
+	}
+}
+
+# Death of Leonardo
+country_event = {
+	id = leonardo.3
+	title = "leonardo.EVTNAME3"
+	desc = "leonardo.EVTDESC3"
+	picture = PAINTER_ARTIST_eventPicture
+	
+	fire-only_once = yes
+
+	trigger = {
+		OR = {
+			has_country_modifier = leonardo_adm
+			has_country_modifier = leonardo_dip
+			has_country_modifier = leonardo_mil
+		}
+		is_year = 1510
+	}
+	mean_time_to_happen = { years = 10 }
+	
+	option = {
+		name = "leonardo.EVTOPA3"
+		set_global_flag = leonardo_dead
+		remove_country_modifier = leonardo_adm
+		remove_country_modifier = leonardo_dip
+		remove_country_modifier = leonardo_mil
+	}
+}
+
+##########
+#Machiavelli
+##########
+		
+# Machiavelli active
+country_event = {
+	id = leonardo.4
+	title = "leonardo.EVTNAME4"
+	desc = "flavor_mlo.6.d"
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 116 #florence
+#		culture_group = latin
+		is_year = 1498
+		NOT = { is_year = 1527 }
+	}
+	mean_time_to_happen = { months = 1 }
+	
+	immediate = { set_global_flag = machiavelli_exists }
+	
+	option = { # hire immediately
+		name = "leonardo.EVTOPTA1"
+		add_treasury = -100
+		country_event = { # choose role
+			id = leonardo.5
+			days = 1
+		}
+	}
+	option = { # don't hire
+		name = "leonardo.EVTOPB1"
+		add_prestige = -5
+	}
+}
+
+# Employ Machiavelli
+country_event = {
+	id = leonardo.5
+	title = "leonardo.EVTNAME5"
+	desc = "leonardo.EVTDESC5"
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 1 }
+	
+	# hire length is 5 years
+	option = { # Statesman
+		name = "leonardo.EVOPTA5"
+		add_country_modifier = {
+			name = "machiavelli_adm"
+			duration = 1826
+		}
+		add_adm_power = 50
+	}
+	option = { # Diplomat
+		name = "leonardo.EVTOPTB5"
+		add_country_modifier = {
+			name = "machiavelli_dip"
+			duration = 1826
+		}
+		add_dip_power = 50
+	}
+	option = { # Military advisor
+		name = "leonardo.EVTOPC5"
+		add_country_modifier = {
+			name = "machiavelli_mil"
+			duration = 1826
+		}
+		add_mil_power = 50
+	}
+}
+
+# Death of Machiavelli
+country_event = {
+	id = leonardo.6
+	title = "leonardo.EVTNAME6"
+	desc = "leonardo.EVTDESC6"
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1525
+		OR = {
+			has_country_modifier = machiavelli_adm
+			has_country_modifier = machiavelli_dip
+			has_country_modifier = machiavelli_mil
+		}
+	}
+	mean_time_to_happen = { years = 5 }
+	
+	option = {
+		name = "leonardo.EVTOPA3"
+		set_global_flag = machiavelli_dead
+		remove_country_modifier = machiavelli_adm
+		remove_country_modifier = machiavelli_dip
+		remove_country_modifier = machiavelli_mil
+	}
+}
+
+#######
+# Machiavelli Great works
+#######
+
+# The Prince in flavor_MLO
+
+# Reforming the Government of Florence
+country_event = {
+	id = leonardo.7
+	title = "leonardo.EVTNAME7"
+	desc = "leonardo.EVTDESC7"
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_modifier = machiavelli_dip
+		LAN = { government = florence_republic }
+	}
+	
+	mean_time_to_happen = { months = 30 }
+	
+	option = {
+		name = "leonardo.EVTOPTA7"
+		add_adm_power = 100
+		if = {
+			limit = {
+				tag = LAN
+				government = florence_republic
+			}
+			add_prestige = -10
+			add_stability = -1
+		}
+		if = {
+			limit = { NOT = { tag = LAN } }
+			LAN = {
+				country_event = {
+					id = leonardo.12
+					days = 3
+				}
+			}
+		}
+	}
+	option = { # Fire him
+		trigger = { tag = LAN }
+		name = "leonardo.EVTOPTB7"
+		remove_country_modifier = machiavelli_dip
+	}
+}
+
+# Criticism from Machiavelli
+country_event = {
+	id = leonardo.12
+	title = "leonardo.EVTNAME7"
+	desc = "leonardo.EVTDESC7"
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "leonardo.EVTOPTA12"
+		add_stability = -1
+		add_prestige = -10
+	}
+}
+
+# The Art of War
+country_event = {
+	id = leonardo.8
+	title = "leonardo.EVTNAME8"
+	desc = "leonardo.EVTDESC8"
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = { has_country_modifier = machiavelli_mil }
+	
+	mean_time_to_happen = { months = 30 }
+	
+	option = {
+		name = "leonardo.EVTOPA8"
+		add_mil_power = 100
+	}
+}
+
+#######
+# Leonardo Great Works
+#######
+
+# Siege engines
+country_event = {
+	id = leonardo.9
+	title = "leonardo.EVTNAME9"
+	desc = "leonardo.EVTDESC9"
+	picture = PAINTER_ARTIST_eventPicture
+
+	fire_only_once = yes
+
+	trigger = { has_country_modifier = leonardo_mil }
+	
+	mean_time_to_happen = { months = 30 }
+	
+	option = {
+		name = "leonardo.EVTOPTA9"
+		add_mil_power = 100
+	}
+}
+
+# Scuba gear and mobile dam
+country_event = {
+	id = leonardo.10
+	title = "leonardo.EVTNAME10"
+	desc = "leonardo.EVTDESC10"
+	picture = PAINTER_ARTIST_eventPicture
+
+	fire_only_once = yes
+
+	trigger = { has_country_modifier = leonardo_dip }
+	
+	mean_time_to_happen = { months = 30 }
+	
+	option = {
+		name = "leonardo.EVTOPTA10"
+		add_dip_power = 100
+	}
+}
+
+# Mona Lisa
+country_event = {
+	id = leonardo.11
+	title = "leonardo.EVTNAME11"
+	desc = "leonardo.EVTDESC11"
+	picture = PAINTER_ARTIST_eventPicture
+
+	fire_only_once = yes
+
+	trigger = { has_country_modifier = leonardo_adm }
+	
+	mean_time_to_happen = { months = 30 }
+	
+	option = {
+		name = "leonardo.EVTOPTA11"
+		add_adm_power = 100
+		add_prestige = 10
+	}
+}

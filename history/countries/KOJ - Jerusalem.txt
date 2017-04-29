@@ -1,0 +1,36 @@
+government = feudal_monarchy
+
+primary_culture = cosmopolitan_french
+add_accepted_culture = bedouin_arabic
+add_accepted_culture = al_suryah_arabic
+religion = catholic
+technology_group = western #eastern
+capital = 379	# Jerusalem
+historical_friend = TEM
+historical_friend = KNI
+historical_friend = ATC
+historical_friend = CIL
+historical_rival = CYP
+
+1444.11.1 = {
+	monarch = {
+		name = "Jeanne"
+		dynasty = "d'Arc"
+		birth_date = 1412.1.6
+		adm = 5
+		dip = 4
+		mil = 6
+		leader = {
+			type = general
+			name = "Jeanne d'Arc"
+			rank = 1
+			fire = 3
+			shock = 5 #6
+			manuever = 4
+			siege = 3
+		}
+		female = yes
+	}
+}
+
+1444.11.1 = { leader = {	name = "Gilles de Rais"		type = general		rank = 1	fire = 2	shock = 2	manuever = 3	siege = 0 } }

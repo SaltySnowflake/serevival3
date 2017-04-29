@@ -1,0 +1,66 @@
+country_decisions = {
+
+	bulgarian_empire = {
+		major = yes
+		potential = {
+			primary_culture = bulgarian
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { government_rank = 3 }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				tag = BUL
+				NOT = { exists = BUL }
+			}
+			legitimacy = 90
+			bulgaria_area = { type = all is_core = ROOT owned_by = ROOT }
+			owns_core_province = 160
+			owns_core_province = 161
+			owns_core_province = 1756
+			owns_core_province = 268
+			owns_core_province = 2405
+			owns_core_province = 141
+			owns_core_province = 1827
+			owns_core_province = 1766
+			owns_core_province = 143
+			owns_core_province = 1853
+			owns_core_province = 148
+			
+		}
+		effect = {
+			if = {
+				limit = { NOT = { tag = BUL } }
+				change_tag = BUL
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			set_government_rank = 3
+			set_capital = 150
+			150 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			balkan_region = {
+				limit = { NOT = { is_core = ROOT } }
+				add_permanent_claim = BUL
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+}

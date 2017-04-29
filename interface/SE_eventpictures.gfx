@@ -1,0 +1,68 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "CATHEDRAL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/CATHEDRAL_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "JANOSIK1_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/JANOSIK1_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "JANOSIK2_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/JANOSIK2_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "SVATOPLUK_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/SVATOPLUK_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TROB_TROBADOR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/TROB_TROBADOR_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "TROB_MUSIC_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/TROB_MUSIC_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BURNING_BOOK_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/BURNING_BOOK_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "CATHAR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/CATHAR_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "COUNTRYSIDE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/COUNTRYSIDE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "PELICAN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/PELICAN_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "CTHULHU_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SHATTERED/CTHULHU_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+}

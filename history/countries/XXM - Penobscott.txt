@@ -1,0 +1,19 @@
+government = native_council government_rank = 1
+primary_culture = abenaki
+religion = midewiwin
+technology_group = north_american
+historical_friend = XXK
+historical_friend = XXL
+historical_friend = MIK
+historical_friend = ABE
+capital = 971 # Penobscott
+
+1444.1.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

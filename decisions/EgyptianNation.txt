@@ -1,0 +1,89 @@
+country_decisions = {
+	
+	egyptian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = PAP }
+			NOT = { tag = TUR }
+			NOT = { tag = OSM }
+			NOT = { tag = TRK }
+			NOT = { tag = ARB }
+			NOT = { exists = EGY }
+			OR = {
+				primary_culture = al_misr_arabic
+				primary_culture = saidi
+			}
+			OR = {
+				ai = no
+				num_of_cities = 5
+			}
+		}
+		allow = {
+			adm_tech = 20
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 361 # Cairo
+			owns_core_province = 362 # Rashid
+			owns_core_province = 363 # Dumyat
+			owns_core_province = 358 # Alexandria
+			owns_core_province = 359 # Faiyum
+		}
+		effect = {
+			change_tag = EGY
+			if = {
+				limit = { NOT = { government = theocracy } }
+				change_government = despotic_monarchy
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 361
+			random_owned_province = {
+				limit = {
+					OR = {
+						culture = al_misr_arabic
+						culture = saidi
+					}
+				}
+				add_base_tax = 1
+			}
+			egypt_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = EGY
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

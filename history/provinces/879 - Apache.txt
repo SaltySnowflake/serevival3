@@ -1,0 +1,30 @@
+#879 - Apache
+
+owner = QQH
+controller = QQH
+is_city = yes
+add_core = QQH 
+culture = navajo 
+religion = kachina
+capital = "Dzil Tso"			#Dook'o'oosliid to the Navajo, their south border and a sacred site
+trade_goods = lumber 		#Naval supplies, if adding a tag later
+hre = no 
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+
+
+
+discovered_by = north_american
+
+1541.1.1 = { discovered_by = SPA } # Francisco Vásquez de Coronado
+
+1710.1.1 = {
+	remove_core = QQH
+	owner = APA
+	controller = APA
+	add_core = APA
+}

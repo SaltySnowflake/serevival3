@@ -1,0 +1,54 @@
+#875 - Canyon
+
+#owner = XXX			#Hopi not included yet
+#controller = XXX
+#add_core = XXX
+#is_city = yes
+culture = hopi 
+religion = kachina
+capital = "Orayvi" 		#One of the oldest settlements in US, dating back to before 1100
+trade_goods = wool 
+hre = no 
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+native_size = 10
+native_ferocity = 2 
+native_hostileness = 1 	#The Friendly/well behaved ones
+discovered_by = north_american # Francisco Vásquez de Coronado
+
+
+1444.11.2 = {
+	owner = HOP
+	controller = HOP
+	add_core = HOP
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = HOP
+	controller = HOP
+	add_core = HOP
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = HOP
+	controller = HOP
+	add_core = HOP
+	is_city = yes
+}
+
+1540.1.1 = { discovered_by = SPA } # Don Pedro de Tovar
+
+#Aborted attempt be the Spanish to establish control in 1629-1680, may add later

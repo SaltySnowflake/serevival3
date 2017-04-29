@@ -1,0 +1,29 @@
+#1979 - Färöarna
+#Region - Scandinavia
+#Area - Northern Isles
+
+owner = NOR
+controller = NOR 
+culture = faroese
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 0.5
+trade_goods = whaling
+capital = "Torshavn"
+is_city = yes
+add_core = NOR
+add_core = FAR
+discovered_by = western
+seat_in_parliament = yes
+
+1444.11.01 = { remove_core = NOR owner = FAR }
+1444.11.11 = { add_core = NOR owner = NOR add_local_autonomy = -30 seat_in_parliament = no }
+
+1536.1.1 = {
+	religion = protestant
+	owner = DAN
+	controller = DAN
+	add_core = DAN
+}

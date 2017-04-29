@@ -1,0 +1,170 @@
+namespace = trobador_tutorial
+
+# Main menu
+country_event = {
+	id = trobador_tutorial.1
+	title = "trobador_tutorial_1_title"
+	desc = "trobador_tutorial_1_desc"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = trobador_tutorial_started
+			clr_country_flag = trobador_tutorial_back2menu
+		}
+	}
+	
+	option = { # Mod philosophy
+		name = "trobador_tutorial_goto11"
+		country_event = { id = trobador_tutorial.11 }
+	}
+	option = { # Historial background
+		name = "trobador_tutorial_goto12"
+		country_event = { id = trobador_tutorial.12 }
+	}
+	option = { # Occitanism and Catalanism
+		name = "trobador_tutorial_goto13"
+		country_event = { id = trobador_tutorial.13 }
+	}
+	option = { # Leaving the tutorial
+		name = "trobador_tutorial_end"
+	}
+}
+
+country_event = { # Mod philosophy
+	id = trobador_tutorial.11
+	title = "trobador_tutorial_11_title"
+	desc = "trobador_tutorial_11_desc"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Back to Menu
+		name = "trobador_tutorial_goto1"
+		set_country_flag = trobador_tutorial_back2menu
+		country_event = { id = trobador_tutorial.1 }
+	}
+}
+
+country_event = { # Historial background
+	id = trobador_tutorial.12
+	title = "trobador_tutorial_12_title"
+	desc = "trobador_tutorial_12_desc"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+#	option = { # What about the Alt-History scenario?
+#		name = "trobador_tutorial_goto121"
+#		country_event = { id = trobador_tutorial.121 }
+#	}
+	option = { # Back to Menu
+		name = "trobador_tutorial_goto1"
+		set_country_flag = trobador_tutorial_back2menu
+		country_event = { id = trobador_tutorial.1 }
+	}
+}
+
+#country_event = { # What about the Alt-History scenario?
+#	id = trobador_tutorial.121
+#	title = "trobador_tutorial_121_title"
+#	desc = "trobador_tutorial_121_desc"
+#	picture = BIG_BOOK_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = { # Back to Menu
+#		name = "trobador_tutorial_goto1"
+#		set_country_flag = trobador_tutorial_back2menu
+#		country_event = { id = trobador_tutorial.1 }
+#	}
+#}
+
+country_event = { # Occitanism and Catalanism
+	id = trobador_tutorial.13
+	title = "trobador_tutorial_13_title"
+	desc = "trobador_tutorial_13_desc"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Culture Groups
+		name = "trobador_tutorial_goto131"
+		country_event = { id = trobador_tutorial.131 }
+	}
+	option = { # Province Occitanism
+		name = "trobador_tutorial_goto132"
+		country_event = { id = trobador_tutorial.132 }
+	}
+	option = { # Factions
+		name = "trobador_tutorial_goto133"
+		country_event = { id = trobador_tutorial.133 }
+	}
+	option = { # Back to Menu
+		name = "trobador_tutorial_goto1"
+		set_country_flag = trobador_tutorial_back2menu
+		country_event = { id = trobador_tutorial.1 }
+	}
+}
+
+country_event = { # Culture Groups
+	id = trobador_tutorial.131
+	title = "trobador_tutorial_131_title"
+	desc = "trobador_tutorial_131_desc"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Back to Occitanism and Catalanism
+		name = "trobador_tutorial_goto1"
+		country_event = { id = trobador_tutorial.13 }
+	}
+}
+
+country_event = { # Province Occitanism
+	id = trobador_tutorial.132
+	title = "trobador_tutorial_132_title"
+	desc = "trobador_tutorial_132_desc"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Back to Occitanism and Catalanism
+		name = "trobador_tutorial_goto1321"
+		country_event = { id = trobador_tutorial.1321 }
+	}
+	option = { # Back to Occitanism and Catalanism
+		name = "trobador_tutorial_goto1"
+		country_event = { id = trobador_tutorial.13 }
+	}
+}
+
+country_event = { # Factions
+	id = trobador_tutorial.133
+	title = "trobador_tutorial_133_title"
+	desc = "trobador_tutorial_133_desc"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Back to Occitanism and Catalanism
+		name = "trobador_tutorial_goto1"
+		country_event = { id = trobador_tutorial.13 }
+	}
+}
+
+country_event = { # Catharism
+	id = trobador_tutorial.1321
+	title = "trobador_tutorial_1321_title"
+	desc = "trobador_tutorial_1321_desc"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Province Occitanism
+		name = "trobador_tutorial_goto132"
+		country_event = { id = trobador_tutorial.132 }
+	}
+}

@@ -1,0 +1,19 @@
+#3012 - Ise
+
+owner = KBK
+controller = KBK
+culture = tokaido
+religion = shinto
+capital = "Yamada"
+trade_goods = livestock
+hre = no
+base_tax = 4
+base_manpower = 3
+base_production = 2
+add_core = KBK
+add_core = ISK
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG

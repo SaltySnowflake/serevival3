@@ -1,0 +1,30 @@
+#2004 - Niitsitapi
+
+add_core = QQN
+owner = QQN
+controller = QQN
+culture = blackfoot
+religion = wakan_tanka
+capital = "Niitsitapi"
+trade_goods = fur
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+native_size = 1
+native_ferocity = 1
+native_hostileness = 1
+
+
+
+discovered_by = north_american
+
+1755.1.1 = { discovered_by = GBR } #Henday
+
+1760.1.1 = {
+	remove_core = QQN
+	add_core = BLA
+	owner = BLA
+	controller = BLA
+}

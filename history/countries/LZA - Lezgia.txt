@@ -1,0 +1,15 @@
+government = iqta
+primary_culture = dagestani
+religion = shiite
+technology_group = muslim
+capital = 3261
+government_rank = 1
+
+1444.1.1 = {
+	monarch = {
+		name = "Chopan"
+		adm = 1
+		mil = 2
+		dip = 2
+	}
+}

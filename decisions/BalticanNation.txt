@@ -1,0 +1,86 @@
+country_decisions = {
+
+	baltican_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			culture_group = baltic
+			NOT = { exists = BLT }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			OR = {
+				num_of_cities = 7
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 39		#Kurland
+			owns_core_province = 1935	#Semigallia
+			owns_core_province = 38		#Riga
+			owns_core_province = 273	#Wenden/Latgale
+			owns_core_province = 272	#Vilnius
+		}
+		effect = {
+			change_tag = BLT
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			set_capital = 38
+			38 = {
+			 	add_base_tax = 1
+				add_base_production = 1
+			 	add_base_manpower = 1
+				if = {
+					limit = { NOT = { culture = ROOT } }
+					change_culture = ROOT
+				}
+			}
+			random_owned_province = {
+				limit = { culture_group = baltic }
+				add_base_tax = 1
+			}
+			baltic_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = BLT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

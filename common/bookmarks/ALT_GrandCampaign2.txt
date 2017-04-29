@@ -1,0 +1,25 @@
+bookmark =
+{
+	name = "EUROSCENARIO_NAME2"
+	desc = "EUROSCENARIO_DESC2"
+	date = 1444.11.06
+	
+	center = 1872
+	default = yes
+	
+	country = FLA
+	country = BOH
+	country = SLO
+	country = SWI
+	country = ULM
+	country = KOL
+	country = POM
+	country = BAV
+	country = LIE
+	country = SVA
+	
+	easy_country = BOH
+	easy_country = FLA
+	easy_country = SLO
+	easy_country = SWI
+}

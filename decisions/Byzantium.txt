@@ -1,0 +1,54 @@
+country_decisions = {
+
+	reestablish_the_theme_system = {
+		major = yes
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			NOT = { has_country_modifier = the_theme_system }
+			num_of_cities = 10
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			owns_core_province = 148 # Thessaloniki
+			owns_core_province = 151 # Constantinople
+			num_of_owned_provinces_with = {
+				value = 30
+				OR = {
+					region = balkan_region
+					region = anatolia_region
+					area = apulia_area
+					area = calabria_area
+					area = naples_area
+					area = sicily_area
+					#area = erzurum_area
+					area = cyprus_area
+					#province_id = 3249			#To many looked messy in UI. Removing half the mess only removed around 15 of 150 proivinces
+					#province_id = 5183
+					#province_id = 2313
+					#province_id = 5170
+					#province_id = 2410
+					#province_id = 285
+					#province_id = 3245
+				}
+			}	#Need to recover at least 30 provinces (roughly 1/5) of the Empire (154 or so) under Basil II required to restablish theme, in addition to the 2 capitals
+		}
+		effect = {
+			#Moved renaming to the new group by group theme restoration decisions in BTPLDecisionsHellasAnatolia
+			#custom_tooltip = reestablishing_themes_names_tooltip
+			#Moved the restoration of the capital dev and effects to the 'restorebyzantineempire' and 'BtPLHellasAnatolia'.
+			add_country_modifier = {
+				name = "the_theme_system"
+				duration = -1
+			}
+			add_stability = 1
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

@@ -1,0 +1,90 @@
+# OSM tag for Turkish states
+
+country_decisions = {
+	unify_ghazi_states = {
+
+		major = yes 
+
+		potential = {
+			NOT = { exists = TRK }
+			NOT = { exists = TUR }
+			primary_culture = turkish
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			OR = {
+				ai = no
+				num_of_cities = 3
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+
+		allow = {
+			is_subject = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				region = anatolia_region
+				value = 25
+			}
+		}
+
+		effect = {
+			anatolia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ROOT
+			}
+			balkan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = { NOT = { tag = OSM } }
+				change_tag = TRK
+			}
+			if = {
+				limit = { tag = OSM }
+				change_tag = TUR
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = { government = steppe_horde }
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+			}
+			change_government = ottoman_government
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 25
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	
+}

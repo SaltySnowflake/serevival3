@@ -1,0 +1,60 @@
+# No previous file for Hualapai
+
+culture = cahita
+religion = kachina
+capital = "Guaymas"			#No good name of a settlement found, going with prov name
+trade_goods = fish			#to hot, dry, and barren for much else. Also a major port
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1444.11.2 = {
+	owner = WWH
+	controller = WWH
+	add_core = WWH
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = WWH
+	controller = WWH
+	add_core = WWH
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = WWH
+	controller = WWH
+	add_core = WWH
+	is_city = yes
+}
+
+1539.1.1 = { discovered_by = SPA } # Francisco de Ulloa, who called the area 'the port of ports.'
+
+1620.1.1 = {
+	remove_core = WWH
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	is_city = yes
+	culture = castillian
+	religion = catholic
+}	#Some small Jesuit missions in the area were founded in the 1610s and 1620s
+
+1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence

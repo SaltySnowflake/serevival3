@@ -1,0 +1,5 @@
+government = despotic_monarchy
+primary_culture = kurdish
+religion = sunni
+technology_group = muslim
+capital = 411 # Mosul

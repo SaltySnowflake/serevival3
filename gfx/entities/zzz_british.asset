@@ -1,0 +1,627 @@
+###########################################################################
+#####                             BRITISH                             #####
+###########################################################################
+
+##DLC
+entity = { clone = "ENG_INFANTRY_2"		name = "GBR_INFANTRY_2" }
+
+#ENG England
+entity = { clone = "britishgfx_INFANTRY_1"		name = "ENG_INFANTRY_1"					} 
+entity = { clone = "britishgfx_CAVALRY_1"		name = "ENG_CAVALRY_1"					}
+entity = { clone = "britishgfx_INFANTRY_2"		name = "ENG_INFANTRY_2"					}
+entity = { clone = "britishgfx_CAVALRY_2"		name = "ENG_CAVALRY_2"		version = 2 }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "ENG_INFANTRY_3"					}
+entity = { clone = "britishgfx_CAVALRY_3"		name = "ENG_CAVALRY_3"					}
+entity = { clone = "britishgfx_INFANTRY_4"		name = "ENG_INFANTRY_4"					}
+entity = { clone = "britishgfx_CAVALRY_4"		name = "ENG_CAVALRY_4"					}
+
+entity = { clone = "britishcolgfx_INFANTRY_1"		name = "north_america_ENG_INFANTRY_1" }
+entity = { clone = "britishcolgfx_INFANTRY_1"		name = "south_america_ENG_INFANTRY_1" }
+entity = { clone = "britishcolgfx_INFANTRY_1"		name =       "oceania_ENG_INFANTRY_1" }
+entity = { clone = "britishcolgfx_INFANTRY_2"		name = "north_america_ENG_INFANTRY_2" }
+entity = { clone = "britishcolgfx_INFANTRY_2"		name = "south_america_ENG_INFANTRY_2" }
+entity = { clone = "britishcolgfx_INFANTRY_2"		name =       "oceania_ENG_INFANTRY_2" }
+entity = { clone = "britishcolgfx_INFANTRY_3"		name = "north_america_ENG_INFANTRY_3" }
+entity = { clone = "britishcolgfx_INFANTRY_3"		name = "south_america_ENG_INFANTRY_3" }
+entity = { clone = "britishcolgfx_INFANTRY_3"		name =       "oceania_ENG_INFANTRY_3" }
+entity = { clone = "britishcolgfx_INFANTRY_4"		name = "north_america_ENG_INFANTRY_4" }
+entity = { clone = "britishcolgfx_INFANTRY_4"		name = "south_america_ENG_INFANTRY_4" }
+entity = { clone = "britishcolgfx_INFANTRY_4"		name =       "oceania_ENG_INFANTRY_4" }
+
+#random new world
+entity = { clone = "britishcolgfx_INFANTRY_1"		name = "new_world_ENG_INFANTRY_1" }
+entity = { clone = "britishcolgfx_INFANTRY_2"		name = "new_world_ENG_INFANTRY_2" }
+entity = { clone = "britishcolgfx_INFANTRY_3"		name = "new_world_ENG_INFANTRY_3" }
+entity = { clone = "britishcolgfx_INFANTRY_4"		name = "new_world_ENG_INFANTRY_4" }
+entity = { clone = "britishcolgfx_CAVALRY_1"		name = "new_world_ENG_CAVALRY_1" }
+entity = { clone = "britishcolgfx_CAVALRY_2"		name = "new_world_ENG_CAVALRY_2" }
+entity = { clone = "britishcolgfx_CAVALRY_3"		name = "new_world_ENG_CAVALRY_3" }
+entity = { clone = "britishcolgfx_CAVALRY_4"		name = "new_world_ENG_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "ENG_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "ENG_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "ENG_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "ENG_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "ENG_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "ENG_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "ENG_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "ENG_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#GBR Great Britain                                                                                                 
+entity = { clone = "britishgfx_INFANTRY_1"		name = "GBR_INFANTRY_1"				}                                                          
+entity = { clone = "britishgfx_CAVALRY_1"		name = "GBR_CAVALRY_1"				}                                                           
+entity = { clone = "britishgfx_INFANTRY_2"		name = "GBR_INFANTRY_2"				}                                                          
+entity = { clone = "britishgfx_CAVALRY_2"		name = "GBR_CAVALRY_2"	version = 2	}                                                           
+entity = { clone = "britishgfx_INFANTRY_3"		name = "GBR_INFANTRY_3"				}                                                          
+entity = { clone = "britishgfx_CAVALRY_3"		name = "GBR_CAVALRY_3"				}                                                           
+entity = { clone = "britishgfx_INFANTRY_4"		name = "GBR_INFANTRY_4"				}                                                          
+entity = { clone = "britishgfx_CAVALRY_4"		name = "GBR_CAVALRY_4"				}                                                           
+
+entity = { clone = "britishgfx_INFANTRY_1"		name = "north_america_GBR_INFANTRY_1" }                                            
+entity = { clone = "britishgfx_INFANTRY_1"		name = "south_america_GBR_INFANTRY_1" }                                            
+entity = { clone = "britishgfx_INFANTRY_1"		name =       "oceania_GBR_INFANTRY_1" }                                            
+
+entity = { clone = "britishgfx_INFANTRY_2"		name = "north_america_GBR_INFANTRY_2" }                                            
+entity = { clone = "britishgfx_INFANTRY_2"		name = "south_america_GBR_INFANTRY_2" }                                            
+entity = { clone = "britishgfx_INFANTRY_2"		name =       "oceania_GBR_INFANTRY_2" }                                            
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "GBR_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "ENG_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "GBR_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "ENG_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "GBR_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "ENG_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "GBR_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "ENG_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#random new world
+entity = { clone = "britishcolgfx_INFANTRY_1"		name = "new_world_GBR_INFANTRY_1" }
+entity = { clone = "britishcolgfx_INFANTRY_2"		name = "new_world_GBR_INFANTRY_2" }
+entity = { clone = "britishcolgfx_INFANTRY_3"		name = "new_world_GBR_INFANTRY_3" }
+entity = { clone = "britishcolgfx_INFANTRY_4"		name = "new_world_GBR_INFANTRY_4" }
+entity = { clone = "britishcolgfx_CAVALRY_1"		name = "new_world_GBR_CAVALRY_1" }
+entity = { clone = "britishcolgfx_CAVALRY_2"		name = "new_world_GBR_CAVALRY_2" }
+entity = { clone = "britishcolgfx_CAVALRY_3"		name = "new_world_GBR_CAVALRY_3" }
+entity = { clone = "britishcolgfx_CAVALRY_4"		name = "new_world_GBR_CAVALRY_4" }
+
+#CRN Cornwall                                                                                                      
+entity = { clone = "britishgfx_INFANTRY_1"		name = "CRN_INFANTRY_1" }                                                          
+entity = { clone = "britishgfx_CAVALRY_1"		name = "CRN_CAVALRY_1" }                                                           
+entity = { clone = "britishgfx_INFANTRY_2"		name = "CRN_INFANTRY_2" }                                                          
+entity = { clone = "britishgfx_CAVALRY_2"		name = "CRN_CAVALRY_2" }                                                           
+entity = { clone = "britishgfx_INFANTRY_3"		name = "CRN_INFANTRY_3" }                                                          
+entity = { clone = "britishgfx_CAVALRY_3"		name = "CRN_CAVALRY_3" }                                                           
+entity = { clone = "britishgfx_INFANTRY_4"		name = "CRN_INFANTRY_4" }                                                          
+entity = { clone = "britishgfx_CAVALRY_4"		name = "CRN_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "CRN_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "CRN_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "CRN_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "CRN_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#NOL Northumberland                                                                                                
+entity = { clone = "britishgfx_INFANTRY_1"		name = "NOL_INFANTRY_1" }                                                          
+entity = { clone = "britishgfx_CAVALRY_1"		name = "NOL_CAVALRY_1" }                                                           
+entity = { clone = "britishgfx_INFANTRY_2"		name = "NOL_INFANTRY_2" }                                                          
+entity = { clone = "britishgfx_CAVALRY_2"		name = "NOL_CAVALRY_2" }                                                           
+entity = { clone = "britishgfx_INFANTRY_3"		name = "NOL_INFANTRY_3" }                                                          
+entity = { clone = "britishgfx_CAVALRY_3"		name = "NOL_CAVALRY_3" }                                                           
+entity = { clone = "britishgfx_INFANTRY_4"		name = "NOL_INFANTRY_4" }                                                          
+entity = { clone = "britishgfx_CAVALRY_4"		name = "NOL_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "NOL_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "NOL_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "NOL_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "NOL_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#WLS Wales                                                                                                         
+entity = { clone = "britishgfx_INFANTRY_1"		name = "WLS_INFANTRY_1" }                                                          
+entity = { clone = "britishgfx_CAVALRY_1"		name = "WLS_CAVALRY_1" }                                                           
+entity = { clone = "britishgfx_INFANTRY_2"		name = "WLS_INFANTRY_2" }                                                          
+entity = { clone = "britishgfx_CAVALRY_2"		name = "WLS_CAVALRY_2" }                                                           
+entity = { clone = "britishgfx_INFANTRY_3"		name = "WLS_INFANTRY_3" }                                                          
+entity = { clone = "britishgfx_CAVALRY_3"		name = "WLS_CAVALRY_3" }                                                           
+entity = { clone = "britishgfx_INFANTRY_4"		name = "WLS_INFANTRY_4" }                                                          
+entity = { clone = "britishgfx_CAVALRY_4"		name = "WLS_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "WLS_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "WLS_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "WLS_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "WLS_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#KID Kildare                                                                                                        
+entity = { clone = "britishgfx_INFANTRY_1"		name = "KID_INFANTRY_1" }                                                          
+entity = { clone = "britishgfx_CAVALRY_1"		name = "KID_CAVALRY_1" }                                                           
+entity = { clone = "britishgfx_INFANTRY_2"		name = "KID_INFANTRY_2" }                                                          
+entity = { clone = "britishgfx_CAVALRY_2"		name = "KID_CAVALRY_2" }                                                           
+entity = { clone = "britishgfx_INFANTRY_3"		name = "KID_INFANTRY_3" }                                                          
+entity = { clone = "britishgfx_CAVALRY_3"		name = "KID_CAVALRY_3" }                                                           
+entity = { clone = "britishgfx_INFANTRY_4"		name = "KID_INFANTRY_4" }                                                          
+entity = { clone = "britishgfx_CAVALRY_4"		name = "KID_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "KID_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "KID_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "KID_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "KID_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+###NepNep
+
+#DMS Desmond                                                                                                        
+entity = { clone = "britishgfx_INFANTRY_1"		name = "DMS_INFANTRY_1" }                                                          
+entity = { clone = "britishgfx_CAVALRY_1"			name = "DMS_CAVALRY_1" }                                                           
+entity = { clone = "britishgfx_INFANTRY_2"		name = "DMS_INFANTRY_2" }                                                          
+entity = { clone = "britishgfx_CAVALRY_2"			name = "DMS_CAVALRY_2" }                                                           
+entity = { clone = "britishgfx_INFANTRY_3"		name = "DMS_INFANTRY_3" }                                                          
+entity = { clone = "britishgfx_CAVALRY_3"			name = "DMS_CAVALRY_3" }                                                           
+entity = { clone = "britishgfx_INFANTRY_4"		name = "DMS_INFANTRY_4" }                                                          
+entity = { clone = "britishgfx_CAVALRY_4"			name = "DMS_CAVALRY_4" }       
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "DMS_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "DMS_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "DMS_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "DMS_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# DUB Dublin
+entity = { clone = "britishgfx_INFANTRY_1"		name = "DUB_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "DUB_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "DUB_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "DUB_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "DUB_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "DUB_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "DUB_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "DUB_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "DUB_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "DUB_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "DUB_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "DUB_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# DUR Durham
+entity = { clone = "britishgfx_INFANTRY_1"		name = "DUR_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "DUR_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "DUR_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "DUR_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "DUR_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "DUR_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "DUR_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "DUR_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "DUR_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "DUR_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "DUR_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "DUR_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# Kingdom of Ireland
+entity = { clone = "britishgfx_INFANTRY_1"		name = "KOI_INFANTRY_1"} 
+entity = { clone = "britishgfx_CAVALRY_1"		name = "KOI_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "KOI_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "KOI_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "KOI_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "KOI_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "KOI_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "KOI_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "KOI_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "KOI_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "KOI_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "KOI_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# LNC Lancaster
+entity = { clone = "britishgfx_INFANTRY_1"		name = "LNC_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "LNC_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "LNC_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "LNC_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "LNC_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "LNC_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "LNC_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "LNC_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "LNC_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "LNC_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "LNC_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "LNC_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# LOD London
+entity = { clone = "britishgfx_INFANTRY_1"		name = "LOD_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "LOD_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "LOD_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "LOD_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "LOD_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "LOD_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "LOD_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "LOD_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "LOD_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "LOD_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "LOD_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "LOD_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# URM Ormond
+entity = { clone = "britishgfx_INFANTRY_1"		name = "URM_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "URM_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "URM_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "URM_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "URM_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "URM_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "URM_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "URM_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "URM_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "URM_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "URM_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "URM_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# USA United States
+entity = { clone = "britishgfx_INFANTRY_1"		name = "USA_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "USA_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "USA_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "USA_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "USA_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "USA_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "USA_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "USA_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "USA_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "USA_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "USA_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "USA_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# WEX Wexford
+entity = { clone = "britishgfx_INFANTRY_1"		name = "WEX_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "WEX_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "WEX_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "WEX_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "WEX_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "WEX_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "WEX_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "WEX_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "WEX_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "WEX_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "WEX_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "WEX_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# WSX Wessex
+entity = { clone = "britishgfx_INFANTRY_1"		name = "WSX_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "WSX_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "WSX_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "WSX_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "WSX_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "WSX_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "WSX_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "WSX_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "WSX_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "WSX_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "WSX_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "WSX_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# YRK York
+entity = { clone = "britishgfx_INFANTRY_1"		name = "YRK_INFANTRY_1" }
+entity = { clone = "britishgfx_CAVALRY_1"		name = "YRK_CAVALRY_1" }
+entity = { clone = "britishgfx_INFANTRY_2"		name = "YRK_INFANTRY_2" }
+entity = { clone = "britishgfx_CAVALRY_2"		name = "YRK_CAVALRY_2" }
+entity = { clone = "britishgfx_INFANTRY_3"		name = "YRK_INFANTRY_3" }
+entity = { clone = "britishgfx_CAVALRY_3"		name = "YRK_CAVALRY_3" }
+entity = { clone = "britishgfx_INFANTRY_4"		name = "YRK_INFANTRY_4" }
+entity = { clone = "britishgfx_CAVALRY_4"		name = "YRK_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "YRK_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "YRK_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "YRK_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "YRK_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "britishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+###########################################################################
+#####                             SCOTISH                             #####
+###########################################################################
+
+# ANR Antrim
+entity = { clone = "scottishgfx_INFANTRY_1"		name = "ANR_INFANTRY_1" }
+entity = { clone = "scottishgfx_CAVALRY_1"		name = "ANR_CAVALRY_1" }
+entity = { clone = "scottishgfx_INFANTRY_2"		name = "ANR_INFANTRY_2" }
+entity = { clone = "scottishgfx_CAVALRY_2"		name = "ANR_CAVALRY_2" }
+entity = { clone = "scottishgfx_INFANTRY_3"		name = "ANR_INFANTRY_3" }
+entity = { clone = "scottishgfx_CAVALRY_3"		name = "ANR_CAVALRY_3" }
+entity = { clone = "scottishgfx_INFANTRY_4"		name = "ANR_INFANTRY_4" }
+entity = { clone = "scottishgfx_CAVALRY_4"		name = "ANR_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "ANR_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "ANR_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "ANR_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "ANR_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#HSC Scottish Highlands, Inverness                                                                                                      
+entity = { clone = "scottishgfx_INFANTRY_1"		name = "HSC_INFANTRY_1" } # Hundred Years War                                      
+entity = { clone = "scottishgfx_CAVALRY_1"		name = "HSC_CAVALRY_1" }                                                           
+entity = { clone = "scottishgfx_INFANTRY_2"		name = "HSC_INFANTRY_2" }                                                          
+entity = { clone = "scottishgfx_CAVALRY_2"		name = "HSC_CAVALRY_2" }                                                           
+entity = { clone = "scottishgfx_INFANTRY_3"		name = "HSC_INFANTRY_3" }                                                          
+entity = { clone = "scottishgfx_CAVALRY_3"		name = "HSC_CAVALRY_3" }                                                           
+entity = { clone = "scottishgfx_INFANTRY_4"		name = "HSC_INFANTRY_4" }                                                          
+entity = { clone = "scottishgfx_CAVALRY_4"		name = "HSC_CAVALRY_4" }   
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "HSC_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "HSC_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "HSC_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "HSC_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# ILE The Isles
+entity = { clone = "scottishgfx_INFANTRY_1"		name = "ILE_INFANTRY_1" }
+entity = { clone = "scottishgfx_CAVALRY_1"		name = "ILE_CAVALRY_1" }
+entity = { clone = "scottishgfx_INFANTRY_2"		name = "ILE_INFANTRY_2" }
+entity = { clone = "scottishgfx_CAVALRY_2"		name = "ILE_CAVALRY_2" }
+entity = { clone = "scottishgfx_INFANTRY_3"		name = "ILE_INFANTRY_3" }
+entity = { clone = "scottishgfx_CAVALRY_3"		name = "ILE_CAVALRY_3" }
+entity = { clone = "scottishgfx_INFANTRY_4"		name = "ILE_INFANTRY_4" }
+entity = { clone = "scottishgfx_CAVALRY_4"		name = "ILE_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "ILE_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "ILE_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "ILE_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "ILE_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# IOM Mann
+entity = { clone = "scottishgfx_INFANTRY_1"		name = "IOM_INFANTRY_1" }
+entity = { clone = "scottishgfx_CAVALRY_1"		name = "IOM_CAVALRY_1" }
+entity = { clone = "scottishgfx_INFANTRY_2"		name = "IOM_INFANTRY_2" }
+entity = { clone = "scottishgfx_CAVALRY_2"		name = "IOM_CAVALRY_2" }
+entity = { clone = "scottishgfx_INFANTRY_3"		name = "IOM_INFANTRY_3" }
+entity = { clone = "scottishgfx_CAVALRY_3"		name = "IOM_CAVALRY_3" }
+entity = { clone = "scottishgfx_INFANTRY_4"		name = "IOM_INFANTRY_4" }
+entity = { clone = "scottishgfx_CAVALRY_4"		name = "IOM_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "IOM_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "IOM_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "IOM_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "IOM_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#SCO Scotland                                                                                                      
+entity = { clone = "scottishgfx_INFANTRY_1"		name = "SCO_INFANTRY_1" } # Hundred Years War                                      
+entity = { clone = "scottishgfx_CAVALRY_1"		name = "SCO_CAVALRY_1" }                                                           
+entity = { clone = "scottishgfx_INFANTRY_2"		name = "SCO_INFANTRY_2" }                                                          
+entity = { clone = "scottishgfx_CAVALRY_2"		name = "SCO_CAVALRY_2" }                                                           
+entity = { clone = "scottishgfx_INFANTRY_3"		name = "SCO_INFANTRY_3" }                                                          
+entity = { clone = "scottishgfx_CAVALRY_3"		name = "SCO_CAVALRY_3" }                                                           
+entity = { clone = "scottishgfx_INFANTRY_4"		name = "SCO_INFANTRY_4" }                                                          
+entity = { clone = "scottishgfx_CAVALRY_4"		name = "SCO_CAVALRY_4" }   
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "SCO_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "SCO_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "SCO_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "SCO_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "scottishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } } 
+
+###########################################################################
+#####                             IRISH                               #####
+###########################################################################
+
+# CEL Celtica
+entity = { clone = "irishgfx_INFANTRY_1"		name = "CEL_INFANTRY_1" }
+entity = { clone = "irishgfx_CAVALRY_1"			name = "CEL_CAVALRY_1" }
+entity = { clone = "irishgfx_INFANTRY_2"		name = "CEL_INFANTRY_2" }
+entity = { clone = "irishgfx_CAVALRY_2"			name = "CEL_CAVALRY_2" }
+entity = { clone = "irishgfx_INFANTRY_3"		name = "CEL_INFANTRY_3" }
+entity = { clone = "irishgfx_CAVALRY_3"			name = "CEL_CAVALRY_3" }
+entity = { clone = "irishgfx_INFANTRY_4"		name = "CEL_INFANTRY_4" }
+entity = { clone = "irishgfx_CAVALRY_4"			name = "CEL_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "CEL_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "CEL_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "CEL_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "CEL_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#CLN Ulaidh                                                                                                      
+entity = { clone = "irishgfx_INFANTRY_1"		name = "CLN_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "CLN_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "CLN_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "CLN_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "CLN_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "CLN_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "CLN_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "CLN_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "CLN_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "CLN_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "CLN_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "CLN_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#CNN Connacht                                                                                                      
+entity = { clone = "irishgfx_INFANTRY_1"		name = "CNN_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "CNN_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "CNN_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "CNN_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "CNN_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "CNN_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "CNN_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "CNN_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "CNN_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "CNN_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "CNN_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "CNN_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# DSM Deas Mhumain
+entity = { clone = "irishgfx_INFANTRY_1"		name = "DSM_INFANTRY_1" }
+entity = { clone = "irishgfx_CAVALRY_1"			name = "DSM_CAVALRY_1" }
+entity = { clone = "irishgfx_INFANTRY_2"		name = "DSM_INFANTRY_2" }
+entity = { clone = "irishgfx_CAVALRY_2"			name = "DSM_CAVALRY_2" }
+entity = { clone = "irishgfx_INFANTRY_3"		name = "DSM_INFANTRY_3" }
+entity = { clone = "irishgfx_CAVALRY_3"			name = "DSM_CAVALRY_3" }
+entity = { clone = "irishgfx_INFANTRY_4"		name = "DSM_INFANTRY_4" }
+entity = { clone = "irishgfx_CAVALRY_4"			name = "DSM_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "DSM_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "DSM_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "DSM_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "DSM_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# GLW Galway
+entity = { clone = "irishgfx_INFANTRY_1"		name = "GLW_INFANTRY_1" }
+entity = { clone = "irishgfx_CAVALRY_1"			name = "GLW_CAVALRY_1" }
+entity = { clone = "irishgfx_INFANTRY_2"		name = "GLW_INFANTRY_2" }
+entity = { clone = "irishgfx_CAVALRY_2"			name = "GLW_CAVALRY_2" }
+entity = { clone = "irishgfx_INFANTRY_3"		name = "GLW_INFANTRY_3" }
+entity = { clone = "irishgfx_CAVALRY_3"			name = "GLW_CAVALRY_3" }
+entity = { clone = "irishgfx_INFANTRY_4"		name = "GLW_INFANTRY_4" }
+entity = { clone = "irishgfx_CAVALRY_4"			name = "GLW_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "GLW_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "GLW_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "GLW_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "GLW_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#IRE Ireland                                                                                                       
+entity = { clone = "irishgfx_INFANTRY_1"		name = "IRE_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "IRE_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "IRE_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "IRE_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "IRE_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "IRE_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "IRE_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "IRE_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "IRE_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "IRE_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "IRE_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "IRE_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# LAI Laigin
+entity = { clone = "irishgfx_INFANTRY_1"		name = "LAI_INFANTRY_1" }
+entity = { clone = "irishgfx_CAVALRY_1"			name = "LAI_CAVALRY_1" }
+entity = { clone = "irishgfx_INFANTRY_2"		name = "LAI_INFANTRY_2" }
+entity = { clone = "irishgfx_CAVALRY_2"			name = "LAI_CAVALRY_2" }
+entity = { clone = "irishgfx_INFANTRY_3"		name = "LAI_INFANTRY_3" }
+entity = { clone = "irishgfx_CAVALRY_3"			name = "LAI_CAVALRY_3" }
+entity = { clone = "irishgfx_INFANTRY_4"		name = "LAI_INFANTRY_4" }
+entity = { clone = "irishgfx_CAVALRY_4"			name = "LAI_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "LAI_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "LAI_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "LAI_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "LAI_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#LEI Leinster                                                                                                      
+entity = { clone = "irishgfx_INFANTRY_1"		name = "LEI_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "LEI_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "LEI_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "LEI_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "LEI_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "LEI_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "LEI_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "LEI_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "LEI_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "LEI_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "LEI_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "LEI_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#MNS Munster                                                                                                       
+entity = { clone = "irishgfx_INFANTRY_1"		name = "MNS_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "MNS_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "MNS_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "MNS_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "MNS_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "MNS_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "MNS_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "MNS_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "MNS_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "MNS_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "MNS_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "MNS_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#MTH Meath                                                                                                         
+entity = { clone = "irishgfx_INFANTRY_1"		name = "MTH_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "MTH_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "MTH_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "MTH_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "MTH_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "MTH_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "MTH_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "MTH_CAVALRY_4" }                                                           
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "MTH_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "MTH_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "MTH_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "MTH_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# MYO Mayo
+entity = { clone = "irishgfx_INFANTRY_1"		name = "MYO_INFANTRY_1" }
+entity = { clone = "irishgfx_CAVALRY_1"			name = "MYO_CAVALRY_1" }
+entity = { clone = "irishgfx_INFANTRY_2"		name = "MYO_INFANTRY_2" }
+entity = { clone = "irishgfx_CAVALRY_2"			name = "MYO_CAVALRY_2" }
+entity = { clone = "irishgfx_INFANTRY_3"		name = "MYO_INFANTRY_3" }
+entity = { clone = "irishgfx_CAVALRY_3"			name = "MYO_CAVALRY_3" }
+entity = { clone = "irishgfx_INFANTRY_4"		name = "MYO_INFANTRY_4" }
+entity = { clone = "irishgfx_CAVALRY_4"			name = "MYO_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "MYO_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "MYO_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "MYO_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "MYO_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#SLN Sligo                                                                                                        
+entity = { clone = "irishgfx_INFANTRY_1"		name = "SLN_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "SLN_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "SLN_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "SLN_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "SLN_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "SLN_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "SLN_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "SLN_CAVALRY_4" }       
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "SLN_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "SLN_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "SLN_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "SLN_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# THO Thomond
+entity = { clone = "irishgfx_INFANTRY_1"		name = "THO_INFANTRY_1" }
+entity = { clone = "irishgfx_CAVALRY_1"			name = "THO_CAVALRY_1" }
+entity = { clone = "irishgfx_INFANTRY_2"		name = "THO_INFANTRY_2" }
+entity = { clone = "irishgfx_CAVALRY_2"			name = "THO_CAVALRY_2" }
+entity = { clone = "irishgfx_INFANTRY_3"		name = "THO_INFANTRY_3" }
+entity = { clone = "irishgfx_CAVALRY_3"			name = "THO_CAVALRY_3" }
+entity = { clone = "irishgfx_INFANTRY_4"		name = "THO_INFANTRY_4" }
+entity = { clone = "irishgfx_CAVALRY_4"			name = "THO_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "THO_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "THO_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "THO_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "THO_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+# TYC Tyrconnell
+entity = { clone = "irishgfx_INFANTRY_1"		name = "TYC_INFANTRY_1" }
+entity = { clone = "irishgfx_CAVALRY_1"			name = "TYC_CAVALRY_1" }
+entity = { clone = "irishgfx_INFANTRY_2"		name = "TYC_INFANTRY_2" }
+entity = { clone = "irishgfx_CAVALRY_2"			name = "TYC_CAVALRY_2" }
+entity = { clone = "irishgfx_INFANTRY_3"		name = "TYC_INFANTRY_3" }
+entity = { clone = "irishgfx_CAVALRY_3"			name = "TYC_CAVALRY_3" }
+entity = { clone = "irishgfx_INFANTRY_4"		name = "TYC_INFANTRY_4" }
+entity = { clone = "irishgfx_CAVALRY_4"			name = "TYC_CAVALRY_4" }
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "TYC_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "TYC_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "TYC_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "TYC_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#TYR Tyrone                                                                                                        
+entity = { clone = "irishgfx_INFANTRY_1"		name = "TYR_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "TYR_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "TYR_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "TYR_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "TYR_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "TYR_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "TYR_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "TYR_CAVALRY_4" }       
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "TYR_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "TYR_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "TYR_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "TYR_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+
+#ULS Ulster                                                                                                        
+entity = { clone = "irishgfx_INFANTRY_1"		name = "ULS_INFANTRY_1" }                                                          
+entity = { clone = "irishgfx_CAVALRY_1"			name = "ULS_CAVALRY_1" }                                                           
+entity = { clone = "irishgfx_INFANTRY_2"		name = "ULS_INFANTRY_2" }                                                          
+entity = { clone = "irishgfx_CAVALRY_2"			name = "ULS_CAVALRY_2" }                                                           
+entity = { clone = "irishgfx_INFANTRY_3"		name = "ULS_INFANTRY_3" }                                                          
+entity = { clone = "irishgfx_CAVALRY_3"			name = "ULS_CAVALRY_3" }                                                           
+entity = { clone = "irishgfx_INFANTRY_4"		name = "ULS_INFANTRY_4" }                                                          
+entity = { clone = "irishgfx_CAVALRY_4"			name = "ULS_CAVALRY_4" }       
+
+entity = { clone = "westerngfx_ARTILLERY_1"  name = "ULS_ARTILLERY_1"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_1" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_2"  name = "ULS_ARTILLERY_2"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_2" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_3"  name = "ULS_ARTILLERY_3"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_3" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }
+entity = { clone = "westerngfx_ARTILLERY_4"  name = "ULS_ARTILLERY_4"  attach = { name = "gunman" infantry_node = "irishgfx_INFANTRY_4" cannon_node = "westerngfx_ARTILLERY_2_cannon"  } }

@@ -1,0 +1,1317 @@
+################################################################################################## Modifiers for Shattered Europa - Neprut
+##################################################################################################
+
+##BT
+
+fraiser_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+yukon_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+mackenzie_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+colorado_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+copper_river_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+klamath_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+st_john_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+grand_banks_of_newfoundland = {
+	trade_goods_size = 2.0
+}
+
+## BTP
+
+mersey_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+clyde_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+tribes_of_galway_modifier = {
+	province_trade_power_value = 10
+	picture = "province_trade_power_value"
+}
+
+btp_kingdom_of_god = {
+	missionaries = 2
+	prestige = 1
+	stability_cost_modifier = -0.1
+	advisor_pool = 1
+	advisor_cost = -0.2
+	free_leader_pool = 1
+	ae_impact = -0.2
+	#icon = 9
+}
+
+btp_dano_scottish_wedding = {
+	diplomatic_upkeep = 1
+}
+
+#Beyond Typus and BTPL Europe Stuff
+severn_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+shannon_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+meuse_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+guadalquivir_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+dnieper_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+orontes_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+irish_catholicism_not_allowed = {
+	local_unrest = 6
+	local_missionary_strength = 0.01
+}
+
+irish_catholicism_allowed = {
+	local_unrest = -3
+	local_missionary_strength = -0.08
+}
+
+irish_fealty_negotiations_ongoing = {
+	diplomatic_upkeep = -1
+}
+
+humiliated_by_former_vassal = {
+	diplomatic_reputation = -1
+}
+
+grand_center_of_trade_modifier = {
+	local_institution_spread = 0.10
+	province_trade_power_value = 30
+	naval_forcelimit = 5
+	local_development_cost = -0.1
+	local_sailors_modifier = 0.50
+	picture = "province_trade_power_value"
+}
+
+crown_of_aragon_minors_mallorca = {
+	local_manpower_modifier = -0.25
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	local_missionary_strength = -0.01
+}
+
+crown_of_aragon_minors_sardinia = {
+	local_manpower_modifier = -0.25
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	local_missionary_strength = -0.01
+}
+
+crown_of_aragon_minors_sicily = {
+	local_manpower_modifier = -0.25
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	local_missionary_strength = -0.01
+}
+
+crown_of_aragon_minors_valencia = {
+	local_manpower_modifier = -0.25
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	local_missionary_strength = -0.01
+}
+
+crown_of_aragon_minors_catalonia = {
+	local_manpower_modifier = -0.25
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	local_missionary_strength = -0.01
+}
+
+btpl_recently_integrated = {
+	local_unrest = 10
+}
+
+#Colonial Stuff
+mettling_government = {
+	local_unrest = 5
+}
+
+#### Slovakia Mod ####
+
+janosik_start1 = {
+	global_tax_modifier = -0.50
+	global_unrest = 3
+	#icon = 2
+}
+
+janosik_start2 = {
+	global_tax_modifier = -0.30
+	global_unrest = 2
+	#icon = 2
+}
+
+svatopluk_boost = {
+	defensiveness = 0.10
+	#icon = 7
+}
+
+#### Trobador's Revenge Mod ####
+
+## Trobador seducing the queen
+executed_trobador = {
+	global_unrest = -10
+	stability_cost_modifier = 0.30
+}
+
+### Ruler modifiers for trobador skill
+apprentice_trobador = {
+	heir_chance = 0.06
+	trobador_occitanist_influence = 0.025
+}
+
+decent_trobador = {
+	prestige = 0.5
+	heir_chance = 0.125
+	trobador_occitanist_influence = 0.05
+}
+
+gifted_trobador = {
+	prestige = 1
+	diplomatic_reputation = 0.5
+	heir_chance = 0.25
+	trobador_occitanist_influence = 0.10
+}
+
+famous_trobador = {
+	prestige = 1.5
+	diplomatic_reputation = 1
+	global_unrest = -0.5
+	heir_chance = 0.5
+	trobador_occitanist_influence = 0.15
+}
+
+legendary_trobador = {
+	prestige = 2
+	diplomatic_reputation = 2
+	global_unrest = -1
+	heir_chance = 1
+	trobador_occitanist_influence = 0.20
+}
+
+### Malus during learning of trobador skill
+working_on_trobar = {
+	leader_land_shock = -1
+	leader_Land_fire = -1
+	leader_Land_siege = -1
+	diplomatic_reputation = -1
+	global_tax_modifier = -0.05
+	adm_tech_cost_modifier = 0.10
+}
+
+## Republican Faction enforcing autonomy
+autonomous_city = {
+	local_tax_modifier = -1.0
+	local_production_efficiency = -1.0 # production contributing only through trade, is it correct?
+	trade_goods_size = 0.25
+	province_trade_power_modifier = 0.25
+	trade_value_modifier = 0.25
+	local_manpower_modifier = -0.50
+	possible_mercenaries = 0.5 # I think it's global and it should cumulate, to be checked
+	local_ship_cost = -0.10
+	ship_recruit_speed = -0.1
+	local_unrest = -5
+	local_defensiveness = 0.1
+	global_missionary_strength = -0.02
+}
+
+city_rights_restricted = {
+	local_unrest = 10
+}
+
+## Special modifier for Marseille
+untameable_city = {
+	local_unrest = 2
+	trobador_republican_influence = 0.05
+}
+
+edict_de_languedoc  = {
+	tolerance_heretic = 2
+	tolerance_own = -1
+	religious_unity = 0.25
+	#icon = 9
+}
+
+## Neon
+#ENG
+rievers = {
+	local_tax_modifier = -0.33
+	local_unrest = 2
+}
+
+hostmen = {
+	local_production_efficiency = 0.2
+}
+
+scarborough_fair = {
+	trade_value_modifier = 0.1
+	province_trade_power_value = 5
+}
+
+north_council = {
+	local_unrest = -3
+}
+
+north_council_2 = {
+	local_missionary_strength = 0.1
+}
+
+flemish_lancaster = {
+	trade_goods_size = 0.5
+}
+
+virgin_queen = {
+	prestige = 0.5
+	heir_chance = -0.9
+}
+
+pilgrimage_grace = {
+	local_unrest = 12
+}
+#ICE
+major_eruption = {
+	local_tax_modifier = -1
+}
+norse_romanticism = {
+	prestige_decay = -0.02
+	religion = yes
+}
+#sikh
+golden_temple = {
+	dip_tech_cost_modifier = -0.02
+	prestige_decay = -0.02
+	religion = yes
+}
+#tiger
+tiger_claws = {
+	discipline = 0.05
+}
+#brazil
+brz_goldrush = {
+	trade_goods_size = 1.0
+}
+
+por_captaincy = {
+	advisor_cost = -0.2
+}
+
+brz_captaincy = {
+	global_colonial_growth = -10
+	production_efficiency = -0.10
+}
+
+brz_slavery = {
+	global_unrest = 3
+	production_efficiency = 0.05
+}
+
+palmares = {
+	local_unrest = 6
+}
+
+mocambos = {
+	local_unrest = 3
+}
+
+zumbi = {
+	local_unrest = 5
+}
+
+capoeira = {
+	discipline = 0.05
+}
+
+haiti_coffee = {
+	trade_goods_size = 1.0
+}
+
+potosi_1 = {
+	trade_goods_size = 1
+}
+
+potosi_2 = {
+	trade_goods_size = 2
+}
+
+peru_new_laws = {
+	global_unrest = -3
+	trade_goods_size = -0.2
+}
+
+peru_no_newlaws = {
+	trade_goods_size = 0.2
+	global_unrest = 3
+}
+peru_toledo_reforms = {
+	trade_goods_size = 0.2
+	global_unrest = 3
+}
+
+papel_sellado = {
+	global_tax_modifier = 0.1
+}
+hungry_rico = {
+	trade_goods_size = 3
+	global_unrest = 3
+}
+
+#brets
+breton_estates = {
+	local_unrest = -3
+	local_tax_modifier = -0.25
+}
+#crn
+cornwall_tin = {
+	local_production_efficiency = 0.15
+}
+#indo
+sumatra_spice = {
+	goods_produced = 2
+}
+reformed_hindu = {
+	global_missionary_strength = 0.01
+	stability_cost_modifier = -0.05
+	tolerance_heathen = -1
+	religion = yes
+}
+#tus
+medici_florence = {
+	diplomatic_reputation = 2
+	idea_cost = -0.1
+}
+
+leonardo_mil = {
+	mil_tech_cost_modifier  = -0.1
+	siege_ability = 0.10
+}
+
+leonardo_dip = {
+	dip_tech_cost_modifier  = -0.1
+	galley_power = 0.15
+}
+
+leonardo_adm = {
+	adm_tech_cost_modifier  = -0.1
+	prestige = 1
+}
+
+machiavelli_adm = {
+	idea_cost = -0.1
+	unjustified_demands = -0.2
+}
+
+machiavelli_dip = {
+	idea_cost = -0.1
+	diplomatic_reputation = 2
+}
+
+machiavelli_mil = {
+	idea_cost = -0.1
+	manpower_recovery_speed = 0.2
+}
+
+#Japan
+
+hmn_sengoku_jidai = {
+	diplomatic_annexation_cost = 1.50	
+}
+
+hmn_wa_culture_conversion = { 
+	culture_conversion_cost = -0.66
+}
+
+hmn_jomon_culture_conversion = { 
+	culture_conversion_cost = -0.66
+}
+
+ezo_timer = {}
+
+yodo_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+revived_cheif_priest = {
+	legitimacy = 0.50
+	tolerance_own = 1
+	heir_chance = -0.25
+}
+
+shikinen_sengu_timer = {
+}
+
+# Shinto Deity Events
+
+shikinen_sengu_ceremony = {
+	legitimacy = 0.25
+	religion = yes
+}
+
+ignored_omen_of_war = {
+	land_morale = -0.05
+	stability_cost_modifier = -0.10
+	religion = yes
+}
+
+support_of_the_samurai = {
+	legitimacy = 0.10
+	global_tax_modifier = 0.05
+	stability_cost_modifier = -0.05
+	religion = yes
+}
+
+refused_the_samurai = {
+	global_manpower_modifier = -0.10
+	religion = yes
+}
+
+blessings_of_hachiman = {
+	land_morale = 0.05
+	religion = yes
+}
+
+dispersed_extra_food = {
+	global_unrest = -0.50
+	stability_cost_modifier = -0.05
+	religion = yes
+}
+
+saved_extra_food = {
+	global_unrest = 0.50
+	stability_cost_modifier = 0.05
+	religion = yes
+}
+
+oinari_offering_coins = {
+	legitimacy = 0.25
+	religion = yes
+}
+
+fishing_boom = {
+	trade_efficiency = 0.05
+	religion = yes
+}
+
+kusanagi = {
+	diplomatic_reputation = 1
+	legitimacy = 0.50
+	religion = yes
+}
+
+banned_fire_festival = {
+	stability_cost_modifier = 0.10
+	religion = yes
+}
+
+tsukuyomi_the_great = {
+	prestige = 0.25
+	legitimacy = 0.25
+	religion = yes
+}
+
+# Iberia
+
+reverse_the_reconquista = {
+	global_missionary_strength = 0.02
+	manpower_recovery_speed = 0.15
+}
+
+starting_the_reconquista = {
+	land_morale = 0.15
+	manpower_recovery_speed = 0.15
+}
+
+## Pagan Revival
+
+#For events
+
+christian_stronghold_SCA = {
+	local_unrest = 5
+	local_missionary_strength = -0.03
+}
+
+muslim_stronghold_SCA = {
+	local_unrest = 5
+	local_missionary_strength = -0.03
+}
+
+religious_stronghold_SCA = {
+	local_unrest = 5
+	local_missionary_strength = -0.03
+}
+
+
+blood_floods_street_SCA = {
+	local_manpower_modifier = -0.75
+	local_tax_modifier = -0.75
+}
+
+conversion_zeal_SCA = {
+	global_missionary_strength = 0.05
+}
+
+converts_flock_to_the_banner_SCA = { 
+	global_manpower_modifier = 0.2
+}
+
+converts_flock_to_the_banner = { 
+	global_manpower_modifier = 0.2
+}
+
+tolerant_pagan_doctrine_SCA = {	
+	tolerance_heretic = 3
+}
+
+intolerant_pagan_doctrine_SCA = {
+	global_heretic_missionary_strength = 0.03
+}
+
+trollkyrka_blot_SCA = {
+	discipline = 0.05
+	land_morale = 0.20
+}
+
+great_pagan_gathering = {
+	discipline = 0.05
+	land_morale = 0.20
+}
+
+favour_of_the_godi_SCA = {
+	missionaries = 2
+}
+
+favour_of_the_shaman = {
+	missionaries = 2
+}
+
+pagan_center_religion = {
+	local_missionary_strength = -0.03
+}
+
+stay_hidden = {
+	global_unrest = -2
+	stability_cost_modifier = 0.25
+}
+
+#For decisions
+
+skjald_academy_SCA = {
+	global_missionary_strength = 0.01
+	religion = yes
+}
+
+oral_school_SCA = {
+	global_tax_modifier = -0.05
+	stability_cost_modifier = 0.1
+	idea_cost = -0.05
+	religion = yes
+}
+
+doctrine_school_SCA = {
+	stability_cost_modifier = -0.1
+	religion = yes
+}
+
+sodomy_ban_SCA = {
+	stability_cost_modifier = -0.1
+	religion = yes
+}
+
+lifted_sodomy_ban_SCA = {
+	stability_cost_modifier = 0.1
+	idea_cost = -0.05
+	religion = yes
+}
+
+futhark_SCA = {
+	stability_cost_modifier = -0.1
+	religion = yes
+}
+
+raised_runestone_SCA = {
+	prestige = 0.5
+	religion = yes
+}
+
+dannevirke_SCA = {
+	local_defensiveness = 0.25
+}
+
+godi_highseat_SCA = {
+	tolerance_own = 1
+	religion = yes
+}
+
+stave_temple_design_SCA = {
+	global_missionary_strength = 0.01
+	religion = yes
+}
+
+jomsviking_hq_SCA = {
+	local_defensiveness = 0.1
+	religion = yes
+}
+
+ban_human_sacrifice_SCA = {
+	stability_cost_modifier = -0.1
+	religion = yes
+}
+
+nordic_schools_SCA = {
+	global_missionary_strength = 0.01
+	religion = yes
+}
+
+## Pagans
+
+pagan_center_religion2 = {
+	local_unrest = -2
+	local_missionary_strength = -0.02
+}
+
+#Piety
+
+pagan_religious_law = {
+	global_missionary_strength = 0.01
+	religion = yes
+}
+
+pagan_shaman = {
+	prestige = 0.5
+	religion = yes
+}
+
+pagan_scholarly_centre = {
+	technology_cost = -0.05
+	global_missionary_strength = 0.01
+	religion = yes
+}
+
+pagan_capita_tax = {
+	global_tax_modifier = 0.05
+	religion = yes
+}
+
+#African
+
+heir_okuyi = {
+	global_unrest = -0.5
+}
+
+wedding_okuyi = {
+	legitimacy = 1
+}
+
+funeral_okuyi = {
+	stability_cost_modifier = -0.25
+}
+
+adolescent_okuyi = {
+	global_unrest = -0.75
+}
+
+#Finnish
+spreading_finnish_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+found_sampo = {
+	prestige = 2
+}
+
+suomenusko_feast = {
+	stability_cost_modifier = -0.1
+	global_manpower_modifier = 0.1
+}
+
+#Slavic
+spreading_slavic_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+united_pantheon = {
+	global_autonomy = -0.5
+}
+
+divided_pantheon = {
+	global_unrest = -1
+}
+
+worship_jarilo = {
+	production_efficiency = 0.1
+}
+
+worship_morana = {
+	hostile_attrition = 1
+}
+
+harvest_prayer = {
+	production_efficiency = 0.05
+}
+
+no_harvest_prayer = {
+	production_efficiency = -0.05
+}
+
+forced_fighting = {
+	global_manpower_modifier = 0.1
+	land_morale = -0.1
+}
+
+slavic_human_sacrifice = {
+	production_efficiency = 0.05
+}
+
+#Romuva
+spreading_baltic_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+#Hellenic
+spreading_hellenic_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+rome_celebrates = {
+	production_efficiency = 2
+}
+
+empire_celebrates = {
+	land_morale = 0.25
+}
+
+large_sacrifice = {
+	land_morale = 0.05
+	production_efficiency = 0.05
+}
+
+small_sacrifice = {
+	production_efficiency = 0.05
+}
+
+animal_sacrifice = {
+	land_morale = 0.1
+	production_efficiency = -0.05
+}
+
+rom_human_sacrifice = {
+	land_morale = 0.15
+}
+
+listen_pontiffs = {
+	tolerance_own = 2
+}
+
+ignore_pontiffs = {
+	tolerance_heathen = 1
+}
+
+augurs = {
+	global_unrest = 1
+}
+
+cult_of_jupiter = {
+	global_tax_modifier = 0.05
+}
+
+cult_of_mars = {
+	land_morale = 0.05
+}
+
+cult_of_quirinus = {
+	global_unrest = -0.5
+}
+
+imperial_cult = {
+	legitimacy = 0.1
+}
+
+offensive_fetial = {
+	spy_offence = 0.15
+}
+
+defensive_fetial = {
+	global_spy_defence = 0.15
+}
+
+brethren_harvest = {
+	production_efficiency = 0.05
+}
+
+brethren_famine = {
+	production_efficiency = -0.1
+}
+
+#Gaelic
+spreading_gaelic_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+druidic_heritage = {
+	legitimacy = 0.05
+}
+
+taranis_favored = {
+	land_morale = 0.1
+}
+
+toutatis_favored = {
+	global_unrest = -1
+}
+
+esus_favored = {
+	production_efficiency = 0.1
+}
+
+#Zoroastrian
+
+zurvanism = {
+	tolerance_own = 1
+	tolerance_heathen = -1
+	tolerance_heretic = -1
+}
+
+fire_temple = {
+	local_missionary_strength = 0.01
+	local_unrest = -1
+}
+
+the_avesta = {
+	prestige = 1
+	missionaries = 1
+}
+
+#Germanic
+spreading_germanic_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+#Egyptian
+spreading_egyptian_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+#South Arabian
+spreading_south_arabian_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+#Amanaiism
+spreading_amanaiism_rituals = {
+	global_missionary_strength = 0.02
+	religion = yes
+}
+
+## HRE Theocracy
+
+primas_germaniae_declined = { }
+stiftsfehde_diether = { }
+stiftsfehde_adolf = { }
+
+jesuit_college = {
+	technology_cost = -0.05
+	idea_cost = -0.05
+}
+
+mai_witch_hunts = {
+	global_missionary_strength = 0.02
+	global_unrest = 2
+}
+
+electoral_residences = {
+	improve_relation_modifier = 0.15
+	stability_cost_modifier = -0.05
+	global_tax_income = -9
+}
+
+vizedom = {
+	local_tax_modifier = 0.1
+	local_autonomy = -0.05
+}
+
+banned_by_pope = {
+	devotion = -1
+	papal_influence = -3
+	tolerance_own = -1
+	prestige = -2
+}
+
+opposition_of_freistadt = {
+	local_defensiveness = -0.25
+}
+
+support_of_freistadt = {
+	local_defensiveness = 0.25
+}
+
+freistadt_privilege = {
+	trade_efficiency = -0.05
+}
+
+schoenborn_reforms = {
+	tolerance_own = 1
+	tolerance_heretic = 3
+	build_cost = -0.1
+	manpower_recovery_speed = 0.1
+}
+
+restrictions_for_jews = {
+	religious_unity = -0.05
+	global_tax_modifier = -0.05
+}
+
+growing_jewish_community = {
+	religious_unity = -0.1
+	global_tax_modifier = 0.1
+	stability_cost_modifier = 0.1
+}
+
+breidbach_admin = {
+	global_tax_modifier = 0.1
+	global_trade_goods_size_modifier = 0.1
+	years_of_nationalism = -5
+	global_autonomy = -0.1
+}
+
+breidbach_education = {
+	global_unrest = -1
+	advisor_pool = 1
+	technology_cost = -0.05
+	idea_cost = -0.05
+}
+
+favorite_palace_big = {
+	diplomatic_reputation = 2
+	relations_decay_of_me = 0.2
+	prestige_decay = -0.01
+}
+
+favorite_palace_small = {
+	diplomatic_reputation = 1
+	relations_decay_of_me = 0.1
+	prestige_decay = -0.005
+}
+
+## Others
+
+roman_culture = {
+	culture_conversion_cost = -0.35
+	accepted_culture_threshold = -0.15
+}
+
+britannia_build = {
+	build_cost = -0.1
+	development_cost = -0.1
+}
+
+## Greenland & Vinland
+
+greenland_migration = {
+	global_colonial_growth = 50
+	range = 0.1
+}
+
+thule_defense_modifier = {
+	local_hostile_attrition = 5
+}
+
+vinland_colonization = {
+	colonist_placement_chance = 0.1
+}
+
+no_fort_fear_grl = {
+	global_unrest = 1
+}
+
+harvest_fails_grl = {
+	trade_goods_size_modifier = -0.50
+}
+
+military_reinforcement_grl = {
+	global_manpower_modifier = 0.3
+}
+
+greenland_hunting = {
+	global_trade_goods_size = 0.5
+}
+
+great_hunters_grl = {
+	production_efficiency = 0.1
+}
+
+vinland_allthing = {
+	global_tax_modifier = -0.05
+	global_manpower_modifier = -0.1
+	global_unrest = -2
+}
+
+vinland_catholic_brothers = {
+	idea_cost = -0.1
+	global_missionary_strength = 0.01
+}
+
+vinland_catholic_preachers = {
+	global_missionary_strength = -0.02
+}
+
+vinland_religious_toleration = {
+	local_missionary_strength = -0.5
+}
+
+vinland_religious_equality = {
+	colonist_placement_chance = 0.10
+	global_missionary_strength = -0.01
+}
+
+vinland_major_unrest = {
+	local_unrest = 3
+	local_manpower_modifier = -0.5
+}
+
+vinland_minor_unrest = {
+	local_unrest = 2
+}
+
+vinland_national_unrest = {
+	global_unrest = 2
+}
+
+vinland_restrict_settlers = {
+	colonist_placement_chance = -0.1
+}
+
+vinland_trade_monopoly = {
+	trade_efficiency = -0.10
+}
+
+vinland_lawlessness = {
+	stability_cost_modifier = 0.25
+}
+
+vinland_wildfires = {
+	production_efficiency = -0.1
+}
+
+vinland_native_autonomy = {
+	local_manpower_modifier = -0.05
+}
+
+vinland_native_bribe = {
+	local_tax_modifier = -0.05
+}
+
+vinland_native_insurrection = {
+	local_unrest = 8
+	local_tax_modifier = -0.75
+	local_manpower_modifier = -0.75
+}
+
+vinland_nationalist_insurrection = {
+	local_unrest = 8
+	local_tax_modifier = -0.75
+	local_manpower_modifier = -0.75
+}
+
+vinland_native_takeover = {
+	local_tax_modifier = -0.33
+	local_manpower_modifier = -0.33
+}
+
+vinland_exile_natives = {
+	local_tax_modifier = -0.33
+	local_manpower_modifier = -0.33
+}
+
+vinland_plague = {
+	global_manpower_modifier = -0.25
+	production_efficiency = -0.2
+}
+
+vinland_low_morale = {
+	land_morale = -0.20
+}
+
+vinland_eu_settlers = {
+	local_colonial_growth = 10
+}
+
+#cathars
+
+pelican_spotted = {
+	local_unrest = -1
+}
+
+cathar_leader = {
+	heir_chance = -0.75
+}
+
+perfecti_house = {
+	local_development_cost = -0.1
+	local_missionary_strength = 0.05
+}
+
+## Natives
+
+easterntribes_cultural_union = {
+	idea_cost = -0.1
+}
+
+iroquois_traditions = {
+	land_attrition = -0.1
+	production_efficiency = 0.1
+}
+
+wabanaki_traditions = {
+	leader_land_manuever = 1
+	trade_efficiency = 0.1
+}
+
+mingo_traditions = {
+	global_colonial_growth = 10
+	reinforce_speed = 0.33
+}
+
+seminole_traditions = {
+	leader_land_manuever = 1
+	accepted_culture_threshold = -0.5
+}
+
+illiniwek_traditions = {
+	production_efficiency = 0.1
+	trade_efficiency = 0.1
+}
+
+creek_traditions = {
+	idea_cost = -0.1
+	infantry_power = 0.1
+}
+
+apache_traditions = {
+	leader_land_shock = 1
+	development_cost = -0.15
+}
+
+blackfoot_traditions = {
+	global_colonial_growth = 10
+	global_tax_modifier = 0.02
+}
+
+sioux_traditions = {
+	cavalry_cost = -0.20
+	land_maintenance_modifier = -0.10
+}
+
+chichimeca_traditions = {
+	enemy_core_creation = 0.5
+	war_exhaustion = -0.05
+}
+
+exptribes_plagues = {
+	global_tax_modifier = -0.2
+	global_production_modifier = -0.2
+	global_manpower_modifier = -0.2
+	stability_cost_modifier = 0.5
+}
+
+exptribes_plagues_taxes = {
+	local_tax_modifier = -0.5
+}
+
+exptribes_plagues_prod = {
+	local_production_modifier = -0.75
+}
+
+exptribes_plagues_mp = {
+	local_manpower_modifier = -1
+}
+
+exptribes_plagues_unrest = {
+	local_unrest = 8
+}
+
+##Natives
+
+SEnative_policy_coexist = {
+	#native_uprising_chance = -1.0
+}
+
+SEnative_policy_trade = {
+	#native_assimilation = 0.5
+	#native_uprising_chance = -0.5	
+}
+
+SEnative_policy_hostile = {
+	#global_colonial_growth = 20
+}
+
+##Old Gods
+
+killed_an_old_one = {
+	land_morale = 0.1
+	naval_morale = 0.1
+}
+
+insaneinthebrain = {
+	missionaries = 2
+	global_missionary_strength = 0.1
+	global_unrest = 2
+	diplomatic_reputation = -1
+	diplomatic_upkeep = -1
+}

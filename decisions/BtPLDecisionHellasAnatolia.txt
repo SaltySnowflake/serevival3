@@ -1,0 +1,1159 @@
+country_decisions = {
+
+	restore_constantinople_decision = {
+		potential = {
+			has_global_flag = hagia_sophia_now_mosque
+			owns_core_province = 151
+			religion_group = christian
+			NOT = { 151 = { religion_group = christian } }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+		}
+		effect = {
+			151 = {
+				change_religion = ROOT
+				add_province_modifier = {
+					name = forced_conversion
+					duration = 3650
+				}
+			}
+			if = {
+				limit = { religion = orthodox }
+				add_authority = 0.1
+			}
+			if = {
+				limit = { religion = catholic }
+				add_papal_influence = 10
+			}
+			if = {
+				limit = { religion = protestant }
+				add_church_power = 10
+			}
+			if = {
+				limit = { religion = reformed }
+				add_fervor = 10
+			}
+			if = {
+				limit = { religion = coptic }
+				add_prestige = 10
+			}
+			if = {
+				limit = { has_global_flag = hagia_sophia_now_mosque }
+				clr_global_flag = hagia_sophia_now_mosque
+				show_ambient_object = hagia_sophia
+				hide_ambient_object = hagia_sophia_minarets
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	###############################
+	#####Restoration of the Theme#####
+	###############################
+	#+8 dev to Constantinople from Greek thema, +5 from Western Anatolia thema, +2 from 4 other major restorations, to a total of 50 (24+26). Very high, but still less than places like Holland at later start dates, not unreasonable for a renaissant Second Rome.
+	#+22 other dev in Greek thema, +15 other dev in Western Anatolia thema, +8 from 4 other majors restorations, +5 from all others, to a total of around +100. Very high bonuses, but average dev still less than most of Western Europe. Again, not unreasonable for a renaissant Second Rome.
+	#If culture not greek, becomes greek instead of new dev.
+	#Alternate idea, historical Theme capitals all get +1tax +1prod. Problem with that is it would be well over 100 new dev, which may be too much, though still less than most of western Europe, on average. Also makes Southern Italy too rich, but Aegean area not rich enough.
+	#Alternate idea II, increase dev to Constantinople by +6, to a total of 50. Very high, but still less than places like Holland at later start dates.
+	#Alternate idea III, give much more dev to Thessaloniki, as the secondary capital to Constantinople and one of the/the largest city outside of it. Otherwise thinking of an event like that for Constantinople
+	#Alternate idea IV (also first idea, later changed) +15 to Constantinople (44 total), +27 to arbitrary region capitals, and +12 random dev, to a total of +39
+	#Don't want to delay release by to long, so I'll probably return later to finish localised naming changes for the rest of the decisions. Also may return later and make a decision for each Thema or at least reduce size of restoration decisions - Draiocht
+	
+	#Current decisions - Greece, Western Anatolia, Illyria, Bulgaria, Anatolia, Magna Graecia, and Minors (Cyprus, Crimea, currently, may add more)
+	
+	restore_theme_graecia = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				OR = {
+					area = morea_area
+					area = western_aegean_area
+					area = northern_greece_area
+					area = eastern_mediterrenean_islands_area
+					area = aegean_islands_area
+					area = macedonia_area
+				}
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = graecia_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			#Morea
+			owns_core_province = 145
+			owns_core_province = 1773
+			owns_core_province = 3178
+			owns_core_province = 3179
+			#Greece
+			owns_core_province = 146
+			owns_core_province = 3177
+			owns_core_province = 3003
+			owns_core_province = 3175
+			owns_core_province = 3176
+			owns_core_province = 147
+			owns_core_province = 3174
+			owns_core_province = 144
+			owns_core_province = 142
+			#Aegean Islands
+			owns_core_province = 164
+			owns_core_province = 3195
+			owns_core_province = 3173
+			owns_core_province = 2348
+			owns_core_province = 320
+			owns_core_province = 163
+			owns_core_province = 3180
+			#Macedonia
+			owns_core_province = 148
+			owns_core_province = 1853
+			owns_core_province = 3172
+			#Thrace
+			owns_core_province = 149
+			owns_core_province = 151
+			owns_core_province = 3170
+			owns_core_province = 3171
+		}
+		effect = {
+			hidden_effect = {
+				145 = { change_province_name = Lakonia rename_capital = Lacedaemon }
+				1773 = { change_province_name = Ilida rename_capital = Glarentza }
+				3178 = { change_province_name = Archaea rename_capital = Patra }
+				3179 = { change_province_name = Argolida rename_capital = Nafplion }
+				3003 = { change_province_name = Euboea rename_capital = Chalkis }
+				3174 = { change_province_name = Trikala rename_capital = Trikala }
+				3175 = { change_province_name = Aetolia rename_capital = Nafpaktos }
+				3176 = { change_province_name = Kefalonia rename_capital = Argostoli }
+				3177 = { change_province_name = Boeotia rename_capital = Thiva }
+				142 = { change_province_name = Kerkyra rename_capital = Kerkyra }
+				144 = { change_province_name = Ipeiros rename_capital = Ioannina }
+				146 = { change_province_name = Attike rename_capital = Athenai }
+				147 = { change_province_name = Thessalía rename_capital = Larissa }	
+				163 = { change_province_name = Irakleio rename_capital = Irakleio }
+				164 = { change_province_name = Kiklades rename_capital = Naxos }
+				320 = { change_province_name = Rodos rename_capital = Rodos }
+				2348 = { change_province_name = Chios rename_capital = Chios }
+				3173 = { change_province_name = Lesvos rename_capital = Mytilini }
+				3180 = { change_province_name = Chania rename_capital = Chania }
+				3195 = { change_province_name = Limnos rename_capital = Myrina }
+				148 = { change_province_name = Makedonia rename_capital = Thessaloniki }
+				1853 = { change_province_name = Kastoria rename_capital = Kastoria }
+				3172 = { change_province_name = Strymonas rename_capital = Zerres }
+				149 = { change_province_name = Hadrianopolis rename_capital = Hadrianopolis }
+				3170 = { change_province_name = "Saranta Ekklisies" rename_capital = "Saranta Ekklisies" }
+				3171 = { change_province_name = Komotini rename_capital = Komotini }
+			}
+			custom_tooltip = reestablishing_themes_names_tooltip
+			151 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 2
+			}	#Constantinople
+			148 = {
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 4
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+					add_base_tax = 4
+					add_base_production = 4
+					add_base_manpower = 4
+				}
+			}	#Thessaloniki, secondary capital of Byzantine Empire and very rich core city
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = morea_area
+						area = western_aegean_area
+						area = northern_greece_area
+						area = eastern_mediterrenean_islands_area
+						area = aegean_islands_area
+						area = macedonia_area
+						area = thrace_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = morea_area
+						area = western_aegean_area
+						area = northern_greece_area
+						area = eastern_mediterrenean_islands_area
+						area = aegean_islands_area
+						area = macedonia_area
+						area = thrace_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = morea_area
+						area = western_aegean_area
+						area = northern_greece_area
+						area = eastern_mediterrenean_islands_area
+						area = aegean_islands_area
+						area = macedonia_area
+						area = thrace_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = morea_area
+						area = western_aegean_area
+						area = northern_greece_area
+						area = eastern_mediterrenean_islands_area
+						area = aegean_islands_area
+						area = macedonia_area
+						area = thrace_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			set_country_flag = graecia_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_theme_west_anatolia = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				OR = {
+					area = hudavendigar_area
+					area = aydin_area
+					area = karasi_area
+				}
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = west_anatolian_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			#Bithynia
+			owns_core_province = 316
+			owns_core_province = 317
+			owns_core_province = 322
+			owns_core_province = 5149
+			owns_core_province = 5157
+			owns_core_province = 5168
+			#Mysia
+			owns_core_province = 2296
+			owns_core_province = 5130
+			owns_core_province = 5131
+			owns_core_province = 5156
+			#Asia
+			owns_core_province = 318
+			owns_core_province = 319
+			owns_core_province = 2297
+			owns_core_province = 5132
+			owns_core_province = 5134
+			owns_core_province = 5160
+		}
+		effect = {
+			hidden_effect = {
+				316 = { change_province_name = Nikomedeia rename_capital = Nikomedeia }
+				317 = { change_province_name = Prusa rename_capital = Prusa }
+				322 = { change_province_name = Dorylaeon rename_capital = Dorylaeon }
+				5149 = { change_province_name = Claudiopolis rename_capital = Claudiopolis }
+				5157 = { change_province_name = Nicaea rename_capital = Nicaea }
+				5168 = { change_province_name = Agrilion rename_capital = Agrilion }
+				2296 = { change_province_name = Abydos rename_capital = Abydos }
+				5130 = { change_province_name = Palaeokastron rename_capital = Palaeokastron }
+				5131 = { change_province_name = Kydonies rename_capital = Kydonies }
+				5156 = { change_province_name = Pegaea rename_capital = Pegaea }
+				318 = { change_province_name = Smyrna rename_capital = Smyrna }
+				319 = { change_province_name = Physkos rename_capital = Physkos }
+				2297 = { change_province_name = Magnesia rename_capital = Magnesia }	
+				5132 = { change_province_name = Laodikeia rename_capital = Laodikeia }
+				5134 = { change_province_name = Halikarnassos rename_capital = Halikarnassos }
+				5160 = { change_province_name = Tralleis rename_capital = Tralleis }
+			}
+			custom_tooltip = reestablishing_themes_names_tooltip
+			151 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}	#Constantinople
+			5157 = {
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 4
+					add_base_production = 4
+					add_base_manpower = 3
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}	#Nicaea
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = hudavendigar_area
+						area = aydin_area
+						area = karasi_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = hudavendigar_area
+						area = aydin_area
+						area = karasi_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			set_country_flag = west_anatolian_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_theme_illyria = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				OR = {
+					area = croatia_area
+					area = east_adriatic_coast_area
+					area = bosnia_area
+					area = serbia_area
+					area = rascia_area
+					area = albania_area
+					area = slavonia_area
+					province_id = 3001 #N Macedonia
+					province_id = 3183 #NW Macedonia
+				}
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = illyrian_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			#North Macedonia
+			owns_core_province = 3001
+			owns_core_province = 3183
+			#Albania
+			owns_core_province = 143
+			owns_core_province = 3181
+			owns_core_province = 3182
+			owns_core_province = 4174
+			owns_core_province = 4175
+			owns_core_province = 5094
+			#East Adriatic
+			owns_core_province = 136
+			owns_core_province = 137
+			owns_core_province = 3182
+			owns_core_province = 3184
+			owns_core_province = 3192
+			#Rascia
+			owns_core_province = 138
+			owns_core_province = 1766
+			owns_core_province = 1827
+			owns_core_province = 1831
+			#Serbia
+			owns_core_province = 141
+			owns_core_province = 3000
+			owns_core_province = 3185
+			owns_core_province = 3187
+			owns_core_province = 4176
+			#Bosnia
+			owns_core_province = 139
+			owns_core_province = 140
+			owns_core_province = 1828
+			owns_core_province = 3002
+			owns_core_province = 3193
+			owns_core_province = 3194
+			#Slavonia
+			owns_core_province = 1767
+			owns_core_province = 3188
+			owns_core_province = 3190
+			#Croatia
+			owns_core_province = 131
+			owns_core_province = 152
+			owns_core_province = 1826
+			owns_core_province = 3196
+		}
+		effect = {
+			151 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}	#Constantinople
+			137 = {
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 2
+					add_base_production = 2
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+					add_base_tax = 1
+					add_base_production = 1
+				}
+			}	#Ragusa
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = croatia_area
+						area = east_adriatic_coast_area
+						area = bosnia_area
+						area = serbia_area
+						area = rascia_area
+						area = albania_area
+						area = slavonia_area
+						province_id = 3001 #N Macedonia
+						province_id = 3183 #NW Macedonia
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = croatia_area
+						area = east_adriatic_coast_area
+						area = bosnia_area
+						area = serbia_area
+						area = rascia_area
+						area = albania_area
+						area = slavonia_area
+						province_id = 3001 #N Macedonia
+						province_id = 3183 #NW Macedonia
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			set_country_flag = illyrian_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_theme_bulgaria = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				OR = {
+					area = bulgaria_area
+					area = upper_thrace_area
+					province_id = 3167 #NE Macedonia
+				}
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = bulgarian_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			#North Macedonia
+			owns_core_province = 3167
+			#Bulgaria
+			owns_core_province = 150
+			owns_core_province = 159
+			owns_core_province = 1765
+			owns_core_province = 2746
+			owns_core_province = 3165
+			owns_core_province = 3166
+			#Northern Thrace
+			owns_core_province = 1764
+			owns_core_province = 2750
+			owns_core_province = 3168
+			owns_core_province = 3169
+		}
+		effect = {
+			hidden_effect = {
+				3167 = { change_province_name = Nevrokopi rename_capital = Nevrokopi }
+			}
+			151 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}	#Constantinople
+			1765 = {
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 2
+					add_base_production = 2
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+					add_base_tax = 1
+					add_base_production = 1
+				}
+			}	#Sofia
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = bulgaria_area
+						area = upper_thrace_area
+						province_id = 3167 #NE Macedonia
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = bulgaria_area
+						area = upper_thrace_area
+						province_id = 3167 #NE Macedonia
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			set_country_flag = bulgarian_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	restore_theme_anatolia = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				OR = {
+					area = kastamonu_area
+					area = dulkadir_area
+					area = karaman_area
+					area = rum_area
+					area = pontus_area
+					area = cilicia_area
+					area = galatia_area
+					area = phrygia_area
+					area = pamphylia_area
+				}
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = anatolian_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			#Phrygia
+			owns_core_province = 1848
+			owns_core_province = 5133
+			owns_core_province = 5155
+			owns_core_province = 5163
+			#L-P
+			owns_core_province = 2298
+			owns_core_province = 2302
+			owns_core_province = 5147
+			owns_core_province = 5162
+			#Karaman
+			owns_core_province = 323
+			owns_core_province = 324
+			owns_core_province = 5136
+			owns_core_province = 5153
+			#Galatia
+			owns_core_province = 326
+			owns_core_province = 329
+			owns_core_province = 5137
+			owns_core_province = 5165
+			owns_core_province = 5167
+			#Paphlogonia
+			owns_core_province = 325
+			owns_core_province = 328
+			owns_core_province = 2299
+			owns_core_province = 5164
+			owns_core_province = 5166
+			#Cappadocia
+			owns_core_province = 332
+			owns_core_province = 2301
+			owns_core_province = 5146
+			owns_core_province = 5150
+			owns_core_province = 5158
+			#Pontus
+			owns_core_province = 330
+			owns_core_province = 1846
+			owns_core_province = 2300
+			owns_core_province = 2304
+			owns_core_province = 3248
+			owns_core_province = 5152
+			owns_core_province = 5169
+			owns_core_province = 5206
+			#Cilicia
+			owns_core_province = 327
+			owns_core_province = 5135
+			owns_core_province = 5138
+			owns_core_province = 5154
+			owns_core_province = 5161
+
+		}
+		effect = {
+			hidden_effect = {
+				1848 = { change_province_name = Nikopolis rename_capital = Nikopolis }
+				5133 = { change_province_name = Kotyaion rename_capital = Kotyaion }
+				5155 = { change_province_name = Gordion rename_capital = Gordion }
+				5163 = { change_province_name = Ousakeion rename_capital = Ousakeion }
+				2298 = { change_province_name = Attaleia rename_capital = Attaleia }
+				2302 = { change_province_name = Selinos rename_capital = Selinos }
+				5147 = { change_province_name = Kalonoros rename_capital = Kalonoros }
+				5162 = { change_province_name = Lycia rename_capital = Makri }
+				323 = { change_province_name = Ikonion rename_capital = Ikonion }
+				324 = { change_province_name = Koloneia rename_capital = "Koloneia in Kappadokia" }
+				5136 = { change_province_name = Laranda rename_capital = Laranda }
+				5153 = { change_province_name = Kochisa rename_capital = Kochisa }
+				326 = { change_province_name = Ankyra rename_capital = Ankyra }
+				329 = { change_province_name = Sebasteia rename_capital = Sebasteia }
+				5137 = { change_province_name = Taouion rename_capital = Taouion }
+				5165 = { change_province_name = Halys rename_capital = Halys }
+				5167 = { change_province_name = Korum rename_capital = Korum }
+				325 = { change_province_name = Kastamone rename_capital = Kastamone }
+				328 = { change_province_name = Sinope rename_capital = Sinope }
+				2299 = { change_province_name = Amastris rename_capital = Amastris }
+				5164 = { change_province_name = Hadrianopolis rename_capital = Hadrianopolis }
+				5166 = { change_province_name = Germanicopolis rename_capital = Germanicopolis }
+				332 = { change_province_name = Germanikeia rename_capital = Germanikeia }
+				2301 = { change_province_name = Kaesarea rename_capital = Kaesarea }
+				5146 = { change_province_name = Magida rename_capital = Magida }
+				5150 = { change_province_name = Korama rename_capital = Korama }
+				5158 = { change_province_name = Tephrike rename_capital = Tephrike }
+				330 = { change_province_name = Trapezous rename_capital = Trapezous }
+				1846 = { change_province_name = Kotyora rename_capital = Kotyora }
+				2300 = { change_province_name = Neokaisareia rename_capital = Neokaisareia }
+				2304 = { change_province_name = Amisos rename_capital = Amisos }
+				3248 = { change_province_name = Rizaion rename_capital = Rizaion }
+				5152 = { change_province_name = Amaseia rename_capital = Amaseia }
+				5169 = { change_province_name = Mesochaldia rename_capital = Tzantzakon }
+				5206 = { change_province_name = Kerasous rename_capital = Kerasous }
+				327 = { change_province_name = Tarsus rename_capital = Tarsus }
+				5135 = { change_province_name = "Zephyrion" rename_capital = Zephyrion }	
+				5138 = { change_province_name = Aegeae rename_capital = Aegeae }
+				5154 = { change_province_name = Sision rename_capital = Sision }
+				5161 = { change_province_name = Seleukeia rename_capital = Seleukeia }
+			}
+			custom_tooltip = reestablishing_themes_names_tooltip
+			151 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}	#Constantinople
+			#Making all the bonus dev random here, no specific province with a larger bonus
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = kastamonu_area
+						area = dulkadir_area
+						area = karaman_area
+						area = rum_area
+						area = pontus_area
+						area = cilicia_area
+						area = galatia_area
+						area = phrygia_area
+						area = pamphylia_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = kastamonu_area
+						area = dulkadir_area
+						area = karaman_area
+						area = rum_area
+						area = pontus_area
+						area = cilicia_area
+						area = galatia_area
+						area = phrygia_area
+						area = pamphylia_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = kastamonu_area
+						area = dulkadir_area
+						area = karaman_area
+						area = rum_area
+						area = pontus_area
+						area = cilicia_area
+						area = galatia_area
+						area = phrygia_area
+						area = pamphylia_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = kastamonu_area
+						area = dulkadir_area
+						area = karaman_area
+						area = rum_area
+						area = pontus_area
+						area = cilicia_area
+						area = galatia_area
+						area = phrygia_area
+						area = pamphylia_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			set_country_flag = anatolian_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_theme_magna_graecia = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				OR = {
+					area = apulia_area
+					area = calabria_area
+					area = naples_area
+					area = sicily_area
+				}
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = magna_graecian_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			#Apulia
+			owns_core_province = 122
+			owns_core_province = 1933
+			owns_core_province = 2985
+			#Calabria
+			owns_core_province = 123
+			owns_core_province = 1934
+			owns_core_province = 2984
+			#Sicily -note, skipping Malta
+			owns_core_province = 124
+			owns_core_province = 125
+			owns_core_province = 2982
+			owns_core_province = 3037
+			#Naples
+			owns_core_province = 120
+			owns_core_province = 121
+			owns_core_province = 2983
+			owns_core_province = 3038
+			owns_core_province = 3039
+		}
+		effect = {
+			151 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}	#Constantinople
+			#Making all the bonus dev random here, no specific province with a larger bonus
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = apulia_area
+						area = calabria_area
+						area = naples_area
+						area = sicily_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = apulia_area
+						area = calabria_area
+						area = naples_area
+						area = sicily_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = apulia_area
+						area = calabria_area
+						area = naples_area
+						area = sicily_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = apulia_area
+						area = calabria_area
+						area = naples_area
+						area = sicily_area
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+				}
+			}
+			set_country_flag = magna_graecian_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_theme_cyprus = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				area = cyprus_area
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = cyrpus_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			#Cyprus
+			owns_core_province = 321
+			owns_core_province = 5139
+			owns_core_province = 5145
+		}
+		effect = {
+			5139 = {
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}	#Nicosia
+			set_country_flag = cyrpus_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_theme_crimea = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				area = crimea_area
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = crimean_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			#Cyprus
+			owns_core_province = 285
+			owns_core_province = 2410
+			owns_core_province = 3245
+		}
+		effect = {
+			hidden_effect = {
+				2410 = { change_province_name = Chersonesos rename_capital = Chersonesos }
+			}
+			2410 = {
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}	#Cherson
+			set_country_flag = crimean_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_theme_eastern_borderlands = {
+		potential = {
+			tag = BYZ
+			primary_culture = greek
+			has_country_modifier = the_theme_system
+			any_owned_province = {
+				OR = {
+					area = erzurum_area
+					province_id = 3249 #Tao
+					province_id = 5183 #Aintap
+					province_id = 2313 #Antakia
+					province_id = 5170 #Latakia
+				}
+				is_core = ROOT
+			}
+			NOT = { has_country_flag = eastern_borderlands_thema_restored }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			owns_core_province = 331
+			owns_core_province = 2303
+			owns_core_province = 2305
+			owns_core_province = 2313
+			owns_core_province = 3249			#Haven't done Greek localisation yet
+			owns_core_province = 5148
+			owns_core_province = 5151
+			owns_core_province = 5170
+			owns_core_province = 5183
+		}
+		effect = {
+			hidden_effect = {
+				331 = { change_province_name = Theodosiopolis rename_capital = Theodosiopolis }
+				2303 = { change_province_name = Malateia rename_capital = Malateia }
+				2305 = { change_province_name = Kelezene rename_capital = Kelezene }
+				2313 = { change_province_name = Antiocheia rename_capital = Antiocheia }
+				5148 = { change_province_name = Charpete rename_capital = Charpete }
+				5151 = { change_province_name = Paipert rename_capital = Paipert }
+				5170 = { change_province_name = Laodikeia rename_capital = Laodikeia }
+				5183 = { change_province_name = Antiocheia rename_capital = "Antiocheia ad Taurum" }
+			}
+			custom_tooltip = reestablishing_themes_names_tooltip
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = erzurum_area
+						province_id = 3249 #Tao
+						province_id = 5183 #Aintap
+						province_id = 2313 #Antakia
+						province_id = 5170 #Latakia
+					}
+				}
+				if = {
+					limit = { culture_group = byzantine }
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 1
+				}
+				if = {
+					limit = { NOT = { culture_group = byzantine } }
+					change_culture = greek
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			set_country_flag = eastern_borderlands_thema_restored
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

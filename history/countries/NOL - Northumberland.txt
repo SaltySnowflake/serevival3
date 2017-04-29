@@ -1,0 +1,32 @@
+government = feudal_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = northumbrian
+religion = catholic
+capital = 246	# Newcastle
+
+1444.11.01 = {
+	monarch = {
+		name = "Henry II"
+		dynasty = "Percy"
+		birth_date = 1393.02.03
+		death_date = 1455.05.22
+		adm = 3
+		dip = 5
+		mil = 4
+		leader = { name = "Henry Percy" type = general rank = 4	fire = 4 shock = 2 manuever = 3 siege = 0 }
+	}
+}
+
+1444.11.01 = {
+	heir = {
+		name = "Henry"
+		monarch_name = "Henry III"
+		dynasty = "Percy"
+		birth_date = 1421.07.25
+		death_date = 1461.03.29
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}

@@ -1,0 +1,252 @@
+namespace = tibet
+
+# Purging of the Kagyu and Jonang Schools
+country_event = {
+	id = tibet.1
+	title = "tibet.EVTNAME1"
+	desc = "tibet.EVTDESC1"
+	picture = BUDDHA_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = TIB
+		government = theocracy
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	option = { # purge
+		name = "tibet.EVTOPTA1"
+		every_owned_province = {
+			limit = {
+				culture = tibetan
+				religion = vajrayana
+			}
+			add_unrest = 10
+		}
+		add_prestige = 20
+	}
+	option = { # be tolerant
+		name = "tibet.EVTOPTB1"
+		add_stability_or_adm_power = yes
+		every_owned_province = {
+			limit = {
+				capital = no
+				culture = tibetan
+				religion = vajrayana
+			}
+			add_local_autonomy = 15
+		}
+	}
+}
+
+# Fragmentation of Lan Xang
+
+country_event = {
+	id = tibet.2
+	title = "tibet.EVTNAME2"
+	desc = "tibet.EVTDESC2"
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = LXA
+		OR = {
+			has_disaster = internal_conflicts
+			has_disaster = civil_war
+			has_disaster = peasant_war
+		}
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	option = {
+		name = "tibet.EVOPTA2"
+		if = {
+			limit = {
+				OR = {
+					owns = 608
+					owns = 2383
+					owns = 2382
+				}
+			}
+			608 = { add_core = CHK }
+			2383 = { add_core = CHK }
+			2382 = { add_core = CHK }
+
+		}
+		if = {
+			limit = {
+				OR = {
+					owns = 614
+					owns = 2384
+					owns = 2385
+					owns = 2386
+				}
+			}
+			614 = { add_core = VIE }
+			2384 = { add_core = VIE }
+			2385 = {  add_core = VIE }
+			2386 = { add_core = VIE }
+		}
+		if = {
+			limit = {
+				OR = {
+					owns = 615
+					owns = 2381
+				}
+			}
+			615 = { add_core = LUA }
+			2381 = { add_core = LUA }
+		}
+		if = {
+			limit = {
+				OR = {
+					owns = 1844
+					owns = 611
+				}
+			}
+			1844 = { add_core = MPH }
+			611 = { add_core = MPH }
+		}
+	}
+}
+
+# Enlarge the Shwedagon Pagoda
+country_event = {
+	id = tibet.3
+	title = "tibet.EVTNAME3"
+	desc = "tibet.EVTDESC3"
+	picture = BUDDHA_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1450
+		NOT = { is_year = 1475 }
+		tag = PEG
+		religion_group = eastern
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	option = {
+		name = "tibet.EVTOPTA3"
+		add_years_of_income = -0.25
+		add_prestige = 20
+		add_legitimacy = 20
+		add_dip_power = 200
+	}
+	option = {
+		name = "tibet.EVTOPTB3"
+		add_prestige = -5
+	}
+}
+
+# Destruction of the Cham
+country_event = {
+	id = tibet.4
+	title = "tibet.EVTNAME4"
+	desc = "tibet.EVTDESC4"
+	picture = ANGRY_MOB_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = DAI
+		owns_core_province = 607
+		num_of_owned_provinces_with = {
+			value = 3
+			culture = cham
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	option = {
+		name = "tibet.EVTOPTA4"
+		add_mil_power = -200
+		every_owned_province = {
+			limit = { culture = cham }
+			remove_core = CHA
+			add_core = TOK
+			change_culture = vietnamese
+			change_religion = ROOT
+			add_local_autonomy = -25
+			add_base_tax = -1
+		}
+	}
+	option = {
+		name = "tibet.EVTOPTB4"
+		add_dip_power = -100
+		every_owned_province = {
+			limit = { culture = cham }
+			add_unrest = -5
+		}
+	}
+}
+
+# The Lanao Sultanates
+country_event = {
+	id = tibet.5
+	title = "tibet.EVTNAME5"
+	desc = "tibet.EVTDESC5"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MGD
+		is_year = 1500
+		653 = { is_empty = yes }
+		is_subject = no
+	}
+	mean_time_to_happen = {
+		years = 20
+	}
+	immediate = {
+		653 = {
+			add_core = LNO
+			cede_province = LNO
+		}
+	}
+	option = {
+		name = "tibet.EVTOPTA5"
+		vassalize = LNO
+		add_legitimacy = 20
+	}
+}
+
+# The Cham Migration and a New Dynasty
+country_event = {
+	id = tibet.6
+	title = "tibet.EVTNAME6"
+	desc = "tibet.EVTDESC6"
+	picture = CITY_VIEW_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ATJ
+		607 = { owner = { NOT = { primary_culture = cham } } }
+		NOT = { dynasty = "Mugâyat" }
+		owns_core_province = 617
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = "tibet.EVTOPTA6a"
+		define_ruler = {
+			dynasty = "Mugâyat"
+		}
+		add_legitimacy = 20
+		617 = {
+			add_base_tax = 1
+			add_base_manpower = 1
+			add_base_production = 1
+		}
+	}
+}

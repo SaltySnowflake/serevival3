@@ -1,0 +1,52 @@
+namespace = BtPLegacy_flavour_misc
+#Written by Draiocht 16-9-27
+
+# Faroese Event
+province_event = {
+	id = BtPLegacy_flavour_misc.1
+	title = "BtPLegacyMisc.EVTNAME1"
+	desc = "BtPLegacyMisc.EVTDESC1"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		always = no
+		area = subarctic_islands_area	#Only fires in the northern isles area
+		culture = norwegian	#Only fires for Norwegian culture
+		NOT = { owner = { primary_culture = norwegian } }	#Will not fire if owner culture is Norwegian
+	}
+
+	mean_time_to_happen = {
+		months = 1200 #100 years
+		
+		modifier = { #Fires faster for large countries
+			factor = 0.8
+			owner = { total_development = 100 }
+		}
+		modifier = { #Fires much faster for very large countries
+			factor = 0.8
+			owner = { total_development = 300 }
+		}
+		modifier = { #Fires more slowly for small countries
+			factor = 1.5
+			NOT = { owner = { total_development = 40 } }
+		}
+		modifier = { #Plus half MTTH if the area is a state
+			factor = 1.5
+			is_state = yes
+		}
+		modifier = { #Fires twice as fast in dev 3 and 4 provinces
+			factor = 0.5
+			NOT = { development = 5 }
+		}
+		modifier = { #Fires half as fast in provinces with dev over 9
+			factor = 2.0
+			development = 10
+		}
+	}
+
+	option = { # okay
+		name = "BtPLegacyMisc.EVTOPTA1"
+		add_local_autonomy = 25
+		change_culture = faroese
+	}
+}

@@ -1,0 +1,31 @@
+# - Thubaqt
+
+owner = TUN
+controller = TUN
+culture = tunisian
+religion = sunni
+capital = "Thubaqt"
+trade_goods = cloth
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = TUN
+add_core = TRP
+
+
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.01 = { remove_core = TUN owner = TRP add_local_autonomy = 10 }
+1444.11.11 = { add_core = TUN owner = TUN add_local_autonomy = -10 }
+
+1558.1.1 = {
+	owner = TRP
+	controller = TRP
+	add_core = TRP
+} #Turgut Reis conquers Thubaqt

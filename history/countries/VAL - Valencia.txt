@@ -1,0 +1,16 @@
+government = catalan_republic
+government_rank = 1
+religion = catholic
+primary_culture = catalan
+technology_group = western
+capital = 220 # Valencia
+
+1441.11.01 = {
+	monarch = {
+		name = "Prince Regent"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

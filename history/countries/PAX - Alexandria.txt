@@ -1,0 +1,18 @@
+government = papal_copts
+primary_culture = al_misr_arabic
+religion = coptic
+technology_group = muslim
+capital = 358 # Alexandria
+historical_friend = ETH
+historical_friend = CIL
+
+1427.5.11= {
+	monarch = {
+		name = "John XI"
+		birth_date = 1380.1.1
+		adm = 3
+		dip = 4
+		mil = 5
+		leader = { name = "John XI the Cruel"   	type = general	rank = 0	fire = 3	shock = 3	manuever = 3	siege = 1 }
+	}
+}

@@ -1,0 +1,20 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_advisor_trobador"
+		texturefile = "gfx//interface//advisors//trobador.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}		
+	spriteType = {
+		name = "GFX_advisor_mahometan_scholar"
+		texturefile = "gfx//interface//advisors//mahometan_scholar.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}		
+
+}

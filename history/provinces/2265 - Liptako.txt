@@ -1,0 +1,24 @@
+# No previous file for Liptako
+
+owner = MSI
+controller = MSI
+add_core = MSI
+add_core = YAT
+is_city = yes
+culture = mossi
+religion = itan
+capital = "Dori"
+trade_goods = wool
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+
+
+discovered_by = sub_saharan
+
+1444.11.01 = { remove_core = MSI owner = YAT add_local_autonomy = 0 }
+1444.11.11 = { add_core = MSI owner = MSI add_local_autonomy = 0 }
+
+1540.1.1 = { owner = YAT controller = YAT } #Yatenga established as distinct kingdom

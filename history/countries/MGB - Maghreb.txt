@@ -1,0 +1,5 @@
+government = constitutional_republic
+primary_culture = tunisian
+religion = sunni
+technology_group = muslim
+capital = 341 # Tunis

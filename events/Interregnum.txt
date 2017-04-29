@@ -1,0 +1,50 @@
+namespace = regency
+
+# Choose a ruler
+country_event = {
+	id = regency.1
+	title = "regency.1.t"
+	desc = "regency.1.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		is_year = 1444
+		NOT = { is_year = 1450 }
+		NOT = { tag = LOD }
+		NOT = { tag = BOH }
+		NOT = { tag = HUN }
+		NOT = { tag = POL }
+		has_ruler = "(Interregnum)"
+		has_regency = yes
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = regency.1.a
+		define_ruler = {
+			max_random_adm = 4
+			max_random_mil = 3
+			dip = 3
+		}
+	}
+
+	option = {
+		name = regency.1.b
+		define_ruler = {
+			max_random_adm = 3
+			mil = 3
+			max_random_dip = 4
+		}
+	}
+	
+	option = {
+		name = regency.1.c
+		define_ruler = { 
+			adm = 3
+			max_random_mil = 4
+			max_random_dip = 3
+		}
+	}
+	
+}

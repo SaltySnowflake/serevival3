@@ -1,0 +1,17 @@
+#1094 - Gubbi Gubbi
+
+add_core = AO7
+owner = AO7
+controller = AO7
+culture = aboriginal
+religion = tjukurpa
+capital = "Turrbal"
+is_city = yes
+trade_goods = lumber
+hre = no
+base_tax = 4 #3 
+base_production = 3
+base_manpower = 2
+discovered_by = aboriginal
+
+1770.1.1 = { discovered_by = GBR } # James Cook

@@ -1,0 +1,358 @@
+christian = {
+	fraticelli = {
+		color = { 0.7 0.7 0.4 }
+		icon = 85
+		allowed_conversion = {
+			reformed
+			protestant
+		}
+		country = {
+			legitimacy = 1
+			tolerance_own = 2
+		}
+		province = {
+			local_tax_modifier = -0.1
+		}
+		country_as_secondary = {
+			horde_unity = 1
+			tolerance_own = 1
+		}
+		hre_religion = yes
+		
+		
+		on_convert = {
+			change_religion = fraticelli
+			add_prestige = -100
+			
+			remove_country_modifier = the_test_act
+			remove_country_modifier = superintendent_office
+			remove_country_modifier = the_popery_act
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		
+		}
+		
+		heretic = { BOGOMILIST WALDENSIAN HUSSITE LOLLARD SOCINIAN }
+		
+		papacy = {
+			papal_tag = PAP
+			election_cost = 5
+			seat_of_papacy = 118 # rome
+			
+			levy_church_tax = {
+				cost = 50
+				potential = {
+					NOT = { tag = PAP }
+				}
+				allow = {
+					NOT = { war_with = PAP }
+					NOT = { has_country_modifier = papal_sanction_for_church_taxes }
+				}
+				effect = {
+					add_country_modifier = {
+						name = "papal_sanction_for_church_taxes"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+			bless_monarch = {
+				cost = 50
+				potential = {
+					NOT = { tag = PAP }
+				}
+				allow = {
+					NOT = { war_with = PAP }
+					NOT = { prestige = 100 }
+					NOT = { has_country_modifier = papal_blessing }
+				}
+				effect = {
+					add_country_modifier = {
+						name = "papal_blessing"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			indulgence_for_sins = {
+				cost = 50
+				potential = {
+					government = monarchy
+					NOT = { tag = PAP }
+				}
+				allow = {
+					NOT = { war_with = PAP }
+					NOT = { legitimacy = 100 }
+					NOT = { has_country_modifier = papal_indulgence }
+				}
+				effect = {
+					add_country_modifier = {
+						name = "papal_indulgence"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			local_saint = {
+				cost = 100
+				potential = {
+					NOT = { tag = PAP }
+				}
+				allow = {
+					NOT = { war_with = PAP }
+					NOT = { stability = 3 }
+				}
+				effect = {
+					add_stability = 1
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						NOT = { stability = 0 }
+					}
+				}
+			}
+			forgiveness_for_usury = {
+				cost = 50
+				potential = {
+					NOT = { tag = PAP }
+				}
+				allow = {
+					NOT = { war_with = PAP }
+					NOT = { has_country_modifier = usury_forgiven }
+				}
+				effect = {
+					add_country_modifier = {
+						name = "usury_forgiven"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						NOT = { num_of_loans = 1 }
+					}
+				}
+			}		
+			proclaim_holy_war = {
+				cost = 50
+				potential = {
+					NOT = { tag = PAP }
+				}
+				allow = {
+					is_at_war = yes
+					NOT = { war_with = PAP }
+					NOT = { has_country_modifier = papal_sanction_for_holy_war }
+				}
+				effect = {
+					add_country_modifier = {
+						name = "papal_sanction_for_holy_war"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						manpower_percentage = 0.5
+					}
+				}
+			}
+			send_papal_legate = {
+				cost = 50
+				potential = {
+					NOT = { tag = PAP }
+				}
+				allow = {
+					NOT = { war_with = PAP }
+					NOT = { has_country_modifier = papal_legate }
+				}
+				effect = {
+					add_country_modifier = {
+						name = "papal_legate"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			sanction_commercial_monopoly = {
+				cost = 50
+				potential = {
+					NOT = { tag = PAP }
+				}
+				allow = {
+					NOT = { war_with = PAP }
+					NOT = { mercantilism = 100 }
+				}
+				effect = {
+					add_mercantilism = 1
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						NOT = { has_idea_group = trade_ideas }
+					}
+				}
+			}
+		}
+	}
+	
+	messalian = {
+		color = { 0.6 0.1 0.4 }
+		icon = 22
+		country = {
+			global_missionary_strength = 0.01
+			heir_chance = 1
+			may_recruit_female_generals = yes
+			female_advisor_chance = 0.2
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country_as_secondary = {
+			global_missionary_strength = 0.01
+			advisor_cost = -0.1
+		}
+		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
+		
+		fervor = yes
+		
+		misguided_heretic = yes		# Other christians hate them less
+	}
+	
+	lollard = {
+		color = { 0.5 0.8 0.8 }
+		icon = 86
+		allowed_conversion = {
+			reformed
+			protestant
+		}
+		country = {
+			tolerance_own = 2
+			stability_cost_modifier = -0.2
+		}
+		province = {
+			local_tax_modifier = -0.1
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.2
+		}
+		hre_heretic_religion = yes
+		
+		fervor = yes
+		
+		heretic = { BOGOMILIST WALDENSIAN FRATICELLI HUSSITE SOCINIAN }
+		
+		on_convert = {
+			change_religion = lollard
+			add_prestige = -100
+			
+			remove_country_modifier = the_test_act
+			remove_country_modifier = superintendent_office
+			remove_country_modifier = the_popery_act
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		
+		}
+	}
+	
+	monophysite = {
+		color = { 0.8 0.4 0.1 }
+		icon = 33
+		country = {
+			global_tax_modifier = 0.1
+            tolerance_own = 2
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = {
+			global_tax_modifier = 0.25
+		}
+		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
+		
+		has_patriarchs = yes		# Uses patriarch authority
+		misguided_heretic = yes		# Other christians hate them less
+	}
+	
+	monothelite = {
+		color = { 0.5 0 0.3 }
+		icon = 87
+		country = {
+			tolerance_own = 2
+            global_autonomy = -0.05
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country_as_secondary = {
+			tolerance_own = 1
+			global_autonomy = -0.05
+		}
+		
+		heretic = { OLD_BELIEVER MOLOKAN DUKHOBOR KHLYST SKOPTSY ICONOCLAST }
+		
+		has_patriarchs = yes		# Uses patriarch authority
+		misguided_heretic = yes		# Other christians hate them less
+	}
+	
+	iconoclast = {
+		color = { 0.5 0.2 0.4 }
+		icon = 88
+		country = {
+			tolerance_heretic = -2
+			tolerance_own = 4
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country_as_secondary = {
+			raze_power_gain = 0.2
+			global_missionary_strength = 0.01
+		}
+		
+		heretic = { OLD_BELIEVER MOLOKAN DUKHOBOR KHLYST SKOPTSY }
+		
+		has_patriarchs = yes		# Uses patriarch authority
+		misguided_heretic = yes		# Other christians hate them less
+	}
+	
+	paulician = {
+		color = { 0.5 0 0.3 }
+		icon = 89
+		country = {
+			stability_cost_modifier = -0.2
+			tolerance_heathen = 2
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.1
+			global_regiment_cost = -0.1
+		}
+		heretic = { OLD_BELIEVER MOLOKAN DUKHOBOR KHLYST SKOPTSY ICONOCLAST }
+		
+		has_patriarchs = yes		# Uses patriarch authority
+		misguided_heretic = yes		# Other christians hate them less
+	}	
+	
+	crusade_name = CRUSADE
+}

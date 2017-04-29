@@ -1,0 +1,123 @@
+namespace = papal_election
+
+country_event = {
+	id = papal_election.1
+	title = "papal_election.EVTNAME1"
+	desc = "papal_election.EVTDESC1"
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			government = papal_government
+			government = regnum_dei
+		}
+	}
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				remove_opinion = {
+					who = ROOT
+					modifier = opinion_papal_election
+				}
+			}
+		}
+	}
+	option = { # italian merchant family
+		name = "papal_election.EVTOPTC1"
+		trigger = {
+			capital_scope = { region = italy_region }
+			any_country = {
+				culture_group = latin
+				religion = catholic
+				government = republic
+				capital_scope = { region = italy_region }
+			}
+		}
+		add_years_of_income = 0.25
+		add_devotion = -10
+		random_country = {
+			limit = {
+				culture_group = latin
+				religion = catholic
+				government = republic
+				capital_scope = { region = italy_region }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_papal_election
+			}
+			country_event = {
+				id = papal_election.2
+				days = 3
+			}
+		}	
+	}
+	option = { # ruling italian noble family
+		name = "papal_election.EVTOPTA1"
+		trigger = {
+			capital_scope = { region = italy_region }
+			any_country = {
+				culture_group = latin
+				religion = catholic
+				government = monarchy
+				capital_scope = { region = italy_region }
+			}
+		}
+		random_country = {
+			limit = {
+				culture_group = latin
+				religion = catholic
+				government = monarchy
+				capital_scope = { region = italy_region }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_papal_election
+			}
+			country_event = {
+				id = papal_election.2
+				days = 3
+			}
+		}
+	}
+	option = { # roman noble family
+		name = "papal_election.EVTOPTB1"
+		trigger = {
+			owns_core_province = 118
+		}
+		add_prestige = 10
+		add_devotion = -5
+	}
+	option = { # cardinal from a monastic order
+		name = "papal_election.EVTOPTD1"
+		add_devotion = 10
+	}
+}
+
+# Family Pope
+country_event = {
+	id = papal_election.2
+	title = "papal_election.EVTNAME2"
+	desc = "papal_election.EVTDESC2"
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "papal_election.EVTOPTA2"
+		add_prestige = 10
+#		if = {
+#			limit = {
+#				government = florentine_republic
+#				faction_in_power = flo_medici
+#			}
+#			add_faction_influence = {
+#				faction = flo_medici
+#				influence = 15
+#			}
+#		}
+	}
+}

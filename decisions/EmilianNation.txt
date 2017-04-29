@@ -1,0 +1,108 @@
+country_decisions = {
+
+	emilian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = EMR }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = ITL }
+			NOT = { tag = ITA }
+			NOT = { tag = SPI }
+			NOT = { tag = TUS }
+			NOT = { tag = LMV }
+			OR = { 
+				primary_culture = romagnan
+				tag = URB
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 2
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			OR = { 
+				primary_culture = romagnan
+				tag = URB
+			}
+			owns_core_province = 105	# Parma
+			owns_core_province = 106	# Modena
+			owns_core_province = 109	# Mantua
+			owns_core_province = 113	# Ferrara
+			owns_core_province = 114	# Romagna
+			owns_core_province = 3041	# Bologna
+		}
+		effect = {
+			change_tag = EMR
+			if = {
+				limit = { government = republic }
+				change_government = despotic_monarchy
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = romagnan }
+				}
+				change_primary_culture = romagnan
+			}
+			set_capital = 3041
+			emilia_romagna_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = EMR
+			}
+			tuscany_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = EMR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 15
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+}

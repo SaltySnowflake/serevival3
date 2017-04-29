@@ -1,0 +1,390 @@
+is_native_goverment = {
+	OR = {
+		government = native_council
+		government = aboriginal_native_council
+		government = native_monarchy
+		government = native_noblecouncil
+	}
+}
+
+west_christian_religion = {
+	OR = {
+		religion = catholic
+		religion = protestant
+		religion = reformed
+		religion = cathar
+		religion = hussite
+		religion = bogomilist
+		religion = waldensian
+		religion = fraticelli
+		religion = lollard
+	}
+}
+
+east_christian_religion = {
+	OR = {
+		religion = orthodox
+		religion = coptic
+		religion = apostolic
+		religion = nestorian
+		religion = messalian
+		religion = monophysite
+		religion = monothelite
+		religion = iconoclast
+		religion = paulician
+	}
+}
+
+zora_religion = {
+	OR = {
+		religion = zoroastrian
+		religion = mazdaki
+		religion = manichean
+	}
+}
+
+has_pagan_piety = {
+	OR = {
+		religion = moism
+		religion = zoroastrian
+		religion = mazdaki
+		religion = manichean
+	}
+}
+
+is_pagan_revival_trigger = {
+	OR = {
+		#religion_group = pagan
+		#religion_group = african_pagan
+		#religion_group = pacific_pagan
+		#religion_group = american_pagan
+		religion_group = european_pagan
+		religion_group = old_asian
+		religion = moism
+		#african
+		religion = egyptian
+		religion = amanaiism
+	}
+	OR = {
+		continent = europe
+		continent = asia
+		continent = africa
+	}
+	is_city = yes
+}
+
+is_pagan_culture_trigger = {
+
+	OR = {
+
+#NORSE
+		culture_group = scandinavian
+#		culture = normand
+#Gaelic
+		culture_group = gaelic
+		culture_group = brythonic
+		culture_group = unified_celtic_group
+#		AND = {
+			culture_group = french
+#			NOT = { culture = normand }
+#		}
+#		AND = {
+			culture_group = iberian
+#			NOT = { culture = andalucian }
+#		}
+#		culture = scottish
+#		culture = swiss
+#Urals
+		culture_group = finno_ugric
+#Slavic
+		culture_group = east_slavic
+		culture_group = west_slavic
+#Baltics
+		culture_group = baltic 
+#		culture = prussian
+#Tengri
+		culture_group = carpathian
+		culture_group = dacian
+		culture_group = turkish_g
+		culture_group = altaic
+		culture_group = evenks
+#Hellenic
+		culture_group = byzantine
+		culture_group = caucasian
+		culture_group = south_slavic
+		culture_group = illyrian
+		culture_group = latin
+		culture_group = occitanocatala
+#Zora
+		culture_group = iranian
+		culture_group = turkish_g
+		culture = al_suryah_arabic
+		culture = al_iraqiya_arabic
+#Germanic
+#		AND = {
+			culture_group = germanic
+#			NOT = { culture = prussian }
+#			NOT = { culture = swiss }
+#		}
+#		AND = {
+			culture_group = british
+#			NOT = { culture = scottish }
+#		}
+#Egyptian
+		culture = al_misr_arabic
+		culture = saidi
+#South Arabian
+		culture = bedouin_arabic
+		culture = omani_culture
+		culture = yemeni_culture
+#Amanaiism
+		culture_group = maghrebi
+#		culture = andalucian
+#African
+	culture_group = sudanese
+	culture_group = cushitic
+#Imohag
+	culture_group = berber_group
+#India can just stay Hindu for now
+		culture_group = eastern_aryan
+		culture_group = hindusthani
+		culture_group = western_aryan
+		culture_group = dravidian
+		culture_group = central_indic
+#Satsana Phi
+#		AND = {
+			culture_group = burman
+#			NOT = { culture = yi }
+#		}
+		culture_group = mon_khmer
+#		AND = {
+			culture_group = thai
+#			NOT = { culture = zhuang }
+#		}
+#Mohism
+#		culture = yi
+#		culture = zhuang
+		culture_group = hmong–mien
+		culture_group = east_asian
+		culture_group = korean_g
+#Japan can get Kamui until I add theirs
+		culture_group = ainu
+		culture_group = japanese_g
+#Pacific
+	culture_group = malay
+###
+	}
+
+	OR = {
+		continent = europe
+		continent = asia
+		continent = africa
+	}
+	is_city = yes
+}
+
+eurasiacan_cont = {
+	capital_scope = {
+		OR = {
+			continent = europe
+			continent = asia
+			continent = africa
+		}
+	}
+}
+
+is_pagan_trigger = {
+	OR = {
+		religion_group = pagan
+		religion_group = african_pagan
+		religion_group = pacific_pagan
+		religion_group = american_pagan
+		religion_group = european_pagan
+		religion_group = old_asian
+		religion_group = elder_gods
+		religion = moism
+	}
+}
+
+is_animist_trigger = {
+	OR = {
+		religion = animism
+		religion = south_american
+		religion = pajelanca
+		religion = chiminigagua
+		religion = kachina
+		religion = witran_mapu
+		religion_group = pacific_pagan
+		religion = moism
+		AND = {
+			religion_group = african_pagan
+			NOT = {
+				religion = bumuntu
+				religion = nzambiism
+			}
+		}
+	}
+}
+
+is_animist_secondary_trigger = {
+	OR = {
+		secondary_religion = animism
+		secondary_religion = south_american
+		secondary_religion = pajelanca
+		secondary_religion = chiminigagua
+		secondary_religion = kachina
+		secondary_religion = witran_mapu
+		secondary_religion = tjukurpa
+		secondary_religion = manaism
+		secondary_religion = puata_tupuna
+		secondary_religion = moai
+		secondary_religion = satsana_phi
+		secondary_religion = razana
+		secondary_religion = moism
+		secondary_religion = african
+		secondary_religion = odinani
+		secondary_religion = amatongo
+		secondary_religion = fat_roog
+		secondary_religion = laiboni
+		secondary_religion = num_faith
+		secondary_religion = voodoo
+		secondary_religion = onyamesom
+		secondary_religion = byeri
+		secondary_religion = imohag
+		secondary_religion = mwari
+		secondary_religion = itan
+	}
+}
+
+is_shaman_trigger = {
+	OR = {
+		religion = shamanism
+		religion = angakkunngurniq
+		religion = bumuntu
+		religion = nzambiism
+
+	}
+}
+
+is_shaman_secondary_trigger = {
+	OR = {
+		secondary_religion = shamanism
+		secondary_religion = angakkunngurniq
+		secondary_religion = bumuntu
+		secondary_religion = nzambiism
+		#TOTEMS
+		secondary_religion = totemism
+		secondary_religion = mahoma
+		secondary_religion = midewiwin
+		secondary_religion = orenda
+		secondary_religion = wakan_tanka
+		secondary_religion = pohakantenna
+		secondary_religion = southern_cult
+		secondary_religion = sgaanaang
+		secondary_religion = wakanda
+	}
+}
+
+greenland_early_trigger = {
+	OR = {
+		is_subject = no
+		AND = {
+			is_subject = yes
+			OR = {
+				overlord = { has_country_flag = greenland_nor_chose_b }
+				overlord = { NOT = { has_country_flag = greenland_contact } }
+			}
+		}
+	}
+}
+
+greenland_trigger = {
+	OR = {
+		is_subject = no
+		AND = {
+			is_subject = yes
+			overlord = { has_country_flag = greenland_nor_chose_b }
+		}
+	}
+}
+
+greenland_religion_trigger = {
+	OR = {
+		exists = THL
+		1105 = {
+			AND = {
+				is_empty = yes
+				native_size = 5
+			}
+		}
+		4549 = { is_empty = yes }
+		4550 = { is_empty = yes }
+	}
+}
+
+vinland_native_trigger = {
+	AND = {
+		tag = VIN
+		any_owned_province = {
+			AND = {
+				has_province_flag = vinland_nat_settlers
+				is_city = yes
+			}
+		}
+		NOT = {
+			AND = {
+				has_country_flag = vinland_natives
+				OR = {
+					check_variable = {
+						which = vinland_natives
+						value = 15
+					}
+					NOT = {
+						check_variable = {
+							which = vinland_natives
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+vinland_native_province = {
+	AND = {
+		has_province_flag = vinland_nat_settlers
+		is_city = yes
+		owner = { vinland_native_trigger = yes }
+	}
+}
+
+vinland_native_modifier = {
+	AND = {
+		has_country_flag = vinland_natives
+		check_variable = {
+			which = vinland_natives
+			value = 10
+		}
+	}
+}
+
+vinland_native_modifier_b = {
+	AND = {
+		has_country_flag = vinland_natives
+		check_variable = {
+			which = vinland_natives
+			value = 15
+		}
+	}
+}
+
+vinland_religion_trigger = {
+	AND = {
+		has_country_flag = vinland_tolerance
+		check_variable = {
+			which = vinland_tolerance
+			value = 5
+		}
+	}
+}

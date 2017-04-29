@@ -1,0 +1,1368 @@
+########################################
+# Pagan Uprising events for Europe + Asia
+#
+# Written by Neprut
+########################################
+
+namespace = pagan_uprising
+
+# According to plan
+province_event = {
+	id = pagan_uprising.1
+	title = pagan_uprising.1.t
+	picture = STREET_SPEECH_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = pagan_uprising.1.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = pagan_uprising.1.dnorse
+	}
+	
+	trigger = {
+		owner = { 
+			has_country_flag = pagan_revival_start
+			NOT = { has_country_flag = war_of_the_burning_cross }
+			NOT = { has_country_flag = ride_of_the_valkyries_SCA }
+		}
+		NOT = { is_pagan_trigger = yes }
+		is_colony = no
+		OR = {
+			continent = europe
+			continent = asia
+			continent = africa
+		}
+		NOT = { has_province_modifier = christian_stronghold_SCA }
+		NOT = { has_province_modifier = muslim_stronghold_SCA }
+		NOT = { has_province_modifier = religious_stronghold_SCA }
+	}
+	
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.75
+			owner = { adm = 5 }
+		}
+		modifier = {
+			factor = 0.2
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 0.70
+			any_neighbor_province = {
+				is_pagan_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 0.75
+			any_neighbor_province = {
+				is_pagan_trigger = yes
+				culture_group = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_province_modifier = "heresy"
+		}
+		modifier = {
+			factor = 0.75
+			owner = { 
+				NOT = { is_pagan_trigger = yes } 
+				norse_pagan_reformed = 0
+				finnish_pagan_reformed = 0
+				slavic_pagan_reformed = 0
+				baltic_pagan_reformed = 0
+				tengri_pagan_reformed = 0
+				hellenic = 0
+				zoroastrian = 0
+				gaelic_pagan = 0
+				germanic = 0
+				egyptian = 0
+				south_arabian = 0
+				amanaiism = 0
+			}
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				has_idea_group = innovativeness_ideas
+			}
+		}
+
+		# Negative modifiers
+		
+		modifier = {
+			factor = 3
+			owner = { 
+				NOT = { is_pagan_trigger = yes }
+				has_idea_group = religious_ideas
+			}
+		}
+		modifier = {
+			factor = 5
+			owner = { 
+				NOT = { is_pagan_trigger = yes }
+				is_defender_of_faith = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			owner = { 
+				NOT = { is_pagan_trigger = yes }
+				government = theocratic_government 
+			}
+		}
+		modifier = {
+			factor = 3.0
+			owner = { num_of_cardinals = 1 }
+		}
+		modifier = {
+			factor = 5.0
+			owner = { num_of_cardinals = 2 }
+		}
+		modifier = {
+			factor = 10.0
+			owner = { num_of_cardinals = 3 }
+		}		
+		modifier = {
+			factor = 4.0
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 6.0
+			owner = { has_country_modifier = counter_reformation }
+		}
+	}
+	
+	option = {		# Excellent
+		name = "pagan_uprising.1.a"
+		hidden_effect = {
+			change_variable = { which = "pagan_sentiment" value = +11 }
+			every_neighbor_province = {
+				limit = {
+					NOT = { has_province_modifier = christian_stronghold_SCA }
+					NOT = { has_province_modifier = muslim_stronghold_SCA }
+					NOT = { has_province_modifier = religious_stronghold_SCA }
+					is_colony = no
+				}
+				change_variable = { which = "pagan_sentiment" value = +11 }
+			}
+		}
+		custom_tooltip = "pagan_sentiment_11"
+		every_neighbor_province = {
+			limit = {
+				NOT = { has_province_modifier = christian_stronghold_SCA }
+				NOT = { has_province_modifier = muslim_stronghold_SCA }
+				NOT = { has_province_modifier = religious_stronghold_SCA }
+				is_colony = no
+			}
+			custom_tooltip = "pagan_sentiment_11"
+		}
+		
+	}
+}
+
+# Priests are worried
+country_event = {
+	id = pagan_uprising.2
+	title = pagan_uprising.2.t
+	picture = RELIGION_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = pagan_uprising.2.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = pagan_uprising.2.dnorse
+	}
+	
+	trigger = {
+		has_country_flag = pagan_revival_start
+		NOT = { has_country_flag = war_of_the_burning_cross }
+		NOT = { has_country_flag = ride_of_the_valkyries_SCA }
+		NOT = { has_country_flag = priests_are_worried }
+	}
+
+	immediate = { set_country_flag = priests_are_worried }
+
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.1 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.1 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.1 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.1 }
+				num_of_religion = { religion = hellenic value = 0.1 }
+				num_of_religion = { religion = zoroastrian value = 0.1 }
+				num_of_religion = { religion = gaelic_pagan value = 0.1 }
+				num_of_religion = { religion = germanic value = 0.1 }
+				num_of_religion = { religion = egyptian value = 0.1 }
+				num_of_religion = { religion = south_arabian value = 0.1 }
+				num_of_religion = { religion = amanaiism value = 0.1 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.2 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.2 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.2 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.2 }
+				num_of_religion = { religion = hellenic value = 0.2 }
+				num_of_religion = { religion = zoroastrian value = 0.2 }
+				num_of_religion = { religion = gaelic_pagan value = 0.2 }
+				num_of_religion = { religion = germanic value = 0.2 }
+				num_of_religion = { religion = egyptian value = 0.2 }
+				num_of_religion = { religion = south_arabian value = 0.2 }
+				num_of_religion = { religion = amanaiism value = 0.2 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.3 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.3 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.3 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.3 }
+				num_of_religion = { religion = hellenic value = 0.3 }
+				num_of_religion = { religion = zoroastrian value = 0.3 }
+				num_of_religion = { religion = gaelic_pagan value = 0.3 }
+				num_of_religion = { religion = germanic value = 0.3 }
+				num_of_religion = { religion = egyptian value = 0.3 }
+				num_of_religion = { religion = south_arabian value = 0.3 }
+				num_of_religion = { religion = amanaiism value = 0.3 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.4 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.4 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.4 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.4 }
+				num_of_religion = { religion = hellenic value = 0.4 }
+				num_of_religion = { religion = zoroastrian value = 0.4 }
+				num_of_religion = { religion = gaelic_pagan value = 0.4 }
+				num_of_religion = { religion = germanic value = 0.4 }
+				num_of_religion = { religion = egyptian value = 0.4 }
+				num_of_religion = { religion = south_arabian value = 0.4 }
+				num_of_religion = { religion = amanaiism value = 0.4 }
+			}
+		}
+	}
+
+	option = {		# Unavoidable
+		name = "pagan_uprising.2.a"
+		random_owned_province = {
+			limit = {
+				NOT = { check_variable = { which = pagan_sentiment value = 25 } }
+				is_colony = no
+				OR = {
+					continent = europe
+					continent = asia
+					continent = africa
+				}
+			}
+			change_variable = { which = pagan_sentiment value = +25 }
+		}
+	}
+
+}
+
+# Shaman burned at the stake
+country_event = {
+	id = pagan_uprising.3
+	title = pagan_uprising.3.t
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = pagan_uprising.3.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = pagan_uprising.3.dnorse
+	}
+	
+	trigger = {
+		has_country_flag = pagan_revival_start 
+		NOT = { has_country_flag = war_of_the_burning_cross }
+		NOT = { has_country_flag = ride_of_the_valkyries_SCA }
+		NOT = { has_country_flag = angry_mob_and_gothi }
+	}
+	
+	immediate = { set_country_flag = angry_mob_and_gothi }
+	
+	mean_time_to_happen = { months = 12 }
+	
+	option = {		# I cannot be revealed yet
+		name = "pagan_uprising.3.a"
+		add_country_modifier = { 
+			name = stay_hidden
+			duration = 1825
+		}
+	}
+	option = {		# Stop them
+		name = "pagan_uprising.3.b"
+		random_owned_province = {
+			limit = {
+				NOT = { check_variable = { which = pagan_sentiment value = 35 } }
+				is_colony = no
+				OR = {
+					continent = europe
+					continent = asia
+					continent = africa
+				}
+			}
+			change_variable = { which = pagan_sentiment value = +15 }
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { check_variable = { which = pagan_sentiment value = 35 } }
+				is_colony = no
+				OR = {
+					continent = europe
+					continent = asia
+					continent = africa
+				}
+			}
+			change_variable = { which = pagan_sentiment value = +15 }
+		}
+	}
+
+}
+
+# Priest killed by angry mob
+country_event = {
+	id = pagan_uprising.4
+	title = pagan_uprising.4.t
+	picture = ANGRY_MOB_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = pagan_uprising.4.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = pagan_uprising.4.dnorse
+	}
+	
+	trigger = {
+		has_country_flag = pagan_revival_start 
+		NOT = { has_country_flag = war_of_the_burning_cross }
+		NOT = { has_country_flag = ride_of_the_valkyries_SCA }
+		NOT = { has_country_flag = angry_mob_and_priest }
+	}
+	immediate = { set_country_flag = angry_mob_and_priest }
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.1 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.1 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.1 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.1 }
+				num_of_religion = { religion = hellenic value = 0.1 }
+				num_of_religion = { religion = zoroastrian value = 0.1 }
+				num_of_religion = { religion = gaelic_pagan value = 0.1 }
+				num_of_religion = { religion = germanic value = 0.1 }
+				num_of_religion = { religion = egyptian value = 0.1 }
+				num_of_religion = { religion = south_arabian value = 0.1 }
+				num_of_religion = { religion = amanaiism value = 0.1 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.2 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.2 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.2 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.2 }
+				num_of_religion = { religion = hellenic value = 0.2 }
+				num_of_religion = { religion = zoroastrian value = 0.2 }
+				num_of_religion = { religion = gaelic_pagan value = 0.2 }
+				num_of_religion = { religion = germanic value = 0.2 }
+				num_of_religion = { religion = egyptian value = 0.2 }
+				num_of_religion = { religion = south_arabian value = 0.2 }
+				num_of_religion = { religion = amanaiism value = 0.2 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.3 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.3 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.3 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.3 }
+				num_of_religion = { religion = hellenic value = 0.3 }
+				num_of_religion = { religion = zoroastrian value = 0.3 }
+				num_of_religion = { religion = gaelic_pagan value = 0.3 }
+				num_of_religion = { religion = germanic value = 0.3 }
+				num_of_religion = { religion = egyptian value = 0.3 }
+				num_of_religion = { religion = south_arabian value = 0.3 }
+				num_of_religion = { religion = amanaiism value = 0.3 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.4 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.4 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.4 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.4 }
+				num_of_religion = { religion = hellenic value = 0.4 }
+				num_of_religion = { religion = zoroastrian value = 0.4 }
+				num_of_religion = { religion = gaelic_pagan value = 0.4 }
+				num_of_religion = { religion = germanic value = 0.4 }
+				num_of_religion = { religion = egyptian value = 0.4 }
+				num_of_religion = { religion = south_arabian value = 0.4 }
+				num_of_religion = { religion = amanaiism value = 0.4 }
+			}
+		}
+	}
+	
+	option = {		# I cannot be revealed yet
+		name = "pagan_uprising.4.a"
+		add_stability_or_adm_power = yes
+	}
+	option = {		# Stop them
+		name = "pagan_uprising.4.b"
+		random_owned_province = {
+			limit = { NOT = { check_variable = { which = pagan_sentiment value = 35 } } }
+			change_variable = { which = pagan_sentiment value = +15 }
+		}
+		random_owned_province = {
+			limit = { NOT = { check_variable = { which = pagan_sentiment value = 35 } } }
+			change_variable = { which = pagan_sentiment value = +15 }
+		}
+	}
+	
+}
+
+# The pope is concerned
+country_event = {
+	id = pagan_uprising.5
+	title = pagan_uprising.5.t
+	picture = POPE_PREACHING_eventPicture
+	
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = pagan_uprising.5.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = pagan_uprising.5.dnorse
+	}
+	
+	trigger = {
+		has_country_flag = pagan_revival_start 
+		NOT = { has_country_flag = ride_of_the_valkyries_SCA }
+		NOT = { has_country_flag = pope_is_very_upset_with_you_SCA }
+		religion = catholic
+	}
+	immediate = { set_country_flag = pope_is_very_upset_with_you_SCA }
+	
+	mean_time_to_happen = { months = 12 }
+	
+	option = {		# Placate him with vague promises
+		name = "pagan_uprising.5.a"
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = heretics_in_the_north_SCA
+			}
+		}
+	}
+	option = {		# Bribe him into silence
+		name = "pagan_uprising.5.b"
+		add_years_of_income = -0.5
+	}
+}
+
+#War of the Burning Cross
+country_event = {
+	id = pagan_uprising.6
+	title = pagan_uprising.6.t
+	picture = RELIGIOUS_WARS_eventPicture
+
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = pagan_uprising.6.d
+	}
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = pagan_uprising.6.dnorse
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_test_act
+			remove_country_modifier = superintendent_office
+			remove_country_modifier = the_popery_act
+			remove_country_modifier = the_advancement_of_true_religion_act
+			remove_country_modifier = the_blasphemy_act
+			remove_country_modifier = the_act_of_uniformity
+			remove_country_modifier = the_suffragan_bishop_act
+			remove_country_modifier = church_taxes
+			remove_country_modifier = sunday_schools
+			if = {
+				limit = { has_country_flag = pagan_revival_norse }
+				change_religion = norse_pagan_reformed
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_finnish }
+				change_religion = finnish_pagan_reformed
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_slavic }
+				change_religion = slavic_pagan_reformed
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_baltic }
+				change_religion = baltic_pagan_reformed
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_tengri }
+				change_religion = tengri_pagan_reformed
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_hellenic }
+				change_religion = hellenic
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_zoroastrian }
+				change_religion = zoroastrian
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_gaelic }
+				change_religion = gaelic_pagan
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_germanic }
+				change_religion = germanic
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_egyptian }
+				change_religion = egyptian
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_south_arabian }
+				change_religion = south_arabian
+			}
+			if = {
+				limit = { has_country_flag = pagan_revival_amanaiism }
+				change_religion = amanaiism
+			}
+		}
+	}
+	
+	option = {		# The time for war is now
+		name = "pagan_uprising.6.a"
+		if = {
+			limit = { has_country_flag = pagan_revival_norse }
+			custom_tooltip = war_of_the_burning_cross_norse
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_finnish }
+			custom_tooltip = war_of_the_burning_cross_finnish
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_slavic }
+			custom_tooltip = war_of_the_burning_cross_slavic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_baltic }
+			custom_tooltip = war_of_the_burning_cross_baltic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_tengri }
+			custom_tooltip = war_of_the_burning_cross_tengri
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_hellenic }
+			custom_tooltip = war_of_the_burning_cross_hellenic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_zoroastrian }
+			custom_tooltip = war_of_the_burning_cross_zoroastrian
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_gaelic }
+			custom_tooltip = war_of_the_burning_cross_gaelic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_germanic }
+			custom_tooltip = war_of_the_burning_cross_germanic
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_egyptian }
+			custom_tooltip = war_of_the_burning_cross_egyptian
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_south_arabian }
+			custom_tooltip = war_of_the_burning_cross_south_arabian
+		}
+		if = {
+			limit = { has_country_flag = pagan_revival_amanaiism }
+			custom_tooltip = war_of_the_burning_cross_amanaiism
+		}
+		add_stability = -2
+	}
+}
+
+
+#############################
+#		  				  	#
+#  Norse Pagan Holy Sites   #
+#						  	#
+#############################
+
+#Uppsala Restored
+country_event = {
+	id = pagan_uprising.1001
+	title = pagan_uprising.1001.t
+	desc = pagan_uprising.1001.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 1
+		1 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1001.a
+		if = {
+			limit = { 
+				NOT = { 1 = { religion = norse_pagan_reformed } }
+			}
+			1 = { change_religion = norse_pagan_reformed }
+		}
+		1 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Lejre Restored
+country_event = {
+	id = pagan_uprising.1002
+	title = pagan_uprising.1002.t
+	desc = pagan_uprising.1002.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 12
+		12 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1002.a
+		if = {
+			limit = { 
+				NOT = {
+					12 = { religion = norse_pagan_reformed }
+				}
+			}
+			12 = { change_religion = norse_pagan_reformed }
+		}
+		12 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Maere Restored
+country_event = {
+	id = pagan_uprising.1003
+	title = pagan_uprising.1003.t
+	desc = pagan_uprising.1003.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 20
+		20 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1003.a
+		if = {
+			limit = { 
+				NOT = {
+					20 = { religion = norse_pagan_reformed }
+				}
+			}
+			20 = { change_religion = norse_pagan_reformed }
+		}
+		20 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+
+#############################
+#		  				  	#
+#  Finnish Pagan Holy Sites #
+#						 	#
+#############################
+
+#Kexholm Restored
+country_event = {
+	id = pagan_uprising.1004
+	title = pagan_uprising.1004.t
+	desc = pagan_uprising.1004.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 32
+		32 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1004.a
+		if = {
+			limit = { 
+				NOT = {
+					32 = { religion = finnish_pagan_reformed }
+				}
+			}
+			32 = { change_religion = finnish_pagan_reformed }
+		}
+		32 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Saaremaa Restored
+country_event = {
+	id = pagan_uprising.1005
+	title = pagan_uprising.1005.t
+	desc = pagan_uprising.1005.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 35
+		35 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1005.a
+		if = {
+			limit = { 
+				NOT = {
+					35 = { religion = baltic_pagan_reformed }
+				}
+			}
+			35 = { change_religion = baltic_pagan_reformed }
+		}
+		35 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Perm Restored
+country_event = {
+	id = pagan_uprising.1006
+	title = pagan_uprising.1006.t
+	desc = pagan_uprising.1006.d
+	picture = PRAYING_eventPicture
+	
+	#major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 305
+		305 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1006.a
+		if = {
+			limit = { NOT = { 305 = { religion = finnish_pagan_reformed } } }
+			305 = { change_religion = finnish_pagan_reformed }
+		}
+		305 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+
+#############################
+#		  				  	#
+#  Slavic Pagan Holy Sites	#
+#						 	#
+#############################
+
+#Novgorod Restored
+country_event = {
+	id = pagan_uprising.1007
+	title = pagan_uprising.1007.t
+	desc = pagan_uprising.1007.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 310
+		310 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1007.a
+		if = {
+			limit = { 
+				NOT = {
+					310 = { religion = slavic_pagan_reformed }
+				}
+			}
+			310 = { change_religion = slavic_pagan_reformed }
+		}
+		310 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Kiev Restored
+country_event = {
+	id = pagan_uprising.1008
+	title = pagan_uprising.1008.t
+	desc = pagan_uprising.1008.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 280
+		280 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1008.a
+		if = {
+			limit = { 
+				NOT = {
+					280 = { religion = slavic_pagan_reformed }
+				}
+			}
+			280 = { change_religion = slavic_pagan_reformed }
+		}
+		280 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Plock Restored
+country_event = {
+	id = pagan_uprising.1009
+	title = pagan_uprising.1009.t
+	desc = pagan_uprising.1009.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 256
+		256 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1009.a
+		if = {
+			limit = { 
+				NOT = {
+					256 = { religion = slavic_pagan_reformed }
+				}
+			}
+			256 = { change_religion = slavic_pagan_reformed }
+		}
+		256 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+
+
+#############################
+#		  				  	#
+#  Baltic Pagan Holy Sites	#
+#						 	#
+#############################
+
+#Riga Restored
+country_event = {
+	id = pagan_uprising.1010
+	title = pagan_uprising.1010.t
+	desc = pagan_uprising.1010.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 38
+		38 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1010.a
+		if = {
+			limit = { 
+				NOT = {
+					38 = { religion = baltic_pagan_reformed }
+				}
+			}
+			38 = { change_religion = baltic_pagan_reformed }
+		}
+		38 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Vilna Restored
+country_event = {
+	id = pagan_uprising.1011
+	title = pagan_uprising.1011.t
+	desc = pagan_uprising.1011.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 272
+		272 = { is_pagan_trigger = yes }
+		is_year = 1460
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1011.a
+		if = {
+			limit = { 
+				NOT = {
+					272 = { religion = baltic_pagan_reformed }
+				}
+			}
+			272 = { change_religion = baltic_pagan_reformed }
+		}
+		272 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Danzig Restored
+country_event = {
+	id = pagan_uprising.1012
+	title = pagan_uprising.1012.t
+	desc = pagan_uprising.1012.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 43
+		43 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1012.a
+		if = {
+			limit = { 
+				NOT = {
+					43 = { religion = baltic_pagan_reformed }
+				}
+			}
+			43 = { change_religion = baltic_pagan_reformed }
+		}
+		43 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+
+
+#############################
+#		  				  	#
+#  Tengri Pagan Holy Sites	#
+#						 	#
+#############################
+
+#Pest Restored
+country_event = {
+	id = pagan_uprising.1013
+	title = pagan_uprising.1013.t
+	desc = pagan_uprising.1013.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 153
+		153 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1013.a
+		if = {
+			limit = {
+				NOT = {
+					153 = { religion = tengri_pagan_reformed }
+				}
+			}
+			153 = { change_religion = tengri_pagan_reformed }
+		}
+		153 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Crimea Restored
+country_event = {
+	id = pagan_uprising.1014
+	title = pagan_uprising.1014.t
+	desc = pagan_uprising.1014.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 284
+		284 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1014.a
+		if = {
+			limit = {
+				NOT = {
+					284 = { religion = tengri_pagan_reformed }
+				}
+			}
+			284 = { change_religion = tengri_pagan_reformed }
+		}
+		284 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Astrakhan Restored
+country_event = {
+	id = pagan_uprising.1015
+	title = pagan_uprising.1015.t
+	desc = pagan_uprising.1015.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 464
+		464 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1015.a
+		if = {
+			limit = {
+				NOT = {
+					464 = { religion = tengri_pagan_reformed }
+				}
+			}
+			464 = { change_religion = tengri_pagan_reformed }
+		}
+		464 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+
+
+#############################
+#		  				  	#
+# Hellenic Pagan Holy Sites	#
+#						 	#
+#############################
+
+#Athens Restored
+country_event = {
+	id = pagan_uprising.1016
+	title = pagan_uprising.1016.t
+	desc = pagan_uprising.1016.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 146
+		146 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1016.a
+		if = {
+			limit = { 
+				NOT = {
+					146 = { religion = hellenic }
+				}
+			}
+			146 = { change_religion = hellenic }
+		}
+		146 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Ephesus Restored
+country_event = {
+	id = pagan_uprising.1017
+	title = pagan_uprising.1017.t
+	desc = pagan_uprising.1017.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 318
+		318 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1017.a
+		if = {
+			limit = { 
+				NOT = {
+					318 = { religion = hellenic }
+				}
+			}
+			318 = { change_religion = hellenic }
+		}
+		318 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#Rome Restored
+country_event = {
+	id = pagan_uprising.1018
+	title = pagan_uprising.1018.t
+	desc = pagan_uprising.1018.d
+	picture = PRAYING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 118
+		118 = { is_pagan_trigger = yes }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1018.a
+		if = {
+			limit = { 
+				NOT = {
+					118 = { religion = hellenic }
+				}
+			}
+			118 = { change_religion = hellenic }
+		}
+		118 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}
+
+#############################
+#		  				  	#
+#  Zoroastrian Holy Sites	#
+#						 	#
+#############################
+
+#Yazd Restored
+country_event = {
+	id = pagan_uprising.1019
+	title = pagan_uprising.1019.t
+	desc = pagan_uprising.1019.d
+	picture = PRAYING_eventPicture
+	
+	#major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 433
+		433 = { religion = zoroastrian }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {		# Excellent
+		name = pagan_uprising.1019.a
+		433 = { 
+			add_permanent_province_modifier = {
+				name = pagan_center_religion
+				duration = -1
+			}
+		}
+	}
+}

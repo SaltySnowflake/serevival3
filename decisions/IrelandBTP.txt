@@ -1,0 +1,643 @@
+country_decisions = {
+
+	form_connacht = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 376
+				owns = 4119
+				owns = 3014
+			}
+			primary_culture = irish
+			OR = {
+				government = irish_clann
+				government = norman_lordship
+			}
+		}
+		allow = {
+			adm_power = 100
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = CNN }
+			OR = {
+				government = irish_clann
+				government = norman_lordship
+			}
+			owns_core_province = 376
+			owns_core_province = 4119
+			owns_core_province = 3014
+		}
+		effect = {
+			add_adm_power = -100
+			change_tag = CNN
+			change_government = provincial_kingdom
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}	#Draiocht added enough to make any new capital have enough dev to stay the capital -assuming 1444 base dev. 
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+		}
+	}
+
+	form_munster = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 375
+				owns = 3010
+				owns = 4118
+				owns = 3012
+				owns = 3007
+			}
+			primary_culture = irish
+			OR = {
+				government = irish_clann
+				government = norman_lordship
+			}
+		}
+		allow = {
+			adm_power = 100
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = MNS }
+			OR = {
+				government = irish_clann
+				government = norman_lordship
+			}
+			owns_core_province = 375
+			owns_core_province = 3010
+			owns_core_province = 4118
+			owns_core_province = 3012
+			owns_core_province = 3007
+		}
+		effect = {
+			add_adm_power = -100
+			change_tag = MNS
+			change_government = provincial_kingdom
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}	#Draiocht added enough to make any new capital have enough dev to stay the capital -assuming 1444 base dev. 
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+		}
+	}
+
+	form_leinster = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 374
+				owns = 4120
+				owns = 3009
+			}
+			primary_culture = irish
+			OR = {
+				government = irish_clann
+				government = norman_lordship
+			}
+		}
+		allow = {
+			adm_power = 100
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = LEI }
+			OR = {
+				government = irish_clann
+				government = norman_lordship
+			}
+			owns_core_province = 374
+			owns_core_province = 4120
+			owns_core_province = 3009
+		}
+		effect = {
+			add_adm_power = -100
+			change_tag = LEI
+			change_government = provincial_kingdom
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}	#Draiocht added enough to make any new capital have enough dev to stay the capital -assuming 1444 base dev. 
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+		}
+	}
+
+	form_ulster = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 372
+				owns = 3004
+				owns = 3005
+				owns = 3006
+				owns = 4121
+			}
+			primary_culture = irish
+			OR = {
+				government = irish_clann
+				government = norman_lordship
+			}
+		}
+		allow = {
+			adm_power = 100
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = ULS }
+			OR = {
+				government = irish_clann
+				government = norman_lordship
+			}
+			owns_core_province = 372
+			owns_core_province = 3004
+			owns_core_province = 3005
+			owns_core_province = 3006
+			owns_core_province = 4121
+		}
+		effect = {
+			add_adm_power = -100
+			change_tag = ULS
+			change_government = provincial_kingdom
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}	#Draiocht added enough to make any new capital have enough dev to stay the capital -assuming 1444 base dev.
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+		}
+	}
+	
+	form_duchy_connacht = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 376
+				owns = 4119
+				owns = 3014
+			}
+			primary_culture = anglo_irish
+			government = norman_lordship
+		}
+		allow = {
+			adm_power = 100
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = CNN }
+			primary_culture = anglo_irish
+			owns_core_province = 376
+			owns_core_province = 4119
+			owns_core_province = 3014
+		}
+		effect = {
+			add_adm_power = -100
+			change_tag = CNN
+			change_government = norman_duchy
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}	#Draiocht added enough to make any new capital have enough dev to stay the capital -assuming 1444 base dev. 
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+		}
+	}
+
+	form_duchy_munster = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 375
+				owns = 3007
+				owns = 3010
+				owns = 4118
+				owns = 3012
+			}
+			primary_culture = anglo_irish
+			government = norman_lordship
+		}
+		allow = {
+			adm_power = 100
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = MNS }
+			primary_culture = anglo_irish
+			owns_core_province = 375
+			owns_core_province = 3007
+			owns_core_province = 3010
+			owns_core_province = 4118
+			owns_core_province = 3012
+		}
+		effect = {
+			add_adm_power = -100
+			change_tag = MNS
+			change_government = norman_duchy
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}	#Draiocht added enough to make any new capital have enough dev to stay the capital -assuming 1444 base dev. 
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+		}
+	}
+
+	form_duchy_leinster = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 374
+				owns = 4120
+				owns = 3009
+			}
+			primary_culture = anglo_irish
+			government = norman_lordship
+		}
+		allow = {
+			adm_power = 100
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = LEI }
+			primary_culture = anglo_irish
+			owns_core_province = 374
+			owns_core_province = 4120
+			owns_core_province = 3009
+		}
+		effect = {
+			add_adm_power = -100
+			change_tag = LEI
+			change_government = norman_duchy
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}	#Draiocht added enough to make any new capital have enough dev to stay the capital -assuming 1444 base dev. 
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+		}
+	}
+
+	form_duchy_ulster = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 372
+				owns = 3004
+				owns = 3005
+				owns = 3006
+				owns = 4121
+			}
+			primary_culture = anglo_irish
+			government = norman_lordship
+		}
+		allow = {
+			adm_power = 100
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = ULS }
+			primary_culture = anglo_irish
+			owns_core_province = 372
+			owns_core_province = 3004
+			owns_core_province = 3005
+			owns_core_province = 3006
+			owns_core_province = 4121
+		}
+		effect = {
+			add_adm_power = -100
+			change_tag = ULS
+			change_government = norman_duchy
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}	#Draiocht added enough to make any new capital have enough dev to stay the capital -assuming 1444 base dev. 
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+		}
+	}
+
+	move_capital_dublin = {
+		major = yes
+		potential = {
+			tag = IRE
+			primary_culture = irish
+			owns = 373
+			NOT = { has_country_flag = built_capital_in_dublin }
+		}
+		allow = {
+			is_core = 373
+			is_at_war = no
+			adm_power = 50
+			dip_power = 50
+			mil_power = 25
+		}
+		effect = {
+			set_country_flag = built_capital_in_dublin
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -25
+			set_capital = 373
+			add_prestige = 10
+			373 = {
+			 	add_base_tax = 2
+				add_base_production = 2
+			 	add_base_manpower = 1
+				rename_capital = "Baile Átha Cliath"
+			}
+			if = {
+				limit = { NOT = { 373 = { culture = irish } } }
+				373 = { change_culture = irish }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	move_capital_dublin_anglo_irish = {
+		major = yes
+		potential = {
+			tag = KOI
+			culture_group = british
+			owns = 373
+			NOT = { has_country_flag = built_capital_in_dublin }
+		}
+		allow = {
+			is_core = 373
+			is_at_war = no
+			adm_power = 50
+			dip_power = 50
+			mil_power = 25
+		}
+		effect = {
+			set_country_flag = built_capital_in_dublin
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -25
+			set_capital = 373
+			add_prestige = 10
+			373 = {
+			 	add_base_tax = 2
+				add_base_production = 2
+			 	add_base_manpower = 1
+				rename_capital = "Dublin"
+			}
+			if = {
+				limit = {
+					AND = {
+						primary_culture = anglo_irish
+						373 = { has_owner_culture = no }
+					}
+				}
+				373 = { change_culture = anglo_irish }
+			}
+			if = {
+				limit = {
+					AND = {
+						primary_culture = english
+						373 = { has_owner_culture = no }
+					}
+				}
+				373 = { change_culture = english }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { is_year = 1700 }
+			}			#AI wont do this until 1700
+		}
+	}
+
+	anglo_irish_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = CEL }
+			NOT = { tag = ENG }			#Draiocht - my changes let some weird situations occur rarely, this is one fix
+			NOT = { tag = SCO }			#Draiocht - my changes let some weird situations occur rarely, this is one fix
+			culture_group = british
+			OR = {
+				tag = LEI
+				tag = ULS
+				tag = MNS
+				tag = CNN
+				num_of_owned_provinces_with = {
+					value = 9
+					region = ireland_area
+				}	#over half of Ireland to see if not one of the four primary duchies		
+			}
+			capital_scope = { region = ireland_area }
+			NOT = { government = norman_lordship }			#Lordships need to create duchy first
+			NOT = { government_rank = 3 }			#If for some bizarre reason an empire level can form Ireland, dont let it.
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = IRE }
+			NOT = { exists = KOI }
+			num_of_owned_provinces_with = {
+				value = 12
+				region = ireland_area
+			}	#requires roughly two thirds of Ireland to form, so KOI can be formed without the west or IRE can be formed without Leinster and the NE plantations
+		}
+		effect = {
+			change_tag = KOI
+			change_government = anglo_irish_monarchy
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	england_demand_fealty_of_ireland = {
+		potential = {
+			tag = ENG
+			NOT = { has_country_modifier = humiliated_by_former_vassal }
+			NOT = { has_country_modifier = irish_fealty_negotiations_ongoing }
+			num_of_owned_provinces_with = {
+				value = 1
+				region = ireland_area
+			}	#changed Dublin only to any Irish province being able to allow this decision
+			any_country = {
+				primary_culture = anglo_irish
+				OR = {
+					government = norman_duchy
+					government = norman_lordship
+					government = anglo_irish_monarchy
+				}
+				num_of_owned_provinces_with = {
+					value = 1
+					region = ireland_area
+				}
+				is_subject = no
+				is_at_war = no
+			}
+			NOT = { has_country_flag = demanded_fealty_of_ireland }
+		}
+		allow = {
+			tag = ENG
+			num_of_free_diplomatic_relations = 1
+			is_at_war = no
+			is_subject = no
+		}
+		effect = {
+			set_country_flag = demanded_fealty_of_ireland
+			random_country = {
+				limit = {
+					primary_culture = anglo_irish
+					OR = {
+						government = norman_duchy
+						government = norman_lordship
+						government = anglo_irish_monarchy
+					}
+					num_of_owned_provinces_with = {
+						value = 1
+						region = ireland_area
+					}
+					is_subject = no
+					is_at_war = no
+				}
+				country_event = { id = btpIRE.1 days = 3 }
+				hidden_effect = { add_country_modifier = { name = "irish_fealty_negotiations_ongoing" duration = 30 } }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						ruler_has_personality = expansionist_personality
+						ruler_has_personality = conqueror_personality
+						ruler_has_personality = greedy_personality
+						any_province = {
+							region = ireland_area
+							NOT = { owned_by = ENG }
+							OR = {
+								is_claim = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+				}
+			}	#Draiocht added a few conditions and details. Need a ruler personality trait or claim to justify, also to prevent instant spam
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}	#Want a stable England before they try to reclaim old hegemony, also to prevent instant spam
+		}
+	}
+	
+	reform_irish_government = {
+		major = yes
+		potential = {
+			NOT = { exists = KOI }
+			NOT = { exists = IRE }
+			is_year = 1600
+			OR = { 
+				government = norman_lordship
+				government = irish_clann
+				government = norman_duchy
+				government = provincial_kingdom
+			}
+		}
+		allow = {
+			is_year = 1600
+			OR = {
+				government = norman_lordship
+				government = irish_clann			
+				government = norman_duchy
+				government = provincial_kingdom
+			}
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			change_government = feudal_monarchy
+			capital_scope = { add_base_tax = 1 }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

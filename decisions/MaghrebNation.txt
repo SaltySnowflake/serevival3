@@ -1,0 +1,69 @@
+country_decisions = {
+
+	maghreb_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = MGB }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = ADU }
+			culture_group = maghrebi
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 348			# Sus
+			owns_core_province = 344			# Marrakech
+			owns_core_province = 1751			# Sebtah
+			owns_core_province = 336			# Tala Imsan
+			owns_core_province = 338			# Mitidja
+			owns_core_province = 341			# Tunis
+			owns_core_province = 2456			# Touggourt
+			owns_core_province = 2453			# Sfax
+			owns_core_province = 354			# Tripoli
+		}
+	 	effect = {
+			change_tag = MGB
+			if = {
+				limit = { NOT = { government = theocracy } }
+				change_government = constitutional_monarchy
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			maghreb_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGB
+			}
+			sicily_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGB
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

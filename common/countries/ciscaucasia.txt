@@ -1,0 +1,355 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 54 159 48 }
+
+historical_idea_groups = { 
+	defensive_ideas
+	quantity_ideas
+	administrative_ideas
+	trade_ideas
+	spy_ideas
+	economic_ideas
+	aristocracy_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	persian_footsoldier
+	persian_cavalry_charge
+	persian_shamshir
+	qizilbash_cavalry
+	tofongchis_musketeer
+	topchis_artillery
+	afsharid_reformed
+	afsharid_reformed_infantry
+	muslim_mass_infantry
+	muslim_dragoon
+	persian_rifle
+}
+
+monarch_names = {
+	"Surkhay #0" = 40
+	"Petrezok" = 40
+	"Verzacht" = 40
+	"Belzebuk" = 40
+	"Parsabok" = 40
+	"Taniel" = 40
+	"Eldar #0" = 30
+	"Alibek #0" = 30
+	"Budai #0" = 30
+	"Bougatchik" = 20
+	"Tanachouk" = 20
+	"Sibok" = 20
+	"Atsymtchouk" = 20
+	"Toutaryk" = 20
+	"Ezgbold" = 20
+	"Koudadik" = 20
+	"Kavklytch" = 20
+	"Kanoukov" = 20
+	"Temriouk" = 20
+	"Tazriout" = 20
+	"Tchiourak" = 20
+	"Boulgairouk" = 20
+	"Namstriouk" = 20
+	"Alibek #0" = 20
+	"Murtazali #0" = 20
+	"Mokhammad #0" = 20
+	"Aidemer #0" = 20
+	"Ælbeg #0" = 5
+	"Æmbalan #0" = 5
+	"Aghsartan #0" = 5
+	"Alatey #0" = 5
+	"Akhsar #0" = 5
+	"Anbal #0" = 5
+	"Anbazuk #0" = 5
+	"Aravat #0" = 5
+	"Arsen #0" = 5
+	"Askhkadar #0" = 5
+	"Ashot #0" = 5
+	"Aslan #0" = 5
+	"Aspar #0" = 5
+	"Athom #0" = 5
+	"Balambar #0" = 5
+	"Balsag #0" = 5
+	"Barlah #0" = 5
+	"Bæqætar #0" = 5
+	"Basil #0" = 5
+	"Bazuk #0" = 5
+	"Beler #0" = 5
+	"Ber #0" = 5
+	"Biræg #0" = 5
+	"Boz-Uruz #0" = 5
+	"Buürgur #0" = 5
+	"Buriberdi #0" = 5
+	"Burikhan #0" = 5
+	"Candak #0" = 5
+	"Chelakhsartag #0" = 5
+	"Davit #0" = 5
+	"Djadaron #0" = 5
+	"Durgulel #0" = 5
+	"Dzæræs #0" = 5
+	"Gætæg #0" = 5
+	"Georgy #0" = 5
+	"Girgon #0" = 5
+	"Gokhar #0" = 5
+	"Gubaz #0" = 5
+	"Guram #0" = 5
+	"Hasqar #0" = 5
+	"Huddan #0" = 5
+	"Istor #0" = 5
+	"Itaz #0" = 5
+	"Iveri #0" = 5
+	"Kandak #0" = 5
+	"Kandz #0" = 5
+	"Kavtia #0" = 5
+	"Kaur #0" = 5
+	"Khankhusy #0" = 5
+	"Khætag #0" = 5
+	"Konstantin #0" = 5
+	"Kubal #0" = 5
+	"Kuddana #0" = 5
+	"Kul #0" = 5
+	"Kuluk #0" = 5
+	"Lak #0" = 5
+	"Levan #0" = 5
+	"Pulad #0" = 5
+	"Respendial #0" = 5
+	"Rosmag #0" = 5
+	"Safrak #0" = 5
+	"Sakhir #0" = 5
+	"Sangipan #0" = 5
+	"Saros #0" = 5
+	"Sathis #0" = 5
+	"Savkudz #0" = 5
+	"Soslan #0" = 5
+	"Suarn #0" = 5
+	"Syrdon #0" = 5
+	"Taymuraz #0" = 5
+	"Taus #0" = 5
+	"Totraz #0" = 5
+	"Urdure #0" = 5
+	"Uruzma #0" = 5
+	"Uturku #0" = 5
+	"Yasynya #0" = 5
+	"Zaur #0" = 5
+	"Abdulbek #0" = 0 
+	"Abdulkhakim #0" = 0 
+	"Abdul-khalim #0" = 0 
+	"Abdulkhamid #0" = 0 
+	"Abdulmezhid #0" = 0 
+	"Abubakar #0" = 0 
+	"Abukhadzhi #0" = 0 
+	"Abukhan #0" = 0 
+	"Abusaid #0" = 0 
+	"Abuzar #0" = 0 
+	"Achamaz #0" = 0 
+	"Adlan #0" = 0 
+	"Akhmed #0" = 0 
+	"Andarbek #0" = 0 
+	"Aslambek #0" = 0 
+	"Ayubkhan #0" = 0 
+	"Baysangur #0" = 0 
+	"Beibulat #0" = 0 
+	"Bekbolat #0" = 0 
+	"Bekbuzar #0" = 0 
+	"Bekhan #0" = 0 
+	"Borz #0" = 0 
+	"Buvaisar #0" = 0 
+	"Chingiz #0" = 0 
+	"Danilbek #0" = 0 
+	"Degi #0" = 0 
+	"Dikalu #0" = 0 
+	"Djabrail #0" = 0 
+	"Dugurkhan #0" = 0 
+	"Dzhalal #0" = 0 
+	"Dzhamaldin #0" = 0 
+	"Dzhamalkhan #0" = 0 
+	"Dzhamaludin #0" = 0 
+	"Dzhambek #0" = 0 
+	"Elbek #0" = 0 
+	"Elimkhan #0" = 0 
+	"Emin #0" = 0 
+	"Eriskhan #0" = 0 
+	"Halid #0" = 0 
+	"Ibragim-bek #0" = 0 
+	"Ismaal #0" = 0 
+	"Kadyr #0" = 0 
+	"Kakhir #0" = 0 
+	"Kasym #0" = 0 
+	"Kerim #0" = 0 
+	"Khasanbek #0" = 0 
+	"Khassan #0" = 0 
+	"Khavazh #0" = 0 
+	"Khazarbek #0" = 0 
+	"Khuseyn #0" = 0 
+	"Mairbek #0" = 0 
+	"Mamed #0" = 0 
+	"Mayrsolt #0" = 0 
+	"Mokhmad #0" = 0 
+	"Nazhmuddin #0" = 0 
+	"Nazyr #0" = 0 
+	"Patarz #0" = 0 
+	"Said #0" = 0 
+	"Shakhid #0" = 0 
+	"Shamsudin #0" = 0 
+	"Soslanbek #0" = 0 
+	"Sulimbek #0" = 0 
+	"Sultanbek #0" = 0 
+	"Tamerlan #0" = 0 
+	"Tashtemir #0" = 0 
+	"Temirbek #0" = 0 
+	"Turpal #0" = 0 
+	"Vaharsolt #0" = 0 
+	"Vakhid #0" = 0 
+	"Vezirkhan #0" = 0 
+	"Zalimkhan #0" = 0 
+	"Zaur #0" = 0 
+	"Zelim #0" = 0 
+	"Chopchouk #0" = 0
+	"Tazriout #0" = 0
+	"Machik #0" = 0
+	"Otchikan #0" = 0
+	"Kanboulat #0" = 0
+	"Koudenet #0" = 0
+	"Khoudenet #0" = 0
+	"Damaniouk #0" = 0
+	"Isbouldoug #0" = 0
+	"Anzarouk #0" = 0
+	"Kanglytchev #0" = 0
+	"Bitemriouk #0" = 0
+	"Chimgalei #0" = 0
+	"Tachbsaroukov #0" = 0
+	"Cholokh #0" = 0
+	"Mait #0" = 0
+	"Otchikan #0" = 0
+	"Baachik #0" = 0
+	"Tachat #0" = 0
+	"Smbat #0" = 0
+	"Zuliyzhan #0" = -1
+	"Susane #0" = -1
+	"Babishe #0" = -1
+	"Elisu #0" = -1
+	"Gulandash #0" = -1
+	"Aiza #0" = -1
+	"Aizanat #0" = -1
+	"Albika #0" = -1
+	"Amanat #0" = -1
+	"Ayna #0" = -1
+	"Ayşa #0" = -1
+	"Aysha #0" = -1
+	"Bilqiz #0" = -1
+	"Fariza #0" = -1
+	"Hadijat #0" = -1
+	"Kesira #0" = -1
+	"Khalimat #0" = -1
+	"Kheda #0" = -1
+	"Madina #0" = -1
+	"Makka #0" = -1
+	"Rebiat #0" = -1
+	"Ruvayda #0" = -1
+	"Shovda #0" = -1
+	"Taymaskha #0" = -1
+	"Yakha #0" = -1
+	"Yakhiyta #0" = -1
+	"Zakhira #0" = -1
+	"Zalbika #0" = -1
+	"Zalima #0" = -1
+	"Zamira #0" = -1
+	"Zulay #0" = -1
+	"Zulikha #0" = -1
+	"Zulima #0" = -1
+	"Adadza #0" = -1
+	"Burudukan #0" = -1
+	"Lamara #0" = -1
+	"Natia #0" = -1
+	"Tinatini #0" = -1
+}
+
+leader_names = {
+	Abzakh
+	Adamiy
+	Akhmad
+	Alan
+	Aorsi
+	Aslanbek
+	Balanjar
+	Beslenei
+	Cöbein
+	Derbent
+	Djidan
+	Duday
+	Dudin
+	Dudiyn
+	Dzhabrail
+	Dzhokhar
+	Guaye
+	Gumik
+	Haidak
+	Hatuqwai
+	Iazyg
+	Islambek
+	Khamzin
+	Khasan
+	Khegaik
+	Khetuk
+	Lakz
+	Magomed
+	Mamkhegh
+	Maskhadan
+	Mayrbek
+	Mokhosh
+	Natukhai
+	Okhlov
+	Otarsultan
+	Philan
+	Roxolan
+	Samandar
+	Sarir
+	Sarmatian
+	Shamkal
+	Shandan
+	Shapsug
+	Shishani
+	Siraci
+	Tabasaran
+	Tazryt
+	Temirgoy
+	Tumen
+	Ubykh
+	Yandarbin
+	Zelimkhan
+	Zhaney
+	Zirihgeran
+}
+
+ship_names = {
+	"Umal Muhammad"
+	Adyghe
+	Anapa
+	Beslenei
+	Cufut
+	Cöbein
+	Giray
+	Haci
+	Hansaray
+	Kabardia
+	Kuyra
+	Kyrym
+	Leça
+	Mamkhegh
+	Medrese
+	Nalchik
+	Natukhay
+	Noxçiyçö
+	Ossetia
+	Petrezok
+	Qale
+	Qirq
+	Sölza-Gala
+	Tuapse
+	Yer
+	Zichia
+	Zincilri
+}

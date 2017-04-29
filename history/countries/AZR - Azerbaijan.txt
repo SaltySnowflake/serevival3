@@ -1,0 +1,6 @@
+government = despotic_monarchy
+primary_culture = azerbaijani
+religion = shiite
+technology_group = muslim
+capital = 421
+government_rank = 2

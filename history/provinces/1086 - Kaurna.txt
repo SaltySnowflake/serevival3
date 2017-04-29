@@ -1,0 +1,53 @@
+#1086 - Kaurna
+
+culture = aboriginal
+religion = tjukurpa
+capital = "Kaurna"
+trade_goods = livestock
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 4 #1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 9
+discovered_by = aboriginal
+
+add_permanent_province_modifier = {
+	name = murray_estuary_modifier
+	duration = -1
+}
+
+
+1444.11.2 = {
+	owner = AB4
+	controller = AB4
+	add_core = AB4
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = AB4
+	controller = AB4
+	add_core = AB4
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = AB4
+	controller = AB4
+	add_core = AB4
+	is_city = yes
+}
+
+1802.1.1 = { discovered_by = GBR } # Matthew Flinders

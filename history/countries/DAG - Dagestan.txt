@@ -1,0 +1,6 @@
+government = iqta
+primary_culture = dagestani
+religion = shiite
+technology_group = muslim
+capital = 2198
+government_rank = 2

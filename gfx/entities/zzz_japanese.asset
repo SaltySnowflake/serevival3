@@ -1,0 +1,209 @@
+# ASN Ashina
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "ASN_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "ASN_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "ASN_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "ASN_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "ASN_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "ASN_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "ASN_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "ASN_CAVALRY_4" 	version = 1	 }
+
+# CBA Chiba
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "CBA_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "CBA_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "CBA_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "CBA_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "CBA_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "CBA_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "CBA_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "CBA_CAVALRY_4" 	version = 1	 }
+
+# KBK Kitabatake
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "KBK_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "KBK_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "KBK_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "KBK_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "KBK_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "KBK_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "KBK_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "KBK_CAVALRY_4" 	version = 1	 }
+
+# KGK Kyogoku
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "KGK_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "KGK_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "KGK_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "KGK_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "KGK_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "KGK_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "KGK_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "KGK_CAVALRY_4" 	version = 1	 }
+
+# KNO Kono
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "KNO_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "KNO_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "KNO_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "KNO_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "KNO_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "KNO_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "KNO_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "KNO_CAVALRY_4" 	version = 1	 }
+
+# KKC Kikuchi
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "KKC_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "KKC_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "KKC_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "KKC_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "KKC_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "KKC_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "KKC_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "KKC_CAVALRY_4" 	version = 1	 }
+
+# KSI Kasai
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "KSI_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "KSI_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "KSI_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "KSI_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "KSI_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "KSI_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "KSI_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "KSI_CAVALRY_4" 	version = 1	 }
+
+# ISK Isshiki
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "ISK_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "ISK_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "ISK_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "ISK_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "ISK_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "ISK_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "ISK_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "ISK_CAVALRY_4" 	version = 1	 }
+
+# ITO Ito
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "ITO_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "ITO_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "ITO_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "ITO_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "ITO_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "ITO_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "ITO_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "ITO_CAVALRY_4" 	version = 1	 }
+
+# MKM Murakami
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "MKM_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "MKM_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "MKM_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "MKM_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "MKM_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "MKM_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "MKM_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "MKM_CAVALRY_4" 	version = 1	 }
+
+# MGM Mogami
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "MGM_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "MGM_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "MGM_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "MGM_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "MGM_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "MGM_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "MGM_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "MGM_CAVALRY_4" 	version = 1	 }
+
+# MYI Miyoshi
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "MYI_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "MYI_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "MYI_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "MYI_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "MYI_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "MYI_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "MYI_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "MYI_CAVALRY_4" 	version = 1	 }
+
+# SHN Shoni
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "SHN_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "SHN_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "SHN_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "SHN_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "SHN_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "SHN_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "SHN_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "SHN_CAVALRY_4" 	version = 1	 }
+
+# STK Satake
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "STK_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "STK_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "STK_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "STK_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "STK_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "STK_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "STK_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "STK_CAVALRY_4" 	version = 1	 }
+
+# TKI Toki
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "TKI_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "TKI_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "TKI_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "TKI_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "TKI_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "TKI_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "TKI_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "TKI_CAVALRY_4" 	version = 1	 }
+
+# TTI Tsutsui
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "TTI_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "TTI_CAVALRY_1" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "TTI_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "TTI_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "TTI_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "TTI_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "TTI_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "TTI_CAVALRY_4" 	version = 1	 }
+
+# TAC Tachibana
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "TAC_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "TAC_CAVALRY_1" 	version = 1	 }	
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "TAC_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "TAC_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "TAC_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "TAC_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "TAC_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "TAC_CAVALRY_4" 	version = 1	 }
+
+# JNC Nancho
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "JNC_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "JNC_CAVALRY_1" 	version = 1	 }	
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "JNC_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "JNC_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "JNC_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "JNC_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "JNC_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "JNC_CAVALRY_4" 	version = 1	 }
+
+# JWA Wa
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "JWA_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "JWA_CAVALRY_1" 	version = 1	 }	
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "JWA_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "JWA_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "JWA_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "JWA_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "JWA_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "JWA_CAVALRY_4" 	version = 1	 }
+
+# EZO Ezo Republic
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "EZO_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "EZO_CAVALRY_1" 	version = 1	 }	
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "EZO_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "EZO_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "EZO_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "EZO_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "EZO_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "EZO_CAVALRY_4" 	version = 1	 }
+
+# RYU Ryukyu
+entity = { clone = "JAP_INFANTRY_1"			name = 	  "RYU_INFANTRY_1"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_1" 			name = 	  "RYU_CAVALRY_1" 	version = 1	 }	
+entity = { clone = "JAP_INFANTRY_2"			name = 	  "RYU_INFANTRY_2"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_2" 			name = 	  "RYU_CAVALRY_2" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_3"			name = 	  "RYU_INFANTRY_3"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_3" 			name = 	  "RYU_CAVALRY_3" 	version = 1	 }
+entity = { clone = "JAP_INFANTRY_4"			name = 	  "RYU_INFANTRY_4"	version = 1	 }
+entity = { clone = "JAP_CAVALRY_4" 			name = 	  "RYU_CAVALRY_4" 	version = 1	 }

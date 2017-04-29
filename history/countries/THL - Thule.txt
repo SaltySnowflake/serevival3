@@ -1,0 +1,26 @@
+government = native_council
+primary_culture = kalaallisut
+religion = angakkunngurniq
+technology_group = north_american
+capital = 1105 # Abitbi
+government_rank = 1
+
+1444.1.1 = {
+	monarch = {
+		name = "Sassacus"
+		birth_date = 1414.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1464.1.1 = {
+	monarch = {
+		name = "Uncas"
+		birth_date = 1434.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

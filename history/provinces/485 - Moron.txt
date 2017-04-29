@@ -1,0 +1,68 @@
+#485 - Moron
+
+culture = arawak
+religion = zemiism
+capital = "Moron"
+trade_goods = coffee 
+hre = no
+base_tax = 2
+base_production = 3
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = CAB
+discovered_by = ARW
+discovered_by = TNO
+discovered_by = WWG
+
+1444.11.2 = {
+	owner = WWG
+	controller = WWG
+	add_core = WWG
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = WWG
+	controller = WWG
+	add_core = WWG
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = WWG
+	controller = WWG
+	add_core = WWG
+	is_city = yes
+}
+
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
+1511.1.1 = {
+	remove_core = WWG
+	owner = CAS
+	controller = CAS
+	add_core = CAS
+	is_city = yes
+	culture = castillian
+	religion = catholic 
+} # Founded by Diego Velázquez
+1516.1.23 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	remove_core = CAS
+}
+1522.1.1 = { unrest = 2 } # Relatively small attack against the conquistadors
+1532.1.1 = { unrest = 0 } # Guama is killed

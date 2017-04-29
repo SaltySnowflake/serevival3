@@ -1,0 +1,54 @@
+# No previous file for Wahpekute
+
+culture = dakota
+religion = wakan_tanka
+capital = "Wahpekute"
+trade_goods = fur
+hre = no
+base_tax = 2 #1 
+base_production = 2 #1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = QQS
+	controller = QQS
+	add_core = QQS
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = QQS
+	controller = QQS
+	add_core = QQS
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = QQS
+	controller = QQS
+	add_core = QQS
+	is_city = yes
+}
+
+1650.1.1 = {
+ 	owner = SIO
+	controller = SIO
+	add_core = SIO
+	remove_core = QQS
+} #Position of the natives circal the Beaver Wars
+1738.1.1 = { discovered_by = FRA }# Pierre Gaultier de Varennes, no real settlements until the 1800's

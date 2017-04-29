@@ -1,0 +1,48 @@
+#2734 - Yuin
+
+culture = aboriginal
+religion = tjukurpa
+capital = "Yuin"
+hre = no
+trade_goods = iron
+base_manpower = 3 #2
+base_tax = 3 
+base_production = 3
+native_size = 10
+native_ferocity = 1
+native_hostileness = 9
+discovered_by = aboriginal
+
+
+1444.11.2 = {
+	owner = AO8
+	controller = AO8
+	add_core = AO8
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = AO8
+	controller = AO8
+	add_core = AO8
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = AO8
+	controller = AO8
+	add_core = AO8
+	is_city = yes
+}
+
+1770.1.1 = { discovered_by = GBR } # James Cook

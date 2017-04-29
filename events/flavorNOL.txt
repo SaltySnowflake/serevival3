@@ -1,0 +1,602 @@
+namespace = york
+
+# Border Rievers
+
+country_event = {
+	id = york.1
+	title = "york.EVTNAME1"
+	desc = "york.EVTDESC1"
+	picture = MILITARY_CAMP_eventPicture
+
+	trigger = {
+		NOT = { is_year = 1650 }
+		OR = {
+			culture_group = british
+			primary_culture = highland_scottish
+			primary_culture = gallgaidheil
+		}
+		OR = {
+			owns_core_province = 246
+			owns_core_province = 247
+			owns_core_province = 3020
+			owns_core_province = 3021
+			owns_core_province = 3022
+		}
+		NOT = {
+			AND = {
+				owns_core_province = 246
+				owns_core_province = 247
+				owns_core_province = 3020
+				owns_core_province = 3021
+				owns_core_province = 3022
+			}
+		}
+		any_neighbor_country = {
+			OR = {
+				culture_group = british
+				primary_culture = highland_scottish
+				primary_culture = gallgaidheil
+			}
+			war_with = ROOT
+		}
+		NOT = { any_owned_province = { has_province_modifier = rievers } }
+	}
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "york.EVTOPTA1"
+		if = {
+			limit = { owns_core_province = 246 }
+			246 = {
+				add_province_modifier = {
+					name = rievers
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { owns_core_province = 247 }
+			247 = {
+				add_province_modifier = {
+					name = rievers
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { owns_core_province = 3020 }
+			3020 = {
+				add_province_modifier = {
+					name = rievers
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { owns_core_province = 3021 }
+			3021 = {
+				add_province_modifier = {
+					name = rievers
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { owns_core_province = 3022 }
+			3022 = {
+				add_province_modifier = {
+					name = rievers
+					duration = 1826
+				}
+			}
+		}
+	}
+}
+
+# Hostmen of Newcastle
+
+country_event = {
+	id = york.2
+	title = "york.EVTNAME2"
+	desc = "york.EVTDESC2"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1580
+		NOT = { is_year = 1650 }
+		culture_group = british
+		owns_core_province = 246
+	}
+	mean_time_to_happen = { years = 20 }
+	
+	option = {
+		name = "york.EVTOPTA2"
+		246 = {
+			add_province_modifier = {
+				name = hostmen
+				duration = 18262
+			}
+		}
+	}
+}
+
+# scarborough fair
+
+country_event = {
+	id = york.3
+	title = "york.EVTNAME3"
+	desc = "york.EVTDESC3"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	trigger = {
+		owns_core_province = 245
+		#culture_group = british
+		245 = { NOT = { has_province_modifier = scarborough_fair } }
+	}
+	mean_time_to_happen = { years = 50 }
+	
+	option = {
+		name = "york.EVTOPTA3"
+		245 = {
+			add_province_modifier = {
+				name = scarborough_fair
+				duration = 1826
+			}
+		}
+	}
+}
+
+# council of the north
+
+country_event = {
+	id = york.4
+	title = "york.EVTNAME4"
+	desc = "york.EVTDESC4"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1465
+		NOT = { is_year = 1485 }
+		owns_core_province = 245
+		owns_core_province = 244
+		owns_core_province = 246
+		owns_core_province = 247
+		owns_core_province = 3022
+		owns_core_province = 3023
+		owns_core_province = 3024
+		OR = {
+			primary_culture = english
+			primary_culture = northumbrian
+		}
+	}
+	mean_time_to_happen = { years = 20 }
+	
+	option = {
+		name = "york.EVTOPTA4"
+		add_stability_or_adm_power = yes
+		245 = {
+			add_province_modifier = {
+				name = north_council
+				duration = 1826
+			}
+		}
+		3023 = {
+			add_province_modifier = {
+				name = north_council
+				duration = 1826
+			}
+		}
+		3024 = {
+			add_province_modifier = {
+				name = north_council
+				duration = 1826
+			}
+		}
+		244 = {
+			add_province_modifier = {
+				name = north_council
+				duration = 1826
+			}
+		}
+		3022 = {
+			add_province_modifier = {
+				name = north_council
+				duration = 1826
+			}
+		}
+		246 = {
+			add_province_modifier = {
+				name = north_council
+				duration = 1826
+			}
+		}
+		247 = {
+			add_province_modifier = {
+				name = north_council
+				duration = 1826
+			}
+		}
+	}
+}
+
+# council of the north 2
+
+
+country_event = {
+	id = york.5
+	title = "york.EVTNAME5"
+	desc = "york.EVTDESC5"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1530
+		NOT = { is_year = 1560 }
+		owns_core_province = 245
+		owns_core_province = 244
+		owns_core_province = 246
+		owns_core_province = 247
+		owns_core_province = 3022
+		owns_core_province = 3023
+		owns_core_province = 3024
+		OR = {
+			primary_culture = english
+			primary_culture = northumbrian
+		}
+		religion = protestant
+		OR = {
+			245 = { religion = catholic }
+			246 = { religion = catholic }
+			247 = { religion = catholic }
+			244 = { religion = catholic }
+			3022 = { religion = catholic }
+			3023 = { religion = catholic }
+			3024 = { religion = catholic }
+		}
+	}
+	
+	mean_time_to_happen = { years = 30 }
+	
+	option = {
+		name = "york.EVTOPTA5"
+		add_stability_or_adm_power = yes
+		if = {
+			limit = { 245 = { religion = catholic } }
+			245 = {
+				add_province_modifier = {
+					name = north_council_2
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 246 = { religion = catholic } }
+			246 = {
+				add_province_modifier = {
+					name = north_council_2
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 247 = { religion = catholic } }
+			247 = {
+				add_province_modifier = {
+					name = north_council_2
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 244 = { religion = catholic } }
+			244 = {
+				add_province_modifier = {
+					name = north_council_2
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 3022 = { religion = catholic } }
+			3022 = {
+				add_province_modifier = {
+					name = north_council_2
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 3023 = { religion = catholic } }
+			3023 = {
+				add_province_modifier = {
+					name = north_council_2
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 3024 = { religion = catholic } }
+			3024 = {
+				add_province_modifier = {
+					name = north_council_2
+					duration = 1826
+				}
+			}
+		}		
+	}
+}
+
+# Flemish Weavers
+
+country_event = {
+	id = york.6
+	title = "york.EVTNAME6"
+	desc = "york.EVTDESC6"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		any_country = {	has_country_flag = had_fra12 }
+		NOT = { has_country_flag = had_fra12 }
+		owns_core_province = 3024
+		3024 = { religion = protestant }
+		#culture_group = british
+		religion = protestant
+	}
+	mean_time_to_happen = { years = 5 }
+	
+	option = {
+		name = "york.EVTOPTA6"
+		3024 = {
+			add_province_modifier = {
+				name = flemish_lancaster
+				duration = 7304
+			}
+			add_base_tax = 1
+		}
+	}
+	option = {
+		name = "york.EVTOPTB6"
+		add_treasury = -50
+		3024 = {
+			add_province_modifier = {
+				name = flemish_lancaster
+				duration = 7304
+			}
+			add_base_tax = 2
+			rename_capital = "Manchester"
+		}
+	}
+}
+
+# Virgin Queen
+
+country_event = {
+	id = york.7
+	title = "york.EVTNAME7"
+	desc = "york.EVTDESC7"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		is_female = yes
+		OR = {
+			primary_culture = english
+			primary_culture = northumbrian
+			tag = GBR
+			tag = ANV
+		}
+		NOT = { has_country_flag = had_yrk7 }
+	}
+	mean_time_to_happen = { years = 15 }
+	
+	immediate = { set_country_flag = had_yrk7 }	
+	
+	option = {
+		name = "york.EVTOPTA7"
+		add_prestige = 5
+		add_ruler_modifier = {
+			name = virgin_queen
+			duration = -1
+		}
+	}
+}
+
+# yorkshire rebellion
+
+country_event = {
+	id = york.8
+	title = "york.EVTNAME8"
+	desc = "york.EVTDESC8"
+	picture = MILITARY_CAMP_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1480
+		NOT = { is_year = 1500 }
+		OR = {
+			primary_culture = english
+			primary_culture = northumbrian
+		}
+		has_wartaxes = yes
+		war_exhaustion = 4
+		any_country = {
+			culture_group = french
+			war_with = ROOT
+		}
+		alliance_with = BRI
+	}
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "york.EVTOPTA8"
+		add_stability = -1
+		245 = {
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 3
+			}
+		}
+	}
+}
+
+# Rising of the North
+
+country_event = {
+	id = york.9
+	title = "york.EVTNAME9"
+	desc = "york.EVTDESC9"
+	picture = MILITARY_CAMP_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1560
+		NOT = { is_year = 1580 }
+		OR = {
+			primary_culture = english
+			primary_culture = northumbrian
+			tag = GBR
+			tag = ANV
+		}
+		religion = protestant
+		owns_core_province = 245
+		OR = {
+			245 = { religion = catholic }
+			246 = { religion = catholic }
+			247 = { religion = catholic }
+			244 = { religion = catholic }
+			3022 = { religion = catholic }
+			3023 = { religion = catholic }
+			3024 = { religion = catholic }
+		}
+	}
+	mean_time_to_happen = { years = 20 }
+	
+	option = {
+		name = "york.EVTOPTA9"
+		245 = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+				leader = "Mary Tudor"
+				female = yes
+			}
+		}
+		add_stability = -1
+	}
+}
+
+# pilgrimage of grace
+
+country_event = {
+	id = york.10
+	title = "york.EVTNAME10"
+	desc = "york.EVTDESC10"
+	picture = MILITARY_CAMP_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1526
+		NOT = { is_year = 1546 }
+		OR = {
+			primary_culture = english
+			primary_culture = northumbrian
+			tag = GBR
+			tag = ANV
+		}
+		religion = protestant
+		owns_core_province = 245
+		owns_core_province = 244
+		owns_core_province = 246
+		owns_core_province = 247
+		owns_core_province = 3022
+		owns_core_province = 3023
+		owns_core_province = 3024
+		OR = {
+			245 = { religion = catholic }
+			246 = { religion = catholic }
+			247 = { religion = catholic }
+			244 = { religion = catholic }
+			3022 = { religion = catholic }
+			3023 = { religion = catholic }
+			3024 = { religion = catholic }
+		}
+	}
+	mean_time_to_happen = { years = 20 }
+	
+	option = {
+		name = "york.EVTOPTA10"
+		add_stability = -1
+		if = {
+			limit = { 245 = { religion = catholic } }
+			245 = {
+				add_province_modifier = {
+					name = pilgrimage_grace
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 246 = { religion = catholic } }
+			246 = {
+				add_province_modifier = {
+					name = pilgrimage_grace
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 247 = { religion = catholic } }
+			247 = {
+				add_province_modifier = {
+					name = pilgrimage_grace
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 244 = { religion = catholic } }
+			244 = {
+				add_province_modifier = {
+					name = pilgrimage_grace
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 3022 = { religion = catholic } }
+			3022 = {
+				add_province_modifier = {
+					name = pilgrimage_grace
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 3023 = { religion = catholic } }
+			3023 = {
+				add_province_modifier = {
+					name = pilgrimage_grace
+					duration = 1826
+				}
+			}
+		}
+		if = {
+			limit = { 3024 = { religion = catholic } }
+			3024 = {
+				add_province_modifier = {
+					name = pilgrimage_grace
+					duration = 1826
+				}
+			}
+		}
+	}
+}

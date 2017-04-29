@@ -1,0 +1,6 @@
+government = absolute_monarchy
+government_rank = 3
+primary_culture = breton
+religion = catholic
+technology_group = western
+capital = 172	# Nantes

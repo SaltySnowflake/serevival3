@@ -1,0 +1,110 @@
+#Country Name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 0  180  255 }
+
+historical_idea_groups = {
+	humanist_ideas
+	trade_ideas
+	quantity_ideas
+	offensive_ideas
+	expansion_ideas
+	economic_ideas
+	defensive_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	steppe_riders
+	steppe_lancers
+	steppe_mounted_raiders
+	steppe_cavalry
+	steppe_uhlans
+	steppe_raiders
+	steppe_footmen
+	steppe_musketeers
+	steppe_infantry
+	steppe_rifles
+	reformed_steppe_rifles
+}
+
+monarch_names = {
+	"Adyan #0" = 1
+	"Altn #0" = 1
+	"Angarak #0" = 1
+	"Ayuka #0" = 1
+	"Bakar #0" = 1
+	"Batu #0" = 1
+	"Bayn #0" = 1
+	"Bayr #0" = 1
+	"Bembö #0" = 1
+	"Chimid #0" = 1
+	"Chon #0" = 1
+	"Djimba #0" = 1
+	"Dorzh #0" = 1
+	"Dzhav #0" = 1
+	"Dzhirgan #0" = 1
+	"Elya #0" = 1
+	"Erdni #0" = 1
+	"Erdny #0" = 1
+	"Ijl #0" = 1
+	"Janhr #0" = 1
+	"Jav #0" = 1
+	"Jirgan #0" = 1
+	"Jirhl #0" = 1
+	"Khontr #0" = 1
+	"Kirsan #0" = 1
+	"Menko #0" = 1
+	"Mergen #0" = 1
+	"Mingian #0" = 1
+	"Mingiyan #0" = 1
+	"Nohan #0" = 1
+	"Nohka #0" = 1
+	"Notan #0" = 1
+	"Sanal #0" = 1
+	"Sanan #0" = 1
+	"Sanj #0" = 1
+	"Sants #0" = 1
+	"Savr #0" = 1
+	"Shurguchi #0" = 1
+	"Tavn #0" = 1
+	"Tsahan #0" = 1
+	"Tzakhan #0" = 1
+	"Tzatan #0" = 1
+	"Tzayatr #0" = 1
+	"Tzeren #0" = 1
+	"Ulan #0" = 1
+	"Vazki #0" = 1
+	"Yagur #0" = 1
+	"Zurhan #0" = 1
+	
+	"Altna #0" = -1
+	"Buinta #0" = -1
+	"Dunge #0" = -1
+	"Söökhlö #0" = -1
+	"Tzetzgö #0" = -1
+}
+
+leader_names = {
+	Jasray
+	Gonbat
+	Hattori
+	Olzvoi
+	Bira
+	Batmunkh
+	Ganbold
+	Saihan
+	Ochirbal
+	Davaa
+	Choros
+	Torghud
+	Khoid
+	Dorbed
+}
+
+ship_names = {
+	Bargut Buzav Kerait Naiman "Dörvn Öörd"
+	Khoshut Olo Dzungar Torgut Dorbot
+	Amdo "Altan Khan" Khoshot Olöts Güshi
+}

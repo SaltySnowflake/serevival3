@@ -1,0 +1,69 @@
+government = daimyo
+government_rank = 1
+primary_culture = shikokureligion = shinto
+technology_group = chinese
+capital = 1820	# Itano
+	
+1444.1.1 = { 
+	monarch = {
+		name = "Nagayoshi"
+		dynasty = "Miyoshi"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+	
+1480.1.1 = { 
+	monarch = {
+		name = "Yukinaga"
+		dynasty = "Miyoshi"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+	
+1520.1.1 = { 
+	monarch = {
+		name = "Motonaga"
+		dynasty = "Miyoshi"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1522.3.10 = {
+	heir = {
+		name = "Nagayoshi"
+		monarch_name = "Nagayoshi"
+		dynasty = "Miyoshi"
+		birth_date = 1522.3.10
+		death_date = 1564.8.10
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1532.1.1 = { 
+	monarch = {
+		name = "Nagayoshi"
+		dynasty = "Miyoshi"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1564.8.10 = { 
+	monarch = {
+		name = "Yoshitsugu"
+		dynasty = "Miyoshi"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

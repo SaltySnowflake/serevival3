@@ -1,0 +1,292 @@
+japanese_g = {
+	graphical_culture = asiangfx
+
+	kanto = {
+		primary = STK
+		dynasty_names = { 
+			Hojo Satake Satomi
+		}
+	}
+	
+	chubu = {
+		primary = TKD
+		dynasty_names = { 
+			Takeda Kiso Murakami Sanada Uesugi Maeda Hatakeyama Jinbo
+		}
+	}
+	
+	tokaido = {
+		primary = IMG
+		dynasty_names = { 
+			Tokugawa Ii Honda Imagawa
+		}
+	}
+	
+	yamato = { #kansai
+		primary = KGK
+		dynasty_names = { 
+			Ashikaga Shiba Hosokawa Yamana Toki Tsutsui Matsunaga Rokkaku Oda Saito Akechi Toyotomi Shibata Azai Asakura Suzuki Ikeda
+		}
+	}
+	
+	chugoku = {
+		primary = OUC
+		dynasty_names = { 
+			Ouchi Amago Mori Kobayakawa Akamatsu Urakami Ukita
+		}
+	}
+	
+	shikoku = {
+		primary = MYI
+		dynasty_names = { 
+			Chosokabe Miyoshi Kono Yamauchi
+		}
+	}
+	
+	ryukyuan = {
+		primary = RYU
+		dynasty_names = { 
+			Sho
+		}
+	}
+	
+	ezo_japanese = {
+		primary = EZO
+		dynasty_names = { 
+			Date Oura Tsugaru Nambu Soma Iwaki Nikaido Mogami Honma Ando Ashina Matsumae
+		}
+	}
+
+	japanese = {
+		primary = JAP
+	}
+	dynasty_names = { 
+		Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa 
+		Kuni Nashimoto Takeda Yamashina
+	}
+	male_names = {
+		Motohito Mihito Hikohito Fusahito Katsuhito Tomohito Michihito Kazuhito Kotohito Okiko Tsuguhito Nagahito 
+		Satohito Asahito Toshiko Yasuhito Teruhito Hidehito Morohito Ayahito Takauji Yoshiakira Yoshimitsu 
+		Yoshimochi Yoshikazu Yoshinori Yoshikatsu Yoshimasa Yoshihisa Yoshitane Yoshizumi Yoshiharu Yoshiteru 
+		Yoshihide Yoshiaki Nobutada Hidenobu Hideyoshi Hideyori Ieyasu Hidetada Iemitsu Ietsuna Tsunayoshi Ienobu 
+		Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
+	}
+	female_names = {
+		Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka 
+		Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru 
+		Haruka Haruko Haruna Hikari Hikaru Hina Hinata Hiroko Hitomi Honoka Hoshi Hoshiko Hotaru Izumi Junko Kaede 
+		Kanon Kaori Kaoru Kasumi Kazue Kazuko Keiko Kiku Kiyoko Kohaku Koharu Kokoro Kotone Kumiko Kyo Kyou Mai Makoto 
+		Mami Manami Mao Mariko Masami Masuyo Mayu Megumi Mei Michi Michiko Midori Mika Miki Miku Minako Minato Mio 
+		Misaki Mitsuko Miu Miyako Miyu Mizuki Moe Momoka Momoko Moriko Nana Nanami Naoko Naomi Natsuki Natsuko Natsumi 
+		Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu 
+		Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa 
+		Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu 
+		Yuuka Yuuki Yuuko Yuuna Yuzuki
+	}
+}
+
+miao_g = {
+	graphical_culture = asiangfx
+	miao = {
+		primary = CMI
+		dynasty_names = {
+			"Fang" "Hang" "Hue" "Khang" "Kong" "Soung" "Kue" "Lo" "Lor" "Li" "Moua" "Pha" "Tang" "Thao" "Chang" "Cheng" 
+			"Chu" "Vang" "Vue" "Xiong" "Yang"
+		}
+		male_names = {
+			Qizhen Qiyu Jianjun Youcheng Houzhao Houcong Zaihou Yijun Changluo Youjian Yousong Yujian Youlang Chenggong 
+			Kehshuan Biao Shuang Gang Su Zhen Fu Zi Qi Tan Chun Bai Gui Zhi Quan Pian Hui Song Mo Ying Jing Dang Nan 
+			Gaoxu Caosui Gauxi Youyuan Youlun Youbin Houwei Youxiao Youji Youxue Youyi Youshan Cixuan Cijiang Cizhao 
+			Cihuan Cican He Ji Da Yuchun
+		}
+		female_names = {
+			Heying Chunmei Tianhui Kon Mao
+		}
+	}
+}
+
+jewish_culture_group = {
+	graphical_culture = easterngfx
+	jewish = {
+		graphical_culture = westerngfx
+		primary = ISR
+        dynasty_names = {
+            Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid
+            Oferid Omrid Pinchasid Raananid Shemidid Shemidid Yairid
+        }
+        male_names = {
+            Abiatar Ahijah Akabon Alon Amit Amram Ananelus Ananias Aretas Aristobulus Azrikam Barak Baruch Belshazar Costobarus Deror Dori
+            Eiran Eleazar Erotimus Ezra Hadasa Herod Hillel Hyrkanus Jannaeus Joazar Yosef Josiada Kahana Hillel Hodaviah Honio Meir Nahum
+            Nathan Nehemiah Nikanor Nir Obadiah  Ofer Omri Pinchas Phannias Phasael Raanan Malichus Manasseh Menahem Nahum Nogah Shamgar Shammai
+            Shaul Shemaiah Shemida Silas Simeon Sosa Talmon Tarfon Tovia Yair Yochanan Zadok
+        }
+        female_names = {
+            Adena Adi Adva Ahuva Alexandra Aliza Alte Arieh Asher Batia Boaz Chanah Cypros Danya Dara Dina Doris Dov Dvora Elisheva Esther
+            Galia Galit Leah Liat Liora Machla Mariam Marni Maya Meital Milka Naamah Nahal Nava Nissa Orah Orit Osher Rachel Raisa
+            Rivka Salampsio Sarah Shayna Tamar Tirtza Yael Yocheved
+        }
+	}
+	ashkenazi = {
+		dynasty_names = {
+			Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
+			Oferid Omrid Pinchasid Raananid Shemidid Shemidid Yairid
+		}
+		male_names = {
+			Abba Abbaye Acha Achai Achunai Aharon Alechsandri Ammi Amram Amunah Ashi Asher Avomai Avraham Azariah Baboi Baruch
+			Bibai Binyamin Boaz Bustenai Chanan Chananel Chaninai Chanoch Chaim Chayim Chelbo Chisdai Chiyya Chizkiyah Chofni Chushiel
+			Daniel David Dimi Dodai Dudai Efrayim Eina Elazar Elchanan Eldad Eliezer Elyakim Gedalyah Gershom Ghayyat Giat Giza Hillel 
+			Hila Isaac Ivomai Kafnai Kahana Kalonymos Levi Kiyomi Machir Malcha Mar Mari Matiyahu Meir Menechem Menashe Mesharsheya Meshulam 
+			Mevasser Mishael Mordechai Moshe Nachman Nachshon Nasan Natan Natroi Natronai Nechemiah Nehilai Nesanel Nissim Paltoi Pirkoi 
+			Peter Rava Ravai Ravi Ravya Reuven Rivai Saadiah Sechok Shabsai Shalom Shanoi Shemaryah Sherira Sheshna Shila Shimon Shinoi 
+			Shlomo Shmuel Sorgo Sulam Tachlifa Tamar Tzadok Tzemach Uri Yaakov Yachya Yechiel Yehudah Yehudai Yehoshua Yeshayah 
+			Yisrael Yitzchak Yoel Yosef Yoshiah Yosi Yuda Zakkai Zelekman Zuiskind
+		}
+		female_names = {
+			Beila Belet Chana Doltza Esther Guta Guthela Madrona Matrona Minna Pultzelina Rachel Rivkah Saris Scolaster
+			Shluida Shoinlin Shonlin Tziporah Yehudis Yeintil
+		}
+	}
+	
+	sephardi = {
+		dynasty_names = {
+			Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
+			Oferid Omrid Pinchasid Raananid Shemidid Shemidid Yairid
+		}
+		male_names = {
+			Abba Abbaye Acha Achai Achunai Aharon Alechsandri Ammi Amram Amunah Ashi Asher Avomai Avraham Azariah Baboi Baruch
+			Bibai Binyamin Boaz Bustenai Chanan Chananel Chaninai Chanoch Chaim Chayim Chelbo Chisdai Chiyya Chizkiyah Chofni Chushiel
+			Daniel David Dimi Dodai Dudai Efrayim Eina Elazar Elchanan Eldad Eliezer Elyakim Gedalyah Gershom Ghayyat Giat Giza Hillel 
+			Hila Isaac Ivomai Kafnai Kahana Kalonymos Levi Kiyomi Machir Malcha Mar Mari Matiyahu Meir Menechem Menashe Mesharsheya Meshulam 
+			Mevasser Mishael Mordechai Moshe Nachman Nachshon Nasan Natan Natroi Natronai Nechemiah Nehilai Nesanel Nissim Paltoi Pirkoi 
+			Peter Rava Ravai Ravi Ravya Reuven Rivai Saadiah Sechok Shabsai Shalom Shanoi Shemaryah Sherira Sheshna Shila Shimon Shinoi 
+			Shlomo Shmuel Sorgo Sulam Tachlifa Tamar Tzadok Tzemach Uri Yaakov Yachya Yechiel Yehudah Yehudai Yehoshua Yeshayah 
+			Yisrael Yitzchak Yoel Yosef Yoshiah Yosi Yuda Zakkai Zelekman Zuiskind
+		}
+		female_names = {
+			Beila Belet Chana Doltza Esther Guta Guthela Madrona Matrona Minna Pultzelina Rachel Rivkah Saris Scolaster
+			Shluida Shoinlin Shonlin Tziporah Yehudis Yeintil
+		}
+	}
+	
+	mizrahi = {
+		dynasty_names = {
+			Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
+			Oferid Omrid Pinchasid Raananid Shemidid Shemidid Yairid
+		}
+		male_names = {
+			Abba Abbaye Acha Achai Achunai Aharon Alechsandri Ammi Amram Amunah Ashi Asher Avomai Avraham Azariah Baboi Baruch
+			Bibai Binyamin Boaz Bustenai Chanan Chananel Chaninai Chanoch Chaim Chayim Chelbo Chisdai Chiyya Chizkiyah Chofni Chushiel
+			Daniel David Dimi Dodai Dudai Efrayim Eina Elazar Elchanan Eldad Eliezer Elyakim Gedalyah Gershom Ghayyat Giat Giza Hillel 
+			Hila Isaac Ivomai Kafnai Kahana Kalonymos Levi Kiyomi Machir Malcha Mar Mari Matiyahu Meir Menechem Menashe Mesharsheya Meshulam 
+			Mevasser Mishael Mordechai Moshe Nachman Nachshon Nasan Natan Natroi Natronai Nechemiah Nehilai Nesanel Nissim Paltoi Pirkoi 
+			Peter Rava Ravai Ravi Ravya Reuven Rivai Saadiah Sechok Shabsai Shalom Shanoi Shemaryah Sherira Sheshna Shila Shimon Shinoi 
+			Shlomo Shmuel Sorgo Sulam Tachlifa Tamar Tzadok Tzemach Uri Yaakov Yachya Yechiel Yehudah Yehudai Yehoshua Yeshayah 
+			Yisrael Yitzchak Yoel Yosef Yoshiah Yosi Yuda Zakkai Zelekman Zuiskind
+		}
+		female_names = {
+			Beila Belet Chana Doltza Esther Guta Guthela Madrona Matrona Minna Pultzelina Rachel Rivkah Saris Scolaster
+			Shluida Shoinlin Shonlin Tziporah Yehudis Yeintil
+		}
+	}
+	
+	beta_israeli = {
+		dynasty_names = {
+			Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
+			Oferid Omrid Pinchasid Raananid Shemidid Shemidid Yairid
+		}
+		male_names = {
+			Abba Abbaye Acha Achai Achunai Aharon Alechsandri Ammi Amram Amunah Ashi Asher Avomai Avraham Azariah Baboi Baruch
+			Bibai Binyamin Boaz Bustenai Chanan Chananel Chaninai Chanoch Chaim Chayim Chelbo Chisdai Chiyya Chizkiyah Chofni Chushiel
+			Daniel David Dimi Dodai Dudai Efrayim Eina Elazar Elchanan Eldad Eliezer Elyakim Gedalyah Gershom Ghayyat Giat Giza Hillel 
+			Hila Isaac Ivomai Kafnai Kahana Kalonymos Levi Kiyomi Machir Malcha Mar Mari Matiyahu Meir Menechem Menashe Mesharsheya Meshulam 
+			Mevasser Mishael Mordechai Moshe Nachman Nachshon Nasan Natan Natroi Natronai Nechemiah Nehilai Nesanel Nissim Paltoi Pirkoi 
+			Peter Rava Ravai Ravi Ravya Reuven Rivai Saadiah Sechok Shabsai Shalom Shanoi Shemaryah Sherira Sheshna Shila Shimon Shinoi 
+			Shlomo Shmuel Sorgo Sulam Tachlifa Tamar Tzadok Tzemach Uri Yaakov Yachya Yechiel Yehudah Yehudai Yehoshua Yeshayah 
+			Yisrael Yitzchak Yoel Yosef Yoshiah Yosi Yuda Zakkai Zelekman Zuiskind
+		}
+		female_names = {
+			Beila Belet Chana Doltza Esther Guta Guthela Madrona Matrona Minna Pultzelina Rachel Rivkah Saris Scolaster
+			Shluida Shoinlin Shonlin Tziporah Yehudis Yeintil
+		}
+	}
+}
+
+malay = {
+	acehnese = {
+		primary = ATJ
+		dynasty_names = {
+			Siak Aceh Pasai Pagarruyung Palembang Jambi
+		}
+		male_names = {
+			"Inayat" "'Alî Mugâyat" "Iskandar Tanî" "Husayn 'Alî Ri'âyat" "Menradza" "Tsalenggathu" "Gadzabadi" 
+			"Tsau-Lha" "Mengtsekya"
+		}
+		female_names = {
+			Amritpal Merenui Metetini Miri Moea Moeata Moerani Mohea Nanihi Nu’utea Orama Poe Pear Poehina Poenui Poerava Puaiti 
+			Puatea Puaura Ra’ihau Ra’imere Ra’inui Ranitea Rarahu Raunui Raurii Tahiata Taiana Taina Tania Taurua Tautiare Tehani 
+			Tehea Teora Tera Tevai Titaina Titaua Tuianu Tumata Unutea Urarii Vaea Vaiana Vaianu Vaiata Vaihere Vaimiti Vairea 
+			Vaite Vaitiare
+		}
+	}
+	sundanese = {
+		primary = SUN
+		dynasty_names = {
+			Banten Demak Surabaya Cirebon Samprangan
+		}
+		male_names = {
+			"Girindrawardhana" "Girishawardhana" "Kertabumi" "Kertawijaya" "Rajasawardhana" "Suraprabhawa" 
+			"Wikramawardhana" "Hayam Wuruk" "Kalagamet" "Raden Wijaya" "Kertawardhana" "Raden Sotor" "Raden Sumirat" 
+			"Singhawardhana"
+		}
+		female_names = {
+			"Suhita" "Sri Gitarja" Merenui Metetini Miri Moea Moeata Moerani Mohea Nanihi Nu’utea Orama Poe Pear Poehina Poenui 
+			Poerava Puaiti 
+			Puatea Puaura Ra’ihau Ra’imere Ra’inui Ranitea Rarahu Raunui Raurii Tahiata Taiana Taina Tania Taurua Tautiare Tehani 
+			Tehea Teora Tera Tevai Titaina Titaua Tuianu Tumata Unutea Urarii Vaea Vaiana Vaianu Vaiata Vaihere Vaimiti Vairea 
+			Vaite Vaitiare
+		}
+	}
+}
+
+yukagyr = {
+	graphical_culture = inuitgfx
+	yukagyr = {
+		primary = HOD
+		dynasty_names = {
+			Uygulaan Khorints
+		}
+		male_names = {
+			Aiaan Atch-ytagyn Giv-ynkeev Nute-nli Gyrgol-gyrgyn Tanat Darkhan Dokhsun Duolan Dygyn Dulustaan Kyytymei 
+			Kencheeri Keskil Manchaary Michil Modun Nurgun Nuolan Sulustaan Tolluman Timir Tygyn Tuskul Uolan Ergis 
+			Erchim Erkin Yrgel Kharyskhan
+		}
+		female_names = {
+			Naryiaana Aiyyna Kydaana Tuskulaana Khaarchaana Temülen Börte Mandukhai Samar Zaufishan 
+		}
+	}
+}
+
+evenks = {
+	manchu = {
+		graphical_culture = asiangfx
+		primary = MCH
+		dynasty_names = {
+			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
+			Heseri Guwalgiya Tunggiya Hata Hoifa Yeren Udige
+		}
+		male_names = {
+			"Bukuri Yongson" "Sibeoci Fiyanggu" "Dudu Mengtemu" "Huang Taiji" "Hiowan Yei" "In Jen" "Hung Li" "Yong Yan"
+			"Min Ning" Cungsan Tolo Fuman Giocangga Taksi Nurhachi Dorgon Hooge Fulin Fanca Hoogle Yinzhi Yinreng 
+			Yinti Daisan Abatai Ajige Dodo Yinxiang Yinsi Yintang Hongshi Hongzhou Yongqi Akjan Ayan Baohu Chengjun 
+			Dorgide Eje Encehen Fisin Fulu Ganyong Ganzhan Hurong Jabsan Jakdan Leli Liyi Lung Mergen Muduri Mujin Oori 
+			Radi Talman Wehe Yelu Yongyi Zhanhung Zhenghu Zhengrong Zhongcheng Zhongchun Zhongho Zhonghu Zhonghung 
+			Zongqian Zhongxian Zhongyong Zhongyu
+		}
+		female_names = {
+			Fen Jian Wen Hejing Hejia Hexiao Zhuangjing 
+		}
+	}
+	dynasty_names = {
+		Khorints Tabangut Sartul Daur Khorchin Bulagat Ekhirit Khongodor
+	}
+}

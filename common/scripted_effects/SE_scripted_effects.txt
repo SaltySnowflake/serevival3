@@ -1,0 +1,260 @@
+greenland_winning = {
+
+	if = {
+		limit = { has_country_flag = greenland_win_game }
+		change_variable = {
+			which = greenland_win_game
+			value = 1
+		}
+	}
+}
+
+greenland_good_choice = {
+
+	if = {
+		limit = { has_country_flag = greenland_win_game }
+		change_variable = {
+			which = greenland_win_game
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = greenland_strike_count }
+		change_variable = {
+			which = greenland_strike_count
+			value = 1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = greenland_strike_count
+					value = 3
+				}
+			}
+			country_event = {
+				id = norse_greenland.48
+				days = 10
+			}
+			overlord = {
+				country_event = {
+					id = norse_greenland.49
+					days = 10
+				}
+			}
+		}
+	}
+}
+
+greenland_bad_choice = {
+	if = {
+		limit = { has_country_flag = greenland_strike_count }
+		change_variable = {
+			which = greenland_strike_count
+			value = 1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = greenland_strike_count
+					value = 3
+				}
+			}
+			country_event = {
+				id = norse_greenland.48
+				days = 10
+			}
+			overlord = {
+				country_event = {
+					id = norse_greenland.49
+					days = 10
+				}
+			}
+		}
+	}
+}
+
+greenland_losing = {
+	
+	if = {
+		limit = { has_province_flag = greenland_lose_game }
+		change_variable = {
+			which = greenland_lose_game
+			value = 1
+		}
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						which = greenland_lose_game
+						value = 17
+					}
+					NOT = {
+						check_variable = {
+							which = greenland_lose_game
+							value = 20
+						}
+					}
+					owner = { num_of_colonies = 1 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = vinland.3
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = greenland_lose_game
+					value = 20
+				}
+			}
+			province_event = {
+				id = norse_greenland.60
+				days = 1
+			}
+		}
+	}
+}
+
+vinland_is_tolerant = {
+
+	if = {
+		limit = { NOT = { has_country_flag = vinland_tolerance } }
+		
+		set_country_flag = vinland_tolerance
+		
+		set_variable = {
+			which = vinland_tolerance
+			value = 0
+		}
+	}
+	change_variable = {
+		which = vinland_tolerance
+		value = 1
+	}
+	
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					which = vinland_tolerance
+					value = 5
+				}
+				NOT = { has_country_flag = vinland_reject_catholics }
+			}
+		}
+		if = { limit = { has_country_flag = vinland_eusettler_a }
+			clr_country_flag = vinland_eusettler_a}
+		if = { limit = { has_country_flag = vinland_eusettler_b }
+			clr_country_flag = vinland_eusettler_b}
+		
+		country_event = {
+			id = vin_flavor.27
+			days = 20
+		}
+	}
+}
+
+vinland_integrate = {
+
+	if = {
+		limit = { NOT = { has_country_flag = vinland_natives } }
+		
+		set_country_flag = vinland_natives
+		set_variable = {
+			which = vinland_natives
+			value = 5
+		}
+	}
+	change_variable = {
+		which = vinland_natives
+		value = 1
+	}
+}
+
+vinland_integrate_two = {
+
+	if = {
+		limit = { NOT = { has_country_flag = vinland_natives } }
+		
+		set_country_flag = vinland_natives
+		set_variable = {
+			which = vinland_natives
+			value = 5
+		}
+	}
+	change_variable = {
+		which = vinland_natives
+		value = 2
+	}
+}
+
+vinland_segregate = {
+
+	if = {
+		limit = { NOT = { has_country_flag = vinland_natives } }
+		
+		set_country_flag = vinland_natives
+		set_variable = {
+			which = vinland_natives
+			value = 5
+		}
+	}
+	change_variable = {
+		which = vinland_natives
+		value = -1
+	}
+}
+
+vinland_nat_segregate = {
+
+	if = {
+		limit = { NOT = { has_country_flag = vinland_natives } }
+		
+		set_country_flag = vinland_natives
+		set_variable = {
+			which = vinland_natives
+			value = 5
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = vinland_natives
+				value = 5
+			}
+		}
+		change_variable = {
+			which = vinland_natives
+			value = -1
+		}
+	}
+}
+
+vinland_reb_segregate = {
+
+	if = {
+		limit = { NOT = { has_country_flag = vinland_natives } }
+		
+		set_country_flag = vinland_natives
+		set_variable = {
+			which = vinland_natives
+			value = 5
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = vinland_natives
+				value = 2
+			}
+		}
+		change_variable = {
+			which = vinland_natives
+			value = -1
+		}
+	}
+}

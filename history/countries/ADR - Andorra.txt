@@ -1,0 +1,15 @@
+government = catalan_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = catalan
+religion = catholic
+capital = 3700 # Andorra
+
+1443.1.1 = {
+	monarch = {
+		name = "Arnau Roger"
+		dynasty = "de Pallars"
+		dip = 3
+		adm = 3
+		mil = 3
+	}

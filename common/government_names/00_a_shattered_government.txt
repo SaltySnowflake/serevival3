@@ -1,0 +1,1041 @@
+austrian_monarchy = {
+	rank = {
+		1 = ARCHDUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = ARCHDUKE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = ARCHDUCHESS
+		2 = QUEEN	
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = ARCHDUKE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = ARCHDUCHESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+	
+	trigger = {
+		government = archduchy
+	}
+}
+
+march_northern_british = {
+	rank = {
+		1 = MARCH
+		2 = VICEROYALTY
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = WARDEN
+		2 = VICEROY
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = WARDENESS
+		2 = VICEREINE	
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = WARDEN
+		2 = VICEROY_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = WARDENESS
+		2 = VICEREINE	
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = PRINCE
+	}
+
+	heir_female = {
+		1 = HEIRESSBTP
+		2 = HEIRESSBTP
+		3 = PRINCESS
+	}
+	
+	trigger = {
+		government = monarchy
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+			primary_culture = northumbrian
+		}
+		is_march = yes
+	}
+}
+
+march_celtic_english = {
+	rank = {
+		1 = MARCH
+		2 = VICEROYALTY
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = LORD
+		2 = VICEROY
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = VICEREINE	
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = LORD
+		2 = VICEROY_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = LADY
+		2 = VICEREINE	
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = PRINCE
+	}
+
+	heir_female = {
+		1 = HEIRESSBTP
+		2 = HEIRESSBTP
+		3 = PRINCESS
+	}
+	
+	trigger = {
+		government = monarchy
+		OR = {
+			culture_group = gaelic
+			primary_culture = english
+		}
+		is_march = yes
+	}
+}
+
+roman_republic = {
+	rank = {
+		1 = SPQR
+		2 = SPQR
+		3 = SPQR
+	}
+	
+	ruler_male = {
+		1 = CONSUL
+		2 = CONSUL
+		3 = CONSUL
+	}
+	
+	ruler_female = {
+		1 = CONSUL
+		2 = CONSUL
+		3 = CONSUL
+	}
+	
+	trigger = {
+		tag = ROM
+		government = republic
+		NOT = { government = republican_dictatorship }
+	}
+}
+
+roman_empire = {
+	rank = {
+		1 = IMPERIUM
+		2 = IMPERIUM
+		3 = IMPERIUM
+	}
+	
+	ruler_male = {
+		1 = EMPEROR
+		2 = EMPEROR
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = EMPRESS
+		2 = EMPRESS
+		3 = EMPRESS
+	}
+	
+	trigger = {
+		tag = ROM
+		government = monarchy
+	}
+}
+
+sanmarino_republic = {
+	rank = {
+		1 = REPUBLIC
+		2 = SERENE_REPUBLIC
+		3 = GREAT_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = CAPTAINREGENT
+		2 = CAPTAINREGENT
+		3 = CAPTAINREGENT
+	}
+	
+	ruler_female = {
+		1 = CAPTAINREGENT
+		2 = CAPTAINREGENT
+		3 = CAPTAINREGENT
+	}
+	
+	trigger = {
+		tag = SAN
+		government = republic
+		NOT = { government = republican_dictatorship }
+	}
+}
+
+occitan_republic = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = GRAND_PRINCIPALITY
+		3 = GREAT_PRINCIPALITY
+	}
+	
+	ruler_male = {
+		1 = LORD
+		2 = PRINCE
+		3 = GREAT_PRINCE
+	}
+	
+	ruler_female = {
+		1 = LADY
+		2 = PRINCESS
+		3 = GREAT_PRINCESS
+	}
+	
+	trigger = {
+		OR = {
+			government = occitan_republic
+			government = catalan_republic
+		}
+	}
+}
+
+gov_papal_copts = {
+	rank = {
+		1 = PATRIARCHATE
+		2 = PATRIARCHATE
+		3 = PATRIARCHATE
+	}
+	
+	ruler_male = {
+		1 = PATRIARCH
+		2 = PATRIARCH
+		3 = PATRIARCH
+	}
+	
+	ruler_female  ={
+		1 = MATRIARCH
+		2 = MATRIARCH
+		3 = MATRIARCH
+	}
+	
+	trigger = {
+		government = papal_copts
+	}
+}
+
+icelandic_vassal = {
+	rank = {
+		1 = VICEROYALTY
+		2 = VICEROYALTY
+		3 = VICEROYALTY
+	}
+	
+	ruler_male = {
+		1 = ICEGOVERNR
+		2 = ICEGOVERNR
+		3 = ICEGOVERNR
+	}
+
+	ruler_female = {
+		1 = GOVERNESS
+		2 = GOVERNESS	
+		3 = GOVERNESS
+	}
+
+	trigger = {
+		tag = ICE
+		is_subject = yes
+	}
+}
+
+icelandic_republic = {
+	rank = {
+		1 = ICE_REP
+		2 = ICE_REP
+		3 = ICE_REP
+	}
+	ruler_male = {
+		1 = LAWSPEAKER
+		2 = JARL
+		3 = HIGH_KING
+	}
+	ruler_female = {
+		1 = LAWSPEAKER
+		2 = JARL
+		3 = HIGH_QUEEN
+	}
+	trigger = {
+		government = thing
+		primary_culture = icelandic
+	}	
+}
+
+nordic_republic = {
+	rank = {
+		1 = NORD_REP
+		2 = NORD_REP
+		3 = NORD_REP
+	}
+	ruler_male = {
+		1 = LAWSPEAKER
+		2 = JARL
+		3 = HIGH_KING
+	}
+	ruler_female = {
+		1 = LAWSPEAKER
+		2 = JARL
+		3 = HIGH_QUEEN
+	}
+	trigger = {
+		government = thing
+	}	
+}
+
+nordic_monarchy = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = JARL
+		2 = KING
+		3 = HIGH_KING
+	}
+	ruler_female = {
+		1 = JARL
+		2 = QUEEN
+		3 = HIGH_QUEEN
+	}
+	consort_male = {
+		1 = DUKE
+		2 = KING
+		3 = HIGH_KING
+	}
+	consort_female = {
+		1 = DUCHESS
+		2 = QUEEN	
+		3 = HIGH_QUEEN
+	}
+	trigger = {
+		culture_group = scandinavian
+		government = monarchy
+	}	
+}
+
+french_free_city = {
+	rank = {
+		1 = FREE_CITY
+	}
+
+	ruler_male = {
+		1 = ALDERMAN
+	}
+
+	ruler_female = {
+		1 = ALDERWOMAN
+	}
+
+	trigger = {
+		government = imperial_city
+		culture_group = french
+	}
+}
+
+gov_irish_clann = {
+	rank = {
+		1 = CLANN
+	}
+	
+	ruler_male = {
+		1 = RI
+	}
+	
+	ruler_female = {
+		1 = BANRION
+	}
+	
+	consort_male = {
+		1 = FEARNABANRION
+	}
+
+	consort_female = {
+		1 = BANANRI
+	}
+	
+	heir_male = {
+		1 = TANAISTE
+	}
+
+	heir_female = {
+		1 = BANTANAISTE
+	}
+	
+	trigger = {
+		government = irish_clann
+	}
+}
+
+gov_provincial_kingdom = {
+	rank = {
+		1 = PROVKINGDOM
+	}
+	
+	ruler_male = {
+		1 = RIRUIR
+	}
+	
+	ruler_female = {
+		1 = BANRIONRUIR
+	}
+	
+	consort_male = {
+		1 = FEARNABANRION
+	}
+
+	consort_female = {
+		1 = BANANRI
+	}
+	
+	heir_male = {
+		1 = TANAISTE
+	}
+
+	heir_female = {
+		1 = BANTANAISTE
+	}
+	
+	trigger = {
+		government = provincial_kingdom
+	}
+}
+
+gov_high_kingship = {
+	rank = {
+		1 = PROVKINGDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = RIRUIR
+		2 = ARDRI
+		3 = ARDRI
+	}
+	
+	ruler_female = {
+		1 = BANRIONRUIR
+		2 = ARDBANRION
+		3 = ARDBANRION
+	}
+	
+	consort_male = {
+		1 = FEARNABANRION
+		2 = FEARNAARDBANRION
+		3 = FEARNAARDBANRION
+	}
+
+	consort_female = {
+		1 = BANANRI
+		2 = BANANARDRI
+		3 = BANANARDRI
+	}
+	
+	heir_male = {
+		1 = TANAISTE
+		2 = TANAISTE
+		3 = TANAISTE
+	}
+
+	heir_female = {
+		1 = BANTANAISTE
+		2 = BANTANAISTE
+		3 = BANTANAISTE
+	}
+	
+	trigger = {
+		government = high_kingship
+	}
+}
+
+gov_norman_lordship = {
+	rank = {
+		1 = EARLDOM
+	}
+	
+	ruler_male = {
+		1 = EARL
+	}
+	
+	ruler_female = {
+		1 = LADY
+	}
+	
+	consort_male = {
+		1 = LORD
+	}
+
+	consort_female = {
+		1 = LADY
+	}
+	
+	heir_male = {
+		1 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIRESSBTP
+	}
+	
+	trigger = {
+		government = norman_lordship
+	}
+}
+
+gov_norman_duchy = {
+	rank = {
+		1 = DUCHY
+	}
+	
+	ruler_male = {
+		1 = DUKE
+	}
+	
+	ruler_female = {
+		1 = DUCHESS
+	}
+	
+	consort_male = {
+		1 = DUKE
+	}
+
+	consort_female = {
+		1 = DUCHESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIRESSBTP
+	}
+	
+	trigger = {
+		government = norman_duchy
+	}
+}
+
+gov_anglo_irish_monarchy = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}	
+	
+	ruler_male = {
+		1 = DUKE
+		2 = KING
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = DUCHESS
+		2 = QUEEN	
+		3 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = DUKE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	consort_female = {
+		1 = DUCHESS
+		2 = QUEEN	
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = PRINCE
+		3 = PRINCE
+	}
+
+	heir_female = {
+		1 = HEIRESSBTP
+		2 = PRINCESS
+		3 = PRINCESS
+	}
+	
+	trigger = {
+		government = anglo_irish_monarchy
+	}
+}
+
+gov_florence_republic = {
+	rank = {
+		1 = REPUBLIC
+		2 = GRAND_REPUBLIC
+		3 = GREAT_REPUBLIC
+	}
+
+	ruler_male = {
+		1 = GONFALONIERE
+		2 = GRAND_CONSUL
+		3 = GREAT_CONSUL
+	}
+
+	ruler_female = {
+		1 = GONFALONIERE_fem
+		2 = GRAND_CONSULESS
+		3 = GREAT_CONSULESS
+	}
+
+	trigger = {
+		government = florence_republic
+	}
+}
+
+gov_regnum_dei = {
+	rank = {
+		1 = PAPACY
+		2 = PAPACY
+		3 = PAPACY
+	}
+	
+	ruler_male = {
+		1 = POPE
+		2 = POPE
+		3 = POPE
+	}
+	
+	ruler_female  ={
+		1 = POPETTE
+		2 = POPETTE
+		3 = POPETTE
+	}
+	
+	heir_male = {
+		1 = PREFERATUSBTP
+		2 = PREFERATUSBTP
+		3 = PREFERATUSBTP
+	}
+
+	heir_female = {
+		1 = PREFERATABTP
+		2 = PREFERATABTP
+		3 = PREFERATABTP
+	}
+	
+	trigger = {
+		government = regnum_dei
+	}
+}
+
+scottish_vassal_monarchy = {
+	rank = {
+		1 = EARLDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}	
+	
+	ruler_male = {
+		1 = LORD
+		2 = KING
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = LADY
+		2 = QUEEN	
+		3 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = EARLDOM
+		2 = KING
+		3 = EMPEROR
+	}
+
+	consort_female = {
+		1 = LADY
+		2 = QUEEN	
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = PRINCE
+		3 = PRINCE
+	}
+
+	heir_female = {
+		1 = HEIRESSBTP
+		2 = PRINCESS
+		3 = PRINCESS
+	}
+	
+	trigger = {
+		government = monarchy
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+		}
+		is_subject_of = SCO
+	}
+}
+
+english_vassal_theocracy = {
+	rank = {
+		1 = COUNTYPALATINE
+		2 = ARCHBISHOPRIC
+		3 = PATRIARCHATE
+	}	
+	
+	ruler_male = {
+		1 = BISHOP
+		2 = ARCHBISHOP
+		3 = PATRIARCH
+	}
+	
+	ruler_female = {
+		1 = BISHOP_fem
+		2 = ARCHBISHOP_fem	
+		3 = MATRIARCH
+	}
+	
+	trigger = {
+		government = theocracy
+		OR = {
+			primary_culture = english
+			primary_culture = northumbrian
+		}
+		is_subject_of = ENG
+	}
+}
+
+irish_monarchy = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}	
+	
+	ruler_male = {
+		1 = DUKE
+		2 = KING
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = DUCHESS
+		2 = QUEEN	
+		3 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = irish
+	}
+}
+
+abbacy = {
+	rank = {
+		1 = PRINCEABBACY
+		2 = ARCHBISHOPRIC
+		3 = PATRIARCHATE
+	}
+	
+	ruler_male = {
+		1 = PRINCEABBOT
+		2 = ARCHBISHOP
+		3 = PATRIARCH
+	}
+	
+	ruler_female = {
+		1 = PRINCEABBOT_fem
+		2 = ARCHBISHOP_fem
+		3 = MATRIARCH
+	}
+	
+	trigger = {
+		tag = FLD
+		government = theocracy
+	}
+}
+
+##Natives
+
+gov_native_noblecouncil = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = CHIEF
+	}
+	
+	ruler_female = {
+		1 = CHIEFTESS
+	}
+	
+	trigger = {
+		government = native_noblecouncil
+	}
+}
+
+gov_native_monarchy = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = GREATSUN
+	}
+	
+	ruler_female = {
+		1 = MOTHERSUN
+	}
+	
+	trigger = {
+		government = native_monarchy
+	}
+}
+
+east_algonquin_council = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = SACHEM
+	}
+	
+	ruler_female = {
+		1 = SQUAW_SACHEM
+	}
+	
+	trigger = {
+		culture_group = eastern_algonquian
+		government = native_council
+		is_protectorate = no
+		is_subject = no
+	}
+}
+
+cent_algonquin_council = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = OGEMA
+	}
+	
+	ruler_female = {
+		1 = SQUAW_OGEMA
+	}
+	
+	trigger = {
+		culture_group = central_algonquian
+		government = native_council
+		is_protectorate = no
+		is_subject = no
+	}
+}
+
+subject_algonquin_council = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = SAGAMORE
+	}
+	
+	ruler_female = {
+		1 = SQUAW_SAGAMORE
+	}
+	
+	trigger = {
+		OR = {
+			culture_group = eastern_algonquian
+			culture_group = central_algonquian
+		}
+		government = native_council
+		OR = {
+			is_protectorate = yes
+			is_subject = yes
+		}
+	}
+}
+
+iroquois_council = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = HOYANEH
+	}
+	
+	ruler_female = {
+		1 = IAKOIANE
+	}
+	
+	trigger = {
+		culture_group = iroquoian
+		NOT = { primary_culture = cherokee }
+		government = native_council
+	}
+}
+
+cherokee_council = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = UKU
+	}
+	
+	ruler_female = {
+		1 = IAKOIANE
+	}
+	
+	trigger = {
+		primary_culture = cherokee
+		government = native_council
+	}
+}
+
+sioux_council = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = ITANCAN
+	}
+	
+	ruler_female = {
+		1 = ITANCAN
+	}
+	
+	trigger = {
+		culture_group = siouan
+		government = native_council
+	}
+}
+
+muskogee_council = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = MICCO
+	}
+	
+	ruler_female = {
+		1 = MICCO
+	}
+	
+	trigger = {
+		culture_group = muskogean
+		government = native_council
+	}
+}
+
+subject_muskogee_council = {
+	rank = {
+		1 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = MICALGI
+	}
+	
+	ruler_female = {
+		1 = MICALGI
+	}
+	
+	trigger = {
+		culture_group = muskogean
+		government = native_council
+		OR = {
+			is_protectorate = yes
+			is_subject = yes
+		}
+	}
+}
+
+shan_states = {
+	rank = {
+		1 = MUANG
+		2 = MUANG
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = SAOPHA
+		2 = SAOPHA
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = SAOPHA
+		2 = SAOPHA
+		3 = EMPRESS
+	}
+	trigger = {
+		primary_culture = shan
+		NOT = { tag = AVA }
+	}
+}

@@ -1,0 +1,28 @@
+government = feudal_monarchy
+primary_culture = georgian
+religion = orthodox
+technology_group = eastern
+capital = 2196
+government_rank = 1
+
+1444.11.01 = {
+	monarch = {
+		name = "Mamia"
+		dynasty = "Dadiani-Gurieli"
+		#death_date = 1469.1.1
+		adm = 0
+		dip = 1
+		mil = 3
+	}
+	heir = {
+		name = "Kakhaber"
+		monarch_name = "Kakhaber II"
+		dynasty = "Gurieli"
+		birth_date = 1444.11.1 # To stop heir from being 1000 years old.
+		death_date = 1483.1.1
+		claim = 75
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

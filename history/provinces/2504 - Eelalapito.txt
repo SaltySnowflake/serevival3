@@ -1,0 +1,54 @@
+# No previous file for Eelalapito
+
+culture = crow #shoshone
+religion = wakan_tanka
+capital = "Eelalapito"
+trade_goods = zinc
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = CRW
+	controller = CRW
+	add_core = CRW
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = CRW
+	controller = CRW
+	add_core = CRW
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = CRW
+	controller = CRW
+	add_core = CRW
+	is_city = yes
+}
+
+1810.1.1 = {
+	owner = CHY
+	controller = CHY
+	add_core = CHY
+	culture = cheyenne
+} #19th century native expansion
+1860.1.1 = { remove_core = CRW }

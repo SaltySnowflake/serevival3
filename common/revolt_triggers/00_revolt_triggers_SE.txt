@@ -1,0 +1,36 @@
+# Celtica
+CEL = {
+	always = no
+}
+
+# Rome
+ROM = {
+	always = no
+}
+
+# Latin Empire
+LAE = {
+	always = no
+}
+
+# Occitania
+OCC = {
+	is_core = OCC
+}
+
+# Italy
+ITL = {
+	always = no
+}
+
+# Kingdom of Ireland
+KOI = {
+	OR = {
+		is_core = KOI
+		owner = {
+			capital_scope = {
+				is_core = KOI
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+#2746 - Vidin
+
+owner = TUR
+controller = TUR
+culture = bulgarian
+religion = orthodox
+capital = "Vidin"
+trade_goods = grain
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = TUR
+add_core = VID
+
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+discovered_by = western
+
+1444.11.01 = { remove_core = TUR owner = VID add_local_autonomy = 0 }
+1444.11.11 = { add_core = BUL add_core = TUR owner = TUR add_local_autonomy = 0 }

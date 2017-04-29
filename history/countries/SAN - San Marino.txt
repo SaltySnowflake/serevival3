@@ -1,0 +1,15 @@
+government = roman_diarchy
+technology_group = western
+primary_culture = romagnan
+religion = catholic
+capital = 3702 #San Marino
+historical_friend = PAP
+
+1444.10.1 = {
+	monarch = {
+		name = "Antonio"
+		dynasty = "di Simone Belluzzi"
+		dip = 3
+		adm = 3
+		mil = 3
+	}

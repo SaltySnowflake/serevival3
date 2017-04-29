@@ -1,0 +1,4 @@
+discovered_by = ICE
+discovered_by = GNL
+discovered_by = THL
+1501.1.1 = { discovered_by = POR } # Gaspar Corte-Real

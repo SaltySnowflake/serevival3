@@ -1,0 +1,85 @@
+namespace = BtPLegacy_C_o_A_events
+
+#Written by Driaocht 16-10-26
+
+# Cleanup event removes autonomous kingdoms of the Crown of Aragon if owner is not Christian
+country_event = {
+	id = BtPLegacy_C_o_A_events.1
+	title = "BtPLegacy_C_o_A_events.EVTNAME1"
+	desc = "BtPLegacy_C_o_A_events.EVTDESC1"
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		NOT = { religion_group = christian }
+		OR = {
+			any_owned_province = { has_province_modifier = crown_of_aragon_minors_mallorca }
+			any_owned_province = { has_province_modifier = crown_of_aragon_minors_sardinia }
+			any_owned_province = { has_province_modifier = crown_of_aragon_minors_sicily }
+			any_owned_province = { has_province_modifier = crown_of_aragon_minors_valencia }
+			any_owned_province = { has_province_modifier = crown_of_aragon_minors_catalonia }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = { # Okay
+		name = "BtPLegacy_C_o_A_events.EVTOPTA1"
+		if = {
+			limit = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_mallorca } }
+			every_owned_province = {
+				limit = { has_province_modifier = crown_of_aragon_minors_mallorca }
+				remove_province_modifier = crown_of_aragon_minors_mallorca 
+				add_province_modifier = {
+					name = btpl_recently_integrated
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_sardinia } }
+			every_owned_province = {
+				limit = { has_province_modifier = crown_of_aragon_minors_sardinia }
+				remove_province_modifier = crown_of_aragon_minors_sardinia 
+				add_province_modifier = {
+					name = btpl_recently_integrated
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_sicily } }
+			every_owned_province = {
+				limit = { has_province_modifier = crown_of_aragon_minors_sicily }
+				remove_province_modifier = crown_of_aragon_minors_sicily 
+				add_province_modifier = {
+					name = btpl_recently_integrated
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_valencia } }
+			every_owned_province = {
+				limit = { has_province_modifier = crown_of_aragon_minors_valencia }
+				remove_province_modifier = crown_of_aragon_minors_valencia 
+				add_province_modifier = {
+					name = btpl_recently_integrated
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_catalonia } }
+			every_owned_province = {
+				limit = { has_province_modifier = crown_of_aragon_minors_catalonia }
+				remove_province_modifier = crown_of_aragon_minors_catalonia 
+				add_province_modifier = {
+					name = btpl_recently_integrated
+					duration = 3650
+				}
+			}
+		}
+	}
+}

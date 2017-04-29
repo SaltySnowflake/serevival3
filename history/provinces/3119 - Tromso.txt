@@ -1,0 +1,32 @@
+#3119 - Tromsø
+#Region - Scandinavia
+#Area - Northern Norway
+
+owner = SMI
+controller = SMI
+add_core = SMI
+culture = sapmi
+religion = finnish_pagan_reformed
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+trade_goods = whaling
+capital = "Tromsø"
+add_local_autonomy = 25
+is_city = yes
+
+discovered_by = western
+discovered_by = eastern
+
+1444.11.11 = { add_core = NOR owner = NOR religion = catholic add_local_autonomy = 13 }
+
+1450.1.1 = { culture = norwegian }
+1536.1.1 = { religion = protestant owner = DAN controller = DAN add_core = DAN }
+1814.1.14 = {
+	owner = SWE
+	revolt = { type = nationalist_rebels size = 0 }
+	controller = REB
+	remove_core = DAN
+} # Norway is ceded to Sweden following the Treaty of Kiel
+1814.5.17 = { revolt = {} owner = NOR controller = NOR } # Norway declares itself independent and elects Christian Frederik as king

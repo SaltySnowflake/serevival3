@@ -1,0 +1,22 @@
+government = feudal_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = cosmopolitan_french
+add_accepted_culture = wallonian
+add_accepted_culture = flemish
+religion = catholic
+capital = 89 # picardy
+fixed_capital = 89
+
+1444.1.1 = {
+	capital = 89
+	fixed_capital = 89
+	monarch = {
+		name = "Jean-Luc"
+		dynasty = "Picard"
+		birth_date = 1405.7.13
+		adm = 4
+		dip = 5
+		mil = 4
+	}
+}

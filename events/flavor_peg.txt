@@ -1,0 +1,131 @@
+namespace = flavor_peg
+
+# Dhammazedi
+
+country_event = {
+	id = flavor_peg.2
+	title = "flavor_peg.EVTNAME2"
+	desc = "flavor_peg.EVTDESC2"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = PEG
+		has_heir = no
+		NOT = { is_year = 1492 }
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "flavor_peg.EVTOPTA2"
+		define_heir = {
+			name = "Dhammazedi"
+			dynasty = "Wareru"
+			birth_date = 1412.1.1
+			adm = 4
+			dip = 4
+			mil = 3
+		}
+		add_karma = 20
+	}
+	option = {
+		name = "flavor_peg.EVTOPTB2"	
+		add_prestige = 10
+		define_advisor = {
+			skill = 2
+			type = theologian
+			discount = yes
+			name = "Dhammazedi"
+		}
+	}
+}
+
+
+# de Brito in Arakan
+country_event = {
+	id = flavor_peg.3
+	title = "flavor_peg.EVTNAME3"
+	desc = "flavor_peg.EVTDESC3"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARK
+		is_year = 1586
+		NOT = { is_year = 1613 }
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = "flavor_peg.EVTOPTA3"
+		set_country_flag = de_brito
+		define_advisor = {
+			type = grand_captain
+			skill = 2
+			discount = yes
+			name = "Filipe de Brito"
+		}
+		random_owned_province = {
+			limit = {
+				has_port = yes
+				is_core = ROOT
+				controlled_by = ROOT
+			}
+			light_ship = ROOT
+			light_ship = ROOT
+			light_ship = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT			
+		}
+	}
+	option = {
+		name = "flavor_peg.EVTOPTB3"
+		add_prestige = -1
+	}
+}
+
+# de Brito declares independence in Syriam
+
+country_event = {
+	id = flavor_peg.4
+	title = "flavor_peg.EVTNAME4"
+	desc = "flavor_peg.EVTDESC4"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARK
+		has_country_flag = de_brito
+		NOT = { is_year = 1630 }
+		owns = 586
+		NOT = { exists = PEG }
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	immediate = {
+		if = {
+			limit = { NOT = { 586 = { is_core = PEG } } }
+			586 = { add_core = PEG }
+		}
+	}
+	option = {
+		name = "flavor_peg.EVTOPTA4"
+		kill_advisor = grand_captain
+		586 = {
+			spawn_rebels = {
+				type = nationalist_rebels
+				leader = "Filipe de Brito"
+				friend = PEG
+				size = 2
+				win = yes
+			}
+		}
+	}
+}

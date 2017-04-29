@@ -1,0 +1,9 @@
+government = ghazi_state
+government_rank = 1
+primary_culture = turkish
+religion = sunni
+technology_group = ottoman
+capital = 2298
+
+
+#May fill in later, but very unlikely anyone will care

@@ -1,0 +1,15 @@
+government = native_council
+primary_culture = aleutian
+religion = angakkunngurniq
+technology_group = north_american
+capital = 979 # aleut
+
+1444.1.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

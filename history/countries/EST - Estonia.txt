@@ -1,0 +1,21 @@
+government = feudal_monarchy
+government_rank = 1
+primary_culture = estonian
+religion = catholic
+technology_group = western
+historical_friend = FIN
+capital = 36 #Reval
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+1542.1.1 = {
+	religion = protestant
+}

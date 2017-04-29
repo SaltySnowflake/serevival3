@@ -1,0 +1,3 @@
+1031 = "Soya"
+1847 = "Iskarun"
+1852 = "Tokapchi"

@@ -1,0 +1,66 @@
+#3530 - Kurils
+
+owner = KFA
+controller = KFA
+add_core = KFA
+culture = ainu
+religion = kamui
+capital = "Otomari"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes
+discovered_by = ANU
+discovered_by = JAP
+discovered_by = AMA
+discovered_by = ASA
+discovered_by = CSK
+discovered_by = DTE
+discovered_by = HJO
+discovered_by = HSK
+discovered_by = HTK
+discovered_by = IKE
+discovered_by = IMG
+discovered_by = MAE
+discovered_by = MRI
+discovered_by = ODA
+discovered_by = OTM
+discovered_by = OUC
+discovered_by = SBA
+discovered_by = SMZ
+discovered_by = TKD
+discovered_by = TKG
+discovered_by = UES
+discovered_by = YMN
+
+discovered_by = ASN
+discovered_by = CBA
+discovered_by = KBK
+discovered_by = KGK
+discovered_by = KNO
+discovered_by = KKC
+discovered_by = KSI
+discovered_by = ISK
+discovered_by = ITO
+discovered_by = MKM
+discovered_by = MGM
+discovered_by = MYI
+discovered_by = NNB
+discovered_by = SHN
+discovered_by = STK
+discovered_by = TKI
+discovered_by = TTI
+discovered_by = TAC
+
+discovered_by = IKA
+discovered_by = HAA
+discovered_by = SSA
+discovered_by = WAA
+discovered_by = KUA
+discovered_by = KFA
+
+1640.1.1  = { discovered_by = RUS } # Ivan Moskvitin
+1704.1.1  = { add_core = JAP }
+1787.1.1  = { discovered_by = FRA } # Jean-Francois de La Pérouse

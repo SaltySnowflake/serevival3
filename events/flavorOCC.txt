@@ -1,0 +1,66 @@
+########################################
+# Events for Occitania
+#
+# written by Neprut
+########################################
+
+namespace = flavor_occ
+
+# Goverment Form
+country_event = {
+	id = flavor_occ.1
+	title = flavor_occ.1.t
+	desc = flavor_occ.1.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_occ.1.a
+		ai_chance = { factor = 60 }
+		change_government = enlightened_despotism
+	}
+
+	option = {
+		name = flavor_occ.1.b
+		ai_chance = { 
+			factor = 25 
+			modifier = {
+				factor = 5
+				faction_in_power = trobador_republican
+			}
+		}
+		change_government = administrative_republic
+	}
+
+	option = {
+		name = flavor_occ.1.c
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 5
+				faction_in_power = trobador_republican
+			}
+			modifier = {
+				factor = 5
+				faction_influence = {
+					faction = trobador_republican
+					influence = 40
+				}
+			}
+		}
+		change_government = merchant_republic
+	}
+	
+	option = {
+		name = flavor_occ.1.e
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				factor = 5
+				religion = cathar
+			}
+		}
+		change_government = theocratic_government
+	}
+}

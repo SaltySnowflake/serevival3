@@ -1,0 +1,58 @@
+# No previous file for Guamares
+
+culture = chichimecan #piman
+religion = kachina
+capital = "Guamares"
+trade_goods = maize
+hre = no
+base_tax = 2 #1
+base_production = 2 #1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+discovered_by = mesoamerican
+
+
+1444.11.2 = {
+	owner = WWO
+	controller = WWO
+	add_core = WWO
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = WWO
+	controller = WWO
+	add_core = WWO
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = WWO
+	controller = WWO
+	add_core = WWO
+	is_city = yes
+}
+
+1548.1.1 = {
+	remove_core = WWO
+	discovered_by = SPA 
+	owner = SPA 
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	capital = "Guanajuato"
+	religion = catholic 
+}
+1810.9.16 = { owner = MEX add_core = MEX controller = MEX } # Mexican War of Independence

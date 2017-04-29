@@ -1,0 +1,20 @@
+#3009 - Hyuga
+
+owner = ITO
+controller = ITO
+culture = kyushuan
+religion = shinto
+capital = "Miyakonojo"
+trade_goods = tea
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 3
+add_core = ITO
+add_core = OTM
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU

@@ -1,0 +1,49 @@
+#Trobador
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_faction_bg_trobador_occitanist"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_trobador_occitanist"	
+		texturefile = "gfx//interface//trobador_occitanist.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_trobador_castillian"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_trobador_castillian"	
+		texturefile = "gfx//interface//trobador_castillian.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_trobador_republican"	
+		texturefile = "gfx//interface//faction_green_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_trobador_republican"	
+		texturefile = "gfx//interface//trobador_republican.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_trobador_french"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_trobador_french"	
+		texturefile = "gfx//interface//trobador_french.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_trobador_aragonese"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_trobador_aragonese"	
+		texturefile = "gfx//interface//trobador_aragonese.tga"
+	}
+}

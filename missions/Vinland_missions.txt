@@ -1,0 +1,341 @@
+vinland_vassal = {
+	
+	type = country
+
+	
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+				
+		culture_group = scandinavian
+		is_subject = no
+		dip_tech = 12
+		owns_or_vassal_of = 17 #Akershus
+		owns_or_vassal_of = 23 # Bergenshus
+		owns_or_vassal_of = 20 # Trondelag
+		NOT = { has_country_modifier = military_vassalization }
+		exists = VIN
+		VIN = {
+			AND = {
+				is_subject = no
+				has_country_flag = greenland_nor_claim
+			}
+		}
+		NOT = { tag = GNL }
+		NOT = { tag = VIN }
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { exists = VIN }
+			VIN = {
+				AND = {
+					is_subject = yes
+					NOT = { vassal_of = ROOT }
+				}
+			}
+			NOT = {
+				has_casus_belli = {
+					type = cb_vassalize_mission
+					target = VIN
+				}
+			}
+		}
+	}
+	success = {
+		VIN = { vassal_of = ROOT }
+	}
+	chance = {
+		factor = 3000
+		modifier = {
+			factor = 0
+			AND = {
+				exists = GNL
+				GNL = { is_subject = no }
+			}
+		}
+	}
+	
+	immediate = {
+		VIN = {
+			country_event = {
+				id = vinland.4
+				days = 1
+			}
+			clr_country_flag = greenland_nor_claim
+		}
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 300
+			target = VIN
+		}
+	}
+	abort_effect = {
+		remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = VIN
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = military_vassalization
+			duration = 3650
+		}
+		hidden_effect = {
+			remove_casus_belli = {
+				type = cb_vassalize_mission
+				target = VIN
+			}
+		}
+	}
+}
+
+vinland_xxa_vassal = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		culture_group = scandinavian
+		is_subject = no
+		dip_tech = 12
+		owns_or_vassal_of = 17 #Akershus
+		owns_or_vassal_of = 23 # Bergenshus
+		owns_or_vassal_of = 20 # Trondelag
+		NOT = { has_country_modifier = military_vassalization }
+		exists = GNL
+		GNL = {
+			AND = {
+				is_subject = no
+				has_country_flag = greenland_nor_claim
+			}
+		}
+		NOT = { tag = GNL }
+		NOT = { tag = VIN }
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { exists = GNL }
+			GNL = {
+				AND = {
+					is_subject = yes
+					NOT = { vassal_of = ROOT }
+				}
+			}
+			NOT = {
+				has_casus_belli = {
+					type = cb_vassalize_mission
+					target = GNL
+				}
+			}
+		}
+	}
+	success = {
+		GNL = { vassal_of = ROOT }
+	}
+	chance = {
+		factor = 3000
+	}
+	immediate = {
+		GNL = {
+			country_event = {
+				id = vinland.4
+				days = 1
+			}
+			clr_country_flag = greenland_nor_claim
+		}
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 300
+			target = GNL
+		}
+	}
+	abort_effect = {
+		remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = GNL
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = military_vassalization
+			duration = 1825
+		}
+		hidden_effect = {
+			remove_casus_belli = {
+				type = cb_vassalize_mission
+				target = GNL
+			}
+		}
+	}
+}
+
+vinland_capital = {
+
+	type = country
+
+	
+	category = ADM
+	ai_mission = yes
+	
+	allow = {
+		tag = GNL
+		capital_scope = { province_id = 1104 }
+		any_owned_province = {
+			OR = {
+				colonial_region = colonial_canada
+				colonial_region = colonial_hudson_bay
+				colonial_region = colonial_newfoundland
+				colonial_region = colonial_acadia
+			}
+			
+		}
+	}
+	
+	abort = { NOT = { owns = 1104 } }
+	
+	success = {
+		capital_scope = {
+			OR = {
+				colonial_region = colonial_canada
+				colonial_region = colonial_hudson_bay
+				colonial_region = colonial_newfoundland
+				colonial_region = colonial_acadia
+			}
+			NOT = { area = greenland_area }
+			is_core = ROOT
+		}
+	}
+	
+	chance = { factor = 5000 }
+	
+	effect = {
+		add_country_modifier = {
+			name = "vinland_colonization"
+			duration = 5475
+		}
+	}
+}
+
+vinland_eiriksfjord = {
+	
+	type = country
+
+	
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+				
+		is_year = 1525
+		tag = VIN
+		num_of_cities = 10
+		NOT = { owns = 1104 }
+		is_subject = no
+		NOT = { exists = GNL }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		owns = 1104
+	}
+	chance = {
+		factor = 3000
+	}
+	
+	immediate = {
+		1104 = { add_claim = ROOT }
+	}
+	abort_effect = {
+		add_prestige = -5
+	}
+	effect = {
+		add_prestige = 5
+		add_navy_tradition = 5
+	}
+}
+
+vinland_vestbygden = {
+	
+	type = country
+
+	
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+				
+		tag = VIN
+		num_of_cities = 10
+		owns = 1104
+		1104 = { NOT = { has_province_flag = greenland_lose_game } }
+		NOT = { owns = 1105 }
+		1105 = { is_empty = no }
+		is_subject = no
+		NOT = { exists = GNL }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		owns = 1105
+	}
+	chance = {
+		factor = 3000
+	}
+	
+	immediate = {
+		1105 = { add_claim = ROOT }
+	}
+	abort_effect = {
+		add_prestige = -5
+	}
+	effect = {
+		add_prestige = 5
+	}
+}
+
+vinland_vestbygden_colony = {
+
+	type = country
+
+	
+	category = DIP
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+				
+		tag = VIN
+		num_of_cities = 10
+		owns = 1104
+		1104 = { NOT = { has_province_flag = greenland_lose_game } }
+		1105 = { is_empty = yes }
+		is_subject = no
+		NOT = { exists = GNL }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		owns = 1105
+	}
+	chance = {
+		factor = 3000
+	}
+	effect = {
+		add_country_modifier = {
+			name = "colonial_enthusiasm"
+			duration = 1875
+		}
+	}
+}

@@ -1,0 +1,147 @@
+##########################################################################
+#####                             DENMARK                            #####
+##########################################################################
+
+### DANISH
+
+# DAN Denmark
+entity = { clone = "SAX_INFANTRY_1"		        name = "DAN_INFANTRY_1" }
+entity = { clone = "SAX_CAVALRY_1" 		        name = "DAN_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "DAN_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "DAN_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "DAN_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "DAN_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "DAN_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "DAN_CAVALRY_4" }
+
+# JUT Jutland
+entity = { clone = "SAX_INFANTRY_1"		        name = "JUT_INFANTRY_1" }
+entity = { clone = "SAX_CAVALRY_1" 		        name = "JUT_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "JUT_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "JUT_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "JUT_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "JUT_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "JUT_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "JUT_CAVALRY_4" }
+
+# ZEA Zealand
+entity = { clone = "SAX_INFANTRY_1"		        name = "ZEA_INFANTRY_1" }
+entity = { clone = "SAX_CAVALRY_1" 		        name = "ZEA_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "ZEA_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "ZEA_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "ZEA_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "ZEA_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "ZEA_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "ZEA_CAVALRY_4" }
+
+# SCN Scania
+entity = { clone = "SAX_INFANTRY_1"		        name = "SCN_INFANTRY_1" }
+entity = { clone = "SAX_CAVALRY_1" 		        name = "SCN_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "SCN_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "SCN_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "SCN_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "SCN_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "SCN_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "SCN_CAVALRY_4" }
+
+### NORSE
+
+# NOR Norway
+entity = { clone = "irishgfx_INFANTRY_1"		name = "NOR_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "NOR_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "NOR_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "NOR_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "NOR_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "NOR_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "NOR_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "NOR_CAVALRY_4" }
+
+# JMT Jamtland
+entity = { clone = "irishgfx_INFANTRY_1"		name = "JMT_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "JMT_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "JMT_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "JMT_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "JMT_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "JMT_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "JMT_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "JMT_CAVALRY_4" }
+
+# ORK Orkney
+entity = { clone = "norsegfx_INFANTRY_1"		name = "ORK_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "ORK_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "ORK_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "ORK_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "ORK_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "ORK_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "ORK_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "ORK_CAVALRY_4" }
+
+# SHT Shetlands
+entity = { clone = "norsegfx_INFANTRY_1"		name = "SHT_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "SHT_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "SHT_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "SHT_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "SHT_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "SHT_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "SHT_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "SHT_CAVALRY_4" }
+
+# FAR Faroes
+entity = { clone = "norsegfx_INFANTRY_1"		name = "FAR_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "FAR_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "FAR_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "FAR_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "FAR_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "FAR_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "FAR_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "FAR_CAVALRY_4" }
+
+# JMN Jan Mayen
+entity = { clone = "norsegfx_INFANTRY_1"		name = "JMN_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "JMN_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "JMN_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "JMN_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "JMN_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "JMN_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "JMN_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "JMN_CAVALRY_4" }
+
+# ICE Iceland
+entity = { clone = "norsegfx_INFANTRY_1"		name = "ICE_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "ICE_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "ICE_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "ICE_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "ICE_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "ICE_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "ICE_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "ICE_CAVALRY_4" }
+
+# GNL Greenland
+entity = { clone = "norsegfx_INFANTRY_1"		name = "GNL_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "GNL_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "GNL_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "GNL_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "GNL_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "GNL_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "GNL_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "GNL_CAVALRY_4" }
+
+# VIN Vinland
+entity = { clone = "norsegfx_INFANTRY_1"		name = "VIN_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "VIN_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "VIN_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "VIN_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "VIN_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "VIN_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "VIN_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "VIN_CAVALRY_4" }
+
+# JOM Jomsvikings
+entity = { clone = "norsegfx_INFANTRY_1"		name = "JOM_INFANTRY_1" }
+entity = { clone = "norsegfx_CAVALRY_1" 		name = "JOM_CAVALRY_1" }
+entity = { clone = "norsegfx_INFANTRY_2"		name = "JOM_INFANTRY_2" }
+entity = { clone = "norsegfx_CAVALRY_2" 		name = "JOM_CAVALRY_2" }
+entity = { clone = "norsegfx_INFANTRY_3"		name = "JOM_INFANTRY_3" }
+entity = { clone = "norsegfx_CAVALRY_3" 		name = "JOM_CAVALRY_3" }
+entity = { clone = "norsegfx_INFANTRY_4"		name = "JOM_INFANTRY_4" }
+entity = { clone = "norsegfx_CAVALRY_4" 		name = "JOM_CAVALRY_4" }

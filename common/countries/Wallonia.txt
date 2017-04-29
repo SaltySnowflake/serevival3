@@ -1,0 +1,97 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 215  64  59 }
+
+historical_idea_groups = {
+	quantity_ideas
+	trade_ideas
+	innovativeness_ideas
+	offensive_ideas
+	exploration_ideas
+	diplomatic_ideas
+	defensive_ideas
+	spy_ideas
+}
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	french_bluecoat
+	french_dragoon
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Jean #0" = 50
+	"Charles #0" = 30
+	"Philippe #0" = 20
+	"Guy #0" = 20
+	"Gérard #0" = 20
+	"Guillaume #0" = 10
+	"André #0" = 10
+	"Henri #0" = 10
+	"Adolphe #0" = 0
+	"Alexandre #0" = 0
+	"Antoine #0" = 0
+	"Bernard #0" = 0
+	"Boudewijn #0" = 0
+	"Érard #0" = 0
+	"Eugène #0" = 0
+	"François #0" = 0
+	"François-Antoine #0" = 0
+	"François-Charles #0" = 0
+	"Gaspard #0" = 0
+	"Georges #0" = 0
+	"Jean-Claude #0" = 0
+	"Jean-Maurice #0" = 0
+	"Jessé #0" = 0
+	"Jéróme #0" = 0
+	"Joseph-Clément #0" = 0
+	"Jules #0" = 0
+	"Léon #0" = 0
+	"Louis #0" = 0
+	"Melchior #0" = 0
+	"Pierre #0" = 0
+	"Raphael #0" = 0
+	"Robert #0" = 0
+	"Théoduin #0" = 0
+	"Zénobe #0" = 0
+	"Zénon #0" = 0
+	
+	"Irena #0" = -1
+	"Jozefien #0" = -1
+	"Lysanne #0" = -1
+}
+
+leader_names = {
+	Aubry Bouchet Chauchet Digneffe Fabry
+	Gérard Hauzeur Henkart Josias Nannan
+	Bastin Bauduinet Bitha Cloet Colson
+	"de Cuire" "da Franquinet" "de Donnea" 
+	"de Finesse" "de Haxhe" "de Avesnes" "de Namur" 
+	"de Lacu" "de Spirlet" Galindez Haeck 
+	Lambermont Liderie Paulet Philippens Reul 
+	Reynier Vanhove "la Vignette" 
+}
+
+ship_names = {
+	"Reginar I" Sigard "Reginar II" Godfrey
+	"Reginar III" Richar Reginald "Godfrey II"
+	Herman Amalric Warin Arnulf "Baldvin I"
+	"Baldvin II"
+}
+
+army_names = {
+	"Armée del $PROVINCE$"  }
+
+fleet_names = {  "Escarde del $PROVINCE$" 
+	 }

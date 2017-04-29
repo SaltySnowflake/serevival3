@@ -1,0 +1,60 @@
+# No previous file for Hualapai
+
+culture = cahita
+religion = kachina
+capital = "Navajoa"
+trade_goods = maize			#one of the most productive agricultural regions in Mexico.
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1444.11.2 = {
+	owner = WWH
+	controller = WWH
+	add_core = WWH
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = WWH
+	controller = WWH
+	add_core = WWH
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = WWH
+	controller = WWH
+	add_core = WWH
+	is_city = yes
+}
+
+
+1536.1.1 = { discovered_by = SPA } # Diego de Guzmán, a Spaniard, became the first known European to reach the valley
+
+1614.1.1 = {
+	remove_core = WWH
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+}	# first Jesuit missionaries started settling in the region in 1614.
+
+1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence

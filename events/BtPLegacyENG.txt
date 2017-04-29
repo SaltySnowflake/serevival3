@@ -1,0 +1,56 @@
+namespace = BtPLegacy_flavour_ENG
+
+#Written by Eris
+#Modified by Driaocht 16-9-28
+
+# Anthony Cooke
+country_event = {
+	id = BtPLegacy_flavour_ENG.1
+	title = "BtPLegacyENG.EVTNAME1"
+	desc = "BtPLegacyENG.EVTDESC1"
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1534	#30 years old
+		NOT = { is_year = 1553 } #Imprisoned
+		OR = {
+			AND = {
+				culture_group = british
+				NOT = { exists = GBR }
+			}
+			tag = GBR
+		}
+		NOT = { advisor_exists = btp_adv_eng.1 }
+		owns = 238 #Essex
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = { # An Excellent Minister!
+		name = "EXCELLENTMINISTER"
+		if = {
+			limit = { NOT = { heir_adm = 6 } }
+			change_heir_adm = 1	#Cooke is believed to have been a tutor and companion to Edward VI
+		}
+		if = {
+			limit = { 
+				OR = {
+					heir_adm = 6
+					has_heir = no
+				}
+			}
+			add_adm_power = 50	#get adm points if heir is already 6 adm
+		}
+		define_advisor = {
+			type = theologian
+			name = "Anthony Cooke"
+			discount = yes
+			location = 238 #Essex
+			skill = 2
+		}
+	}
+}

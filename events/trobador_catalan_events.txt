@@ -1,0 +1,70 @@
+namespace = trobador_catalan
+
+country_event = {
+	id = trobador_catalan.1
+	title = "trobador_catalan_1_title" # Occitans ask for help
+	desc = "trobador_catalan_1_desc"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		tag = ARA
+		any_country = { 
+			has_country_flag = asked_aragon_help 
+			vassal_of = FRA
+		}
+		has_country_flag = occitans_asked_for_help
+	}
+
+	mean_time_to_happen = {
+		months = 12 # But first time is triggered through mission
+	}
+
+	option = {  
+		name = "trobador_catalan_1_opta" # War it is
+		ai_chance = { factor = 0 } # Not sure the AI can handle this properly
+		add_prestige = 10
+		random_country = {
+			limit = {
+				has_country_flag = asked_aragon_help
+				vassal_of = FRA
+			}
+			every_country = {
+				limit = {
+					has_country_flag = asked_aragon_help
+					vassal_of = FRA
+					NOT = { tag = PREV }
+				}
+				create_alliance = PREV
+			}
+			create_alliance = ARA
+			declare_war_with_cb = {
+				who = FRA
+				casus_belli = cb_independence_war
+			}
+			# will those alliances be broken before call to arm? Worked once but maybe it depends on alphabetical order.
+			# should see how set_ai_attitude works, to put those vassals in hostile
+		}
+		clr_country_flag = occitans_asked_for_help
+	}
+	option = {  
+		name = "trobador_catalan_1_optb" # We need some time for planning
+		ai_chance = { factor = 0 } # Not sure the AI can handle this properly
+		add_prestige = -10
+		set_country_flag = occitans_asked_for_help
+	}
+	option = {
+		name = "trobador_catalan_1_optc"	# Refuse
+		add_prestige = -10
+		clr_country_flag = occitans_asked_for_help
+		every_country = {
+			limit = {
+				has_country_flag = asked_aragon_help
+				vassal_of = FRA
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_displeased
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+government = feudal_monarchy
+primary_culture = sumatran
+religion = hinduism
+technology_group = chinese
+capital = 623
+
+1426.1.1 = {
+	monarch = {
+		name = "Agung"
+		dynasty = "Tirtayasa"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

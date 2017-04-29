@@ -1,0 +1,15 @@
+government = feudal_monarchy
+primary_culture = sumatran
+religion = sunni
+technology_group = chinese
+capital = 2677
+
+1439.10.27 = {
+	monarch = {
+		name = "Taha"
+		dynasty = "Tsafioe 'd-din"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

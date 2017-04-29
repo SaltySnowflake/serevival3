@@ -1,0 +1,245 @@
+country_decisions = {
+
+	# switch between FRA and ARA as an overlord
+	get_another_protector_FRA2ARA = {
+		potential = {
+			primary_culture = occitano
+			is_subject = yes
+			vassal_of = FRA
+		}
+		allow = {
+			is_at_war = no
+			vassal_of = FRA
+			NOT = { truce_with = FRA }
+			exists = ARA
+			NOT = { has_opinion = { who = FRA value = 0 } }
+			has_opinion = { who = ARA value = 100 }
+			faction_in_power = trobador_aragonese
+		}
+		effect = {
+			FRA = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_displeased
+				}
+				free_vassal = ROOT
+				add_casus_belli = {
+					type = cb_disloyal_vassal
+					months = 120
+					target = ROOT
+				}
+				add_prestige = -20
+			}
+			ARA = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+				vassalize = ROOT
+				add_prestige = 20
+			}
+			add_prestige = -5
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_opinion = { who = FRA value = -50 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_opinion = { who = ARA value = 150 } }
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { has_opinion = { who = ARA value = 175 } }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_opinion = { who = ARA value = 190 } }
+			}
+		}
+	}
+
+	get_another_protector_ARA2FRA = {
+		potential = {
+			primary_culture = occitano
+			is_subject = yes
+			vassal_of = ARA
+		}
+		allow = {
+			is_at_war = no
+			vassal_of = ARA
+			NOT = { truce_with = ARA }
+			exists = FRA
+			NOT = { has_opinion = { who = ARA value = 0 } }
+			has_opinion = { who = FRA value = 100 }
+			faction_in_power = trobador_french
+		}
+		effect = {
+			ARA = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_displeased
+				}
+				free_vassal = ROOT
+				add_casus_belli = {
+					type = cb_disloyal_vassal
+					months = 120
+					target = ROOT
+				}
+				add_prestige = -20
+			}
+			FRA = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+				vassalize = ROOT
+				add_prestige = 20
+			}
+			add_prestige = -5
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_opinion = { who = ARA value = -50 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_opinion = { who = FRA value = 150 } }
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { has_opinion = { who = FRA value = 175 } }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_opinion = { who = FRA value = 190 } }
+			}
+		}
+	}
+	
+	# switch between CAS and ARA as an overlord
+	get_another_protector_CAS2ARA = {
+		potential = {
+			primary_culture = catala
+			is_subject = yes
+			vassal_of = CAS
+		}
+		allow = {
+			is_at_war = no
+			vassal_of = CAS
+			NOT = { truce_with = CAS }
+			exists = ARA
+			NOT = { has_opinion = { who = CAS value = 0 } }
+			has_opinion = { who = ARA value = 100 }
+			faction_in_power = trobador_aragonese
+		}
+		effect = {
+			CAS = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_displeased
+				}
+				free_vassal = ROOT
+				add_casus_belli = {
+					type = cb_disloyal_vassal
+					months = 120
+					target = ROOT
+				}
+				add_prestige = -20
+			}
+			ARA = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+				vassalize = ROOT
+				add_prestige = 20
+			}
+			add_prestige = -5
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_opinion = { who = CAS value = -50 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_opinion = { who = ARA value = 150 } }
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { has_opinion = { who = ARA value = 175 } }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_opinion = { who = ARA value = 190 } }
+			}
+		}
+	}
+
+	get_another_protector_ARA2CAS = {
+		potential = {
+			primary_culture = catala
+			is_subject = yes
+			vassal_of = ARA
+		}
+		allow = {
+			is_at_war = no
+			vassal_of = ARA
+			NOT = { truce_with = ARA }
+			exists = CAS
+			NOT = { has_opinion = { who = ARA value = 0 } }
+			has_opinion = { who = CAS value = 100 }
+			faction_in_power = trobador_castillian
+		}
+		effect = {
+			ARA = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_displeased
+				}
+				free_vassal = ROOT
+				add_casus_belli = {
+					type = cb_disloyal_vassal
+					months = 120
+					target = ROOT
+				}
+				add_prestige = -20
+			}
+			CAS = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+				vassalize = ROOT
+				add_prestige = 20
+			}
+			add_prestige = -5
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_opinion = { who = ARA value = -50 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_opinion = { who = CAS value = 150 } }
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { has_opinion = { who = CAS value = 175 } }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_opinion = { who = CAS value = 190 } }
+			}
+		}
+	}
+
+}

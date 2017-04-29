@@ -1,0 +1,37 @@
+#1755 - Ustyug
+#Region - Russia
+#Area - Pomorye
+
+owner = RST			# Was part of Rostov in original BtP, note -was part of Ustyug principality, annexed by Muscovy in 1474-, but I can't confirm this, appears to have been a highly autonomous fringe of Moscow by this point, or perhaps 'uncolonised', 
+controller = RST		# based on some quick wiki research. Calling it Moscow for now, though may return it to Rostov pending confirmation of Rostov's influence over the area. Does appear to have been under Rostov-Suzdal principality in the 11th century.
+culture = russian 
+religion = orthodox
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = fur
+base_manpower = 2
+capital = "Ustyug"
+is_city = yes
+add_core = RST
+add_core = NOV # Novgorodian claims
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = GOL
+discovered_by = nomad_group
+
+1444.11.01 = { remove_core = NOV }
+1444.11.11 = { add_core = NOV }
+
+1474.1.1 = {
+	owner = MOS
+	controller = MOS
+	add_core = MOS
+	remove_core = RST
+}
+1478.1.15 = {	remove_core = NOV } # Novgorod conquered
+1503.4.1 = {	owner = RUS controller = RUS add_core = RUS remove_core = MOS }
+1550.1.1 = { capital = "Veliky Ustyug" }
+1598.1.7 = { unrest = 5 } # "Time of troubles"
+1613.3.3 = { unrest = 0 } # Order returned, Romanov dynasty

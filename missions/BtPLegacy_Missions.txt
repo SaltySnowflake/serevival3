@@ -1,0 +1,536 @@
+#(Completely re)Written by Draiocht 16-12-9
+
+#The requested and highly anticipated gentle push to form GBR
+btpl_unite_britain = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		OR = {
+			is_year = 1600			#historical union in 1603
+			AND = {
+				tag = ENG
+				marriage_with = SCO
+			}
+			AND = {
+				tag = SCO
+				marriage_with = ENG
+			}
+		}
+		NOT = { exists = GBR }
+		AND = {
+			exists = ENG
+			exists = SCO
+		}
+		is_subject = no
+		OR = {
+			AND = {
+				tag = ENG
+				total_development = SCO
+				SCO = {
+					is_subject = no
+					NOT = { government = imperial_city }
+					NOT = { num_of_cities = ROOT }
+					total_development = 55			#55 dev is roughly 2/3 of full Scottish dev, under 55 dev use vanilla vassalize_scotland mission
+					NOT = { total_development = 90 }			#Mission not available if 10 percent over full normal dev
+				}
+				NOT = { truce_with = SCO }
+				NOT = { war_with = SCO }
+			}
+			AND = {
+				tag = SCO
+				total_development = ENG
+				ENG = {
+					is_subject = no
+					NOT = { government = imperial_city }
+					NOT = { num_of_cities = ROOT }
+					total_development = 118			#118 dev is roughly 2/3 of full English dev, under 118 dev use the new vassalize england mission below
+					NOT = { total_development = 195 }			#Mission not available if 10 percent over full normal dev
+				}
+				NOT = { truce_with = ENG }
+				NOT = { war_with = ENG }
+			}
+		}
+	}
+	abort = {
+		OR = {
+			ENG = { is_subject = yes }
+			SCO = { is_subject = yes }
+			NOT = { exists = ENG }
+			NOT = { exists = SCO }
+			AND = {
+				tag = ENG
+				NOT = {
+					has_casus_belli = {
+						type = cb_restore_personal_union
+						target = SCO
+					}
+				}
+			}
+			AND = {
+				tag = SCO
+				NOT = {
+					has_casus_belli = {
+						type = cb_restore_personal_union
+						target = ENG
+					}
+				}
+			}
+		}
+	}
+	success = {
+		OR = {
+			AND = {
+				tag = ENG
+				SCO = { junior_union_with = ENG }
+			}
+			AND = {
+				tag = SCO
+				ENG = { junior_union_with = SCO }
+			}
+		}
+	}
+	chance = {
+		factor = 3000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 5
+		}
+	}
+	immediate = {
+		if ={
+			limit = { tag = ENG }
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				months = 120
+				target = SCO
+			}
+		}
+		if ={
+			limit = { tag = SCO }
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				months = 120
+				target = ENG
+			}
+		}
+	}
+	abort_effect = {
+		if ={
+			limit = { tag = ENG }
+			remove_casus_belli = {
+				type = cb_restore_personal_union
+				months = 120
+				target = SCO
+			}
+		}
+		if ={
+			limit = { tag = SCO }
+			remove_casus_belli = {
+				type = cb_restore_personal_union
+				months = 120
+				target = ENG
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		hidden_effect = {
+			if ={
+				limit = { tag = ENG }
+				remove_casus_belli = {
+					type = cb_restore_personal_union
+					months = 120
+					target = SCO
+				}
+			}
+			if ={
+				limit = { tag = SCO }
+				remove_casus_belli = {
+					type = cb_restore_personal_union
+					months = 120
+					target = ENG
+				}
+			}
+		}
+	}
+}
+
+#Flipping the tables on England, mostly because it is easy to do and I like symmetry
+btpl_vassalize_england = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		OR = {
+			tag = SCO
+			tag = GBR
+		}
+		is_subject = no
+		exists = ENG
+		ENG = {
+			is_subject = no
+			NOT = { num_of_cities = ROOT }
+			NOT = { total_development = 118 }	#118 dev is roughly 2/3 of full English dev, over 118 dev use new PU mission by Draiocht
+			NOT = { government = imperial_city }
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { exists = ENG }
+			ENG = { is_subject = yes }
+			NOT = {
+				has_casus_belli = {
+					type = cb_vassalize_mission
+					target = ENG
+				}
+			}
+		}
+	}
+	success = {
+		ENG = { vassal_of = ROOT }
+	}
+	chance = {
+		factor = 3000
+		modifier = {
+			factor = 2
+			MIL = 4
+		}
+		modifier = {
+			factor = 2
+			MIL = 5
+		}
+	}
+	immediate = {
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 300
+			target = ENG
+		}
+	}
+	abort_effect = {
+		remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = ENG
+		}
+	}
+	effect = {
+		add_prestige = 10
+		hidden_effect = {
+			remove_casus_belli = {
+				type = cb_vassalize_mission
+				target = ENG
+			}
+		}
+	}
+}
+
+#New Mission to encourage conditons required for the new Constantinople recovering event
+byzantium_holds_the_line = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			province_id = 316	#Nikomedeia
+			province_id = 149	#Edirne
+			province_id = 3170	#Kirkkilise
+		}
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		tag = BYZ
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			NOT = { owns = 149 }	#Edirne
+			NOT = { owns = 316 }	#Nikomedeia
+			NOT = { owns = 3170 }	#Kirkkilise
+		}
+		NOT = { has_country_flag = BYZ_held_the_line }
+		NOT = { has_country_modifier = byzantium_resurgent }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 20000			#Want this to be the first military mission for BYZ
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = BYZ_held_the_line
+		add_stability = 1
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+	}
+}
+
+recover_thrace_btpl = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		area = thrace_area
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		tag = BYZ
+		is_subject = no
+		NOT = { owns = 151 }		# Only get mission if byz has lost constantinople, otherwise want the new hold the line mission
+		NOT = { num_of_cities = 10 }
+		NOT = { has_country_modifier = byzantium_resurgent }
+		NOT = { has_country_flag = retook_thrace_byz_btpl }
+		is_at_war = no
+		any_province = {
+			area = thrace_area
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 20000			#Priority 0
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = retook_thrace_byz_btpl
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+	}
+}
+
+wayward_trebizond_btpl = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		NOT = { has_country_modifier = military_vassalization }
+		tag = BYZ
+		exists = TRE
+		is_subject = no
+		TRE = {
+			is_subject = no
+			is_neighbor_of = ROOT
+			NOT = { num_of_cities = ROOT }
+			NOT = { total_development = 100 }
+			NOT = { government = imperial_city }
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { exists = TRE }
+			TRE = {
+				is_subject = yes
+			}
+			NOT = {
+				has_casus_belli = {
+					type = cb_vassalize_mission
+					target = TRE
+				}
+			}
+		}
+	}
+	success = {
+		TRE = { vassal_of = BYZ }
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			NOT = { has_opinion = { who = TRE value = 0 } }
+		}
+	}
+	immediate = {
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 300
+			target = TRE
+		}
+	}
+	abort_effect = {
+		remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = TRE
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = military_vassalization
+			duration = 3650
+		}
+		hidden_effect = {
+			remove_casus_belli = {
+				type = cb_vassalize_mission
+				target = TRE
+			}
+		}
+	}
+}
+
+
+wayward_cappadocia_btpl = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		NOT = { has_country_modifier = military_vassalization }
+		tag = BYZ
+		exists = CAP
+		is_subject = no
+		CAP = {
+			is_subject = no
+			is_neighbor_of = ROOT
+			NOT = { num_of_cities = ROOT }
+			NOT = { total_development = 100 }
+			NOT = { government = imperial_city }
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { exists = CAP }
+			CAP = {
+				is_subject = yes
+			}
+			NOT = {
+				has_casus_belli = {
+					type = cb_vassalize_mission
+					target = CAP
+				}
+			}
+		}
+	}
+	success = {
+		CAP = { vassal_of = BYZ }
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			NOT = { has_opinion = { who = CAP value = 0 } }
+		}
+	}
+	immediate = {
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 300
+			target = CAP
+		}
+	}
+	abort_effect = {
+		remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = CAP
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = military_vassalization
+			duration = 3650
+		}
+		hidden_effect = {
+			remove_casus_belli = {
+				type = cb_vassalize_mission
+				target = CAP
+			}
+		}
+	}
+}

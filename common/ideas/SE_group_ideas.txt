@@ -1,0 +1,67 @@
+## East Europe
+RUS1_ideas = {
+	start = {
+		global_manpower_modifier = 0.25
+		infantry_cost = -0.20
+	}
+	bonus = {
+		global_manpower_modifier = 0.50
+	}
+	trigger = {
+		primary_culture = russian
+	}
+	free = yes		#will be added at load.
+	sudebnik = {}
+	the_streltsy = {}
+	opprichnina = {}
+	abolish_the_mestnichestvo = {}
+	siberian_frontier = {}
+	table_of_ranks = {}	
+	curriculum_of_the_cadet_corps = {}
+}
+## Anatolia
+TUR1_ideas = {
+	start = {
+		discipline = 0.05
+		tolerance_heathen = 3
+	}
+	bonus = {
+		land_forcelimit_modifier = 0.33
+	}
+	trigger = {
+		tag = TRK
+	}
+	free = yes		#will be added at load.
+	millets = {}	
+	ghazi = {}		
+	timariot_system = {}
+	autonmous_pashas = {}		
+	lawcode_of_suleiman_01 = {}
+	tulip_period = {}
+	imperial_school_of_naval_engineering = {}
+}
+## AFRICA
+MAM1_ideas = {
+	start = {
+		trade_steering = 0.25
+		cavalry_power = 0.10
+	}
+	bonus = {
+		global_prov_trade_power_modifier = 0.25
+	}
+	trigger = {
+		OR = {
+			primary_culture = al_misr_arabic
+			primary_culture = saidi
+		}
+		NOT = { tag = PAX }
+	}
+	free = yes
+	red_sea_trade = {}
+	monuments_to_greatness = {}
+	purchase_new_mamelukes = {}
+	mam_army_reform = {}
+	reform_fellah_system = {}
+	reformed_succession = {}
+	mam_monopoly_ports = {}
+}

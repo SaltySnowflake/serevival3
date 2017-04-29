@@ -1,0 +1,61 @@
+#Monaco
+
+graphical_culture = westerngfx
+
+color = { 181  230  29 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	spy_ideas
+	offensive_ideas
+	religious_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Onorato #0" = 40
+	"Giovanni #0" = 40
+	"Catalano #0" = 40
+	"Claudina #0" = 20
+    "Lamberto #0" = 0
+	"Luciano #0" = 0
+	"Ercole #0" = 0
+	"Carlo #0" = 0
+	"Luigi #0" = 0
+	"Antonio #0" = 0
+	
+	"Luisa Ippolita #0" = -2
+
+}
+
+leader_names = {
+    Giacomo "Luisa Ippolita" Giuseppe Luigi Mario Onorato Francesco Henri Florestano
+}
+
+ship_names = {
+    "Fontvielle" "Jardin Exotique" "Monaco Ville" "La Condamine" "Les Moneghetti" "Sainte Dèvote" 
+	"Monte Carlo" "Larvotto" "La Rousse"
+}
+
+army_names = {
+	"Armata di $PROVINCE$"
+}

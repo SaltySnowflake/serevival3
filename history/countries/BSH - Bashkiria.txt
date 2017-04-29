@@ -1,0 +1,16 @@
+government = steppe_horde
+primary_culture = bashkir
+add_accepted_culture = nogaybak
+religion = sunni
+technology_group = nomad_group
+capital = 475	# Bashkortostan
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

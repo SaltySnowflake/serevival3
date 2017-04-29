@@ -1,0 +1,16 @@
+government = feudal_monarchy
+primary_culture = georgian
+religion = orthodox
+technology_group = eastern
+capital = 3250
+government_rank = 1
+
+1444.1.1 = {
+	monarch = {
+		name = "(Interregnum)"
+		adm = 3
+		mil = 3
+		dip = 3
+		regent = yes
+	}
+}

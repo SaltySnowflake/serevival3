@@ -1,0 +1,5 @@
+166 = "Schwyz"
+1867 = "Vaud"
+1871 = "Valais"
+3054 = "Ticino"
+3056 = "Geneva"

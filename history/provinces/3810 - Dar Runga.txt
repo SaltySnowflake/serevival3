@@ -1,0 +1,13 @@
+#3810 - Dar Runga
+
+culture = gbaya
+religion = nzambiism
+capital = "Dar Runga"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 60
+native_ferocity = 3
+native_hostileness = 9

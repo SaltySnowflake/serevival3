@@ -1,0 +1,60 @@
+push_back_russians = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = { 
+		OR = {
+			province_id = 309 
+			province_id = 1958 
+			province_id = 1955 
+			province_id = 313 
+		}
+		owner = { culture_group = russian }
+		NOT = { owned_by = ROOT	}
+	}
+
+	allow = {
+		NOT = { has_country_modifier = military_victory }
+		tag = UGR
+		is_subject = no
+		owns = 1776 # Karelia
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			is_monarch_leader = yes
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			remove_claim = ROOT
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+	}
+}

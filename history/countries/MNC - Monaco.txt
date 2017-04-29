@@ -1,0 +1,160 @@
+government = absolute_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = ligurian
+religion = catholic
+capital = 3701 # Monaco
+
+1436.11.1 = {
+	monarch = {
+		name = "Giovanni I"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1454.5.8 = {
+	monarch = {
+		name = "Catalano"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 1
+		mil = 2
+	}
+}
+1457.7.1 = {
+	monarch = {
+		name = "Claudina"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 4
+		mil = 3
+	}
+}
+1458.3.16 = {
+	monarch = {
+		name = "Lamberto"
+		dynasty = "Grimaldi"
+		dip = 2
+		adm = 3
+		mil = 3
+	}
+}
+1494.3.1 = {
+	monarch = {
+		name = "Giovanni II"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1505.10.11 = {
+	monarch = {
+		name = "Luciano"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1523.8.22 = {
+	monarch = {
+		name = "Onorato I"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1581.10.7 = {
+	monarch = {
+		name = "Carlo II"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1589.5.17 = {
+	monarch = {
+		name = "Ercole"
+		dynasty = "Grimaldi"
+		dip = 4
+		adm = 2
+		mil = 3
+	}
+}
+1604.11.29 = {
+	monarch = {
+		name = "Onorato II"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1662.1.10 = {
+	monarch = {
+		name = "Luigi I"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1701.1.2 = {
+	monarch = {
+		name = "Antonio I"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1731.2.26 = {
+	monarch = {
+		name = "Luisa Ippolita"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1731.12.31 = {
+	monarch = {
+		name = "Giacomo I"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1733.11.7 = {
+	monarch = {
+		name = "Onorato III"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1814.5.30 = {
+	monarch = {
+		name = "Onorato IV"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+1819.3.3 = {
+	monarch = {
+		name = "Onorato V"
+		dynasty = "Grimaldi"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}

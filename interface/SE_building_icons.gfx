@@ -1,0 +1,80 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_native_earthwork_africangfx"
+		texturefile = "gfx//interface//buildings//native_earthwork.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_palisade_africangfx"
+		texturefile = "gfx//interface//buildings//native_palisade.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_fortified_house_africangfx"
+		texturefile = "gfx//interface//buildings//native_fortified_house.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_three_sisters_field_africangfx"
+		texturefile = "gfx//interface//buildings//native_three_sisters_field.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_irrigation_africangfx"
+		texturefile = "gfx//interface//buildings//native_irrigation.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_storehouse_africangfx"
+		texturefile = "gfx//interface//buildings//native_storehouse.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_longhouse_africangfx"
+		texturefile = "gfx//interface//buildings//native_longhouse.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_sweat_lodge_africangfx"
+		texturefile = "gfx//interface//buildings//native_sweat_lodge.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_great_trail_africangfx"
+		texturefile = "gfx//interface//buildings//native_great_trail.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_native_ceremonial_fire_pit_africangfx"
+		texturefile = "gfx//interface//buildings//native_ceremonial_fire_pit.tga"
+		loadType = "INGAME"
+	}
+	
+	##Trade Goods
+
+	spriteType = {
+		name = "GFX_SEtradegoods"
+		texturefile = "gfx//interface//buildings//latin_grain_depot.tga"
+		loadType = "INGAME"
+	}
+
+	##Factory
+	
+	spriteType = {
+		name = "GFX_banner_left_SE"
+		texturefile = "gfx//interface//banner_left_SE.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_banner_left_SE2"
+		texturefile = "gfx//interface//banner_left_SE2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_SE_factory"
+		texturefile = "gfx//interface//buildings//latin_embassy.tga"
+		loadType = "INGAME"
+	}
+	
+}

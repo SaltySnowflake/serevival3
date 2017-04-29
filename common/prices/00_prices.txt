@@ -1,0 +1,104 @@
+#cereals
+grain		=	{ base_price = 2.5 }	#wheat
+barley		=	{ base_price = 2 }
+rye			=	{ base_price = 1.5 }
+maize		=	{ base_price = 2.5 }
+rice		=	{ base_price = 2 }
+millet		=	{ base_price = 2 }
+sorghum		=	{ base_price = 1.5 }
+olives		=	{ base_price = 3 }
+palm_oil	=	{ base_price = 3.5 }
+potatoes	=	{ base_price = 2 }
+citrus		=	{ base_price = 2.5 }
+
+#plantations
+coffee 		= 	{ base_price = 3.5 }
+sugar		=	{ base_price = 3 }
+cocoa		=	{ base_price = 4 }
+tobacco		=	{ base_price = 3.5 }
+tea			=	{ base_price = 3 }
+opium		=	{ base_price = 4 }
+
+#other foods and drink
+livestock	=	{ base_price = 3 }
+cheese 		=	{ base_price = 4 }
+horses		=	{ base_price = 4 }
+apiculture 	= 	{ base_price = 2.5 }
+fish		=	{ base_price = 2.5 }
+whaling		=	{ base_price = 3.5 }
+wine 		= 	{ base_price = 3 }
+beer		=	{ base_price = 3 }
+rum			=	{ base_price = 3 }
+
+#textiles
+wool		=	{ base_price = 2.5 }
+cashmere 	= 	{ base_price = 3.5 }
+camel		=	{ base_price = 2 }
+cotton		=	{ base_price = 3 }
+cloth		=	{ base_price = 3.5 }
+silk		=	{ base_price = 4 }
+linen		=	{ base_price = 3 }
+hemp		=	{ base_price = 3 }
+fur			=	{ base_price = 2 }
+leather		=	{ base_price = 4 }
+
+#naval supplies, wood
+naval_supplies	=	{ base_price = 3.5 }
+tar				=	{ base_price = 2.5 }
+lumber			=	{ base_price = 2 }
+tropical_wood	=	{ base_price = 4.5 }	#brazilwood
+sandal			=	{ base_price = 4 }
+ebony			=	{ base_price = 4.5 }
+mahogany		=	{ base_price = 4 }
+teak			=	{ base_price = 4 }
+
+#dyes
+bloodwood	=	{ base_price = 4 }
+dyes		=	{ base_price = 4.5 }	#indigo
+woad		=	{ base_price = 4 }
+carmine 	= 	{ base_price = 4.5 }
+
+#tradegoods
+ivory		=	{ base_price = 4 }
+marble 		= 	{ base_price = 4.5 }
+glass		=	{ base_price = 5 }
+obsidian	=	{ base_price = 3 }
+jade		=	{ base_price = 5 }
+chinaware 	= 	{ base_price = 3.5 }	#porcelain
+carpet		=	{ base_price = 4.5 }
+slaves		=	{ base_price = 3 }
+
+#precious metals
+gold		=	{ base_price = 0 goldtype = yes }
+silver		=	{ base_price = 0 goldtype = yes }
+gems		=	{ base_price = 5 goldtype = yes }
+
+#metals
+iron		=	{ base_price = 3.5 }
+copper		=	{ base_price = 3.5 }
+tin			=	{ base_price = 3 }
+lead		=	{ base_price = 3.5 }
+zinc		=	{ base_price = 3 }
+mercury		=	{ base_price = 3 }
+coal		=	{ base_price = 3.5 }
+steel		=	{ base_price = 4.5 }
+salt		=	{ base_price = 3 }
+sulphur		=	{ base_price = 4 }
+
+#spices
+cinnamon	=	{ base_price = 4.5 }
+spices		=	{ base_price = 4 }	#peppers
+nutmeg		=	{ base_price = 4.5 }
+clove 		= 	{ base_price = 4.5 }
+saffron		=	{ base_price = 5 }
+vanilla		=	{ base_price = 4 }
+ginger		=	{ base_price = 4 }
+
+#misc/industrial
+paper		=	{ base_price = 4 }
+jewelry		=	{ base_price = 10 }
+munitions	=	{ base_price = 5 }
+machinery	=	{ base_price = 5 }
+furniture	=	{ base_price = 5 }
+unknown		=	{ base_price = 0 }
+dummy_good	=	{ base_price = 0 }

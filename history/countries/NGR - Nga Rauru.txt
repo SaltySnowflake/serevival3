@@ -1,0 +1,15 @@
+government = native_council
+technology_group = north_american
+religion = puata_tupuna
+primary_culture = maori
+capital = 1107 #Taranaki
+
+1444.1.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

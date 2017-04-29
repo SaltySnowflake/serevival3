@@ -1,0 +1,17 @@
+government = noble_republic
+primary_culture = venetian
+religion = catholic
+add_accepted_culture = lombard
+technology_group = western
+capital = 108 # Verona
+#fixed_capital = 108
+
+1444.1.1 = {
+	monarch = {
+		name = "Repubblica"
+		dip = 3
+		mil = 3
+		adm = 3
+		regent = yes
+	}
+}

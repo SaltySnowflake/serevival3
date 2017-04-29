@@ -1,0 +1,940 @@
+########################################
+# Dynamic Pagan Revival
+#
+# Written by Neprut
+########################################
+
+namespace = pagan_revival
+
+# The snowball
+
+country_event = {
+	id = pagan_revival.1
+	title = pagan_revival.1.t
+	picture = DIPLOMACY_eventPicture
+
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = scandinavian
+				primary_culture = normand
+			}
+		}
+		desc = pagan_revival.1.norse
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = gaelic
+				culture_group = brythonic
+				culture_group = unified_celtic_group
+				AND = {
+					culture_group = french
+					NOT = { primary_culture = normand }
+				}
+				AND = {
+					culture_group = iberian
+					NOT = { primary_culture = andalucian }
+				}
+				primary_culture = scottish
+				primary_culture = swiss
+			}
+		}
+		desc = pagan_revival.1.gaelic
+	}
+	desc = {
+		trigger = { culture_group = finno_ugric }
+		desc = pagan_revival.1.finno_ugric
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = east_slavic
+				culture_group = west_slavic
+			}
+		}
+		desc = pagan_revival.1.slavic
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = baltic 
+				primary_culture = prussian
+			}
+		}
+		desc = pagan_revival.1.romuva
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = carpathian
+				culture_group = dacian
+				culture_group = turkish_g
+				culture_group = altaic
+				culture_group = evenks
+			}
+		}
+		desc = pagan_revival.1.tengri
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = byzantine
+				culture_group = caucasian
+				culture_group = south_slavic
+				culture_group = illyrian
+				culture_group = latin
+				culture_group = occitanocatala
+			}
+		}
+		desc = pagan_revival.1.hellenic
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = iranian
+				culture_group = turkish_g
+				primary_culture = al_suryah_arabic
+				primary_culture = al_iraqiya_arabic
+			}
+		}
+		desc = pagan_revival.1.zoroastrian
+	}
+	desc = {
+		trigger = {
+			OR = {
+				AND = {
+					culture_group = germanic
+					NOT = { primary_culture = prussian }
+					NOT = { primary_culture = swiss }
+				}
+				AND = {
+					culture_group = british
+					NOT = { primary_culture = scottish }
+				}
+			}
+		}
+		desc = pagan_revival.1.germanic
+	}
+	desc = {
+		trigger = {
+			OR = {
+				primary_culture = al_misr_arabic
+				primary_culture = saidi
+			}
+		}
+		desc = pagan_revival.1.egyptian
+	}
+	desc = {
+		trigger = {
+			OR = {
+				primary_culture = bedouin_arabic
+				primary_culture = omani_culture
+				primary_culture = yemeni_culture
+			}
+		}
+		desc = pagan_revival.1.south_arabian
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = maghrebi
+				primary_culture = andalucian
+			}
+		}
+		desc = pagan_revival.1.amanaiism
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "pagan_revival.1.a"
+		ai_chance = {
+			factor = 10
+		}
+		add_stability_or_adm_power = yes
+		kill_advisor = theologian
+	}
+	option = {
+		name = "pagan_revival.1.b"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.5
+				NOT = { prestige = 0 }
+			}
+		}
+		add_prestige = -25
+		hidden_effect = { country_event = { id = pagan_revival.2 days = 365 } }
+	}
+	option = {
+		name = "pagan_revival.1.c"
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 1 }
+			}
+		}
+		add_years_of_income = -1
+		hidden_effect = { country_event = { id = pagan_revival.2 days = 30 } }
+	}
+}
+
+country_event = {
+	id = pagan_revival.2
+	title = pagan_revival.2.t
+	picture = BIG_BOOK_eventPicture
+
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = scandinavian
+				primary_culture = normand
+			}
+		}
+		desc = pagan_revival.2.norse
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = gaelic
+				culture_group = brythonic
+				culture_group = unified_celtic_group
+				AND = {
+					culture_group = french
+					NOT = { primary_culture = normand }
+				}
+				AND = {
+					culture_group = iberian
+					NOT = { primary_culture = andalucian }
+				}
+				primary_culture = scottish
+				primary_culture = swiss
+			}
+		}
+		desc = pagan_revival.2.gaelic
+	}
+	desc = {
+		trigger = { culture_group = finno_ugric }
+		desc = pagan_revival.1.finno_ugric
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = east_slavic
+				culture_group = west_slavic
+			}
+		}
+		desc = pagan_revival.2.slavic
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = baltic 
+				primary_culture = prussian
+			}
+		}
+		desc = pagan_revival.2.romuva
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = carpathian
+				culture_group = dacian
+				culture_group = turkish_g
+				culture_group = altaic
+				culture_group = evenks
+			}
+		}
+		desc = pagan_revival.2.tengri
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = byzantine
+				culture_group = caucasian
+				culture_group = south_slavic
+				culture_group = illyrian
+				culture_group = latin
+				culture_group = occitanocatala
+			}
+		}
+		desc = pagan_revival.2.hellenic
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = iranian
+				culture_group = turkish_g
+				primary_culture = al_suryah_arabic
+				primary_culture = al_iraqiya_arabic
+			}
+		}
+		desc = pagan_revival.2.zoroastrian
+	}
+	desc = {
+		trigger = {
+			OR = {
+				AND = {
+					culture_group = germanic
+					NOT = { primary_culture = prussian }
+					NOT = { primary_culture = swiss }
+				}
+				AND = {
+					culture_group = british
+					NOT = { primary_culture = scottish }
+				}
+			}
+		}
+		desc = pagan_revival.2.germanic
+	}
+	desc = {
+		trigger = {
+			OR = {
+				primary_culture = al_misr_arabic
+				primary_culture = saidi
+			}
+		}
+		desc = pagan_revival.2.egyptian
+	}
+	desc = {
+		trigger = {
+			OR = {
+				primary_culture = bedouin_arabic
+				primary_culture = omani_culture
+				primary_culture = yemeni_culture
+			}
+		}
+		desc = pagan_revival.2.south_arabian
+	}
+	desc = {
+		trigger = {
+			OR = {
+				culture_group = maghrebi
+				primary_culture = andalucian
+			}
+		}
+		desc = pagan_revival.2.amanaiism
+	}
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "pagan_revival.2.a"
+		ai_chance = {
+			factor = 10
+		}
+		add_stability_or_adm_power = yes
+		kill_advisor = theologian
+	}
+	option = {
+		name = "pagan_revival.2.b"
+		ai_chance = {
+			factor = 30
+		}
+		random_province = {
+			limit = {
+				owned_by = ROOT
+				is_core = ROOT
+				culture = ROOT
+				is_in_capital_area = yes
+			}
+			add_province_modifier = {
+				name = pagan_center_religion2
+				duration = -1
+			}
+			hidden_effect = { province_event = { id = pagan_revival.3 days = 365 } }
+		}
+	}
+}
+
+province_event = {
+	id = pagan_revival.3
+	title = pagan_revival.3.t
+	picture = REFORM_eventPicture
+
+	desc = {
+		trigger = { religion_group = christian }
+		desc = pagan_revival.3.christian
+	}
+	desc = {
+		trigger = { religion_group = muslim }
+		desc = pagan_revival.3.muslim
+	}
+	desc = {
+		trigger = {
+			NOT = { religion_group = christian }
+			NOT = { religion_group = muslim }
+		}
+		desc = pagan_revival.3.other
+	}
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {		# Norse
+		trigger = {
+			OR = {
+				culture_group = scandinavian
+				primary_culture = normand
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = norse_pagan_reformed } }
+			enable_religion = norse_pagan_reformed
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_norse
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Gaelic
+		trigger = {
+			OR = {
+				culture_group = gaelic
+				culture_group = brythonic
+				culture_group = unified_celtic_group
+				AND = {
+					culture_group = french
+					NOT = { primary_culture = normand }
+				}
+				AND = {
+					culture_group = iberian
+					NOT = { primary_culture = andalucian }
+				}
+				primary_culture = scottish
+				primary_culture = swiss
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = gaelic_pagan } }
+			enable_religion = gaelic_pagan
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_gaelic
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Finnish
+		trigger = { culture_group = finno_ugric }
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = finnish_pagan_reformed } }
+			enable_religion = finnish_pagan_reformed
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_finnish
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Slavic
+		trigger = {
+			OR = {
+				culture_group = east_slavic
+				culture_group = west_slavic
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = {
+			limit = { NOT = { is_religion_enabled = slavic_pagan_reformed } }
+			enable_religion = slavic_pagan_reformed
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_slavic
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Romuva
+		trigger = {
+			OR = {
+				culture_group = baltic 
+				primary_culture = prussian
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = {
+			limit = { NOT = { is_religion_enabled = baltic_pagan_reformed } }
+			enable_religion = baltic_pagan_reformed
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_baltic
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Tengri
+		trigger = {
+			OR = {
+				culture_group = carpathian
+				culture_group = dacian
+				culture_group = turkish_g
+				culture_group = altaic
+				culture_group = evenks
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = tengri_pagan_reformed } }
+			enable_religion = tengri_pagan_reformed
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_tengri
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Hellenic
+		trigger = {
+			OR = {
+				culture_group = byzantine
+				culture_group = caucasian
+				culture_group = south_slavic
+				culture_group = illyrian
+				culture_group = latin
+				culture_group = occitanocatala
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = hellenic } }
+			enable_religion = hellenic
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_hellenic
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Zoroastrian
+		trigger = {
+			OR = {
+				culture_group = iranian
+				culture_group = turkish_g
+				primary_culture = al_suryah_arabic
+				primary_culture = al_iraqiya_arabic
+			}
+		}
+		name = "SCA_DAHE.EVTOPTA1"
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = zoroastrian } }
+			enable_religion = zoroastrian
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_zoroastrian
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Germanic
+		trigger = {
+			OR = {
+				AND = {
+					culture_group = germanic
+					NOT = { primary_culture = prussian }
+					NOT = { primary_culture = swiss }
+				}
+				AND = {
+					culture_group = british
+					NOT = { primary_culture = scottish }
+				}
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = germanic } }
+			enable_religion = germanic
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_germanic
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Egyptian
+		trigger = {
+			OR = {
+				primary_culture = al_misr_arabic
+				primary_culture = saidi
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = egyptian } }
+			enable_religion = egyptian
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_egyptian
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Arabian
+		trigger = {
+			OR = {
+				primary_culture = bedouin_arabic
+				primary_culture = omani_culture
+				primary_culture = yemeni_culture
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = south_arabian } }
+			enable_religion = south_arabian
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_south_arabian
+			set_global_flag = pagans_are_back
+		}
+	}
+	option = {		# Amanaiism
+		trigger = {
+			OR = {
+				culture_group = maghrebi
+				primary_culture = andalucian
+			}
+		}
+		name = pagan_revival.3.a
+		ai_chance = { factor = 30 }
+		if = { 
+			limit = { NOT = { is_religion_enabled = amanaiism } }
+			enable_religion = amanaiism
+		}
+		change_variable = { which = pagan_sentiment value = +11 } 
+		province_event = { id = pagan_revival.4 days = 7 }
+		owner = {
+			set_country_flag = pagan_revival
+			set_country_flag = pagan_revival_amanaiism
+			set_global_flag = pagans_are_back
+		}
+	}
+	
+	option = {		# Destroy these heretics
+		name = pagan_revival.3.b
+		ai_chance = { factor = 10 }
+		add_stability = 1
+		remove_province_modifier = pagan_center_religion2
+		add_unrest = 10
+	}
+}
+
+##### Everyone #####
+
+# Meeting in ??
+
+province_event = {
+	id = pagan_revival.4
+	title = pagan_revival.4.t
+	desc = pagan_revival.4.d
+	picture = LIBERUM_VETO_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {		# They have a point...
+		name = pagan_revival.4.a
+		ai_chance = { factor = 10 }
+		FROM = { province_event = { id = pagan_revival.5 days = 7 } }
+	}
+	option = {		# Destroy these heretics
+		name = pagan_revival.4.b
+		ai_chance = { factor = 1 }
+		trigger = { owner = { religion_group = catholic } }
+		add_stability = 1
+		remove_province_modifier = pagan_center_religion2
+		FROM = { add_unrest = 10 }
+	}
+	option = {		# Destroy these heretics
+		name = pagan_revival.4.c
+		ai_chance = { factor = 1 }
+		trigger = { owner = { religion_group = muslim } }
+		add_stability = 1
+		remove_province_modifier = pagan_center_religion2
+		FROM = { add_unrest = 10 }
+	}
+	option = {		# Destroy these heretics
+		name = pagan_revival.4.e
+		ai_chance = { factor = 1 }
+		trigger = {
+			owner = {
+				NOT = { religion_group = catholic }
+				NOT = { religion_group = muslim }
+			}
+		}
+		add_stability = 1
+		remove_province_modifier = pagan_center_religion2
+		FROM = { add_unrest = 10 }
+	}
+}
+
+# The Assembly of ??
+
+province_event = {
+	id = pagan_revival.5
+	title = pagan_revival.5.t
+	picture = COURT_eventPicture
+	
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = pagan_revival.5.dnorse
+	}
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = pagan_revival.5.d
+	}
+	
+	is_triggered_only = yes 
+	
+	option = {		# Let it begin
+		trigger = { culture_group = scandinavian }
+		name = pagan_revival.5.a
+		owner = { set_country_flag = pagan_revival_start }
+		FROM = { change_variable = { which = pagan_sentiment value = +11 } }
+	}
+	option = {		# Let it begin
+		trigger = { NOT = { culture_group = scandinavian } }
+		name = pagan_revival.5.b
+		owner = { set_country_flag = pagan_revival_start }
+		FROM = { change_variable = { which = pagan_sentiment value = +11 } }
+	}
+}
+
+# Everything comes tumbling down
+
+country_event = {
+	id = pagan_revival.6
+	title = pagan_revival.6.t
+	picture = CIVIL_WAR_eventPicture
+	
+	desc = {
+		trigger = { culture_group = scandinavian }
+		desc = pagan_revival.6.dnorse
+	}
+	desc = {
+		trigger = { NOT = { culture_group = scandinavian } }
+		desc = pagan_revival.6.d
+	}
+	
+	trigger = {
+		NOT = { is_pagan_trigger = yes }
+		NOT = { has_country_flag = rise_of_the_pagans }
+		NOT = { has_country_flag = everything_is_tumbled }
+		has_country_flag = pagan_revival_start
+		OR = {
+			num_of_religion = { religion = norse_pagan_reformed value = 0.5 }
+			num_of_religion = { religion = gaelic_pagan value = 0.5 }
+			num_of_religion = { religion = finnish_pagan_reformed value = 0.5 }
+			num_of_religion = { religion = slavic_pagan_reformed value = 0.5 }
+			num_of_religion = { religion = baltic_pagan_reformed value = 0.5 }
+			num_of_religion = { religion = tengri_pagan_reformed value = 0.5 }
+			num_of_religion = { religion = hellenic value = 0.5 }
+			num_of_religion = { religion = zoroastrian value = 0.5 }
+			num_of_religion = { religion = germanic value = 0.5 }
+			num_of_religion = { religion = egyptian value = 0.5 }
+			num_of_religion = { religion = south_arabian value = 0.5 }
+			num_of_religion = { religion = amanaiism value = 0.5 }
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {		# Time to burn the cross
+		name = "pagan_revival.6.a"
+		set_country_flag = war_of_the_burning_cross
+		set_country_flag = everything_is_tumbled
+	}
+}
+
+# Pagan Revival - Already Pagan
+
+country_event = {
+	id = pagan_revival.7
+	title = "pagan_revival.7.t"
+	desc = "pagan_revival.7.d"
+	picture = STREET_SPEECH_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = pagans_are_back }
+		NOT = { has_country_flag = pagan_revival }
+		is_year = 1475
+		num_of_cities = 30
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "pagan_revival.7.a"
+		ai_chance = { factor = 1 }
+		set_global_flag = pagans_are_back
+		set_country_flag = pagan_revival
+		if = {
+			limit = { religion = norse_pagan_reformed }
+			set_country_flag = pagan_revival_norse
+		}
+		if = {
+			limit = { religion = baltic_pagan_reformed }
+			set_country_flag = pagan_revival_baltic
+		}
+		if = {
+			limit = { religion = finnish_pagan_reformed }
+			set_country_flag = pagan_revival_finnish
+		}
+		if = {
+			limit = { religion = slavic_pagan_reformed }
+			set_country_flag = pagan_revival_slavic
+		}
+		if = {
+			limit = { religion = tengri_pagan_reformed }
+			set_country_flag = pagan_revival_tengri
+		}
+		if = {
+			limit = { religion = hellenic }
+			set_country_flag = pagan_revival_hellenic
+		}
+		if = {
+			limit = { religion = gaelic_pagan }
+			set_country_flag = pagan_revival_gaelic
+		}
+		if = {
+			limit = { religion = zoroastrian }
+			set_country_flag = pagan_revival_zoroastrian
+		}
+		if = {
+			limit = { religion = germanic }
+			set_country_flag = pagan_revival_germanic
+		}
+		if = {
+			limit = { religion = egyptian }
+			set_country_flag = pagan_revival_egyptian
+		}
+		if = {
+			limit = { religion = south_arabian }
+			set_country_flag = pagan_revival_south_arabian
+		}
+		if = {
+			limit = { religion = amanaiism }
+			set_country_flag = pagan_revival_amanaiism
+		}
+		add_prestige = 15
+	}
+	
+	option = {
+		name = "pagan_revival.7.b"
+		ai_chance = { factor = 0 }
+		add_prestige = -15
+	}
+}
+
+country_event = {
+	id = pagan_revival.8
+	title = "pagan_revival.8.t"
+	desc = "pagan_revival.8.d"
+	picture = STREET_SPEECH_eventPicture
+
+	trigger = {
+		has_global_flag = pagans_are_back
+		NOT = { has_country_flag = pagan_revival }
+		is_year = 1475
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "pagan_revival.8.a"
+		set_country_flag = pagan_revival
+		if = {
+			limit = { religion = norse_pagan_reformed }
+			set_country_flag = pagan_revival_norse
+		}
+		if = {
+			limit = { religion = baltic_pagan_reformed }
+			set_country_flag = pagan_revival_baltic
+		}
+		if = {
+			limit = { religion = finnish_pagan_reformed }
+			set_country_flag = pagan_revival_finnish
+		}
+		if = {
+			limit = { religion = slavic_pagan_reformed }
+			set_country_flag = pagan_revival_slavic
+		}
+		if = {
+			limit = { religion = tengri_pagan_reformed }
+			set_country_flag = pagan_revival_tengri
+		}
+		if = {
+			limit = { religion = hellenic }
+			set_country_flag = pagan_revival_hellenic
+		}
+		if = {
+			limit = { religion = gaelic_pagan }
+			set_country_flag = pagan_revival_gaelic
+		}
+		if = {
+			limit = { religion = zoroastrian }
+			set_country_flag = pagan_revival_zoroastrian
+		}
+		if = {
+			limit = { religion = germanic }
+			set_country_flag = pagan_revival_germanic
+		}
+		if = {
+			limit = { religion = egyptian }
+			set_country_flag = pagan_revival_egyptian
+		}
+		if = {
+			limit = { religion = south_arabian }
+			set_country_flag = pagan_revival_south_arabian
+		}
+		if = {
+			limit = { religion = amanaiism }
+			set_country_flag = pagan_revival_amanaiism
+		}
+		add_prestige = 15
+	}
+}

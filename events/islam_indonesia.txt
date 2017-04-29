@@ -1,0 +1,343 @@
+namespace = indislam
+
+# Java and Borneo
+
+country_event = {
+	id = indislam.1
+	title = "indislam.EVTNAME1"
+	desc = "indislam.EVTDESC1"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		is_year = 1475
+		NOT = { has_ruler_flag = indislamrulerb }
+		NOT = { has_country_modifier = "reformed_hindu" }
+		any_owned_province = {
+			region = indonesia_region				
+			OR = {
+				culture_group = malay
+				culture = moluccan
+			}
+			OR = {
+				religion = buddhism
+				religion_group = pacific_pagan
+				religion = hinduism
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.8
+			religion = sunni
+		}	
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				region = indonesia_region
+				OR = {
+					culture_group = malay
+					culture = moluccan
+				}
+				OR = {
+					religion = buddhism
+					religion_group = pacific_pagan
+					religion = hinduism
+				}
+			}
+			set_province_flag = indoislam_flag
+		}
+	}
+	option = {
+		name = "indislam.1a"
+		every_owned_province = {
+			limit = { has_province_flag = indoislam_flag }
+			change_religion = sunni
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 7300
+			}
+			clr_province_flag = indoislam_flags
+		}
+	}
+}
+
+
+# Sumatra and Malay Peninsula
+
+country_event = {
+	id = indislam.2
+	title = "indislam.EVTNAME2"
+	desc = "indislam.EVTDESC2"
+	picture = RELIGION_eventPicture	
+
+	trigger = {
+		NOT = { has_ruler_flag = indislamrulerb }
+		NOT = { has_country_modifier = reformed_hindu }
+		any_owned_province = {
+			region = malaya_region
+			OR = {
+				culture_group = malay
+				culture = moluccan
+			}
+			OR = {
+				religion = buddhism
+				religion_group = pacific_pagan
+				religion = hinduism
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			religion = sunni
+		}
+	}
+	option = {
+		name = "indislam.1a"
+		random_owned_province = {
+			limit = {
+				region = malaya_region	
+				OR = {
+					culture_group = malay
+					culture = moluccan
+				}
+				OR = {
+					religion = buddhism
+					religion_group = pacific_pagan
+					religion = hinduism
+				}
+			}
+			change_religion = sunni
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 7300
+			}
+		}
+	}
+}
+
+# Sulawesi and spice islands
+
+country_event = {
+	id = indislam.3
+	title = "indislam.EVTNAME3"
+	desc = "indislam.EVTDESC3"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		NOT = { has_ruler_flag = indislamrulerb }
+		NOT = { has_country_modifier = reformed_hindu }
+		is_year = 1470
+		any_owned_province = {
+			OR = {
+				culture = sulawesi
+				culture = moluccan
+			}
+			OR = {
+				religion = buddhism
+				religion_group = pacific_pagan
+				religion = hinduism
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.8
+			religion = sunni
+		}
+	}
+	option = {
+		name = "indislam.1a"
+		random_owned_province = {
+			limit = {
+				OR = {
+					culture = sulawesi
+					culture = moluccan
+				}
+				OR = {
+					religion = buddhism
+					religion_group = pacific_pagan
+					religion = hinduism
+				}
+			}
+			change_religion = sunni
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 7300
+			}
+		}
+	}
+}
+
+# restrict or allow spread
+
+country_event = {
+	id = indislam.5
+	title = "indislam.EVTNAME5"
+	desc = "indislam.EVTDESC5"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		NOT = { has_country_modifier = reformed_hindu }
+		NOT = {
+			has_ruler_flag = indislamrulera
+			has_ruler_flag = indislamrulerb
+		}
+		OR = {
+			culture_group = malay
+			primary_culture = moluccan
+		}
+		NOT = { religion_group = muslim }
+		any_owned_province = { religion = sunni }
+	}
+	mean_time_to_happen = { months = 3 }
+	option = {
+		name = "indislam.2a"
+		set_country_flag = indislamdrulera
+		random_owned_province = {
+			limit = {
+				continent = asia
+				OR = {
+					religion = buddhism
+					religion_group = pacific_pagan
+					religion = hinduism
+				}
+			}
+			change_religion = sunni
+		}
+	}
+	option = {
+		name = "indislam.2b"
+		set_country_flag = indislamrulerb
+		every_owned_province = {
+			limit = { religion = sunni }
+			add_unrest = 10
+		}
+	}
+}
+
+# Philippines, needs unique localisation
+country_event = {
+	id = indislam.6
+	title = "indislam.EVTNAME6"
+	desc = "indislam.EVTDESC6"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		is_year = 1500
+		NOT = { has_ruler_flag = indislamrulerb }
+		NOT = { has_country_modifier = reformed_hindu }
+		any_owned_province = {
+			culture = filipino
+			OR = {
+				religion = buddhism
+				religion_group = pacific_pagan
+				religion = hinduism
+			}
+		}
+		any_country = {
+			religion = sunni
+			any_owned_province = {
+				OR = {
+					area = kutai_area
+					area = brunei_area
+					area = kalimantan_area
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.8
+			religion = sunni
+		}
+	}
+	option = {
+		name = "indislam.1a"
+		random_owned_province = {
+			limit = {
+				culture = filipino
+				OR = {
+					religion = buddhism
+					religion_group = pacific_pagan
+					religion = hinduism
+				}
+			}
+			change_religion = sunni
+			add_permanent_province_modifier = {
+				name = religious_zeal_at_conv
+				duration = 7300
+			}
+		}
+	}
+}
+
+# Hindu reformation
+
+country_event = {
+	id = indislam.7
+	title = "indislam.EVTNAME7"
+	desc = "indislam.EVTDESC7"
+	picture = RELIGION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1525
+		religion = hinduism
+		culture_group = malay
+		religious_unity = 0.8
+	}
+	mean_time_to_happen = {
+		years = 30
+	}
+	option = {
+		name = "indislam.7a"
+		set_global_flag = hindu_reformation
+	}
+}
+
+# Muhammad Kebungsuwan
+
+country_event = {
+	id = indislam.8
+	title = "indislam.EVTNAME8"
+	desc = "indislam.EVTDESC8"
+	picture = RELIGION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MGD
+		NOT = { religion = sunni }
+		is_year = 1495
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = { # make him sultan
+		name = "indislam.8a"
+		ai_chance = { factor = 75 }
+		add_stability = -2
+		change_religion = sunni
+		define_ruler = {
+			name = "Muhammad"
+			dynasty = "Kebungsuwan"
+		}
+	}
+	option = { # resist him
+		name = "indislam.8b"
+		ai_chance = { factor = 25 }
+		add_stability = -1
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 2
+			leader = "Muhammad Kebungsuwan"
+		}
+	}
+}

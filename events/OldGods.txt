@@ -1,0 +1,230 @@
+namespace = oldgods
+# A law against the killing of cats
+country_event = {
+	id = oldgods.1
+	title = "oldgods.1.t"
+	desc = "oldgods.1.d"
+	picture = COUNTRYSIDE_eventPicture
+
+	trigger = {
+		is_pagan_trigger = yes
+		NOT = { has_ruler_flag = the_old_ones_are_waking }
+		NOT = { has_country_flag = the_old_ones_are_waking }
+		num_of_owned_provinces_with = {
+			value = 5
+			has_port = yes
+		}
+		has_heir = yes 
+		heir_age = 15
+	}
+	
+	mean_time_to_happen = { 
+		months = 1000 
+		modifier = {
+			factor = 5
+			NOT = { num_of_cities = 25 }
+		}
+		modifier = {
+			factor = 0.5
+			ruler_has_personality = lunatic_personality
+		}
+		modifier = {
+			factor = 0.5
+			num_of_cities = 50
+		}
+		modifier = {
+			factor = 0.5
+			num_of_owned_provinces_with = {
+				value = 15
+				has_port = yes
+			}
+		}
+	}
+	
+	immediate = { set_ruler_flag = the_old_ones_are_waking }
+	
+	option = {
+		name = "oldgods.1.a"
+		custom_tooltip = dreamerstirs
+		hidden_effect = {
+			country_event = { id = oldgods.2 days = 14 }
+			if = {
+				limit = { NOT = { ruler_has_personality = lunatic_personality } }
+				clear_scripted_personalities = yes
+				add_ruler_personality = lunatic_personality
+			}
+		}
+	}
+	
+	option = {
+		name = "oldgods.1.b"
+		add_prestige = 10
+	}
+}
+
+# Visiting a quaint village
+country_event = {
+	id = oldgods.2
+	title = "oldgods.2.t"
+	desc = "oldgods.2.d"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "oldgods.2.a"
+		custom_tooltip = grimoiresecrets
+		hidden_effect = { country_event = { id = oldgods.3 days = 7 } }
+	}
+
+}
+
+# A seaside ritual
+country_event = {
+	id = oldgods.3
+	title = "oldgods.3.t"
+	desc = "oldgods.3.d"
+	picture = PRAYING_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "oldgods.3.a"
+		custom_tooltip = robeandhat
+		hidden_effect = { country_event = { id = oldgods.4 days = 1 } }
+	}
+
+}
+
+# Something rises from the sea...
+country_event = {
+	id = oldgods.4
+	title = "oldgods.4.t"
+	desc = "oldgods.4.d"
+	picture = CTHULHU_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "oldgods.4.a"
+		kill_ruler = yes
+		custom_tooltip = heirnightmares
+		hidden_effect = { country_event = { id = oldgods.7 days = 0 } }
+	}
+	
+	option = {
+		name = "oldgods.4.b"
+		custom_tooltip = monarchinaboat
+		hidden_effect = { country_event = { id = oldgods.5 days = 1 } }
+	}
+
+}
+
+# Commendeer a longship
+country_event = {
+	id = oldgods.5
+	title = "oldgods.5.t"
+	desc = "oldgods.5.d"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "oldgods.5.a"
+		custom_tooltip = fatefullcollision
+		hidden_effect = { country_event = { id = oldgods.6 days = 1 } }
+	}
+
+}
+
+# Waking up
+country_event = {
+	id = oldgods.6
+	title = "oldgods.6.t"
+	desc = "oldgods.6.d"
+	picture = KING_SICK_IN_BED_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = { set_country_flag = the_old_ones_are_waking }
+	
+	option = {
+		name = "oldgods.6.a"
+		add_adm_power = 250
+		add_dip_power = 250
+		add_mil_power = 250
+		add_prestige = 50
+		add_legitimacy = 15
+		remove_ruler_personality = lunatic_personality
+		if = {
+			limit = { NOT = { ruler_has_personality = scholar_personality } }
+			add_ruler_personality = scholar_personality
+		}
+	}
+	
+	option = {
+		name = "oldgods.6.b"
+		change_mil = 3
+		add_ruler_modifier = {
+			name = "killed_an_old_one"
+			duration = -1
+		}
+		define_ruler_to_general = {
+			shock = 4
+			fire = 4
+			manuever = 4
+			siege = 4
+			#trait = glory_seeker_personality
+		}
+	}
+
+}
+
+# Nightmares...
+country_event = {
+	id = oldgods.7
+	title = "oldgods.7.t"
+	desc = "oldgods.7.d"
+	picture = KING_SICK_IN_BED_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "oldgods.7.a"
+		custom_tooltip = thesunrises
+		hidden_effect = { country_event = { id = oldgods.8 days = 1 } }
+	}
+
+}
+
+# New Morning
+country_event = {
+	id = oldgods.8
+	title = "oldgods.8.t"
+	desc = "oldgods.8.d"
+	picture = CTHULHU_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "oldgods.8.a"
+		change_adm = 6
+		change_dip = 6
+		change_mil = 6
+		change_religion = cthulhu
+		random_owned_province = {
+			limit = { has_port = yes }
+			change_religion = cthulhu
+		}
+		add_ruler_modifier = {
+			name = "insaneinthebrain"
+			duration = -1
+		}
+		if = {
+			limit = { NOT = { ruler_has_personality = lunatic_personality } }
+			add_ruler_personality = lunatic_personality
+		}
+		#hidden_effect = { country_event = { id = oldgods.9 days = 1 } }
+	}
+
+}

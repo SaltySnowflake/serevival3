@@ -1,0 +1,20 @@
+government = feudal_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = northumbrian
+add_accepted_culture = english
+religion = catholic
+capital = 244	# Chester
+
+1444.11.01 = {
+	monarch = {
+		name = "Humphrey"
+		dynasty = "Lancaster"
+		birth_date = 1390.10.02
+		death_date = 1447.02.23
+		adm = 4
+		dip = 5
+		mil = 2
+	}
+}
+1444.11.1 = { leader = { name = "Edmund Beaufort" type = general rank = 1 fire = 3 shock = 2 manuever = 2 siege = 2 } }

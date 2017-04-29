@@ -1,0 +1,204 @@
+country_decisions = {
+
+	give_birth_occitanism = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = occitain
+				primary_culture = arpitan
+				primary_culture = gascon
+			}
+			has_factions = yes
+			has_faction = trobador_occitanist
+			NOT = { has_country_flag = gave_birth_occitanism }
+		}
+		allow = {
+			adm_power = 25
+			NOT = { has_opinion = { who = FRA value = 125 } }
+			NOT = { has_opinion = { who = PRS value = 125 } }
+			faction_in_power = trobador_occitanist
+			capital_scope = { # mainly prints the variable so that we have an idea of what is happening
+				check_variable = { which = province_occitanism value = 35 }
+			}
+		}
+		effect = {
+			add_adm_power = -25
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = gascon
+							culture = occitain
+							culture = arpitan
+							culture = catalan
+						}
+					}
+					change_variable = { which = province_occitanism value = +20 }
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = gascon
+						culture = occitain
+						culture = arpitan
+						culture = catalan
+					}
+				}
+				custom_tooltip = "province_occitanism_name_20"
+			}
+			if = {
+				limit = {
+					OR = {
+						primary_culture = gascon
+						primary_culture = occitain
+						primary_culture = arpitan
+					}
+				}
+				every_country = {
+					limit = { primary_culture = cosmopolitan_french }
+					add_opinion = {
+						who = ROOT
+						modifier = opinion_mildly_displeased
+					}
+				}
+			}
+			add_faction_influence = { faction = trobador_occitanist influence = 10 }
+			add_prestige = 5
+			set_country_flag = gave_birth_occitanism
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_opinion = { who = PRS value = 150 }
+					has_opinion = { who = FRA value = 150 }
+				}
+			}
+		}
+	}
+
+	assimilate_to_french_culture = {
+		major = yes
+		potential = {
+			primary_culture = occitain
+			NOT = { has_country_flag = assimilated_to_french_culture }
+		}
+		allow = {
+			OR = {
+				exists = PRS
+				exists = FRA
+			}
+			OR = {
+				FRA = {
+					num_of_cities = 6
+					any_owned_province = {
+						OR = {
+							area = guyenne_area
+							area = massif_central_area
+							area = savoy_dauphine_area
+							area = pyrenees_area
+							area = languedoc_area
+							area = provence_area
+						}
+					}
+				}
+				PRS = {
+					num_of_cities = 6
+					any_owned_province = {
+						OR = {
+							area = guyenne_area
+							area = massif_central_area
+							area = savoy_dauphine_area
+							area = pyrenees_area
+							area = languedoc_area
+							area = provence_area
+						}
+					}
+				}
+			}
+			OR = {
+				faction_in_power = trobador_french
+				has_opinion = { who = FRA value = 200 }
+				has_opinion = { who = PRS value = 200 }
+			}
+			capital_scope = { # mainly prints the variable so that we have an idea of what is happening
+				NOT = { check_variable = { which = province_occitanism value = 80 } }
+			}
+		}
+		effect = {
+			add_adm_power = -10
+			hidden_effect = {
+				every_owned_province = {
+					limit = { culture_group = occitanocatala }
+					change_variable = { which = province_occitanism value = -40 }
+				}
+			}
+			every_owned_province = {
+					limit = { culture_group = occitanocatala }
+				custom_tooltip = "province_occitanism_name_-40"
+			}
+			FRA = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+			}
+			PRS = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+			}
+			add_faction_influence = { faction = trobador_french influence = 30 }
+			add_prestige = -10
+			set_country_flag = assimilated_to_french_culture
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { faction_in_power = trobador_french }
+				OR = {
+					NOT = { has_opinion = { who = FRA value = 150 } }
+					NOT = { has_opinion = { who = PRS value = 150 } }
+				}
+			}
+		}
+	}
+
+	occitan_gov_swap = {
+		major = yes
+		potential = {
+			OR = {
+				government = occitan_monarchy
+				government = occitan_republic
+				government = catalan_monarchy
+				government = catalan_republic
+				government = occitan_theocracy
+			}
+			is_year = 1600
+		}
+		allow = {
+			is_at_war = no
+		}
+		effect = {
+			if = {
+				limit = { government = monarchy }
+				change_government = constitutional_monarchy
+			}
+			if = {
+				limit = { government = republic }
+				change_government = constitutional_republic
+			}
+			if = {
+				limit = { government = theocracy }
+				change_government = theocratic_government
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+}

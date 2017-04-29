@@ -1,0 +1,5 @@
+government = native_council
+technology_group = north_american
+religion = puata_tupuna
+primary_culture = maori
+capital = 1108

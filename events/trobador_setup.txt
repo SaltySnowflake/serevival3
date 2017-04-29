@@ -1,0 +1,109 @@
+namespace = trobador_setup
+
+# Initialising the mod at startup
+# Warning: if other mods needs the same, we're not sure to have our event triggering first. Is there a rule?
+# all that stuff is a bit messy but less than maintaining copies of the base files
+
+country_event = {
+	id = trobador_setup.2
+	title = "trobador_setup.2.t"
+	desc = "trobador_setup.2.d"
+	picture = REFORM_eventPicture
+
+	trigger = {
+		OR = {
+			culture_group = occitanocatala 
+			primary_culture = gascon
+			primary_culture = occitain
+			primary_culture = arpitan
+			primary_culture = catalan
+		}
+		capital_scope = { 
+			OR = {
+				area = romandie_area
+				area = switzerland_area
+				area = venetia_area
+				area = lombardy_area
+				area = piedmont_area
+				area = liguria_area
+				area = emilia_romagna_area
+				area = emilia_area
+				region = iberia_region
+				region = france_region
+			}
+		}
+		NOT = { government = occitan_monarchy }
+		NOT = { government = occitan_republic }
+		NOT = { government = catalan_monarchy }
+		NOT = { government = catalan_republic }
+		NOT = { government = occitan_theocracy }
+		NOT = { tag = FRA }
+		NOT = { tag = ANV }
+		NOT = { tag = SPA }
+		NOT = { tag = OCC }
+		NOT = { is_year = 1600 }
+	}
+
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "trobador_ok"		# Monarchy
+		trigger = {
+			OR = {
+				government = dictatorship
+				government = monarchy
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					primary_culture = occitano
+					primary_culture = gascon
+					primary_culture = occitain
+					primary_culture = arpitan
+				}
+			}
+		change_government = occitan_monarchy
+		}
+		if = {
+			limit = {
+				OR = {
+					primary_culture = catala
+					primary_culture = catalan
+				}
+			}
+		change_government = catalan_monarchy
+		}
+	}
+	
+	option = {
+		name = "trobador_ok"		# Republic
+		trigger = { government = republic }
+		if = {
+			limit = {
+				OR = {
+					primary_culture = occitano
+					primary_culture = gascon
+					primary_culture = occitain
+					primary_culture = arpitan
+				}
+			}
+		change_government = occitan_republic
+		}
+		if = {
+			limit = {
+				OR = {
+					primary_culture = catala
+					primary_culture = catalan
+				}
+			}
+		change_government = catalan_republic
+		}
+	}
+	option = {
+		name = "trobador_ok"		# Theocray
+		trigger = { government = theocracy }
+		change_government = occitan_theocracy
+	}
+	
+}

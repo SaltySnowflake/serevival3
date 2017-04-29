@@ -1,0 +1,16 @@
+government = feudal_monarchy
+government_rank = 1
+primary_culture = castillian
+religion = catholic
+technology_group = western
+capital = 219 # Toledo
+
+1441.11.01 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

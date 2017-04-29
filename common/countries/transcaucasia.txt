@@ -1,0 +1,187 @@
+#Country Name: Please see filename.
+
+graphical_culture = easterngfx
+
+color = { 255 204 0 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	muscovite_musketeer
+	muscovite_caracolle
+	muscovite_soldaty
+	muscovite_cossack
+	russian_petrine
+	russian_lancer
+	russian_green_coat
+	russian_cuirassier
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	russian_mass
+}
+
+monarch_names = {
+	"Giorgi #0" = 120
+	"Davit #0" = 60
+	"Vakhtang #0" = 60
+	"Bagrat #0" = 40
+	"Aleksandri #0" = 20
+	"Erekle #0" = 40
+	"Konstantini #0" = 40
+	"Luarsab #0" = 40
+	"Mamia #0" = 40
+	"Svimeon #0" = 40
+	"Teimuraz #0" = 40
+	"Archili #0" = 20
+	"Bakar #0" = 20
+	"Jesse #0" = 20
+	"Irakli #0" = 20
+	"Kvarkvare #0" = 20
+	"Kaihushru #0" = 20
+	"Manuchar #0" = 20
+	"Rabia #0" = 20
+	"Rustam #0" = 20
+	"Solomon #0" = 20
+	"David #0" = 20
+	"Mkhitar #0" = 20
+	"Ibrahim #0 Muhammad" = 20
+	"Ibrahim #0" = 20
+	"Farrukhsiyar Khalil #0" = 20
+	"Bahram Farrukhsiyar #0" = 20
+	"Ghazi Farrukhsiyar #0" = 20
+	"Ismail #0" = 10
+	"Tahmasp #0" = 10
+	"Junayd #0" = 10
+	"Farrukh #0" = 10
+ 	"Khalilullah #0" = 10
+	"Ashot #0" = 15
+	"Gagik #0" = 15
+	"Smbat #0" = 15
+	"Abbas #0" = 15
+	"Hovhannes Smbat #0" = 15
+	"Vagram #0" = 10
+	"Musegh #0" = 10
+	"Sahak #0" = 10
+	"Tachar #0" = 10
+	"Levanti #0" = 15
+	"Ars #0" = 10
+	"Kakhaber #0" = 10
+	"Demetre #0" = 10
+	"Liparit #0" = 10
+	"Mzechabuki #0" = 10
+	"Samsan #0" = 10
+	"Stefanoz #0" = 10
+	"Vameq #0" = 10
+	"Anzori #0" = 0
+	"Bebur #0" = 0
+	"Birtveli #0" = 0
+	"Djurkha #0" = 0
+	"Gulikho #0" = 0
+	"Kartlos #0" = 0
+	"Koki #0" = 0
+	"Kviria #0" = 0
+	"Lukhum #0" = 0
+	"Malkhaz #0" = 0
+	"Mushni #0" = 0
+	"Okhropir #0" = 0
+	"Orbeli #0" = 0
+	"Revaz #0" = 0
+	"Takha #0" = 0
+	"Torgva #0" = 0
+	"Tornike #0" = 0
+	"Tsotne #0" = 0
+	"Xareba #0" = 0
+	"Zviadi #0" = 0
+	"Arakel #0" = 0
+	"Ari #0" = 0
+	"Armen #0" = 0
+	"Arsen #0" = 0
+	"Arshavir #0" = 0
+	"Avedis #0" = 0
+	"Badouagan #0" = 0
+	"Bedros #0" = 0
+	"Berjouhi #0" = 0
+	"Boghos #0" = 0
+	"Ghoukas #0" = 0
+	"Hagop #0" = 0
+	"Haig #0" = 0
+	"Hovhannes #0" = 0
+	"Hovsep #0" = 0
+	"Jirair #0" = 0
+	"Kapriel #0" = 0
+	"Karayan #0" = 0
+	"Kevork #0" = 0
+	"Khajag #0" = 0
+	"Krikor #0" = 0
+	"Levon #0" = 0
+	"Movses #0" = 0
+	"Nairi #0" = 0
+	"Sevan #0" = 0
+	"Taniel #0" = 0
+	"Vahan #0" = 0
+	"Zadig #0" = 0
+	"Zoravan #0" = 0
+	
+	"Thamar #0" = -1
+	"Anna #0" = -1
+	"Adrine #0" = -1
+	"Elsapet #0" = -1
+	"Sarine #0" = -1
+	"Adila #0" = -3
+	"Malahat #0" = -3
+	"Ummugulsum #0" = -1
+	"Khadija #0" = -1
+	"Abida #0" = -1
+	"Bika #0" = -1
+	"Lal Bi #0" = -1
+	"Khanikah #0" = -1
+	"Halima #0" = -1
+	"Shahnavaz #0" = -1
+	"Gunish #0" = -1
+	"Pari #0" = -1
+	"Khair #0" = -1
+	"Shah #0" = -1
+	"Farangis #0" = -1
+	"Mahin Banu #0" = -1
+	"Tajlu #0" = -1
+	"Gowhar #0" = -1
+	"Zainab #0" = -1
+	"Zainab #0" = -1
+	"Fatemeh #0" = -1
+}
+
+leader_names = { 
+	Adamian Adomian Aghajanian Ahrari Altounyan Andronikashvili Ansari Apkarian Asrenidze Avashvili Azizi
+	Babaian Babikian Bagian Bakradze Bhobanyan Chkheidze Chkhenkeli Chobanian Daei Dalwand Damadian Devdariani
+	Eskandarian Fatemi Gabashvili Gardapkhadze Gedevanishvili Gegechkori Gulisashvili Gvazava Jalili Javakhishvili
+	Kapikian Karalashvili Kazanjian Kebabian Kereselidze Kevorkian Khachikyan Khatchaturian Kirlian Kvinitadze
+	Lomtatitdze Maglakelidze Mazniashvili Mergelyan Meymarian Natadze Nikoladze Orbeli Pogosyan Qazai Robakidze
+	Sabet Sabiri Sadian Sevanian Shahinian Shahy Sharashidze Simjian Surguladze Takaishvili Tsereteli Tsulukidze
+	Vachnadze Zaldastanishvili Zhordania
+}
+
+ship_names = {
+	Abathur Abkhazeti Agas Ahaka Ahriman Ahura Ahurani Airyaman Aladdin Allatum Amashaspan Ameratat Anacopia Anahita Ani Anjuman
+	Apaosa Aragveti Aramu Ararat Aredvi Argishtis Arishtat Armaiti Arsaces Artaani Artsakh Asman Atar Baga Bahram Baku Batomi
+	Bichvinta Burijas Bushyasta Buyasta Camros Daena Daevas Dahhak Demetre Dena Dev Diwe Dmanisi Drug Drvaspa Dvin Ereti Erimena
+	Frashegird Fravashis Gandarewa Gayomard Gayomart Geguti Gelati Haik Haldi Haoma Haurvatat Humay Hvar Hvarekhshaeta Indar Indra
+	Ishpuinis Izha Jamshid Jeh Kars Karshipta Kavi Khara Kharnabuji Kundrav Kura Kutatsi Lasharisjvari Lore Lutipri Mah Mahre
+	Mahrianag Manu Manuchihir Manzikert Mao Mashyane Mashye Menog Menuas Mithra Mtkvari Musasir Nairyosangha Nanghaithya Narikala
+	Neriosang Ormazd Parisos Peris Peshdadians Racha Rapithwin Rashnu Ruisi Rustam Saurva Selardi Seti Simurgh Siwini Sraosa Srosh
+	Svaneti Tamar Tashiri Tawrich Tbilisi Telavi Thunaupa Tistrya Tushnamatay Urbnisi Vanant Vaspurakan Vata Verethragna Vouruskasha
+	Yam Yasht Yazata Yerevan Yezidi Yima Zal Zam Zarathustra Zarich Zurvan
+}

@@ -1,0 +1,125 @@
+viracocha =
+{
+        global_unrest = -1
+        recover_army_morale_speed = 0.05
+
+        allow = { religion = south_american }
+        sprite = 52
+
+        ai_will_do = {
+                  factor = 1
+                  modifier = {
+                          factor = 3
+                          personality = ai_capitalist
+                  }
+                  modifier = {
+                          factor = 2
+                          personality = ai_militarist
+                  }
+       }
+}
+
+illapa =
+{
+        defensiveness = 0.2
+        hostile_attrition = 1.0
+
+        allow = { religion = south_american }
+        sprite = 53
+
+        ai_will_do = {
+                  factor = 1
+                  modifier = {
+                          factor = 3
+                          personality = ai_militarist
+                  }
+                  modifier = {
+                          factor = 0.5
+                          personality = ai_capitalist
+                  }
+       }
+}
+
+inti =
+{
+        prestige = 1
+        ae_impact = -0.15
+
+        allow = { religion = south_american }
+        sprite = 54
+		
+        ai_will_do = {
+                  factor = 1
+                  modifier = {
+                          factor = 3
+                          personality = ai_militarist
+                  }
+                  modifier = {
+                          factor = 2
+                          personality = ai_diplomat
+                  }
+        }
+}
+
+mama_cocha =
+{
+        manpower_recovery_speed = 0.20
+        naval_forcelimit_modifier = 0.20
+
+        allow = { religion = south_american }
+        sprite = 55
+
+        ai_will_do = {
+                  factor = 1
+                  modifier = {
+                          factor = 3
+                          personality = ai_colonialist
+                  }
+                  modifier = {
+                          factor = 0.5
+                          personality = ai_militarist
+                  }
+        }
+}
+
+mama_quilla =
+{
+        diplomatic_upkeep = 3
+        stability_cost_modifier = -0.10
+
+        allow = { religion = south_american }
+        sprite = 56
+
+        ai_will_do = {
+                  factor = 1
+                  modifier = {
+                          factor = 2
+                          personality = ai_diplomat
+                  }
+                  modifier = {
+                          factor = 2
+                          personality = ai_capitalist
+                  }
+        }
+}
+
+urcaguary =
+{
+        trade_steering = 0.4
+        global_tax_modifier = 0.1
+
+        allow = { religion = south_american }
+        sprite = 57
+
+        ai_will_do = {
+                  factor = 1
+                  modifier = {
+                          factor = 3
+                          personality = ai_diplomat
+                  }
+                  modifier = {
+                          factor = 2
+                          personality = ai_capitalist
+                  }
+      }
+}    

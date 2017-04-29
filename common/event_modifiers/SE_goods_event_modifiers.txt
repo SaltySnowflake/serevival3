@@ -1,0 +1,111 @@
+linenopolis = {
+	trade_goods_size = 5.0
+}
+pepper_centre = {
+	trade_goods_size = 4.0
+}
+cinnamon_island = {
+	trade_goods_size = 4.0
+}
+centre_spice_trade = {
+	trade_goods_size = 3.0
+}
+banda_island = {
+	trade_goods_size = 5.0
+}
+woad_trade = {
+	trade_goods_size = 2.0
+}
+india_zinc = {
+	trade_goods_size = 1.0
+}
+se_asia_ivory_decline = {
+	trade_goods_size_modifier = -0.5
+}
+oregrounds = {
+	trade_goods_size = 1.5
+}
+prussian_amber = {
+	trade_goods_size = 0.5
+}
+murano_glass = {
+	trade_goods_size = 2
+}
+amazon_eastuary_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+orinoco_eastuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+congo_eastuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+ob_eastuary_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+yenisei_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+amur_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+murray_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+tucapi_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+yukon_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+nile_source_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+syr_dara_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+sao_fransisco_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+han_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+glomma_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+orange_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+colorado_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+agr_rev_mod = {
+	trade_goods_size_modifier = 0.1
+	local_development_cost = -0.1
+	local_unrest = 1
+}
+ind_rev_mod = {
+	trade_goods_size_modifier = 0.3
+	local_development_cost = -0.2
+	local_unrest = 3
+	stability_cost_modifier = 0.01
+	allowed_num_of_buildings = 1
+}
+recently_changed_goods_timer = { trade_goods_size_modifier = -0.05 }
+potato_timer = { }

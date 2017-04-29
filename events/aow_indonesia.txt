@@ -1,0 +1,324 @@
+namespace = java
+
+country_event = {
+	id = java.1
+	title = "java.EVTNAME1"
+	desc = "java.EVTDESC1"
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MAJ
+		NOT = { is_year = 1455 }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "java.EVTOPTA1"
+		add_prestige = -100
+		add_legitimacy = -50
+		add_stability = -2
+		add_corruption = 10
+	}
+}
+
+# Reforms of Iskandar Muda
+
+country_event = {
+	id = java.4
+	title = "java.EVTNAME4"
+	desc = "java.EVTDESC4"
+	picture = REFORM_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = ATJ
+		is_year = 1600
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+	option = { # centralise social heirarcy
+		name = "java.4a"
+		add_adm_power = 400
+		add_stability_or_adm_power = yes
+		change_government = absolute_monarchy
+	}
+	option = { # reform the military
+		name = "java.4b"
+		add_mil_power = 400
+		add_army_tradition = 30
+		add_navy_tradition = 30
+		change_government = absolute_monarchy
+	}
+	option = { # reform both
+		name = "java.4c"
+		add_mil_power = 200
+		add_adm_power = 200
+		add_army_tradition = 15
+		add_navy_tradition = 15
+		add_years_of_income = 0.5
+		add_stability_or_adm_power = yes
+	}
+}
+
+# City of the King, Kutaraja
+country_event = {
+	id = java.5
+	title = "java.EVTNAME5"
+	desc = "java.EVTDESC5"
+	picture = REFORM_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = ATJ
+		is_year = 1490
+		NOT = { is_year = 1550 }
+		owns_core_province = 617
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = "java.5a"
+		if = {
+			limit = { NOT = { capital = 617 } }
+			set_capital = 617
+		}
+		617 = {
+			add_base_tax = 2
+			add_base_manpower = 2
+			add_base_production = 2
+			rename_capital = "Kutaraja"
+		}
+		if = {
+			limit = { 2673 = { NOT = { owned_by = PSA } } }
+			2673 = { remove_province_modifier = center_of_trade_modifier }
+			617 = {
+				add_permanent_province_modifier = {
+					name = center_of_trade_modifier
+					duration = -1
+				}
+			}
+		}
+		if = {
+			limit = { 2685 = { is_empty = yes } }
+			2685 = {
+				add_core = ATJ
+				cede_province = ATJ
+			}
+		}
+	}
+}
+
+# CoT for Demak
+country_event = {
+	id = java.6
+	title = "java.EVTNAME6"
+	desc = "java.EVTDESC6"
+	picture = MERCHANTS_TALKING_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { tag = MAJ }
+		OR = {
+			culture_group = malay
+			primary_culture = moluccan
+		}
+		owns_core_province = 629
+		OR = {
+			religion = sunni
+			629 = { religion = sunni }
+		}
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	option = {
+		name = "java.6a"
+		629 = {
+			add_permanent_province_modifier = {
+				name = center_of_trade_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				religion = sunni
+				629 = { NOT = { religion = sunni } }
+			}
+			629 = { change_religion = sunni }
+		}
+		if = {
+			limit = { tag = DMK }
+			629 = { add_base_tax = 2 }
+			add_stability_or_adm_power = yes
+		}
+	}
+}
+
+# The Loss of Malacca
+country_event = {
+	id = java.7
+	title = "java.EVTNAME7"
+	desc = "java.EVTDESC7"
+	picture = WOUNDED_SOLDIERS_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = MLC
+		NOT = { owns_core_province = 596 }
+		owns_core_province = 597
+		NOT = { exists = JOH }
+		is_at_war = no
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	option = {
+		name = "java.7a"
+		set_capital = 597
+		change_tag = JOH
+		add_prestige = -20
+	}
+}
+
+# Islam by marriage
+country_event = {
+	id = java.8
+	title = "java.EVTNAME8"
+	desc = "java.EVTDESC8"
+	picture = RELIGION_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_ruler_flag = islam_wife }
+		OR = {
+			culture_group = malay
+			primary_culture = moluccan
+		}
+		any_country = {
+			religion = sunni
+			marriage_with = ROOT
+		}
+		OR = {
+			religion = hinduism
+			religion_group = pacific_pagan
+			religion = buddhism
+		}
+		OR = {
+			has_consort = yes
+			NOT = { has_dlc = "Rights of Man" }
+		}
+		is_female = no
+	}
+	mean_time_to_happen = { months = 3 }
+	immediate = { set_ruler_flag = islam_wife }
+	option = {
+		name = "java.8a"
+		change_religion = sunni
+		add_stability = -1
+	}
+	option = {
+		name = "java.8b"
+		add_prestige = 10
+	}
+}
+
+
+# rise of banten
+
+country_event = {
+	id = java.9
+	title = "java.EVTNAME9"
+	desc = "java.EVTDESC9"
+	picture = CIVIL_WAR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = BAN
+		owns_core_province = 624
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "java.EVTOPTA9"
+		624 = {
+			add_base_tax = 2
+			add_base_manpower = 2
+			add_base_production = 2
+			add_permanent_province_modifier = {
+				name = "center_of_trade_modifier"
+				duration = -1
+			}
+		}
+		630 = { remove_province_modifier = center_of_trade_modifier }
+		add_permanent_claim = 623
+		add_permanent_claim = 621
+	}
+}
+
+# Migration of Javanese people to Banten
+
+country_event = {
+	id = java.10
+	title = "java.EVTNAME10"
+	desc = "java.EVTDESC10"
+	picture = CIVIL_WAR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = MAJ }
+		owns_core_province = 624
+		624 = { culture = sundanese }
+		culture_group = malay
+		NOT = { 628 = { owner = { primary_culture = sundanese } } }
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	option = {
+		name = "java.EVTOPTA10"
+		624 = {
+			add_base_tax = 1
+			add_base_manpower = 1
+			add_base_production = 1
+			change_culture = javanese
+		}
+	}
+}
+
+# Migration of Javanese people to Cirebon
+
+country_event = {
+	id = java.11
+	title = "java.EVTNAME11"
+	desc = "java.EVTDESC11"
+	picture = CIVIL_WAR_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = MAJ }
+		owns_core_province = 2688
+		2688 = { culture = sundanese }
+		culture_group = malay
+		NOT = { 628 = { owner = { primary_culture = sundanese } } }
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	option = {
+		name = "java.EVTOPTA11"
+		2688 = {
+			add_base_tax = 1
+			add_base_manpower = 1
+			change_culture = javanese
+		}
+	}
+}
+
+# silting up of demak trade port
+			

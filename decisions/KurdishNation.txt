@@ -1,0 +1,78 @@
+country_decisions = {
+
+	kurdish_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = KRD }
+			primary_culture = kurdish
+			OR = {
+				num_of_cities = 5
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 2206	#Urmia
+			owns_core_province = 2306	#Mush
+			owns_core_province = 2308	#Cizre
+			owns_core_province = 411	#Mosul
+			owns_core_province = 415	#Shahrizor
+			owns_core_province = 418	#Diyarbekir
+			owns_core_province = 2210	#Kirmanshah
+			owns_core_province = 2211	#Arbalan
+		}
+		effect = {
+			change_tag = KRD
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					owns = 411	# Mosul
+					NOT = { capital = 411 }
+				}
+				set_capital = 411
+			}
+			random_owned_province = {
+				limit = { culture = kurdish }
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { NOT = { has_idea_group = kurdish_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

@@ -1,0 +1,16 @@
+government = aboriginal_native_council
+government_rank = 1
+primary_culture = aboriginal
+religion = tjukurpa
+technology_group = aboriginal
+capital = 2731 #Guugu Yimithirr
+
+1444.1.1 = {
+	monarch = {
+		name = "Pilark"
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+	
+}

@@ -1,0 +1,12 @@
+culture = aboriginal
+religion = tjukurpa
+capital = "Antakarinja"
+hre = no
+trade_goods = unknown
+base_manpower = 1
+base_tax = 1
+base_production = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 9
+discovered_by = aboriginal

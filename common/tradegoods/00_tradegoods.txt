@@ -1,0 +1,5344 @@
+###cereals
+grain = { 
+	#grown all over temperate areas, more luxurious
+	#color = { 0.70 0.70 0.00 }
+	color = { 0.96 0.93 0.58 }
+	modifier = { land_forcelimit_modifier = 0.20 } #was .10
+	province = { land_forcelimit = 0.5 }
+	chance = { 
+		factor = 35
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = coastline
+				has_climate = arctic
+				has_climate = arid
+				has_climate = tropical
+				has_winter = severe_winter
+				region = central_asia_region
+				region = west_siberia_region
+				region = east_siberia_region
+			}
+		}
+		modifier = {
+			factor = 0.15
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = jungle
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = highlands
+				has_terrain = marsh
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			OR = { 
+				has_terrain = farmlands
+				region = great_plains_region
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				region = central_america_region
+				region = mississippi_region
+				region = mexico_region
+				region = southeast_america_region
+			}
+		}
+		modifier = { #Rich agriculture in the central valley
+			factor = 1.5
+			area = central_valley_area
+		}
+		modifier = { #Rich agriculture along the Peace River despite climate extra bonus to overcome natural penalties
+			factor = 8.0
+			area = peace_river_area
+		}
+		modifier = { #Rich agriculture on the prairies extra bonus to overcome natural penalties
+			factor = 6.0
+			area = prairies_area
+		}
+		modifier = { #Very rich agriculture along the Red River and Quappelle river
+			factor = 6.0
+			area = red_river_area
+		}
+		modifier = { #Very rich agriculture along the Columbia river and east facing mountain foothills despite climate extra bonus to overcome natural penalties
+			factor = 8.0
+			OR = {
+				area = columbia_river_area
+				area = northern_cascades_area
+			}
+		}
+		modifier = { #No grain in Rockies
+			factor = 0.0
+			OR = {
+				area = northern_rocky_mountains_area
+				area = interior_plateau_area
+				area = queen_charlotte_sound_area
+				area = hecate_strait_area
+			}
+		}
+		modifier = { #Better choices in Salish sea and Sierra Nevadas
+			factor = 0.0
+			OR = {
+				area = salish_sea_area
+				area = sierra_nevada_area
+			}
+		}
+		modifier = { #Newfoundland has the best fishing in the world but little else
+			factor = 0.0
+			OR = {
+				province_id = 980			#E Newfoundland
+				province_id = 981			#N Newfoundland
+				province_id = 2573			#S Newfoundland
+				province_id = 982			#Cape Breton
+				province_id = 983			#PEI
+			}
+		}
+		modifier = { #Really want Avalon to have fish
+			factor = 0.0
+			OR = {
+				area = avalon_area
+				province_id = 5019			#St Pierre et Miquelon
+				province_id = 4974			#Grand Banks
+			}
+		}
+		modifier = { #Grain very rare in Athabaska
+			factor = 0.25
+			area = athabasca_area
+		}
+		modifier = { #No grain in Alaska
+			factor = 0.0
+			region = alaska_region
+		}
+		modifier = { #No grain in the north too cold
+			factor = 0.0
+			OR = {
+				area = james_bay_area
+				area = upper_ontario_area
+				area = huronia_area
+				area = grand_river_area
+				area = lower_grand_river_area
+				area = laurentian_area
+				area = inner_ontario_area
+				area = manitoba_area
+				area = notre_dame_mountains_area
+				area = abitibi_area
+				AND = {
+					region = canada_region
+					has_terrain = hills
+				}
+			}
+		}
+		modifier = { #No grain in NWT outside athabaska and peace river
+			factor = 0.0
+			OR = {
+				area = deh_cho_area
+				area = klondike_area
+				area = arctic_coast_area
+			}
+		}
+		modifier = { #Acadia actually has some decent farming   -x8 bonus because other factors cause penaltes
+			factor = 12.0
+			OR = {
+				area = lower_acadia_area
+				area = upper_acadia_area
+			}
+		}
+		modifier = { #The richer parts of Canada had some excellent maize and other grainy type foods production   -x8 bonus because other factors cause penaltes
+			factor = 16.0
+			OR = {
+				area = lower_canada_area
+				area = upper_canada_area
+			}
+		}
+		modifier = { #Specific provinces which should get grain
+			factor = 4.0
+			OR = {
+				province_id = 5032		# Tachi
+				province_id = 4961		# Palus
+				province_id = 2488		# Yakama
+				province_id = 2483		# Umatilla
+				province_id = 2486		# Sdukalbixw
+				province_id = 4949		# Nlakapamux
+				#province_id = 5043		# Cocopah			#removed, may add through irrigation event
+				#province_id = 867		# Ivilluat			#removed, may add through irrigation event
+			}
+		}
+	}
+}
+
+barley = {
+	#considered peasants' food, grew in harsher climates
+	color = { 0.50 0.55 0.20 } 
+	modifier = { manpower_recovery_speed = 0.075 } 
+	province = { local_manpower_modifier = 0.10 }
+	chance = { 
+		factor = 35
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = coastline
+				has_terrain = jungle
+				has_climate = arctic
+				has_climate = arid
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = highlands
+				has_terrain = marsh
+				has_climate = tropical
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+				region = great_plains_region
+				region = mississippi_region
+				region = southeast_america_region
+			}
+		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				region = central_america_region
+				region = mississippi_region
+				region = mexico_region
+				region = southeast_america_region
+			}
+		}
+	} 
+}
+rye = { 
+	#hardier cereals, cold areas
+	color = { 0.40 0.40 0.20 } 
+	modifier = { land_forcelimit_modifier = 0.10 } #was .05
+	province = { infantry_power = 0.01 }
+	chance = { 
+		factor = 12
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = coastline
+				AND = { 
+					has_climate = arctic
+					NOT = { region = canada_region }
+				}
+				has_climate = arid
+				has_climate = tropical	
+				has_winter = mild_winter
+				has_winter = no_winter	
+				NOT = { 
+					OR = {
+						has_winter = normal_winter
+						has_winter = mild_winter
+						has_winter = severe_winter
+					}
+				}						
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = jungle
+				has_terrain = highlands
+				has_terrain = marsh
+				has_winter = normal_winter
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0.8	
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				region = central_america_region
+				region = mississippi_region
+				region = mexico_region
+				region = southeast_america_region
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
+	} 
+}
+maize = { 
+	color = { 0.70 0.60 0.00 } 
+	modifier = { vassal_forcelimit_bonus = 0.33 }
+	province = { land_forcelimit = 0.25 }
+	chance = { 
+		factor = 25
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = coastline
+				has_terrain = jungle
+				has_climate = arctic
+				has_climate = arid
+				NOT = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = highlands
+				has_terrain = marsh
+				has_climate = tropical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0.15	
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.35
+			OR = {
+				has_winter = normal_winter
+			}
+		}
+		modifier = {
+			factor = 0.55
+			OR = {
+				has_winter = mild_winter
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				region = central_america_region
+				region = mississippi_region
+				region = mexico_region
+				region = southeast_america_region
+			}
+		}
+	} 
+}
+rice = { 
+	#grain, mostly south/east asia, some in italy
+	color = { 0.80 0.80 0.65 } 
+	modifier = { global_manpower_modifier = 0.10 }
+	province = { local_manpower_modifier = 0.10 }	
+	chance = { 
+		factor = 10
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { continent = asia }
+			NOT = { area = banda_oriental_area }
+			NOT = { area = rio_grande_do_sol_area }
+			NOT = { area = buenos_aires_area }
+			NOT = { area = beni_area }
+			NOT = { area = paraguay_area }
+			NOT = { area = sao_paolo_area }
+			NOT = { area = mississippi_area }
+			NOT = { area = lower_louisiana_area }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes #Only the below cultures can get tea in the RNW
+			FROM = {
+				NOT = { culture_group = east_asian }
+				NOT = { culture_group = central_indic }
+				NOT = { culture_group = dravidian }
+				NOT = { culture_group = western_aryan }
+				NOT = { culture_group = hindusthani }
+				NOT = { culture_group = eastern_aryan }
+				NOT = { culture_group = korean_g }
+				NOT = { culture_group = japanese_g }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			continent = south_america
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = mountain
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = jungle
+				has_terrain = highlands
+				has_terrain = marsh
+			}
+		}
+		modifier = {
+			factor = 0.25
+				has_terrain = coastal_desert
+				has_terrain = desert
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0	
+			OR = {
+				has_winter = severe_winter
+				has_winter = normal_winter
+			}
+		}
+		modifier = {
+			factor = 0.25
+			has_winter = mild_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				area = banda_oriental_area
+				area = rio_grande_do_sol_area
+				area = buenos_aires_area
+				area = beni_area
+				area = paraguay_area
+				area = sao_paolo_area 
+			}
+		}
+	}
+}
+millet = { 
+	#staple in drier areas; west africa, india, northern china
+	color = { 0.60 0.70 0.00 } 
+	modifier = { land_maintenance_modifier = -0.10 } 
+	province = { local_defensiveness = 0.15 }
+	chance = { 
+		factor = 20
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				AND = { 
+					continent = oceania
+					NOT = { region = australia_region }
+					NOT = { area = te_ika_a_maui_area }
+					NOT = { area = te_waipounamu_area }
+				}
+				#unlike the others, millet grew in australia
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = desert
+				has_terrain = jungle
+				has_climate = arctic
+				AND = {
+					has_climate = temperate
+					NOT = { superregion = india_superregion }
+					NOT = { superregion = china_superregion }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = coastline
+				has_terrain = highlands
+				has_terrain = marsh
+			}
+		}
+		modifier = {
+			factor = 0.45
+			has_climate = arid
+		}
+		modifier = {
+			factor = 0.8
+			has_climate = tropical
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0.25
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.50
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			continent = africa
+		}
+	} 
+}
+sorghum = { 
+#arid areas; west africa, india, ethiopia
+	color = { 0.60 0.55 0.20 } 
+	modifier = { land_maintenance_modifier = -0.05 }
+	province = { local_defensiveness = 0.075 }
+	chance = { 
+		factor = 10
+		modifier = {
+			factor = 0
+			island = yes
+		}
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = jungle
+				has_climate = arctic
+				has_climate = temperate
+			}
+		}
+		modifier = {
+			factor = 0.45
+			OR = {
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = coastline
+				has_terrain = marsh
+				has_terrain = savannah
+				has_terrain = grasslands
+				has_terrain = farmlands
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0.8
+			has_climate = arid
+		}
+		modifier = {
+			factor = 0.3
+			has_climate = tropical
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_terrain = mountain
+				has_terrain = desert
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_winter = severe_winter
+				has_winter = normal_winter
+			}
+		}
+		modifier = {
+			factor = 0.3
+			has_winter = mild_winter
+		}
+		modifier = {
+			factor = 1.5
+			continent = africa
+		}
+		modifier = {
+			factor = 1.5
+			continent = oceania
+		}
+	} 
+}
+olives = { 
+	#mediterranean staple
+	color = { 0.20 0.35 0.00 } 
+	modifier = { stability_cost_modifier = -0.25 }
+	province = { local_unrest = -1 }
+	chance = { 
+		factor = 20
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					region = balkan_region
+					region = italy_region
+					region = iberia_region
+					region = maghreb_region
+					region = egypt_region
+					region = mashriq_region
+					region = anatolia_region
+					area = california_area
+					area = baja_california_area
+					area = sonora_y_sinaloa_area
+					area = central_valley_area
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				NOT = {
+					OR = {
+						area = california_area
+						area = baja_california_area
+						area = sonora_y_sinaloa_area
+						area = central_valley_area
+					}
+				}
+				OR = {
+					has_climate = arid
+					has_terrain = mountain
+					has_terrain = desert
+					has_terrain = highlands
+				}
+			}
+		}
+	} 
+}
+palm_oil = { 
+	color = { 0.60 0.55 0.25 } 
+	modifier = { prestige_decay = -0.01 }
+	province = { local_unrest = -1 }
+	chance = { 
+		factor = 15 
+		modifier = {
+			factor = 0
+			NOT = {
+				AND = { 
+					region = west_africa_region
+					has_climate = tropical
+				}
+			}
+		}
+	}
+}
+potatoes = { 
+	#Andes, later Europe
+	color = { 0.65 0.55 0.25 } 
+	modifier = { war_exhaustion = -0.05 }
+	province = { local_manpower_modifier = 0.10 }
+	chance = {
+		factor = 15 
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					AND = {
+						is_year = 1550
+						OR = {
+							continent = europe
+							superregion = china_superregion
+						}
+					}
+					AND = {
+						region = peru_region
+						region = upper_peru_region
+						is_random_new_world = no
+					}
+					AND = {
+						is_random_new_world = yes
+						continent = new_world
+						has_terrain = mountain
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				AND = {
+					region = peru_region
+					region = upper_peru_region
+					is_random_new_world = no
+				}
+				AND = {
+					is_random_new_world = yes
+					continent = new_world
+					has_terrain = mountain
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				region = scandinavia_region
+				region = british_isles_region
+				region = low_countries_region
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				region = ireland_region
+			}
+		}
+	}	
+}
+	
+citrus = {
+	#south europe, china
+	color = { 0.90 0.50 0.20 } 
+	modifier = { naval_attrition = -0.15 }
+	province = { naval_morale = 0.025 }
+	chance = { 
+		factor = 10
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			continent = new_world #Always in RNW
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_terrain = glacier
+				has_terrain = forest
+			}
+		}
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					area = california_area
+					area = baja_california_area
+					area = sonora_y_sinaloa_area
+					area = central_valley_area
+					AND = { 
+						superregion = china_superregion
+						has_climate = tropical 
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_random_new_world = yes
+			continent = new_world #Always in RNW
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = no
+			region = california_region
+		}
+	}
+}
+
+###plantations
+coffee = { 
+	#color = { 0.45 0.35 0.25 }
+	color = { 0.22 0.15 0.09 }
+	modifier = { global_institution_spread = 0.05 }
+	province = { local_institution_spread = 0.1 }
+	chance = { 
+		factor = 15
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { area = southern_ethiopia_area }
+			NOT = { area = hadiya_area }
+			NOT = { area = damot_area }
+			NOT = { area = shewa_area }
+			NOT = {	region = malaya_region }
+			NOT = { region = indonesia_region }
+			NOT = { region = moluccas_region }
+			NOT = { region = la_plata_region }
+			NOT = { region = peru_region }
+			NOT = { region = upper_peru_region }
+			NOT = { region = brazil_region }
+			NOT = { region = carribeans_region }
+			NOT = { region = central_america_region }
+			NOT = { region = mexico_region }
+			NOT = { region = colombia_region }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = forest
+				has_climate = arctic
+				has_winter = severe_winter
+				has_winter = normal_winter
+				has_winter = mild_winter
+				province_id = 481
+			}
+		}
+		modifier = {
+			factor = 1.5
+			region = colombia_region
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			continent = new_world #Always in RNW
+			NOT = { has_climate = tropical }
+		}
+	}
+}
+sugar = { 
+	color = { 0.75 0.95 0.70 } 
+	modifier = { global_foreign_trade_power = 0.1 }
+	province = { local_unrest = -1 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_climate = tropical }
+				area = macaronesia_area
+			}
+			OR = {
+				has_winter = severe_winter
+				has_winter = normal_winter
+				has_winter = mild_winter
+				has_terrain = desert
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+				has_terrain = forest
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = carribeans_region }
+			NOT = { region = brazil_region }
+			NOT = { region = mexico_region }
+			NOT = { region = central_america_region }
+			NOT = { region = colombia_region }
+			NOT = { region = deccan_region }
+			NOT = { region = west_india_region }
+			NOT = { area = mascarenes_area }
+			NOT = { area = amazon_area }
+			NOT = { area = west_amazons_area }
+			NOT = { area = east_amazons_area }
+		}
+		modifier = {
+			factor = 4.0
+			is_random_new_world = no
+			NOT = { province_id = 481 }
+			OR = {
+				region = carribeans_region
+				area = ceara_area
+				area = pernambuco_area
+				area = bahia_area
+				area = guyana_area
+				area = suriname_area
+			}
+		}
+	}
+}
+cocoa = { 
+	color = { 0.45 0.20 0.10 } 
+	modifier = { recover_army_morale_speed = 0.05 }
+	province = { land_morale = 0.01 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = central_america_region }
+			NOT = { region = colombia_region }
+			NOT = { region = peru_region }
+			NOT = { region = upper_peru_region }
+			NOT = { region = brazil_region }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			NOT = { continent = new_world } #Always in RNW
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = steppe
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = marsh
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+	}
+}
+tobacco = { 
+	color = { 0.35 0.55 0.40 } 
+	modifier = { global_autonomy = -0.03 }
+	province = { local_autonomy = -0.1 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = la_plata_region }
+			NOT = { region = northeast_america_region }
+			NOT = { region = southeast_america_region }
+			NOT = { area = huronia_area }			#BT New
+			NOT = { area = upper_canada_area }			#BT New
+			NOT = { area = lower_canada_area }			#BT New
+			NOT = { region = brazil_region }
+			NOT = { region = carribeans_region }
+			NOT = { area = appalachia_area }
+			NOT = { area = south_appalachia_area }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			NOT = { continent = new_world } #Always in RNW
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_climate = arid
+					NOT = { has_terrain = grasslands }
+					NOT = { has_terrain = farmlands }
+				}
+				has_winter = severe_winter
+				has_terrain = glacier
+				has_terrain = mountain
+				has_terrain = drylands
+				has_terrain = desert
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				has_winter = severe_winter
+				NOT = { area = huronia_area }
+				NOT = { area = lower_canada_area }
+				NOT = { area = upper_canada_area }
+			}
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = northeast_america_region
+				region = southeast_america_region
+			}
+		}
+		modifier = { #Tobacco people
+			factor = 4.0
+			area = huronia_area
+		}
+		modifier = { #Tobacco people lesser
+			factor = 2.0
+			area = upper_canada_area
+		}
+	}
+}
+tea = { 
+	color = { 0.10 0.35 0.10 }
+	#color = { 0.07 0.33 0.09 }
+	modifier = { advisor_cost = -0.15 } 
+	province = { garrison_growth = 0.25 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = {	region = malaya_region }
+			NOT = {	region = moluccas_region }
+			NOT = { region = indonesia_region }
+			NOT = { region = indo_china_region }
+			NOT = { region = south_china_region }
+			NOT = { region = xinan_region }
+			NOT = { region = japan_region }
+			NOT = { area = taiwan_area }
+			NOT = { area = assam_area }
+			NOT = { area = banda_oriental_area } #Yerba Mate
+			NOT = { area = rio_grande_do_sol_area } #Yerba Mate
+			NOT = { area = buenos_aires_area } #Yerba Mate
+			NOT = { area = misiones_area } #Yerba Mate
+			NOT = { area = beni_area } #Yerba Mate
+			NOT = { area = moxos_area } #Yerba Mate
+			NOT = { area = paraguay_area } #Yerba Mate
+			NOT = { area = sao_paolo_area } #Yerba Mate
+			NOT = { area = west_sao_paolo_area } #Yerba Mate
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes #Only the below cultures can get tea in the RNW
+			FROM = {
+				NOT = { culture_group = east_asian }
+				NOT = { culture_group = central_indic }
+				NOT = { culture_group = dravidian }
+				NOT = { culture_group = western_aryan }
+				NOT = { culture_group = hindusthani }
+				NOT = { culture_group = eastern_aryan }
+				NOT = { culture_group = korean_g }
+				NOT = { culture_group = japanese_g }
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = mountain
+				has_terrain = desert
+				has_terrain = drylands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_climate = arid
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_terrain = farmlands
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				area = assam_area
+				AND = {
+					has_climate = tropical
+					is_random_new_world = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				area = banda_oriental_area #Yerba Mate
+				area = rio_grande_do_sol_area #Yerba Mate
+				area = buenos_aires_area #Yerba Mate
+				area = misiones_area #Yerba Mate
+				area = beni_area #Yerba Mate
+				area = moxos_area #Yerba Mate
+				area = paraguay_area #Yerba Mate
+				area = sao_paolo_area  #Yerba Mate
+				area = west_sao_paolo_area  #Yerba Mate
+			}
+		}
+	}
+}
+opium = { 
+	#south and east asia
+	color = { 0.30 0.15 0.30 } 
+	modifier = { spy_offence = 0.25 } 
+	province = { idea_cost = -0.025 }
+	chance = { 
+		factor = 15
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					superregion = india_superregion
+					region = khorasan_region
+					region = burma_region
+					region = indo_china_region
+					region = baluchistan_region
+					region = xinan_region
+				}
+			}
+		} 
+	}
+}
+
+###other foods and drink
+livestock = { 
+	#all over
+	color = { 0.20 0.50 0.65 }
+	modifier = { global_tax_modifier = 0.1 }
+	province = { local_tax_modifier = 0.1 }
+	chance = { 
+		factor = 20
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = desert
+				has_terrain = glacier
+				has_climate = arctic
+				has_climate = arid
+				has_terrain = jungle
+			}
+		}
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = highlands
+				has_terrain = marsh
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_climate = tropical
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.3
+			has_terrain = farmlands
+		}
+	} 
+}
+cheese = { 
+	#europe primarily
+	color = { 0.30 0.55 0.45 }
+	modifier = { garrison_size = 0.15 }
+	province = { garrison_growth = 0.25 }
+	chance = { 
+		factor = 3 
+		modifier = { 
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_terrain = desert
+				has_terrain = jungle
+				continent = africa		
+			}
+		}
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+			}
+		}
+	}
+}
+horses = { 
+	#horses were a valuable good in some areas
+	color = { 0.50 0.60 0.35 }
+	modifier = { cavalry_power = 0.075 }
+	province = { local_regiment_cost = -0.1 }
+	chance = { 
+		factor = 2 
+		modifier = { 
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_terrain = desert
+				has_terrain = jungle
+				continent = africa
+				has_winter = severe_winter	
+			}
+		}
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_climate = tropical
+				has_terrain = coastal_desert
+				has_terrain = mountain
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_winter = normal_winter
+			}
+		}
+	} 
+}
+apiculture = { 
+	#beekeeping, for honey, wax, etc.
+	color = { 0.90 0.90 0.10 }
+	modifier = { legitimacy = 0.5 republican_tradition = 0.5 horde_unity = 0.5 devotion = 0.5 }
+	province = { local_autonomy = -0.1 }
+	chance = { 
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { is_tribal = yes }
+				FROM = { technology_group = north_american }
+				FROM = { technology_group = aboriginal }
+				FROM = { technology_group = south_american }
+				#only settled civilizations
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = jungle
+				has_climate = arctic
+				has_climate = arid
+				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 0.15
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = highlands
+				has_terrain = marsh
+				has_terrain = forest
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				has_climate = tropical
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+				has_terrain = woods
+				has_terrain = hills
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = grasslands
+			has_terrain = farmlands
+		}
+	}
+}
+fish = { 
+	#color = { 0.10 0.10 0.50 }
+	color = { 0.55 0.82 0.97 }
+	modifier = { naval_forcelimit_modifier = 0.20 } #was .10
+	province = { naval_forcelimit = 0.5 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			NOT = { has_port = yes }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				region = carribeans_region
+				region = malaya_region
+				region = moluccas_region
+				region = indonesia_region
+			}
+		}
+		modifier = { #Newfoundland has the best fishing in the world but little else
+			factor = 10.0
+			OR = {
+				province_id = 980			#E Newfoundland
+				province_id = 981			#N Newfoundland
+				province_id = 2573			#S Newfoundland
+				province_id = 982			#Cape Breton
+				province_id = 983			#PEI
+			}
+		}
+		modifier = { #Really want Avalon to have fish
+			factor = 30.0
+			OR = {
+				area = avalon_area
+				province_id = 5019			#St Pierre et Miquelon
+				province_id = 4974			#Grand Banks
+			}
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				has_terrain = coastline
+				has_terrain = coastal_desert
+			}
+		}
+		modifier = { #BEYONDTYPUS changed this number from 1.2 to 2.0 was too low there are few furs in glacial areas which was the primary alternative choice
+			factor = 2.0
+			has_terrain = glacier
+		}
+		modifier = { #Pacific salmon
+			factor = 9.0
+			OR = {
+				area = salish_sea_area
+				area = hecate_strait_area
+				area = queen_charlotte_sound_area
+				area = alaska_area
+				area = alaskan_coast_area
+			}
+		}
+		modifier = { #Pacific fishing lesser
+			factor = 3.0
+			OR = {
+				area = oregon_area
+				area = northern_california_area
+				area = columbia_river_area
+				area = polynesia_area
+				area = micronesia_area
+				area = melanesia_area
+				area = tuamotus_area
+				area = california_area
+			}
+		}
+		modifier = { #Atlantic Grand Banks fishing
+			factor = 3.0
+			OR = {
+				area = lower_acadia_area
+				area = upper_acadia_area
+			}
+		}
+		modifier = { #Cote Nord and Labrador wants fish to be more likely   -x4 because for whatever reason fish is not showing up there
+			factor = 8.0
+			OR = {
+				area = cote_nord_area
+				area = labrador_area
+				province_id = 2578		# Anticosti
+			}
+		}
+		modifier = { #Remote Island Fishing and too much gold chance because of few options fishing
+			factor = 8.0
+			OR = {
+				province_id = 5027		# Tristan
+				province_id = 5028		# Bonin
+				province_id = 5020		# Revilla Gigedo
+			}
+		}
+		modifier = { #These provinces should have fishing or at least a very good chance of fishing
+			factor = 4.0
+			OR = {
+				province_id = 982			# Cape Breton
+				province_id = 986			# South Gaspesie
+				province_id = 2569		# Halifax bay
+				province_id = 5048		# NE NS along the Grand Banks
+			}
+		}
+	}
+}
+whaling = { 
+	#norway, japan, navarra, arctics
+	color = { 0.05 0.05 0.25 }
+	modifier = { navy_tradition = 0.5 }
+	province = { local_sailors_modifier = 0.25 local_ship_cost = -0.1 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			NOT = {
+				AND = {
+					has_port = yes 
+					OR = {
+						has_climate = arctic
+						has_terrain = glacier
+						region = canada_region
+						region = carribeans_region
+						region = oceanea_region
+						area = patagonia_area
+						area = south_atlantic_islands_area
+						area = southern_chile_area
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5.5
+			OR = {
+				area = newfoundland_area
+				province_id = 3704
+			}
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				has_terrain = coastline
+				has_terrain = coastal_desert
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_terrain = glacier
+		}
+		modifier = {
+			factor = 0.4
+			region = carribeans_region
+			region = oceanea_region
+		}
+	}
+}
+wine = { 
+	#color = { 0.50 0.10 0.10 }
+	color = { 0.36 0.13 0.28 }
+	modifier = { production_efficiency = 0.1 } #nepnep
+	province = { local_unrest = -1 }
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_winter = severe_winter
+				has_climate = arctic
+				has_climate = arid
+				has_climate = tropical
+				has_terrain = jungle
+				has_terrain = drylands
+				has_terrain = steppe
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = marsh
+				has_terrain = savannah
+				has_terrain = glacier
+				religion_group = muslim
+			}
+		}
+		modifier = {
+			factor = 0
+			normal_or_historical_nations = yes
+			NOT = { continent = south_america }
+			NOT = { region = south_africa_region }
+			NOT = { area = cuyo_area }
+			NOT = { area = nehuenken_area }
+			NOT = { area = california_area }
+			NOT = { area = central_valley_area }
+			NOT = { area = northern_california_area }
+			NOT = { area = oregon_area }
+			NOT = { area = salish_sea_area }
+			NOT = { area = macaronesia_area }
+			NOT = { province_id = 2607 }		# Okanogan
+			NOT = { province_id = 987 }		# Niagara
+		}
+		modifier = {
+			factor = 0.25
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.25
+			has_terrain = farmlands
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_terrain = hills
+				has_terrain = highlands
+			}
+		}
+		modifier = {
+			factor = 1.5
+			area = cuyo_area
+			region = france_region
+			region = italy_region
+		}
+		modifier = {
+			factor = 1.1
+			FROM = {
+				OR = {
+					culture_group = french
+					culture_group = iberian
+					culture_group = latin
+				}
+			}
+		}
+		modifier = { #West coast wine very common
+			factor = 4.0
+			area = central_valley_area
+		}
+		modifier = { #West coast wine common
+			factor = 1.5
+			OR = {
+				area = northern_california_area
+				area = california_area
+			}
+		}
+		modifier = { #Wine country
+			factor = 2.0
+			province_id = 5045		# Wintu
+		}
+		modifier = { #Overcoming bias
+			factor = 24.0
+			OR = {
+				province_id = 987		# Niagara
+				province_id = 2607		# Okanogan
+			}
+		}
+	}
+}
+beer = { 
+	color = { 0.45 0.15 0.15 }
+	modifier = { global_trade_goods_size_modifier = 0.05 }
+	province = { local_unrest = -1 }
+	#drink, colder areas where wine grapes weren't grown
+	chance = { 
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = jungle
+				has_climate = arctic
+				has_climate = arid
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_climate = tropical
+				has_terrain = coastal_desert
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0.35
+			OR = {
+				has_terrain = mountain
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = highlands
+				has_terrain = marsh
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 1.5
+			region = germany_region
+		}
+	}
+}
+rum = { 
+	#sugar-based. Caribbean, new england
+	color = { 0.40 0.20 0.20 }
+	modifier = { recover_navy_morale_speed = 0.1 }
+	province = { light_ship_power = 0.025 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					region = carribeans_region
+					region = northeast_america_region
+					region = brazil_region
+				}
+			}
+		}
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+	}
+}
+
+###textiles
+wool = { 
+	#color = { 0.80 0.80 0.80 }
+	color = { 0.72 0.49 0.44 }
+	modifier = { possible_mercenaries = 0.33 }
+	province = { local_regiment_cost = -0.05 }
+	chance = {
+		factor = 30
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = marsh
+				has_terrain = jungle
+				has_terrain = farmlands
+				has_terrain = coastline
+				AND = {
+					has_terrain = hills
+					NOT = { region = cascadia_region }
+				}
+				AND = {
+					has_terrain = forest
+					NOT = { region = cascadia_region }
+				}
+				has_terrain = woods
+				AND = {
+					has_climate = tropical
+					NOT = { area = paraguay_area }
+					NOT = { area = chaco_area }
+				}
+				AND = {
+					has_climate = arctic
+					NOT = { region = tibet_region }
+				}
+				AND = {
+					has_winter = severe_winter
+					NOT = { region = tibet_region }
+					NOT = { region = hindusthan_region }
+					NOT = { region = central_asia_region }
+					NOT = { region = caucasia_region }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				region = carribeans_region
+				region = brazil_region
+				region = colombia_region
+				region = southeast_america_region
+				region = mississippi_region
+			}
+			NOT = { has_terrain = mountain }
+		}
+		modifier = {
+			factor = 0.15
+			OR = {
+				has_terrain = grasslands
+				has_terrain = hills
+				has_terrain = forest
+				has_terrain = woods
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_terrain = desert
+				has_terrain = savannah
+				has_terrain = highlands
+				has_terrain = drylands
+				has_climate = arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			region = central_asia_region
+		}
+		modifier = {
+			factor = 1.5
+			region = tibet_region
+		}
+		modifier = {
+			factor = 0.5
+			region = central_africa_region
+		}
+		modifier = { #Wool less common in rich central valley
+			factor = 0.5
+			area = central_valley_area
+		}
+		modifier = { #Salish dog hair goods
+			factor = 1.5
+			area = salish_sea_area
+		}
+		modifier = { #California climate plus what else in most parts
+			factor = 1.5
+			AND = {
+				region = california_region
+				NOT = {
+					OR = {
+						area = central_valley_area
+						area = sierra_nevada_area
+					}
+				}
+			}
+		}
+		modifier = { #Wool rare in Alaska
+			factor = 0.5
+			region = alaska_region
+		}
+		modifier = { #Better options in most of Cascadia
+			factor = 0.75
+			region = cascadia_region
+		}
+	}
+}
+cashmere = { 
+	#wool produced in tibet/mongolia
+	color = { 1.00 1.00 1.00 } 
+	modifier = { hostile_attrition = 0.5 } 
+	province = { local_regiment_cost = -0.15 }
+	chance = { 
+		factor = 5 
+		modifier = {
+			factor = 0
+			NOT = { region = tibet_region }
+			NOT = { region = mongolia_region }
+			NOT = { area = kashmir_area }
+			NOT = { area = gansu_area}
+			NOT = { region = australia_region }
+		}
+	}
+}
+camel = { 
+	#africa, india, gobi
+	color = { 0.65 0.45 0.35 } 
+	modifier = { cavalry_cost = -0.1 }
+	province = { local_regiment_cost = -0.1 }
+	chance = { 
+		factor = 10
+		modifier = {  
+			factor = 0
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+				NOT = { 
+					OR = {
+						has_terrain = desert
+						has_climate = arid
+					}
+				}
+				region = central_asia_region
+				region = south_africa_region
+			}
+		}
+	} 
+}
+cotton = { 
+	color = { 0.75 0.80 0.90 }
+	#color = { 0.52 0.68 0.6 }
+	modifier = { global_colonial_growth = 20 }
+	province = { local_development_cost = -0.1 }
+	chance = {
+		factor = 20
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = southeast_america_region }
+			NOT = { region = carribeans_region }
+			NOT = { region = mississippi_region }
+			NOT = { region = egypt_region }
+			NOT = { region = hindusthan_region }
+			NOT = { region = bengal_region }
+			NOT = { region = deccan_region }
+			NOT = { region = anatolia_region }
+			NOT = { region = mongolia_region }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			NOT = { region = egypt_region }
+			NOT = { region = hindusthan_region }
+			NOT = { region = bengal_region }
+			NOT = { region = deccan_region }
+			NOT = { region = anatolia_region }
+			NOT = { region = mongolia_region }
+			NOT = { continent = new_world } #Always in RNW
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_terrain = forest
+				has_terrain = jungle
+				has_climate = arctic
+				has_climate = arid
+				has_terrain = glacier
+				has_winter = severe_winter
+				has_winter = normal_winter
+				has_winter = mild_winter
+				has_terrain = desert
+				province_id = 481
+				AND = {
+					continent = europe
+					NOT = { region = anatolia_region }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = farmlands
+				has_terrain = grasslands
+				region = southeast_america_region
+			}
+		}
+	}
+}
+cloth = { 
+	color = { 0.90 0.10 0.10 }
+	#color = { 0.86 0.19 0.19 }
+	modifier = { merc_maintenance_modifier = -0.15 } 
+	province = { local_development_cost = -0.1 }
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+			}
+			NOT = {
+				OR = {
+					development = 7
+					native_size = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = { 
+					continent = new_world
+					continent = north_america
+					continent = south_america
+					continent = oceania 
+				}
+			}
+			NOT = {
+				OR = {
+					development = 12
+					native_size = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				AND = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+					development = 10
+				}
+				AND = {
+					NOT = {
+						OR = {
+							continent = new_world
+							continent = north_america
+							continent = south_america
+							continent = oceania
+						}
+					}
+					development = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0.2
+			region = carribeans_region
+			region = australia_region
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = jungle
+				has_terrain = savannah
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = steppes
+				has_climate = tropical
+			}
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { native_size = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { native_size = 20 }
+		}
+		modifier = {
+			factor = 1.4
+			region = low_countries_region
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 30
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 40
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 60
+		}
+	}
+}
+silk = { 
+	color = { 0.70 0.35 0.65 }
+	#color = { 0.72 0.10 0.10 }
+	modifier = { num_accepted_cultures = 1 }
+	province = { province_trade_power_value = 2 }
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+				NOT = { development = 10 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			development = 15
+		}
+		modifier = {
+			factor = 0.1
+			region = carribeans_region
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = jungle
+				has_terrain = savannah
+				has_terrain = desert
+				has_terrain = steppes
+				has_terrain = marsh
+			}
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { native_size = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { native_size = 20 }
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 30
+		}
+		modifier = {
+			factor = 2
+			native_size = 40
+		}
+		modifier = {
+			factor = 2
+			native_size = 60
+		}
+	}
+}
+linen = { 
+	#textiles from flax plant, very widespread
+	color = { 0.80 0.60 0.50 }
+	modifier = { naval_maintenance_modifier = -0.1 }
+	province = { land_maintenance_modifier = -0.01 }
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+			}
+			NOT = {
+				OR = {
+					development = 5
+					native_size = 10
+				}
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = { 
+					continent = new_world
+					continent = north_america
+					continent = south_america
+					continent = oceania 
+				}
+			}
+			NOT = {
+				OR = {
+					development = 7
+					native_size = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = arctic
+				has_terrain = glacier
+				AND = {
+					OR = {
+						has_terrain = desert
+						has_terrain = jungle
+						has_climate = arid
+					}
+					NOT = { has_port = yes }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			region = carribeans_region
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = jungle
+				has_terrain = savannah
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = steppes	
+				has_climate = tropical			
+			}
+		}
+		modifier = {
+			factor = 1.3
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+			}
+			development = 10
+		}
+		modifier = {
+			factor = 0.7
+			NOT = { native_size = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 25
+		}
+		modifier = {
+			factor = 2
+			native_size = 30
+		}
+	}
+}
+hemp = { 
+	#coradge, textile, spiritual usage
+	color = { 0.80 0.40 0.50 } 
+	modifier = { global_ship_cost = -0.10 } 
+	province = { local_ship_cost = -0.1 }
+	chance = { 
+		factor = 12
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = coastline
+				has_terrain = jungle
+				has_climate = arctic
+				AND = {
+					OR = {
+						has_terrain = desert
+						has_climate = arid
+					}
+					NOT = { has_port = yes }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = highlands
+				has_terrain = marsh
+				has_terrain = desert
+				has_climate = tropical
+				has_climate = arid
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+				region = great_plains_region
+				region = mississippi_region
+				region = southeast_america_region
+			}
+		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
+	}
+}
+fur = {
+	#color = { 0.20 0.10 0.05 }
+	color = { 0.54 0.40 0.31 }
+	modifier = { land_attrition = -0.1 }
+	province = { province_trade_power_modifier = 0.10 }
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = tropical
+				has_climate = arid
+				has_terrain = drylands
+				has_terrain = steppe
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = coastline
+			}
+			NOT = { has_winter = normal_winter }
+			NOT = { has_winter = severe_winter }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = farmlands
+				AND = {
+					has_terrain = mountain
+					NOT = { 
+						OR = {
+							region = northwest_territories_region
+							region = cascadia_region
+						}
+					}
+				}
+				continent = south_america
+				region = carribeans_region
+				region = south_africa_region
+				region = australia_region
+				area = te_ika_a_maui_area
+				area = te_waipounamu_area
+				AND = { 
+					continent = europe 
+					NOT = { 
+						OR = { 
+							region = scandinavia_region 
+							region = russia_region 
+						} 
+					} 
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_terrain = savannah
+				has_terrain = grasslands
+				has_terrain = highlands
+			}
+			has_winter = mild_winter
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { native_size = 10 }#nep 1?
+		}
+		modifier = { #BEYONDTYPUS change there are few furs or any animals for that matter in glacial areas fish and whale bone much more common goods and also usually in abundance
+			factor = 0.65
+			has_terrain = glacier
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 10 #nep2?
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = forest
+		}
+		modifier = {
+			factor = 1.6
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_winter = severe_winter
+			NOT = { has_terrain = glacier }
+		}
+		modifier = { #Furs very rare in California
+			factor = 0.25
+			region = california_region
+		}
+		modifier = { #Canadian Fur Trade
+			factor = 1.5
+			region = canada_region
+		}
+		modifier = { #Fine furs in the west
+			factor = 2.0
+			OR = {
+				region = cascadia_region
+				region = alaska_region
+				region = northwest_territories_region
+			}
+		}
+		modifier = { #Less fur in Acadia and Gaspesie than elsewhere in Canada
+			factor = 0.25
+			OR = {
+				area = lower_acadia_area
+				area = maine_area
+				area = notre_dame_mountains_area
+			}
+		}
+		modifier = { #Trying to discourage fur in Acadia only when province isnt hilly, hills should still have fur
+			factor = 0.25
+			AND = {
+				area = upper_acadia_area
+				NOT = { has_terrain = hills }
+			}
+		}
+		modifier = { #Fur less likely in the Laurentides to encourage ores
+			factor = 0.35
+			area = laurentian_area
+		}
+		modifier = { #Fur less likely in the Lower Canada to encourage Tobacco and Grain
+			factor = 0.5
+			area = lower_canada_area
+		}
+		modifier = { #Newfoundland has the best fishing in the world but little else
+			factor = 0.2
+			OR = {
+				province_id = 980			#E Newfoundland
+				province_id = 981			#N Newfoundland
+				province_id = 2573			#S Newfoundland
+				province_id = 982			#Cape Breton
+				province_id = 983			#PEI
+			}
+		}
+		modifier = { #Really want Avalon to have fish
+			factor = 0.0
+			OR = {
+				area = avalon_area
+				province_id = 5019			#St Pierre et Miquelon
+				province_id = 4974			#Grand Banks
+			}
+		}
+		modifier = { #These provinces should have fur or at least a very good chance of fur
+			factor = 4.0
+			province_id = 2578		# Anticosti
+		}
+		modifier = { #Niagara shouldn't usually get furs
+			factor = 0.1
+			province_id = 987		# Niagara
+		}
+	}
+}
+leather = { 
+	#rare but important
+	color = { 0.65 0.40 0.45 } 
+	modifier = { mercenary_cost = -0.15 }
+	province = { cavalry_power = 0.01 }
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = desert
+				has_climate = arid
+				has_climate = arctic
+				NOT = { development = 10 }
+			}
+		}
+		modifier = {
+			factor = 1.3
+			development = 18
+		}
+		modifier = {
+			factor = 0.1
+			region = carribeans_region
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { native_size = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { native_size = 20 }
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 50
+		}
+	} 
+}
+###naval supplies
+naval_supplies = { 
+	#materials used for, and ship construction itself
+	color = { 0.00 0.00 0.40 }
+	#color = { 0.11 0.17 0.4 }
+	modifier = { global_ship_recruit_speed = -0.10 }
+	province = { naval_forcelimit = 1 }
+	chance = { 
+		factor = 4
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = marsh
+				has_terrain = steppe
+				has_terrain = highlands
+				has_terrain = farmlands
+				NOT = { has_port = yes }
+				NOT = { development = 5 }
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { native_size = 1 }
+		}
+		modifier = {
+			factor = 0.7
+			NOT = { native_size = 2 }
+		}
+		modifier = {
+			factor = 1.4
+			OR = {
+				AND = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+					OR = {
+						development = 7
+						native_size = 20
+					}
+				}
+				AND = {
+					NOT = {
+						OR = {
+							continent = new_world
+							continent = north_america
+							continent = south_america
+							continent = oceania
+						}
+					}
+					OR = {
+						development = 10
+						native_size = 40
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.65
+			region = carribeans_region
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = mountain
+				has_terrain = grasslands
+				region = central_africa_region
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				NOT = { num_of_ports = 1 }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_terrain = coastline
+				has_climate = tropical
+			}
+		}
+	}
+}
+tar = {
+	#northern europe, americas, ashphalt/oil-like substances
+	color = { 0.10 0.10 0.20 } 
+	modifier = { ship_durability = 0.05 }
+	province = { ship_recruit_speed = -0.1 }
+	chance = {
+		factor = 4
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					region = scandinavia_region
+					region = baltic_region
+					region = russia_region
+					continent = north_america
+					continent = south_america
+					continent = new_world
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = steppe
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = coastline
+				has_terrain = farmlands
+				has_climate = arid
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_climate = tropical
+				AND = {
+					NOT = { region = canada_region }
+					NOT = { region = northeast_america_region }
+					NOT = { region = great_lakes_region }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { region = canada_region }
+			NOT = { region = northeast_america_region }
+			NOT = { region = great_lakes_region }
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				continent = south_america
+			}
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+				has_terrain = drylands
+				region = russia_region
+			}
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_terrain = forest
+				has_terrain = woods
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = marsh
+		}
+	} 
+}
+lumber = { 
+	#enough said. Replaces naval supplies many places along with hemp
+	#color = { 0.70 0.50 0.30 }
+	color = { 0.20 0.10 0.05 }
+	modifier = { build_cost = -0.1 }
+	province = { local_build_time = -0.1 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = marsh
+				has_terrain = steppe
+				has_terrain = highlands
+				has_terrain = farmlands
+				has_climate = tropical
+				region = carribeans_region
+			}
+		}
+		modifier = {
+			factor = 0
+			has_global_flag = deforestation_happened
+			continent = europe
+			NOT = { OR = { region = baltic_region region = scandinavia_region region = russia_region } }
+		}
+			
+		modifier = {
+			factor = 0.3
+			OR = {
+				region = southeast_america_region
+				region = mississippi_region
+			}
+			NOT = { has_terrain = forest }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = mountain
+				has_terrain = grasslands
+				has_terrain = coastline
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = jungle
+			}
+		}
+		modifier = { #Logging capital of the world
+			factor = 4.0
+			OR = {
+				area = salish_sea_area
+				area = oregon_area
+				area = northern_california_area
+			}
+		}
+		modifier = { #Fantastic wood in the rainforests of the Pacific Coast
+			factor = 2.0
+			OR = {
+				area = queen_charlotte_sound_area
+				area = hecate_strait_area
+			}
+		}
+		modifier = { #very good wood in the Cascade ranges and Rockies
+			factor = 1.5
+			OR = {
+				area = northern_cascades_area
+				area = northern_rocky_mountains_area
+				area = southern_cascades_area
+			}
+		}
+		modifier = { #Trees too small and weak for the most part in California too dry
+			factor = 0.25
+			region = california_region
+		}
+		modifier = { #Historical lumber trade of the Ottawa River   -x3 to overcome penalties
+			factor = 9.0
+			OR = {
+				area = grand_river_area
+				area = lower_grand_river_area
+			}
+		}
+		modifier = { #Too cold and dark for good lumber in far north
+			factor = 0.5
+			OR = {
+				region = northwest_territories_region
+				AND = {
+					region = alaska_region
+					NOT = { area = alaska_area }
+				}
+			}
+		}
+		modifier = { #Timber slightly less likely in the Laurentides to encourage ores
+			factor = 0.65
+			area = laurentian_area
+		}
+		modifier = { #Protected areas of southern Alaska has okay trees
+			factor = 3.0
+			area = alaska_area
+		}
+		modifier = { #Cascadia lumber bonus provinces
+			factor = 1.5
+			region = cascadia_region
+		}
+		modifier = { #Extreme north has no suitable trees or supplies
+			factor = 0.0
+			OR = {
+				area = arctic_coast_area
+				area = northern_alaska_area
+				province_id = 4999		# Hudson Bay islands
+			}
+		}
+		modifier = { #Newfoundland doesnt have enough trees for lumber production
+			factor = 0.0
+			OR = {
+				province_id = 980			#E Newfoundland
+				province_id = 981			#N Newfoundland
+				province_id = 2573			#S Newfoundland
+				province_id = 982			#Cape Breton
+				province_id = 983			#PEI
+			}
+		}
+		modifier = { #Really want Avalon to have fish
+			factor = 0.0
+			OR = {
+				area = avalon_area
+				province_id = 5019			#St Pierre et Miquelon
+				province_id = 4974			#Grand Banks
+			}
+		}
+		modifier = { #Cascadia lumber bonus provinces
+			factor = 1.5
+			OR = {
+				province_id = 2484		# Olympic Peninsula
+				province_id = 4956		# Oregon timber
+			}
+		}
+	}
+}
+tropical_wood = { 
+	#brazilwood; south america; wood and dyes
+	color = { 0.30 0.20 0.15 } 
+	modifier = { envoy_travel_time = -0.15 } 
+	province = { local_build_cost = -0.2 }
+	chance = { 
+		factor = 30 
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+				NOT = { has_terrain = jungle }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world =  no
+			NOT = { region = brazil_region }
+			NOT = { region = peru_region }
+			NOT = { region = upper_peru_region }
+		}
+		modifier = {
+			factor = 1.3
+			area = amazon_area
+			area = west_amazons_area
+			area = east_amazons_area
+		}
+	}
+}
+sandal = { 
+	#india, australia, indonesia, used for oil and fragrance.
+	color = { 0.40 0.30 0.20 } 
+	modifier = { improve_relation_modifier = 0.25 }
+	province = { tolerance_heathen = 0.5 }
+	chance = { 
+		factor = 25
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_terrain = jungle }
+			NOT = { has_terrain = hills }
+			NOT = { has_terrain = woods }
+			NOT = { has_terrain = forest }
+		}
+		modifier = {
+			factor = 0
+			NOT = { superregion = east_indies_superregion }
+			NOT = { region = australia_region }
+		}
+	}
+}
+ebony = { 
+	#india, indochina, indonesia
+	color = { 0.20 0.10 0.10 } 
+	modifier = { improve_relation_modifier = 0.25 } 
+	province = { province_trade_power_value = 2 }
+	chance = { 
+		factor = 25
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+				AND = {
+					NOT = { has_terrain = jungle }
+					NOT = { area = mascarenes_area }
+					NOT = { area = indian_ocean_islands_area }
+					NOT = { area = sulawesi_area }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { superregion = east_indies_superregion }
+			NOT = { superregion = india_superregion }
+			NOT = { region = kongo_region }
+			NOT = { region = central_africa_region }
+			NOT = { region = west_africa_region }
+		}
+		modifier = {
+			factor = 0.5
+			region = east_indies_superregion
+		}
+	}
+}
+mahogany = { 
+	#caribbean, central america, slightly in india
+	color = { 0.50 0.30 0.20 } 
+	modifier = { heavy_ship_cost = -0.1 }
+	province = { local_state_maintenance_modifier = -0.2 }
+	chance = { 
+		factor = 25
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world =  no
+			NOT = { region = carribeans_region }
+			NOT = { region = colombia_region }
+			NOT = { superregion = central_america_superregion }
+			NOT = { area = florida_area }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_random_new_world =  no
+					NOT = { has_terrain = jungle }
+					NOT = { has_terrain = hills }
+					NOT = { has_terrain = savannah }
+					NOT = { has_terrain = marsh }
+				}
+				AND = {
+					is_random_new_world = yes
+					NOT = { has_terrain = jungle }
+					NOT = { has_climate = tropical }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			region = mexico_region
+		}
+	}
+}
+teak = { 
+	#indochina
+	color = { 0.60 0.40 0.25 } 
+	modifier = { heavy_ship_power = 0.075 }
+	province = { naval_maintenance_modifier = -0.025 }
+	chance = { 
+		factor = 25
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { area = yun_gui_area }
+			NOT = { area = guangdong_area }
+			NOT = { area = guangxi_area }
+			NOT = { region = bengal_region }
+			NOT = { region = indo_china_region }
+			NOT = { region = burma_region }
+		}
+	} 
+}
+
+###dyes
+bloodwood = { 
+ 	#wood used for dyes, central america
+	color = { 0.75 0.30 0.20 } 
+	modifier = { trade_steering = 0.1 }
+	province = { state_maintenance_modifier = -0.1 }
+	chance = { 
+		factor = 15
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = carribeans_region }
+			NOT = { superregion = central_america_superregion }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_random_new_world =  no
+					NOT = { has_terrain = jungle }
+					NOT = { has_terrain = hills }
+				}
+				AND = {
+					is_random_new_world = yes
+					NOT = { has_terrain = jungle }
+					NOT = { has_climate = tropical }
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			is_random_new_world = no
+			province_id = 843
+		}
+	}
+}
+dyes = { 
+ 	#indigo, india primarily
+	color = { 0.10 0.10 0.95 } 
+	modifier = { global_trade_power = 0.1 } 
+	province = { province_trade_power_modifier = 0.10 }
+	chance = { 
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_terrain = jungle }
+			NOT = { superregion = persia_superregion }
+			NOT = { superregion = india_superregion }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_climate = arid
+				has_climate = arctic
+				has_winter = mild_winter
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { region = west_africa_region }
+			NOT = { region = kongo_region }
+			NOT = { region = central_africa_region }
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = persia_superregion }
+		}
+	}
+}
+woad = { 
+	#important in europe, declines as indigo becomes accessible
+	color = { 0.20 0.20 0.70 }
+	modifier = { global_own_trade_power = 0.1 } 
+	province = { global_regiment_cost = -0.025 }
+	chance = { 
+		factor = 15 
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					NOT = { continent = europe }
+					NOT = { region = central_asia_region }
+				}
+				has_climate = arid
+				has_climate = arctic
+				has_winter = severe_winter
+				has_global_flag = decline_woad_happened
+			}
+		}
+	}
+}
+carmine = { 
+	#central america, poland, caucasus. Red dye
+	color = { 0.60 0.10 0.10 } 
+	modifier = { global_prov_trade_power_modifier = 0.1 } 
+	province = { local_autonomy = -0.1 }
+	chance = { 
+		factor = 5
+		modifier = {  
+			factor = 0
+			NOT = { region = poland_region }
+			NOT = { region = caucasia_region }
+			NOT = { region = colombia_region }		
+			NOT = { superregion = central_america_superregion }
+		} 
+	}
+}
+
+###tradegoods
+ivory = { 
+ 	#should appear in polar areas aswell
+	#color = { 0.80 0.90 1.00 }
+	color = { 0.75 0.7 0.63 }
+	modifier = { diplomatic_reputation = 2 }
+	province = { local_state_maintenance_modifier = -0.2 }
+	chance = { 
+		factor = 15
+		modifier = {
+			factor = 0
+			NOT = { continent = asia }
+			NOT = { continent = africa }
+			NOT = { area = subarctic_islands_area }
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { area = greenland_area }
+			NOT = { area = kivalliq_area }
+			NOT = { area = qikiqtaaluk_area }
+			NOT = { area = kativik_area }
+			NOT = { area = arctic_coast_area }
+			NOT = { area = northern_alaska_area }
+			OR = {
+				NOT = { region = canada_region }
+				AND = {
+					region = canada_region
+					NOT = { has_port = yes }
+				}
+			}
+		}
+		modifier = { #Northern provinces with no access to whales
+			factor = 0
+			OR = {
+				province_id = 4930
+				province_id = 4977
+				province_id = 4978
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_terrain = jungle }
+			NOT = { has_terrain = savannah }
+			NOT = { has_terrain = glacier }
+			NOT = { has_climate = arctic }
+			NOT = { has_winter = severe_winter }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				region = manchuria_region
+				region = central_asia_region
+				region = south_africa_region
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				region = malaya_region
+				region = moluccas_region
+				region = indonesia_region
+				region = west_siberia_region
+				region = east_siberia_region
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_terrain = jungle
+				has_terrain = savannah
+			}
+		}
+	}
+}
+marble = { 
+ 	#prized for sculpting and architecture
+	color = { 0.15 0.00 0.00 } 
+	modifier = { fort_maintenance_modifier = -0.1 }
+	province = { build_cost = -0.025 }
+	chance = { factor = 0 }
+}
+glass = { 
+ 	#glassworking took place in europe, luxurious
+	color = { 0.60 0.90 1.00 }
+	modifier = { technology_cost = -0.05 }
+	province = { province_trade_power_value = 2 }
+	chance = { factor = 0 }
+}
+obsidian = {
+ 	#was important to mesoamerican cultures; will drop in price post colonisation/westernization
+	color = { 0.15 0.15 0.15 }
+	modifier = { native_uprising_chance = -0.25 }
+	province = { local_colonist_placement_chance = 0.05 }
+	chance = { 
+		factor = 5
+		modifier = { 
+			factor = 0
+			OR = {
+				NOT = { has_terrain = mountain }
+				AND = {
+					NOT = { continent = new_world }
+					NOT = { continent = south_america }
+					NOT = { continent = north_america }
+				}
+				FROM = { NOT = { technology_group = andean } NOT = { technology_group = mesoamerican } }
+				has_global_flag = obsidian_declined2
+			}
+		}
+	}
+}
+jade = { 
+ 	#chinese
+	color = { 0.40 0.90 0.60 }
+	modifier = { advisor_pool = 1 }
+	province = { stability_cost_modifier = -0.05 }
+	chance = { 
+		factor = 0 
+		modifier = {  
+		
+		} 
+	}
+}
+chinaware = {
+	#color = { 0.85 0.90 0.80 }
+	color = { 0.18 0.57 0.8 }
+	modifier = { free_leader_pool = 1 }
+	province = { local_autonomy = -0.1 }
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {	region = malaya_region }
+			NOT = {	region = moluccas_region }
+			NOT = { region = indonesia_region }
+			NOT = { region = south_china_region }
+			NOT = { region = japan_region }
+			NOT = { is_year = 1700 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { development = 6 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {	region = malaya_region }
+			NOT = {	region = moluccas_region }
+			NOT = { region = indonesia_region }
+			NOT = { region = south_china_region }
+			NOT = { region = japan_region }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { development = 10 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { development = 12 }
+		}
+		modifier = {
+			factor = 1.2
+			development = 16
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes #Only the below cultures can get chinaware in the RNW
+			FROM = {
+				NOT = { culture_group = east_asian }
+				NOT = { culture_group = central_indic }
+				NOT = { culture_group = dravidian }
+				NOT = { culture_group = western_aryan }
+				NOT = { culture_group = hindusthani }
+				NOT = { culture_group = eastern_aryan }
+				NOT = { culture_group = korean_g }
+				NOT = { culture_group = japanese_g }
+			}
+			NOT = { development = 6 }
+		}
+	}
+}
+ 	
+carpet = { 
+ 	#carpet and rugs were imported from west/central asia
+	color = { 0.75 0.40 0.55 }
+	modifier = { culture_conversion_cost = -0.1 } 
+	province = { local_development_cost = -0.15 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = scandinavia_region }
+			NOT = { superregion = near_east_superregion }
+			NOT = { superregion = persia_superregion }
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { development = 10 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { development = 12 }
+		}
+		modifier = {
+			factor = 1.2
+			development = 16
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes #Only the below cultures can get chinaware in the RNW
+			NOT = { development = 6 }
+		}
+	}
+}
+slaves = {
+	color = { 0.25 0.25 0.30 }
+	#color = { 0.0 0.0 0.0 }
+	modifier = { global_tariffs = 0.25 }
+	province = { local_missionary_strength = 0.01 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { has_country_modifier = the_abolish_slavery_act }
+				NOT = { continent = africa }
+				province_id = 1174 #Namibia
+			}
+		}
+		modifier = {
+			factor = 0
+			island = yes
+		}		
+		modifier = {
+			factor = 2.0
+			OR = {
+				region = horn_of_africa_region
+				region = kongo_region
+				region = upper_kongo_region
+				area = west_africa_coast_area
+				area = gulf_of_guinea_area
+				area = benin_area
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				region = central_africa_region
+				region = south_africa_region
+			}
+		}
+	}
+}
+###precious metals
+gold = { 
+	color = { 1.00 1.00 0.00 }
+	#color = { 1.0 0.84 0.19 }
+	chance = {
+		factor = 4
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { region = cascadia_region }
+			NOT = { region = australia_region }
+			NOT = { region = california_region }
+			NOT = { region = south_africa_region }
+			NOT = { region = central_africa_region }
+			NOT = { region = chile_region }
+			NOT = { region = peru_region }
+			NOT = { region = upper_peru_region }
+			NOT = { region = mexico_region }
+			NOT = { region = central_america_region }
+			NOT = { area = goias_area }
+			NOT = { area = pontal_area }
+			NOT = { area = mato_grosso_area }
+			NOT = { area = ofaie_area }
+			NOT = { area = minas_gerais_area }
+			NOT = { area = diamantina_area }
+			NOT = { area = guapore_area }
+			NOT = { area = grao_para_area }
+			NOT = { area = amapa_area }
+			NOT = { area = ucayali_area }
+			NOT = { area = amazon_area }
+			NOT = { area = west_amazons_area }
+			NOT = { area = east_amazons_area }
+			NOT = { region = alaska_region }
+			NOT = { region = northwest_territories_region }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			NOT = { continent = new_world }
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { region = australia_region }
+			NOT = { region = south_africa_region }
+			NOT = { region = central_africa_region }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			continent = new_world
+			OR = {
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = drylands
+				has_terrain = grasslands
+				has_terrain = savannah
+				has_terrain = steppe
+				has_terrain = jungle
+				has_terrain = coastline
+				has_terrain = coastal_desert
+				has_terrain = marsh
+			}
+		}
+		modifier = { #BEYONDTYPUS too much gold in Glacial areas
+			factor = 0.5
+			has_terrain = glacier
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+		modifier = {
+			factor = 1.5
+			normal_or_historical_nations = no
+		}
+		modifier = {
+			factor = 2
+			region = peru_region
+			region = upper_peru_region
+			NOT = { area = beni_area }
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				province_id = 852		# Mexico
+				province_id = 853		# Huastec
+				province_id = 854		# Sayultecas
+				province_id = 2617		# Huichol
+				province_id = 856		# Zacatecas
+				province_id = 857		# Guichichil
+				province_id = 858		# Tamaulipas
+				province_id = 2615		# Guamares
+				province_id = 4926		# Kenai
+				province_id = 4937		# Klondike
+				province_id = 2480		# Shasta
+				province_id = 4956		# Klamath A
+				province_id = 4958		# Klamath B
+			}
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				area = minas_gerais_area
+				area = diamantina_area
+				area = mato_grosso_area
+				area = ofaie_area
+				area = goias_area
+				area = pontal_area
+			}
+		}
+		modifier = { #Gold is rare in Cascadia
+			factor = 0.25
+			region = cascadia_region
+		}
+		modifier = { #But more common in Oregon
+			factor = 4.0
+			OR = {
+				area = southern_cascades_area
+				area = oregon_area
+			}
+		}
+		modifier = { #Gold is common in Alaska
+			factor = 1.5
+			region = alaska_region
+		}
+		modifier = { #Gold is common in California
+			factor = 1.5
+			region = california_region
+		}
+		modifier = { #But somewhat rare in coastal areas
+			factor = 0.25
+			AND = {
+				region = california_region
+				OR = {
+					area = california_area
+					area = baja_california_area
+					area = central_valley_area
+					area = sonora_y_sinaloa_area
+				}
+			}
+		}
+		modifier = { #And average in the Colorado plateau and Arizona
+			factor = 0.5
+			AND = {
+				region = california_region
+				OR = {
+					area = colorado_plateau_area
+					area = arizona_area
+					area = southern_colorado_plateau_area
+				}
+			}
+		}
+		modifier = { #And even more common in Nevada
+			factor = 1.5
+			area = high_desert_area
+		}
+		modifier = { #Gold grows on trees in the Klondike
+			factor = 3.0
+			OR = {
+				province_id = 4937		# Klondike
+				province_id = 4938		# Dan
+				province_id = 4981		# Tagish
+				province_id = 5040		# Kaska
+			}
+		}
+		modifier = { #4.0 was too much
+			factor = 3.0
+			OR = {
+				province_id = 4934		# Han Hwichin
+				province_id = 5017		# Nevada A
+				province_id = 4967		# Nevada B
+				province_id = 1808		# Nevada C
+				province_id = 4925		# Nome or Chinik
+			}
+		}
+		modifier = { #3.0 was still too much
+			factor = 2.0
+			OR = {
+				province_id = 5044		# Sierra Nevada A
+				province_id = 4953		# Sierra Nevada B
+			}
+		}
+		modifier = { #increased chance to specific provinces because of many other options resulting in low chance
+			factor = 1.5
+			OR = {
+				province_id = 2480		# Shasta
+				province_id = 4956		# Klamath A
+				province_id = 4958		# Klamath B
+				province_id = 4926		# Kenai
+			}
+		}
+		modifier = { #Chance was too high
+			factor = 0.3
+			OR = {
+				province_id = 4972		# Tahltan
+				province_id = 4982		# Omenica
+				province_id = 2603		# Omenica
+			}
+		}
+		modifier = { #Chance was too high
+			factor = 0.65
+			OR = {
+				province_id = 4938		# Dan
+				province_id = 4981		# Tagish
+				province_id = 5040		# Kaska
+				province_id = 872		# Kalapuya
+			}
+		}
+		modifier = { #Chance was a bit too high in the NWT
+			factor = 0.5
+			region = northwest_territories_region
+		}
+	}
+}
+ 	
+silver = { 
+ 	#alps, new world
+	color = { 0.80 0.85 0.95 } 
+	chance = {
+		factor = 4
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { region = central_asia_region }
+			NOT = { region = cascadia_region }
+			NOT = { region = australia_region }
+			NOT = { region = california_region }
+			NOT = { region = chile_region }
+			NOT = { region = peru_region }
+			NOT = { region = upper_peru_region }
+			NOT = { region = mexico_region }
+			NOT = { region = central_america_region }
+			NOT = { area = goias_area }
+			NOT = { area = mato_grosso_area }
+			NOT = { area = minas_gerais_area }
+			NOT = { area = guapore_area }
+			NOT = { area = grao_para_area }
+			NOT = { area = ucayali_area }
+			NOT = { area = amazon_area }
+			NOT = { area = west_amazons_area }
+			NOT = { area = east_amazons_area }
+			NOT = { region = alaska_region }
+			NOT = { region = northwest_territories_region }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			NOT = { continent = new_world }
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { region = central_asia_region }
+			NOT = { region = australia_region }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			continent = new_world
+			OR = {
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = drylands
+				has_terrain = grasslands
+				has_terrain = savannah
+				has_terrain = steppe
+				has_terrain = jungle
+				has_terrain = coastline
+				has_terrain = coastal_desert
+				has_terrain = marsh
+			}
+		}
+		modifier = { #BEYONDTYPUS too much gold in Glacial areas
+			factor = 0.5
+			has_terrain = glacier
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+		modifier = {
+			factor = 1.5
+			normal_or_historical_nations = no
+		}
+		modifier = {
+			factor = 2
+			region = peru_region
+			region = upper_peru_region
+			NOT = { area = beni_area }
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				province_id = 852		# Mexico
+				province_id = 853		# Huastec
+				province_id = 854		# Sayultecas
+				province_id = 2617		# Huichol
+				province_id = 856		# Zacatecas
+				province_id = 857		# Guichichil
+				province_id = 858		# Tamaulipas
+				province_id = 2615		# Guamares
+				province_id = 4926		# Kenai
+				province_id = 4937		# Klondike
+				province_id = 2480		# Shasta
+				province_id = 4956		# Klamath A
+				province_id = 4958		# Klamath B
+			}
+		}
+		modifier = {
+			factor = 3.5
+			OR = {
+				area = minas_gerais_area
+				area = diamantina_area
+				area = mato_grosso_area
+				area = ofaie_area
+				area = goias_area
+				area = pontal_area
+			}
+		}
+		modifier = { #Gold is rare in Cascadia
+			factor = 0.25
+			region = cascadia_region
+		}
+		modifier = { #But more common in Oregon
+			factor = 4.0
+			OR = {
+				area = southern_cascades_area
+				area = oregon_area
+			}
+		}
+		modifier = { #Gold is common in Alaska
+			factor = 1.5
+			region = alaska_region
+		}
+		modifier = { #Gold is common in California
+			factor = 1.5
+			region = california_region
+		}
+		modifier = { #But somewhat rare in coastal areas
+			factor = 0.25
+			AND = {
+				region = california_region
+				OR = {
+					area = california_area
+					area = baja_california_area
+					area = central_valley_area
+					area = sonora_y_sinaloa_area
+				}
+			}
+		}
+		modifier = { #And average in the Colorado plateau and Arizona
+			factor = 0.5
+			AND = {
+				region = california_region
+				OR = {
+					area = colorado_plateau_area
+					area = arizona_area
+					area = southern_colorado_plateau_area
+				}
+			}
+		}
+		modifier = { #And even more common in Nevada
+			factor = 1.5
+			area = high_desert_area
+		}
+		modifier = { #Gold grows on trees in the Klondike
+			factor = 3.0
+			OR = {
+				province_id = 4937		# Klondike
+				province_id = 4938		# Dan
+				province_id = 4981		# Tagish
+				province_id = 5040		# Kaska
+			}
+		}
+		modifier = { #4.0 was too much
+			factor = 3.0
+			OR = {
+				province_id = 4934		# Han Hwichin
+				province_id = 5017		# Nevada A
+				province_id = 4967		# Nevada B
+				province_id = 1808		# Nevada C
+				province_id = 4925		# Nome or Chinik
+			}
+		}
+		modifier = { #3.0 was still too much
+			factor = 2.0
+			OR = {
+				province_id = 5044		# Sierra Nevada A
+				province_id = 4953		# Sierra Nevada B
+			}
+		}
+		modifier = { #increased chance to specific provinces because of many other options resulting in low chance
+			factor = 1.5
+			OR = {
+				province_id = 2480		# Shasta
+				province_id = 4956		# Klamath A
+				province_id = 4958		# Klamath B
+				province_id = 4926		# Kenai
+			}
+		}
+		modifier = { #Chance was too high
+			factor = 0.3
+			OR = {
+				province_id = 4972		# Tahltan
+				province_id = 4982		# Omenica
+				province_id = 2603		# Omenica
+			}
+		}
+		modifier = { #Chance was too high
+			factor = 0.65
+			OR = {
+				province_id = 4938		# Dan
+				province_id = 4981		# Tagish
+				province_id = 5040		# Kaska
+				province_id = 872		# Kalapuya
+			}
+		}
+		modifier = { #Chance was a bit too high in the NWT
+			factor = 0.5
+			region = northwest_territories_region
+		}
+	}
+}
+gems = { 
+ 	#Prussia, Indochina
+	color = { 0.60 0.30 0.75 }
+	modifier = { prestige = 1 }
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = indo_china_region }
+			NOT = { region = australia_region }
+			NOT = { region = south_africa_region }
+			NOT = { region = chile_region }
+			NOT = { region = peru_region }
+			NOT = { region = upper_peru_region }
+			NOT = { region = mexico_region }
+			NOT = { region = central_america_region }
+			NOT = { region = kongo_region }
+			NOT = { area = goias_area }
+			NOT = { area = mato_grosso_area }
+			NOT = { area = minas_gerais_area }
+			NOT = { area = guapore_area }
+			NOT = { area = grao_para_area }
+			NOT = { area = ucayali_area }
+			NOT = { area = amazon_area }
+			NOT = { area = west_amazons_area }
+			NOT = { area = east_amazons_area }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			NOT = { continent = new_world }
+			NOT = { region = indo_china_region }
+			NOT = { region = australia_region }
+			NOT = { region = south_africa_region }
+			NOT = { region = kongo_region }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			continent = new_world
+			OR = {
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = drylands
+				has_terrain = grasslands
+				has_terrain = savannah
+				has_terrain = steppe
+				has_terrain = jungle
+				has_terrain = coastline
+				has_terrain = coastal_desert
+				has_terrain = marsh
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = mountain
+		}
+		modifier = {
+			factor = 1.5
+			normal_or_historical_nations = no
+		}
+		modifier = {
+			factor = 1.5
+			region = kongo_region
+		}
+		modifier = {
+			factor = 2.5
+			region = indo_china_region
+		}
+		modifier = {
+			factor = 3.5
+			region = south_africa_region
+		}
+		modifier = {
+			factor = 3.5
+			OR = {
+				area = minas_gerais_area
+				area = mato_grosso_area
+				area = goias_area
+			}
+		}
+	}
+}
+###metals
+iron = {
+	color = { 0.30 0.30 0.30 }
+	#color = { 0.6 0.62 0.65 }
+	modifier = { global_regiment_cost = -0.1 } 
+	province = { local_build_time = -0.2 }
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { is_tribal = yes }
+				FROM = { technology_group = north_american }
+				FROM = { technology_group = aboriginal }
+				FROM = { technology_group = south_american }
+				#only settled civilizations
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {	
+					is_random_new_world = no
+					NOT = { 
+						OR = {
+							continent = north_america 
+							continent = south_america
+						}
+					}
+				}
+				AND = {	
+					is_random_new_world = yes
+					NOT = { continent = new_world }
+				}
+			}
+			normal_or_historical_nations = yes
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { province_id = 18 }
+			NOT = { continent = africa }
+			NOT = { region = australia_region }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				island = yes
+				AND = {
+					has_terrain = desert
+					NOT = { region = australia_region }
+				}
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = steppes
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+				continent = africa
+			}
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				area = appalachia_area
+				area = great_valley_area
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+	}
+} 	
+copper = { 
+	#color = { 0.75 0.50 0.40 }
+	color = { 0.85 0.46 0.15 }
+	modifier = { siege_ability = 0.1 }
+	province = { regiment_recruit_speed = -0.2 }
+	chance = {
+		factor = 8
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { is_tribal = yes }
+				FROM = { technology_group = north_american }
+				FROM = { technology_group = aboriginal }
+				FROM = { technology_group = south_american }
+				#only settled civilizations
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {	
+					is_random_new_world = no
+					NOT = { 
+						OR = {
+							continent = north_america 
+							continent = south_america
+						}
+					}
+				}
+				AND = {	
+					is_random_new_world = yes
+					NOT = { continent = new_world }
+				}
+			}
+			normal_or_historical_nations = yes
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { province_id = 18 }
+			NOT = { continent = africa }
+			NOT = { region = australia_region }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				island = yes
+				AND = {
+					has_terrain = desert
+					NOT = { region = australia_region }
+				}
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = steppes
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+				continent = africa
+			}
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+	}
+}
+tin = {
+ 	#used in bronze making, and the increasingly popular pewter 
+	color = { 0.55 0.45 0.50 }
+	modifier = { artillery_power = 0.1 }
+	province = { province_trade_power_modifier = 0.15 }
+	chance = {
+		factor = 7
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { is_tribal = yes }
+				FROM = { technology_group = north_american }
+				FROM = { technology_group = aboriginal }
+				FROM = { technology_group = south_american }
+				#only settled civilizations
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {	
+					is_random_new_world = no
+					NOT = { continent = south_america }
+				}
+				AND = {	
+					is_random_new_world = yes
+					NOT = { continent = new_world }
+				}
+			}
+			normal_or_historical_nations = yes
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { province_id = 18 }
+			NOT = { continent = asia }
+			NOT = { region = australia_region }
+			NOT = { superregion = east_indies_superregion }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				island = yes
+				AND = {
+					has_terrain = desert
+					NOT = { region = australia_region }
+				}
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = steppes
+			}
+		}
+		modifier = {
+			factor = 0
+			superregion = east_indies_superregion 
+			NOT = {
+				OR = {
+					has_terrain = mountain 
+					has_terrain = hills 
+					has_terrain = highlands 
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			normal_or_historical_nations = no
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+	}
+}
+lead = { 
+ 	#amunition, appliances, construction, cosmetics
+	color = { 0.15 0.15 0.15 }
+	modifier = { infantry_power = 0.075 }
+	province = { local_regiment_cost = -0.2 local_manpower_modifier = -0.1 }
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { is_tribal = yes }
+				FROM = { technology_group = north_american }
+				FROM = { technology_group = aboriginal }
+				FROM = { technology_group = south_american }
+				#only settled civilizations
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {	
+					is_random_new_world = no
+					NOT = { 
+						OR = {
+							continent = north_america 
+							continent = south_america
+						}
+					}
+				}
+				AND = {	
+					is_random_new_world = yes
+					NOT = { continent = new_world }
+				}
+			}
+			normal_or_historical_nations = yes
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { province_id = 18 }
+			NOT = { continent = africa }
+			NOT = { region = australia_region }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				island = yes
+				AND = {
+					has_terrain = desert
+					NOT = { region = australia_region }
+				}
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = steppes
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+				continent = africa
+			}
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+	}
+}
+zinc = {
+ 	#construction, cosmetics; india+china
+	color = { 0.65 0.65 0.70 }
+	modifier = { war_exhaustion_cost = -0.2 }
+	province = { local_defensiveness = 0.15 }
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { is_tribal = yes }
+				FROM = { technology_group = north_american }
+				FROM = { technology_group = aboriginal }
+				FROM = { technology_group = south_american }
+				#only settled civilizations
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {	
+					is_random_new_world = no
+					NOT = { 
+						OR = {
+							continent = north_america 
+							region = peru_region
+							region = upper_peru_region
+						}
+					}
+				}
+				AND = {	
+					is_random_new_world = yes
+					NOT = { continent = new_world }
+				}
+			}
+			normal_or_historical_nations = yes
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { province_id = 18 }
+			NOT = { region = australia_region }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				island = yes
+				AND = {
+					has_terrain = desert
+					NOT = { region = australia_region }
+				}
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = steppes
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				continent = north_america
+				region = peru_region
+				region = upper_peru_region
+				continent = new_world
+				region = south_africa_region
+			}
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+	}
+}
+mercury = {
+ 	#italy, slovenia, spain and its colonies, lucrative post 1550s (patio process)
+	color = { 0.55 0.55 0.65 }
+	modifier = { idea_cost = -0.1 }
+	province = { local_tax_modifier = 0.2 }
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { is_tribal = yes }
+				FROM = { technology_group = north_american }
+				FROM = { technology_group = aboriginal }
+				FROM = { technology_group = south_american }
+				#only settled civilizations
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {	
+					is_random_new_world = no
+					NOT = { 
+						OR = {
+							continent = north_america 
+							continent = south_america
+						}
+					}
+				}
+				AND = {	
+					is_random_new_world = yes
+					NOT = { continent = new_world }
+				}
+			}
+			normal_or_historical_nations = yes
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { province_id = 18 }
+			NOT = { continent = africa }
+			NOT = { region = australia_region }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				island = yes
+				AND = {
+					has_terrain = desert
+					NOT = { region = australia_region }
+				}
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = steppes
+				continent = africa
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+				continent = africa
+			}
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+		}
+		modifier = {
+			factor = 1.5
+			continent = south_america
+		}
+		modifier = {
+			factor = 1.5
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+	}
+}
+coal = { 
+ 	#furnaces, gunpowder, steam
+	color = { 0.05 0.05 0.05 }
+	modifier = { development_cost = -0.075 }
+	province = { local_development_cost = -0.1 }
+	chance = { 
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				FROM = { is_tribal = yes }
+				FROM = { technology_group = north_american }
+				FROM = { technology_group = aboriginal }
+				FROM = { technology_group = south_american }
+				#only settled civilizations
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {	
+					is_random_new_world = no
+					NOT = { 
+						OR = {
+							continent = north_america 
+							continent = south_america
+						}
+					}
+				}
+				AND = {	
+					is_random_new_world = yes
+					NOT = { continent = new_world }
+				}
+			}
+			normal_or_historical_nations = yes
+			NOT = { region = west_siberia_region }
+			NOT = { region = east_siberia_region }
+			NOT = { province_id = 18 }
+			NOT = { continent = africa }
+			NOT = { region = australia_region }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				island = yes
+				AND = {
+					has_terrain = desert
+					NOT = { region = australia_region }
+				}
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = steppes
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+				continent = africa
+			}
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+				continent = north_america
+			}
+		}
+		modifier = {
+			factor = 1.3
+			is_random_new_world = yes
+			has_terrain = mountain
+			continent = new_world #Always in RNW
+		}
+	}
+}
+steel = {
+ 	#valuable alloy for weapons etc.
+	color = { 0.35 0.25 0.10 }
+	modifier = { land_morale = 0.1 }
+	province = { local_regiment_cost = -0.2 local_ship_cost = -0.2 }
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+			}
+			NOT = {
+				OR = {
+					development = 7
+					native_size = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = { 
+					continent = new_world
+					continent = north_america
+					continent = south_america
+					continent = oceania 
+				}
+			}
+			NOT = {
+				OR = {
+					development = 12
+					native_size = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				AND = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+					development = 10
+				}
+				AND = {
+					NOT = {
+						OR = {
+							continent = new_world
+							continent = north_america
+							continent = south_america
+							continent = oceania
+						}
+					}
+					development = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = jungle
+				has_terrain = savannah
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = steppes
+				has_climate = tropical
+				continent = africa
+			}
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { native_size = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { native_size = 20 }
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 30
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 40
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 60
+		}
+		modifier = {
+			factor = 1.5
+			iron = 5
+		}
+		modifier = {
+			factor = 1.5
+			iron = 10
+		}
+	}
+}
+salt = {
+	color = { 0.90 0.90 0.90 }
+	#color = { 0.93 0.98 0.98 }
+	modifier = { reinforce_speed = 0.25 }
+	province = { local_defensiveness = 0.15 }
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = { has_terrain = desert }
+			NOT = { has_terrain = marsh }
+			NOT = { has_terrain = mountain }
+			NOT = { has_terrain = highlands }
+			NOT = { any_neighbor_province = { province_id = 1649 } } #Lake Victoria
+			NOT = { any_neighbor_province = { province_id = 1650 } } #Lake Tangyanika
+			NOT = { any_neighbor_province = { province_id = 1651 } } #Lake Malawi
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_terrain = desert
+				AND = {
+					has_terrain = marsh
+					NOT = { has_climate = arctic } #Hudson Bay
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				region = chile_region
+				region = peru_region
+				region = upper_peru_region
+			}
+		}
+		modifier = {
+			factor = 5.0
+			area = western_sahara_area
+		}
+		modifier = { #Salt very very rare in Cascadia Alaska NWT and Hudson Bay all fresh water and little evaporation for salt water   -just removing it, chance was negligable anyway
+			factor = 0.0
+			OR = {
+				region = cascadia_region
+				region = alaska_region
+				region = hudson_bay_region
+				region = northwest_territories_region
+			}
+		}
+		modifier = { #Salt very common in California
+			factor = 2.0
+			region = california_region
+		}
+		modifier = { #Salt very very abundant in the Great Basin Desert
+			factor = 3.0
+			OR = {
+				area = mojave_area
+				area = high_desert_area
+				area = utah_area
+			}
+		}
+		modifier = { #bonus chance
+			factor = 1.5
+			OR = {
+				province_id = 4952		# Southern Sierra Nevadas by death valley
+				province_id = 2490		# Salt Lake province
+			}
+		}
+	}
+}
+ 	
+sulphur = {
+ 	#preservative, and gunpowder
+	color = { 0.80 0.60 0.30 }
+	modifier = { mil_tech_cost_modifier = -0.1 }
+	province = { artillery_cost = -0.05 }
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = { has_terrain = desert }
+			NOT = { has_terrain = marsh }
+			NOT = { has_terrain = mountain }
+			NOT = { has_terrain = highlands }
+			NOT = { region = peru_region }
+			NOT = { region = upper_peru_region }
+			NOT = { region = mississippi_region }
+			NOT = { superregion = china_superregion }
+		}
+	}
+}
+###spices
+cinnamon = { 
+ 	#sri lanka, south china
+	color = { 0.35 0.25 0.15 }
+	modifier = { trade_efficiency = 0.075 }
+	province = { production_efficiency = 0.025 }
+	chance = { factor = 0 }
+}
+spices = {
+ 	#peppers; various places
+	color = { 0.20 0.65 0.20 }
+	modifier = { global_unrest = -1.0 }
+	province = { local_core_creation = 0.25 province_trade_power_value = 1 }
+	chance = { 
+		factor = 40 
+		modifier = {  
+			factor = 0
+			NOT = { superregion = india_superregion }
+			NOT = { region = mexico_region }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { superregion = china_superregion }		
+		}
+		modifier = {
+			factor = 0
+			has_terrain = mountain
+		}
+		modifier = {
+			factor = 0.5
+			region = mexico_region
+		}
+		modifier = {
+			factor = 1.25
+			region = malaya_region
+			region = indonesia_region
+			region = moluccas_region
+		}
+	}
+}
+nutmeg = {
+	#nutmeg and mace, super rare, indonesia
+	color = { 0.65 0.25 0.20 }
+	modifier = {  } #bonus tied to triggered modifier; owning the 646 island
+	province = { idea_cost = -0.5 }
+	chance = { 
+		factor = 20
+		modifier = {  
+			factor = 0
+			NOT = { province_id = 646 }
+		} 
+		modifier = {  
+			factor = 1000
+			province_id = 646
+		} 
+	}
+}
+clove = {
+ 	#india, tanzania, indonesia
+	color = { 0.55 0.40 0.30 } 
+	modifier = { trade_efficiency = 0.075 }
+	province = { local_unrest = -2 }
+	chance = { 
+		factor = 50
+		modifier = {  
+			factor = 0
+			NOT = { superregion = india_superregion }
+			NOT = { region = east_africa_region }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { superregion = china_superregion }		
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_climate = arid
+			}
+		}		
+		modifier = {
+			factor = 0.1
+			region = east_africa_region
+		}
+	}
+}
+saffron = {
+ 	#expensive, greece to india
+	color = { 0.55 0.05 0.05 }
+	modifier = { caravan_power = 0.15 }
+	province = { province_trade_power_value = 2 }
+	chance = { 
+		factor = 5
+		modifier = {  
+			factor = 0
+			NOT = { superregion = india_superregion }
+			NOT = { region = east_africa_region }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { superregion = china_superregion }		
+		} 
+	}
+}
+vanilla = {
+ 	#mexico
+	color = { 0.20 0.10 0.05 }
+	modifier = { vassal_income = 0.15 }
+	province = { local_core_creation = 0.25 province_trade_power_value = 1 }
+	chance = { 
+		factor = 10
+		modifier = {  
+			factor = 0
+			NOT = { region = mexico_region }
+			NOT = { region = central_america_region }
+		} 
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_climate = arid
+				area = texas_area
+			}
+		}
+	}
+}
+ginger = {
+ 	#india/china/indonesia
+	color = { 0.85 0.45 0.30 }
+	modifier = { global_spy_defence = 0.2 }
+	province = { province_trade_power_modifier = 0.10 }
+	chance = { 
+		factor = 35 
+		modifier = {  
+			factor = 0
+			NOT = { superregion = india_superregion }
+			NOT = { region = east_africa_region }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { superregion = china_superregion }		
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_climate = arid
+			}
+		}		
+		modifier = {
+			factor = 0.5
+			region = east_africa_region
+		}
+	}
+}
+
+###misc
+paper = {
+	color = { 0.95 1.00 0.95 }
+	modifier = { core_creation = -0.1 }
+	province = { local_institution_spread = 0.2 }
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0 #only old world nations in standard setup
+			OR = {
+				AND = {
+					is_random_new_world = no
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				continent = oceania
+			}
+			FROM = { 
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+					capital_scope = { continent = new_world }
+				}
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						technology_group = western
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				continent = new_world
+				continent = north_america
+				continent = south_america
+				continent = oceania
+			}
+			NOT = {
+				OR = {
+					development = 7
+					native_size = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = { 
+					continent = new_world
+					continent = north_america
+					continent = south_america
+					continent = oceania 
+				}
+			}
+			NOT = {
+				OR = {
+					development = 12
+					native_size = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				AND = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+					development = 10
+				}
+				AND = {
+					NOT = {
+						OR = {
+							continent = new_world
+							continent = north_america
+							continent = south_america
+							continent = oceania
+						}
+					}
+					development = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = jungle
+				has_terrain = desert
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 0.2
+			region = carribeans_region
+			region = australia_region
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_terrain = savannah
+				has_terrain = steppes
+				has_climate = tropical
+			}
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { native_size = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { native_size = 20 }
+		}
+		modifier = {
+			factor = 1.4
+			region = northeast_america_region
+		}
+		modifier = {
+			factor = 1.5
+			region = low_countries_region
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 30
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 40
+		}
+		modifier = {
+			factor = 1.5
+			native_size = 60
+		}
+	}
+}
+jewelry = {
+	color = { 0.00 0.00 0.80 }
+	modifier = { prestige = 1 }
+	province = { province_trade_power_value = 3 }
+	chance = { factor = 0 }
+}
+munitions = {
+	#weapons, ammo
+	color = { 0.17 0.14 0.12 }
+	modifier = { discipline = 0.05 }
+	province = { reinforce_speed = 0.10 }
+	chance = { factor = 0 }
+}
+machinery = { 
+	#machinery, also old stuff like clockwork
+	color = { 0.35 0.25 0.10 }
+	modifier = { global_trade_goods_size = 0.1 }
+	province = { production_efficiency = 0.025 }
+	chance = { factor = 0 }
+}
+furniture = { 
+	#industrial good
+	color = { 0.17 0.12 0.05 }
+	modifier = { province_warscore_cost = -0.1 }
+	province = { improve_relation_modifier = 0.05 }
+	chance = { factor = 0 }
+}
+unknown = { color = { 0.00 0.00 0.00 } }
+
+dummy_good = {
+	color = { 0.00 0.00 0.00 }
+	chance = { factor = 0 } 
+}

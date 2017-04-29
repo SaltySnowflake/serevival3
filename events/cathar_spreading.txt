@@ -1,0 +1,897 @@
+########################################
+# Converting Countries to Cathar
+#
+# written by Neprut
+########################################
+
+namespace = cathars_spreading
+
+province_event = { #Cathar Spreading - Occitans
+	id = cathars_spreading.1
+	title = "cathars_spreading.1.t"
+	desc = "cathars_spreading.1.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	trigger = {
+		OR = {
+			culture_group = occitanocatala
+			culture = gascon
+			culture = occitain
+			culture = arpitan
+			culture = catalan
+		}
+		NOT = { owner = { religion = cathar } }
+		NOT = { religion = cathar }
+		check_variable = { which = province_occitanism value = 70 }
+		continent = europe
+		NOT = { is_religion_enabled = protestant }
+		NOT = { owner = { has_country_flag = finish_crusade_on_cathars } }
+	}
+
+	mean_time_to_happen = {
+		months = 9
+		modifier = {
+			factor = 1000
+			owner = { has_country_flag = cathar_timer }
+			NOT = { owner = { had_country_flag = { flag = cathar_timer days = 180 } } }
+		}
+		modifier = {
+			factor = 5
+			owner = { has_country_flag = refused_cathars }
+		}
+		modifier = {
+			factor = 10
+			owner = { has_country_flag = crusade_on_cathars }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { has_country_flag = accepted_cathars }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { advisor = trobador }
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = { which = province_occitanism value = 85 }
+		}
+		modifier = {
+			factor = 10
+			owner = { has_factions = yes }
+			owner = { NOT = { faction_influence = { faction = trobador_occitanist influence = 25 } } }
+		}
+		modifier = {
+			factor = 2
+			owner = { has_factions = yes }
+			owner = { NOT = { faction_in_power = trobador_occitanist } }
+		}
+		modifier = {
+			factor = 5
+			owner = { has_factions = yes }
+			owner = { 
+				OR = {
+					faction_in_power = trobador_french
+					faction_in_power = trobador_castillian
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = { has_idea_group = humanist_ideas }
+		}
+		modifier = {
+			factor = 2
+			is_year = 1485
+		}
+		modifier = {
+			factor = 2
+			is_year = 1525
+		}
+	}
+	
+	immediate = {
+		owner = { clr_country_flag = cathar_timer }
+		owner = { clr_country_flag = accepted_cathars }	
+		owner = { clr_country_flag = refused_cathars }
+	}
+	
+	option = {
+		name = "cathars_spreading.1.a"		# Accept
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				OR = {
+					owner = { is_subject_of = SPA }
+					owner = { is_subject_of = CAS }
+					owner = { is_subject_of = FRA }
+				}
+			}
+			modifier = {
+				factor = 100
+				check_variable = { which = province_occitanism value = 90 }
+			}
+			modifier = {
+				factor = 100
+				owner = { religion = cathar }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { faction_influence = { faction = trobador_occitanist influence = 30 } }
+			}
+			modifier = {
+				factor = 10
+				owner = { faction_in_power = trobador_occitanist }
+			}
+			modifier = {
+				factor = 5
+				owner = { has_idea_group = humanist_ideas }
+			}
+		}
+		if = {
+			limit = { NOT = { is_religion_enabled = cathar } }
+			enable_religion = cathar
+			change_religion = cathar
+			set_province_flag = cathar_reformation
+		}
+		if = {
+			limit = { is_religion_enabled = cathar }
+			random = {
+				chance = 75
+				change_religion = cathar
+			}
+		}
+		owner = { add_reform_desire = -0.005 }
+		if = {
+			limit = {
+				OR = {
+					owner = { primary_culture = occitano }
+					owner = { primary_culture = gascon }
+					owner = { primary_culture = occitain }
+					owner = { primary_culture = arpitan }
+				}
+			}
+			every_country = {
+				limit = { 
+					primary_culture = cosmopolitan_french
+					NOT = { religion = cathar }
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_mildly_displeased
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					owner = { primary_culture = catala }
+					owner = { primary_culture = catalan }
+				}
+			}
+			every_country = {
+				limit = {
+					primary_culture = castillian
+					NOT = { religion = cathar }
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_mildly_displeased
+				}
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_mildly_displeased
+			}
+		}
+		every_country = {
+			limit = { religion = cathar }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		change_variable = { which = province_occitanism value = +10 }
+		add_faction_influence = { faction = trobador_occitanist influence = 5 }
+		owner = { set_country_flag = accepted_cathars }
+	}	
+	option = {
+		name = "cathars_spreading.1.b"		# Refuse
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				owner = { 
+					OR = {
+						faction_in_power = trobador_french				
+						faction_in_power = trobador_castillian
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				owner = { has_idea_group = religious_ideas }
+			}
+		}
+		random = {
+			chance = 25
+			cathar_rebels = 1
+		}
+		owner = { add_reform_desire = 0.005 }
+		every_country = {
+			limit = { religion = cathar }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_mildly_displeased
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		if = {
+			limit = { owner = { faction_in_power = trobador_occitanist } }
+			add_stability = -1
+		}
+		add_faction_influence = { faction = trobador_occitanist influence = -5 }
+		owner = { set_country_flag = refused_cathars }
+		owner = { set_country_flag = cathar_timer }
+	}
+}
+
+province_event = { #Cathar Spreading - Cathar
+	id = cathars_spreading.2
+	title = "cathars_spreading.2.t"
+	desc = "cathars_spreading.2.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	trigger = {
+		owner = { religion = cathar }
+		NOT = { religion = cathar }
+		continent = europe
+		NOT = { is_religion_enabled = protestant }
+	}
+
+	mean_time_to_happen = {
+		months = 9
+		modifier = {
+			factor = 0.5
+			owner = { advisor = trobador }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { has_idea_group = humanist_ideas }
+		}
+		modifier = {
+			factor = 2
+			is_year = 1485
+		}
+		modifier = {
+			factor = 2
+			is_year = 1525
+		}
+		modifier = {
+			factor = 5
+			NOT = { religion_group = christian }
+		}
+	}
+
+	option = {
+		name = "cathars_spreading.2.a"		# Accept
+		ai_chance = {
+			factor = 1
+		}
+		random = {
+			chance = 75
+			change_religion = cathar
+		}
+		owner = { add_reform_desire = -0.005 }
+		add_faction_influence = { faction = trobador_occitanist influence = 5 }
+		owner = { set_country_flag = accepted_cathars }
+		owner = { clr_country_flag = refused_cathars }
+	}	
+
+}
+
+province_event = { #Cathar Spreading - French + Spanish + North Italy
+	id = cathars_spreading.3
+	title = "cathars_spreading.3.t"
+	desc = "cathars_spreading.3.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	trigger = {
+		any_neighbor_province = { religion = cathar } 
+		OR = {
+			area = romandie_area
+			area = switzerland_area
+			area = venetia_area
+			area = lombardy_area
+			area = piedmont_area
+			area = liguria_area
+			area = emilia_romagna_area
+			area = emilia_area
+			region = iberia_region
+			region = france_region
+		}
+		NOT = { religion = cathar }
+		owner = { NOT = { religion = cathar } }
+		NOT = { is_religion_enabled = protestant }
+		NOT = { owner = { has_country_flag = finish_crusade_on_cathars } }
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 1000
+			owner = { has_country_flag = cathar_timer }
+			NOT = { owner = { had_country_flag = { flag = cathar_timer days = 360 } } }
+		}
+		modifier = {
+			factor = 5
+			owner = { has_country_flag = refused_cathars }
+		}
+		modifier = {
+			factor = 10
+			owner = { has_country_flag = crusade_on_cathars }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { has_country_flag = accepted_cathars }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { has_idea_group = humanist_ideas }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { advisor = trobador }
+		}
+		modifier = {
+			factor = 5
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				culture = castillian
+				culture = cosmopolitan_french
+			}
+		}
+		modifier = {
+			factor = 2
+			is_year = 1485
+		}
+		modifier = {
+			factor = 5
+			is_year = 1525
+		}
+	}
+	
+	immediate = {
+		owner = { clr_country_flag = cathar_timer }
+		owner = { clr_country_flag = accepted_cathars }	
+		owner = { clr_country_flag = refused_cathars }
+	}
+
+	option = {
+		name = "cathars_spreading.3.a"		# Accept
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+					OR = {
+						owner = { is_subject_of = SPA }
+						owner = { is_subject_of = CAS }
+						owner = { is_subject_of = FRA }
+						owner = { is_subject_of = PRS }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				owner = {
+					OR = {
+						tag = SPA
+						tag = CAS
+						tag = FRA
+						tag = PRS
+						tag = PAP
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = { owner = { religious_unity = .5 } }
+			}
+			modifier = {
+				factor = 5
+				owner = { has_idea_group = humanist_ideas }
+			}
+		}
+		random = {
+			chance = 40
+			change_religion = cathar
+		}
+		owner = { add_reform_desire = -0.005 }
+		every_country = {
+			limit = {
+				religion = cathar
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_mildly_displeased
+			}
+		}
+		owner = { set_country_flag = accepted_cathars }
+	}
+	option = {
+		name = "cathars_spreading.3.b"		# Refuse
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				owner = { has_idea_group = religious_ideas }
+			}
+			modifier = {
+				factor = 2
+				owner = { religious_unity = .85 }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					owner = { primary_culture = castillian }
+					owner = { primary_culture = cosmopolitan_french }
+				}
+			}
+		}
+		random = {
+			chance = 25
+			cathar_rebels = 1
+		}
+		owner = { add_reform_desire = 0.005 }
+		every_country = {
+			limit = {
+				religion = cathar
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_mildly_displeased
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		owner = { set_country_flag = refused_cathars }
+		owner = { set_country_flag = cathar_timer }
+	}
+}
+
+country_event = {
+	id = cathars_spreading.4
+	title = "cathars_spreading.4.t"
+	desc = "cathars_spreading.4.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	trigger = {
+		has_country_flag = accepted_cathars
+		dominant_religion = cathar
+		NOT = { religion = cathar }
+		NOT = { tag = PAP }
+		NOT = { has_country_flag = crusade_on_cathars }
+		NOT = { is_religion_enabled = protestant }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religious_unity = .25 }
+		}
+	}
+
+	option = {
+		name = "cathars_spreading.4.a"		# Convert
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					tag = FRA
+					tag = RFR
+					tag = SPA
+					tag = CAS
+				}
+			}
+			modifier = {
+				factor = 5
+				NOT = { religious_unity = .25 }
+			}
+			modifier = {
+				factor = 5
+				has_idea_group = humanist_ideas
+			}
+			modifier = {
+				factor = 5
+				has_factions = yes
+				faction_in_power = trobador_occitan
+			}
+#			modifier = {
+#				factor = 0.5
+#				calc_true_if = {
+#					all_country = {
+#						religion = cathar
+#					}
+#					amount = 4
+#				}
+#			}
+		}
+		change_religion = cathar
+		add_reform_desire = -0.02
+		every_country = {
+			limit = { religion = cathar }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_displeased
+			}
+		}
+		remove_country_modifier = counter_reformation
+		remove_country_modifier = the_statue_in_restraint_of_appeals
+		remove_country_modifier = bavarian_jesuits
+		remove_country_modifier = the_societas_jesu
+		remove_country_modifier = the_declaration_of_indulgence
+		remove_country_modifier = de_heretico_comburendo
+		remove_country_modifier = the_conventicle_act
+		add_prestige = -50
+	}
+	option = {
+		name = "cathars_spreading.4.b"		# Oppose to this separatism
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_idea_group = religious_ideas
+			}
+			modifier = {
+				factor = 5
+				has_factions = yes
+				OR = {
+					faction_in_power = trobador_french
+					faction_in_power = trobador_castillian
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					primary_culture = castillian
+					primary_culture = cosmopolitan_french
+				}
+			}
+		}
+		random_owned_province = {
+			limit = { religion = cathar continent = europe }
+			random = {
+				chance = 50
+				cathar_rebels = 1
+			}
+		}
+		if = {
+			limit = {
+				num_of_owned_provinces_with = {
+				value = 3
+				religion = cathar
+				continent = europe
+				}
+			}
+			random_owned_province = {
+				limit = { religion = cathar }
+				random = {
+					chance = 50
+					cathar_rebels = 1
+				}
+			}
+		}
+		add_reform_desire = 0.02
+		every_country = {
+			limit = { religion = cathar }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_displeased
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		if = {
+			limit = { faction_in_power = trobador_occitanist }
+			add_stability = -1
+		}
+		add_faction_influence = { faction = trobador_occitanist influence = -25 }
+		set_country_flag = refused_cathars
+		set_country_flag = refused_cathar_convert
+		clr_country_flag = accepted_cathars
+	}
+}
+
+country_event = {
+	id = cathars_spreading.5
+	title = "cathars_spreading.5.t"
+	desc = "cathars_spreading.5.d"
+	picture = RELIGIOUS_WARS_eventPicture
+
+	trigger = {
+		has_country_flag = refused_cathars
+		OR = {
+			any_owned_province = { religion = cathar }
+			any_neighbor_country = { religion = cathar }
+		}
+		NOT = { has_country_flag = refused_crusade_on_cathars }
+		NOT = { has_country_flag = crusade_on_cathars }
+		NOT = { religion = cathar }
+		religion = catholic
+		NOT = { is_religion_enabled = protestant }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			has_country_flag = refused_cathar_convert
+		}
+		modifier = {
+			factor = 3
+			NOT = { any_owned_province = { religion = cathar } }
+		}
+	}
+	option = {
+		name = "cathars_spreading.5.a"		# Oppose to this separatism
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					tag = FRA
+					tag = RFR
+					tag = SPA
+					tag = CAS
+					tag = PAP
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = { religious_unity = .75 }
+			}
+			modifier = {
+				factor = 5
+				has_idea_group = religious_ideas
+			}
+		}
+		every_country = {
+			limit = { religion = cathar }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_displeased
+			}
+			ROOT = {
+				add_casus_belli = {
+					type = cb_cathar_crusade
+					months = 300
+					target = PREV
+				}
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		add_reform_desire = 0.03
+		add_country_modifier = {
+			name = "conversion_zeal"
+			duration = 1825
+		}
+		if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					value = 1
+					religion = cathar
+					continent = europe
+				}
+			}
+			every_owned_province = {
+				limit = { religion = cathar continent = europe }
+				random = {
+					chance = 25
+					cathar_rebels = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 1
+						religion = cathar
+						continent = europe
+					}
+				}
+			}	
+			random_owned_province = {
+				limit = { NOT = { religion = cathar } continent = europe }
+				spawn_rebels = {
+					type = cathar_rebels
+					size = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_factions = yes
+				OR = {
+					government = occitan_monarchy
+					government = occitan_republic
+					government = catalan_monarchy
+					government = catalan_republic
+				}
+			}
+				add_faction_influence = { faction = trobador_occitanist influence = -50 }
+		}
+		if = {
+			limit = { faction_in_power = trobador_occitanist }
+			add_stability = -1
+		}
+		set_country_flag = crusade_on_cathars
+	}
+	option = {
+		name = "cathars_spreading.5.b"		# Tolerance
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_idea_group = humanist_ideas
+			}
+		}
+		every_country = {
+			limit = { religion = cathar }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_displeased
+			}
+		}
+		add_reform_desire = -0.03
+		add_country_modifier = {
+			name = "edict_de_languedoc"
+			duration = -1
+		}
+		add_ruler_modifier = {
+			name = heretic_tolerance
+		}
+		add_prestige = 25
+		set_country_flag = refused_crusade_on_cathars
+		clr_country_flag = refused_cathars
+	}
+}
+
+country_event = {
+	id = cathars_spreading.6
+	title = "cathars_spreading.6.t"
+	desc = "cathars_spreading.6.d"
+	picture = RELIGIOUS_WARS_eventPicture
+
+	trigger = {
+		had_country_flag = { flag = crusade_on_cathars days = 1825 }
+		has_country_flag = refused_cathars
+		calc_true_if = {
+			all_country = { religion = cathar }
+			amount = 3
+		}
+		OR = {
+			any_owned_province = { religion = cathar }
+			any_neighbor_country = { religion = cathar }
+		}
+		NOT = { has_country_flag = finish_crusade_on_cathars }
+		NOT = { religion = cathar }
+		religion = catholic
+		NOT = { is_religion_enabled = protestant }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			has_country_flag = refused_cathar_convert
+		}
+	}
+	option = {
+		name = "cathars_spreading.6.a"		# Kill them all
+		every_country = {
+			limit = { religion = cathar }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_displeased
+			}
+			ROOT = {
+				add_casus_belli = {
+					type = cb_cathar_crusade
+					months = 300
+					target = PREV
+				}
+			}
+		}
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		add_reform_desire = 0.03
+		add_country_modifier = {
+			name = "conversion_zeal"
+			duration = 1825
+		}
+		if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					value = 1
+					religion = cathar
+					continent = europe
+				}
+			}
+			every_owned_province = {
+				limit = { religion = cathar continent = europe }
+				random = {
+					chance = 25
+					cathar_rebels = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_factions = yes
+				OR = {
+					government = occitan_monarchy
+					government = occitan_republic
+					government = catalan_monarchy
+					government = catalan_republic
+				}
+			}
+				add_faction_influence = { faction = trobador_occitanist influence = -50 }
+		}
+		if = {
+			limit = { faction_in_power = trobador_occitanist }
+			add_stability = -1
+		}
+		set_country_flag = finish_crusade_on_cathars
+	}
+}

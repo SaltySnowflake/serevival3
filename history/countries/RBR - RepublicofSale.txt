@@ -1,0 +1,20 @@
+government = oligarchic_republic
+government_rank = 1
+technology_group = muslim
+primary_culture = andalucian
+add_accepted_culture = moroccan
+religion = sunni
+capital = 342			#Sale or Rabat
+fixed_capital = 342
+#May fill in later, but very unlikely anyone will care
+
+1395.9.17= {
+	monarch = {
+		name = "Yonas"
+		dynasty = "al-Quran al-Mekkah"
+		birth_date = 1370.5.28
+		adm = 6
+		dip = 2
+		mil = 6
+	}
+}

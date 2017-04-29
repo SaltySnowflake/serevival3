@@ -1,0 +1,61 @@
+#871 - Pomo
+
+culture = pomoan 
+religion = totemism
+capital = "Buldam" 
+trade_goods = apiculture 
+hre = no 
+base_tax = 2
+base_production = 2
+base_manpower = 1 
+native_size = 10 
+native_ferocity = 1 
+native_hostileness = 3
+discovered_by = north_american
+
+1444.11.2 = {
+	owner = PMO
+	controller = PMO
+	add_core = PMO
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = PMO
+	controller = PMO
+	add_core = PMO
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = PMO
+	controller = PMO
+	add_core = PMO
+	is_city = yes
+}
+
+1542.1.1 = { discovered_by = SPA } # Juan Rodríguez Cabrillo
+1579.6.16 = { discovered_by = ENG } # Sir Francis Drake
+1707.5.12 = { discovered_by = GBR }
+1786.1.1 = { discovered_by = FRA } # Jean Francois la Perouse
+
+1812.1.1 = {
+	owner = RUS
+	controller = RUS
+	add_core = RUS
+	capital = "Fort Ross"
+	culture = russian
+	religion = orthodox
+} # Fort Ross
+
+1862.1.1 = { remove_core = PMO }

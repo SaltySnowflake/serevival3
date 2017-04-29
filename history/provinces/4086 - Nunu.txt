@@ -1,0 +1,13 @@
+owner = KUB
+controller = KUB
+add_core = KUB
+culture = kuba
+religion = bumuntu
+capital = "Nunu"
+trade_goods = ebony
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 2
+is_city = yes
+discovered_by = central_african

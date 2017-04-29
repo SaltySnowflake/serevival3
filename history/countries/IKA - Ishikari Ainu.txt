@@ -1,0 +1,15 @@
+government = siberian_native_council
+primary_culture = ainu
+religion = kamui
+technology_group = chinese
+capital = 1847
+
+1444.11.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

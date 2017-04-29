@@ -1,0 +1,17 @@
+government = iqta
+primary_culture = andalucian
+religion = sunni
+technology_group = muslim
+capital = 229 # Baja
+#historical_friend = GRA
+#historical_friend = MOR
+
+1441.11.01 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

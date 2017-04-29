@@ -1,0 +1,34 @@
+########################################
+# Events for Romuva
+#
+# written by Neprut
+########################################
+
+namespace = romuvan_lit
+
+# Herald to the world
+country_event = {
+	id = romuvan_lit.1
+	title = "EVTNAME5001"
+	desc = "EVTDESC5001"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = LIT
+		NOT = { is_year = 1500 }
+		NOT = { religion = baltic_pagan_reformed }
+		272 = { religion = baltic_pagan_reformed }
+		owns = 272
+		num_of_religion = { religion = catholic value = 0.8 }
+	}
+	
+	mean_time_to_happen = { months = 4 }
+	
+	option = {
+		name = "EVTOPTA5001"
+		272 = { change_religion = catholic }
+	}
+	
+}

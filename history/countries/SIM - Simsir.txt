@@ -1,0 +1,16 @@
+government = tribal_democracy
+primary_culture = vainakh
+religion = sunni
+technology_group = muslim
+capital = 2198
+government_rank = 1
+
+1444.1.1 = {
+	monarch = {
+		name = "Tribal Council"
+		adm = 3
+		mil = 3
+		dip = 3
+		regent = yes
+	}
+}

@@ -1,0 +1,18 @@
+government = tribal_kingdom
+government_rank = 1
+technology_group = eastern
+religion = finnish_pagan_reformed
+primary_culture = karelian
+capital = 4124 # Kexholm
+historical_friend = SMI
+historical_friend = VEP
+
+1444.11.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

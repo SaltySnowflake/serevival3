@@ -1,0 +1,19 @@
+government = steppe_horde
+primary_culture = cossack
+religion = orthodox
+technology_group = eastern
+capital = 287
+government_rank = 1
+historical_friend = ZAZ
+historical_friend = DON
+historical_friend = TEK
+
+1444.1.1 = {
+	monarch = {
+		name = "Kiril"
+		dynasty = "Rossinsky"
+		adm = 3
+		mil = 4
+		dip = 2
+	}
+}

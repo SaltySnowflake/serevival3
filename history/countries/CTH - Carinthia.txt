@@ -1,0 +1,16 @@
+government = feudal_monarchy
+government_rank = 1
+primary_culture = austrian
+religion = catholic
+technology_group = western
+capital = 128 # Kärnten
+
+1424.6.11 = {
+	monarch = {
+		name = "Friedrich III"
+		dynasty = "von Habsburg"
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}

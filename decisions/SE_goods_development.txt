@@ -1,0 +1,28 @@
+country_decisions = {
+	
+	manual_dev = {
+		major = yes
+		potential = {  
+			ai = no
+		}
+		allow = {
+			custom_trigger_tooltip = {	
+				tooltip = manual_dev_explanation
+				any_owned_province = { 
+					has_building = SEtradegoods 
+				}
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = { has_building = SEtradegoods } 
+				custom_tooltip = manual_dev_fire
+				hidden_effect = { province_event = { id = SE_shatteredgoods.10 } }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

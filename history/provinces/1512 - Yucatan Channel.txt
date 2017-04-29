@@ -1,0 +1,4 @@
+discovered_by = mesoamerican
+discovered_by = TNO
+discovered_by = WWG
+1517.1.1 = { discovered_by = SPA }

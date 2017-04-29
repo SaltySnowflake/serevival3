@@ -1,0 +1,250 @@
+country_decisions = {
+
+	british_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = GBR }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = ANV }
+			NOT = { tag = CEL }
+			NOT = { tag = HBE }
+			NOT = { tag = TNA }
+			NOT = { tag = YYK }
+			OR = {
+				culture_group = british
+				primary_culture = welsh
+				primary_culture = cornish
+			}
+			OR = {
+				ai = no
+				num_of_cities = 8
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 236		# London
+			owns_core_province = 237		# Oxfordshire
+			owns_core_province = 234		# Wessex
+			owns_core_province = 248		# Lothian
+			owns_core_province = 251		# Aberdeen
+			owns_core_province = 3019		# Strathclyde
+			owns_core_province = 3027		# Cambridgeshire
+		}
+		effect = {
+			change_tag = GBR
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			set_capital = 236
+			custom_tooltip = cornishassim
+			custom_tooltip = welshassim
+			hidden_effect = {
+				if = {
+					limit = { primary_culture = welsh }
+					change_primary_culture = welshbrit
+				}
+				if = {
+					limit = { primary_culture = cornish }
+					change_primary_culture = cornishbrit
+				}
+				every_core_province = { 
+					limit = { culture = welsh }
+					change_culture = welshbrit
+				}
+				every_core_province = { 
+					limit = { culture = cornish }
+					change_culture = cornishbrit
+				}
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GBR
+			}
+			ireland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GBR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+	
+	british_nation_diplomatically = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { exists = GBR }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				AND = {
+					tag = ENG
+					OR = {
+						ai = no
+						AND = {
+							ai = yes
+							OR = {
+								SCO = {	junior_union_with = ENG	}
+								SCO = {	vassal_of = ENG	}
+							}
+							#This overlaps with allow for AI, is meant to negate do_not_integrate
+							SCO = { NOT = { num_of_cities = 20 } } #Keep this number the same as in allow
+						}
+					}
+				}
+				AND = {
+					tag = SCO
+					OR = {
+						ai = no
+						AND = {
+							ai = yes
+							OR = {
+								ENG = {	junior_union_with = SCO	}
+								ENG = {	vassal_of = SCO	}
+							}
+							#This overlaps with allow for AI, is meant to negate do_not_integrate
+							ENG = { NOT = { num_of_cities = 40 } } #Keep this number the same as in allow
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			legitimacy = 100
+			OR = {
+				AND = {
+					tag = ENG
+					OR = {
+						SCO = {	junior_union_with = ENG	}
+						SCO = {	vassal_of = ENG	}
+					}
+					SCO = { NOT = { num_of_cities = 20 } } #Keep this number the same as in potential
+				}
+				AND = {
+					tag = SCO
+					OR = {
+						ENG = {	junior_union_with = SCO	}
+						ENG = {	vassal_of = SCO	}
+					}
+					ENG = { NOT = { num_of_cities = 40 } } #Keep this number the same as in potential
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = ENG
+					SCO = {
+						ai = yes
+					}
+				}
+				inherit = SCO
+			}
+			if = {
+				limit = {
+					tag = SCO
+					ENG = {
+						ai = yes
+					}
+				}
+				inherit = ENG
+			}
+			change_tag = GBR
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GBR
+			}
+			ireland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GBR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			ireland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GBR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+		do_not_integrate = ENG
+		do_not_integrate = SCO
+	}
+
+}

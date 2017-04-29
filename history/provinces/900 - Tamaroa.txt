@@ -1,0 +1,98 @@
+#900 - Tamaroa
+
+culture = cahokia #illini
+religion = southern_cult
+capital = "Tamaroa"
+trade_goods = tobacco
+hre = no
+base_tax = 3 #2
+base_production = 2
+base_manpower = 2 #1
+native_size = 20
+native_ferocity = 2
+native_hostileness = 9
+discovered_by = north_american
+extra_cost = 10
+
+add_permanent_province_modifier = {
+	name = inland_center_of_trade_modifier
+	duration = -1
+}
+
+1444.11.2 = {
+	owner = WWE
+	controller = WWE
+	add_core = WWE
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = WWE
+	controller = WWE
+	add_core = WWE
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = WWE
+	controller = WWE
+	add_core = WWE
+	is_city = yes
+}
+1480.1.1 = {
+	culture = illini
+	owner = XXX
+	controller = XXX
+	remove_core = WWE
+	trade_goods = unknown
+	is_city = no 
+}
+1550.1.1 = {
+	owner = QQY
+	controller = QQY
+	add_core = QQY
+	trade_goods = tobacco
+	is_city = yes
+}
+
+
+1650.1.1 = {
+	remove_core = QQY
+	owner = ILL
+	controller = ILL
+	add_core = ILL 
+}
+1670.1.1 = { discovered_by = FRA } # Robert Cavelier de La Salle
+1721.1.1 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	culture = cosmopolitan_french
+	religion = catholic 
+} #Fort Orleans
+1762.1.1 = { owner = SPA controller = SPA add_core = SPA remove_core = FRA }
+1764.1.1 = { capital = "Saint Louis" }
+1800.10.1 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	remove_core = SPA
+}# Treaty of San Ildefonso
+1803.4.3 = {
+	owner = USA
+	controller = USA
+	add_core = USA
+	remove_core = FRA
+	culture = american
+	religion = protestant
+}# The Louisiana purchase

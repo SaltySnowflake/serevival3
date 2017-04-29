@@ -1,0 +1,19 @@
+#3004 - Higo
+
+owner = KKC
+controller = KKC
+culture = kyushuan
+religion = shinto
+capital = "Kunamoto"
+trade_goods = rice
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+add_core = KKC
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU

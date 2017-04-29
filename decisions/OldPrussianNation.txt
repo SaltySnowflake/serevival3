@@ -1,0 +1,84 @@
+country_decisions = {
+
+	old_prussian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			primary_culture = old_prussian
+			NOT = { exists = OPR }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = BLT }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			religion = baltic_pagan_reformed
+			owns_core_province = 40		#Memel
+			owns_core_province = 3224	#Insterburg
+			owns_core_province = 41		#Konigsberg
+			owns_core_province = 42		#Ermland
+			owns_core_province = 1841	#Marienburg
+			owns_core_province = 43		#Danzig
+			owns_core_province = 2958	#Osterode
+			owns_core_province = 767	#Ortelsburg
+		}
+		effect = {
+			change_tag = OPR
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			set_government_rank = 2
+			set_capital = 41
+			41 = {
+			 	add_base_tax = 1
+			 	add_base_manpower = 1
+				add_base_production = 1
+				if = {
+					limit = { NOT = { culture = ROOT } }
+					change_culture = ROOT
+				}
+				change_religion = baltic_pagan_reformed
+			}
+			random_owned_province = {
+				limit = { culture = old_prussian }
+				add_base_tax = 1
+			}
+			baltic_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OPR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

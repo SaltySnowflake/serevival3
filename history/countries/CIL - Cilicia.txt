@@ -1,0 +1,22 @@
+government = feudal_monarchy #despotic_monarchy 
+primary_culture = armenian
+add_accepted_culture = syriac_culture
+religion = apostolic #catholic					# Close ties with crusaders and relations with the pope
+technology_group = eastern
+capital = 5138						# Provinces encompassing Sis
+historical_friend = ARM
+historical_friend = PAX
+historical_friend = ATC
+historical_friend = CAP
+historical_friend = TPL
+
+1444.11.1 = {
+	monarch = {
+		name = "Serj"
+		dynasty = "Tankian"
+		birth_date = 1407.8.21
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}

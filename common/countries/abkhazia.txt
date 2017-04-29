@@ -1,0 +1,89 @@
+#Country Name: Please see filename.
+
+graphical_culture = easterngfx
+
+color = { 136 79 101 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	muscovite_musketeer
+	muscovite_caracolle
+	muscovite_soldaty
+	muscovite_cossack
+	russian_petrine
+	russian_lancer
+	russian_green_coat
+	russian_cuirassier
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	russian_mass
+}
+
+monarch_names = {
+	"Giorgi #2" = 120
+	"Adarnase #1" = 60
+	"Rabia #0" = 60
+	"Ars #0" = 60
+	"Ioane #1" = 20
+	"Konstanti #3" = 20
+	"Leon #3" = 20
+	"Demetrius #3" = 20
+	"Theodosius #3" = 20
+	"Bagrat #2" = 20
+	"Barnuk #1" = 20
+	"Phiniktios #1" = 20
+	"Istvine #1" = 20
+	"Ghozar #1" = 20
+	"Anos #1" = 20
+	"Mamia #0" = 10
+	"Solomon #0" = 10
+	"Davit #0" = 5
+	"Kaikhushru #0" = 5
+	"Rustam #0" = 5
+	"Giorgi #1 Aghts'epeli" = 0
+	"Grigol #0" = 0
+	"Lomin #0" = 0
+	"Nikolaoz #0" = 0
+	"Svimeon #0" = 0
+	"Vakhtang #0" = 0
+	"Zaal #0" = 0
+	"Zurab #0" = 0
+	
+	"Anissia #0" = -1
+	"Kessaria #0" = -1
+	"Makka #0" = -1
+	"Mariami #0" = -1
+	"Sayan #0" = -1
+	"Zilikhan #0" = -1
+}
+
+leader_names = { 
+	Achba Anchaba
+	Ankvab Ardzingba
+	Bagapsh Chachba
+	Chanba Gamgia
+	Gablia Gechba
+	Grivapsh Gulia
+	Gumba Gytsba
+	Inal-Ipa Ketsba
+	Khadzhimba Khashba
+	Khashig Leiba
+	Lakoba Ratsba
+	Shakryl Shavliani
+	Tania Trapsh
+}

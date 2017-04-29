@@ -1,0 +1,195 @@
+# Special Colours
+# Normandy
+NRM = {
+    color1= { 20 50 105 }
+    color2= { 116 11 15 }
+    color3= { 131 138 116 }
+}
+
+# Romans
+ROM = {
+    color1= { 116 11 15 }
+    color2= { 250 188 0 }
+    color3= { 75 35 75 }
+}
+
+# THIS IS PERSIA!~!
+PER = {
+    color1= { 64 85 38 }
+    color2= { 198 154 24 }
+    color3= { 175 36 16 }
+}
+
+#Greenland
+GNL = {
+	color1 = { 80 120 30 }
+	color2 = { 100 120 80 }
+	color3 = { 140 100 40 }
+}
+
+#Thule
+THL = {
+	color1 = { 100 100 120 }
+	color2 = { 150 120 100 }
+	color3 = { 210 210 230 }
+}
+
+#Vinland
+VIN = {
+	color1 = { 80 120 30 }
+	color2 = { 100 120 80 }
+	color3 = { 140 100 40 }
+}
+
+#####CAUCASUS
+ABK = {
+	color1= { 48 137 4 }
+    color2= { 185 3 9 }
+    color3= { 255 255 255 }
+}
+GUR = {
+	color1= { 247 227 217 }
+    color2= { 233 239 51 }
+    color3= { 240 18 28 }
+}
+KAK = {
+	color1= { 239 199 188 }
+    color2= { 101 153 101 }
+    color3= { 255 0 0 }
+}
+KRT = {
+	color1= { 255 0 0 }
+    color2= { 255 206 0 }
+    color3= { 255 255 255 }
+}
+KTK = {
+	color1= { 0 0 0 }
+    color2= { 128 126 128 }
+    color3= { 255 255 255 }
+}
+MEG = {
+	color1= { 255 255 255 }
+    color2= { 181 181 181 }
+    color3= { 0 0 0 }
+}
+SAM = {
+	color1= { 225 200 170 }
+    color2= { 190 194 160 }
+    color3= { 240 240 240 }
+}
+
+LOR = {
+	color1= { 100 0 0 }
+    color2= { 188 5 5 }
+    color3= { 64 64 64 }
+}
+TKJ = {
+    color1= { 140 140 140 }
+    color2= { 151 5 5 }
+    color3= { 255 255 255 }
+}
+VAN = {
+	color1= { 250 188 0 }
+    color2= { 188 5 5 }
+    color3= { 255 255 255 }
+}
+YER = {
+	color1= { 40 40 40 }
+    color2= { 170 0 0 }
+    color3= { 220 220 220 }
+}
+LAZ = {
+	color1= { 170 5 5 }
+    color2= { 250 200 20 }
+    color3= { 125 30 80 }
+}
+LZA = {
+	color1= { 255 0 0 }
+    color2= { 0 128 0 }
+    color3= { 255 255 255 }
+}
+SIM = {
+	color1= { 38 96 22 }
+    color2= { 220 0 0 }
+    color3= { 255 255 255 }
+}
+KYA = {
+	color1= { 0 105 236 }
+    color2= { 255 0 0 }
+    color3= { 0 135 50 }
+}
+ADG = {
+	color1= { 42 107 17 }
+    color2= { 240 240 0 }
+    color3= { 40 170 17 }
+}
+KAB = {
+	color1= { 120 180 80 }
+    color2= { 255 0 0 }
+    color3= { 250 240 0 }
+}
+CKA = {
+	color1= { 42 160 17 }
+    color2= { 0 144 200 }
+    color3= { 225 30 15 }
+}
+DON = {
+	color1= { 250 200 0 }
+    color2= { 0 80 155 }
+    color3= { 180 35 20 }
+}
+KBN = {
+	color1= { 220 20 100 }
+    color2= { 0 50 200 }
+    color3= { 0 160 80 }
+}
+KYK = {
+	color1= { 0 180 255 }
+    color2= { 255 200 00 }
+    color3= { 255 255 255 }
+}
+DAG = {
+	color1= { 0 98 51 }
+    color2= { 255 196 0 }
+    color3= { 64 64 64 }
+}
+AZR = {
+	color1= { 220 0 50 }
+    color2= { 225 135 120 }
+    color3= { 255 255 255 }
+}
+LYN = {
+	color1= { 60 185 180 }
+    color2= { 33 177 76 }
+    color3= { 255 200 14 }
+}
+TEK = {
+	color1= { 100 153 255 }
+    color2= { 255 255 255 }
+    color3= { 100 90 255 }
+}
+GAN = {
+	color1= { 44 175 67 }
+    color2= { 240 240 46 }
+    color3= { 43 116 70 }
+}
+SHH = {
+	color1= { 220 36 26 }
+    color2= { 250 238 60 }
+    color3= { 250 160 60 }
+}
+TCA = {
+	color1= { 255 204 0 }
+    color2= { 0 0 0 }
+    color3= { 255 0 0 }
+}
+CCA = {
+	color1= { 8 8 8 }
+    color2= { 54 159 48 }
+    color3= { 240 20 30 }
+}
+GAR = {
+	color1= { 215 28 63 }
+    color2= { 40 172 88 }
+    color3= { 255 255 255 }
+}

@@ -1,0 +1,79 @@
+# Occitan Power
+country_decisions = {
+
+	display_occitan_power = {
+		major = yes
+
+		potential = { 
+			any_owned_province = {
+				OR = {
+					culture_group = occitanocatala
+					culture = gascon
+					culture = occitain
+					culture = arpitan
+					culture = catalan
+				}
+				continent = europe
+			}
+			ai = no 
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				always = no			
+				tooltip = occitan_power_display_description
+			}
+		}
+
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture_group = occitanocatala
+						culture = occitain
+						culture = arpitan
+						culture = gascon
+						culture = catalan
+					}
+					continent = europe
+				}
+				custom_tooltip = occitan_power_display_effect
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+	
+	display_pagan_power = {
+		major = yes
+
+		potential = {
+			NOT = { has_global_flag = pagan_revival_over }
+			any_owned_province = {
+				NOT = { is_variable_equal = { which = pagan_sentiment value = 0 } }
+				NOT = { check_variable  = { which = pagan_sentiment value = 50 } }
+			}
+			ai = no
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				always = no			
+				tooltip = pagan_power_display_description
+			}
+		}
+
+		effect = {
+			every_owned_province = {
+				limit = { 
+					NOT = { is_variable_equal = { which = pagan_sentiment value = 0 } }
+					NOT = { check_variable  = { which = pagan_sentiment value = 50 } }
+				}
+				custom_tooltip = pagan_sentiment_display_effect
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+	
+}

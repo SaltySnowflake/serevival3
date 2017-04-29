@@ -1,0 +1,57 @@
+# No previous file for Jicarilla
+
+culture = apache #navajo #Most different of all the Apache, may split culture in the future, with this province and a few in Texas getting the new culture
+religion = wakan_tanka
+capital = "Haisndayin"			#Need a proper name, obviously, but so remote, who will care? Modern Las Vegas NM area
+trade_goods = maize			#On the river there is some fertile land, still not great
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = QQF
+	controller = QQF
+	add_core = QQF
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = QQF
+	controller = QQF
+	add_core = QQF
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = QQF
+	controller = QQF
+	add_core = QQF
+	is_city = yes
+}
+
+
+#This is still vanilla, I'll handle it later, when I do the plains and Texas -Draiocht
+1710.1.1 = {
+	remove_core = QQF
+	owner = COM
+	controller = COM
+	add_core = COM
+	culture = shoshone 
+} #Horses cause waves of migration on the Great Plains
+#Should be Apache, but only one Apache tag and splitting them up is undesirable

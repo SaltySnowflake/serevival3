@@ -1,0 +1,18 @@
+#3108 - Norilsk
+
+religion = tengri_pagan_reformed
+capital = "Sklad"
+culture = tungus
+trade_goods = unknown
+hre = no
+base_tax = 3 base_production = 3
+base_manpower = 2
+native_size = 20
+native_ferocity = 2
+native_hostileness = 5
+
+1630.1.1  = { discovered_by = RUS } 
+1645.1.1  = { owner = RUS
+	      controller = RUS
+	      religion = orthodox }
+1675.1.1  = { add_core = RUS }

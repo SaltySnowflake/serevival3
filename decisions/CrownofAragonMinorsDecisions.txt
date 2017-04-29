@@ -1,0 +1,386 @@
+country_decisions = {
+
+	integrate_kingdom_of_mallorca = {
+		potential = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_mallorca } }
+		allow = {
+			OR = {
+				owns = 333
+				owns = 5098
+				owns = 5095
+			}
+			is_at_war = no
+			adm_power = 50
+		}
+		effect = {
+			if = {
+				limit = { owns = 333 }
+				333 = {
+					remove_province_modifier = crown_of_aragon_minors_mallorca
+					add_core = MJC
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -20
+			}
+			if = {
+				limit = { owns = 5098 }
+				5098 = {
+					remove_province_modifier = crown_of_aragon_minors_mallorca
+					add_core = MJC
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -15
+			}
+			if = {
+				limit = { owns = 5095 }
+				5095 = {
+					remove_province_modifier = crown_of_aragon_minors_mallorca
+					add_core = MJC
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -15
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				AND = {
+					culture_group = iberian
+					NOT = { is_year = 1715 }
+				}
+			}	#Iberians wont do until 1715
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 10 }	
+			}	#AI wont do with low adm tech
+		}
+	}
+	
+	integrate_kingdom_of_sardinia = {
+		potential = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_sardinia } }
+		allow = {
+			OR = {
+				owns = 127
+				owns = 2986
+			}
+			is_at_war = no
+			adm_power = 50
+		}
+		effect = {
+			if = {
+				limit = { owns = 127 }
+				127 = {
+					remove_province_modifier = crown_of_aragon_minors_sardinia
+					add_core = SAR
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -25
+			}
+			if = {
+				limit = { owns = 2986 }
+				2986 = {
+					remove_province_modifier = crown_of_aragon_minors_sardinia
+					add_core = SAR
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -25
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				AND = {
+					culture_group = iberian
+					NOT = { is_year = 1715 }
+				}
+			}	#Iberians wont do until 1715
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 10 }	
+			}	#AI wont do with low adm tech
+		}
+	}
+	
+	integrate_kingdom_of_sicily = {
+		potential = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_sicily } }
+		allow = {
+			OR = {
+				owns = 125
+				owns = 3037
+				owns = 124
+				owns = 2982
+				owns = 126
+			}
+			is_at_war = no
+			adm_power = 100
+		}
+		effect = {
+			if = {
+				limit = { owns = 125 }
+				125 = {
+					remove_province_modifier = crown_of_aragon_minors_sicily
+					add_core = SIC
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -20
+			}
+			if = {
+				limit = { owns = 3037 }
+				3037 = {
+					remove_province_modifier = crown_of_aragon_minors_sicily
+					add_core = SIC
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -20
+			}
+			if = {
+				limit = { owns = 124 }
+				124 = {
+					remove_province_modifier = crown_of_aragon_minors_sicily
+					add_core = SIC
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -20
+			}
+			if = {
+				limit = { owns = 2982 }
+				2982 = {
+					remove_province_modifier = crown_of_aragon_minors_sicily
+					add_core = SIC
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -20
+			}
+			if = {
+				limit = { owns = 126 }
+				126 = {
+					remove_province_modifier = crown_of_aragon_minors_sicily
+					add_core = SIC
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -20
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				AND = {
+					culture_group = iberian
+					NOT = { is_year = 1715 }
+				}
+			}	#Iberians wont do until 1715
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 10 }	
+			}	#AI wont do with low adm tech
+		}
+	}
+	
+	integrate_kingdom_of_valencia = {
+		potential = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_valencia } }
+		allow = {
+			OR = {
+				owns = 220
+				owns = 3094
+				owns = 1750
+			}
+			is_at_war = no
+			adm_power = 50
+		}
+		effect = {
+			if = {
+				limit = { owns = 220 }
+				220 = {
+					remove_province_modifier = crown_of_aragon_minors_valencia
+					add_core = VAL
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -20
+			}
+			if = {
+				limit = { owns = 3094 }
+				3094 = {
+					remove_province_modifier = crown_of_aragon_minors_valencia
+					add_core = VAL
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -15
+			}
+			if = {
+				limit = { owns = 1750 }
+				1750 = {
+					remove_province_modifier = crown_of_aragon_minors_valencia
+					add_core = VAL
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -15
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				AND = {
+					culture_group = iberian
+					NOT = { is_year = 1715 }
+				}
+			}	#Iberians wont do until 1715
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 10 }	
+			}	#AI wont do with low adm tech
+		}
+	}
+	
+	integrate_kingdom_of_catalonia = {
+		potential = { any_owned_province = { has_province_modifier = crown_of_aragon_minors_catalonia } }
+		allow = {
+			OR = {
+				owns = 213
+				owns = 2988
+				owns = 2987
+				owns = 212
+				owns = 197
+			}
+			is_at_war = no
+			adm_power = 50
+		}
+		effect = {
+			if = {
+				limit = { owns = 213 }
+				213 = {
+					remove_province_modifier = crown_of_aragon_minors_catalonia
+					add_core = CAT
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -10
+			}
+			if = {
+				limit = { owns = 2988 }
+				2988 = {
+					remove_province_modifier = crown_of_aragon_minors_catalonia
+					add_core = CAT
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -10
+			}
+			if = {
+				limit = { owns = 2987 }
+				2987 = {
+					remove_province_modifier = crown_of_aragon_minors_catalonia
+					add_core = CAT
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -10
+			}
+			if = {
+				limit = { owns = 212 }
+				212 = {
+					remove_province_modifier = crown_of_aragon_minors_catalonia
+					add_core = CAT
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -10
+			}
+			if = {
+				limit = { owns = 197 }
+				197 = {
+					remove_province_modifier = crown_of_aragon_minors_catalonia
+					add_core = CAT
+					add_province_modifier = {
+						name = btpl_recently_integrated
+						duration = 3650
+					}
+				}
+				add_adm_power = -10
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				AND = {
+					culture_group = iberian
+					NOT = { is_year = 1715 }
+				}
+			}	#Iberians wont do until 1715
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 10 }	
+			}	#AI wont do with low adm tech
+		}
+	}
+}

@@ -1,0 +1,124 @@
+country_decisions = {
+
+	primitive_trade_ship = {
+		major = yes
+		potential = {
+			num_of_ports = 1
+			primitives = yes
+			dip_tech = 2
+		}
+		allow = {
+			treasury = 16
+		}
+		effect = {
+			random_owned_province = {
+				limit = { has_port = yes }
+				add_unit_construction = {
+					type = light_ship
+					amount = 1
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					primary_culture = polynesian
+					culture_group = carribean
+					culture_group = pacific
+					culture_group = eskaleut
+					has_idea_group = pacific_northwest_ideas
+				}
+			}
+			modifier = {
+				factor = 0
+				navy_size_percentage = 1
+			}
+		}
+	}
+	
+	primitive_galley = {
+		major = yes
+		potential = {
+			num_of_ports = 1
+			primitives = yes
+			dip_tech = 2
+		}
+		allow = {
+			treasury = 10
+		}
+		effect = {
+			random_owned_province = {
+				limit = { has_port = yes }
+				add_unit_construction = {
+					type = galley
+					amount = 1
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					primary_culture = polynesian
+					culture_group = carribean
+					culture_group = pacific
+					culture_group = eskaleut
+					has_idea_group = pacific_northwest_ideas
+				}
+			}
+			modifier = {
+				factor = 0
+				navy_size_percentage = 1
+			}
+		}
+	}
+	
+	primitive_transport = {
+		major = yes
+		potential = {
+			num_of_ports = 1
+			primitives = yes
+			dip_tech = 2
+		}
+		allow = {
+			treasury = 12
+		}
+		effect = {
+			random_owned_province = {
+				limit = { has_port = yes }
+				add_unit_construction = {
+					type = transport
+					amount = 1
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					primary_culture = polynesian
+					culture_group = carribean
+					culture_group = pacific
+					culture_group = eskaleut
+					has_idea_group = pacific_northwest_ideas
+				}
+			}
+			modifier = {
+				factor = 0
+				navy_size_percentage = 1
+			}
+		}
+	}
+
+
+}

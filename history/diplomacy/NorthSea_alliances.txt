@@ -1,0 +1,22 @@
+# North Sea League Members
+
+alliance = {
+	first = FAR
+	second = SHT
+	start_date = 1444.1.1
+	end_date = 1444.11.11
+}
+
+alliance = {
+	first = FAR
+	second = ORK
+	start_date = 1444.1.1
+	end_date = 1444.11.11
+}
+
+alliance = {
+	first = SHT
+	second = ORK
+	start_date = 1444.1.1
+	end_date = 1444.11.11
+}

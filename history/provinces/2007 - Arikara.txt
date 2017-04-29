@@ -1,0 +1,57 @@
+#2007 - Arikara
+
+culture = arikara #pawnee
+religion = wakan_tanka
+capital = "Arikara"
+trade_goods = livestock
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 1
+native_ferocity = 1
+native_hostileness = 1
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = AKR
+	controller = AKR
+	add_core = AKR
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = AKR
+	controller = AKR
+	add_core = AKR
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = AKR
+	controller = AKR
+	add_core = AKR
+	is_city = yes
+}
+
+1738.1.1 = { discovered_by = FRA }# Pierre Gaultier de Varennes, no real settlements until the 1800's
+
+1810.1.1 = {
+	owner = SIO
+	controller = SIO
+	add_core = SIO
+	culture = dakota
+} #Lakota pushes west across the Missouri
+
+1860.1.1 = { remove_core = AKR }

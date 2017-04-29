@@ -1,0 +1,210 @@
+##########################################################################
+#####                             IBERIA                             #####
+##########################################################################
+
+# ACR Algeciras 
+entity = { clone = "morrishgfx_INFANTRY_1"		name = "ACR_INFANTRY_1" }
+entity = { clone = "morrishgfx_CAVALRY_1" 		name = "ACR_CAVALRY_1"  }
+entity = { clone = "morrishgfx_INFANTRY_2"		name = "ACR_INFANTRY_2" }
+entity = { clone = "morrishgfx_CAVALRY_2" 		name = "ACR_CAVALRY_2"  }
+entity = { clone = "morrishgfx_INFANTRY_3"		name = "ACR_INFANTRY_3" }
+entity = { clone = "morrishgfx_CAVALRY_3" 		name = "ACR_CAVALRY_3"  }
+entity = { clone = "morrishgfx_INFANTRY_4"		name = "ACR_INFANTRY_4" }
+entity = { clone = "morrishgfx_CAVALRY_4" 		name = "ACR_CAVALRY_4"  }
+
+# GRA Granada 
+entity = { clone = "morrishgfx_INFANTRY_1"		name = "GRA_INFANTRY_1" }
+entity = { clone = "morrishgfx_CAVALRY_1" 		name = "GRA_CAVALRY_1"  }
+entity = { clone = "morrishgfx_INFANTRY_2"		name = "GRA_INFANTRY_2" }
+entity = { clone = "morrishgfx_CAVALRY_2" 		name = "GRA_CAVALRY_2"  }
+entity = { clone = "morrishgfx_INFANTRY_3"		name = "GRA_INFANTRY_3" }
+entity = { clone = "morrishgfx_CAVALRY_3" 		name = "GRA_CAVALRY_3"  }
+entity = { clone = "morrishgfx_INFANTRY_4"		name = "GRA_INFANTRY_4" }
+entity = { clone = "morrishgfx_CAVALRY_4" 		name = "GRA_CAVALRY_4"  }
+
+# CDB Cordobra 
+entity = { clone = "morrishgfx_INFANTRY_1"		name = "CDB_INFANTRY_1" }
+entity = { clone = "morrishgfx_CAVALRY_1" 		name = "CDB_CAVALRY_1"  }
+entity = { clone = "morrishgfx_INFANTRY_2"		name = "CDB_INFANTRY_2" }
+entity = { clone = "morrishgfx_CAVALRY_2" 		name = "CDB_CAVALRY_2"  }
+entity = { clone = "morrishgfx_INFANTRY_3"		name = "CDB_INFANTRY_3" }
+entity = { clone = "morrishgfx_CAVALRY_3" 		name = "CDB_CAVALRY_3"  }
+entity = { clone = "morrishgfx_INFANTRY_4"		name = "CDB_INFANTRY_4" }
+entity = { clone = "morrishgfx_CAVALRY_4" 		name = "CDB_CAVALRY_4"  }
+
+# SEV Sevilla 
+entity = { clone = "morrishgfx_INFANTRY_1"		name = "SEV_INFANTRY_1" }
+entity = { clone = "morrishgfx_CAVALRY_1" 		name = "SEV_CAVALRY_1"  }
+entity = { clone = "morrishgfx_INFANTRY_2"		name = "SEV_INFANTRY_2" }
+entity = { clone = "morrishgfx_CAVALRY_2" 		name = "SEV_CAVALRY_2"  }
+entity = { clone = "morrishgfx_INFANTRY_3"		name = "SEV_INFANTRY_3" }
+entity = { clone = "morrishgfx_CAVALRY_3" 		name = "SEV_CAVALRY_3"  }
+entity = { clone = "morrishgfx_INFANTRY_4"		name = "SEV_INFANTRY_4" }
+entity = { clone = "morrishgfx_CAVALRY_4" 		name = "SEV_CAVALRY_4"  }
+
+# BDJ Badajoz 
+entity = { clone = "morrishgfx_INFANTRY_1"		name = "BDJ_INFANTRY_1" }
+entity = { clone = "morrishgfx_CAVALRY_1" 		name = "BDJ_CAVALRY_1"  }
+entity = { clone = "morrishgfx_INFANTRY_2"		name = "BDJ_INFANTRY_2" }
+entity = { clone = "morrishgfx_CAVALRY_2" 		name = "BDJ_CAVALRY_2"  }
+entity = { clone = "morrishgfx_INFANTRY_3"		name = "BDJ_INFANTRY_3" }
+entity = { clone = "morrishgfx_CAVALRY_3" 		name = "BDJ_CAVALRY_3"  }
+entity = { clone = "morrishgfx_INFANTRY_4"		name = "BDJ_INFANTRY_4" }
+entity = { clone = "morrishgfx_CAVALRY_4" 		name = "BDJ_CAVALRY_4"  }
+
+# BAJ Alentejo 
+entity = { clone = "morrishgfx_INFANTRY_1"		name = "BAJ_INFANTRY_1" }
+entity = { clone = "morrishgfx_CAVALRY_1" 		name = "BAJ_CAVALRY_1"  }
+entity = { clone = "morrishgfx_INFANTRY_2"		name = "BAJ_INFANTRY_2" }
+entity = { clone = "morrishgfx_CAVALRY_2" 		name = "BAJ_CAVALRY_2"  }
+entity = { clone = "morrishgfx_INFANTRY_3"		name = "BAJ_INFANTRY_3" }
+entity = { clone = "morrishgfx_CAVALRY_3" 		name = "BAJ_CAVALRY_3"  }
+entity = { clone = "morrishgfx_INFANTRY_4"		name = "BAJ_INFANTRY_4" }
+entity = { clone = "morrishgfx_CAVALRY_4" 		name = "BAJ_CAVALRY_4"  }
+
+##########################################################################
+#####                       		MOROCCAN                         #####
+##########################################################################
+
+# ANF Anfa
+entity = { clone = "morrishgfx_INFANTRY_1"		name = "ANF_INFANTRY_1" }
+entity = { clone = "morrishgfx_CAVALRY_1" 		name = "ANF_CAVALRY_1"  }
+entity = { clone = "morrishgfx_INFANTRY_2"		name = "ANF_INFANTRY_2" }
+entity = { clone = "morrishgfx_CAVALRY_2" 		name = "ANF_CAVALRY_2"  }
+entity = { clone = "morrishgfx_INFANTRY_3"		name = "ANF_INFANTRY_3" }
+entity = { clone = "morrishgfx_CAVALRY_3" 		name = "ANF_CAVALRY_3"  }
+entity = { clone = "morrishgfx_INFANTRY_4"		name = "ANF_INFANTRY_4" }
+entity = { clone = "morrishgfx_CAVALRY_4" 		name = "ANF_CAVALRY_4"  }
+
+# RBR Sale
+entity = { clone = "morrishgfx_INFANTRY_1"		name = "RBR_INFANTRY_1" }
+entity = { clone = "morrishgfx_CAVALRY_1" 		name = "RBR_CAVALRY_1"  }
+entity = { clone = "morrishgfx_INFANTRY_2"		name = "RBR_INFANTRY_2" }
+entity = { clone = "morrishgfx_CAVALRY_2" 		name = "RBR_CAVALRY_2"  }
+entity = { clone = "morrishgfx_INFANTRY_3"		name = "RBR_INFANTRY_3" }
+entity = { clone = "morrishgfx_CAVALRY_3" 		name = "RBR_CAVALRY_3"  }
+entity = { clone = "morrishgfx_INFANTRY_4"		name = "RBR_INFANTRY_4" }
+entity = { clone = "morrishgfx_CAVALRY_4" 		name = "RBR_CAVALRY_4"  }
+
+##########################################################################
+#####                       		ALGERIAN                         #####
+##########################################################################
+
+## Algerian ##
+# TLC Tlemcen 
+entity = { clone = "algeriangfx_INFANTRY_1"		name = "TLC_INFANTRY_1" }
+entity = { clone = "algeriangfx_CAVALRY_1" 		name = "TLC_CAVALRY_1"  }
+entity = { clone = "algeriangfx_INFANTRY_2"		name = "TLC_INFANTRY_2" }
+entity = { clone = "algeriangfx_CAVALRY_2" 		name = "TLC_CAVALRY_2"  }
+entity = { clone = "algeriangfx_INFANTRY_3"		name = "TLC_INFANTRY_3" }
+entity = { clone = "algeriangfx_CAVALRY_3" 		name = "TLC_CAVALRY_3"  }
+entity = { clone = "algeriangfx_INFANTRY_4"		name = "TLC_INFANTRY_4" }
+entity = { clone = "algeriangfx_CAVALRY_4" 		name = "TLC_CAVALRY_4"  }
+
+# KBA Kabylia
+entity = { clone = "algeriangfx_INFANTRY_1"		name = "KBA_INFANTRY_1" }
+entity = { clone = "algeriangfx_CAVALRY_1" 		name = "KBA_CAVALRY_1"  }
+entity = { clone = "algeriangfx_INFANTRY_2"		name = "KBA_INFANTRY_2" }
+entity = { clone = "algeriangfx_CAVALRY_2" 		name = "KBA_CAVALRY_2"  }
+entity = { clone = "algeriangfx_INFANTRY_3"		name = "KBA_INFANTRY_3" }
+entity = { clone = "algeriangfx_CAVALRY_3" 		name = "KBA_CAVALRY_3"  }
+entity = { clone = "algeriangfx_INFANTRY_4"		name = "KBA_INFANTRY_4" }
+entity = { clone = "algeriangfx_CAVALRY_4" 		name = "KBA_CAVALRY_4"  }
+
+# MZB Mzab
+entity = { clone = "algeriangfx_INFANTRY_1"		name = "MZB_INFANTRY_1" }
+entity = { clone = "algeriangfx_CAVALRY_1" 		name = "MZB_CAVALRY_1"  }
+entity = { clone = "algeriangfx_INFANTRY_2"		name = "MZB_INFANTRY_2" }
+entity = { clone = "algeriangfx_CAVALRY_2" 		name = "MZB_CAVALRY_2"  }
+entity = { clone = "algeriangfx_INFANTRY_3"		name = "MZB_INFANTRY_3" }
+entity = { clone = "algeriangfx_CAVALRY_3" 		name = "MZB_CAVALRY_3"  }
+entity = { clone = "algeriangfx_INFANTRY_4"		name = "MZB_INFANTRY_4" }
+entity = { clone = "algeriangfx_CAVALRY_4" 		name = "MZB_CAVALRY_4"  }
+
+##Berbers
+
+# RIF Riffian
+entity = { clone = "algeriangfx_INFANTRY_1"		name = "RIF_INFANTRY_1" }
+entity = { clone = "algeriangfx_CAVALRY_1" 		name = "RIF_CAVALRY_1"  }
+entity = { clone = "algeriangfx_INFANTRY_2"		name = "RIF_INFANTRY_2" }
+entity = { clone = "algeriangfx_CAVALRY_2" 		name = "RIF_CAVALRY_2"  }
+entity = { clone = "algeriangfx_INFANTRY_3"		name = "RIF_INFANTRY_3" }
+entity = { clone = "algeriangfx_CAVALRY_3" 		name = "RIF_CAVALRY_3"  }
+entity = { clone = "algeriangfx_INFANTRY_4"		name = "RIF_INFANTRY_4" }
+entity = { clone = "algeriangfx_CAVALRY_4" 		name = "RIF_CAVALRY_4"  }
+
+# REG Masmuda
+entity = { clone = "algeriangfx_INFANTRY_1"		name = "REG_INFANTRY_1" }
+entity = { clone = "algeriangfx_CAVALRY_1" 		name = "REG_CAVALRY_1"  }
+entity = { clone = "algeriangfx_INFANTRY_2"		name = "REG_INFANTRY_2" }
+entity = { clone = "algeriangfx_CAVALRY_2" 		name = "REG_CAVALRY_2"  }
+entity = { clone = "algeriangfx_INFANTRY_3"		name = "REG_INFANTRY_3" }
+entity = { clone = "algeriangfx_CAVALRY_3" 		name = "REG_CAVALRY_3"  }
+entity = { clone = "algeriangfx_INFANTRY_4"		name = "REG_INFANTRY_4" }
+entity = { clone = "algeriangfx_CAVALRY_4" 		name = "REG_CAVALRY_4"  }
+
+# SOS Sus
+entity = { clone = "algeriangfx_INFANTRY_1"		name = "SOS_INFANTRY_1" }
+entity = { clone = "algeriangfx_CAVALRY_1" 		name = "SOS_CAVALRY_1"  }
+entity = { clone = "algeriangfx_INFANTRY_2"		name = "SOS_INFANTRY_2" }
+entity = { clone = "algeriangfx_CAVALRY_2" 		name = "SOS_CAVALRY_2"  }
+entity = { clone = "algeriangfx_INFANTRY_3"		name = "SOS_INFANTRY_3" }
+entity = { clone = "algeriangfx_CAVALRY_3" 		name = "SOS_CAVALRY_3"  }
+entity = { clone = "algeriangfx_INFANTRY_4"		name = "SOS_INFANTRY_4" }
+entity = { clone = "algeriangfx_CAVALRY_4" 		name = "SOS_CAVALRY_4"  }
+
+
+##########################################################################
+#####                       		EGYPTIAN                         #####
+##########################################################################
+
+# EGY Egypt 
+entity = { clone = "egyptiangfx_INFANTRY_1"		name = "EGY_INFANTRY_1" }
+entity = { clone = "egyptiangfx_CAVALRY_1" 		name = "EGY_CAVALRY_1"  }
+entity = { clone = "egyptiangfx_INFANTRY_2"		name = "EGY_INFANTRY_2" }
+entity = { clone = "egyptiangfx_CAVALRY_2" 		name = "EGY_CAVALRY_2"  }
+entity = { clone = "egyptiangfx_INFANTRY_3"		name = "EGY_INFANTRY_3" }
+entity = { clone = "egyptiangfx_CAVALRY_3" 		name = "EGY_CAVALRY_3"  }
+entity = { clone = "egyptiangfx_INFANTRY_4"		name = "EGY_INFANTRY_4" }
+entity = { clone = "egyptiangfx_CAVALRY_4" 		name = "EGY_CAVALRY_4"  }
+
+# PAX Alexandira 
+entity = { clone = "CIR_INFANTRY_1"				name = "PAX_INFANTRY_1" }
+entity = { clone = "CIR_CAVALRY_1" 				name = "PAX_CAVALRY_1"  }
+entity = { clone = "CIR_INFANTRY_2"				name = "PAX_INFANTRY_2" }
+entity = { clone = "CIR_CAVALRY_2" 				name = "PAX_CAVALRY_2"  }
+entity = { clone = "egyptiangfx_INFANTRY_3"		name = "PAX_INFANTRY_3" }
+entity = { clone = "egyptiangfx_CAVALRY_3" 		name = "PAX_CAVALRY_3"  }
+entity = { clone = "egyptiangfx_INFANTRY_4"		name = "PAX_INFANTRY_4" }
+entity = { clone = "egyptiangfx_CAVALRY_4" 		name = "PAX_CAVALRY_4"  }
+
+# SAI Sai'idi 
+entity = { clone = "taureggfx_INFANTRY_1"		name = "SAI_INFANTRY_1" }
+entity = { clone = "taureggfx_CAVALRY_1" 		name = "SAI_CAVALRY_1"  }
+entity = { clone = "taureggfx_INFANTRY_2"		name = "SAI_INFANTRY_2" }
+entity = { clone = "taureggfx_CAVALRY_2" 		name = "SAI_CAVALRY_2"  }
+entity = { clone = "egyptiangfx_INFANTRY_3"		name = "SAI_INFANTRY_3" }
+entity = { clone = "egyptiangfx_CAVALRY_3" 		name = "SAI_CAVALRY_3"  }
+entity = { clone = "egyptiangfx_INFANTRY_4"		name = "SAI_INFANTRY_4" }
+entity = { clone = "egyptiangfx_CAVALRY_4" 		name = "SAI_CAVALRY_4"  }
+
+# CYR Cyrenaica 
+entity = { clone = "taureggfx_INFANTRY_1"		name = "CYR_INFANTRY_1" }
+entity = { clone = "taureggfx_CAVALRY_1" 		name = "CYR_CAVALRY_1"  }
+entity = { clone = "taureggfx_INFANTRY_2"		name = "CYR_INFANTRY_2" }
+entity = { clone = "taureggfx_CAVALRY_2" 		name = "CYR_CAVALRY_2"  }
+entity = { clone = "egyptiangfx_INFANTRY_3"		name = "CYR_INFANTRY_3" }
+entity = { clone = "egyptiangfx_CAVALRY_3" 		name = "CYR_CAVALRY_3"  }
+entity = { clone = "egyptiangfx_INFANTRY_4"		name = "CYR_INFANTRY_4" }
+entity = { clone = "egyptiangfx_CAVALRY_4" 		name = "CYR_CAVALRY_4"  }
+
+## Tunisian ##
+# FAF Fafara 
+entity = { clone = "taureggfx_INFANTRY_1"		name = "FAF_INFANTRY_1" }
+entity = { clone = "taureggfx_CAVALRY_1" 		name = "FAF_CAVALRY_1"  }
+entity = { clone = "taureggfx_INFANTRY_2"		name = "FAF_INFANTRY_2" }
+entity = { clone = "taureggfx_CAVALRY_2" 		name = "FAF_CAVALRY_2"  }
+entity = { clone = "taureggfx_INFANTRY_3"		name = "FAF_INFANTRY_3" }
+entity = { clone = "taureggfx_CAVALRY_3" 		name = "FAF_CAVALRY_3"  }
+entity = { clone = "taureggfx_INFANTRY_4"		name = "FAF_INFANTRY_4" }
+entity = { clone = "taureggfx_CAVALRY_4" 		name = "FAF_CAVALRY_4"  }

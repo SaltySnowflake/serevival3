@@ -1,0 +1,16 @@
+government = aboriginal_native_council
+government_rank = 1
+technology_group = aboriginal
+religion = tjukurpa
+primary_culture = aboriginal
+capital = 1089 # Wiradjuri
+
+1444.1.1 = {
+	monarch = {
+		name = "Wirad"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	
+}

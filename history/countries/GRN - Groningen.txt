@@ -1,0 +1,21 @@
+government = imperial_city
+government_rank = 1
+primary_culture = frisian
+religion = catholic
+technology_group = western
+capital = 3057	# Groningen
+fixed_capital = 3057
+
+
+1399.1.1 = {
+	monarch = {
+		name = "Stadstaat"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+1444.11.06 = { government = oligarchic_republic }
+1444.11.11 = { government = imperial_city }

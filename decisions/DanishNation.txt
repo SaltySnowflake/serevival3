@@ -1,0 +1,79 @@
+country_decisions = {
+
+	danish_nation = {
+		major = yes
+		potential = {
+			primary_culture = danish
+			capital_scope = { 
+				OR = {
+					area = jutland_area
+					area = denmark_area
+				}
+			}
+			NOT = { exists = DAN }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = SCA }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 12
+			owns_core_province = 14
+			owns_core_province = 15
+			owns_core_province = 1983
+			owns_core_province = 1984
+			owns_core_province = 4142
+			owns_core_province = 4149
+			OR = {
+				owns_core_province = 6
+				owns_core_province = 3134
+			}
+		}
+		effect = {
+			change_tag = DAN
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 6		# Skanee
+						province_id = 26	# Halland
+						province_id = 1981	# Bornholm
+						province_id = 1982	# Blekinge
+						province_id = 3134	# Apenrade
+						province_id = 3135	# Nordfriesland
+						province_id = 13	# Schleswig
+					}
+					NOT = { is_core = DAN }
+				}
+				add_permanent_claim = DAN
+			}
+			if = {
+				limit = { NOT = { has_idea_group = DAN_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

@@ -1,0 +1,180 @@
+iranian	= {
+	graphical_culture = muslimgfx
+	
+	alan = {
+		primary = ALA
+		male_names = {
+			Ælbeg Æmbalan Aghsartan Alatey Akhsar Anbal Anbazuk Aravat Arsen Askhkadar Ashot Aslan Aspar Athom Balambar Balsag Barlah Bæqætar Basil Bazuk Beler Ber Biræg Boz-Uruz Buürgur Buriberdi
+			Burikhan Candak Chelakhsartag Davit Djadaron Durgulel Dzæræs Gætæg Georgy Girgon Gokhar Gubaz Guram Hasqar Huddan Istor Itaz Iveri Kandak Kandz Kavtia Kaur
+			Khankhusy Khætag Konstantin Kubal Kuddana Kul Kuluk Lak Levan Pulad Respendial Rosmag Safrak Sakhir Sangipan Saros Sathis Savkudz Soslan Suarn Syrdon Taymuraz Taus Totraz Urdure Uruzma Uturku Yasynya Zaur
+		}
+		female_names = {
+			Adadza Alda Altun Ana Atsyrukhs Baia Bedisa Borena Btsenon Burudukan Duda Elene Eliso Gergana Gulchara Guranduht Kera Keratsa Ketevan Koser
+			Lamara Lashin Lela Mariami Natia Nino Rusudan Sanatha Satinik Shatana Shorena Shukhia Tamari Tinatini Tsiala Vardo Vedokha Yeran
+		}
+	}
+}
+
+byzantine = {
+	graphical_culture = easterngfx
+
+	armenian = {
+		primary = ARM
+		dynasty_names = { 
+			Bagratuni Rubenid Pahlavuni
+			Tumanishvili Abamelik Amatuni "Argutinsky-Dolgorukov" Bebutov "Hasan-Jalalyan" Khojaminasishvili
+			Melikov Orbelid 
+			#CK2
+			"Bagdazarian" "Melik-Avanyan" 
+		}
+		male_names = {
+			David Mkhitar Ashot Gagik Smbat Abbas Hovhannes Smbat Vagram Musegh Sahak Tachar Arakel Ari Armen 
+			Arshavir Avedis Badouagan Bedros Berjouhi Boghos Ghoukas Hagop Haig Hovhannes Hovsep Jirair Kapriel 
+			Kevork Khajag Krikor Levon Movses Nairi Sevan Taniel Vahan Zadig Zoravan
+			Abas Abirad Aboughamr Aboulgharib Aleksandr Alexander Artashes Artashir Ardeshir Artavazd Arsen 
+			Arshak Ashot Ashot Athom Atrnerseh Atrnerseh Avag Avedis Bagour Bagour Bagrat Bedros Peter 
+			Boghos Paul Davit David Eshkhan Gagik Gagik Gevorg George Karayan
+			Gosdantin Constantine Grigor Gregory Gurgen Lupo Hagop Hamazasp Hethum Hovhannes John Hovsep 
+			Joseph Ishkhan Ishkhan Ivane Kapriel Gabriel Khachik Khosrov Khosrau Levon Leo Malkhas Malkhas 
+			Mamigon Manuel Manuel Margos Marcus Melek Mihrdat Mithridates Mikayel Michael Mleh Mushegh 
+			Mushel Mzhezh Nerseh Narses Oshin Roupen Reuben Sahag Isaac Sarkis Sergius Sevag Shahanshah 
+		}
+		female_names = {
+			Aghavni Alitz Alice Almasd Anahid Anna Anna Anoush Arda Arevig Arin Baydzar Berjanoush Berjouhi 
+			Datevig Dalita Eliz Eloise Gadar Gorandoukht Gorandukht Hasmig Houri Hranoush Hripsimeh 		
+			Keghanoush Keran Khorishah Kohar Latavri Leyli Lousin Mara Margarid Margaret Maria Maria 
+			Mariyam Mariam Meghranoush Nane Nazani Ovsanna Pounig Razmouhi Rita Satenik Satinik Seta Siran 
+			Sirvart Srpouhi Shoushanig Takouhi Tamar Tamar Vartanoush Vartouhi Vosgi Yeva Zabel Elizabeth 
+		}
+	}
+}
+turkish_g = {
+	graphical_culture = muslimgfx
+
+	turkish = {
+		primary = TUR
+		dynasty_names = {
+			"Osmanoglu" "Karamanoglu" "Menteseoglu" "Ramazanoglu" "Saruhanoglu"
+			"Dulkadiroglu" "Candaroglu" "Germiyanoglu" "Aydinoglu" "Eretnaoglu"
+			"Artukoglu" "Mutahhartenoglu" "Tekeoglu" "Hamidoglu" "Tacettinoglu"
+			"Oguzoglu" "Haciemiroglu" "Kubatoglu" "Bafraoglu" "Alaiyeoglu"
+		}
+		male_names = {
+			Mehmet Mustafa Murat Ahmet Selim Osman Mahmut Süleyman Bayezid Orhan Abdulaziz Abdülhamit Ibrahim 
+			Abdülmecit Abdullah Cem Cihangir Alaattin Isa Musa Ömer Seyfettin Yakup Yusuf Giyasettin Numan 
+			Ali Davut Hasan Hüseyin Ishak Kamer Kasim Korkut Emin Iskender Halil Sait Hamit Ertugrul Izzettin 
+			Nizamettin Sinan Ferhat Salih Ismail Cüneyt Bahadir Hizir Harun Cemal Inal Celalettin Ilyas 
+			Dursun Ramazan Recep Abdulrahman Hayrettin
+			Çagri Çaka Afsin Ahmet Aksonqor Alaeddin Ali Alkan "Alp Arslan" "Alp Yurek" Alptigin Artuk Ayaz 
+			Aydin Aydogan Aydogdu Aytekin Böru Bulend Bahadir Balaban Basbuga Batuhan Baturay Baybars 
+			Bayezid Baytas Belek Berkan Berkiyaruk Bozan Bugra Burak Cuneyd Dundar Danismend Davud David 
+			Demir Dogan Dogukan Dukak Erdem Ertan Ertekin Ertugrul Gunduz Hasan Hasan Hizir Ibrahim Ilgazi 
+			Inal Iskender Alexander Kurboga Kaikaus Kaikhusraw Kaiqobad Kara Karatay Kasim Kaya Kaytun 
+			Kemal Kiliç Korkut Kutalmis Kutay Kutlug Mursel Mahmud Mehmed Meliksah Mengucek Mesud Murad 
+			Mustafa Orhan Osman Porsuk Rustem Ramazan Ridvan Söbuk Sökmen Sönmez Suleyman Saim Saltuk 
+			Saruca Savtekin Savur Sehinsah Selçuk Selim Sencer Sinan Tanrivermis Tekin Timurtas Togay 
+			Togtekin Toktamis Tolun Toruntay Tugrul Tunga Turgut Turhan Tutus Uluç Umur Yakut Yaman Yinal 
+			Yunus
+		}
+		female_names = {
+			Çiçek Çilen Çiltanesi Özgul Özlem Akgul Asli Aslihan Ayasun Ayla Ayse Ayten Azize Bahar Banu 
+			Bozçin Canan Ceylan Dunya Dilber Dilek Emine Esin Fatma Firuze Gulçiçek Gulay Gulbahar Gulfem 
+			Gulsum Gumus Gunduz Gundes Gunes Hatice Hayat Huriye Ilkay Ilknur Ipek Ipekel Irge Karacik Lale 
+			Leyla Mala Mansure Merve Mutlu Nagihan Nergis Neslihan Nilufer Nur Peksen Terkhen Samur Sarica 
+			Sati Sehnaz Serap Serife Sevilay Sevindik Sibel Sibylla Sirin Sirma Songul Sumru Tekçe Tura 
+			Umay Usunbike Vahide Yasar Yeldem Yildiz Zehra Zuhal Hatice Safiye Zeynep Hürrem Mihrimah Nurbanu 
+			Handan Alime Kösem Hüma 
+		}
+	}
+	turkmeni = {
+		primary = KHI
+		dynasty_names = {
+			"Arabshahid" "Qungrat" "Bayan Arslan" "Mongke Cheren" "Mongke Bayar" "Suren Chinua" "Oyugun Nasan"
+			"Bora Tolui" Qadancher Batulun Batutai Bokejin Arighqan Burilgiteni
+			Bayarnai Subegene Tegusdai Yekedei
+		}
+		male_names = {
+			Abdul-Aziz Abdul-Karim Abdul-Mumin Abdul-Rahim Abdulla Abu Said Abu'l-Feiz Abu'l-Ghazi Abu'l-Khayr 
+			Abu'l-Mansur Agatay Alim Anusha Arab Muhammad Avanesh Bahadur Bakht Baqi Muhammad Budjuga Bureke 
+			Djuchi Dost Habash Hadji Hadji Muhammad Hassan Quli Haydar Imam Quli Ilbars Irdana Isfandiyar Isim 
+			Janibek Kal Khudayar Khudaydad Kochkunju Muhammad Muhammad Amin Muhammad Hakim Muhammad Rahim Nadir 
+			Muhammad Narbuta Navruz Ahmad Niyaz Pir Muhammad Sanjar Sevinch Shadi Shahmurad Shahrukh Shaykh 
+			Subhan Quli Sufyan Suleyman Tahir Timur Ubaydulla Umar Vali Vali Muhammad Yadgar Daniyal Haidar 
+			Iskandar
+		}
+		female_names = {
+			Hooda Malaika Munira Rabiya Rafiqa Ksyusha Sabina Zarina Hatyra Gulnaza Selbi Aziza Jeren Zeynab Myahri
+		}
+	}
+	azerbaijani = {
+		primary = SRV
+		dynasty_names = {
+			"Qara Qoyunlu" "Aq Qoyunlu" "Safavid" "Shirvanshah" Javanshir Chupanid Ziyadoghlu Chalabi
+			Talysh "Haji Chalabi"
+		}
+		male_names = {
+			Ibrahim Muhammad Ibrahim Farrukhsiyar Khalil Bahram Farrukhsiyar Ghazi Farrukhsiyar Mahmud Ghazi Eldar
+		}
+		female_names = {
+			Malahat Amsha Asiya Faghira Habiba Hanifa Jahaira Kamala Layla Maryam Nafisa Nyawela Parand 
+			Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah Adela Adiba Adilah Adilia Adiva Adjan Aeesha 
+			Adila Ikram            
+		}
+	}
+}
+
+turko_semitic = {
+
+	syriac_culture = {
+		primary = LEB			#Imperfect, but calling the Lebanon tag a Syriac tag, for now. May come back later with a proper Christian -Marionite or ER Orthodox- tag and make lebanon a druze tag, or something
+		dynasty_names = {
+			"Mirdasid" "Maanid" "al-Shihab"  Yakubid Hassanid
+			Katkhuda Abaza Qasimiyya Qitas al-Qazdughli 
+		}
+		male_names = {
+			al-Nasr al-Mu'azzam al-Salih al-'Adil al-Kamil al-Ashraf al-Afdal Tadj Mujir ud-Din Djamal ud-Din 
+			ud-Din Shams Saif 'Abbas 'Abd al-Rahman Anwar Atuf Bakr Fahd Hakim Harun Hikmat Hisham Husayn 
+			Jamaal Karim Malîk Mirza Muhammad Rashîd Rusul Shimun Tarîq Usama Yasir Yusuf Zaid Zîyad Isma'il 	
+			Jafar Shihab
+			Aaron Aaron Abanoub Abderahman Abderrahman Abdul-Aziz Abdul-Haq Abdul-Madjid Abdul-Salaam Abdullah 
+			Abdullah Abianos Abijah Abisalom Ablarion Abraam Abraham Abu-Bakr Abu-Bakr Adnan Agathon Agathos 
+			Agathonikos Agathonikos Agathos Agathos Ahmad Ahmad Akbar Akbar Alam Ali Ali Amr Androus Andrew 	
+			Anthinos Anthimos Arsenios Arsenios Ashraf Ashraf Asim Athanasios Athanasius Badr Bashir Biktor 
+			Victor Binyamin Benjamin Bishoi Bishara Boutros Peter Danyal Daniel Dawlat Da’oud David Ezra Ezra 
+			Farhan Firuz Gabri’el Gabriel Georgios George Ghiyasaddin Habil Abel Hakam Hakam Hammud Hanri Henry 
+			Haroun Aaron Hisham Hussayn Hussayn Ibrahim Abraham Ilyas Elijah Is'mail Ismail Izzaddin 
+			Jalaaladdin Jawdat Jerjer Gregory Kemaladdin Khalil Krystafer Christopher Latif Lot Lothair Malik 
+			Matta Matthew Mehtar Mikail Michael Mikhael Michael Milad Milad Mina Menas Muammar Muhammad 
+			Muhammad Mukhtar Murad Murshid Musa Moses Muzaffaraddin Nabil Nasir Nassib Nuraddin Pamin Qadir 
+			Ra'uf Rafiq Ridwan Sabah Salim Sha'ban Sharif Suhail Tadros Theodore Tajaddin Tayyib Touma Thomas 	
+			Usama Walid Yahya Yahya Yared Yassir Youkhanna John Youssef Joseph Zaia Isaiah Zakariyah Zachary
+			Abdul-Azeem Abdul-Hamid Abdul-Lateef Abdul-Razzaq Abdul-Wahad Abdullah Abdullah Adhid Adil Akab 
+			Ala'i Ali Ali Amir Ashraf Aziz Bashar Boutros Peter Da'ud David Faisal
+			Fayiz Ghazi Hakam Hakam Hamdan Hashmaddin Hussayn Hussayn Ibrahim Abraham Imamaddin Isa Is'mail 
+			Ismail Ismat Jahan Jamil Kamran Khalid Khudayar Majid Mas'ud
+			Muaddam Muhammad Muhammad Muhsin Mukhtar Murad Musa Moses Muzaffar Muzaffaraddin Nasraddin Nuraddin 
+			Nuri Radhi Rasul Sa'ud Salahaddin Seyfullah Sharaf
+			Sirhan Taimur Tawfiq Umaya Wahid Yahya Yahya Ya'qub Jacob Yasar Youkhanna John Zahir
+		}
+		female_names = {
+			Ihsan Marwa Aisha Aziza Duha Farida Golbahar Gulnar Gulnaz Gulpari Hafsa Hasti Huma Ibtisam Jalila Kamala 
+			Karima Khandan Khaterah Khatira Kinah Lala Madiha Mahdokht Nazy Neelab Negar Niki Nikoo Noushin Rabiya
+			Mahsa Mahwash Marwa Mastana Mehri Mina Minoo Munawwar Muzhdah Nahal Najela Nasiba Nastaran Nazaneen 
+			Rajiya Sadiya Salma Sitara Thana Zahra Zahra Zuhayra
+		}
+	}
+	saidi = {
+		primary = SAI
+		male_names = {
+			Muhammad Ahmad Qânsawh Tûmân Bay Inâl Khusqadam 'Abd al-'Aziz al-Musta'in al-Nasr Faraj Barsbay 
+			Qâyit Bay Shaik al-Mahmudi Timurbughâ 'Uthman Yalbay Jânbulât Yûsuf Barqûq 'Alî Baybars Hâjjî 
+			Bakr al-Hasan Isma'îl Kûjûk Sâlih 'Abd al-Malik Basir Fadl Ghayth Hatim Ilyas Jabir Nadim Nizar 
+			Sayyid Yunus Jaqmaq Qasim Sa'di Sha'bân Abû 
+		}
+		female_names = {
+			Shahira Yusra Asma Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda Ibtisam 
+			Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
+			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
+		}
+	}
+}

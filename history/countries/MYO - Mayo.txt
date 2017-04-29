@@ -1,0 +1,56 @@
+government = irish_clann
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 3014	# Mayo
+fixed_capital = 3014
+
+1402.1.1 = {
+	monarch = {
+		name = "Walter Mac Thomas"
+		dynasty = "Burke"
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+1412.1.1 = {
+	heir = {
+		name = "Edmund"
+		monarch_name = "Edmund"
+		dynasty = "Burke"
+		birth_date = 1412.1.1
+		death_date = 1458.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+		
+
+1440.1.1 = {
+	monarch = {
+		name = "Edmund"
+		dynasty = "Burke"
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+1440.1.1 = {
+	heir = {
+		name = "Thomas Og"
+		monarch_name = "Thomas Og"
+		dynasty = "Burke"
+		birth_date = 1440.1.1
+		death_date = 1460.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

@@ -1,0 +1,69 @@
+#996 - Innu
+
+culture = innu
+religion = totemism
+capital = "Pakua Shipi"
+trade_goods = fish
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = NKP
+	controller = NKP
+	add_core = NKP
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = NKP
+	controller = NKP
+	add_core = NKP
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = NKP
+	controller = NKP
+	add_core = NKP
+	is_city = yes
+}
+
+1534.6.1 = { discovered_by = FRA } # Jacques Cartiers first voyage
+
+1610.1.1 = { discovered_by = ENG }
+
+1704.1.1 = {
+	remove_core = NKP
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	capital = "Blanc-Sablon"
+	culture = cosmopolitan_french
+	religion = catholic
+}
+
+1760.1.1 = { controller = GBR } # The government of New France capitulate at Montreal
+
+1763.2.10 = {
+	owner = GBR
+	add_core = GBR
+	remove_core = FRA
+	capital = "Harrington Harbour"
+}# Treaty of Paris - ceded to the British

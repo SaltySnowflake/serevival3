@@ -1,0 +1,81 @@
+country_decisions = {
+
+	sicilian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = NAP
+				tag = SIC
+				tag = BRX
+				tag = GRI
+			}
+			NOT = { exists = TSI }
+		}
+		allow = {
+			owns_core_province = 120
+			owns_core_province = 121
+			owns_core_province = 122
+			owns_core_province = 123
+			owns_core_province = 124
+			owns_core_province = 125
+			owns_core_province = 126
+			owns_core_province = 1933
+			owns_core_province = 1934
+			owns_core_province = 2982
+			owns_core_province = 2983
+			owns_core_province = 2984
+			owns_core_province = 2985
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			if = {
+				limit = { tag = GRI }
+				change_culture = neapolitan
+			}
+			change_tag = TSI
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 121
+			121 = {
+			 	add_base_tax = 1
+				add_base_production = 1
+			 	add_base_manpower = 1
+				if = {
+					limit = { NOT = { culture = ROOT } }
+					change_culture = ROOT
+				}
+			}
+			italy_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TSI
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+	
+}

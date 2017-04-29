@@ -1,0 +1,93 @@
+war_of_the_burning_cross = {
+	potential = {
+		normal_or_historical_nations = yes
+		is_subject = no
+		uses_doom = no
+		has_country_flag = war_of_the_burning_cross
+	}
+
+
+	can_start = {
+		always = yes
+	}
+	
+	
+	can_stop = {
+		NOT = { has_country_flag = war_of_the_burning_cross }
+	}
+
+	
+	
+	progress = {
+		modifier = {
+			factor = 100
+			NOT = { is_pagan_trigger = yes }
+		}
+	}
+
+
+
+
+	
+	can_end = {
+		custom_trigger_tooltip = {
+			tooltip = num_religion_pagans_8
+			OR = {
+				num_of_religion = { religion = norse_pagan_reformed value = 0.8 }
+				num_of_religion = { religion = gaelic_pagan value = 0.8 }
+				num_of_religion = { religion = finnish_pagan_reformed value = 0.8 }
+				num_of_religion = { religion = slavic_pagan_reformed value = 0.8 }
+				num_of_religion = { religion = baltic_pagan_reformed value = 0.8 }
+				num_of_religion = { religion = tengri_pagan_reformed value = 0.8 }
+				num_of_religion = { religion = hellenic value = 0.8 }
+				num_of_religion = { religion = zoroastrian value = 0.8 }
+				num_of_religion = { religion = germanic value = 0.8 }
+				num_of_religion = { religion = egyptian value = 0.8 }
+				num_of_religion = { religion = south_arabian value = 0.8 }
+				num_of_religion = { religion = amanaiism value = 0.8 }
+			}
+		}
+	}
+	
+
+
+
+	modifier = {
+		global_unrest = 5
+	}	
+	
+	
+	on_start = pagan_uprising.6
+	on_end = war_of_the_burning_cross.14
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1000 = 0
+			100 = war_of_the_burning_cross.1
+			
+			100 = war_of_the_burning_cross.2
+			100 = war_of_the_burning_cross.2a
+			100 = war_of_the_burning_cross.2b
+			
+			100 = war_of_the_burning_cross.3a
+			100 = war_of_the_burning_cross.3b
+			100 = war_of_the_burning_cross.3c
+			
+			100 = war_of_the_burning_cross.4a
+			100 = war_of_the_burning_cross.4b
+			100 = war_of_the_burning_cross.4c
+			
+			100 = war_of_the_burning_cross.5
+			100 = war_of_the_burning_cross.6
+			100 = war_of_the_burning_cross.7
+			100 = war_of_the_burning_cross.8
+			100 = war_of_the_burning_cross.8a
+			# 9 - 11 One Time
+			# 12 - 13 Vassal Issues
+			# 14 - 15 End
+		}
+	}
+}
+

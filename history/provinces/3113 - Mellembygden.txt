@@ -1,0 +1,52 @@
+#3113 - Mellembygden
+#Region - Scandinavia
+#Area - Greenland
+
+culture = kalaallisut
+religion = angakkunngurniq
+capital = "Paamiut"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 2
+native_hostileness = 9
+
+1444.11.1 = { 
+	add_local_autonomy = 0
+	discovered_by = ICE
+	discovered_by = GNL
+	discovered_by = THL
+	owner = GNL
+	controller = GNL
+	add_core = GNL
+	is_city = yes
+	trade_goods = ivory
+	culture = greenlander
+	religion = norse_pagan_reformed
+}
+
+1444.11.11 = {
+	owner = XXX
+	controller = XXX
+	remove_core = GNL
+	is_city = no
+	trade_goods = unknown
+	culture = kalaallisut
+	religion = angakkunngurniq
+}
+
+1720.1.1 = { discovered_by = DAN }
+
+1721.1.1 = {
+	owner = DAN
+	controller = DAN
+	culture = danish
+	religion = protestant
+	is_city = yes
+	capital = "Frederikshåb"
+}
+1746.1.1 = { add_core = DAN }
+1800.1.1 = { trade_goods = fur }

@@ -1,0 +1,47 @@
+#3065 - Lille
+#Region - Low Countries
+#Area - Flanders
+
+owner = FLA
+controller = FLA
+add_core = FLA
+is_city = yes
+capital = "Rijsel"
+culture = wallonian
+religion = catholic
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = linen
+base_manpower = 3
+fort_15th = yes
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.1 = { add_local_autonomy = -5 }
+1444.11.11 = { add_local_autonomy = 5 }
+
+1477.1.5 = {owner = NED controller = NED add_core = NED }
+1519.1.12 = { owner = SPA controller = SPA add_core = SPA } # Charles V gets total control over his Burgundian inheritance
+1548.6.26 = { hre = yes } # Flanders incorporated into the Holy Roman Empire
+1553.1.1 = { fort_15th = no fort_16th = yes }
+1600.7.2 = { controller = NED } # Maurice of Nassau beats the Spanish at Nieuwpoort, but has to retreat soon after
+1604.1.1 = { controller = SPA } # Spinola retakes Ostend and most of Flanders
+1648.1.30 = { remove_core = NED } # Peace of Münster/Westphalia
+1665.9.17 = { add_claim = FRA } # Louis XIV's father-in-law, Philip IV of Spain, dies
+1667.8.19 = { 
+	owner = FRA
+	controller = FRA
+	remove_claim = FRA
+	add_core = FRA
+	remove_core = SPA
+	capital = "Lille"
+} # Captured by Louis XIV
+1671.1.1 = { fort_16th = no fort_17th = yes }
+1708.6.1 = { controller = NED }
+1713.4.11 = { controller = FRA } # Treaty of Utrecht
+1750.1.1 = { fort_17th = no fort_18th = yes}
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

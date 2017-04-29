@@ -1,0 +1,17 @@
+#1092 - Bundjalung
+
+add_core = AB9
+owner = AB9
+controller = AB9
+culture = aboriginal
+religion = tjukurpa
+capital = "Bundjalung"
+is_city = yes
+trade_goods = livestock
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+discovered_by = aboriginal
+
+1770.1.1 = { discovered_by = GBR } # James Cook

@@ -1,0 +1,26 @@
+#Västerbotten-Ångermanland, from Sundsvall/Härnösand over Umeå to Torneå
+#Region - Scandinavia
+#Area - Norrland
+
+owner = SMI
+controller = SMI
+add_core = SMI
+culture = sapmi
+religion = finnish_pagan_reformed
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = lumber
+base_manpower = 1
+capital = "Umeå"
+is_city = yes
+
+discovered_by = western
+discovered_by = eastern
+
+1444.11.11 = { culture = swedish religion = catholic remove_core = SMI add_core = SWE owner = SWE add_local_autonomy = 0 }
+
+1527.6.1 = { religion = protestant}
+1650.1.1 = { trade_goods = naval_supplies }
+1809.3.24 = { controller = RUS } # Conquered by Barclay de Tolly
+1809.9.17 = { controller = SWE } # Treaty of Fredrikshamn

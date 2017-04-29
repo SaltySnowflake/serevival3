@@ -1,0 +1,16 @@
+government = aboriginal_native_council
+government_rank = 1
+primary_culture = aboriginal
+religion = tjukurpa
+technology_group = high_aboriginal
+capital = 1087	#Wurundjeri
+
+1444.1.1 = {
+	monarch = {
+		name = "Alinga Daii"
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+	
+}

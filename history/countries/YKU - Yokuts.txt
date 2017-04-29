@@ -1,0 +1,15 @@
+government = native_council
+primary_culture = yokuts
+religion = pohakantenna
+technology_group = north_american
+capital = 870 #Chinook
+
+1444.1.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

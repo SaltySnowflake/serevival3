@@ -1,0 +1,47 @@
+#2398 - Thaungdut
+
+owner = MYA
+controller = MYA
+culture = chin
+religion = satsana_phi
+capital = "Thaungdut"
+trade_goods = rice
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+is_city = yes
+add_core = MYA
+
+discovered_by = chinese
+discovered_by = indian
+
+1444.11.01 = { add_core = MLB remove_core = MYA owner = MLB add_local_autonomy = 0 }
+1444.11.11 = { add_core = MYA remove_core = MLB owner = MYA add_local_autonomy = 0 }
+
+1502.1.1 = {
+	owner = SST
+	controller = SST
+	add_core = SST
+	remove_core = MYA
+}
+1554.1.1 = { add_core = TAU }
+1559.1.1 = { controller = TAU }
+1563.4.1 = { owner = TAU }
+1599.1.1 = {
+	owner = SST
+	controller = SST
+}
+1605.1.1 = {
+	owner = TAU
+	controller = TAU
+}
+1752.1.1 = {
+	owner = SST
+	controller = SST
+}
+1754.1.1 = {
+	owner = TAU
+	controller = TAU
+}
+1760.1.1 = { discovered_by = GBR }

@@ -1,0 +1,546 @@
+namespace = shinto_deities
+
+# Bad Omens
+country_event = {
+	id = shinto_deities.1
+	title = shinto_deities.1.title
+	desc = shinto_deities.1.desc
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		OR = {
+			tag = JAP
+			tag = JWA
+		}
+		religion = shinto
+		NOT = { has_personal_deity = amaterasu }
+		government = monarchy
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {	# We must embrace Amaterasu as our divine protector
+		name = shinto_deities.1.a
+		change_personal_deity = amaterasu
+		add_legitimacy = 5
+		add_prestige = -10
+	}
+	
+	option = {	# It is our right to pick our deity
+		name = shinto_deities.1.b
+		add_legitimacy = -10
+		add_prestige = 5
+	}
+}
+
+# Ceremony of Shikinen Sengu
+country_event = {
+	id = shinto_deities.2
+	title = shinto_deities.2.title
+	desc = shinto_deities.2.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	trigger = {
+		religion = shinto
+		owns = 1030 # Owari
+		has_personal_deity = amaterasu
+		NOT = { has_country_modifier = shikinen_sengu_timer }
+		any_known_country = { 
+			NOT = { has_country_modifier = shikinen_sengu_timer }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {	# Make preperations for the ceremony
+		name = shinto_deities.2.a
+		add_years_of_income = -0.10
+		add_country_modifier = {
+			name = shikinen_sengu_ceremony
+			duration = 1825
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = shikinen_sengu_timer
+				duration = 73000
+				hidden = yes
+			}
+		}
+	}
+	
+	option = {	# We can not afford such expenses
+		name = shinto_deities.2.b
+		add_prestige = -10
+		hidden_effect = {
+			add_country_modifier = {
+				name = shikinen_sengu_timer
+				duration = 73000
+				hidden = yes
+			}
+		}
+	}
+}
+
+# Dispensing Amaterasu's Justice
+country_event = {
+	id = shinto_deities.3
+	title = shinto_deities.3.title
+	desc = shinto_deities.3.desc
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		NOT = { tag = JAP }
+		NOT = { tag = JWA }
+		religion = shinto
+		has_personal_deity = amaterasu
+		any_neighbor_country = {
+			NOT = { tag = JAP }
+			religion = shinto
+			has_personal_deity = tsukuyomi
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {	# The gods must fight their own wars
+		name = shinto_deities.3.a
+		add_prestige = -10
+	}
+	
+	option = {	# Amaterasu is our chosen, we must fight for her
+		name = shinto_deities.3.b
+		every_neighbor_country = {
+			limit = {
+				NOT = { tag = JAP }
+				religion = shinto
+				has_personal_deity = tsukuyomi
+			}
+			reverse_add_casus_belli = {
+				target = ROOT
+				type = cb_insult
+				months = 12
+			}
+		}
+	}
+}
+
+# Sightings of Doves
+country_event = {
+	id = shinto_deities.4
+	title = shinto_deities.4.title
+	desc = shinto_deities.4.desc
+	picture = DOVE_eventPicture
+
+	trigger = {
+		religion = shinto
+		has_personal_deity = hachiman
+		is_at_war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {	# This is an omen imploring us to war
+		name = shinto_deities.4.a
+		add_prestige = 10
+		every_rival_country = {
+			limit = {
+				NOT = { tag = JAP }
+			}
+			reverse_add_casus_belli = {
+				target = ROOT
+				type = cb_insult
+				months = 24
+			}
+		}
+	}
+	
+	option = {	# These are merely doves, they mean nothing
+		name = shinto_deities.4.b
+		add_legitimacy = 5
+		add_ruler_modifier = {
+			name = ignored_omen_of_war
+			duration = -1
+		}
+	}
+}
+
+# Samurai call for worship of Hachiman
+country_event = {
+	id = shinto_deities.5
+	title = shinto_deities.5.title
+	desc = shinto_deities.5.desc
+	picture = COURT_eventPicture
+
+	trigger = {
+		religion = shinto
+		NOT = { has_personal_deity = hachiman }
+		num_of_generals = 1
+		army_tradition = 50
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {	# Hachiman would indeed be suitable for our worship
+		name = shinto_deities.5.a
+		change_personal_deity = hachiman
+		add_ruler_modifier = {
+			name = support_of_the_samurai
+			duration = -1
+		}
+	}
+	
+	option = {	# Our [Root.Monarch.GetTitle] will choose the deity of [Root.Monarch.GetHerHis] house
+		name = shinto_deities.5.b
+		add_ruler_modifier = {
+			name = refused_the_samurai
+			duration = -1
+		}
+	}
+}
+
+# Hachiman Blesses our Armies
+country_event = {
+	id = shinto_deities.6
+	title = shinto_deities.6.title
+	desc = shinto_deities.6.desc
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		religion = shinto
+		has_personal_deity = hachiman
+		is_at_war = yes
+		war_score = 30
+		NOT = { has_ruler_modifier = blessings_of_hachiman }
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {	# Hachiman surely favours our [Root.Monarch.GetTitle]
+		name = shinto_deities.6.a
+		add_prestige = 5
+		add_ruler_modifier = {
+			name = blessings_of_hachiman
+			duration = -1
+		}
+	}
+}
+
+# Population Boom in [Root.GetName]
+province_event = {
+	id = shinto_deities.7
+	title = shinto_deities.7.title
+	desc = shinto_deities.7.desc
+	picture = FEAST_eventPicture
+
+	trigger = {
+		owner = { religion = shinto }
+		religion = shinto
+		NOT = { has_province_flag = had_population_boom }
+		owner = { has_personal_deity = oinari }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {	# More soldiers for the army
+		name = shinto_deities.7.a
+		add_base_manpower = 1
+		set_province_flag = had_population_boom
+	}
+}
+
+# Great Agricultural Yield
+country_event = {
+	id = shinto_deities.8
+	title = shinto_deities.8.title
+	desc = shinto_deities.8.desc
+	picture = FARMING_eventPicture
+
+	trigger = {
+		religion = shinto
+		has_personal_deity = oinari
+		NOT = { has_country_modifier = saved_extra_food }
+		NOT = { has_ruler_modifier = dispersed_extra_food }
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {	# Disperse the extra food to the needy
+		name = shinto_deities.8.a
+		add_years_of_income = -0.20
+		if = {
+			limit = { NOT = { stability = 0 } }
+			add_stability = 1
+		}
+		add_ruler_modifier = {
+			name = dispersed_extra_food
+			duration = -1
+		}
+	}
+	
+	option = {	# Store the food for the future
+		name = shinto_deities.8.b
+		add_country_modifier = {
+			name = saved_extra_food
+			duration = -1
+		}
+	}
+}
+
+# Oinari Offering Coins Struck at Ginza Mint
+country_event = {
+	id = shinto_deities.9
+	title = shinto_deities.9.title
+	desc = shinto_deities.9.desc
+	picture = ECONOMY_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		religion = shinto
+		is_year = 1612
+		has_personal_deity = oinari
+		owns = 1028 # Musashi
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {	# Let us support their righteous efforts
+		name = shinto_deities.9.a
+		add_years_of_income = -0.10
+		add_country_modifier = {
+			name = oinari_offering_coins
+			duration = -1
+		}
+	}
+	
+	option = {	# Shut down this practice!
+		name = shinto_deities.9.b
+		add_years_of_income = 0.15
+	}
+}
+
+# Omoikane's Blessing
+country_event = {
+	id = shinto_deities.10
+	title = shinto_deities.10.title
+	desc = shinto_deities.10.desc
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		religion = shinto
+		has_personal_deity = omoikane
+		has_regency = no
+		NOT = { adm = 1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {	# Our piety has paid off
+		name = shinto_deities.10.a
+		change_adm = 1
+	}
+}
+
+# The Curse of Incompetence
+country_event = {
+	id = shinto_deities.11
+	title = shinto_deities.11.title
+	desc = shinto_deities.11.desc
+	picture = ACCUSATION_eventPicture
+	
+	trigger = {
+		religion = shinto
+		has_personal_deity = omoikane
+		NOT = { has_ruler_flag = had_incompetence }
+		any_neighbor_country = {
+#			NOT = { technology_group = western }
+			tech_difference = 4
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {	# Prepare an offering to Omoikane
+		name = shinto_deities.11.a
+		add_years_of_income = -0.25
+		add_adm_power = 30
+		add_dip_power = 30
+		add_mil_power = 30
+		set_ruler_flag = had_incompetence
+	}
+	
+	option = {	# Omoikane has abandoned [Root.GetName]!
+		name = shinto_deities.11.b
+		add_legitimacy = -15
+		set_ruler_flag = had_incompetence
+	}
+}
+
+# Fishing Boom in [Root.GetName]
+province_event = {
+	id = shinto_deities.12
+	title = shinto_deities.12.title
+	desc = shinto_deities.12.desc
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		owner = { religion = shinto }
+		religion = shinto
+		owner = { has_personal_deity = susanoo }
+		owner = { NOT = { has_country_flag = had_fishing_boom } }
+		has_port = yes
+		NOT = { trade_goods = fish }
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {	# Turn the port into the regional fishing hub
+		name = shinto_deities.12.a
+		owner = { add_years_of_income = -0.15 }
+		add_base_tax = 1
+		change_trade_goods = fish
+		owner = { set_country_flag = had_fishing_boom }
+	}
+	
+	option = {	# Such a construction project is too expensive
+		name = shinto_deities.12.b
+		owner = { add_prestige = -5 }
+		add_province_modifier = {
+			name = fishing_boom
+			duration = 1825
+		}
+		owner = { set_country_flag = had_fishing_boom }
+	}
+}
+
+# Kusanagi has Been Found!
+country_event = {
+	id = shinto_deities.13
+	title = shinto_deities.13.title
+	desc = shinto_deities.13.desc
+	picture = CONQUEST_eventPicture
+		
+	trigger = {
+		religion = shinto
+		has_personal_deity = susanoo
+		NOT = {
+			any_country = {
+				has_country_modifier = kusanagi
+			}
+		}
+		NOT = { has_country_flag = had_kusanagi_found  }
+	}
+	
+	mean_time_to_happen = {
+		months = 1560
+	}
+	
+	option = {	# Pay for Kusanagi and restore it to glory
+		name = shinto_deities.13.a
+		add_years_of_income = -0.25
+		add_legitimacy = 10
+		add_country_modifier = {
+			name = kusanagi
+			duration = -1
+		}
+	}
+	
+	option = {	# This sword is clearly a fake
+		name = shinto_deities.13.b
+		add_prestige = -5
+		set_country_flag = had_kusanagi_found
+	}
+}
+
+# Nachi-no-Hi Matsuri Fire Festival
+country_event = {
+	id = shinto_deities.14
+	title = shinto_deities.14.title
+	desc = shinto_deities.14.desc
+	picture = FEAST_eventPicture
+		
+	trigger = {
+		religion = shinto
+		has_personal_deity = susanoo
+		owns = 1832 # Yamato
+		is_month = 7
+		NOT = { is_month = 8 }
+		NOT = { has_ruler_modifier = banned_fire_festival }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {	# Make the preparations for the festival
+		name = shinto_deities.14.a
+		add_years_of_income = -0.05
+		add_adm_power = -10
+		add_legitimacy = 10
+	}
+	
+	option = {	# We can not afford such luxurious
+		name = shinto_deities.14.b
+		add_legitimacy = -10
+	}
+	
+	option = {	# Ban the Fire Festival
+		name = shinto_deities.14.c
+		ai_chance = { factor = 0 }
+		add_ruler_modifier = {
+			name = banned_fire_festival
+			duration = -1
+		}
+	}
+}
+
+# Tsukuyomi the Great
+country_event = {
+	id = shinto_deities.15
+	title = shinto_deities.15.title
+	desc = shinto_deities.15.desc
+	picture = GOOD_WITH_MONARCH_eventPicture
+		
+	trigger = {
+		religion = shinto
+		has_personal_deity = tsukuyomi
+		NOT = { has_ruler_modifier = tsukuyomi_the_great }
+	}
+	
+	mean_time_to_happen = {
+		years = 40
+	}
+	
+	option = {	# Our dynasty is the only true ruler of [From.GetName]
+		name = shinto_deities.15.a
+		add_prestige = 5
+		add_ruler_modifier = {
+			name = tsukuyomi_the_great
+			duration = -1
+		}
+	}
+}

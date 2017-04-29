@@ -1,0 +1,60 @@
+# No previous file for Calusa
+
+culture = calusa
+religion = mahoma
+capital = "Calusa"
+trade_goods = mahogany
+hre = no
+base_tax = 2 #1 
+base_production = 2 #1
+base_manpower = 2 #1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+discovered_by = north_american
+discovered_by = TNO
+discovered_by = WWG
+
+
+1444.11.2 = {
+	owner = QQA
+	controller = QQA
+	add_core = QQA
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = QQA
+	controller = QQA
+	add_core = QQA
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = QQA
+	controller = QQA
+	add_core = QQA
+	is_city = yes
+}
+
+1513.4.2 = { discovered_by = CAS } # Juan Ponce de Leon
+1516.1.23 = { discovered_by = SPA }
+
+1720.1.1 = {
+	remove_core = QQA
+	culture = seminole
+	owner = QQB
+	controller = QQB
+	add_core = QQB
+	religion = protestant
+}

@@ -1,0 +1,21 @@
+#Sami
+government = tribal_kingdom
+government_rank = 1
+primary_culture = sapmi
+technology_group = eastern
+historical_friend = KRL
+historical_friend = VEP
+religion = finnish_pagan_reformed
+capital = 18 #Lappland
+
+	
+1444.1.2 = {
+	monarch = {
+		name = "Algebeaivi"
+		dynasty = "Siiggur"
+		birth_date = 1429.1.1
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}

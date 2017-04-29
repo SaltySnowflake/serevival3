@@ -1,0 +1,32 @@
+#339 - Bejaia
+
+owner = TUN
+controller = TUN
+culture = berber
+religion = sunni
+capital = "Bejaia"
+trade_goods = lead
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = TUN
+add_core = KBA
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1444.11.01 = { remove_core = TUN owner = KBA }
+1444.11.11 = { add_core = TUN owner = TUN add_local_autonomy = -15 }
+
+1510.1.1 = {
+	owner = KBA
+	controller = KBA
+	capital = "Kalâa"
+}
+1600.1.1 = { capital = "Medjana" }

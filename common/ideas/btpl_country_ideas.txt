@@ -1,0 +1,86 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+
+### Removing these, for now, and leaving the ideas of the forming nation for the new cultural unions. May return later when I have more time for doing ideas and desc.
+
+#Other ideas for TNA include a catholic specific bons like papal influence, an idea cost reduction, a leader shock bonus, maybe prestige from land battles
+
+#TNA_ideas = {
+#	start = {
+#		infantry_power = 0.2
+#		land_morale = 0.1
+#	}
+#
+#	bonus = {
+#		army_tradition = 1
+#	}
+#	
+#	trigger = {
+#		tag = TNA
+#	}
+#	free = yes		#will be added at load.
+#	
+#	tirnangael_gaelic_renown = {
+#		diplomatic_reputation = 2
+#	}
+#	tirnangael_gall_oglaigh = {
+#		infantry_power = 0.05
+#		possible_mercenaries = 0.15
+#	}
+#	tirnangael_explorers_legacy = {
+#		range = 0.33
+#		may_explore = yes
+#	}
+#	tirnangael_brehon_law = {
+#		global_unrest = -2
+#	}
+#	tirnangael_bards = {
+#		core_creation = -0.25		
+#	}
+#	tirnangael_f = {
+#		prestige = 1
+#	}
+#	tirnangael_g = {
+#		culture_conversion_cost = -0.25
+#	}
+#}
+
+#YYK_ideas = {
+#	start = {
+#		infantry_power = 0.2
+#		land_morale = 0.1
+#	}
+#
+#	bonus = {
+#		army_tradition = 1
+#	}
+#	
+#	trigger = {
+#		tag = YYK
+#	}
+#	free = yes		#will be added at load.
+#	
+#	ynysykedyrn_a = {
+#		war_exhaustion = -0.05
+#	}
+#	ynysykedyrn_b = {
+#		idea_cost = -0.1	
+#	}
+#	ynysykedyrn_c = {
+#		technology_cost = -0.05
+#	}
+#	ynysykedyrn_d = {
+#		discipline = 0.05
+#	}
+#	ynysykedyrn_e = {
+#		core_creation = -0.25		
+#	}
+#	ynysykedyrn_f = {
+#		prestige = 1
+#	}
+#	ynysykedyrn_g = {
+#		culture_conversion_cost = -0.25
+#	}
+#}

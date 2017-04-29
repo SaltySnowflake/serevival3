@@ -1,0 +1,169 @@
+#Croatia
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "CRO_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "CRO_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "CRO_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "CRO_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "CRO_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "CRO_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "CRO_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "CRO_CAVALRY_4"	}
+
+#Ragusa
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "RAG_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "RAG_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "RAG_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "RAG_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "RAG_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "RAG_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "RAG_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "RAG_CAVALRY_4"	}
+
+#Serbia
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "SER_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "SER_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "SER_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "SER_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "SER_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "SER_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "SER_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "SER_CAVALRY_4"	}
+
+#Bosnia
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "BOS_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "BOS_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "BOS_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "BOS_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "BOS_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "BOS_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "BOS_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "BOS_CAVALRY_4"	}
+
+# MON Montenegro
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "MON_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "MON_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "MON_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "MON_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "MON_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "MON_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "MON_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "MON_CAVALRY_4"	}
+
+#Bulgaria
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "BUL_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "BUL_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "BUL_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "BUL_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "BUL_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "BUL_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "BUL_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "BUL_CAVALRY_4"	}
+
+#Wallachia
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "WAL_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "WAL_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "WAL_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "WAL_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "WAL_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "WAL_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "WAL_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "WAL_CAVALRY_4"	}
+
+entity = { clone = "ZAZ_INFANTRY_1"				name = "WAL_INFANTRY_1"		version = 1 }
+entity = { clone = "ZAZ_CAVALRY_1"				name = "WAL_CAVALRY_1"	 	version = 1 }
+entity = { clone = "ZAZ_INFANTRY_2"				name = "WAL_INFANTRY_2"	 	version = 1 }
+entity = { clone = "ZAZ_CAVALRY_2"				name = "WAL_CAVALRY_2"		version = 1 }
+
+#Romania
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "RMN_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "RMN_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "RMN_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "RMN_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "RMN_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "RMN_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "RMN_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "RMN_CAVALRY_4"	}
+
+entity = { clone = "ZAZ_INFANTRY_1"				name = "RMN_INFANTRY_1"		version = 1 }
+entity = { clone = "ZAZ_CAVALRY_1"				name = "RMN_CAVALRY_1"	 	version = 1 }
+entity = { clone = "ZAZ_INFANTRY_2"				name = "RMN_INFANTRY_2"	 	version = 1 }
+entity = { clone = "ZAZ_CAVALRY_2"				name = "RMN_CAVALRY_2"		version = 1 }
+
+#Moldavia
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "MOL_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "MOL_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "MOL_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "MOL_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "MOL_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "MOL_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "MOL_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "MOL_CAVALRY_4"	}
+
+entity = { clone = "ZAZ_INFANTRY_1"				name = "MOL_INFANTRY_1"		version = 1 }
+entity = { clone = "ZAZ_CAVALRY_1"				name = "MOL_CAVALRY_1"	 	version = 1 }
+entity = { clone = "ZAZ_INFANTRY_2"				name = "MOL_INFANTRY_2"	 	version = 1 }
+entity = { clone = "ZAZ_CAVALRY_2"				name = "MOL_CAVALRY_2"		version = 1 }
+
+#Albania
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "ALB_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "ALB_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "ALB_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "ALB_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "ALB_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "ALB_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "ALB_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "ALB_CAVALRY_4"	}
+
+# SKJ Skojpe
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "SKJ_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "SKJ_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "SKJ_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "SKJ_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "SKJ_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "SKJ_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "SKJ_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "SKJ_CAVALRY_4"	}
+
+# VID Vidin
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "VID_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "VID_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "VID_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "VID_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "VID_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "VID_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "VID_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "VID_CAVALRY_4"	}
+
+# KRV Karvuna
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "KRV_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "KRV_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "KRV_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "KRV_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "KRV_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "KRV_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "KRV_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "KRV_CAVALRY_4"	}
+
+# CUM Cumania
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "CUM_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "CUM_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "CUM_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "CUM_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "CUM_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "CUM_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "CUM_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "CUM_CAVALRY_4"	}
+
+entity = { clone = "ZAZ_INFANTRY_1"				name = "CUM_INFANTRY_1"		version = 1 }
+entity = { clone = "ZAZ_CAVALRY_1"				name = "CUM_CAVALRY_1"	 	version = 1 }
+entity = { clone = "ZAZ_INFANTRY_2"				name = "CUM_INFANTRY_2"	 	version = 1 }
+entity = { clone = "ZAZ_CAVALRY_2"				name = "CUM_CAVALRY_2"		version = 1 }
+
+# ILY Illyria
+entity = { clone = "croatiangfx_INFANTRY_1"		name = "ILY_INFANTRY_1"	}
+entity = { clone = "croatiangfx_CAVALRY_1"		name = "ILY_CAVALRY_1"	}
+entity = { clone = "croatiangfx_INFANTRY_2"		name = "ILY_INFANTRY_2"	}
+entity = { clone = "croatiangfx_CAVALRY_2"		name = "ILY_CAVALRY_2"	}
+entity = { clone = "croatiangfx_INFANTRY_3"		name = "ILY_INFANTRY_3"	}
+entity = { clone = "croatiangfx_CAVALRY_3"		name = "ILY_CAVALRY_3"	}
+entity = { clone = "croatiangfx_INFANTRY_4"		name = "ILY_INFANTRY_4"	}
+entity = { clone = "croatiangfx_CAVALRY_4"		name = "ILY_CAVALRY_4"	}

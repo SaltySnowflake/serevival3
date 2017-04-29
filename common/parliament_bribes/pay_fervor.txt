@@ -1,0 +1,42 @@
+pay_fervor = {
+	trigger = {
+		OR = {
+			AND = {
+				religion = reformed
+				FROM = { religion = reformed }
+			}
+			AND = {
+				religion = hussite
+				FROM = { religion = hussite }
+			}
+			AND = {
+				religion = waldensian
+				FROM = { religion = waldensian }
+			}
+			AND = {
+				religion = shaivism
+				FROM = { religion = shaivism }
+			}
+			AND = {
+				religion = shaktism
+				FROM = { religion = shaktism }
+			}
+			AND = {
+				religion = jewish
+				FROM = { religion = jewish }
+			}
+			AND = {
+				religion = cthulhu
+				FROM = { religion = cthulhu }
+			}
+		}
+	}
+	
+	effect = {
+		add_fervor = -10
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

@@ -1,0 +1,97 @@
+dev_tier_cost_effect = {
+		#calculates a tier and returns a ducat cost when developing provinces
+	if = {
+		limit = { 
+			NOT = { check_variable = { which = dev_tier_variable value = 0 } }
+		}
+		owner = { add_treasury = 0 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 0 }
+			NOT = { check_variable = { which = dev_tier_variable value = 1 } }
+		}
+		owner = { add_treasury = -25 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 1 }
+			NOT = { check_variable = { which = dev_tier_variable value = 2 } }
+		}
+		owner = { add_treasury = -50 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 2 }
+			NOT = { check_variable = { which = dev_tier_variable value = 3 } }
+		}
+		owner = { add_treasury = -75 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 3 }
+			NOT = { check_variable = { which = dev_tier_variable value = 4 } }
+		}
+		owner = { add_treasury = -100 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 4 }
+			NOT = { check_variable = { which = dev_tier_variable value = 5 } }
+		}
+		owner = { add_treasury = -200 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 5 }
+			NOT = { check_variable = { which = dev_tier_variable value = 6 } }
+		}
+		owner = { add_treasury = -250 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 6 }
+			NOT = { check_variable = { which = dev_tier_variable value = 7 } }
+		}
+		owner = { add_treasury = -300 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 7 }
+			NOT = { check_variable = { which = dev_tier_variable value = 8 } }
+		}
+		owner = { add_treasury = -400 }
+	}
+	if = {
+		limit = { 
+			check_variable = { which = dev_tier_variable value = 8 }
+		}
+		owner = { add_treasury = -500 }
+	}
+	if = {
+		limit = { has_building = tradecompany }
+		remove_building = tradecompany
+		owner = { add_treasury = -500 }
+	}
+	if = {
+		limit = { has_building = plantations }
+		remove_building = plantations
+		owner = { add_treasury = -500 }
+	}
+	if = {
+		limit = { has_building = textile }
+		remove_building = textile
+		owner = { add_treasury = -500 }
+	}
+	if = {
+		limit = { has_building = weapons }
+		remove_building = weapons
+		owner = { add_treasury = -500 }
+	}
+	if = {
+		limit = { has_building = wharf }
+		remove_building = wharf
+		owner = { add_treasury = -500 }
+	}
+	hidden_effect = { set_variable = { which = dev_tier_variable value = 0 } }
+}

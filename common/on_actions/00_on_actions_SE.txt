@@ -1,0 +1,78 @@
+on_startup = {
+	events = {
+#		norse_greenland.1
+#		norse_greenland.2
+#		exptribes.10
+	}
+	if = {
+		limit = { ai = yes }
+		country_event = { id = trobador_province_occitanism.1 }
+	}
+	if = {
+		limit = {
+			ai = no
+			OR = {
+				primary_culture = gascon
+				primary_culture = occitain
+				primary_culture = arpitan
+				primary_culture = catalan
+			}
+			capital_scope = {
+				OR = {
+					area = romandie_area
+					area = switzerland_area
+					area = venetia_area
+					area = lombardy_area
+					area = piedmont_area
+					area = liguria_area
+					area = emilia_romagna_area
+					area = emilia_area
+					region = iberia_region
+					region = france_region
+				}
+			}
+			NOT = { has_country_flag = trobador_tutorial_started }
+		}
+		country_event = { id = trobador_tutorial.1 }
+	}
+}
+
+on_new_monarch = {
+	events = {
+#		spa.1
+		papal_election.1
+		flavor_mai.14
+	}
+}
+
+# country random events
+#on_thri_yearly_pulse = {
+#	random_events = {
+#		# most general flavors	
+#		100 = concerned_admirals.250
+#		100 = lack_prestige_sphere.251
+#	}
+#}
+
+on_thri_yearly_pulse_2 = {
+	random_events = {
+	
+#		#Pagan Piety Events
+#		50 = pagan_piety.1
+#		50 = pagan_piety.2
+#		50 = pagan_piety.3
+#		50 = pagan_piety.4
+#		50 = pagan_piety.5
+#		50 = pagan_piety.6
+#		50 = pagan_piety.7
+#		50 = pagan_piety.8
+#		50 = pagan_piety.9
+#		50 = pagan_piety.10
+#		50 = pagan_piety.11
+#		50 = pagan_piety.12
+#		50 = pagan_piety.13
+#		50 = pagan_piety.14
+#		50 = pagan_piety.15
+#		50 = pagan_piety.16
+	}
+}

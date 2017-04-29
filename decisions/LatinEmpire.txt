@@ -1,0 +1,105 @@
+country_decisions = {
+
+	latin_empire = {
+		major = yes
+		potential = {
+			religion = catholic
+			is_subject = no
+			NOT = { exists = LAE }
+			NOT = { exists = ROM }
+			OR = {
+				ai = no
+				NOT = { exists = BYZ }
+			}
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = BYZ }
+			OR = {
+				tag = NEO
+				tag = ATH
+				tag = NEG
+				tag = NAX
+				tag = CEP
+				tag = KNI
+				tag = CYP
+				tag = EDE
+				tag = ATC
+				tag = TPL
+				tag = LES
+				AND = {
+					OR = {
+						culture_group = latin
+						culture_group = germanic
+						culture_group = british #?
+						culture_group = iberian
+						culture_group = french
+					}
+					OR = {
+						capital_scope = { culture = greek }
+						num_of_owned_provinces_with = {
+							value = 6
+							culture = greek
+						}
+					}
+				}
+			}
+			NOT = { is_year = 1650 } #end of crusades
+		}
+
+		allow = {
+			has_regency = no
+			is_at_war = no
+			NOT = { exists = BYZ }
+			owns_core_province = 151	# Constantinople
+			num_of_owned_provinces_with = {
+				value = 6
+				culture = greek
+			}
+			num_of_cities = 20
+		}
+
+		effect = {
+			change_tag = LAE
+			if = {
+				limit = { is_part_of_hre = yes }
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+				set_in_empire = no
+				emperor = { country_event = { id = hre_event.5 } }
+			}
+			change_government = absolute_empire
+			set_government_rank = 3
+			set_capital = 151
+			if = {
+				limit = { NOT = { has_global_flag = constantinople_restored } }
+				151 = {
+					add_base_tax = 4
+					add_base_production = 4
+					add_base_manpower = 3
+				}
+				set_global_flag = constantinople_restored
+			}
+			balkan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = LAE
+			}
+			anatolia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = LAE
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 25
+		}
+
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

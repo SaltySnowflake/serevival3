@@ -1,0 +1,1427 @@
+recover_west_anatolia = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			area = karaman_area
+			area = dulkadir_area
+			area = galatia_area
+			area = phrygia_area
+			area = pamphylia_area
+		}
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+		NOT = { owned_by = CAP }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+#		NOT = { exists = CAP }			#Unique, may make a vassalise Greek states mission later
+		is_subject = no
+		NOT = { has_country_modifier = byzantium_resurgent }
+		NOT = { has_country_flag = recovered_west_anatolia }
+		is_at_war = no
+		owns_core_province = 5157
+		any_province = {
+			OR = {
+				area = karaman_area
+				area = dulkadir_area
+				area = galatia_area
+				area = phrygia_area
+				area = pamphylia_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2500			#Priority 6
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+		set_country_flag = recovered_west_anatolia
+	}
+}
+
+recover_central_anatolia = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			area = rum_area
+			area = kastamonu_area
+			area = pontus_area
+			province_id = 2410
+			province_id = 285
+			province_id = 3245
+		}
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+		NOT = { owned_by = TRE }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+#		NOT = { exists = TRE }			#Unique, may make a vassalise Greek states mission later
+		is_subject = no
+		NOT = { has_country_modifier = byzantium_resurgent }
+		NOT = { has_country_flag = recovered_central_anatolia }
+		is_at_war = no
+		owns_core_province = 330
+		any_province = {
+			OR = {
+				area = rum_area
+				area = kastamonu_area
+				area = pontus_area
+				province_id = 2410
+				province_id = 285
+				province_id = 3245
+			}
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2500			#Priority 6
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+		set_country_flag = recovered_central_anatolia
+	}
+}
+
+recover_east_anatolia = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			area = erzurum_area
+			area = cilicia_area
+			province_id = 5183
+			province_id = 2313
+			province_id = 5170
+			province_id = 3249
+		}
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_modifier = byzantium_resurgent }
+		NOT = { has_country_flag = byz_recovered_eastern_anatolia }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 239
+		any_province = {
+			OR = {
+				area = erzurum_area
+				area = cilicia_area
+				province_id = 5183
+				province_id = 2313
+				province_id = 5170
+				province_id = 3249
+			}
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000			#Priority 7
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+		set_country_flag = byz_recovered_eastern_anatolia
+	}
+}
+
+recover_crimea = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 2410
+			province_id = 285
+			province_id = 3245
+		}
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_modifier = byzantium_resurgent }
+		NOT = { has_country_flag = byz_recovered_crimea }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 330
+		any_province = {
+			OR = {
+				province_id = 2410
+				province_id = 285
+				province_id = 3245
+			}
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 5
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+		set_country_flag = byz_recovered_crimea
+	}
+}
+
+recover_east_islands = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		area = cyprus_area
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_modifier = byzantium_resurgent }
+		NOT = { has_country_flag = recovered_eastern_islands }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 320
+		any_province = {
+			area = cyprus_area
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2500
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+		set_country_flag = recovered_eastern_islands
+	}
+}
+
+recover_albania = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			area = bulgaria_area
+			area = upper_thrace_area
+			province_id = 3164
+			province_id = 3163
+		}
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_modifier = byzantium_resurgent }
+		NOT = { has_country_flag = recovered_albania }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 151
+		any_province = {
+			OR = {
+				area = bulgaria_area
+				area = upper_thrace_area
+				province_id = 3164
+				province_id = 3163
+			}
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+		set_country_flag = recovered_albania
+	}
+}
+
+recover_isteria = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 136
+			province_id = 1826
+			province_id = 130
+			province_id = 1769
+			province_id = 129
+			province_id = 3049
+			province_id = 3191
+			province_id = 3192
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_isteria }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 137	
+			owns = 138	
+		}
+		OR = {
+			NOT = { owns = 136 }	
+			NOT = { owns = 1826 }	
+			NOT = { owns = 130 }
+			NOT = { owns = 129 }
+			NOT = { owns = 3049 }
+			NOT = { owns = 3191 }
+			NOT = { owns = 3192 }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 25
+		set_country_flag = recovered_isteria
+	}
+}
+
+recover_north_italy = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 119
+			province_id = 117
+			province_id = 114
+			province_id = 115
+			province_id = 116
+			province_id = 113
+			province_id = 106
+			province_id = 2976
+			province_id = 2977
+			province_id = 2978
+			province_id = 2980
+			province_id = 3040
+			province_id = 3041
+			province_id = 3042
+			province_id = 3702
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_northern_italy_byz }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		owns = 118	
+		OR = {
+			NOT = { owns = 119 }	
+			NOT = { owns = 117 }	
+			NOT = { owns = 114 }	
+			NOT = { owns = 115 }	
+			NOT = { owns = 116 }	
+			NOT = { owns = 113 }
+			NOT = { owns = 106 }
+			NOT = { owns = 2976 }
+			NOT = { owns = 2977 }
+			NOT = { owns = 2978 }
+			NOT = { owns = 2980 }
+			NOT = { owns = 3040 }
+			NOT = { owns = 3041 }
+			NOT = { owns = 3042 }
+			NOT = { owns = 3702 }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 75
+		set_country_flag = recovered_northern_italy_byz
+	}
+}
+
+recover_lombardia = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 101
+			province_id = 104
+			province_id = 105
+			province_id = 107
+			province_id = 108
+			province_id = 109
+			province_id = 110
+			province_id = 111
+			province_id = 1774
+			province_id = 1862
+			province_id = 2976
+			province_id = 2979
+			province_id = 2981
+			province_id = 2992
+			province_id = 3043
+			province_id = 3047
+			province_id = 3054
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_lombardia }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 113	
+			owns = 106	
+		}	
+		OR = {
+			NOT = { owns = 101 }
+			NOT = { owns = 104 }
+			NOT = { owns = 105 }
+			NOT = { owns = 107 }
+			NOT = { owns = 108 }
+			NOT = { owns = 109 }
+			NOT = { owns = 110 }
+			NOT = { owns = 111 }
+			NOT = { owns = 1774 }
+			NOT = { owns = 1862 }
+			NOT = { owns = 2976 }
+			NOT = { owns = 2979 }
+			NOT = { owns = 2981 }
+			NOT = { owns = 2992 }
+			NOT = { owns = 3043 }
+			NOT = { owns = 3047 }
+			NOT = { owns = 3054 }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 75
+		set_country_flag = recovered_lombardia
+	}
+}
+
+recover_west_islands = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 1247
+			province_id = 127
+			province_id = 333
+			province_id = 5098
+			province_id = 5095
+			province_id = 2986
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		has_country_flag = recovered_west_islands
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 125	
+			owns = 118	
+		}
+		OR = {
+			NOT = { owns = 1247 }	
+			NOT = { owns = 127 }	
+			NOT = { owns = 333 }	
+			NOT = { owns = 5098 }	
+			NOT = { owns = 5095 }	
+			NOT = { owns = 2986 }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 25
+		set_country_flag = recovered_west_islands
+	}
+}
+
+recover_south_spain = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 226
+			province_id = 223
+			province_id = 222
+			province_id = 221
+			province_id = 224
+			province_id = 1749
+			province_id = 225
+			province_id = 1748
+			province_id = 3097
+			province_id = 3098
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_south_spain }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 1247 
+			owns = 127
+			owns = 333	
+		}
+		OR = {
+			NOT = { owns = 226 }	
+			NOT = { owns = 223 }	
+			NOT = { owns = 222 }	
+			NOT = { owns = 221 }	
+			NOT = { owns = 224 }	
+			NOT = { owns = 1749 }
+			NOT = { owns = 225 }
+			NOT = { owns = 1748 }
+			NOT = { owns = 3097 }
+			NOT = { owns = 3098 }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 50
+		set_country_flag = recovered_south_spain
+	}
+}
+
+recover_tripoli = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 354
+			province_id = 355
+			province_id = 356
+			province_id = 357
+			province_id = 2326
+			province_id = 2451
+			province_id = 2452
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_tripoli }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 327	
+			owns = 329	
+			owns = 330	
+			owns = 331	
+			owns = 332	
+		}
+		OR = {
+			NOT = { owns = 354 }
+			NOT = { owns = 355 }
+			NOT = { owns = 356 }
+			NOT = { owns = 357 }
+			NOT = { owns = 2326 }
+			NOT = { owns = 2451 }
+			NOT = { owns = 2452 }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 25
+		set_country_flag = recovered_tripoli
+	}
+}
+
+recover_tunis = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		area = tunisia_area
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_tunis }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 354	
+			owns = 355	
+			owns = 356
+			owns = 357
+			owns = 2326
+			owns = 2451
+			owns = 2452	
+		}
+		tunisia_area = {
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 25
+		set_country_flag = recovered_tunis
+	}
+}
+
+recover_antioch = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 377
+			province_id = 378
+			province_id = 1849
+			province_id = 2313
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_antiocha }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 321	
+			owns = 327	
+			owns = 332		
+		}
+		OR = {
+			NOT = { owns = 377 }
+			NOT = { owns = 378 }
+			NOT = { owns = 1849 }
+			NOT = { owns = 2313 }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 50
+		set_country_flag = recovered_antiocha
+	}
+}
+
+recover_jerusalem = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 364
+			province_id = 379
+			province_id = 1854
+			province_id = 1855
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_jerusalem }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 321	
+			owns = 377	
+			owns = 358		
+		}
+		OR = {
+			NOT = { owns = 364 }
+			NOT = { owns = 379 }
+			NOT = { owns = 1854 }
+			NOT = { owns = 1855 }
+
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 50
+		set_country_flag = recovered_jerusalem
+	}
+}
+
+recover_alexandria = {
+	
+	type = country
+
+	category = MIL
+	
+	target_provinces = {
+		OR = {
+			province_id = 358
+			province_id = 357
+			province_id = 2325
+			province_id = 362
+			province_id = 363
+		}
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_flag = recovered_alexandria }
+		is_subject = no
+		owns = 151		# Thrace
+		is_at_war = no
+		OR = {
+			owns = 379	#Jerusalem
+			owns = 2313 #Antioch		
+		}
+		OR = {
+			NOT = { owns = 358 }	
+			NOT = { owns = 357 }
+			NOT = { owns = 2325 }
+			NOT = { owns = 362 }	
+			NOT = { owns = 363 }			
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_adm_power = 75
+		set_country_flag = recovered_alexandria
+	}
+}
+
+#New mission by Draiocht, split from recover east islands mission above
+recover_aegean_islands_btpl = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			area = aegean_islands_area
+			area = eastern_mediterrenean_islands_area
+		}
+		NOT = { owned_by = ROOT }
+		NOT = { owner = { alliance_with = ROOT } }
+		NOT = { owner = { vassal_of = ROOT } }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		has_dlc = "Purple Phoenix"
+		OR = {
+			tag = BYZ
+			tag = ROM
+			tag = LAE
+		}
+		NOT = { has_country_modifier = byzantium_resurgent }
+		NOT = { has_country_flag = recovered_aegean_islands_btpl }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 148
+		any_province = {
+			OR = {
+				area = aegean_islands_area
+				area = eastern_mediterrenean_islands_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 4000
+		modifier = {
+			factor = 2
+			mil = 4
+		}
+		modifier = {
+			factor = 2
+			mil = 6
+		}
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 10
+		add_country_modifier = {
+			name = "byzantium_resurgent"
+			duration = 3650
+		}
+		set_country_flag = recovered_aegean_islands_btpl
+	}
+}

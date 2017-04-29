@@ -1,0 +1,653 @@
+country_decisions = {
+	unite_georgia = {
+		major = yes
+		potential = {
+			NOT = { exists = GEO }
+			NOT = { tag = PAP }
+			NOT = { tag = ARM }
+			NOT = { tag = CIR }
+			NOT = { tag = AZR }
+			NOT = { tag = DAG }
+			NOT = { tag = TCA }
+			NOT = { tag = CCA }	
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			OR = {
+				primary_culture = georgian
+				primary_culture = abkhaz
+				primary_culture = laz
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 1856
+			owns_core_province = 2196
+			owns_core_province = 423
+			owns_core_province = 422
+			owns_core_province = 462
+			owns_core_province = 2204
+			owns_core_province = 3250
+			owns_core_province = 2203
+		}
+		effect = {
+			change_tag = GEO
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 423
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			georgia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GEO
+			}
+			odishi_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GEO
+			}
+			2204 = { add_permanent_claim = GEO }
+			3259 = { add_permanent_claim = GEO }
+			3253 = { add_permanent_claim = GEO }
+			3248 = { add_permanent_claim = GEO }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 300
+	}
+	form_kartli-kakheti = {
+		major = yes
+		potential = {
+			NOT = { exists = KTK }
+			NOT = { tag = TCA }
+			NOT = { tag = CCA }
+			NOT = { tag = GEO }
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			OR = {
+				tag = KRT
+				tag = KAK
+			}
+		}
+		allow = {
+			OR = {
+				tag = KRT
+				tag = KAK
+			}
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			adm_tech = 5
+			owns_core_province = 423
+			owns_core_province = 2203
+		}
+		effect = {
+			change_tag = KTK
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 423
+			423 = { add_permanent_claim = KTK }
+			2203 = { add_permanent_claim = KTK }
+			3251 = { add_permanent_claim = KTK }
+			3252 = { add_permanent_claim = KTK }
+			add_prestige = 10
+		}
+	}
+	unite_circassia = {
+		major = yes
+		potential = {
+			NOT = { exists = CIR }
+			NOT = { tag = PAP }
+			NOT = { tag = ARM }
+			NOT = { tag = GEO }
+			NOT = { tag = AZR }
+			NOT = { tag = DAG }
+			NOT = { tag = TCA }
+			NOT = { tag = CCA }
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			primary_culture = circassian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 2195
+			owns_core_province = 463
+			owns_core_province = 3262
+			owns_core_province = 2197
+		}
+		effect = {
+			change_tag = CIR
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 463
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			circassia_area = {
+				limit = { 
+					NOT = { owned_by = ROOT }
+					NOT = { province_id = 4156 }
+				}
+				add_permanent_claim = CIR
+			}
+			2195 = { add_permanent_claim = CIR }
+			2208 = { add_permanent_claim = CIR }
+			2447 = { add_permanent_claim = CIR }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 300
+	}
+	unite_armenia = {
+		major = yes
+		potential = {
+			NOT = {	exists = GAR }
+			NOT = { exists = ARM }
+			NOT = { tag = PAP }
+			NOT = { tag = GEO }
+			NOT = { tag = CIR }
+			NOT = { tag = AZR }
+			NOT = { tag = DAG }
+			NOT = { tag = TCA }
+			NOT = { tag = CCA }
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			primary_culture = armenian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 2307
+			owns_core_province = 419
+			owns_core_province = 2205
+			owns_core_province = 2202
+		}
+		effect = {
+			change_tag = ARM
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 419
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			armenia_area = { add_permanent_claim = ARM }
+			north_kurdistan_area = { add_permanent_claim = ARM }
+			3255 = { add_permanent_claim = ARM }
+			420 = { add_permanent_claim = ARM }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 300
+	}
+	unite_dagestan = {
+		major = yes
+		potential = {
+			NOT = { exists = DAG }
+			NOT = { tag = PAP }
+			NOT = { tag = GEO }
+			NOT = { tag = CIR }
+			NOT = { tag = AZR }
+			NOT = { tag = ARM }
+			NOT = { tag = TCA }
+			NOT = { tag = CCA }
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			primary_culture = dagestani
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 3260
+			owns_core_province = 3261
+			owns_core_province = 2199
+		}
+		effect = {
+			change_tag = DAG
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 3261
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			dagestan_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = DAG
+			}
+			425 = { add_permanent_claim = DAG }
+			2201 = { add_permanent_claim = DAG }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 300
+	}
+	unite_azerbaijan = {
+		major = yes
+		potential = {
+			NOT = { exists = AZR }
+			NOT = { tag = PAP }
+			NOT = { tag = GEO }
+			NOT = { tag = CIR }
+			NOT = { tag = DAG }
+			NOT = { tag = ARM }
+			NOT = { tag = TCA }
+			NOT = { tag = CCA }
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			primary_culture = azerbaijani
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 3258
+			owns_core_province = 3259
+			owns_core_province = 424
+			owns_core_province = 421
+			owns_core_province = 416
+		}
+		effect = {
+			change_tag = AZR
+			change_government = constitutional_monarchy
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 421
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			shirvan_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = AZR
+			}
+			armenia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = AZR
+			}
+			tabriz_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = AZR
+			}
+			azerbaijan_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = AZR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 300
+	}
+	form_transcaucasia = {
+		major = yes
+		potential = {
+			NOT = { exists = TCA }
+			NOT = { tag = PAP }
+			NOT = { tag = CCA }
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			OR = {
+				primary_culture = georgian
+				primary_culture = armenian
+				primary_culture = azerbaijani
+				primary_culture = laz
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 423
+			owns_core_province = 2203
+			owns_core_province = 419
+			owns_core_province = 2205
+			owns_core_province = 421
+			owns_core_province = 3258
+		}
+		effect = {
+			change_tag = TCA
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			caucasia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TCA
+			}
+			pontus_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TCA
+			}
+			3255 = { add_permanent_claim = TCA }
+			3254 = { add_permanent_claim = TCA }
+			2307 = { add_permanent_claim = TCA }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 300
+	}
+	form_ciscaucasia = {
+		major = yes
+		potential = {
+			NOT = { exists = CCA }
+			NOT = { tag = PAP }
+			NOT = { tag = TCA }
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			OR = {
+				primary_culture = dagestani
+				primary_culture = circassian
+				primary_culture = vainakh
+				primary_culture = alan
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 463
+			owns_core_province = 2416
+			owns_core_province = 2201
+			owns_core_province = 2198
+			owns_core_province = 2199
+			owns_core_province = 3260
+			owns_core_province = 3261
+		}
+		effect = {
+			change_tag = CCA
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = { limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			random_owned_province = { add_base_tax = 1 }
+			caucasia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CCA
+			}
+			azov_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CCA
+			}
+			astrakhan_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CCA
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 300
+	}
+	form_greater_armenia = {
+		major = yes
+		potential = {
+			NOT = { tag = BYZ }
+			NOT = { tag = CCA }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = TCA }
+			NOT = { tag = HLR }
+			NOT = { tag = LAE }
+			NOT = { tag = ROM }
+			NOT = {	exists = GAR }
+			primary_culture = armenian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 419
+			owns_core_province = 2205
+			owns_core_province = 2202
+			owns_core_province = 3254
+			owns_core_province = 2307
+			owns_core_province = 331
+			owns_core_province = 418
+			owns_core_province = 5138
+			owns_core_province = 327
+			
+		}
+		effect = {
+			change_tag = GAR
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			set_capital = 419
+			419 = { add_base_tax = 1 }
+			armenia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GAR
+			}
+			north_kurdistan_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GAR
+			}
+			erzurum_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GAR
+			}
+			dulkadir_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GAR
+			}
+			aleppo_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GAR
+			}
+			cilicia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GAR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

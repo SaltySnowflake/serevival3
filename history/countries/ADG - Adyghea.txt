@@ -1,0 +1,16 @@
+government = tribal_federation
+government_rank = 1
+primary_culture = circassian
+religion = orthodox
+technology_group = eastern
+capital = 2195
+
+1444.1.1 = {
+	monarch = {
+		name = "Petrezok"
+		dynasty = "Petrezok"
+		adm = 3
+		mil = 3
+		dip = 3
+	}
+}

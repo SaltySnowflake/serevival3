@@ -1,0 +1,59 @@
+country_decisions = {
+
+	hire_leonardo = {
+		potential = {
+			OR = {
+				culture_group = latin
+				any_owned_province = { region = italy_region }
+			}
+			has_global_flag = leonardo_exists
+			NOT = { has_global_flag = leonardo_dead }
+			NOT = { any_country = {	has_country_modifier = leonardo_adm	} }
+			NOT = { any_country = {	has_country_modifier = leonardo_dip	} }
+			NOT = { any_country = {	has_country_modifier = leonardo_mil	} }
+			NOT = {	has_country_modifier = leonardo_adm	}
+			NOT = {	has_country_modifier = leonardo_dip	}
+			NOT = {	has_country_modifier = leonardo_mil	}
+		}
+		allow = {
+			treasury = 100
+			prestige = 25
+			stability = 1
+		}
+		effect = {
+			add_treasury = -100
+			country_event = {
+				id = leonardo.2
+				days = 1
+			}
+		}
+	}
+	hire_machiavelli = {
+		potential = {
+			OR = {
+				culture_group = latin
+				any_owned_province = { region = italy_region }
+			}
+			has_global_flag = machiavelli_exists
+			NOT = {	has_global_flag = machiavelli_dead }
+			NOT = { any_country = {	has_country_modifier = machiavelli_adm } }
+			NOT = { any_country = { has_country_modifier = machiavelli_dip } }
+			NOT = { any_country = { has_country_modifier = machiavelli_mil } }
+			NOT = { has_country_modifier = machiavelli_adm }
+			NOT = { has_country_modifier = machiavelli_dip }
+			NOT = { has_country_modifier = machiavelli_mil }
+		}
+		allow = {
+			treasury = 100
+			prestige = 25
+			stability = 1
+		}
+		effect = {
+			add_treasury = -100
+			country_event = {
+				id = leonardo.5
+				days = 1
+			}
+		}
+	}
+}

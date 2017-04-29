@@ -1,0 +1,1271 @@
+free_oppressed_occitans = {
+	
+	type = country
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		OR = {
+			culture_group = occitanocatala
+			culture = occitain
+			culture = arpitan
+			culture = gascon
+			culture = catalan
+		}
+		owner = {
+			NOT = {
+				culture_group = occitanocatala
+				primary_culture = occitain
+				primary_culture = arpitan
+				primary_culture = gascon
+				primary_culture = catalan
+			}
+		}
+	}
+	allow = {
+		NOT = { has_country_modifier = military_victory }
+		ROOT = { culture_group = occitanocatala }
+		is_subject = no
+		prestige = 0
+		is_at_war = no
+		any_province = {
+			OR = {
+				culture_group = occitanocatala
+				culture = occitain
+				culture = arpitan
+				culture = gascon
+				culture = catalan
+			}
+			owner = {
+				NOT = {
+					culture_group = occitanocatala
+					primary_culture = occitain
+					primary_culture = arpitan
+					primary_culture = gascon
+					primary_culture = catalan
+				}
+			}
+		}
+	}
+	success = {
+		any_target_province = {
+			NOT = { owned_by = ROOT }
+			owner = {
+				OR = {
+					culture_group = occitanocatala
+					primary_culture = occitain
+					primary_culture = arpitan
+					primary_culture = gascon
+					primary_culture = catalan
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			all_country = {
+				NOT = {
+					ROOT = {
+						has_casus_belli = {
+							type = cb_free_occitan_mission
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 0.5
+			NOT = { dip = 4 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { mil = 3 }
+		}
+		modifier = {
+			factor = 0.2
+			all_province = {
+				NOT = { is_core = OCC }
+			}
+		}
+		modifier = {
+			factor = 2
+			all_country = { 
+				OR = {
+					NOT = { culture_group = occitanocatala }
+					has_opinion = { who = ROOT value = 100 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.2
+			has_factions = yes
+			NOT = { faction_in_power = trobador_occitanist }
+			NOT = { faction_in_power = trobador_aragonese }
+		}
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = {
+					culture_group = occitanocatala
+					primary_culture = occitain
+					primary_culture = arpitan
+					primary_culture = gascon
+					primary_culture = catalan
+				}
+				any_owned_province = {
+					OR = {
+						culture_group = occitanocatala
+						culture = occitain
+						culture = arpitan
+						culture = gascon
+						culture = catalan
+					}
+				}
+			}
+			ROOT = {
+				add_casus_belli = {
+					type = cb_free_occitan_mission
+					months = 300
+					target = PREV
+				}
+			}
+		}
+	}
+	abort_effect = {
+		every_country = {
+			limit = {
+				NOT = {
+					culture_group = occitanocatala
+					primary_culture = occitain
+					primary_culture = arpitan
+					primary_culture = gascon
+					primary_culture = catalan
+				}
+				any_owned_province = {
+					OR = {
+						culture_group = occitanocatala
+						culture = occitain
+						culture = arpitan
+						culture = gascon
+						culture = catalan
+					}
+				}
+			}
+			ROOT = {
+				remove_casus_belli = {
+					type = cb_free_occitan_mission
+					target = PREV
+				}
+			}
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "military_victory"
+			duration = 3650
+		}
+		add_dip_power = 25
+		add_faction_influence = { faction = trobador_aragonese influence = 5 }
+		add_faction_influence = { faction = trobador_occitanist influence = 5 }
+	}
+}
+
+keep_trobador = {
+	
+	type = country
+	category = DIP
+	ai_mission = yes
+
+	allow = {
+		culture_group = occitanocatala
+		advisor = trobador
+		NOT = { has_country_modifier = innovative_modifier }
+	}
+	success = {
+		advisor = trobador
+		had_country_flag = { flag = trobador_mission_timer days = 730 }
+	}
+	abort = {
+		NOT = { advisor = trobador }
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			dip = 4
+		}
+		modifier = {
+			factor = 0.2
+			has_factions = yes
+			NOT = { faction_in_power = trobador_occitanist }
+		}
+	}
+	immediate = {
+		set_country_flag = trobador_mission_timer
+	}
+	abort_effect = {
+		clr_country_flag = trobador_mission_timer
+	}
+	effect = {
+		add_country_modifier = {
+			name = innovative_modifier
+			duration = 3650
+		}
+		add_faction_influence = { faction = trobador_occitanist influence = 5 }
+		clr_country_flag = trobador_mission_timer
+	}
+}
+
+
+occitanism_must_spread = {
+	
+	type = country
+	category = DIP
+	ai_mission = yes
+
+	target_provinces = {
+		OR = {
+			culture = occitain
+			culture = arpitan
+			culture = gascon
+			culture = catalan
+		}
+	}
+
+	allow = {
+		culture_group = occitanocatala
+		any_province = {
+			OR = {
+				culture_group = occitanocatala
+				culture = occitain
+				culture = arpitan
+				culture = gascon
+				culture = catalan
+			}
+		}
+		NOT = { has_country_modifier = foreign_contacts }
+	}
+	success = {
+		any_target_province = {
+			culture_group = occitanocatala
+		}
+	}
+	abort = {
+		all_target_province = {
+			NOT = { culture = occitanocatala }
+			NOT = { culture = occitain }
+			NOT = { culture = arpitan }
+			NOT = { culture = gascon }
+			NOT = { culture = catalan }
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			dip = 4
+		}
+		modifier = {
+			factor = 0.2
+			has_factions = yes
+			NOT = { faction_in_power = trobador_occitanist }
+		}
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				any_owned_province = {  # should not be necessary because of event triggers... to check ! 
+					OR = {
+						culture = occitain
+						culture = arpitan
+						culture = gascon
+						culture = catalan
+					}
+				}
+			}
+			country_event = { id = occitanism_spreading.1 days = 10 } 
+			country_event = { id = occitanism_spreading.4 days = 10 } 
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		add_country_modifier = {
+			name = "foreign_contacts"
+			duration = 3650
+		}
+		add_dip_power = 10
+		add_faction_influence = { faction = trobador_occitanist influence = 10 }
+	}
+}
+
+
+occitan_conquest_provence = {
+	
+	type = country
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		OR = {
+			culture_group = occitanocatala
+			primary_culture = occitain
+			primary_culture = arpitan
+			primary_culture = gascon
+			primary_culture = catalan
+		}
+		is_subject = no
+		201= {
+			is_neighbor_of = ROOT
+			NOT = { owned_by = ROOT }
+			NOT = { owner = { alliance_with = ROOT } }
+			NOT = {
+				owner = {
+					is_subject = yes
+					overlord = { alliance_with = ROOT } 
+				}
+			}
+		}
+		NOT = { has_country_modifier = military_victory }
+	}
+	abort = {
+		is_subject = yes		
+	}
+	success = {
+		201 = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+		modifier = {
+			factor = 4
+			is_core = 201
+		}
+	}
+	immediate = {
+		201 = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		201 = {
+			remove_claim = ROOT
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = military_vassalization
+			duration = 3650
+		}
+	}
+}
+
+cancel_nice_dedition = {
+	
+	type = country
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		owns = 201 # Provence
+		NOT = { has_country_modifier = military_victory }
+		102 = { NOT = { has_province_flag = cancelled_nice_dedition } }
+		OR = {
+			culture_group = occitanocatala
+			primary_culture = occitain
+			primary_culture = arpitan
+			primary_culture = gascon
+			primary_culture = catalan
+		}
+		is_subject = no
+		NOT = { owns = 102 }
+		102 = { owner = { NOT = { alliance_with = ROOT } } }
+		NOT = {
+			102 = {
+				owner = {
+					is_subject = yes
+					overlord = { alliance_with = ROOT } 
+				}
+			}
+		}
+	}
+	abort = {
+		is_subject = yes		
+	}
+	success = {
+		owns = 102
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+		modifier = {
+			factor = 0.3
+			102 = { owner = { NOT = { adm_tech = 15 } } }
+		}	
+		modifier = {
+			factor = 0.3
+			102 = { owner = { NOT = { adm_tech = 20 } } }
+		}	
+		modifier = {
+			factor = 0.3
+			102 = { owner = { NOT = { adm_tech = 25 } } }
+		}	
+	}
+	immediate = {
+		add_claim = 102
+	}
+	abort_effect = {
+		remove_claim = 102
+	}
+	effect = {
+		add_country_modifier = {
+			name = military_victory
+			duration = 3650
+		}
+		add_core = 102
+		102 = { set_province_flag = cancelled_nice_dedition }
+	}
+}
+
+conquer_occitania = {
+	
+	type = country
+	category = MIL
+	ai_mission = yes
+
+	target_provinces = {
+		NOT = { owned_by = ROOT }
+		OR = {
+			culture_group = occitanocatala
+			culture = occitain
+			culture = arpitan
+			culture = gascon
+			culture = catalan
+		}
+		owner = {
+			NOT = {
+				culture_group = occitanocatala
+				primary_culture = occitain
+				primary_culture = arpitan
+				primary_culture = gascon
+				primary_culture = catalan
+				alliance_with = ROOT
+				is_subject = yes
+				overlord = { alliance_with = ROOT } 
+			}
+		}
+	}
+	
+	allow = {
+		culture_group = occitanocatala
+		is_subject = no
+		NOT = { exists = OCC }
+		NOT = { any_province = { has_province_flag = claimed_by_occitan_mission } } # otherwise this mission is not multiplayer-safe
+		any_province = {
+			OR = {
+				culture_group = occitanocatala
+				culture = occitain
+				culture = arpitan
+				culture = gascon
+				culture = catalan
+			}
+			owner = {
+				NOT = {
+					culture_group = occitanocatala
+					primary_culture = occitain
+					primary_culture = arpitan
+					primary_culture = gascon
+					primary_culture = catalan
+					alliance_with = ROOT
+					is_subject = yes
+					overlord = { alliance_with = ROOT } 
+				}
+			}
+		}
+		NOT = { has_country_modifier = military_victory }
+	}
+	abort = {
+		is_subject = yes		
+	}
+	success = {
+		any_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+		modifier = {
+			factor = 2
+			primary_culture = occitain
+		}	
+		modifier = {
+			factor = 4
+			any_target_province = {
+				is_core = ROOT
+			}
+		}
+	}
+	immediate = {
+		random_target_province = {
+			add_claim = ROOT
+			set_province_flag = claimed_by_occitan_mission
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			limit = { has_province_flag = claimed_by_occitan_mission }
+			remove_claim = ROOT
+			clr_province_flag = claimed_by_occitan_mission
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = military_vassalization
+			duration = 3650
+		}
+		add_faction_influence = { faction = trobador_aragonese influence = 5 }
+		add_faction_influence = { faction = trobador_occitanist influence = 10 }
+		hidden_effect = {
+			every_target_province = {
+				clr_province_flag = claimed_by_occitan_mission
+			}
+		}
+	}
+}
+
+change_poitou_culture = {
+
+	type = country
+	category = ADM
+	always = no
+	
+	allow = {
+		180 = {
+			owned_by = ROOT
+			NOT = { culture_group = occitanocatala } 
+			#has_owner_accepted_culture = no
+			NOT = { culture_group = owner }
+			is_core = owner
+			has_owner_religion = yes
+			NOT = { has_construction = culture }
+		}
+		4285 = {
+			owned_by = ROOT
+			NOT = { culture_group = occitanocatala } 
+			#has_owner_accepted_culture = no
+			NOT = { culture_group = owner }
+			is_core = owner
+			has_owner_religion = yes
+			NOT = { has_construction = culture }
+		}
+		is_at_war = no
+	}
+	abort = {
+		NOT = {	owns = 180 }
+		NOT = {	owns = 4285 }
+	}
+	success = {
+		180 = { culture = owner }
+		4285 = { culture = owner }
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 1.5
+			180 = { base_tax = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			4285 = { base_tax = 5 }
+		}
+		modifier = {
+			factor = 4
+			180 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 4
+			4285 = { has_owner_accepted_culture = no }
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "castilian_grammar"
+			duration = 3650
+		}
+		add_faction_influence = { faction = trobador_occitanist influence = 10 }
+	}
+}
+
+ask_aragon_help = {
+
+	type = country
+	category = DIP
+	ai_mission = yes
+	
+	allow = {
+		culture_group = occitanocatala
+		exists = ARA
+		NOT = { tag = ARA }
+		vassal_of = FRA
+		NOT = { truce_with = FRA }
+		NOT = { ARA = { truce_with = FRA } }
+		NOT = { has_country_flag = asked_aragon_help }
+		faction_in_power = trobador_aragonese
+	}
+	abort = {
+		OR = {
+			truce_with = FRA
+			ARA = {
+				NOT = { 
+					has_casus_belli =  {
+						type = cb_free_occitan_mission
+						target = FRA
+					}
+				}
+			}
+		}
+	}
+	success = {
+		war_with = FRA
+		ARA = { war_with = FRA }
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			NOT = { has_opinion = { who = FRA value = 0 } }
+		}
+		modifier = {
+			factor = 2
+			has_opinion = { who = ARA value = 100 }
+		}
+		modifier = {
+			factor = 100
+			any_country = { has_country_flag = asked_aragon_help }
+		}
+	}
+	immediate = {
+		set_country_flag = asked_aragon_help
+		ARA = {
+			set_country_flag = occitans_asked_for_help
+			add_casus_belli = {
+				type = cb_free_occitan_mission
+				months = 300
+				target = FRA
+			}
+			country_event = { id = trobador_catalan.1 }
+		}
+	}
+	abort_effect = {
+		ARA = {
+			remove_casus_belli = {
+				type = cb_free_occitan_mission
+				target = FRA
+			}
+		}
+		clr_country_flag = asked_aragon_help
+	}
+	effect = {
+		add_country_modifier = {
+			name = "battle_preparations"
+			duration = 365
+		}
+		add_faction_influence = { faction = trobador_aragonese influence = 15 }
+		clr_country_flag = asked_aragon_help
+	}
+}
+
+french_alliance_mission = {
+
+	type = country
+	category = DIP
+	ai_mission = yes
+	
+	allow = {
+		exists = FRA
+		has_faction = trobador_french
+		NOT = { is_rival = FRA }
+		is_at_war = no
+		FRA = { has_opinion = { who = ROOT value = 10 } }
+		NOT = { alliance_with = FRA }
+		NOT = { is_subject = yes }
+		FRA = { NOT = { is_subject = yes } }
+		NOT = { has_country_modifier = foreign_contacts }
+	}
+	abort = {
+		OR = {
+			war_with = FRA
+			NOT = { exists = FRA }
+		}
+	}
+	success = {
+		alliance_with = FRA
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			NOT = { faction_in_power = trobador_french }
+		}		
+		modifier = {
+			factor = 1.5
+			culture_group = french
+		}
+		modifier = {
+			factor = 1.5
+			religion = FRA
+		}
+		modifier = {
+			factor = 1.15
+			dip = 3
+		}
+		modifier = {
+			factor = 0.85
+			NOT = { dip = 2 }
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "foreign_contacts"
+			duration = 3650
+		}
+		add_faction_influence = { faction = trobador_french influence = 15 }
+	}
+}
+
+castillian_alliance_mission = {
+
+	type = country
+	category = DIP
+	ai_mission = yes
+
+	allow = {
+		exists = CAS
+		has_faction = trobador_castillian
+		NOT = { is_rival = CAS }
+		is_at_war = no
+		CAS = { has_opinion = { who = ROOT value = 10 } }
+		NOT = { alliance_with = CAS }
+		NOT = { is_subject = yes }
+		CAS = { NOT = { is_subject = yes } }
+		NOT = { has_country_modifier = foreign_contacts }
+	}
+	abort = {
+		OR = {
+			war_with = CAS
+			NOT = { exists = CAS }
+		}
+	}
+	success = {
+		alliance_with = CAS
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			NOT = { faction_in_power = trobador_castillian }
+		}		
+		modifier = {
+			factor = 1.5
+			culture_group = iberian
+		}
+		modifier = {
+			factor = 1.5
+			religion = CAS
+		}
+		modifier = {
+			factor = 1.15
+			dip = 3
+		}
+		modifier = {
+			factor = 0.85
+			NOT = { dip = 2 }
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "foreign_contacts"
+			duration = 3650
+		}
+		add_faction_influence = { faction = trobador_castillian influence = 15 }
+	}
+}
+
+aragonese_alliance_mission = {
+
+	type = country
+	category = DIP
+	ai_mission = yes
+	
+	allow = {
+		has_faction = trobador_aragonese
+		exists = ARA
+		NOT = { is_rival = ARA }
+		is_at_war = no
+		ARA = { has_opinion = { who = ROOT value = 10 } }
+		NOT = { alliance_with = ARA }
+		NOT = { is_subject = yes }
+		ARA = { NOT = { is_subject = yes } }
+		NOT = { has_country_modifier = foreign_contacts }
+	}
+	abort = {
+		OR = {
+			war_with = ARA
+			ARA = { NOT = { num_of_cities = 1 } }
+		}
+	}
+	success = {
+		alliance_with = ARA
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			NOT = { faction_in_power = trobador_aragonese }
+		}		
+		modifier = {
+			factor = 1.5
+			culture_group = occitanocatala
+			ARA = { culture_group = occitanocatala }
+		}
+		modifier = {
+			factor = 1.5
+			religion = ARA
+		}
+		modifier = {
+			factor = 1.15
+			dip = 3
+		}
+		modifier = {
+			factor = 0.85
+			NOT = { dip = 2 }
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "foreign_contacts"
+			duration = 3650
+		}
+		add_faction_influence = { faction = trobador_aragonese influence = 15 }
+	}
+}
+
+restore_occitan_independence = {
+
+	type = country
+	category = MIL
+	ai_mission = yes
+
+	target_provinces = {
+		OR = {
+			culture_group = occitanocatala
+			culture = occitain
+			culture = arpitan
+			culture = gascon
+			culture = catalan
+		}
+		owner = { culture_group = french }
+		OR = {
+			AND = {
+				is_core = TOU
+				NOT = { exists = TOU }
+			}
+			AND = {
+				is_core = FOI
+				NOT = { exists = FOI }
+			}
+			AND = {
+				is_core = GUY
+				NOT = { exists = GUY }
+			}
+			AND = {
+				is_core = PRO
+				NOT = { exists = PRO }
+			}
+			AND = {
+				is_core = AUV
+				NOT = { exists = AUV }
+			}
+			AND = {
+				is_core = DAU
+				NOT = { exists = DAU }
+			}
+		}
+	}
+
+	
+	allow = {
+		tag = ARA
+		any_province = {
+			OR = {
+				culture_group = occitanocatala
+				culture = occitain
+				culture = arpitan
+				culture = gascon
+				culture = catalan
+			}
+			owner = { culture_group = french }
+			# I've not managed to automatise that...
+			OR = {
+				AND = {
+					is_core = TOU
+					NOT = { exists = TOU }
+				}
+				AND = {
+					is_core = FOI
+					NOT = { exists = FOI }
+				}
+				AND = {
+					is_core = GUY
+					NOT = { exists = GUY }
+				}
+				AND = {
+					is_core = PRO
+					NOT = { exists = PRO }
+				}
+				AND = {
+					is_core = AUV
+					NOT = { exists = AUV }
+				}
+				AND = {
+					is_core = DAU
+					NOT = { exists = DAU }
+				}
+			}
+		}
+		is_at_war = no
+		is_lesser_in_union = no
+		has_regency = no
+		NOT = { alliance_with = owner }
+		NOT = { truce_with = owner }
+		owner = { is_subject = no }
+	}
+
+	success = {
+		any_target_province = {
+			owned_by = FROM
+		}
+	}
+	abort = {
+		all_target_province = {
+			NOT = { owned_by = ROOT }
+			NOT = { owned_by = FROM }
+		}
+	}
+	
+	immediate = {
+		every_target_province = {
+			add_claim = FROM
+		}
+	}
+	
+	abort_effect = {
+		every_target_province = {
+			remove_claim = FROM
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			every_target_province = {
+				remove_claim = FROM
+				if = {
+					limit = { NOT = { owned_by = FROM } }
+					set_province_flag = oc_independence_excluded # using this flag instead of the direct condition is a way to ignore the condition in the tooltip, so that we know the potential effect before accepting the mission
+				}
+			}
+		}
+		# I've not managed to automatise that...
+		every_target_province = { # and only the target provinces
+			# order matters: last "if" can overwrite the others
+			if = {
+				limit = { is_core = GUY NOT = { has_province_flag = oc_independence_excluded } }
+				cede_province = GUY
+			}
+			if = {
+				limit = { is_core = TOU NOT = { has_province_flag = oc_independence_excluded } }
+				cede_province = TOU
+			}
+			if = {
+				limit = { is_core = FOI NOT = { has_province_flag = oc_independence_excluded } }
+				cede_province = FOI
+			}
+			if = {
+				limit = { is_core = AUV NOT = { has_province_flag = oc_independence_excluded } }
+				cede_province = AUV
+			}
+			if = {
+				limit = { is_core = PRO NOT = { has_province_flag = oc_independence_excluded } }
+				cede_province = PRO
+			}
+			if = {
+				limit = { is_core = DAU NOT = { has_province_flag = oc_independence_excluded } }
+				cede_province = DAU
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { any_target_province = { owned_by = TOU } }
+				TOU = { # I'ld like to establish a peace too, but I don't know how
+					add_opinion = {
+						who = ROOT
+						modifier = released_us_freely 
+					}
+				}
+			}
+			if = {
+				limit = { any_target_province = { owned_by = FOI } }
+				FOI = {
+					add_opinion = {
+						who = ROOT
+						modifier = released_us_freely 
+					}
+				}
+			}
+			if = {
+				limit = { any_target_province = { owned_by = GUY } }
+				GUY = {
+					add_opinion = {
+						who = ROOT
+						modifier = released_us_freely 
+					}
+				}
+			}
+			if = {
+				limit = { any_target_province = { owned_by = AUV } }
+				AUV = {
+					add_opinion = {
+						who = ROOT
+						modifier = released_us_freely 
+					}
+				}
+			}
+			if = {
+				limit = { any_target_province = { owned_by = DAU } }
+				DAU = {
+					add_opinion = {
+						who = ROOT
+						modifier = released_us_freely 
+					}
+				}
+			}
+			if = {
+				limit = { any_target_province = { owned_by = PRO } }
+				PRO = {
+					add_opinion = {
+						who = ROOT
+						modifier = released_us_freely 
+					}
+				}
+			}
+			every_target_province = {
+				clr_province_flag = oc_independence_excluded
+			}
+		}
+		add_prestige = 20
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+
+	chance = {
+		factor = 1000 # FIXME: I'm just unable to have anything working ! VeF didnt find a non-copypasting solution neither for its bishops
+		modifier = {
+			factor = 0.5
+			has_opinion = { who = FRA  value = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			has_opinion = { who = FRA  value = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			mil = 4
+		}
+		modifier = {
+			factor = 3
+			is_rival = FRA
+		}
+		modifier = {
+			factor = 3
+			culture_group = occitanocatala
+		}
+		modifier = {
+			factor = 3
+			FRA = {
+				any_owned_province = {
+					OR = {
+						culture_group = occitanocatala
+						culture = occitain
+						culture = arpitan
+						culture = gascon
+						culture = catalan
+					}
+					unrest = 0.1
+				}
+			}
+		}
+	}
+
+}
+
+control_strategic_province = {
+	
+	type = neighbor_provinces
+	category = MIL
+	ai_mission = yes
+
+	allow = {
+		OR = {
+			# Vanilla trade modifiers
+			has_province_modifier = center_of_trade_modifier 
+			has_province_modifier = bosphorous_sound_toll 
+			has_province_modifier = sound_toll 
+			has_province_modifier = river_estuary_modifier 
+			has_province_modifier = daugava_estuary_modifier
+			has_province_modifier = neman_estuary_modifier
+			has_province_modifier = vistula_estuary_modifier
+			has_province_modifier = oder_estuary_modifier
+			has_province_modifier = elbe_estuary_modifier
+			has_province_modifier = weser_estuary_modifier 
+			has_province_modifier = ems_estuary_modifier 
+			has_province_modifier = rhine_estuary_modifier 
+			has_province_modifier = thames_estuary_modifier 
+			has_province_modifier = rhone_estuary_modifier 
+			has_province_modifier = gironde_estuary_modifier 
+			has_province_modifier = loire_estuary_modifier 
+			has_province_modifier = seine_estuary_modifier
+			has_province_modifier = ebro_estuary_modifier
+			has_province_modifier = douro_estuary_modifier
+			has_province_modifier = tagus_estuary_modifier 
+			has_province_modifier = guadiana_estuary_modifier 
+			has_province_modifier = po_estuary_modifier 
+			has_province_modifier = danube_estuary_modifier 
+			has_province_modifier = dnestr_estuary_modifier 
+			has_province_modifier = dnieper_estuary_modifier 
+			has_province_modifier = volga_estuary_modifier 
+			has_province_modifier = don_estuary_modifier 
+			has_province_modifier = yangtze_estuary_modifier 
+			has_province_modifier = huang_he_estuary_modifier 
+			has_province_modifier = ganges_estuary_modifier 
+			has_province_modifier = indus_estuary_modifier 
+			has_province_modifier = euphrates_estuary_modifier 
+			has_province_modifier = nile_estuary_modifier 
+			has_province_modifier = gambia_estuary_modifier 
+			has_province_modifier = pearl_estuary_modifier 
+			has_province_modifier = parana_estuary_modifier 
+			has_province_modifier = mekong_estuary_modifier 
+			has_province_modifier = mississippi_estuary_modifier 
+			has_province_modifier = rio_grande_estuary_modifier 
+			has_province_modifier = niger_estuary_modifier 
+			has_province_modifier = saint_lawrence_estuary_modifier 
+			has_province_modifier = hudson_estuary_modifier 
+			has_province_modifier = nelson_eastuary_modifier 
+			has_province_modifier = mersey_estuary_modifier 
+			has_province_modifier = clyde_estuary_modifier 
+			has_province_modifier = tribes_of_galway_modifier 
+		}
+		FROM = { 
+			OR = {
+				government = republic
+				faction_in_power = trobador_republican
+			}
+		}
+		owner = { 
+			NOT = { truce_with = FROM } 
+			NOT = { is_subject_of = FROM }
+			NOT = { alliance_with = FROM }
+			NOT = { vassal_of = FROM }
+			NOT = { 
+				is_subject = yes
+				overlord = { alliance_with = FROM }
+			}
+			NOT = { has_opinion = { who = FROM value = 75 } }
+		}
+	}
+
+	success = {
+		owned_by = FROM
+	}
+	
+	abort = {
+		owner = { NOT = { is_neighbor_of = FROM } }
+	}
+
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 0.25
+			FROM = {
+				NOT = { government = republic }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				NOT = { trade_income_percentage = 0.30 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				NOT = { trade_income_percentage = 0.50 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = { army_size = FROM }
+		}
+		modifier = {
+			factor = 0.25
+			owner = { num_of_cities = 2 }
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.25
+			owner = { government = republic } # competiting republics
+		}
+		modifier = {
+			factor = 1.5
+			owner = { is_enemy = FROM }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { owner = { reverse_has_opinion = { who = FROM  value = -50 } } }
+		}
+	}
+	
+	immediate = {
+		add_claim = FROM
+	}
+
+	abort_effect = {
+		remove_claim = FROM
+	}
+
+	effect = {
+		FROM = {
+			add_prestige = 2
+			add_treasury = 25
+			add_mercantilism =  0.01
+		}
+	}
+	
+}

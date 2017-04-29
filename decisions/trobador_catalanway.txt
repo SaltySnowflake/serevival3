@@ -1,0 +1,177 @@
+country_decisions = {
+
+	give_birth_occitanism_cat = {
+		major = yes
+		potential = {
+			primary_culture = catalan
+			has_factions = yes
+			has_faction = trobador_occitanist
+			NOT = { has_country_flag = gave_birth_occitanism }
+		}
+		allow = {
+			adm_power = 25
+			NOT = { has_opinion = { who = CAS value = 125 } }
+			NOT = { has_opinion = { who = SPA value = 125 } }
+			faction_in_power = trobador_occitanist
+			capital_scope = { # mainly prints the variable so that we have an idea of what is happening
+				check_variable = { which = province_occitanism value = 20 }
+			}
+		}
+		effect = {
+			add_adm_power = -25
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = gascon
+							culture = occitain
+							culture = arpitan
+							culture = catalan
+						}
+					}
+					change_variable = { which = province_occitanism value = +20 }
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = gascon
+						culture = occitain
+						culture = arpitan
+						culture = catalan
+					}
+				}
+				custom_tooltip = "province_occitanism_name_20"
+			}
+			if = {
+				limit = { primary_culture = catalan }
+				every_country = {
+					limit = { primary_culture = castillian }
+					add_opinion = {
+						who = ROOT
+						modifier = opinion_mildly_displeased
+					}
+				}
+			}
+			add_faction_influence = { faction = trobador_occitanist influence = 10 }
+			add_prestige = 5
+			set_country_flag = gave_birth_occitanism
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					faction_in_power = trobador_castillian
+					has_opinion = { who = CAS value = 150 }
+					has_opinion = { who = SPA value = 150 }
+				}
+			}
+		}
+	}
+
+	assimilate_to_castillian_culture = {
+		major = yes
+		potential = {
+			primary_culture = catala
+			NOT = { has_country_flag = assimilated_to_castillian_culture }
+		}
+		allow = {
+			OR = {
+				exists = CAS
+				exists = SPA
+			}
+			OR = {
+				CAS = {
+					num_of_cities = 6
+					any_owned_province = {
+						OR = {
+							area = catalonia_area
+							area = valencia_area
+						}
+					}
+				}
+				SPA = {
+					num_of_cities = 6
+					any_owned_province = {
+						OR = {
+							area = catalonia_area
+							area = valencia_area
+						}
+					}
+				}
+			}
+			OR = {
+				faction_in_power = trobador_castillian
+				has_opinion = { who = CAS value = 200 }
+				has_opinion = { who = SPA value = 200 }
+			}
+			capital_scope = { # mainly prints the variable so that we have an idea of what is happening
+				NOT = { check_variable = { which = province_occitanism value = 80 } }
+			}
+		}
+		effect = {
+			add_adm_power = -10
+			hidden_effect = {
+				every_owned_province = {
+					limit = { culture_group = occitanocatala }
+					change_variable = { which = province_occitanism value = -40 }
+				}
+			}
+			every_owned_province = {
+				limit = { culture_group = occitanocatala }
+				custom_tooltip = "province_occitanism_name_-40"
+			}
+			CAS = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+			}
+			SPA = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+			}
+			add_faction_influence = { faction = trobador_castillian influence = 30 }
+			add_prestige = -10
+			set_country_flag = assimilated_to_castillian_culture
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { faction_in_power = trobador_castillian }
+				OR = {
+					NOT = { has_opinion = { who = CAS value = 150 } }
+					NOT = { has_opinion = { who = SPA value = 150 } }
+				}
+			}
+		}
+	}
+
+	provencal_irredentism = {
+		potential = {
+			primary_culture = catala
+			NOT = { is_core = 201 }
+			NOT = { 201 = { owner = { is_subject_of = ROOT } } } # we don't want ARA to apply this to MJC !
+			NOT = { is_year = 1450 }
+		}
+		allow = {
+			prestige = 50
+		}
+		effect = {
+			add_core = 201
+			201 = {
+				owner = {
+					add_opinion = {
+						who = ROOT
+						modifier = opinion_displeased
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,40 @@
+########################################
+# Events for Picardy
+#
+# written by Neprut
+########################################
+
+namespace = flavor_pic
+
+# Worf
+country_event = {
+	id = flavor_pic.1
+	title = flavor_pic.1.t
+	desc = flavor_pic.1.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = PIC
+		has_ruler = "Jean-Luc"
+		dynasty = "Picard"
+		is_year = 1461
+		NOT = { is_year = 1470 }
+	}
+	
+	mean_time_to_happen = { months = 24 }
+	
+	option = {
+		name = flavor_pic.1.a
+		define_general = {
+			name = "Worf"
+			fire = 0
+			shock = 6
+			manuever = 1
+			siege = 1
+		}
+		add_mil_power = 50
+	}
+	
+}

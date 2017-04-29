@@ -1,0 +1,359 @@
+### Neondt
+aboriginal_ideas = {
+	start = {
+		global_colonial_growth = 10
+		recover_army_morale_speed = 0.05
+	}	
+	bonus = {
+		core_creation = -0.25
+		ae_impact = -0.15
+	}	
+	trigger = {
+		primary_culture = aboriginal
+	}
+	free = yes
+	aboriginal_ascension = {
+		global_tax_modifier = 0.10
+	}
+	aboriginal_negotiation = {
+		prestige = 1
+		global_unrest = -1
+	}
+	aboriginal_mil = {
+		land_morale = 0.10
+	}
+	aboriginal_legacy = {
+		global_colonial_growth = 20
+		range = 0.25
+	}
+	aboriginal_design = {
+	 	build_cost = -0.10
+		development_cost = -0.10
+	}
+	aboriginal_exploration = {
+		colonists = 1
+	}
+	aboriginal_diplo = {
+		diplomatic_reputation = 1 #5 lel
+	}
+}
+ATJ_ideas = {
+	start = {
+		global_ship_cost = -0.1
+		naval_morale = 0.1
+	}
+	bonus = {
+		production_efficiency = 0.2
+	}
+	trigger = {
+		OR = { 
+			tag = ATJ
+			tag = PSA
+		}
+	}
+	free = yes
+	islamise_sumatra = {
+		global_missionary_strength = 0.02
+	}
+	rise_of_aceh = {
+		core_creation = -0.15
+	}
+	settle_the_islands = {
+		colonists = 1
+	}
+	military_adventures = {
+		land_morale = 0.15
+	}
+	atj_porch_of_mecca = {
+		technology_cost = -0.10
+	}
+	acehnese_moneylending = {
+		interest = -1
+	}
+	export_economy = {
+		global_trade_power = 0.1
+	}
+}
+### Neondt
+BEI_ideas = {
+	start = {
+		improve_relation_modifier = 0.3
+		light_ship_cost = -0.15
+	}
+	bonus = {
+		navy_tradition = 1
+	}
+	trigger = {
+		tag = BEI
+	}
+	free = yes
+	bolkiah_dynasty = {
+		heir_chance = 0.25
+	}
+	chinese_immigrants = {
+		global_trade_goods_size = 0.1
+	}
+	bei_thalassocracy = {
+		global_trade_power = 0.1
+		light_ship_power = 0.10
+	}
+	sea_traffic_tolls = {
+		trade_efficiency = 0.1
+	}
+	royal_court_structure = {
+		stability_cost_modifier = -0.1
+	}
+	great_fleets_bei = {
+		naval_maintenance_modifier = -0.2
+	}
+	settle_the_islands = {
+		colonists = 1
+	}
+}
+### Neondt
+BLI_ideas = {
+	start = {
+		global_trade_goods_size = 0.1
+		light_ship_cost = -0.20		
+	}
+	bonus = {
+		ae_impact = -0.15
+	}
+	trigger = {
+		tag = BLI
+	}
+	free = yes
+	javanese_culture = {
+		technology_cost = -0.05
+	}
+	aristocratic_refugees = {
+		prestige = 1
+	}
+	staunch_hindus = {
+		tolerance_own = 2
+	}
+	conquerer_dalems = {
+		land_morale = 0.15
+	}
+	bli_island_settlers = {
+		colonists = 1
+	}
+	hindu_reformation = {
+		global_missionary_strength = 0.03
+	}
+	rivals_to_slaves = {
+		manpower_recovery_speed = 0.10
+	}
+}
+### Neondt
+filipino_ideas = {
+	start = {
+		enemy_core_creation = 0.75
+		naval_morale = 0.15
+	}
+	bonus = {
+		hostile_attrition = 1.0
+	}
+	trigger = {
+		primary_culture = filipino
+		NOT = { tag = SUL }
+	}
+	free = yes
+	barangay_villages = {
+		stability_cost_modifier = -0.1
+	}
+	balanday_boats = {
+		galley_cost = -0.20
+	}
+	religious_pluralism_fil = {
+		religious_unity = 0.25
+	}
+	datu_nobility = {
+		legitimacy = 1
+	}
+	clandestine_trade = {
+		trade_steering = 0.10
+		spy_offence = 0.1
+	}
+	filipino_confederacies = {
+		global_unrest = -1
+	}
+	resist_european_colonialism = {
+		defensiveness = 0.25
+	}
+}
+### Neondt
+MAJ_ideas = {
+	start = {
+		relations_decay_of_me = 0.2
+		prestige_decay = -0.01	
+	}
+	bonus = {
+		naval_maintenance_modifier = -0.2
+	}
+	trigger = {
+		tag = MAJ
+	}
+	free = yes
+	maj_imperialism = {
+		vassal_income = 0.15
+	}
+	bi_yearly_harvest = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	pan_asian_trade = {
+		merchants = 1
+		trade_steering = 0.10
+	}
+	modernized_shipbuilding = {
+		global_ship_cost = -0.10
+	}
+	terracotta_banking = {
+		trade_efficiency = 0.1
+	}
+	maj_naval = {
+		naval_morale = 0.2
+	}
+	restored_empire_maj = {
+		prestige = 1
+	}
+}
+###Neondt
+maori_ideas = {
+	start = {
+		global_manpower_modifier = 0.20
+		tolerance_own = 1
+	}	
+	bonus = {
+		idea_cost = -0.1
+	}	
+	trigger = {
+		primary_culture = maori
+	}
+	free = yes	
+	cannibalism = {
+		land_morale = 0.10
+	}
+	utu_exchange = {
+		global_tax_modifier = 0.10
+	}
+	pounamu_weapons = {
+		infantry_power = 0.15
+	}
+	maori_mana = {
+		prestige = 1
+	}
+	canoe_legacy = {
+		navy_tradition = 0.25
+	}
+	musket_wars = {
+		leader_land_fire = 1
+	}
+	maori_king = {
+		legitimacy = 1
+	}
+}
+### Neondt
+MLC_ideas = {
+	start = {
+		navy_tradition = 0.25
+		naval_morale = 0.25
+	}
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	trigger = {
+		tag = MLC
+	}
+	free = yes
+	mlc_foreign_trade = {
+		diplomatic_reputation = 2
+		tolerance_heathen = 1
+	}
+	mlc_resources = {
+		production_efficiency = 0.1
+	}
+	mlc_straits = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	pandikars = {
+		discipline = 0.05
+	}
+	mlc_palace = {
+		prestige = 1
+	}
+	mlc_claimants = {
+		fabricate_claims_cost = -0.33
+	}
+	mlc_tribute = {
+		vassal_income = 0.15
+	}
+}
+### Neondt
+SUN_ideas = {
+	start = {
+		tolerance_heretic = 1
+		manpower_recovery_speed = 0.2
+	}
+	bonus = {
+		land_morale = 0.20
+	}
+	trigger = {
+		tag = SUN
+	}
+	free = yes
+	candi_shrines = {
+		religious_unity = 0.20
+	}
+	sunda_galuh = {
+		global_unrest = -1
+	}
+	defensive_moats = {
+		defensiveness = 0.2
+	}
+	wooden_architecture = {
+		build_cost = -0.1
+	}
+	pan_asian_trade = {
+	}
+	seren_taun = {
+		global_tax_modifier = 0.1
+	}
+	bi_yearly_harvest = {
+	}
+}
+### Neondt
+SUL_ideas = {
+	start = {
+		global_trade_power = 0.10
+		stability_cost_modifier = -0.1
+	}
+	bonus = {
+		merchants = 1
+	}
+	trigger = {
+		tag = SUL
+	}
+	free = yes
+	sufi_missionaries = {
+		global_missionary_strength = 0.02
+	}
+	sul_marriage = {
+		diplomats = 1
+	}
+	proas = {
+		light_ship_power = 0.2
+	}
+	brunei_relations = {
+		diplomatic_reputation = 2
+	}
+	lantaka = {
+		leader_naval_fire = 2
+	}
+	temporary_sultans = {
+		stability_cost_modifier = -0.1
+	}
+	moro_pirates = {
+		privateer_efficiency = 0.25
+	}
+}

@@ -1,0 +1,159 @@
+# Country name see file name.
+
+graphical_culture = westerngfx
+
+color = { 14  131  11 }			#National colours of most/all Gaels is blue. So many have a green-Gaelic connection that I might have to change this, though. (Yes, talking to you, reddband =p). Flag is also green, so it wouldn't be a bad choice at all, anyhow. NEP switched TNA and YYK, cause reasons. kek
+
+preferred_religion = catholic
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	exploration_ideas
+	economic_ideas
+	quality_ideas
+	naval_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	gaelic_galloglaigh
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	scottish_highlander
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+leader_names = {
+	#Irish names by Draiocht -based on historical castles and family holdings
+	"Ó Néill" "mac Artáin" "mac Aonghusa" "Ó hAnluain" "mac Cana"
+	"Clann Eanruig" "Ó hEaghra" "mac Pháil" "mac Lochlainn" "Ó Dochartaigh"
+	"Ó Catháin" "Ó Donnghaile" "Ó hÁgáin" "mac Mathghamhna" "Ó Raghallaigh"
+	"Ó Domhnaill" "mac Craith" "mac Uidhir" "Ó Baoighill" "mac Maonghail"
+	"Ó Cléirigh" "mac Fhlannchadha" "mac Samhradhain" "Ó Conchubhair"
+	"Ó hAirt" "Ó Ruairc" "mac Raghnaill" "mac Diarmata" "mac Donnchadha"
+	"Ó Gadhra" "Ó Dubhda" "mac Fhirbhisigh" "Ó Fearghail" "Ó Conchubhair Donn"
+	"Ó Conchubhair Rua" "Ó Ceallaigh" "Ó Mainnín" "Ó Domhnalláin" "Ó Dálaigh"
+	"Ó Máille" "Ó Flaithbheartaigh" "Ó Madadhan" "Ó Síoda" "mac Gormáin"
+	"Ó Deághaidh" "Ó Gríofa" "Ó Seachnasaigh" "mac na Mara" "Ó hUirthile"
+	"Ó Muirthile" "Ó hIarlatha" "Ó Grádaigh" "mac Eochagáin" "Ó Donnagáin"
+	"Ó Faoileacháin" "Ó Maonaigh" "Ó Maolmhuaidh" "Ó Duinn" "Ó Dúnlaing"
+	"Ó Mórdha" "mac Giolla Phádraig" "Ó Faoláin" "Ó Cearbhaill" "mac Giolla Phoil"
+	"Ó Meagher" "Ó Meadhra" "Ó Cinnéide" "Ó Cearnaigh" "Ó Tiarnaigh" "Ó Riagháin"
+	"Ó Fogaratigh" "Ó Dubhuir" "Ó hUrthuile" "Ó Liatháin" "Ó Cathail" "Ó hÉilí"
+	Craobhach "Ó Ceallacháin" "Ó Caoimh" "mac Cárthaigh" "Ó Floinn" "Ó Donnchadha"
+	"Ó Muircheartaigh" "Ó Chonaill" "Ó Laoghaire" "Ó hEidirsceoil" "Ó Súilleabháin Mór"
+	"Ó Súilleabháin Beare" "Ó Tuathail" "Ó Broin" "Ó hEochaidh" Caomhánach "Ó Briain" 
+	"Ó Séaghdha" "Ó hAonghusa" "Ó Cathasaigh" "Ó Donnabháin" "Ó hEidhin" "mac an Oirchinnigh"
+	"mac Cárthaigh Mór"
+	#Scottish names, was going to use vanilla, but it was questionable at best, so I'm leaving it with just Irish for right now. Will try to return later with proper Scottish names
+}
+
+monarch_names = {
+	"Donal #0" = 40
+	"Art #0" = 40
+	"Conn #0" = 40
+	"Einrí #0" = 40
+	"Áed #0" = 20
+	"Niall #0" = 20
+	"Brian #0" = 20
+	"Eoghan #0" = 20
+	"Séan #0" = 20
+	"Turlough #0" = 20
+	"Alaois #0" = 0
+	"Alastar #0" = 0
+	"Aonghus #0" = 0
+	"Bradáin #0" = 0
+	"Brennan #0" = 0
+	"Brónach #0" = 0
+	"Calbhach #0" = 0
+	"Caolan #0" = 0
+	"Carroll #0" = 0
+	"Ceallach #0" = 0
+	"Caerbhall #0" = 0
+	"Cian #0" = 0
+	"Conan #0" = 0
+	"Connor #0" = 0
+	"Diarmaid #0" = 0
+	"Dubghall #0" = 0
+	"Éamonn #0" = 0
+	"Fáelán #0" = 0
+	"Fearchar #0" = 0
+	"Fearghas #0" = 0
+	"Fionnlagh #0" = 0
+	"Flann #0" = 0
+	"Gallchobhair #0" = 0
+	"Gobán #0" = 0
+	"Grádaigh #0" = 0
+	"Lommán #0" = 0
+	"Maeleachlain #0" = 0
+	"Murchadha #0" = 0
+	"Naomhán #0" = 0
+	"Torin #0" = 0
+	
+	"Órfhlaith #0" = -1
+	"Affraic #0" = -1
+	"Aíbinn #0" = -1
+	"Aibilín #0" = -1
+	"Aileann #0" = -1
+	"Áine #0" = -1
+	"Brigit #0" = -1
+	"Cacht #0" = -1
+	"Caisséne #0" = -1
+	"Catríona #0" = -1
+	"Dubchoblaig #0" = -1
+	"Eithne #0" = -1
+	"Emer #0" = -1
+	"Étaín #0" = -1
+	"Gormflaith #0" = -1
+	"Gráinne #0" = -1
+	"Imag #0" = -1
+	"Íte #0" = -1
+	"Lann #0" = -1
+	"Lasairfíona #0" = -1
+	"Lerthan #0" = -1
+	"Muirenn #0" = -1
+	"Malmure #0" = -1
+	"Máire #0" = -1
+	"Máiread #0" = -1
+	"Mór #0" = -1
+	"Nuala #0" = -1
+	"Finnguala #0" = -1
+	"Órlaith #0" = -1
+	"Róis #0" = -1
+	"Sadb #0" = -1
+	"Seonaid #0" = -1
+	"Sinech #0" = -1
+	"Siobán #0" = -1
+	"Sisuile #0" = -1
+	"Sláíne #0" = -1
+	"Sorcha #0" = -1
+	"Sáerlaith #0" = -1
+	"Tailefhlaith #0" = -1
+	"Tailltiu #0" = -1
+	"Úna #0" = -1
+	"Éua #0" = -1
+}	#Few mistakes here, I might fix them later
+
+ship_names = {
+	"$PROVINCE$"
+}	#I really want to return here to do a few custom names, don't have time now, though
+
+army_names = {
+	"Army of $PROVINCE$" 
+}	#Would do Irish names here, but EU4 doesn't have the mechanics to apply the grammar, and the resulting mess would look very wrong to anyone who actually knows Irish. We could go with ass province name, but much aside from the oddity in English, it sounds awkward for this context in Irish, in my opinion
+
+fleet_names = {
+	"Fleet of $PROVINCE$"
+	#"an Chéad Loingeas Cogaidh" "an Dara Loingeas Cogaidh" "an Tríú Loingeas Cogaidh" "an Ceathrú Loingeas Cogaidh" "an Cúigiú Loingeas Cogaidh"
+}	#Same as army names, EU4 doesn't have mechanics to not butcher grammar, to the point of being worse than English. Might finish hidden ones at one point, if I'm patient enough to make enough.

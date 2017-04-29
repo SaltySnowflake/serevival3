@@ -1,0 +1,36 @@
+########################################
+# Events for Hedjaz
+#
+# written by Neprut
+########################################
+
+namespace = flavor_hed
+
+# Muhammad
+country_event = {
+	id = flavor_hed.1
+	title = flavor_hed.1.t
+	desc = flavor_hed.1.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = HED
+		war_with = KOJ
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = flavor_hed.1.a
+		define_general = {
+			name = "Muhammad Ali"
+			fire = 2
+			shock = 4
+			manuever = 3
+			siege = 2
+		}
+	}
+	
+}

@@ -1,0 +1,29 @@
+government = despotic_monarchy
+technology_group = chinese
+religion = buddhism
+primary_culture = chin #shan??
+capital = 580 # Kale
+
+1444.1.1 = {
+	monarch = {
+		name = "Chalamba"
+		dynasty = "Kale"
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Mungyamba"
+		monarch_name = "Mungyamba"
+		dynasty = "Kale"
+		birth_date = 1440.1.1
+		death_date = 1460.1.1
+		claim = 95
+		ADM = 1
+		DIP = 1
+		MIL = 1
+	}
+}

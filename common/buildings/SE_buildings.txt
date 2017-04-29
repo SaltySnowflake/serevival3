@@ -1,0 +1,459 @@
+SE_factory = {
+	cost = 700
+	time = 72
+	
+	manufactory = {
+		glass
+		chinaware
+		iron
+		tin
+		coal
+		lead
+		steel
+		paper
+		munitions
+		machinery
+		furniture
+		naval_supplies
+	}
+	modifier = {
+		trade_goods_size_modifier = 0.33
+		local_development_cost = -0.2
+		allowed_num_of_buildings = 1
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			owner = {
+				is_at_war = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { development = 10 }
+		}		
+		modifier = {
+			factor = 0.1
+			NOT = { development = 15 }
+		}
+		modifier = {
+			factor = 1.5
+			development = 20
+		}		
+		modifier = {
+			factor = 1.5
+			development = 25
+		}
+		modifier = {
+			factor = 1.5
+			development = 30
+		}	
+	}
+}
+
+farm_estate = {
+	cost = 500
+	time = 60
+	manufactory = {
+		grain
+		hemp
+		barley
+		maize
+		rice
+		millet
+		olives
+		citrus
+		potatoes
+		livestock
+		horses
+		apiculture
+		cheese
+		wine
+		beer
+	}
+	modifier = {
+		trade_goods_size_modifier = 0.25
+		local_tax_modifier = 0.25
+		local_manpower_modifier = 0.25
+	}
+	onmap = yes
+
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			owner = {
+				is_at_war = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { development = 10 }
+		}		
+		modifier = {
+			factor = 0.1
+			NOT = { development = 15 }
+		}
+		modifier = {
+			factor = 1.5
+			development = 20
+		}		
+		modifier = {
+			factor = 1.5
+			development = 25
+		}
+		modifier = {
+			factor = 1.5
+			development = 30
+		}		
+	}
+}
+
+		#building to enable tradegoods development
+		#requires you to own 2 (or 3, if grains) of the good you are developing away from, to avoid maxing out everything in your country
+SEtradegoods = {
+	cost = 200
+	time = 12
+	
+	trigger = {
+		OR = {
+			AND = {
+				trade_goods = grain 
+				owner = { grain = 3 }
+			}
+			AND = {
+				trade_goods = barley 
+				owner = { barley = 3 }
+			}
+			AND = {
+				trade_goods = rye 
+				owner = { rye = 3 }
+			}
+			AND = {
+				trade_goods = maize 
+				owner = { maize = 3 }
+			}
+			AND = {
+				trade_goods = rice 
+				owner = { rice = 3 }
+			}
+			AND = {
+				trade_goods = millet 
+				owner = { millet = 3 }
+			}
+			AND = {
+				trade_goods = sorghum 
+				owner = { sorghum = 3 }
+			}
+			AND = {
+				trade_goods = olives 
+				owner = { olives = 3 }
+			}
+			AND = {
+				trade_goods = palm_oil 
+				owner = { palm_oil = 2 }
+			}
+			AND = {
+				trade_goods = potatoes 
+				owner = { potatoes = 3 }
+			}
+			AND = {
+				trade_goods = citrus 
+				owner = { citrus = 2 }
+			}
+			AND = {
+				trade_goods = coffee 
+				owner = { coffee = 2 }
+			}
+			AND = {
+				trade_goods = sugar 
+				owner = { sugar = 2 }
+			}
+			AND = {
+				trade_goods = cocoa 
+				owner = { cocoa = 2 }
+			}
+			AND = {
+				trade_goods = tobacco 
+				owner = { tobacco = 2 }
+			}
+			AND = {
+				trade_goods = tea 
+				owner = { tea = 2 }
+			}
+			AND = {
+				trade_goods = opium 
+				owner = { opium = 2 }
+			}
+			AND = {
+				trade_goods = livestock 
+				owner = { livestock = 2 }
+			}
+			AND = {
+				trade_goods = cheese 
+				owner = { cheese = 2 }
+			}
+			AND = {
+				trade_goods = horses 
+				owner = { horses = 2 }
+			}
+			AND = {
+				trade_goods = apiculture 
+				owner = { apiculture = 2 }
+			}
+			AND = {
+				trade_goods = fish 
+				owner = { fish = 2 }
+			}
+			AND = {
+				trade_goods = whaling 
+				owner = { whaling = 2 }
+			}
+			AND = {
+				trade_goods = wine 
+				owner = { wine = 2 }
+			}
+			AND = {
+				trade_goods = beer 
+				owner = { beer = 2 }
+			}
+			AND = {
+				trade_goods = rum 
+				owner = { rum = 2 }
+			}
+			AND = {
+				trade_goods = wool 
+				owner = { wool = 2 }
+			}
+			AND = {
+				trade_goods = cashmere 
+				owner = { cashmere = 2 }
+			}
+			AND = {
+				trade_goods = camel 
+				owner = { camel = 2 }
+			}
+			AND = {
+				trade_goods = cotton 
+				owner = { cotton = 2 }
+			}
+			AND = {
+				trade_goods = cloth 
+				owner = { cloth = 2 }
+			}
+			AND = {
+				trade_goods = silk 
+				owner = { silk = 2 }
+			}
+			AND = {
+				trade_goods = linen 
+				owner = { linen = 2 }
+			}
+			AND = {
+				trade_goods = hemp 
+				owner = { hemp = 2 }
+			}
+			AND = {
+				trade_goods = fur 
+				owner = { fur = 2 }
+			}
+			AND = {
+				trade_goods = leather 
+				owner = { leather = 2 }
+			}
+			AND = {
+				trade_goods = naval_supplies 
+				owner = { naval_supplies = 2 }
+			}
+			AND = {
+				trade_goods = tar 
+				owner = { tar = 2 }
+			}
+			AND = {
+				trade_goods = lumber 
+				owner = { lumber = 2 }
+			}
+			AND = {
+				trade_goods = tropical_wood 
+				owner = { tropical_wood = 2 }
+			}
+			AND = {
+				trade_goods = sandal 
+				owner = { sandal = 2 }
+			}
+			AND = {
+				trade_goods = ebony 
+				owner = { ebony = 2 }
+			}
+			AND = {
+				trade_goods = mahogany 
+				owner = { mahogany = 2 }
+			}
+			AND = {
+				trade_goods = teak 
+				owner = { teak = 2 }
+			}
+			AND = {
+				trade_goods = bloodwood 
+				owner = { bloodwood = 2 }
+			}
+			AND = {
+				trade_goods = dyes 
+				owner = { dyes = 2 }
+			}
+			AND = {
+				trade_goods = woad 
+				owner = { woad = 2 }
+			}
+			AND = {
+				trade_goods = carmine 
+				owner = { carmine = 2 }
+			}
+			AND = {
+				trade_goods = ivory 
+				owner = { ivory = 2 }
+			}
+			AND = {
+				trade_goods = marble 
+				owner = { marble = 2 }
+			}
+			AND = {
+				trade_goods = glass 
+				owner = { glass = 2 }
+			}
+			AND = {
+				trade_goods = obsidian 
+				owner = { obsidian = 2 }
+			}
+			AND = {
+				trade_goods = jade 
+				owner = { jade = 2 }
+			}
+			AND = {
+				trade_goods = chinaware 
+				owner = { chinaware = 2 }
+			}
+			AND = {
+				trade_goods = carpet 
+				owner = { carpet = 2 }
+			}
+			AND = {
+				trade_goods = slaves 
+				owner = { slaves = 2 }
+			}
+			AND = {
+				trade_goods = gold 
+				owner = { gold = 2 }
+			}
+			AND = {
+				trade_goods = silver 
+				owner = { silver = 2 }
+			}
+			AND = {
+				trade_goods = gems 
+				owner = { gems = 2 }
+			}
+			AND = {
+				trade_goods = iron 
+				owner = { iron = 3 }
+			}
+			AND = {
+				trade_goods = copper 
+				owner = { copper = 33 }
+			}
+			AND = {
+				trade_goods = tin 
+				owner = { tin = 2 }
+			}
+			AND = {
+				trade_goods = lead 
+				owner = { lead = 2 }
+			}
+			AND = {
+				trade_goods = zinc 
+				owner = { zinc = 2 }
+			}
+			AND = {
+				trade_goods = mercury 
+				owner = { mercury = 2 }
+			}
+			AND = {
+				trade_goods = coal 
+				owner = { coal = 3 }
+			}
+			AND = {
+				trade_goods = steel 
+				owner = { steel = 2 }
+			}
+			AND = {
+				trade_goods = salt 
+				owner = { salt = 2 }
+			}
+			AND = {
+				trade_goods = sulphur 
+				owner = { sulphur = 2 }
+			}
+			AND = {
+				trade_goods = cinnamon 
+				owner = { cinnamon = 2 }
+			}
+			AND = {
+				trade_goods = spices 
+				owner = { spices = 2 }
+			}
+			AND = {
+				trade_goods = nutmeg 
+				owner = { nutmeg = 2 }
+			}
+			AND = {
+				trade_goods = clove 
+				owner = { clove = 2 }
+			}
+			AND = {
+				trade_goods = saffron 
+				owner = { saffron = 2 }
+			}
+			AND = {
+				trade_goods = vanilla 
+				owner = { vanilla = 2 }
+			}
+			AND = {
+				trade_goods = ginger 
+				owner = { ginger = 2 }
+			}
+			AND = {
+				trade_goods = paper 
+				owner = { paper = 2 }
+			}
+			AND = {
+				trade_goods = jewelry 
+				owner = { jewelry = 2 }
+			}
+			AND = {
+				trade_goods = munitions 
+				owner = { munitions = 2 }
+			}
+			AND = {
+				trade_goods = machinery 
+				owner = { machinery = 2 }
+			}
+			AND = {
+				trade_goods = furniture 
+				owner = { furniture = 2 }
+			}
+		}
+	}
+	
+	one_per_country = yes
+	
+	modifier = {
+		allowed_num_of_buildings = 1
+	}
+	
+	ai_will_do = {
+		factor = 0	
+	}
+}

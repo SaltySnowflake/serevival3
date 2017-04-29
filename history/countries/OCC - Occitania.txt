@@ -1,0 +1,5 @@
+government = feudal_monarchy
+primary_culture = occitano
+religion = catholic
+technology_group = western
+capital = 196	# Toulouse

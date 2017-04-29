@@ -1,0 +1,17 @@
+government = feudal_monarchy
+government_rank = 1
+religion = catholic
+primary_culture = catalan
+add_accepted_culture = greek
+technology_group = western #eastern
+capital = 147 # Thessaly 
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

@@ -1,0 +1,19 @@
+government = despotic_monarchy 
+primary_culture = armenian
+religion = apostolic
+technology_group = eastern
+capital = 419	# Yerevan
+
+historical_friend = CIL
+historical_friend = GEO
+historical_friend = IME
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

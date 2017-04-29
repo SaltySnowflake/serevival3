@@ -1,0 +1,41 @@
+country_decisions = {
+
+	reform_iceland_commonwealth = {
+		major = yes
+		potential = {
+			NOT = { government = thing }
+			tag = ICE
+		}
+		allow =  {
+			stability = 1
+			is_at_war = no
+			is_subject = no
+		}
+		effect = { change_government = thing }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					government = theocracy
+					government = republic
+				}
+			}
+		}
+	}
+	norse_romanticism_decision = {
+		potential = {
+			is_year = 1600
+			religion_group = christian
+			culture_group = scandinavian
+			NOT = { has_country_modifier = norse_romanticism }
+		}
+		allow = { dip = 4 }
+		effect = {
+			add_country_modifier = {
+				name = "norse_romanticism"
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,3 @@
+government = constitutional_republic
+technology_group = indian
+capital = 522 # Delhi

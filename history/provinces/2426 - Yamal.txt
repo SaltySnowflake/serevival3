@@ -1,0 +1,23 @@
+#2426 - Yamal
+
+culture = samoyed
+religion = finnish_pagan_reformed
+hre = no
+#base_tax = 1
+#base_manpower = 1
+#base_production = 1
+trade_goods = unknown
+capital = "Yamal"
+native_size = 1
+native_ferocity = 1
+native_hostileness = 3
+
+1450.1.1 = { discovered_by = SIB }
+1500.1.1 = { discovered_by = NOV }
+1581.1.1 = { discovered_by = RUS }
+1613.1.1  = {
+	owner = RUS
+	controller = RUS
+	religion = orthodox
+}
+1643.1.1  = { add_core = RUS }

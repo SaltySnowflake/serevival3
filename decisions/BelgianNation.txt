@@ -1,0 +1,101 @@
+country_decisions = {
+
+	belgian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				primary_culture = wallonian
+				primary_culture = flemish
+			}
+			NOT = { exists = BEL }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = NED }
+			NOT = { tag = WLN }
+			NOT = { tag = FRA }
+			OR = {
+				ai = no
+				num_of_cities = 3
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			OR = {
+				primary_culture = wallonian
+				AND = {
+					primary_culture = flemish
+					exists = NED
+				}
+			}
+			owns_core_province = 90 # Brugge
+			owns_core_province = 91 # Hainaut
+			owns_core_province = 92 # Brussel
+			owns_core_province = 93 # Liege
+			owns_core_province = 1742 # Limburg
+			owns_core_province = 1744 # Antwerpen
+			owns_core_province = 1865 # Ghent
+			owns_core_province = 1866 # Namur
+			owns_core_province = 2974 # Loon
+			owns_core_province = 3064 # Westhoek
+			owns_core_province = 3065 # Lille
+		}
+	 	effect = {
+			change_tag = BEL
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_capital = 92
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { province_id = 87 }
+					NOT = { province_id = 1931 }
+				}
+				add_permanent_claim = BEL
+			}
+			picardy_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = {
+						province_id = 89
+					}
+					NOT = {
+						province_id = 182
+					}
+				}
+				add_permanent_claim = BEL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+	
+}

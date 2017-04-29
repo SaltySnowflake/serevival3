@@ -1,0 +1,128 @@
+reverse_reconquista = {
+
+	type = country
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		region = iberia_region
+		owner = { NOT = { religion_group = muslim } }
+		any_neighbor_province = { owned_by = ROOT }
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		NOT = { has_country_modifier = reverse_the_reconquista }
+		NOT = { is_year = 1600 }
+		is_subject = no
+		is_at_war = no
+		religion_group = muslim
+		iberia_region = {
+			owned_by = ROOT
+			any_neighbor_province = { religion = catholic }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { religion_group = muslim }
+			NOT = { iberia_region = { owned_by = ROOT } }
+		}
+	}
+	success = {
+		any_target_province = { owned_by = ROOT }
+	}
+	immediate = {
+		every_target_province = { add_claim = ROOT }
+	}
+	abort_effect = { 
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 10
+			OR = {
+				exists = CAS
+				exists = SPA
+			}
+			iberia_region = {
+				OR = {
+					owned_by = CAS
+					owned_by = SPA
+				}
+			}
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "reverse_the_reconquista"
+			duration = 3650
+		}
+		hidden_effect = {
+			every_target_province = {
+				limit = { 
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				remove_claim = ROOT
+			}
+		}
+	}
+}
+
+capture_aragonese_trade = {
+
+	type = country
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = captured_aragonese_trade }
+		religion_group = muslim
+		is_subject = no
+		is_at_war = no
+		iberia_region = { owned_by = ROOT }
+		OR = {
+			220 = { is_neighbor_of = ROOT NOT = { owned_by = ROOT } }
+			213 = { is_neighbor_of = ROOT NOT = { owned_by = ROOT } }
+		}
+	}
+	abort = {
+		NOT = { iberia_region = { owned_by = ROOT } }
+	}
+	success = {
+		owns = 220
+		owns = 213
+	}
+	immediate = {
+		add_claim = 220
+		add_claim = 213
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 5
+			220 = { owned_by = ARA }
+			213 = { owned_by = ARA }
+		}
+	}
+	effect = {
+		set_country_flag = captured_aragonese_trade
+		add_prestige = 15
+		add_mercantilism = 3
+		add_dip_power = 100
+	}
+}

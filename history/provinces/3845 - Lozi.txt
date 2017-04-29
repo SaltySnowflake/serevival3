@@ -1,0 +1,13 @@
+#3845 - Lozi
+
+culture = bemba
+religion = bumuntu
+capital = "Lozi"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+native_size = 5
+native_ferocity = 2
+native_hostileness = 8

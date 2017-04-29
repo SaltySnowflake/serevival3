@@ -1,0 +1,56 @@
+# No previous file for Lipiyanes
+
+culture = apache #navajo
+religion = wakan_tanka
+capital = "Lipiyanes"
+trade_goods = maize
+hre = no
+base_tax = 2 #1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = QQE
+	controller = QQE
+	add_core = QQE
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = QQE
+	controller = QQE
+	add_core = QQE
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = QQE
+	controller = QQE
+	add_core = QQE
+	is_city = yes
+}
+
+1541.1.1 = { discovered_by = SPA }
+
+1760.1.1 = {
+	remove_core = QQE
+	owner = COM
+	controller = COM
+	add_core = COM
+	culture = shoshone 
+} #Great Plain tribes spread over vast territories

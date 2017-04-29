@@ -1,0 +1,16 @@
+government = tribal_federation
+primary_culture = alan
+religion = orthodox
+technology_group = eastern
+capital = 2201 # Alania
+historical_friend = CIR
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

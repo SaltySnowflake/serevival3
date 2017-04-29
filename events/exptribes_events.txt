@@ -1,0 +1,387 @@
+namespace = exptribes
+
+# Mound Builder disaster events
+# Sets plague modifier once a western country has discovered capital
+province_event = {
+	id = exptribes.2
+	title = "exptribes.2.t"
+	desc = "exptribes.2.d"
+	picture = PLAGUE_eventPicture
+	
+	trigger = {
+		owner = {
+			AND = {
+				government = native_monarchy
+				NOT = { has_country_flag = exptribes_plague_event }
+			}
+		}
+		is_capital = yes
+		any_country = {
+			AND = {
+				NOT = { capital_scope = { continent = north_america } }
+				NOT = { capital_scope = { continent = south_america } }
+				has_discovered = ROOT
+			}
+		}
+		
+	}
+	
+	mean_time_to_happen = { months = 12 }
+	
+	# Counter will determine when AI takes decision to change government to native council
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = exptribes_plague_event
+				set_variable = { 
+					which = exptribes_plague_event 
+					value = 0 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.2.a" #
+		owner = {
+			add_country_modifier = {
+				name = "exptribes_plagues"
+				duration = 18250
+			}
+		}
+	}
+}
+
+# Sets plague modifier if a western country has a city in North America
+country_event = {
+	id = exptribes.3
+	title = "exptribes.2.t"
+	desc = "exptribes.2.d"
+	picture = PLAGUE_eventPicture
+	
+	trigger = {
+		government = native_monarchy
+		NOT = { has_country_flag = exptribes_plague_event }
+		any_province = {
+			AND = {
+				owner = { 
+					NOT = { capital_scope = { continent = north_america } }
+					NOT = { capital_scope = { continent = south_america } }
+				}
+				continent = north_america
+			}
+		}
+		
+	}
+	
+	mean_time_to_happen = { months = 360 }
+	
+	# Counter will determine when AI takes decision to change government to native council
+	immediate = {
+		hidden_effect = {
+			set_country_flag = exptribes_plague_event
+			set_variable = { 
+				which = exptribes_plague_event 
+				value = 0 
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.2.a" #
+		add_country_modifier = {
+			name = "exptribes_plagues"
+			duration = 18250
+		}
+	}
+}
+
+# Province cannot pay taxes
+province_event = {
+	id = exptribes.4
+	title = "exptribes.4.t"
+	desc = "exptribes.4.d"
+	picture = BANKRUPTCY_eventPicture
+	
+	trigger = {
+		owner = { has_country_modifier = exptribes_plagues }
+	}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	immediate = {
+		hidden_effect = {
+			owner = {
+				change_variable = { 
+					which = exptribes_plague_event 
+					value = 1 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.4.a" # Those peasants will pay what they owe
+		add_province_modifier = {
+			name = "exptribes_plagues_unrest"
+			duration = 1825
+		}
+	}
+	
+	option = {
+		name = "exptribes.4.b" # We will offer them some relief
+		add_province_modifier = {
+			name = "exptribes_plagues_taxes"
+			duration = 1825
+		}
+	}
+}
+
+# People abandon province
+province_event = {
+	id = exptribes.5
+	title = "exptribes.5.t"
+	desc = "exptribes.5.d"
+	picture = NATIVES_eventPicture
+	
+	trigger = {
+		owner = { has_country_modifier = exptribes_plagues }
+		base_tax = 2
+	}
+	
+	mean_time_to_happen = { 
+		months = 240
+		modifier = {
+			factor = 0.25
+			has_province_modifier = exptribes_plagues_unrest
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			owner = {
+				change_variable = { 
+					which = exptribes_plague_event 
+					value = 1 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.5.a" # We're better off without them
+		add_base_tax = -1
+	}
+}
+
+# Population is too sick to farm
+province_event = {
+	id = exptribes.6
+	title = "exptribes.6.t"
+	desc = "exptribes.6.d"
+	picture = FAMINE_eventPicture
+	
+	trigger = {
+		owner = { has_country_modifier = exptribes_plagues }
+	}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	immediate = {
+		hidden_effect = {
+			owner = {
+				change_variable = { 
+					which = exptribes_plague_event 
+					value = 1 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.6.a" # We must provide for them
+		add_years_of_income = -0.75
+	}
+	
+	option = {
+		name = "exptribes.6.b" # There is nothing we can do
+		add_province_modifier = {
+			name = "exptribes_plagues_prod"
+			duration = 1825
+		}
+	}
+}
+
+# Farmland abandoned
+province_event = {
+	id = exptribes.7
+	title = "exptribes.7.t"
+	desc = "exptribes.7.d"
+	picture = FARMING_eventPicture
+	
+	trigger = {
+		owner = { has_country_modifier = exptribes_plagues }
+		base_production = 2
+	}
+	
+	mean_time_to_happen = { 
+		months = 240
+		modifier = {
+			factor = 0.25
+			has_province_modifier = exptribes_plagues_prod
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			owner = {
+				change_variable = { 
+					which = exptribes_plague_event 
+					value = 1 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.7.a" # We're better off without them
+		add_base_production = -1
+	}
+}
+
+# Too few braves to serve in the army
+province_event = {
+	id = exptribes.8
+	title = "exptribes.8.t"
+	desc = "exptribes.8.d"
+	picture = MILITARY_CAMP_eventPicture
+	
+	trigger = {
+		owner = { has_country_modifier = exptribes_plagues }
+	}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	immediate = {
+		hidden_effect = {
+			owner = {
+				change_variable = { 
+					which = exptribes_plague_event 
+					value = 1 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.8.a" # Allow commoners to into our ranks
+		add_stability = -1
+	}
+	
+	option = {
+		name = "exptribes.8.b" # Pray for peace
+		add_province_modifier = {
+			name = "exptribes_plagues_mp"
+			duration = 1825
+		}
+	}
+}
+
+# Province can no longer provide men for the army
+province_event = {
+	id = exptribes.9
+	title = "exptribes.9.t"
+	desc = "exptribes.9.d"
+	picture = MILITARY_CAMP_eventPicture
+	
+	trigger = {
+		owner = { has_country_modifier = exptribes_plagues }
+		base_manpower = 2
+	}
+	
+	mean_time_to_happen = { 
+		months = 240
+		modifier = {
+			factor = 0.25
+			has_province_modifier = exptribes_plagues_mp
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			owner = {
+				change_variable = { 
+					which = exptribes_plague_event 
+					value = 1 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.9.a"
+		add_base_manpower = -1
+	}
+}
+
+country_event = {
+	id = exptribes.10
+	title = "exptribes.10.t"
+	desc = "exptribes.10.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { ai = yes }
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = { government = native_noblecouncil }
+				add_adm_power = 500
+				add_dip_power = 500
+				add_mil_power = 500
+			}
+			every_country = {
+				limit = { government = native_monarchy }
+				add_adm_power = 1000
+				add_dip_power = 1000
+				add_mil_power = 1000
+			}
+		}
+	}
+	
+	option = { name = "exptribes.10.a" }
+}
+
+country_event = {
+	id = exptribes.100
+	title = "exptribes.2.t"
+	desc = "exptribes.2.d"
+	picture = PLAGUE_eventPicture
+	
+	is_triggered_only = yes
+	
+	# Counter will determine when AI takes decision to change government to native council
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = exptribes_plague_event
+				set_variable = { 
+					which = exptribes_plague_event 
+					value = 0 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "exptribes.2.a" #
+		owner = {
+			add_country_modifier = {
+				name = "exptribes_plagues"
+				duration = 18250
+			}
+		}
+	}
+}

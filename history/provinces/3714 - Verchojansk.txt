@@ -1,0 +1,18 @@
+#3112 - Verchojansk
+
+religion = tengri_pagan_reformed
+capital = "Verchojansk"
+culture = tungus
+trade_goods = unknown
+hre = no
+base_tax = 1 base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 2
+native_hostileness = 4
+
+1630.1.1  = { discovered_by = RUS } 
+1645.1.1  = { owner = RUS
+	      controller = RUS
+	      religion = orthodox }
+1675.1.1  = { add_core = RUS }

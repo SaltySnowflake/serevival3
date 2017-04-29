@@ -1,0 +1,48 @@
+#2736 - Nukunu
+
+culture = aboriginal
+religion = tjukurpa
+capital = "Nukunu"
+trade_goods = barley
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3 #1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 9
+discovered_by = aboriginal
+
+
+1444.11.2 = {
+	owner = AO5
+	controller = AO5
+	add_core = AO5
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = AO5
+	controller = AO5
+	add_core = AO5
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = AO5
+	controller = AO5
+	add_core = AO5
+	is_city = yes
+}
+
+1802.1.1 = { discovered_by = GBR } # Matthew Flinders

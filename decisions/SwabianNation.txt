@@ -1,0 +1,82 @@
+country_decisions = {
+
+	swabian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				primary_culture = swabian
+				primary_culture = swiss
+			}
+			NOT = { exists = SWB }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			OR = {
+				num_of_cities = 7
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			#adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 74		#Baden
+			owns_core_province = 70		#Wurtteemberg
+			owns_core_province = 1872	#Ulm
+			owns_core_province = 68		#Memmingen
+			owns_core_province = 1868	#Augsburg
+			owns_core_province = 1870	#St Gallen
+			owns_core_province = 165	#Bern
+		}
+		effect = {
+			change_tag = SWB
+			random_owned_province = {
+				limit = {
+					OR = {
+						culture = swabian
+						culture = swiss
+					}
+				}
+				add_base_tax = 1
+			}
+			upper_rhineland_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = SWB
+			}
+			lower_swabia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = SWB
+			}
+			upper_swabia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = SWB
+			}
+			romandie_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = SWB
+			}
+			switzerland_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = SWB
+			}
+			3053 = { add_permanent_claim = SWB }
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

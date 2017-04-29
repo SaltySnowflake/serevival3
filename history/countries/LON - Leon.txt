@@ -1,0 +1,17 @@
+government = feudal_monarchy
+government_rank = 1
+primary_culture = leonese
+religion = catholic
+technology_group = western
+capital = 208 #Leon
+
+1441.11.01 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+1444.11.11 = { government_rank = 2 }

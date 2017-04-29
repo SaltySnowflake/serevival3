@@ -1,0 +1,552 @@
+# Cascadia
+colonial_cascadia = {
+	color = { 10 120 40 }
+
+	# Random New World
+	tax_income = 0
+	native_size = 4
+	native_ferocity = 2
+	native_hostileness = 8
+	
+	trade_goods = {
+		fish = 10
+		fur = 6
+		naval_supplies = 6
+		wool = 2
+		iron = 1
+		copper = 1
+	}
+	
+	culture = {
+		salish = 10
+		interior_salish = 10
+		plateau_penutian = 10
+		chinook = 4
+		dakelh = 4
+		wakashan = 2
+		coast_penutian = 2
+		ktunaxa = 2
+		shoshone = 2
+		nuxalk = 1
+		umpqua = 1
+		tlingit = 1
+		haida = 1
+		quileute = 1
+		tsimshianic = 1
+	}
+	
+	religion = {
+		shamanism = 10
+	}
+
+	provinces = {
+		#ALASKANCASCADIA
+		975 974 972 2610 2609 2022
+		#CALIFORNIANCASCADIA
+		973 2484 2485 874 873 872 2481 2482 2483 2486 2489 2604 2605 2606 2607 2488 2019 2003 2487 2020
+		#BTNEWPROVINCES
+		4941 4949 4946 4956 4958 4947 4948 4960 4940 4942 4943 4944 4945 4961 4957 4988 4982
+		#BTNEWPROVINCESWASTELANDS
+		#5115 #5116 #5117 #1913
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			AND = {
+				culture_group = british
+				NOT = { tag = USA }
+			}
+		}
+		name = "COLONIAL_CALIFORNIA_New_Albion"
+	}
+	names = {
+		trigger = {
+			tag = USA
+		}
+		name = "COLONIAL_CALIFORNIA_Oregon"
+	}
+	names = {
+		trigger = {
+			culture_group = iberian
+		}
+		name = "COLONIAL_CALIFORNIA_Columbia"
+	}
+	
+	# Generic
+	names = {
+		name = "COLONIAL_CALIFORNIA_Root_Culture_GetGroupName_Cascadia"
+	}
+	names = {
+		name = "COLONIAL_CALIFORNIA_Root_Culture_GetGroupName_Columbia"
+	}
+	names = {
+		name = "COLONIAL_CALIFORNIA_Cascadia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+#NWT
+colonial_northwest_territories = {
+	color = { 95 65 35 }
+
+	# Random New World
+	tax_income = 0
+	native_size = 4
+	native_ferocity = 2
+	native_hostileness = 8
+	
+	trade_goods = {
+		fur = 10
+		naval_supplies = 6
+		wool = 6
+		iron = 2
+		copper = 2
+		gold = 1
+	}
+	
+	culture = {
+		athabascan = 10
+		chipewyan = 3
+	}
+	
+	religion = {
+		shamanism = 10
+	}
+
+	provinces = {
+		2599 2600 2601 2603
+		#BTNEWPROVINCES
+		4980 4985 4983 4986 4987 5041 4989 4937 4938 5040 4976 4977 4978 5000 5001 5033 4984 4972 4981
+		#BTNEWPROVINCESWASTELANDS
+		#5114 #5122 #5126 #1811 #1812 #1814 
+	}
+
+	# Specific
+
+	
+	# Generic
+	names = {
+		name = "COLONIAL_NWT_Northwest_Territories"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+#HudsonBay
+colonial_hudson_bay = {
+	color = { 200 20 20 }
+
+	# Random New World
+	tax_income = 0
+	native_size = 4
+	native_ferocity = 2
+	native_hostileness = 8
+	
+	trade_goods = {
+		fur = 10
+		naval_supplies = 6
+		wool = 6
+		iron = 2
+		copper = 2
+		gold = 1
+	}
+	
+	culture = {
+		cree = 10
+		inuit = 10
+		nakota = 2
+		cheyenne = 2
+		chipewyan = 2
+	}
+	
+	religion = {
+		shamanism = 10
+	}
+
+	provinces = {
+		999 1000 1003 1004 1005 1006 1008 1009 1010 1011 1805 1806 1811 1813 2004 2005 2016 2017 2018 2589 2591 2592 2593 2594 2596 2597 2598 2602 2511 1812 1002 2595
+		#BTNEWPROVINCES
+		4990 4991 4992 4993 4994 4995 4996 4997 4998 4999 5002 5003 5004 5005 5006 5007 5008 5009 5034 5035 5036 5057
+		#BTNEWPROVINCESWASTELANDS
+		998
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+		}
+		name = "COLONIAL_CANADA_Ruperts_Land"
+	}
+	names = {
+		trigger = {
+			owns = 1010 # Manitoba
+		}
+		name = "PROV1010"
+	}
+	
+	# Generic
+	names = {
+		name = "COLONIAL_CANADA_Borealia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+#Newfoundland
+colonial_newfoundland = {
+	color = { 120 100 80 }
+
+	# Random New World
+	tax_income = 0
+	native_size = 4
+	native_ferocity = 2
+	native_hostileness = 8
+	
+	trade_goods = {
+		fish = 10
+	}
+	
+	culture = {
+		beothuk = 10
+		mikmaq = 1
+	}
+	
+	religion = {
+		shamanism = 10
+	}
+
+	provinces = {
+		980 981 2573 
+		#BTNEWPROVINCES
+		5013 5019 4974 5058 5059
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			tag = ENG
+			any_owned_province = {
+				area = wales_area
+			}
+		}
+		name = "COLONIAL_CANADA_Avalon"
+	}
+	names = {
+		trigger = {
+			culture_group = british
+		}
+		name = "COLONIAL_CANADA_Newfoundland"
+	}
+	names = {
+		trigger = {
+			culture_group = scandinavian
+		}
+		name = "COLONIAL_CANADA_Vinland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = castillian
+				primary_culture = leonese
+				primary_culture = aragonese
+				primary_culture = catalan
+				primary_culture = galician
+			}
+		}
+		name = "COLONIAL_CANADA_Terra_Nova"
+	}
+	names = {
+		trigger = {
+			culture_group = french
+		}
+		name = "COLONIAL_CANADA_Terre_Neuve"
+	}
+	names = {
+		trigger = {
+			primary_culture = irish
+		}
+		name = "COLONIAL_CANADA_Talamh_an_Eisc"
+	}
+	names = {
+		trigger = {
+			primary_culture = highland_scottish
+		}
+		name = "COLONIAL_CANADA_Eilean_an_Truisg"
+	}
+	names = {
+		trigger = {
+			primary_culture = breton
+		}
+		name = "COLONIAL_CANADA_Douar_Nevez"
+	}
+	names = {
+		trigger = {
+			primary_culture = basque
+		}
+		name = "COLONIAL_CANADA_Ternua"
+	}
+	names = {
+		trigger = {
+			primary_culture = portugese
+		}
+		name = "COLONIAL_CANADA_Bacallao"
+	}
+	names = {
+		trigger = {
+			primary_culture = welsh
+		}
+		name = "COLONIAL_CANADA_Afallon"
+	}
+	
+	# Generic
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Newfoundland"
+	}
+}
+
+#Acadia
+colonial_acadia = {
+	color = { 120 40 160 }
+
+	# Random New World
+	tax_income = 0
+	native_size = 10
+	native_ferocity = 1
+	native_hostileness = 3
+	
+	trade_goods = {
+		fish = 10
+		naval_supplies = 10
+	}
+	
+	culture = {
+		mikmaq = 10
+		abenaki = 1
+	}
+	
+	religion = {
+		shamanism = 10
+	}
+
+	provinces = {
+		2568 2569 984 5047 5048 982 983 985 2572 2570 2571 971 2566 2567 5046 5049 5050 5051 5052
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			primary_culture = highland_scottish
+		}
+		name = "COLONIAL_CANADA_Alba_Nuadh"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_CANADA_Acadia"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			SCO = {
+				exists = no
+			}
+			any_owned_province = {
+				OR = {
+					area = highlands_area
+					area = lowlands_area
+					area = southern_isles_area
+				}
+			}
+		}
+		name = "COLONIAL_CANADA_Nova_Scotia"
+	}
+	names = {
+		trigger = {
+			tag = SCO
+		}
+		name = "COLONIAL_CANADA_Nova_Scotia"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+		}
+		name = "COLONIAL_CANADA_Nova_Hollandia"
+	}
+#	names = {
+#		trigger = {
+#			tag = FRA
+#			OR = {
+#				any_owned_province = {
+#					OR = {
+#						area = highlands_area
+#						area = lowlands_area
+#					}
+#				}
+#				overlord_of = SCO
+#				alliance_with = SCO
+#			}
+#		}
+#		name = "COLONIAL_CANADA_Nouvelle_Écosse"
+#	}
+#	names = {
+#		trigger = {
+#			tag = SCO
+#		}
+#		name = "COLONIAL_CANADA_Nouvelle_Écosse"
+#	}
+	
+	# Generic
+	names = {
+		name = "COLONIAL_CANADA_Acadia"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Nova_Scotia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Greenland
+colonial_greenland = {
+	color = { 47 188 22 }
+
+	# Random New World
+	tax_income = 0
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 8
+	
+	trade_goods = {
+		fish = 10
+	}
+	
+	culture = {
+		kalaallisut = 10
+	}
+	
+	religion = {
+		shamanism = 10
+	}
+
+	provinces = {
+		1104 1105 3111 3112 3113
+		#BTCHANGES
+		1804
+	}
+
+	# Generic
+	names = {
+		name = "COLONIAL_GREENLAND_Greenland"
+	}
+}
+
+# Amazonia 
+colonial_amazonia = {
+	color = { 29 100 46 }
+
+	provinces = {
+		748 2890 747 2928 2929 2935 2900 2930 2934 2933 2889 2938
+		3942 3943 3944 3945 3946 3947 3948 3949 3950 3951 3952 3953 3954 3955
+		3956 3957 3958 3959 3960 3961 3962 3963 3964
+	}
+	
+	# Generic
+	names = {
+		name = "COLONIAL_AMAZONIA_Root_Culture_GetName_Amazonia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Panama
+colonial_panama = {
+	color = { 131 228 232 }
+
+	provinces = {
+	 835 836 837 838 839 840 843 2002 2637 2640 2660 2661 2662 2663 2664 2819 2653 2636 2634 846 2652 2633 2651 845 2650 842 841 2632 2635 2638 2649
+	}
+	
+	# Generic
+	names = {
+		name = "COLONIAL_PANAMA_Root_Culture_GetName_Panama"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		trigger = {
+			owns = 843 # Belize
+		}
+		name = "PROV843"
+	}
+	names = {
+		trigger = {
+			owns = 837 # Nicaragua
+		}
+		name = "PROV837"
+	}
+	names = {
+		trigger = {
+			owns = 835 # Panama
+		}
+		name = "PROV835"
+	}
+	names = {
+		trigger = {
+			owns = 840 # Honduras
+		}
+		name = "PROV840"
+	}
+}
+
+# Oceania / New Zealand
+colonial_oceania = {
+	color = { 90 250 127 }
+
+	provinces = {
+		1238 1239 1242 1243 1244 1986 1987 1988 1989 #Oceania
+		1246 1109 2738 1107 2737 1108 2739 1106 #New Zeland
+		5021 5022 5023 5024 5025 5026
+		
+	}
+	names = {
+		trigger = {
+			any_owned_province = {
+				region = new_zealand_region
+			}
+		}
+		name = "COLONIAL_OCEANIA_New_Zealand"
+	}	
+	# Generic
+	names = {
+		name = "COLONIAL_OCEANIA_Root_Culture_GetName_Oceania"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}

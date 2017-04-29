@@ -1,0 +1,20 @@
+bookmark =
+{
+	name = "BTP_BOOKMARK"
+	desc = "BTP_BOOKMARK_DESC"
+	date = 1444.11.01
+	
+	center = 1284
+	default = yes
+	
+	country = TYR
+	country = TYC
+	country = ATM
+	country = KID
+	country = LAI
+	country = DMS
+	country = THO
+	country = SLN
+	country = GLW
+	
+}

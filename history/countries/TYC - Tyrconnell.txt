@@ -1,0 +1,44 @@
+government = irish_clann
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 3004	# Tyrconnell
+fixed_capital = 3004
+historical_friend = TYR
+historical_friend = CLN
+
+1410.1.1 = {
+	monarch = {
+		name = "Hugh"
+		dynasty = "O'Donnell"
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+1428.1.1 = {
+	heir = {
+		name = "Hugh"
+		monarch_name = "Hugh II"
+		dynasty = "O'Donnell"
+		birth_date = 1428.1.1
+		death_date = 1490.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+		
+
+1444.1.1 = {
+	monarch = {
+		name = "Hugh"
+		dynasty = "O'Donnell"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

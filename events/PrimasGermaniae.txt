@@ -1,0 +1,360 @@
+# Primas Germaniae event series
+
+normal_or_historical_nations = yes
+
+# Primas Germaniae
+country_event = {
+	id = 759
+	title = "EVTNAME759"
+	desc = "primas_mai759.d"
+	picture = POPE_PREACHING_eventPicture
+	
+	trigger = {
+		government = theocratic_government
+		capital_scope = { 
+			OR = {
+				region = north_german_region
+				region = south_german_region
+				region = low_countries_region
+				area = west_prussia_area
+				area = east_prussia_area
+				area = pomerelia_area
+			}
+		}
+		religion = catholic
+		prestige = 0
+		OR = {
+			AND = {
+				tag = MAI
+				NOT = { has_country_modifier = primas_germaniae }
+				NOT = { has_global_flag = happened_759 }
+			}
+			has_global_flag = no_primas_germaniae
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 24
+		
+		modifier = {
+			factor = 0.1
+			NOT = { has_global_flag = happened_759 }
+		}
+		modifier = {
+			factor = 0.5
+			government_rank = 2
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = no_primas_germaniae
+			every_country = {
+				limit = { has_country_flag = new_primas_germaniae }
+				clr_country_flag = new_primas_germaniae
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA759"
+		add_country_modifier = {
+			name = "primas_germaniae"
+			duration = -1
+		}
+		set_global_flag = happened_759
+		set_country_flag = new_primas_germaniae
+		add_prestige = 5
+	}
+}
+
+# Title of Primas Germaniae Questioned
+country_event = {
+	id = 760
+	title = "EVTNAME760"
+	desc = "primas_mai760.d"
+	picture = POPE_PREACHING_eventPicture
+	
+	trigger = {
+		papacy_active = yes
+		has_country_modifier = primas_germaniae
+		had_country_flag = { flag = new_primas_germaniae days = 730 } 
+		any_country = {
+			capital_scope = { 
+				OR = {
+					region = north_german_region
+					region = south_german_region
+					region = low_countries_region
+					area = west_prussia_area
+					area = east_prussia_area
+					area = pomerelia_area
+				}
+			}
+			government = theocratic_government
+			religion = catholic
+			prestige = ROOT
+			NOT = { has_country_modifier = primas_germaniae_declined }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = { devotion = 50 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { prestige = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { prestige = 25 }
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 2
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 3
+		}
+		modifier = {
+			factor = 1.5
+			papal_influence = 20 
+		}
+		modifier = {
+			factor = 1.5
+			papal_influence = 40
+		}
+		modifier = {
+			factor = 1.25
+			reverse_has_opinion = { who = PAP value = 100 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { reverse_has_opinion = { who = PAP value = 50 } }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { reverse_has_opinion = { who = PAP value = 0 } }
+		}
+		modifier = {
+			factor = 3
+			has_global_flag = primas_germaniae_no_candidate
+		}
+	}
+
+	option = {
+		name = "EVTOPTA760"
+		hidden_effect = {
+			random_country = {
+				limit = {
+					capital_scope = {
+						OR = {
+							region = north_german_region
+							region = south_german_region
+							region = low_countries_region
+							area = west_prussia_area
+							area = east_prussia_area
+							area = pomerelia_area
+						}
+					}
+					government = theocratic_government
+					religion = catholic
+					prestige = ROOT
+					NOT = { has_country_modifier = primas_germaniae }
+					NOT = { has_country_modifier = primas_germaniae_declined }
+				}
+				set_global_flag = primas_germaniae_candidate_found
+				country_event = { id = 761 days = 2 }
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = primas_germaniae_candidate_found }
+				}
+				set_global_flag = primas_germaniae_no_candidate
+			}
+		}		
+	}
+}
+
+# New Primas Germaniae
+country_event = {
+	id = 761
+	title = "EVTNAME761"
+	desc = "primas_mai761.d"
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA761"
+		ai_chance = { factor = 60 }
+		every_country = {
+			limit = { has_country_modifier = primas_germaniae }
+			clr_country_flag = new_primas_germaniae
+			set_country_flag = primas_germaniae_lost
+			remove_country_modifier = primas_germaniae
+			add_casus_belli = {	
+				target = ROOT
+				type = cb_insult
+				months = 12
+			}
+			add_opinion = { who = ROOT modifier = opinion_accepted_primas_germaniae }			
+			country_event = { id = 762 days = 2 }
+		}
+		add_prestige = 2
+		add_country_modifier = {
+			name = "primas_germaniae"
+			duration = -1
+		}
+		set_country_flag = new_primas_germaniae
+		clr_global_flag = no_primas_germaniae
+	}
+	option = {
+		name = "EVTOPTB761"
+		ai_chance = { 
+			factor = 20 
+			
+			modifier = {
+				factor = 0
+				NOT = { has_opinion = { who = FROM value = -50 } }
+			}
+		}
+		trigger = { NOT = { has_global_flag = no_primas_germaniae } }
+		add_devotion = 3
+		add_country_modifier = {
+			name = primas_germaniae_declined
+			duration = 1825
+			hidden = yes
+		}
+	}
+	option = {
+		name = "EVTOPTC761"
+		ai_chance = { 
+			factor = 10
+			
+			modifier = {
+				factor = 0
+				NOT = { has_opinion = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 10
+				has_opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 3
+				has_opinion = { who = FROM value = 150 }
+			}
+		}
+		trigger = { NOT = { has_global_flag = no_primas_germaniae } }
+		reverse_add_opinion = { who = FROM modifier = opinion_supported_primas_germaniae }
+		add_prestige = -2
+		add_ruler_modifier = {
+			name = primas_germaniae_declined
+			hidden = yes
+		}
+	}
+}
+
+# Primas Germaniae Lost
+country_event = {
+	id = 762
+	title = "EVTNAME762"
+	desc = "primas_mai762.d"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		papacy_active = yes
+		has_country_flag = primas_germaniae_lost
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA762"
+		ai_chance = { factor = 50 }
+		every_country = {
+			limit = { has_country_modifier = primas_germaniae }
+			add_opinion = { who = ROOT modifier = opinion_congratulated_new_primas_germaniae }
+			reverse_remove_casus_belli = {	
+				target = ROOT
+				type = cb_insult
+			}
+		}
+		clr_country_flag = primas_germaniae_lost
+		add_prestige = 1
+	}
+	option = {
+		name = "EVTOPTB762"
+		ai_chance = { factor = 50 }
+		every_country = {
+			limit = { has_country_modifier = primas_germaniae }
+			add_opinion = { who = ROOT modifier = opinion_lost_primas_germaniae }
+		}
+		clr_country_flag = primas_germaniae_lost
+	}
+}
+
+# Title of Primas Germaniae Lost
+country_event = {
+	id = 962
+	title = "EVTNAME962"
+	desc = "EVTDESC962"
+	picture = POPE_PREACHING_eventPicture
+	
+	trigger = {
+		has_country_flag = new_primas_germaniae
+		OR = {
+			NOT = {
+				capital_scope = { 
+					OR = {
+						region = north_german_region
+						region = south_german_region
+						region = low_countries_region
+						area = west_prussia_area
+						area = east_prussia_area
+						area = pomerelia_area
+					}
+				}
+			}
+			papacy_active = no
+			NOT = { government = theocratic_government }
+			NOT = { religion = catholic }
+			NOT = { reverse_has_opinion = { who = PAP value = -50 } }
+			NOT = { has_country_modifier = primas_germaniae }
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "EVTOPTA962"
+		remove_country_modifier = primas_germaniae
+		clr_country_flag = new_primas_germaniae
+		set_global_flag = no_primas_germaniae
+		hidden_effect = {
+			random_country = {
+				limit = {
+					capital_scope = { 
+						OR = {
+							region = north_german_region
+							region = south_german_region
+							region = low_countries_region
+							area = west_prussia_area
+							area = east_prussia_area
+							area = pomerelia_area
+						}
+					}
+					government = theocratic_government
+					religion = catholic
+					prestige = 0
+				}
+				clr_country_flag = primas_germaniae_declined
+				set_global_flag = primas_germaniae_candidate_found
+				country_event = { id = 761 days = 3 }
+			}
+		}
+	}
+}

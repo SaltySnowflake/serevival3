@@ -1,0 +1,15 @@
+government = feudal_monarchy
+primary_culture = leonese
+religion = catholic
+technology_group = western
+capital = 207 #Asurias
+
+1441.11.01 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

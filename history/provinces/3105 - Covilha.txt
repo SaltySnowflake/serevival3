@@ -1,0 +1,33 @@
+#3105 - Covilhã
+#Region - Iberia
+#Area - Beiras
+
+owner = POR
+controller = POR
+culture = portugese
+religion = catholic
+capital = "Covilhã"
+trade_goods = livestock
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+is_city = yes
+add_core = POR
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.01 = { culture = andalucian religion = sunni remove_core = POR add_core = BDJ owner = BDJ add_local_autonomy = 0 }
+1444.11.11 = { culture = portugese religion = catholic add_core = POR remove_core = BDJ owner = POR add_local_autonomy = -30 }
+
+1580.8.25 = { controller = SPA }
+1580.8.26 = { controller = POR }
+1640.1.1 = { unrest = 8 } # Revolt headed by John of Bragança
+1640.12.1 = { unrest = 0 }
+1807.11.30 = { controller = FRA } # Occupied by France
+1808.8.30 = { controller = POR }
+1810.7.25 = { controller = FRA } # Invaded after the battle of Côa
+1811.1.1 = { controller = POR } # The Napoleonic army retreats from Portugal

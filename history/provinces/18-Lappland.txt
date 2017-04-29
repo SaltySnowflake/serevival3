@@ -1,0 +1,34 @@
+#Lapland, the far north wastelands.
+#Region - Scandinavia
+#Area - Norrland
+
+capital = "Kiirunavaara"
+culture = sapmi
+religion = finnish_pagan_reformed
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = unknown
+base_manpower = 1
+native_hostileness = 1
+native_size = 3
+native_ferocity = 2
+
+discovered_by = western
+discovered_by = eastern
+
+1440.1.1 = {
+	owner = SMI
+	controller = SMI 
+	add_core = SMI
+	is_city = yes
+	#add_local_autonomy = 90
+	trade_goods = iron
+} 
+
+1444.11.11 = { add_core = SWE owner = SWE add_local_autonomy = -12 }
+
+1470.1.1 = { religion = catholic }			#Made up date for Christianisation
+1640.1.2 = { culture = swedish }
+1640.1.2 = { religion = protestant }
+

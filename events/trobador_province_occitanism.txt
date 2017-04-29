@@ -1,0 +1,640 @@
+namespace = trobador_province_occitanism
+
+# Those events will handle the variable province_occitanism, whose value is between 0 and 100 for each province
+# <50 means french/iberian group and >50 occitanocatala group
+# it will be affected by owner, accepted_culture, faction, events, ...
+
+# Initialising the variable at startup
+country_event = {
+	id = trobador_province_occitanism.1
+	title = "trobador_province_occitanism_1_title"
+	desc = "trobador_province_occitanism_1_desc"
+	picture = CULTURE_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+					OR = {
+						culture = gascon
+						culture = occitain
+						culture = arpitan
+						culture = catalan
+					}
+				}
+				set_variable = { which = province_occitanism value = 40 }
+				if = {
+					limit = { is_year = 1400 }
+					set_variable = { which = province_occitanism value = 30 }
+				}
+				if = {
+					limit = { is_year = 1500 }
+					set_variable = { which = province_occitanism value = 20 }
+				}
+				if = {
+					limit = { is_year = 1600 }
+					set_variable = { which = province_occitanism value = 10 }
+				}
+				if = {
+					limit = { is_year = 1700 }
+					set_variable = { which = province_occitanism value = 0 }
+				}
+				set_province_flag = province_occitanism_active
+			}
+			every_province = {
+				limit = { 
+					culture_group = occitanocatala
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				set_variable = { which = province_occitanism value = 60 }
+				set_province_flag = province_occitanism_active
+			}
+			# Initialisation is finished
+			set_global_flag = trobador_province_occitanism_initialised
+			set_global_flag = province_occitanism_updated # setup timer
+		}
+	}
+
+	option = {
+		name = "trobador_ok"		# OK
+	}
+}
+
+## Update regularly (not too much, the variable should only vary smoothly)
+country_event = {
+	id = trobador_province_occitanism.2
+	title = "trobador_province_occitanism_2_title"
+	desc = "trobador_province_occitanism_2_desc"
+	picture = CULTURE_eventPicture
+
+	trigger = {
+		had_global_flag = { flag = province_occitanism_updated days = 30 }
+		ai = yes
+		has_global_flag = trobador_province_occitanism_initialised
+	}
+
+	immediate = {
+		hidden_effect = {
+			# Setup some useful variables
+			every_province = {
+				limit = {
+					OR = {
+						culture_group = occitanocatala
+						culture = gascon
+						culture = occitain
+						culture = arpitan
+						culture = catalan
+					}
+					owner = {
+						OR = {
+							culture_group = occitanocatala
+							primary_culture = gascon
+							primary_culture = occitain
+							primary_culture = arpitan
+							primary_culture = catalan
+						}
+					}
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				set_province_flag = occitanoid_owner
+			}
+			every_province = {
+				limit = {
+					OR = {
+						culture_group = occitanocatala
+						culture = gascon
+						culture = occitain
+						culture = arpitan
+						culture = catalan
+					}
+					owner = {
+						NOT = { culture_group = occitanocatala }
+						NOT = { primary_culture = gascon }
+						NOT = { primary_culture = occitain }
+						NOT = { primary_culture = arpitan }
+						NOT = { primary_culture = catalan }
+					}
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				clr_province_flag = occitanoid_owner
+				set_province_flag = non_occitanoid_owner
+				# non_occitanoid_owner will to cleared by the event "integrating our brothers"
+			}
+			# Fix discrepancies between culture and province_occitanism_active
+			every_province = {
+				limit = {  # happens when a province has just been converted
+					OR = {
+						culture = gascon
+						culture = occitain
+						culture = arpitan
+						culture = catalan
+					}
+					NOT = { has_province_flag = province_occitanism_active }
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				set_variable = { which = province_occitanism value = 20 }
+				if = {
+					limit = { owner = { faction_in_power = trobador_french } }
+					set_variable = { which = province_occitanism value = 0 }
+				}
+				if = {
+					limit = { owner = { faction_in_power = trobador_occitanist } }
+					set_variable = { which = province_occitanism value = 100 }
+				}
+				if = {
+					limit = { owner = { faction_in_power = trobador_aragonese } }
+					set_variable = { which = province_occitanism value = 60 }
+				}
+				set_province_flag = province_occitanism_active
+			}
+			every_province = {
+				limit = {  # happens when a province has just been converted
+					culture_group = occitanocatala
+					NOT = { has_province_flag = province_occitanism_active }
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				set_variable = { which = province_occitanism value = 60 }
+				if = {
+					limit = { owner = { faction_in_power = trobador_french } }
+					set_variable = { which = province_occitanism value = 10 }
+				}
+				if = {
+					limit = { owner = { faction_in_power = trobador_occitanist } }
+					set_variable = { which = province_occitanism value = 100 }
+				}
+				if = {
+					limit = { owner = { faction_in_power = trobador_aragonese } }
+					set_variable = { which = province_occitanism value = 90 }
+				}
+				set_province_flag = province_occitanism_active
+			}
+			# Apply infinitesimal changes
+			every_province = {
+				limit = { 
+					has_province_flag = province_occitanism_active
+				}
+				if = {
+					limit = { religion = cathar }
+					change_variable = { which = province_occitanism value = +0.25 }
+				}
+				if = {
+					limit = { owner = { tag = OCC } }
+					change_variable = { which = province_occitanism value = +1 }
+				}
+				if = {
+					limit = { owner = { culture_group = occitanocatala } }
+					change_variable = { which = province_occitanism value = +0.05 }
+				}
+				if = {
+					limit = { NOT = { owner = { culture_group = occitanocatala } } }
+					change_variable = { which = province_occitanism value = -0.05 }
+				}
+				if = {
+					limit = { owner = { faction_in_power = trobador_occitanist } }
+					change_variable = { which = province_occitanism value = +0.1 }
+				}
+				if = {
+					limit = { 
+						owner = {
+							prestige = 40 
+							OR = {
+								culture_group = occitanocatala
+								faction_in_power = trobador_occitanist
+							}
+						} 
+					}
+					change_variable = { which = province_occitanism value = +0.05 }
+				}
+				if = {
+					limit = { 
+						owner = {
+							prestige = 80 
+							OR = {
+								culture_group = occitanocatala
+								faction_in_power = trobador_occitanist
+							}
+						} 
+					}
+					change_variable = { which = province_occitanism value = +0.05 }
+				}
+				if = {
+					limit = {
+						OR = {
+							owner = { faction_in_power = trobador_french }
+							owner = { faction_in_power = trobador_castillian }
+							AND = {
+								OR = {
+									owned_by = FRA
+									owner = { primary_culture = cosmopolitan_french }
+								}
+								OR = {
+									culture_group = french
+									culture = occitain
+								}
+							}
+							AND = {
+								OR = {
+									owned_by = SPA
+									owner = { primary_culture = castillian }
+								}
+								OR = {
+									culture_group = iberian
+									culture = catala
+								}
+							}
+						}
+					}
+					change_variable = { which = province_occitanism value = -0.1 }
+				}
+				if = {
+					limit = {
+						owner = { accepted_culture = PREV } # "accepted" actually means it is completely dominated and seen as regional folklore
+						OR = {
+							culture_group = occitanocatala
+							culture = gascon
+							culture = occitain
+							culture = arpitan
+						}
+						owner = {
+							NOT = { culture_group = occitanocatala }
+							NOT = { primary_culture = gascon }
+							NOT = { primary_culture = occitain }
+							NOT = { primary_culture = arpitan }
+						}
+						OR = {
+							area = romandie_area
+							area = switzerland_area
+							area = venetia_area
+							area = lombardy_area
+							area = piedmont_area
+							area = liguria_area
+							area = emilia_romagna_area
+							area = emilia_area
+							region = iberia_region
+							region = france_region
+						}
+					}
+					change_variable = { which = province_occitanism value = -0.1 }
+				}
+				if = {
+					limit = {
+						owner = { accepted_culture = catala }
+						OR = {
+							culture = catala
+							culture = catalan
+						}
+						owner = {
+							NOT = { primary_culture = catala }
+							NOT = { primary_culture = catalan }
+						}
+						OR = {
+							area = romandie_area
+							area = switzerland_area
+							area = venetia_area
+							area = lombardy_area
+							area = piedmont_area
+							area = liguria_area
+							area = emilia_romagna_area
+							area = emilia_area
+							region = iberia_region
+							region = france_region
+						}
+					}
+					change_variable = { which = province_occitanism value = -0.1 }
+				}
+				if = {
+					limit = { owner = { advisor = trobador } }
+					change_variable = { which = province_occitanism value = +0.05 }
+				}
+				if = {
+					limit = { owner = { trobador = 2 } }
+					change_variable = { which = province_occitanism value = +0.05 }
+				}
+			}
+			# Spread this out
+			every_province = { # Ideally I'ld just like to have dx_i/dt = alpha \sum_{j neighbouring i} (x_j-x_i) but the engine has many bugs
+				limit = { has_province_flag = province_occitanism_active }
+				set_variable = { which = tot_province_occitanism value = 0 }
+				every_neighbor_province = {
+					limit = { has_province_flag = province_occitanism_active }
+					if = { 
+						#FIXME: we should have 0 when equals
+						#limit = { check_variable = { which = province_occitanism which = PREV } } # bug !
+						limit = {
+							check_variable = { which = province_occitanism value = 50 }
+							PREV = { NOT = { check_variable = { which = province_occitanism value = 50 } } }
+						}
+						PREV = { change_variable = { which = tot_province_occitanism value = +1 } } # 1 more province has higher occitanism
+					}
+					if = {
+						#limit = { NOT = { check_variable = { which = province_occitanism which = PREV } } }
+						limit = {
+							NOT = { check_variable = { which = province_occitanism value = 50 } }
+							PREV = { check_variable = { which = province_occitanism value = 50 } }
+						}
+						PREV = { change_variable = { which = tot_province_occitanism value = -1 } } # 1 more province has lower occitanism
+					}
+				}
+				multiply_variable = { which = tot_province_occitanism value = 0.05 } # effect of each neighbouring province
+				change_variable = { which = province_occitanism which = tot_province_occitanism }
+			}
+			# Should I put diminishing returns? Decay should do just as good. 
+			# Decays to 50
+			every_province = {
+				limit = { has_province_flag = province_occitanism_active }
+				set_variable = { which = province_occitanism_diff which = province_occitanism }
+				change_variable = { which = province_occitanism_diff value = -50 }
+				divide_variable = { which = province_occitanism_diff value = 50 }
+				# province_occitanism_diff is now a number between -1 and 1
+				set_variable = { which = province_occitanism_decay which = province_occitanism_diff }
+				multiply_variable = { which = province_occitanism_decay which = province_occitanism_diff }
+				#multiply_variable = { which = province_occitanism_decay which = province_occitanism_diff }
+				if = {
+					limit = { check_variable = { which = province_occitanism_diff value = 0 } }
+					multiply_variable = { which = province_occitanism_decay value = -1 } # be careful about the sign if you change the power
+				}
+				# decay = +/-[(x-50)/50]^2 so that for instance for x=60 decay=-1/25 and for x=85.4 decay=-0.5
+				multiply_variable = { which = province_occitanism_decay value = 0.15 } # setup maximum decay
+				change_variable = { which = province_occitanism which = province_occitanism_decay }
+			}
+			# Limit to 0/100
+			every_province = {
+				limit = { NOT = { check_variable = { which = province_occitanism value = 0 } } }
+				set_variable = { which = province_occitanism value = 0 }
+			}
+			every_province = {
+				limit = { check_variable = { which = province_occitanism value = 100 } }
+				set_variable = { which = province_occitanism value = 100 }
+			}
+			# Check the 50/50 rule
+			every_province = {
+				limit = {
+					check_variable = { which = province_occitanism value = 50 }
+					OR = {
+						culture = gascon
+						culture = occitain
+						culture = arpitan
+					}
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				change_culture = occitano
+				if = {
+					limit = {
+						is_capital = yes
+						owner = { 
+							OR = {
+								primary_culture = gascon
+								primary_culture = occitain
+								primary_culture = arpitan
+							}
+						}
+					}
+					owner = { change_primary_culture = occitano }
+					change_variable = { which = province_occitanism value = 5 }
+					province_event = { id = trobador_province_occitanism.3 }
+				 }
+			}
+			every_province = {
+				limit = {
+					NOT = { check_variable = { which = province_occitanism value = 50 } }
+					culture = occitano
+					OR = {
+						province_id = 174
+						province_id = 175
+						province_id = 176
+						province_id = 3081
+						province_id = 3083
+						province_id = 194
+						province_id = 195
+						province_id = 196
+						province_id = 4112
+						province_id = 3084
+						province_id = 3109
+					}
+				}
+				change_culture = gascon
+				if = {
+					limit = {
+						is_capital = yes
+						owner = { primary_culture = occitain }
+					}
+					owner = { change_primary_culture = gascon }
+					province_event = { id = trobador_province_occitanism.3 }
+				 }
+			}
+			every_province = {
+				limit = {
+					NOT = { check_variable = { which = province_occitanism value = 50 } }
+					culture = occitano
+					OR = {
+						province_id = 193
+						province_id = 203
+						province_id = 204
+						province_id = 205
+						province_id = 1867
+						province_id = 1871
+						province_id = 3045
+						province_id = 3046
+						province_id = 3056
+					}
+				}
+				change_culture = arpitan
+				if = {
+					limit = {
+						is_capital = yes
+						owner = { primary_culture = occitain }
+					}
+					owner = { change_primary_culture = arpitan }
+					province_event = { id = trobador_province_occitanism.3 }
+				 }
+			}
+			every_province = {
+				limit = {
+					NOT = { check_variable = { which = province_occitanism value = 50 } }
+					culture = occitano
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				change_culture = occitain
+				if = {
+					limit = {
+						is_capital = yes
+						owner = { primary_culture = occitain }
+					}
+					owner = { change_primary_culture = occitain }
+					province_event = { id = trobador_province_occitanism.3 }
+				 }
+			}
+			every_province = {
+				limit = {
+					check_variable = { which = province_occitanism value = 50 }
+					culture = catalan
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				change_culture = catala
+				if = {
+					limit = {
+						is_capital = yes
+						owner = { primary_culture = catalan }
+					}
+					owner = { change_primary_culture = catala }
+					change_variable = { which = province_occitanism value = 5 }
+					province_event = { id = trobador_province_occitanism.3 }
+				 }
+			}
+			every_province = {
+				limit = {
+					NOT = { check_variable = { which = province_occitanism value = 50 } }
+					culture = catala
+					OR = {
+						area = romandie_area
+						area = switzerland_area
+						area = venetia_area
+						area = lombardy_area
+						area = piedmont_area
+						area = liguria_area
+						area = emilia_romagna_area
+						area = emilia_area
+						region = iberia_region
+						region = france_region
+					}
+				}
+				change_culture = catalan
+				if = {
+					limit = {
+						is_capital = yes
+						owner = { primary_culture = catala }
+					}
+					owner = { change_primary_culture = catalan }
+					province_event = { id = trobador_province_occitanism.3 }
+				 }
+			}
+			# It's finished !
+			clr_global_flag = province_occitanism_updated # Resets the timer? Check!
+			set_global_flag = province_occitanism_updated
+		}
+	}
+
+	option = {
+		name = "trobador_ok"		# OK
+	}
+}
+
+province_event = { # Just a text to point out province conversion
+	id = trobador_province_occitanism.3
+	title = "trobador_province_occitanism_3_title"
+	desc = "trobador_province_occitanism_3_desc"
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = "trobador_ok"		# OK
+	}
+}

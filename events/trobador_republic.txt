@@ -1,0 +1,132 @@
+namespace = trobador_republic
+
+# Government Swaps
+country_event = {
+	id = trobador_republic.1
+	title = "trobador_republic.1.t"
+	desc = "trobador_republic.1.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	trigger = {
+		faction_in_power = trobador_republican
+		faction_influence = {
+			faction = trobador_republican
+			influence = 50
+		}
+		OR = {
+			government = occitan_monarchy
+			government = catalan_monarchy
+		}
+	}
+
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "trobador_republic.1.a"		# Swap Gov
+		if = {
+			limit = { government = occitan_monarchy }
+			change_government = occitan_republic
+		}
+		if = {
+			limit = { government = catalan_monarchy }
+			change_government = catalan_republic
+		}
+		add_faction_influence = {
+			faction = trobador_republican
+			influence = 10
+		}
+	}
+	option = {
+		name = "trobador_republic.1.b"		# Stay monarch
+		add_faction_influence = {
+			faction = trobador_republican
+			influence = -10
+		}
+	}
+	
+}
+
+country_event = {
+	id = trobador_republic.2
+	title = "trobador_republic.2.t"
+	desc = "trobador_republic.2.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		NOT = { faction_in_power = trobador_republican }
+		NOT = {
+			faction_influence = {
+				faction = trobador_republican
+				influence = 20
+			}
+		}
+		NOT = { republican_tradition = 40 }
+		OR = {
+			government = occitan_republic
+			government = catalan_republic
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "trobador_republic.2.a"		# Swap Gov
+		if = {
+			limit = { government = occitan_republic }
+			change_government = occitan_monarchy
+		}
+		if = {
+			limit = { government = catalan_republic }
+			change_government = catalan_monarchy
+		}
+		add_faction_influence = {
+			faction = trobador_republican
+			influence = -10
+		}
+	}
+	option = {
+		name = "trobador_republic.2.b"		# Stay Republic
+		add_faction_influence = {
+			faction = trobador_republican
+			influence = 10
+		}
+		add_republican_tradition = 10
+	}
+	
+}
+
+country_event = {
+	id = trobador_republic.3
+	title = "trobador_republic.3.t"
+	desc = "trobador_republic.3.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	trigger = {
+		tag = AVI
+		government = theocracy
+		NOT = { is_year = 1500 }
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "trobador_republic.3.a"		# Become Republic
+		change_government = occitan_republic
+		add_faction_influence = {
+			faction = trobador_republican
+			influence = 10
+		}
+	}
+	option = {
+		name = "trobador_republic.3.b"		# No
+		add_devotion = 10
+		add_prestige = 25
+	}
+	
+}

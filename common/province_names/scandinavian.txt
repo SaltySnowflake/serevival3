@@ -1,0 +1,42 @@
+#Merging all Scandinavian localised naming. OWN and OEN are close enough, minor diacritic differences aside. Deal with it or suggest better =p
+
+6 = "Skåne"
+10 = "Jämtland"
+
+32 = "Kexholm"
+33 = "Nöteborg"
+35 = "Øsel"
+37 = "Livland"
+44 = "Hamborg"
+45 = "Lybek"
+
+369 = "Orkneyjar"
+1978 = "Hjaltland"
+1979 = "Færøyene"
+
+#BTP
+4113 = "Kajanaland"
+3127 = "Vasa"
+3128 = "Satakunda"
+4123 = "Birkaland"
+3228 = "Wolmar"
+3229 = "Fellin"
+3230 = "Wiek"
+3231 = "Dagö"
+
+4143 = "Borgarsysla"
+
+#Localised naming suggestions by deserk, OWN based. If any Swedes or Danes don't like it, suggest better =p
+980 = "Sællsyn"
+981 = "Leifsbuðir"
+1104 = "Garðar"
+1105 = "Sandnæs"
+2573 = "Krakenæs"
+3111 = "Anavik"
+3112 = "Hvalsey"
+3113 = "Brattahlíð"
+4974 = "Miklabakkir"
+5013 = "Sankt Óláfr"
+5019 = "Njörðrsauðr"
+5058 = "Skipsbrotnæs"
+5059 = "Bliðrbygð"

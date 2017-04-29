@@ -1,0 +1,16 @@
+government = despotic_monarchy
+primary_culture = miao
+religion = moism
+technology_group = chinese
+capital = 2174	# Umung
+historical_friend = CYI
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

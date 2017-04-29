@@ -1,0 +1,17 @@
+government = despotic_monarchy
+government_rank = 1
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 2746
+
+1441.6.19 = {
+	monarch = {
+		name = "Grigor"
+		dynasty = "Zemnjacevic"
+		birth_date = 1422.2.22
+		adm = 6
+		dip = 1
+		mil = 3
+	}
+}

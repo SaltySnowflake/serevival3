@@ -1,0 +1,8 @@
+
+#Beyond Typus 4.0 Overhaul of Albania
+134 = "Berat"
+3181 = "Vlora"
+3182 = "Shkodra"
+4174 = "Durrës"
+4175 = "Lezha"
+5094 = "Malësia"

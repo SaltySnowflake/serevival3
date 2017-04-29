@@ -1,0 +1,146 @@
+######################################################################
+# 
+######################################################################
+skralling_rebels = {
+	
+	color = { 179 51 51 }
+	
+	area = nation 					# Stays within the nation
+	government = any
+	defection = none				# Will defect to the "best" alternative.
+	independence = none				# Does not strive for independence
+	defect_delay = 120
+	gfx_type = northamericagfx
+	will_relocate = yes	
+	
+	resilient = no					# Disbands on retreat
+	reinforcing = no				# Does not receive reinforcements
+	general = no					# Does not use generals
+	smart = no						# Does not assault forts, tactically withdraw from battle, etc.
+	unit_transfer = no				# Units do not remain after enforcing demands.
+	will_relocate = no				# Units will relocate if they have sieged all provinces nearby and has to move over sea.
+	
+	artillery = 0.0
+	infantry = 0.9
+	cavalry = 0.1
+	morale = 0.8
+	
+	
+	# Possible handle actions
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no	
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { tag = VIN } }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_province_flag = vinland_nat_settlers }
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = vinland_native_insurrection
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 3
+			has_province_flag = vinland_nat_settlers
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = vinland_native_autonomy
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = vinland_native_bribe
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = vinland_native_insurrection
+		}
+	}
+	
+ 	# Province Scope
+ 	siege_won_trigger = {
+ 		always = yes
+ 	}
+	siege_won_effect = {
+		if = {
+			limit = { owner = { has_country_flag = vinland_event_24 } }
+			add_province_modifier = {
+				name = vinland_native_takeover
+				duration = 3650
+			}
+			add_local_autonomy = 50
+			hidden_effect = {
+				owner = {
+					vinland_nat_segregate = yes
+					set_country_flag = vinland_event_24
+				}
+				if = {
+					limit = { has_province_modifier = vinland_native_autonomy }
+					remove_province_modifier = vinland_native_autonomy
+				}
+				add_province_modifier = {
+					name = "vinland_native_autonomy"
+					duration = 3650
+				}
+				if = {
+					limit = { has_province_modifier = vinland_native_bribe }
+					remove_province_modifier = vinland_native_bribe
+				}
+				if = {
+					limit = { has_province_modifier = vinland_native_insurrection }
+					remove_province_modifier = vinland_native_insurrection
+				}
+				if = {
+					limit = { has_province_modifier = vinland_nationalist_insurrection }
+					remove_province_modifier = vinland_nationalist_insurrection
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { has_country_flag = vinland_event_24 } }
+			province_event = {
+				id = vin_flavor.24
+				days = 1
+			}
+		}
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		always = yes
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "skralling_rebels_demand"
+	
+	# Country scope
+	demands_enforced_effect = {
+		add_prestige = -50
+	}
+}

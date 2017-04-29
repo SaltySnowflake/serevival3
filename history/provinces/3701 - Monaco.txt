@@ -1,0 +1,35 @@
+#3166 - Monaco
+
+add_core = MNC
+owner = MNC
+controller = MNC
+culture = ligurian
+religion = catholic
+hre = yes
+base_tax = 3
+base_production = 2
+base_manpower = 1
+trade_goods = olives
+fort_15th = yes
+capital = "Monaco"
+is_city = yes
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+discovered_by = eastern
+
+1444.11.06 = { HRE = no }
+1444.11.11 = { HRE = yes }
+
+1793.1.1 = {
+		owner = FRA
+		controller = FRA
+		add_core = FRA
+		remove_core = MNC
+	} # Monaco annexed to Napoleonic France
+1814.4.6  = {
+		owner = MNC
+		add_core = MNC
+		remove_core = FRA
+	} # Napoleon abdicates

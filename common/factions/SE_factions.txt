@@ -1,0 +1,104 @@
+# This faction will try to unite the Occitan nation, while being inspired by peaceful trobadors and cathars
+# It will concerns catalans too, but I need to add catalans factions too (pro-Castille pro-Reconquista and mediterranean traders?) 
+trobador_occitanist =
+{
+	monarch_power = DIP
+	always = yes
+	
+	modifier = 
+	{
+#		unjustified_demands = 0.25 # our objective is to free our nation, not to oppress others
+		advisor_cost = -0.10
+#		diplomatic_reputation = 2
+#		diplomatic_upkeep = 1
+		diplomats = 1
+		tolerance_heretic = 2
+#		tolerance_heathen = 2
+#		global_missionary_strength = -0.02
+	}
+}
+
+# This faction will try to differentiate themselves both from Castellanos and Occitans
+trobador_castillian =
+{
+	monarch_power = ADM
+	always = yes
+	
+	modifier = 
+	{
+		tolerance_own = 2
+#		tolerance_heathen = -2
+#		infantry_cost = 0.1
+#		global_unrest = -1
+#		missionaries = 1 # were bashing muslims while occitans were protecting cathars
+		global_missionary_strength = 0.02 #was .025
+		core_creation = -0.10
+	}
+}
+
+# This faction want to keep the French statu-quo
+trobador_french = {
+	monarch_power = ADM
+	always = yes
+	
+	modifier = {
+#		tolerance_heretic = -1
+#		stability_cost_modifier = -0.15
+#		land_forcelimit_modifier = -0.15 # as a passive vassal, there is no point in maintaining a large army, especially since we're relatively stable
+		global_unrest = -1
+#		missionaries = 1
+		global_missionary_strength = 0.02 #was .015
+		core_creation = -0.10
+	}
+}
+
+# This faction is looking for the support of Aragon
+trobador_aragonese = {
+	monarch_power = MIL
+	always = yes
+	
+	modifier = {
+#		infantry_cost = -0.1 # plenty of men want to fight our oppressors, recruiting is not difficult
+#		cavalry_cost = -0.1
+#		artillery_cost = -0.1
+#		land_forcelimit_modifier = 0.10
+#		stability_cost_modifier = 0.15
+		mercenary_cost = -0.20
+#		unjustified_demands = -0.15 # we can use a bit of flexibility, so that we don't have to capture provinces one-by-one
+#		#discipline = -0.05 # we're mobilizing the rabble
+		land_morale = 0.10 # but there are highly motivated
+		war_exhaustion_cost = -0.15
+#		diplomatic_reputation = -2
+#		global_tax_modifier = -0.1
+#		trade_efficiency = -0.1
+	}
+}
+
+# This faction doesn't care about forming a large nation, they'ld rather follow the path of Italian trading republics
+trobador_republican =
+{
+	monarch_power = DIP
+	always = yes
+	
+	modifier = 
+	{
+		republican_tradition = 1
+#		legitimacy = -1
+#		light_ship_cost = -0.10
+		global_trade_power = 0.10
+#		trade_efficiency = 0.10
+#		land_maintenance_modifier = 0.15
+		naval_maintenance_modifier = -0.15
+#		land_forcelimit_modifier = -0.15
+#		naval_forcelimit_modifier = 0.10
+#		merchants = 1
+#		land_morale = -0.10
+#		naval_morale = -0.10 # plenty of ships but not really used to battles
+#		defensiveness = 0.25 # weak army but solid city walls, a republic is supposed to be relatively defence-oriented
+#		core_creation = 0.50 # statu quo and no crazy expansion
+#		enemy_core_creation = 0.50
+#		global_missionary_strength = -0.01
+#		tolerance_heretic = 1
+#		tolerance_heathen = 3 # used to trade with muslims
+	}
+}

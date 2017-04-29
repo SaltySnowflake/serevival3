@@ -1,0 +1,6 @@
+government = absolute_monarchy
+mercantilism = 0.1
+primary_culture = burmese
+religion = buddhism
+technology_group = chinese
+capital = 585 # Toungoo

@@ -1,0 +1,12 @@
+﻿l_english:
+ irish_sea: "Irish Sea"
+ napoli: "Napoli"
+ barcelona: "Valencia"
+ danube: "Danube"
+ murava: "Murava"
+ thingvellir: "Thingvellir"
+ east_pacific: "East Pacific"
+ pontus_trade:0 "Pontus"
+ lunatic_personality:0 "Lunatic"
+ desc_lunatic_personality:0 "This ruler is stark raving mad. They are plauged by voices whispering to them, telling them what to do... horrible, horrible things they want them to do... Widespread tales of arbitrary and random actions by our ruler has greatly disturbed many of our subjects and allies."
+ lunatic_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] insane delusions shall be remembered for generations to come..."

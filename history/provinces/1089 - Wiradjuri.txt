@@ -1,0 +1,15 @@
+#1089 - Wiradjuri
+
+culture = aboriginal
+add_core = WIR
+owner = WIR
+controller = WIR
+religion = tjukurpa
+capital = "Wiradjuri"
+is_city = yes
+trade_goods = hemp
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+discovered_by = aboriginal

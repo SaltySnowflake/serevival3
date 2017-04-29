@@ -1,0 +1,47 @@
+#1106 - Whangarei
+
+culture = maori
+religion = puata_tupuna
+hre = no
+trade_goods = barley
+base_tax = 4 
+base_production = 4
+base_manpower = 3
+capital = "Whangarei"
+native_size = 90
+native_ferocity = 4
+native_hostileness = 9
+
+
+1444.11.2 = {
+	owner = NGH
+	controller = NGH
+	add_core = NGH
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = NGH
+	controller = NGH
+	add_core = NGH
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = NGH
+	controller = NGH
+	add_core = NGH
+	is_city = yes
+}
+
+1642.1.1 = { discovered_by = NED } # Abel Tasman

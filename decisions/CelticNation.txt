@@ -1,0 +1,165 @@
+country_decisions = {
+
+	celtic_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}	#Custom Ai will not form this
+			OR = {
+				tag = TNA
+				tag = YYK
+			}
+			OR = {
+				culture_group = gaelic
+				culture_group = brythonic
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}	#Normal no colonial stuff
+		}
+		allow = {
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			government_rank = 2			#Replaces the government specific Nots, as all Irish minors are rank 1. Also useful because we dont want a rank 1 jumping to rank 3 in one go
+			adm_tech = 10
+			#To form, must own at least half of all the compenent countries
+			num_of_owned_provinces_with = {
+				value = 9
+				region = ireland_area
+			}	#at least half of Ireland
+			num_of_owned_provinces_with = {
+				value = 9
+				OR = {
+					area = highlands_area
+					area = lowlands_area
+					area = western_lowlands_area
+					area = southern_isles_area
+				}
+			}	#at least half of Scotland
+			num_of_owned_provinces_with = {
+				value = 3
+				area = wales_area
+			}	#at least half of Wales
+			num_of_owned_provinces_with = {
+				value = 1
+				area = cornwall_area
+			}	#at least half of Cornwall
+			num_of_owned_provinces_with = {
+				value = 3
+				area = brittany_area
+			}	#at least half of Brittany
+			owns = 3016	#Owns the Isle of Man
+			num_of_cities = 40			#Additonally, must have at least 16 more provinces than the minimum, located anywhere. That is roughly all of any 3 of the 4 Celtic countries, or all of Ireland and Scotland, or about half of England.
+			total_development = 500			#Normal requirement for rank 3 is 1000 dev, so this is 50 percent discounted. Note base dev in 1444 of all Celtic countries is around 252. England is another 178, to 420 total. Either need to seriously increase dev or claim more land to hit 500 required, this is intentional
+			prestige = 50			#Normal requirement for rank 3 is 75 prestige, so this is 33 percent discounted
+			}
+		effect = {
+			change_tag = CEL
+			if = {
+				limit = { NOT = { government = high_kingship } }
+				change_government = high_kingship
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			custom_tooltip = unitecelts
+			hidden_effect = {
+				if = {
+					limit = { primary_culture = irish }
+					change_primary_culture = celtic_irish_culture
+				}
+				if = {
+					limit = { primary_culture = highland_scottish }
+					change_primary_culture = celtic_highland_scottish_culture
+				}
+				if = {
+					limit = { primary_culture = gallgaidheil }
+					change_primary_culture = celtic_gallgaidheil_culture
+				}
+				if = {
+					limit = { primary_culture = welsh }
+					change_primary_culture = celtic_welsh_culture
+				}
+				if = {
+					limit = { primary_culture = breton }
+					change_primary_culture = celtic_breton_culture
+				}
+				if = {
+					limit = { primary_culture = cornish }
+					change_primary_culture = celtic_cornish_culture
+				}
+				every_core_province = { 
+					limit = { culture = irish }
+					change_culture = celtic_irish_culture
+				}
+				every_core_province = { 
+					limit = { culture = highland_scottish }
+					change_culture = celtic_highland_scottish_culture
+				}
+				every_core_province = { 
+					limit = { culture = gallgaidheil }
+					change_culture = celtic_gallgaidheil_culture
+				}
+				
+				every_core_province = { 
+					limit = { culture = welsh }
+					change_culture = celtic_welsh_culture
+				}
+				every_core_province = { 
+					limit = { culture = breton }
+					change_culture = celtic_breton_culture
+				}
+				every_core_province = { 
+					limit = { culture = cornish }
+					change_culture = celtic_cornish_culture
+				}
+			}	
+			british_isles_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CEL
+			}
+			ireland_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CEL
+			}
+			brittany_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CEL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			capital_scope = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}	#Draiocht added capital boost. With all the steps, can potentially raise dev of any ahistorical capital by 15 -clan to provincial kingdom to kingdom to empire. Brings any Celtic province to comparable to London, by the time Tir na gCelteach is formed, without manual intervention
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

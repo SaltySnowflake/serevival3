@@ -1,0 +1,16 @@
+government = despotic_monarchy
+primary_culture = amhara
+religion = jewish
+technology_group = muslim
+unit_type = sub_saharan
+capital = 2771		# Semien
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

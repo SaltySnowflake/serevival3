@@ -1,0 +1,15 @@
+government = native_council
+primary_culture = washoe
+religion = pohakantenna
+technology_group = north_american
+capital = 4953 # Washo
+
+1444.1.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

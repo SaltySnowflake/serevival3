@@ -1,0 +1,70 @@
+#995 - Atiamekw
+
+culture = innu
+religion = totemism
+capital = "Totouskak"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = MGT
+	controller = MGT
+	add_core = MGT
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = MGT
+	controller = MGT
+	add_core = MGT
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = MGT
+	controller = MGT
+	add_core = MGT
+	is_city = yes
+}
+
+1536.5.1 = { discovered_by = FRA } # Jaques Cartier's second voyage
+
+1600.1.1 = {
+	remove_core = MGT
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	culture = cosmopolitan_french
+	religion = catholic
+	capital = "Tadoussac"
+}	#Gravé and Chauvin built the settlement on the shore at the mouth of the Saguenay River
+
+1629.1.1 = { discovered_by = ENG }	# Vanilla who what where how
+
+1707.5.12 = { discovered_by = GBR }
+
+1760.9.8 = { controller = GBR } # The government of New France capitulate at Montreal
+
+1763.2.10 = {
+	owner = GBR
+	add_core = GBR
+	remove_core = FRA
+} # Treaty of Paris - ceded to Britain, France gave up its claim

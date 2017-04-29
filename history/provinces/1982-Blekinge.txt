@@ -1,0 +1,35 @@
+#Blekinge
+#Region - Scandinavia
+#Area - Skaneland
+
+add_core = SCN
+owner = SCN
+controller = SCN
+culture = scanian
+religion = catholic
+hre = no
+base_tax = 3
+base_production = 2
+trade_goods = barley
+base_manpower = 2
+capital = "Ronneby"
+is_city = yes
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.11 = { add_core = DAN owner = DAN add_local_autonomy = -30 }
+
+1525.1.1 = { revolt = { type = revolutionary_rebels size = 1 } controller = REB }
+1525.5.10 = { revolt = {} controller = DAN } # Sören Norrby is defeated
+1534.8.15 = { revolt = { type = revolutionary_rebels size = 1 } controller = REB } # 'Grevefejden'(Christofer of Oldenburg)
+1536.3.15 = { revolt = {} controller = DAN } # Liberated by Sweden
+1536.3.15 = { religion = protestant} # Unknown date
+1658.2.26 = { controller = SWE owner = SWE add_core = SWE  } # The Peace of Roskilde
+1680.1.1 = { 
+	capital = "Karlskrona" 
+	culture = swedish
+	shipyard = yes		# Karlskrona issued as naval base by KXI
+}

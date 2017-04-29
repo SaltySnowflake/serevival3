@@ -1,0 +1,21 @@
+government = native_council
+government_rank = 1
+primary_culture = abenaki
+religion = midewiwin
+technology_group = north_american
+capital = 2565	# Meductic
+historical_friend = XXK
+historical_friend = XXL
+historical_friend = XXM
+historical_friend = MIK
+
+
+1444.11.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

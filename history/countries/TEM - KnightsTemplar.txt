@@ -1,0 +1,27 @@
+# Knights Templar
+government = monastic_order_government
+government_rank = 1
+technology_group = western #eastern
+primary_culture = cosmopolitan_french
+add_accepted_culture = al_misr_arabic
+religion = catholic
+capital = 363
+historical_friend = CYP
+historical_friend = KOJ
+
+1410.8.18 = {
+	monarch = {
+		name = "Dionysios"
+		dynasty = "Eudaimon"
+		adm = 6
+		dip = 4
+		mil = 4
+	}
+}
+
+1444.11.1 = {
+	add_country_modifier = {
+		name = theology
+		duration = 7360
+	}
+}

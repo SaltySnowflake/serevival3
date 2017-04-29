@@ -1,0 +1,17 @@
+government = iqta
+primary_culture = al_iraqiya_arabic
+religion = shiite
+technology_group = muslim
+capital = 410	# Bagdad
+historical_friend = ALH
+historical_friend = PER
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

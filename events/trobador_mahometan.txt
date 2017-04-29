@@ -1,0 +1,230 @@
+namespace = trobador_mahometan
+
+province_event = {
+	id = trobador_mahometan.1
+	title = "trobador_mahometan_1_title"
+	desc = "trobador_mahometan_1_desc"
+	picture = INVENTION_eventPicture
+	
+	trigger = {
+		continent = europe
+		has_port = yes
+		NOT = { is_year = 1550 }
+		owner = {
+			religion_group = christian
+			num_of_owned_provinces_with = {
+				value = 1
+				religion = sunni
+			}
+			NOT = { tag = PAP }
+		}
+		NOT = { owner = { advisor = mahometan_scholar } } # is it possible to check that I'm not spamming unemployed scholars?
+	}
+
+	mean_time_to_happen = { 
+		months = 1200
+		modifier = {
+			factor = 10
+			owner = {
+				NOT = {
+					any_active_trade_node = {
+						any_neighbor_province = {
+							religion_group = muslim
+							OR = {
+								culture_group = berber_group
+								culture_group = maghrebi
+								culture = andalucian
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				NOT = {
+					any_country = {
+						religion_group = muslim
+						OR = {
+							culture_group = berber_group
+							culture_group = maghrebi
+							primary_culture = andalucian
+						}
+						has_opinion = { who = PREV value = 0 }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			owner = {
+				any_country = {
+					religion_group = muslim
+					OR = {
+						culture_group = berber_group
+						culture_group = maghrebi
+						primary_culture = andalucian
+					}
+					has_opinion = { who = PREV value = 50 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			owner = {
+				any_country = {
+					religion_group = muslim
+					OR = {
+						culture_group = berber_group
+						culture_group = maghrebi
+						primary_culture = andalucian
+					}
+					has_opinion = { who = PREV value = 150 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			owner = { sunni = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { sunni = 2 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { sunni = 3 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { sunni = 4 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { has_idea_group = innovativeness_ideas }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { has_idea_group = religious_ideas }
+		}
+		modifier = {
+			factor = 0.5
+			has_building = college # both Vanilla and Vef have college+university, although they are very different
+		}
+		modifier = {
+			factor = 0.5
+			has_building = university
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				all_country = {
+					OR = {
+						NOT = { religion_group = muslim }
+						NOT = { culture_group = berber_group }
+						NOT = { culture_group = maghrebi }
+						NOT = { primary_culture = andalucian }
+						border_distance = { who = PREV distance = 100 }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.6
+			owner = {
+				all_country = {
+					OR = {
+						NOT = { religion_group = muslim }
+						NOT = { culture_group = berber_group }
+						NOT = { culture_group = maghrebi }
+						NOT = { primary_culture = andalucian }
+						border_distance = { who = PREV distance = 200 }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			owner = {
+				all_country = {
+					OR = {
+						NOT = { religion_group = muslim }
+						NOT = { culture_group = berber_group }
+						NOT = { culture_group = maghrebi }
+						NOT = { primary_culture = andalucian }
+						border_distance = { who = PREV distance = 300 }
+					}
+				}
+			}
+		}
+	}
+		
+	option = {
+		name = "trobador_mahometan_1_opta"		# welcome him
+		custom_tooltip = "mahometan_scholar_appear"
+		hidden_effect = {
+			owner = { # it still work in province scope, without "location", but the Validator doesn't agree
+				random_list = { # dirty hack to avoid getting a latin name on an arab, I'm not satisfied by this solution
+					1 = {
+						define_advisor = {
+							type = mahometan_scholar
+							#name = "Abdallah"
+							location = FROM
+							skill = 1 # looks like it worked without that, bu the Validator doesn't agree
+							discount = yes
+						}
+					}
+					1 = {
+						define_advisor = {
+							type = mahometan_scholar
+							#name = "Yussuf"
+							location = FROM
+							skill = 1
+							discount = yes
+						}
+					}
+					1 = {
+						define_advisor = {
+							type = mahometan_scholar
+							#name = "Abdallah"
+							location = FROM
+							skill = 2
+							discount = yes
+						}
+					}
+					1 = {
+						define_advisor = {
+							type = mahometan_scholar
+							#name = "Muhammad"
+							location = FROM
+							skill = 3
+							discount = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "trobador_mahometan_1_optb"	
+		if = {
+			limit = { government = theocracy }
+			add_devotion = 10
+		}
+		if = {
+			limit = { uses_papacy = yes }
+			add_papal_influence = 10
+		}
+		if = {
+			limit = { uses_fervor = yes }
+			add_fervor = 10
+		}
+		if = {
+			limit = { uses_church_aspects = yes }
+			add_church_power = 5
+		}
+	}
+
+}

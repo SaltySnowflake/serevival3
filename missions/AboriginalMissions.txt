@@ -1,0 +1,54 @@
+conquer_australia = {
+	
+	type = country	
+	category = MIL
+	ai_mission = yes
+
+	target_provinces = {
+		owner = { culture = aboriginal }
+		NOT = { owned_by = ROOT }
+		region = australia_region
+	}
+	allow = {
+		culture = aboriginal
+		is_year = 1500
+		NOT = { exists = ABO }
+		is_subject = no
+		any_province = {
+			region = australia_region
+			owner = { culture = aboriginal }
+			NOT = { owned_by = ROOT }
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_prestige = 50
+	}
+}

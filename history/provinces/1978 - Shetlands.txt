@@ -1,0 +1,40 @@
+#1978 - Shetlands
+#Region - Scandinavia
+#Area - Northern Isles
+
+owner = NOR
+controller = NOR
+culture = norn
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = whaling
+base_manpower = 0.5
+capital = "Lerwick"
+is_city = yes # Estimated
+add_core = NOR
+add_core = SHT
+seat_in_parliament = yes
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.01 = { remove_core = NOR owner = SHT }
+1444.11.11 = { add_core = NOR owner = NOR add_local_autonomy = -30 seat_in_parliament = no }
+
+1472.2.20 = {
+	owner = SCO
+	culture = scottish
+	controller = SCO
+	add_core = SCO
+	remove_core = NOR
+} # Formally ceded to the crown of Scotland
+1609.1.1 = { religion = reformed } # First Protestant Minister Arrives in the Orkneys
+1707.5.12 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+}

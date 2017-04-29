@@ -1,0 +1,124 @@
+namespace = milan
+normal_or_historical_nations = yes
+
+# Francesco Sforza
+country_event = {
+	id = milan.1
+	title = milan.1.t
+	desc = milan.1.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MLO
+		government = ambrosian_republic
+		is_at_war = yes
+	}
+	mean_time_to_happen = { months = 1 }
+	option = { # we need him
+		name = "milan.EVTOPTA1"
+		define_general = {
+			name = "Francesco Sforza"
+			shock = 4
+			fire = 4
+			manuever = 4
+			siege = 1
+		}
+		add_republican_tradition = -20
+	}
+	option = { # he's too dangerous
+		name = "milan.EVTOPTB1"
+		add_stability = -1
+	}
+}
+# Sforza takes over
+country_event = {
+	id = milan.2
+	title = milan.2.t
+	desc = milan.2.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MLO
+		government = ambrosian_republic
+		has_leader = "Francesco Sforza"
+		war_exhaustion = 3
+	}
+	
+	mean_time_to_happen = { months = 36 }
+	
+	immediate = { kill_leader = { type = "Francesco Sforza" } }
+	
+	option = {
+		name = "milan.EVTOPTA2"
+		change_government = feudal_monarchy
+		define_ruler = {
+			name = "Francesco"
+			dynasty = "Sforza"
+			adm = 5
+			dip = 5
+			mil = 5
+		}
+		define_ruler_to_general = {
+			shock = 4
+			fire = 4
+			manuever = 4
+			siege = 1
+		}
+		define_heir = {
+			name = "Galeazzo Maria"
+			dynasty = "Sforza"
+			claim = 95
+			adm = 5
+			dip = 1
+			mil = 3
+		}			
+	}
+	
+	option = {
+		name = "milan.EVTOPTB2"
+		random_owned_province = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 4
+				leader = "Francesco Sforza"
+			}
+		}
+	}
+}
+
+# Il Moro
+#country_event = {
+#	id = milan.3
+#	title = milan.3.t
+#	desc = milan.3.d
+#	picture = DEBATE_REPUBLICAN_eventPicture
+#
+#	fire_only_once = yes
+#
+#	trigger = {
+#		tag = MLO
+#		government = monarchy
+#		regency = yes
+#		NOT = { is_year = 1550 }
+#	}
+#	mean_time_to_happen = { months = 24 }
+#	option = { # usurper
+#		name = "milan.EVTOPTA3"
+#		define_ruler = {
+#			name = "Loduvico"
+#			dynasty = "Sforza"
+#			claim = 50
+#			adm = 5
+#			dip = 5
+#			mil = 4
+#		}
+#	}
+#	option = { # arrest him!
+#		name = "milan.EVTOPTB3"
+#		add_stability = -1
+#	}
+#}

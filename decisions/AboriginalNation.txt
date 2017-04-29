@@ -1,0 +1,53 @@
+country_decisions = {
+
+	aboriginal_nation = {
+		major = yes
+		potential = {
+			culture_group = aboriginal
+			capital_scope = { region = australia_region }
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+			NOT = { exists = AUS }
+			NOT = { exists = ABO }
+		}
+		allow = {
+			adm_tech = 3
+			is_subject = no
+			is_at_war = no
+			num_of_cities = 10
+		}
+		effect = {
+			change_tag = ABO
+			#change_government = constitutional_republic
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			australia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ABO
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

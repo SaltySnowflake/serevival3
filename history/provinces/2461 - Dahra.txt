@@ -1,0 +1,28 @@
+# - Dahra
+
+owner = TLC
+controller = TLC
+culture = algerian
+religion = sunni
+capital = "Mostaganem"
+trade_goods = olives
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = TLC
+add_core = ALG
+fort_15th = yes
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = eastern
+
+1444.11.01 = { remove_core = TLC owner = ALG add_local_autonomy = 0 }
+1444.11.11 = { add_core = TLC owner = TLC add_local_autonomy = 0 }
+
+1517.1.1 = {
+	owner = ALG
+	controller = ALG
+}

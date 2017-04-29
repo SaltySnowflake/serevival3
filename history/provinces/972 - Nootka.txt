@@ -1,0 +1,75 @@
+#972 - Nootka
+
+culture = wakashan
+religion = sgaanaang
+capital = "Yuquot"
+trade_goods = lumber
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = NOO
+	controller = NOO
+	add_core = NOO
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = NOO
+	controller = NOO
+	add_core = NOO
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = NOO
+	controller = NOO
+	add_core = NOO
+	is_city = yes
+}
+
+
+1774.1.1 = { discovered_by = SPA } #Juan Perez
+1778.1.1 = {
+	discovered_by = GBR
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	capital = "Friendly Cove"
+	trade_goods = fur
+} #James Cook discovers and claims VI
+1789.2.1 = {
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	capital = "Fort San Miguel"
+	culture = castillian
+	religion = catholic
+} #Spanish settle VI
+1792.9.1 = {
+	owner = XXX
+	controller = XXX
+	capital = "Yuquot"
+	culture = wakashan
+	religion = sgaanaang
+	is_city = no
+	remove_core = SPA
+	remove_core = GBR
+} #Treaty forces both out and averts war

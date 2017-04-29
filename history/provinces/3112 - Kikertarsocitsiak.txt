@@ -1,0 +1,29 @@
+#3112 - Kikertarsocitsiak
+#Region - Scandinavia
+#Area - Greenland
+
+culture = kalaallisut
+religion = angakkunngurniq
+capital = "Kikertarsocitsiak"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 4
+native_ferocity = 2
+native_hostileness = 8
+discovered_by = THL
+discovered_by = GNL
+
+1720.1.1 = { discovered_by = DAN }
+
+1721.1.1 = {
+	owner = DAN
+	controller = DAN
+	culture = danish
+	religion = protestant
+	is_city = yes
+	capital = "Fiskernæs"
+}
+1746.1.1 = { add_core = DAN }

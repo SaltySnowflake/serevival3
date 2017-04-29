@@ -1,0 +1,16 @@
+government = aboriginal_native_council
+government_rank = 1
+primary_culture = aboriginal
+religion = tjukurpa
+technology_group = aboriginal
+capital = 2726 #Malgana
+
+1444.1.1 = {
+	monarch = {
+		name = "Congie"
+		adm = 2
+		dip = 5
+		mil = 2
+	}
+	
+}

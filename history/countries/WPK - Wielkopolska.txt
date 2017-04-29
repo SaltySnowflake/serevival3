@@ -1,0 +1,18 @@
+government = feudal_monarchy
+primary_culture = polish
+religion = catholic
+technology_group = eastern
+historical_friend = LIT
+historical_rival = TEU
+capital = 255
+
+1424.11.5= {
+	monarch = {
+		name = "Ryszard Peja"
+		dynasty = "Piast"
+		birth_date = 1404.6.30
+		adm = 2
+		dip = 4
+		mil = 5
+	}
+}

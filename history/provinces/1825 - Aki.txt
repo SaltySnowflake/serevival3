@@ -1,0 +1,35 @@
+#1825 - Aki
+
+owner = YMN
+controller = YMN
+culture = chugoku
+religion = shinto
+capital = "Tomo"
+trade_goods = rice
+hre = no
+base_tax = 4
+base_manpower = 3
+base_production = 3
+is_city = yes
+add_core = YMN
+add_core = TKD
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1444.11.01 = { remove_core = YMN remove_core = OUC add_core = MRI owner = MRI }
+1444.11.11 = { add_core = YMN add_core = OUC remove_core = MRI owner = HSK add_local_autonomy = -40 }
+
+1420.1.1 = { add_core = OUC }
+1466.1.1 = { add_core = MRI }
+1470.1.1 = { owner = OUC controller = OUC }
+1520.1.1 = { add_core = AMA }
+1525.1.1 = { owner = MRI controller = MRI }
+1525.1.1 = { fort_15th = yes } # Yoshida Koriyama Castle, the capital of the Mori clan
+1525.1.1 = { capital = "Koriyama" }
+1542.1.1 = { discovered_by = POR }
+1566.11.28 = { remove_core = AMA }
+1599.1.1 = { capital = "Hiroshima" }
+1603.1.1 = { fort_15th = no } # The Mori clan moved to Suo

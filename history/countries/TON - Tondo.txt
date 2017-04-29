@@ -1,0 +1,29 @@
+government = despotic_monarchy
+mercantilism = 0.1
+technology_group = chinese
+religion = hinduism
+primary_culture = filipino
+capital = 2697
+
+1444.1.1 = {
+	monarch = {
+		name = "Lontok"
+		dynasty = "Salamat"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	add_piety = -0.15
+	heir = {
+		birth_date = 1430.1.1
+		name = "Kalangitan"
+		dynasty = "Salamat"
+		claim = 100
+		adm = 2
+		dip = 5
+		mil = 3
+	}
+}
+1500.1.1 = {
+	religion = sunni
+}

@@ -1,0 +1,16 @@
+# Turov-Pinsnk
+government = feudal_monarchy
+primary_culture = byelorussian
+religion = orthodox
+technology_group = eastern
+capital = 1941 # Turov
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

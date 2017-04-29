@@ -1,0 +1,108 @@
+namespace = reformation_centers
+
+province_event = {
+	id = reformation_centers.1
+	title = "reformation_centers.1.t"
+	desc = "reformation_centers.1.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		is_religion_enabled = protestant
+		has_province_flag = cathar_reformation
+		religion = cathar
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "reformation_centers.1.a"
+		add_reform_center = cathar
+	}
+
+}
+
+country_event = {
+	id = reformation_centers.2
+	title = "reformation_centers.2.t"
+	desc = "reformation_centers.2.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		is_religion_enabled = protestant
+		owns = 266
+		266 = { religion = hussite }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "reformation_centers.2.a"
+		enable_religion = hussite
+		266 = { add_reform_center = hussite }
+	}
+
+}
+
+country_event = {
+	id = reformation_centers.3
+	title = "reformation_centers.3.t"
+	desc = "reformation_centers.3.d"
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+		
+	trigger = {
+		always = no
+		is_religion_enabled = protestant
+		owns = 118
+		118 = { religion = catholic }
+		religion = catholic
+	}
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "reformation_centers.3.a"
+		118 = { add_reform_center = catholic }
+	}
+
+}
+
+country_event = {
+	id = reformation_centers.4
+	title = "reformation_centers.4.t"
+	desc = "reformation_centers.4.d"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		always = no
+		is_religion_enabled = protestant
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "reformation_centers.3.a"
+		enable_religion = hussite
+	}
+	
+	option = {
+		name = "reformation_centers.3.a"
+		enable_religion = protestant
+	}
+
+}

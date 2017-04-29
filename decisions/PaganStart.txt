@@ -1,0 +1,63 @@
+########################################
+# Pagan Revival intro decision
+#
+# Written by Neprut
+########################################
+
+country_decisions = {
+
+# Start!
+
+	theologian_pagan = {
+		
+		potential = {
+			NOT = { is_pagan_trigger = yes }
+			advisor = theologian
+			is_year = 1475
+			num_of_cities = 30
+			NOT = { has_country_flag = pagansnowball }
+			OR = {
+				culture_group = scandinavian
+				culture_group = gaelic
+				culture_group = brythonic
+				culture_group = unified_celtic_group
+				culture_group = french
+				culture_group = iberian
+				culture_group = finno_ugric
+				culture_group = east_slavic
+				culture_group = west_slavic
+				culture_group = baltic 
+				culture_group = carpathian
+				culture_group = dacian
+				culture_group = turkish_g
+				culture_group = altaic
+				culture_group = evenks
+				culture_group = byzantine
+				culture_group = caucasian
+				culture_group = south_slavic
+				culture_group = illyrian
+				culture_group = latin
+				culture_group = occitanocatala
+				culture_group = iranian
+				culture_group = turko_semitic
+				culture_group = germanic
+				culture_group = british
+				culture_group = maghrebi
+			}
+			eurasiacan_cont = yes	
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			has_regency = no
+			advisor = theologian
+		}
+		effect = {
+			set_country_flag = pagansnowball
+			country_event = { id = pagan_revival.1 days = 7 }
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}	
+}

@@ -1,0 +1,187 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 40 55 35 }
+
+historical_idea_groups = { 
+	defensive_ideas
+	quantity_ideas
+	administrative_ideas
+	trade_ideas
+	spy_ideas
+	economic_ideas
+	aristocracy_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	persian_footsoldier
+	persian_cavalry_charge
+	persian_shamshir
+	qizilbash_cavalry
+	tofongchis_musketeer
+	topchis_artillery
+	afsharid_reformed
+	afsharid_reformed_infantry
+	muslim_mass_infantry
+	muslim_dragoon
+	persian_rifle
+}
+
+monarch_names = {
+	"Surkhay #0" = 40
+	"Eldar #0" = 30
+	"Alibek #0" = 30
+	"Budai #0" = 30
+	"Alibek #0" = 20
+	"Murtazali #0" = 20
+	"Mokhammad #0" = 20
+	"Aidemer #0" = 20
+	"Abdulbek #0" = 0 
+	"Abdulkhakim #0" = 0 
+	"Abdul-khalim #0" = 0 
+	"Abdulkhamid #0" = 0 
+	"Abdulmezhid #0" = 0 
+	"Abubakar #0" = 0 
+	"Abukhadzhi #0" = 0 
+	"Abukhan #0" = 0 
+	"Abusaid #0" = 0 
+	"Abuzar #0" = 0 
+	"Achamaz #0" = 0 
+	"Adlan #0" = 0 
+	"Akhmed #0" = 0 
+	"Andarbek #0" = 0 
+	"Aslambek #0" = 0 
+	"Ayubkhan #0" = 0 
+	"Baysangur #0" = 0 
+	"Beibulat #0" = 0 
+	"Bekbolat #0" = 0 
+	"Bekbuzar #0" = 0 
+	"Bekhan #0" = 0 
+	"Borz #0" = 0 
+	"Buvaisar #0" = 0 
+	"Chingiz #0" = 0 
+	"Danilbek #0" = 0 
+	"Degi #0" = 0 
+	"Dikalu #0" = 0 
+	"Djabrail #0" = 0 
+	"Dugurkhan #0" = 0 
+	"Dzhalal #0" = 0 
+	"Dzhamaldin #0" = 0 
+	"Dzhamalkhan #0" = 0 
+	"Dzhamaludin #0" = 0 
+	"Dzhambek #0" = 0 
+	"Elbek #0" = 0 
+	"Elimkhan #0" = 0 
+	"Emin #0" = 0 
+	"Eriskhan #0" = 0 
+	"Halid #0" = 0 
+	"Ibragim-bek #0" = 0 
+	"Ismaal #0" = 0 
+	"Kadyr #0" = 0 
+	"Kakhir #0" = 0 
+	"Kasym #0" = 0 
+	"Kerim #0" = 0 
+	"Khasanbek #0" = 0 
+	"Khassan #0" = 0 
+	"Khavazh #0" = 0 
+	"Khazarbek #0" = 0 
+	"Khuseyn #0" = 0 
+	"Mairbek #0" = 0 
+	"Mamed #0" = 0 
+	"Mayrsolt #0" = 0 
+	"Mokhmad #0" = 0 
+	"Nazhmuddin #0" = 0 
+	"Nazyr #0" = 0 
+	"Patarz #0" = 0 
+	"Said #0" = 0 
+	"Shakhid #0" = 0 
+	"Shamsudin #0" = 0 
+	"Soslanbek #0" = 0 
+	"Sulimbek #0" = 0 
+	"Sultanbek #0" = 0 
+	"Tamerlan #0" = 0 
+	"Tashtemir #0" = 0 
+	"Temirbek #0" = 0 
+	"Turpal #0" = 0 
+	"Vaharsolt #0" = 0 
+	"Vakhid #0" = 0 
+	"Vezirkhan #0" = 0 
+	"Zalimkhan #0" = 0 
+	"Zaur #0" = 0 
+	"Zelim #0" = 0 
+	"Elisu #0" = -1
+	"Gulandash #0" = -1
+	"Aiza #0" = -1
+	"Aizanat #0" = -1
+	"Albika #0" = -1
+	"Amanat #0" = -1
+	"Ayna #0" = -1
+	"Ayşa #0" = -1
+	"Aysha #0" = -1
+	"Bilqiz #0" = -1
+	"Fariza #0" = -1
+	"Hadijat #0" = -1
+	"Kesira #0" = -1
+	"Khalimat #0" = -1
+	"Kheda #0" = -1
+	"Madina #0" = -1
+	"Makka #0" = -1
+	"Rebiat #0" = -1
+	"Ruvayda #0" = -1
+	"Shovda #0" = -1
+	"Taymaskha #0" = -1
+	"Yakha #0" = -1
+	"Yakhiyta #0" = -1
+	"Zakhira #0" = -1
+	"Zalbika #0" = -1
+	"Zalima #0" = -1
+	"Zamira #0" = -1
+	"Zulay #0" = -1
+	"Zulikha #0" = -1
+	"Zulima #0" = -1
+}
+
+leader_names = {
+	Derbent
+	Tabasaran
+	Gumik
+	Sarir
+	Lakz
+	Haidak
+	Philan
+	Shandan
+	Zirihgeran
+	Tumen
+	Djidan
+	Khamzin
+	Samandar
+	Balanjar
+	Shamkal 
+	Akhmad
+	Aslanbek
+	Duday
+	Dudin
+	Dudiyn
+	Dzhabrail
+	Dzhokhar
+	Islambek
+	Khasan
+	Magomed
+	Maskhadan
+	Mayrbek
+	Otarsultan
+	Shishani
+	Yandarbin
+	Zelimkhan
+	
+}
+
+ship_names = {
+	"Umal Muhammad"
+	Leça
+	Kuyra
+	Noxçiyçö
+	Sölza-Gala
+}

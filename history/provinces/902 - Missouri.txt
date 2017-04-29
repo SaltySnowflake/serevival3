@@ -1,0 +1,81 @@
+#902 - Missouri
+
+culture = chiwere
+religion = wakanda
+capital = "Missouri"
+trade_goods = maize
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 25
+native_ferocity = 2
+native_hostileness = 9
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = MSS
+	controller = MSS
+	add_core = MSS
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = MSS
+	controller = MSS
+	add_core = MSS
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = MSS
+	controller = MSS
+	add_core = MSS
+	is_city = yes
+}
+
+
+1684.1.1 = { discovered_by = FRA } # Nicolas Perrot
+
+1744.1.1 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	culture = cosmopolitan_french
+	religion = catholic
+} # Construction of Fort Cavagnal
+1762.1.1 = {
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	remove_core = FRA
+} # Treaty of Fontainebleau, secretely ceded to Spain
+1764.1.1 = { capital = "Saint Louis" }
+1787.1.1 = { add_core = SPA }
+1794.1.1 = { remove_core = MSS }
+1800.10.1 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	culture = cosmopolitan_french
+	remove_core = SPA
+} # Treaty of San Ildefonso
+1803.4.3 = {
+	owner = USA
+	controller = USA
+	add_core = USA
+	remove_core = FRA
+	culture = american
+	religion = protestant
+} # The Louisiana purchase

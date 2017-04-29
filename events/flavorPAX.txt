@@ -1,0 +1,41 @@
+########################################
+# Events for Alexandria
+#
+# written by Neprut
+########################################
+
+namespace = flavor_pax
+
+# Muslim overthrown government
+country_event = {
+	id = flavor_pax.1
+	title = flavor_pax.1.t
+	desc = flavor_pax.1.d
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = PAX
+		religion_group = muslim
+	}
+	
+#	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = flavor_pax.1.a
+		
+		change_government = despotic_monarchy
+		kill_ruler = yes
+		add_piety = 0.25
+		
+		every_country = {
+			limit = { religion = coptic }
+			add_opinion = {
+				who = ROOT
+				modifier = alexandira_overthrown
+			}				
+		}
+	}
+}

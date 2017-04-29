@@ -1,0 +1,29 @@
+# 1743 Cambray
+#Region - Low Countries
+#Area - Wallonia
+
+owner = CMB
+controller = CMB
+add_core = CMB
+capital = "Cambray"
+is_city = yes
+estate = estate_church
+culture = wallonian
+religion = catholic
+hre = yes
+base_tax = 4
+base_production = 4
+trade_goods = cloth
+base_manpower = 2
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.06 = { HRE = no }
+1444.11.11 = { HRE = yes }
+
+1677.4.19 = { owner = FRA controller = FRA add_core = FRA } # Captured by Louis XIV
+1789.5.5 = { base_tax = 5 base_production = 5 } # The General Estates
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

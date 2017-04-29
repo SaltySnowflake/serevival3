@@ -1,0 +1,10 @@
+government = ottoman_government
+primary_culture = turkish
+religion = sunni
+technology_group = ottoman
+historical_rival = MAM
+historical_rival = BYZ
+historical_rival = TIM
+historical_rival = HAB
+historical_rival = HUN
+capital = 151 # Instanbul

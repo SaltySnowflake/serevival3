@@ -1,0 +1,16 @@
+government = oligarchic_republic
+technology_group = chinese
+religion = anito
+primary_culture = filipino
+capital = 654
+
+1444.1.1 = {
+	monarch ={
+		name = "Pandaque"
+		dynasty = "Madyanos"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	add_piety = -0.15
+}

@@ -1,0 +1,65 @@
+# No previous file for Kumeyaay
+
+culture = takic
+religion = kachina
+capital = "Sakíshmay"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = north_american
+
+
+1444.11.2 = {
+	owner = MOJ
+	controller = MOJ
+	add_core = MOJ
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = MOJ
+	controller = MOJ
+	add_core = MOJ
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = MOJ
+	controller = MOJ
+	add_core = MOJ
+	is_city = yes
+}
+
+1533.1.1 = { discovered_by = SPA }
+
+1769.1.1 = {
+	owner = SPA
+	controller = SPA
+	capital = "San Diego"
+	culture = castillian
+	religion = catholic	
+} # Colonists began to arrive
+1775.1.1 = { unrest = 4 } # The natives rebelled
+1776.1.1 = { unrest = 0 }
+1794.1.1 = { add_core = SPA }
+1810.9.16 = {
+	owner = MEX
+	add_core = MEX
+	controller = SPA
+} # Mexican War of Independence
+1819.1.1 = { remove_core = MOJ }

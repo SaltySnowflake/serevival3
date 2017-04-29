@@ -1,0 +1,742 @@
+conquer_danzig = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		is_year = 1460
+		normal_or_historical_nations = yes
+		OR = {
+			primary_culture = polish
+			tag = PLC
+		}
+		exists = TEU
+		is_subject = no
+		NOT = { alliance_with = TEU }
+		TEU = {
+			owns = 43
+			NOT = { vassal_of = ROOT }
+			NOT = { vassal_of = POL }
+			NOT = { vassal_of = PLC }
+		}
+		43 = {
+			any_neighbor_province = {
+				owned_by = ROOT
+			}
+		}
+		NOT = { war_with = TEU }
+		NOT = { has_country_modifier = baltic_ambition }
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { TEU = { owns = 43 } }
+		}
+	}
+	success = {
+		NOT = { war_with = TEU }
+		owns = 43
+	}
+	chance = {
+		factor = 5050
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+	}
+	immediate = {
+		add_claim = 43
+	}
+	abort_effect = {
+		43 = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "baltic_ambition"
+			duration = 3650
+		}
+	}
+}
+
+
+conquer_warmia = { #Conquer Western Prussia
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	target_provinces = {
+		owned_by = TEU
+		OR = {
+			province_id = 42 #Ermland
+			province_id = 1841 #Marienburg
+			province_id = 1859 #Kulm
+			province_id = 2997 #Tuchel
+		}
+	}
+	
+	allow = {
+		is_year = 1460
+		normal_or_historical_nations = yes
+		OR = {
+			primary_culture = polish
+			tag = PLC
+		}
+		exists = TEU
+		NOT = { alliance_with = TEU }
+		is_subject = no
+		TEU = {
+			is_neighbor_of = ROOT
+			NOT = { vassal_of = POL }
+			OR = {
+				owns = 42
+				owns = 1841
+				owns = 1859
+				owns = 2997
+			}
+		}
+		NOT = { has_country_flag = conquered_western_prussia }
+		NOT = { has_country_modifier = polish_ambition }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 5050
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+	}
+}
+
+vassalize_mazovia = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		tag = POL
+		exists = MAZ
+		is_subject = no
+		MAZ = {
+			is_subject = no
+			is_neighbor_of = ROOT
+			NOT = { num_of_cities = ROOT }
+			NOT = { total_development = 50 }
+			NOT = { government = imperial_city }
+		}
+		NOT = { has_country_modifier = polish_ambition }
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { exists = MAZ }
+			MAZ = { is_subject = yes }
+			NOT = {
+				has_casus_belli = {
+					type = cb_vassalize_mission
+					target = MAZ
+				}
+			}
+		}
+	}
+	success = {
+		MAZ = { vassal_of = POL }
+	}
+	chance = {
+		factor = 2000
+	}
+	immediate = {
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 300
+			target = MAZ
+		}
+	}
+	abort_effect = {
+		remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = MAZ
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+		hidden_effect = {
+			remove_casus_belli = {
+				type = cb_vassalize_mission
+				target = MAZ
+			}
+		}
+	}
+}
+
+conquer_smolensk = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		OR = {
+			primary_culture = polish
+			tag = PLC
+		}
+		exists = RUS
+		is_subject = no
+		RUS = {
+			owns = 293
+			NOT = { vassal_of = ROOT }
+			NOT = { vassal_of = PLC }
+			NOT = { vassal_of = POL }
+		}
+		293 = {
+			any_neighbor_province = {
+				owned_by = ROOT
+			}
+		}
+		NOT = { alliance_with = RUS }
+		NOT = { war_with = RUS }
+		NOT = { has_country_modifier = polish_ambition }
+		NOT = { has_country_flag = conquered_smolensk }
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { RUS = { owns = 293 } }
+		}
+	}
+	success = {
+		NOT = { war_with = RUS }
+		owns = 293
+	}
+	chance = {
+		factor = 3000
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+	}
+	immediate = {
+		add_claim = 293
+	}
+	abort_effect = {
+		293 = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = conquered_smolensk
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+	}
+}
+
+
+retake_podolia = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		OR = {
+			primary_culture = polish
+			tag = PLC
+		}
+		OR = {
+			exists = TUR
+			exists = OSM
+			exists = TRK
+		}
+		is_subject = no
+		OR = {
+			TUR = {
+				owns = 281		# Podolia
+				is_neighbor_of = ROOT
+				NOT = { vassal_of = ROOT }
+				NOT = { vassal_of = PLC }
+				NOT = { vassal_of = POL }
+			}
+			OSM = {
+				owns = 281		# Podolia
+				is_neighbor_of = ROOT
+				NOT = { vassal_of = ROOT }
+				NOT = { vassal_of = PLC }
+				NOT = { vassal_of = POL }
+			}
+			TRK = {
+				owns = 281		# Podolia
+				is_neighbor_of = ROOT
+				NOT = { vassal_of = ROOT }
+				NOT = { vassal_of = PLC }
+				NOT = { vassal_of = POL }
+			}
+		}
+		NOT = { alliance_with = TUR }
+		NOT = { war_with = TUR }
+		NOT = { alliance_with = OSM }
+		NOT = { war_with = OSM }
+		NOT = { alliance_with = TRK }
+		NOT = { war_with = TRK }
+		NOT = { has_country_modifier = polish_ambition }
+		NOT = { has_country_flag = retook_podolia }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		owns = 281
+	}
+	chance = {
+		factor = 3000
+		modifier = {
+			factor = 2
+			NOT = { has_opinion = { who = TUR value = 0 } }
+		}
+		modifier = {
+			factor = 2
+			NOT = { has_opinion = { who = OSM value = 0 } }
+		}
+		modifier = {
+			factor = 2
+			NOT = { has_opinion = { who = TRK value = 0 } }
+		}
+	}
+	immediate = {
+		add_claim = 281
+	}
+	abort_effect = {
+		281 = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = retook_podolia
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+	}
+}
+
+vassalize_lithuania = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		primary_culture = polish
+		exists = LIT
+		LIT = {
+			is_subject = no
+			is_neighbor_of = ROOT
+			NOT = { num_of_cities = ROOT }
+			NOT = { total_development = 50 }
+			NOT = { government = imperial_city }
+		}
+		NOT = { has_country_flag = vassalized_lithuania }
+		NOT = { has_country_modifier = polish_ambition }
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { exists = LIT }
+			LIT = { is_subject = yes }
+			NOT = {
+				has_casus_belli = {
+					type = cb_vassalize_mission
+					target = LIT
+				}
+			}
+		}
+	}
+	success = {
+		LIT = { vassal_of = ROOT }
+	}
+	chance = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			has_opinion = { who = LIT value = 100 }
+		}
+		modifier = {
+			factor = 2
+			marriage_with = LIT
+		}
+	}
+	immediate = {
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 300
+			target = LIT
+		}
+	}
+	abort_effect = {
+		remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = LIT
+		}
+	}
+	effect = {
+		set_country_flag = vassalized_lithuania
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+		hidden_effect = {
+			remove_casus_belli = {
+				type = cb_vassalize_mission
+				target = LIT
+			}
+		}
+	}
+}
+
+vassalize_the_teutonic_order = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		OR = {
+			primary_culture = polish
+			tag = PLC
+		}
+		exists = TEU
+		is_subject = no
+		TEU = {
+			is_subject = no
+			is_neighbor_of = ROOT
+			NOT = { num_of_cities = ROOT }
+			NOT = { total_development = 50 }
+			NOT = { government = imperial_city }
+		}
+		NOT = { has_country_flag = vassalized_teutonic_order }
+		NOT = { has_country_modifier = polish_ambition }
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { exists = TEU }
+			TEU = {
+				is_subject = yes
+				NOT = { vassal_of = ROOT }
+			}
+			NOT = {
+				has_casus_belli = {
+					type = cb_vassalize_mission
+					target = TEU
+				}
+			}
+		}
+	}
+	success = {
+		TEU = { vassal_of = ROOT }
+	}
+	chance = {
+		factor = 3000
+		modifier = {
+			factor = 2
+			NOT = { has_opinion = { who = TEU value = 0 } }
+		}
+	}
+	immediate = {
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 300
+			target = TEU
+		}
+	}
+	abort_effect = {
+		remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = TEU
+		}
+	}
+	effect = {
+		set_country_flag = vassalized_teutonic_order
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+		hidden_effect = {
+			remove_casus_belli = {
+				type = cb_vassalize_mission
+				target = TEU
+			}
+		}
+	}
+}
+
+
+retake_minsk = {
+	
+	type = country
+
+	category = MIL
+	ai_mission = yes
+	
+	allow = {
+		normal_or_historical_nations = yes
+		OR = {
+			primary_culture = polish
+			tag = PLC
+		}
+		exists = RUS
+		is_subject = no
+		RUS = {
+			owns = 276			# Minsk
+			NOT = { vassal_of = ROOT }
+			NOT = { vassal_of = PLC }
+			NOT = { vassal_of = POL }
+		}
+		276 = {
+			any_neighbor_province = {
+				owned_by = ROOT
+			}
+		}
+		NOT = { alliance_with = RUS }
+		NOT = { war_with = RUS }
+		NOT = { has_country_modifier = polish_ambition }
+		NOT = { has_country_flag = retook_minsk }
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { RUS = { owns = 276 } }
+		}
+	}
+	success = {
+		NOT = { war_with = RUS }
+		owns = 276
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+	}
+	immediate = {
+		add_claim = 276
+	}
+	abort_effect = {
+		276 = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = retook_minsk
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+	}
+}
+
+
+defend_polands_western_border = {
+	
+	type = country
+
+	category = ADM
+	
+	target_provinces = {
+		OR = {
+			area = wielkopolska_area
+			area = kalisz_area
+		}
+		owned_by = PRU
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		OR = {
+			primary_culture = polish
+			tag = PLC
+		}
+		exists = PRU
+		is_subject = no
+		NOT = { war_with = PRU }
+		NOT = { alliance_with = PRU }
+		OR = {
+			AND = {
+				wielkopolska_area = { owned_by = ROOT }
+				wielkopolska_area = { owned_by = PRU }
+			}
+			AND = {
+				kalisz_area = { owned_by = ROOT }
+				kalisz_area = { owned_by = PRU }
+			}
+		}
+		NOT = { has_country_flag = defended_western_polish_border }
+		NOT = { has_country_modifier = polish_ambition }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = defended_western_polish_border
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+	}
+}
+
+
+defend_polands_northern_border = {
+	
+	type = country
+
+	category = ADM
+	
+	target_provinces = {
+		OR = {
+			area = white_ruthenia_area
+			area = lithuania_area
+		}
+		owned_by = RUS
+	}
+	allow = {
+		normal_or_historical_nations = yes
+		OR = {
+			primary_culture = polish
+			tag = PLC
+		}
+		exists = RUS
+		is_neighbor_of = RUS
+		is_subject = no
+		NOT = { war_with = RUS }
+		NOT = { alliance_with = RUS }
+		OR = {
+			lithuania_area = { owned_by = ROOT }
+			white_ruthenia_area = { owned_by = ROOT }
+		}
+		OR = {
+			lithuania_area = { owned_by = RUS }
+			white_ruthenia_area = { owned_by = RUS }
+		}
+		NOT = { has_country_modifier = polish_ambition }
+		NOT = { has_country_flag = defended_northern_polish_border }
+	}
+	abort = {
+		is_subject = yes
+	}
+	success = {
+		all_target_province = {
+			owned_by = ROOT
+		}
+	}
+	chance = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			mil = 4
+		}	
+	}
+	immediate = {
+		every_target_province = {
+			add_claim = ROOT
+		}
+	}
+	abort_effect = {
+		every_target_province = {
+			if = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				remove_claim = ROOT
+			}
+		}
+	}
+	effect = {
+		set_country_flag = defended_northern_polish_border
+		add_country_modifier = {
+			name = "polish_ambition"
+			duration = 3650
+		}
+	}
+}

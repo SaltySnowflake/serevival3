@@ -1,0 +1,15 @@
+government = native_council
+primary_culture = eyak
+religion = sgaanaang
+technology_group = north_american
+capital = 2612 # Eyak
+
+1444.1.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

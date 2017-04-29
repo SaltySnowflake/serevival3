@@ -1,0 +1,44 @@
+culture = aboriginal
+religion = tjukurpa
+capital = "Gurinji"
+hre = no
+trade_goods = wool
+base_manpower = 1
+base_tax = 1
+base_production = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 9
+discovered_by = aboriginal
+
+
+1444.11.2 = {
+	owner = GNJ
+	controller = GNJ
+	add_core = GNJ
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = GNJ
+	controller = GNJ
+	add_core = GNJ
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = GNJ
+	controller = GNJ
+	add_core = GNJ
+	is_city = yes
+}

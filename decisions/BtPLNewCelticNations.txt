@@ -1,0 +1,266 @@
+country_decisions = {
+
+	tir_na_ngael_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}	#Custom Ai will not form this
+			NOT = { tag = CEL }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = GBR }
+			NOT = { tag = ROM }
+			NOT = { tag = YYK }
+			NOT = { exists = TNA }
+			OR = {
+				culture_group = gaelic
+				culture = scottish
+			}
+			OR = {
+				ai = no
+				num_of_cities = 8
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}	#Normal no colonial stuff
+		}
+		allow = {
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 13
+				region = ireland_area
+			}	#2/3 of Ireland's 17 provinces
+			num_of_owned_provinces_with = {
+				value = 13
+				OR = {
+					area = lowlands_area
+					area = western_lowlands_area
+					area = highlands_area
+					area = southern_isles_area
+				}
+			}	#2/3 of Scotland's 17 provinces
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted. Note base dev in 1444 if Scotland 85 and Ireland 85, 170 total
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			}
+		effect = {
+			change_tag = TNA
+			change_government = high_kingship
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			ireland_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TNA
+			}
+			lowlands_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TNA
+			}
+			western_lowlands_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TNA
+			}
+			highlands_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TNA
+			}
+			southern_isles_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TNA
+			}
+			if = {
+				limit = { primary_culture = scottish }
+				change_primary_culture = highland_scottish
+				every_owned_province = {
+					limit = { culture = scottish }
+					change_culture = highland_scottish
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							primary_culture = irish
+							accepted_culture = irish
+						}
+					}
+				}
+				add_accepted_culture = irish
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							primary_culture = highland_scottish
+							accepted_culture = highland_scottish
+						}
+					}
+				}
+				add_accepted_culture = highland_scottish
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							primary_culture = gallgaidheil
+							accepted_culture = gallgaidheil
+						}
+					}
+				}
+				add_accepted_culture = gallgaidheil
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+				capital_scope = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}	#If tag missed the first formable boost
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	albion_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}	#Custom Ai will not form this
+			NOT = { tag = CEL }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = GBR }
+			NOT = { tag = ROM }
+			NOT = { tag = TNA }
+			NOT = { exists = YYK }
+			culture_group = brythonic
+			OR = {
+				ai = no
+				num_of_cities = 8
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}	#Normal no colonial stuff
+		}
+		allow = {
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 26
+				region = british_isles_region
+			}	#Just over 1/2 of Britain's 46 provinces, same as other Celtic tag.
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted. Note base dev in 1444 is Wales 19, Cornwall 9, Brittany 54, 82 total. England is another 178 or Scotland 85, so by the time a tag has the provinces, dev shouldn't be a problem.
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			}
+		effect = {
+			change_tag = YYK
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { area = southern_isles_area }
+				}
+				add_permanent_claim = YYK
+			}
+			brittany_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					culture_group = brythonic
+				}
+				add_permanent_claim = YYK
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							primary_culture = welsh
+							accepted_culture = welsh
+						}
+					}
+				}
+				add_accepted_culture = welsh
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							primary_culture = breton
+							accepted_culture = breton
+						}
+					}
+				}
+				add_accepted_culture = breton
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							primary_culture = cornish
+							accepted_culture = cornish
+						}
+					}
+				}
+				add_accepted_culture = cornish
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+				capital_scope = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}	#If tag missed the first formable boost
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 20		#Extra Dev for Albion. Long live King Arthur!
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

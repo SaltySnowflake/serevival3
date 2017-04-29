@@ -1,0 +1,792 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+######################################
+# Faction dynamics
+######################################
+
+# The order of modifiers make sure we first check the highest version, so that we don't have a cascade of notifications
+occitanist_faction_rising5 = {
+	potential = {
+		has_faction = trobador_occitanist
+		culture_group = occitanocatala
+		trobador = 3
+	}
+	
+	trigger = {
+		culture_group = occitanocatala
+		trobador = 3
+	}
+	
+	trobador_occitanist_influence = 0.25
+}
+
+occitanist_faction_rising4 = {
+	potential = {
+		has_faction = trobador_occitanist
+		culture_group = occitanocatala
+		trobador = 2
+		NOT = { has_country_modifier = occitanist_faction_rising5 }
+	}
+	
+	trigger = {
+		culture_group = occitanocatala
+		trobador = 2
+	}
+	
+	trobador_occitanist_influence = 0.2
+}
+
+occitanist_faction_rising3 = {
+	potential = {
+		has_faction = trobador_occitanist
+		culture_group = occitanocatala
+		advisor = trobador
+		NOT = { has_country_modifier = occitanist_faction_rising4 }
+		NOT = { has_country_modifier = occitanist_faction_rising5 }
+	}
+	
+	trigger = {
+		culture_group = occitanocatala
+		advisor = trobador
+	}
+	
+	trobador_occitanist_influence = 0.15
+}
+
+occitanist_faction_rising2 = {
+	potential = {
+		has_faction = trobador_occitanist
+		culture_group = occitanocatala
+		NOT = { has_country_modifier = occitanist_faction_rising3 }
+		NOT = { has_country_modifier = occitanist_faction_rising4 }
+		NOT = { has_country_modifier = occitanist_faction_rising5 }
+	}
+	
+	trigger = {
+		culture_group = occitanocatala
+	}
+	
+	trobador_occitanist_influence = 0.1
+}
+
+occitanist_faction_rising1 = {
+	potential = {
+		has_faction = trobador_occitanist
+		NOT = { has_country_modifier = occitanist_faction_rising2 }
+		NOT = { has_country_modifier = occitanist_faction_rising3 }
+		NOT = { has_country_modifier = occitanist_faction_rising4 }
+		NOT = { has_country_modifier = occitanist_faction_rising5 }
+	}
+	
+	trigger = {
+		has_faction = trobador_occitanist
+		capital_scope = { check_variable = { which = province_occitanism value = 33 } }
+	}
+	
+	trobador_occitanist_influence = 0.05
+}
+
+republican_faction_rising5 = {
+	potential = {
+		has_faction = trobador_republican
+		OR = {
+			AND = {
+				trade_income_percentage = 0.70
+				num_of_merchants = 5
+			}
+			AND = {
+				government = monarchy # bad monarchy = faction rises
+				NOT = { legitimacy = 33 } # but only if the issue is serious
+			}
+		}
+		OR = {
+			NOT = { government = republic }  
+			republican_tradition = 90  # bad republic = faction can't rise
+		}
+	}
+	
+	trigger = {
+		OR = {
+			AND = {
+				trade_income_percentage = 0.70
+				num_of_merchants = 5
+			}
+			AND = {
+				government = monarchy
+				NOT = { legitimacy = 33 }
+			}
+		}
+		OR = {
+			NOT = { government = republic }
+			republican_tradition = 90
+		}
+	}
+	
+	trobador_republican_influence = 0.25
+}
+
+republican_faction_rising4 = {
+	potential = {
+		has_faction = trobador_republican
+		OR = {
+			AND = {
+				trade_income_percentage = 0.60
+				num_of_merchants = 4
+			}
+			AND = {
+				government = monarchy
+				NOT = { legitimacy = 50 }
+			}
+		}
+		OR = {
+			NOT = { government = republic }
+			republican_tradition = 75
+		}
+		NOT = { has_country_modifier = republican_faction_rising5 }
+	}
+	
+	trigger = {
+		OR = {
+			AND = {
+				trade_income_percentage = 0.60
+				num_of_merchants = 4
+			}
+			AND = {
+				government = monarchy
+				NOT = { legitimacy = 50 }
+			}
+		}
+		OR = {
+			NOT = { government = republic }
+			republican_tradition = 75
+		}
+	}
+	
+	trobador_republican_influence = 0.2
+}
+
+republican_faction_rising3 = {
+	potential = {
+		has_faction = trobador_republican
+		trade_income_percentage = 0.50
+		num_of_merchants = 3
+		OR = {
+			NOT = { government = republic }
+			republican_tradition = 50
+		}
+		NOT = { has_country_modifier = republican_faction_rising4 }
+		NOT = { has_country_modifier = republican_faction_rising5 }
+	}
+	
+	trigger = {
+		trade_income_percentage = 0.50
+		num_of_merchants = 3
+		OR = {
+			NOT = { government = republic }
+			republican_tradition = 50
+		}
+	}
+	
+	trobador_republican_influence = 0.15
+}
+
+republican_faction_rising2 = {
+	potential = {
+		has_faction = trobador_republican
+		trade_income_percentage = 0.40
+		num_of_merchants = 2
+		NOT = { has_country_modifier = republican_faction_rising3 }
+		NOT = { has_country_modifier = republican_faction_rising4 }
+		NOT = { has_country_modifier = republican_faction_rising5 }
+	}
+	
+	trigger = {
+		trade_income_percentage = 0.40
+		num_of_merchants = 2
+	}
+	
+	trobador_republican_influence = 0.1
+}
+
+republican_faction_rising1 = {
+	potential = {
+		has_faction = trobador_republican
+		trade_income_percentage = 0.30
+		num_of_merchants = 1
+		NOT = { has_country_modifier = republican_faction_rising2 }
+		NOT = { has_country_modifier = republican_faction_rising3 }
+		NOT = { has_country_modifier = republican_faction_rising4 }
+		NOT = { has_country_modifier = republican_faction_rising5 }
+	}
+	
+	trigger = {
+		trade_income_percentage = 0.30
+		num_of_merchants = 1
+	}
+	
+	trobador_republican_influence = 0.05
+}
+
+french_faction_rising5 = {
+	potential = {
+		has_faction = trobador_french
+		exists = FRA
+		NOT = { war_with = FRA }
+		NOT = { truce_with = FRA }
+		has_opinion = { who = FRA value = 200 }
+		FRA = {
+			num_of_cities = ROOT 
+			army_size = ROOT
+			prestige = 50 
+		}
+	}
+	
+	trigger = {
+		NOT = { war_with = FRA }
+		NOT = { truce_with = FRA }
+		has_opinion = { who = FRA value = 200 }
+		FRA = { 
+			num_of_cities = ROOT
+			army_size = ROOT
+			prestige = 50 
+		}
+	}
+	
+	trobador_french_influence = 0.25
+}
+
+french_faction_rising4 = {
+	potential = {
+		has_faction = trobador_french
+		exists = FRA
+		NOT = { war_with = FRA }
+		NOT = { truce_with = FRA }
+		has_opinion = { who = FRA value = 150 }
+		FRA = { 
+			num_of_cities = ROOT
+			army_size = ROOT 
+			prestige = 0 
+		}
+		NOT = { has_country_modifier = french_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = FRA }
+		NOT = { truce_with = FRA }
+		has_opinion = { who = FRA value = 150 }
+		FRA = { 
+			num_of_cities = ROOT
+			army_size = ROOT 
+			prestige = 0
+		}
+	}
+	
+	trobador_french_influence = 0.2
+}
+
+french_faction_rising3 = {
+	potential = {
+		has_faction = trobador_french
+		exists = FRA
+		NOT = { war_with = FRA }
+		NOT = { truce_with = FRA }
+		has_opinion = { who = FRA value = 100 }
+		FRA = { num_of_cities = ROOT }
+		NOT = { has_country_modifier = french_faction_rising4 }
+		NOT = { has_country_modifier = french_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = FRA }
+		NOT = { truce_with = FRA }
+		has_opinion = { who = FRA value = 100 }
+		FRA = { num_of_cities = ROOT }
+	}
+	
+	trobador_french_influence = 0.15
+}
+
+french_faction_rising2 = {
+	potential = {
+		has_faction = trobador_french
+		exists = FRA
+		NOT = { war_with = FRA }
+		NOT = { truce_with = FRA }
+		has_opinion = { who = FRA value = 50 }
+		NOT = { has_country_modifier = french_faction_rising3 }
+		NOT = { has_country_modifier = french_faction_rising4 }
+		NOT = { has_country_modifier = french_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = FRA }
+		NOT = { truce_with = FRA }
+		has_opinion = { who = FRA value = 50 }
+	}
+	
+	trobador_french_influence = 0.1
+}
+
+french_faction_rising1 = {
+	potential = {
+		has_faction = trobador_french
+		exists = FRA
+		NOT = { war_with = FRA }
+		has_opinion = { who = FRA value = 0 }
+		NOT = { has_country_modifier = french_faction_rising2 }
+		NOT = { has_country_modifier = french_faction_rising3 }
+		NOT = { has_country_modifier = french_faction_rising4 }
+		NOT = { has_country_modifier = french_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = FRA }
+		has_opinion = { who = FRA value = 0 }
+	}
+	
+	trobador_french_influence = 0.05
+}
+
+aragonese_faction_rising5 = {
+	potential = {
+		has_faction = trobador_aragonese
+		exists = ARA
+		NOT = { war_with = ARA }
+		NOT = { truce_with = ARA }
+		has_opinion = { who = ARA value = 150 }
+		ARA = { 
+			primary_culture = catala
+			num_of_cities = ROOT
+			army_size = ROOT
+			prestige = 50 
+		}
+	}
+	
+	trigger = {
+		NOT = { war_with = ARA }
+		NOT = { truce_with = ARA }
+		has_opinion = { who = ARA value = 150 }
+		ARA = { 
+			primary_culture = catala
+			num_of_cities = ROOT
+			army_size = ROOT
+			prestige = 50 
+		}
+	}
+	
+	trobador_aragonese_influence = 0.25
+}
+
+aragonese_faction_rising4 = {
+	potential = {
+		has_faction = trobador_aragonese
+		exists = ARA
+		NOT = { war_with = ARA }
+		NOT = { truce_with = ARA }
+		has_opinion = { who = ARA value = 100 }
+		ARA = { 
+			primary_culture = catala
+			num_of_cities = ROOT
+			army_size = ROOT
+			prestige = 0 
+		}
+		NOT = { has_country_modifier = aragonese_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = ARA }
+		NOT = { truce_with = ARA }
+		has_opinion = { who = ARA value = 100 }
+		ARA = { 
+			primary_culture = catala
+			num_of_cities = ROOT
+			army_size = ROOT
+			prestige = 0 
+		}
+	}
+	
+	trobador_aragonese_influence = 0.2
+}
+
+aragonese_faction_rising3 = {
+	potential = {
+		has_faction = trobador_aragonese
+		exists = ARA
+		NOT = { war_with = ARA }
+		NOT = { truce_with = ARA }
+		has_opinion = { who = ARA value = 50 }
+		ARA = { primary_culture = catala }
+		NOT = { has_country_modifier = aragonese_faction_rising4 }
+		NOT = { has_country_modifier = aragonese_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = ARA }
+		NOT = { truce_with = ARA }
+		has_opinion = { who = ARA value = 50 }
+		ARA = { primary_culture = catala }
+	}
+	
+	trobador_aragonese_influence = 0.15
+}
+
+
+aragonese_faction_rising2 = {
+	potential = {
+		has_faction = trobador_aragonese
+		exists = ARA
+		NOT = { war_with = ARA }
+		NOT = { truce_with = ARA }
+		has_opinion = { who = ARA value = 50 }
+		NOT = { has_country_modifier = aragonese_faction_rising3 }
+		NOT = { has_country_modifier = aragonese_faction_rising4 }
+		NOT = { has_country_modifier = aragonese_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = ARA }
+		NOT = { truce_with = ARA }
+		has_opinion = { who = ARA value = 50 }
+	}
+	
+	trobador_aragonese_influence = 0.1
+}
+
+aragonese_faction_rising1 = {
+	potential = {
+		has_faction = trobador_aragonese
+		exists = ARA
+		NOT = { war_with = ARA }
+		has_opinion = { who = ARA value = 0 }
+		NOT = { has_country_modifier = aragonese_faction_rising2 }
+		NOT = { has_country_modifier = aragonese_faction_rising3 }
+		NOT = { has_country_modifier = aragonese_faction_rising4 }
+		NOT = { has_country_modifier = aragonese_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = ARA }
+		has_opinion = { who = ARA value = 0 }
+	}
+	
+	trobador_aragonese_influence = 0.05
+}
+
+castillian_faction_rising5 = {
+	potential = {
+		has_faction = trobador_castillian
+		exists = CAS
+		NOT = { war_with = CAS }
+		NOT = { truce_with = CAS }
+		has_opinion = { who = CAS value = 200 }
+		CAS = {
+			num_of_cities = ROOT 
+			army_size = ROOT
+			prestige = 50 
+		}
+	}
+	
+	trigger = {
+		NOT = { war_with = CAS }
+		NOT = { truce_with = CAS }
+		has_opinion = { who = CAS value = 200 }
+		CAS = { 
+			num_of_cities = ROOT
+			army_size = ROOT
+			prestige = 50 
+		}
+	}
+	
+	trobador_castillian_influence = 0.25
+}
+
+castillian_faction_rising4 = {
+	potential = {
+		has_faction = trobador_castillian
+		exists = CAS
+		NOT = { war_with = CAS }
+		NOT = { truce_with = CAS }
+		has_opinion = { who = CAS value = 150 }
+		CAS = { 
+			num_of_cities = ROOT
+			army_size = ROOT 
+			prestige = 0 
+		}
+		NOT = { has_country_modifier = castillian_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = CAS }
+		NOT = { truce_with = CAS }
+		has_opinion = { who = CAS value = 150 }
+		CAS = { 
+			num_of_cities = ROOT
+			army_size = ROOT 
+			prestige = 0
+		}
+	}
+	
+	trobador_castillian_influence = 0.2
+}
+
+castillian_faction_rising3 = {
+	potential = {
+		has_faction = trobador_castillian
+		exists = CAS
+		NOT = { war_with = CAS }
+		NOT = { truce_with = CAS }
+		has_opinion = { who = CAS value = 100 }
+		CAS = { num_of_cities = ROOT }
+		NOT = { has_country_modifier = castillian_faction_rising4 }
+		NOT = { has_country_modifier = castillian_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = CAS }
+		NOT = { truce_with = CAS }
+		has_opinion = { who = CAS value = 100 }
+		CAS = { num_of_cities = ROOT }
+	}
+	
+	trobador_castillian_influence = 0.15
+}
+
+castillian_faction_rising2 = {
+	potential = {
+		has_faction = trobador_castillian
+		exists = CAS
+		NOT = { war_with = CAS }
+		NOT = { truce_with = CAS }
+		has_opinion = { who = CAS value = 50 }
+		NOT = { has_country_modifier = castillian_faction_rising3 }
+		NOT = { has_country_modifier = castillian_faction_rising4 }
+		NOT = { has_country_modifier = castillian_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = CAS }
+		NOT = { truce_with = CAS }
+		has_opinion = { who = CAS value = 50 }
+	}
+	
+	castillian_french_influence = 0.1
+}
+
+castillian_faction_rising1 = {
+	potential = {
+		has_faction = trobador_castillian
+		exists = CAS
+		NOT = { war_with = CAS }
+		has_opinion = { who = CAS value = 0 }
+		NOT = { has_country_modifier = castillian_faction_rising2 }
+		NOT = { has_country_modifier = castillian_faction_rising3 }
+		NOT = { has_country_modifier = castillian_faction_rising4 }
+		NOT = { has_country_modifier = castillian_faction_rising5 }
+	}
+	
+	trigger = {
+		NOT = { war_with = CAS }
+		has_opinion = { who = CAS value = 0 }
+	}
+	
+	trobador_castillian_influence = 0.05
+}
+
+##### Special China Mechanics
+
+the_mandate_of_heaven_SE = {
+	potential = {
+		government = celestial_empire_SE
+	}
+	
+	trigger = {	
+		stability = 0
+		legitimacy = 60
+		num_of_cities = 10
+	}
+
+	stability_cost_modifier = -0.10
+	global_unrest = -5
+}
+
+the_mandate_of_heaven_lost_SE = {
+	potential = {
+		government = celestial_empire_SE
+	}
+
+	trigger = {
+		OR = {
+			NOT = { stability = 0 }
+			NOT = { legitimacy = 60 }
+			NOT = { num_of_cities = 10 }	
+		}
+	}
+
+	discipline = -0.1
+	stability_cost_modifier = 0.5
+	global_unrest = 10
+}
+
+#Japan
+shogun_vassal_relations_6 = {
+    potential = {
+        government = shogunate
+        num_of_vassals = 6
+        NOT = { num_of_vassals = 10 }
+    }
+
+    trigger = {
+		is_subject = no
+    }
+
+    diplomatic_upkeep = 2
+}
+
+shogun_vassal_relations_10 = {
+    potential = {
+        government = shogunate
+        num_of_vassals = 10
+        NOT = { num_of_vassals = 14 }
+    }
+
+    trigger = {
+		is_subject = no
+    }
+
+    diplomatic_upkeep = 6
+}
+
+shogun_vassal_relations_14 = {
+    potential = {
+        government = shogunate
+        num_of_vassals = 14
+        NOT = { num_of_vassals = 18 }
+    }
+
+    trigger = {
+		is_subject = no
+    }
+
+    diplomatic_upkeep = 10
+}
+
+shogun_vassal_relations_18 = {
+    potential = {
+        government = shogunate
+        num_of_vassals = 18
+        NOT = { num_of_vassals = 22 }
+    }
+
+    trigger = {
+		is_subject = no
+    }
+
+    diplomatic_upkeep = 14
+}
+
+shogun_vassal_relations_22 = {
+    potential = {
+        government = shogunate
+        num_of_vassals = 22
+		NOT = { num_of_vassals = 26 }
+    }
+
+    trigger = {
+		is_subject = no
+    }
+
+    diplomatic_upkeep = 18
+}
+
+shogun_vassal_relations_26 = {
+    potential = {
+        government = shogunate
+        num_of_vassals = 26
+		NOT = { num_of_vassals = 30 }
+    }
+
+    trigger = {
+		is_subject = no
+    }
+
+    diplomatic_upkeep = 22
+}
+
+shogun_vassal_relations_30 = {
+    potential = {
+        government = shogunate
+        num_of_vassals = 30
+    }
+
+    trigger = {
+		is_subject = no
+    }
+
+    diplomatic_upkeep = 26
+}
+
+## Vinland
+
+vinland_accept_natives = {
+	potential = {
+		tag = VIN
+	}
+
+	trigger = {
+		AND = {
+			has_country_flag = vinland_natives
+			check_variable = {
+				which = vinland_natives
+				value = 10
+			}
+			has_country_flag = vinland_native_allthing
+		}
+	}
+
+	land_morale = 0.10
+	global_colonial_growth = 15
+}
+
+vinland_reject_natives = {
+	potential = {
+		tag = VIN
+	}
+
+	trigger = {
+		AND = {
+			has_country_flag = vinland_natives
+			NOT = {
+				check_variable = {
+					which = vinland_natives
+					value = 1
+				}
+			}
+		}
+	}
+
+	global_missionary_strength = -0.02
+	stability_cost_modifier = -0.1
+}
+
+##Leader at tech 12 mil
+
+SE_free_leader = {
+	potential = { mil_tech = 12 }
+	trigger = {
+		mil_tech = 12
+	}
+	free_leader_pool = 1
+}
+
+SE_diplo_slot = {
+	potential = { 
+		NOT = { started_in = 1444.11.11 }
+	}
+	trigger = {
+		NOT = { is_year = 1500 }
+	}
+	diplomatic_upkeep = -1
+}

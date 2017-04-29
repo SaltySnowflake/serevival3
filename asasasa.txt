@@ -1,0 +1,89 @@
+COOMOON
+	culture
+	ideas
+	static_mod
+	trade_goods
+	trade_nodes
+	
+HISTORY
+	countries
+		CLN
+	diplo
+		BTP_leg
+	prov
+		lots
+Local
+	Bt_prov_nam
+MAP
+	prov.BMP
+	area
+	climate
+	default
+	pos
+	region
+
+fryske => frisian
+	
+PROV changes
+
+3700 <- 4528 Andorra
+3701 <- 4527 Monaco
+3702 <- 4526 San Marino
+
+
+
+3	 <- 4558 Kalmar
+3119 <- 4556 Tromso
+3120 <- 3	 Jonkoping
+3121 <- 4524 Kalmar
+3134 <- 4571 Apenrade
+3137 <- 4574 Ross
+3138 <- 4575 Atholl
+3113 <- 4550 Mellembygden
+3135 <- 4572 Nordfriesland
+3231 <- 4699 Hiiumma
+4110 <- 3017 Caithness
+4111 <- 3079 Aunis
+4112 <- 3082 Quercy
+4130 <- 3032 Devon
+4150 <- 3107 Evora
+4151 <- 4562 Enare
+4166 <- 4557 Kronoberg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4:17 - Draíocht: Oh, indeed, my math was off.... Well, morning/night!
+4:17 - Neprut: ty you as well
+4:17 - Draíocht: Of course, thank you as well
+Friday, December 2, 2016
+2:16 - Draíocht: Hey, if you happened to know or get around to it, we mentioned briefly trade leagues before, I was wondering if you've poked around enough to know where to look to try to make trade leagues able to accept more than OPM, or even if such a thing is possible? I was noticing when adjusting dev that some 2 province Hanseatic states are not (able to be) member's of the trade league, and if you know offhand, I wont waste the time searching.
+2:19 - Draíocht: On a related subject, due to all the new provinces pulling trade power every which way, I couldn't get the main republic trade centers to pull as much trade as they should, so I ended up solving it by making a new province modifer and a handful of events/decisions to go with them. I'm not sure if it is anything you'll use, but I thought I'd let you know.
+Sunday, December 4, 2016
+0:19 - Draíocht: Hey, I just uploaded another version to the Alpha Test. Everything other than provinces owned by the Ottomans & East Anatolian tags *should* be done, at least as far as dev is concerned. Every independant tag with over 20 dev in vanilla *should* be exactly the same dev as vanilla, baring new/removed vassals, in which case the total should still add up when including vassals, aside from the following exceptions which I intentionally changed, because I felt vanilla was in error based on historical population records and wealth.
+
+England +1% (Isle of Man, a 3 dev march which just gets tacked on)
+Major North Italian Powers (Venice, Genoa, & Milan) +10% dev
+Provence -10% dev (PRO actually increased, but vassal Lorraine goes from 35 to 14)
+Burgundy +10% (all in vassal dev, mostly in Flanders)
+Pommerania -10% dev
+Silesia +10% dev
+Bavaria -33% dev
+Koeln +33% dev
+Byzantium +50% dev
+
+I took some liberties with tags under 20 dev, basing numbers off history, rather than making sure to match vanilla. Let me know if you notice anything I missed.
+2:17 - Draíocht: Oh, technically speaking, Burgundy is actually +5% total, their *vassals'* dev is increased but +10%. Also, if it matters, the actually numbers involved are +3 England, +8 Milan, +8 Genoa, +15 Venice, +17 Burgundy, -10 Provence, +3 Silesia, -3 Pommerania, -19 Bavaria, +8 Koeln, +20 Byzantium, give or take 1 or 2 dev.

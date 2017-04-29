@@ -1,0 +1,62 @@
+country_decisions = {
+
+	finnish_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			primary_culture = finnish
+			NOT = { tag = FIN }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = UGR }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			NOT = { exists = FIN }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 28		#Uusimaa
+			owns_core_province = 27		#Turku
+			owns_core_province = 30		#Viipuri
+			owns_core_province = 29		#Hameenlinna
+			owns_core_province = 3128	#Satakunta
+			owns_core_province = 4123	#Pirkanmaa
+			owns_core_province = 31		#Savo
+			owns_core_province = 19		#Pohjanmaa
+			owns_core_province = 4152	#Kainuu
+		}
+		effect = {
+			change_tag = FIN
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			set_government_rank = 2
+			set_capital = 28
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

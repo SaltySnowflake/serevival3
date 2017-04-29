@@ -1,0 +1,10 @@
+spriteTypes = {
+
+	spriteType = { #neprut
+		name = "GFX_disaster_war_of_the_burning_cross"
+		texturefile = "gfx//interface//disasters//religious_turmoil.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+}

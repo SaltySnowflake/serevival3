@@ -1,0 +1,56 @@
+government = irish_clann
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 4118	# Desmond
+fixed_capital = 4118
+
+1390.1.1 = {
+	monarch = {
+		name = "Tadgh II"
+		dynasty = "MacCarthy Mor"
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+1424.1.1 = {
+	heir = {
+		name = "Donal"
+		monarch_name = "Donal VI"
+		dynasty = "MacCarthy Mor"
+		birth_date = 1424.1.1
+		death_date = 1469.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+		
+
+1428.1.1 = {
+	monarch = {
+		name = "Donal VI"
+		dynasty = "MacCarthy Mor"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1428.1.1 = {
+	heir = {
+		name = "Tadgh"
+		monarch_name = "Tadgh III"
+		dynasty = "MacCarthy Mor"
+		birth_date = 1428.1.1
+		death_date = 1503.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

@@ -1,0 +1,96 @@
+country_decisions = {
+
+	form_occitania = {
+		major = yes
+		potential = {
+			culture_group = occitanocatala
+			NOT = { exists = OCC }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = { tag = FRA }
+			NOT = { tag = SPA }
+		}
+		allow = {
+				adm_tech = 7
+				is_subject = no
+				is_at_war = no
+				owns_core_province = 196 # Toulouse
+				owns_core_province = 201 # Provence
+				owns_core_province = 200 # Languedoc
+				owns_core_province = 174 # Gascogne
+				owns_core_province = 195 # Limousin
+			}
+		effect = {
+			change_tag = OCC
+			if = {
+				limit = { is_part_of_hre = yes }
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			guyenne_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			poitou_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			massif_central_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			savoy_dauphine_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			pyrenees_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			languedoc_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			provence_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			catalonia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			valencia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			balearic_islands_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OCC
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = flavor_occ.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

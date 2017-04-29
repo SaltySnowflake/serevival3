@@ -1,0 +1,18 @@
+government = feudal_monarchy
+government_rank = 1
+technology_group = eastern
+primary_culture = greek
+add_accepted_culture = lombard
+religion = orthodox
+capital = 163	# Heraklion
+fixed_capital = 163 # Cannot move capital away from this province & no power cost to move to it
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

@@ -1,0 +1,16 @@
+government = iqta
+primary_culture = azerbaijani
+add_accepted_culture = dagestani
+religion = shiite
+technology_group = muslim
+capital = 425
+government_rank = 1
+
+1444.1.1 = {	
+	monarch = {		
+		name = "Farrukh"		
+		adm = 2
+		dip = 1		
+		mil = 2
+	}
+}

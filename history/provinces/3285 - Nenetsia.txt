@@ -1,0 +1,33 @@
+#3285 - Nenetsia
+
+culture = samoyed
+religion = finnish_pagan_reformed
+capital = "Pustozyorsk"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 0.5
+native_size = 1
+native_ferocity = 2
+native_hostileness = 1
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = KAZ
+
+1499.1.1 = {
+	owner = MOS
+	controller = MOS
+	add_core = MOS
+	culture = russian
+	religion = orthodox
+	is_city = yes
+	capital = "Pustozyorsk"
+}
+1503.4.1 = {
+	owner = RUS
+	controller = RUS
+	add_core = RUS
+	remove_core = MOS
+}

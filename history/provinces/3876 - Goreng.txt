@@ -1,0 +1,43 @@
+culture = aboriginal
+religion = tjukurpa
+capital = "Goreng"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 20
+native_ferocity = 7
+native_hostileness = 5
+discovered_by = aboriginal
+
+1444.11.2 = {
+	owner = KRE
+	controller = KRE
+	add_core = KRE
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = KRE
+	controller = KRE
+	add_core = KRE
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = KRE
+	controller = KRE
+	add_core = KRE
+	is_city = yes
+}

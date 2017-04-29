@@ -1,0 +1,35 @@
+333 = "Mallorca"
+5095 = "Pitiusas"
+
+
+#BT400  Overhaul Vanilla renaming
+855 = "Mazatlán"	# Huichol									#Generic name
+859 = "Sinaloa"	# Sinaloa											#Generic name
+862 = "Opateria"	# Yaqui										#Generic name Hispanified
+875 = "Hopi"	# Canyon											#Generic name
+876 = "Phoenix"	# Yavapai										#Generic name
+877 = "Tucson"	# Pima												#Generic name
+878 = "San Juan"	# Navajo										#Iberian name
+879 = "Apache"	# Apache										#Generic name
+880 = "Santa Fe"	# Pueblo										#Iberian name
+881 = "La Luz"	# Piro												#Iberian name
+882 = "Roswell"	# Mescalero									#Sumner or Carlsbad might be better, but people love Roswell. May be considered a 'light' easter egg
+2491 = "Hualapai"	# Hualapai									#Generic name
+2492 = "Ciénega"	# Chiricahua								#Iberian name, properly Cienega de San Vicente
+2493 = "Zuni"	# Hopi											#Generic name
+2494 = "Mogollón"	# Zuni										#Iberian name
+2495 = "Albuquerque"	# Acoma								#Iberian name used by Anglophone
+2496 = "Jicarilla"	# Jicarilla										#Generic name
+2608 = "Sawatch" # Rocky Mountains						#Generic name
+2616 = "Caborca" # Seri												#Generic name
+
+#BT400 New Provinces
+4964 = "Seri" # Comcaac											#Generic name
+4975 = "Moab" # Sahyehpeech									#Christian name
+4979 = "Navajo" # NavojoWest									#Generic name
+5061 = "Guaymas" # Guaymas									#Generic name
+5062 = "Navojoa" # Yoreme										#Generic name
+5063 = "Culiacán" # Colhuacan									#Generic name
+5064 = "Durango" # Hisatsinom								#Iberian name
+5065 = "Pueblo" # Muache										#Iberian name
+5066 = "Temblón" # Taveewachii								#Iberian name BeyondTypusInvention

@@ -1,0 +1,342 @@
+########################################
+# Events for Catharism
+########################################
+
+namespace = cathar
+
+# A trapped animal
+
+country_event = {
+	id = cathar.3
+	title = cathar.EVTNAME3
+	desc = cathar.EVTDESC3
+	picture = COUNTRYSIDE_eventPicture
+
+	fire_only_once = no
+
+	trigger = {
+		religion = cathar
+	}
+
+	mean_time_to_happen = { months = 404 }
+
+	option = {
+		name = cathar.EVTOPT3A
+		add_treasury = -50
+		add_church_power = 20
+	}
+	option = {
+		name = cathar.EVTOPT3B
+		add_church_power = 5
+	}
+	option = {
+		name = cathar.EVTOPT3C
+		add_church_power = -50
+		random = {
+			chance = 50
+			change_mil = 1
+		}
+	}
+}
+
+# Pelican spotted
+
+province_event = {
+	id = cathar.4
+	title = cathar.EVTNAME4
+	desc = cathar.EVTDESC4
+	picture = PELICAN_eventPicture
+
+	trigger = {
+		religion = cathar
+		owner = { religion = cathar }
+		NOT = { has_climate = arid }
+		NOT = { has_province_modifier = pelican_spotted }
+	}
+
+	mean_time_to_happen = { months = 2500 }
+
+	option = {
+		name = cathar.EVTOPT4
+		add_province_modifier = {
+			name = pelican_spotted
+			duration = 3650
+		}
+	}
+}
+
+# Consolamentum
+
+country_event = {
+	id = cathar.5
+	title = cathar.EVTNAME5
+	desc = cathar.EVTDESC5
+	picture = CATHAR_eventPicture
+
+	fire_only_once = no
+
+	trigger = {
+		religion = cathar
+		NOT = { has_ruler_modifier = cathar_leader }
+	}
+
+	mean_time_to_happen = { months = 600 }
+
+	option = {
+		name = cathar.EVTOPT5A
+		add_ruler_modifier = {
+			name = cathar_leader
+			duration = -1
+		}
+		hidden_effect = {
+			random_list = {
+				50 = { add_church_power = 5 }
+				16 = {
+					country_event = {
+						id = cathar.6
+						days = 5
+					}
+				}
+				16 = {
+					country_event = {
+						id = cathar.7
+						days = 5
+					}
+				}
+				16 = {
+					country_event = {
+						id = cathar.8
+						days = 5
+					}
+				}
+				2 = {
+					country_event = {
+						id = cathar.9
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = cathar.EVTOPT5B
+		add_church_power = -50
+	}
+}
+
+# Consolamentum: more ADM for the country
+
+country_event = {
+	id = cathar.6
+	title = cathar.EVTNAME6
+	desc = cathar.EVTDESC6
+	picture = CATHAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = cathar.EVTOPT6
+		add_adm_power = 500
+	}
+}
+
+# Consolamentum: more DIP for the country
+
+country_event = {
+	id = cathar.7
+	title = cathar.EVTNAME7
+	desc = cathar.EVTDESC7
+	picture = CATHAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = cathar.EVTOPT7
+		add_dip_power = 500
+	}
+}
+
+# Consolamentum: more MIL for the country
+
+country_event = {
+	id = cathar.8
+	title = cathar.EVTNAME8
+	desc = cathar.EVTDESC8
+	picture = CATHAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = cathar.EVTOPT8
+		add_mil_power = 500
+	}
+}
+
+# Consolamentum: a perfect Perfect leader... Yay!
+
+country_event = {
+	id = cathar.9
+	title = cathar.EVTNAME9
+	desc = cathar.EVTDESC9
+	picture = CATHAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = cathar.EVTOPT9
+		change_adm = 6
+		change_dip = 6
+		change_mil = 6
+	}
+}
+
+# Land given to the nation by a Good Man
+
+province_event = {
+	id = cathar.10
+	title = cathar.EVTNAME10
+	desc = cathar.EVTDESC10
+	picture = COUNTRYSIDE_eventPicture
+
+	trigger = {
+		religion = cathar
+		owner = { religion = cathar }
+	}
+
+	mean_time_to_happen = { months = 2000 }
+
+	option = {
+		name = cathar.EVTOPT10
+		add_base_production = 1
+	}
+}
+
+# House of Perfects
+
+province_event = {
+	id = cathar.11
+	title = cathar.EVTNAME11
+	desc = cathar.EVTDESC11
+	picture = CATHAR_eventPicture
+
+	trigger = {
+		religion = cathar
+		owner = { religion = cathar }
+		NOT = { has_province_modifier = perfecti_house }
+	}
+
+	mean_time_to_happen = { months = 2400 }
+
+	option = {
+		name = cathar.EVTOPT4
+		add_province_modifier = {
+			name = perfecti_house
+			duration = 7200
+		}
+	}
+}
+
+# Dominique de Guzmán
+
+country_event = {
+	id = cathar.12
+	title = cathar.EVTNAME12
+	desc = cathar.EVTDESC12
+	picture = BURNING_BOOK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		religion = cathar
+		is_year = 1205
+		exists = PAP
+		any_neighbor_country = { religion = catholic }
+	}
+
+	mean_time_to_happen = { months = 580 }
+
+	option = {
+		name = cathar.EVTOPT12
+		hidden_effect = {
+			random_list = {
+				30 = {
+					country_event = {
+						id = cathar.13
+						days = 3
+					}
+				}
+				30 = {
+					country_event = {
+						id = cathar.14
+						days = 3
+					}
+				}
+				40 = {
+					country_event = {
+						id = cathar.15
+						days = 3
+					}
+				}
+			}
+		}
+	}
+}
+
+# Dominique de Guzmán: The Cathar Books burn
+
+country_event = {
+	id = cathar.13
+	title = cathar.EVTNAME13
+	desc = cathar.EVTDESC13
+	picture = BURNING_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = cathar.EVTOPT13
+		add_prestige = -5
+		add_church_power = -20
+		add_historical_rival = PAP
+	}
+}
+
+# Dominique de Guzmán: The Bible burns
+
+country_event = {
+	id = cathar.14
+	title = cathar.EVTNAME14
+	desc = cathar.EVTDESC14
+	picture = BURNING_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = cathar.EVTOPT14
+		add_prestige = 10
+		add_church_power = 50
+		define_advisor = {
+ 			type = theologian
+ 			skill = 3
+			discount = yes
+		}
+	}
+}
+
+# Dominique de Guzmán: Everything burns
+
+country_event = {
+	id = cathar.15
+	title = cathar.EVTNAME15
+	desc = cathar.EVTDESC15
+	picture = BURNING_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = cathar.EVTOPT15
+		add_country_modifier = {
+			name = fair_laws
+			duration = 3650
+		}
+	}
+}

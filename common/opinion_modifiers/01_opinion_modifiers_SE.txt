@@ -1,0 +1,66 @@
+btp_opinion_accepted_proposal = {
+	opinion = 100
+	years = 25
+	yearly_decay = 4
+}
+
+btp_opinion_rejected_proposal = {
+	opinion = -25
+	years = 25
+	yearly_decay = 1
+}
+
+lod_lancaster_spurned = {
+	opinion = -40
+	years = 40
+	yearly_decay = 1
+}
+
+lod_yorkists_spurned = {
+	opinion = -40
+	years = 40
+	yearly_decay = 1
+}
+
+lod_lancaster_sided = {
+	opinion = 40
+	years = 40
+	yearly_decay = 1
+}
+
+lod_yorkists_sided = {
+	opinion = 40
+	years = 40
+	yearly_decay = 1
+}
+
+alexandira_overthrown = {
+	opinion = -100
+	years = 50
+	yearly_decay = 2
+}
+
+faction_friendly_to_us = {
+	opinion = 25
+}
+
+faction_friendly_to_them = {
+	opinion = 50
+}
+
+opinion_papal_election = {
+	opinion = 50
+}
+
+heretics_in_the_north_SCA = {
+	opinion = -50
+	yearly_decay = 5
+}
+
+forgery_coins = {
+	opinion = -50
+}
+
+adviskiller_assasin = {
+	opinion = -50
+}

@@ -1,0 +1,6 @@
+government = feudal_monarchy
+primary_culture = armenian
+religion = apostolic
+technology_group = eastern
+capital = 419
+government_rank = 3

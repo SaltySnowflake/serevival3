@@ -1,0 +1,35 @@
+government = feudal_monarchy
+mercantilism = 0.1
+technology_group = chinese
+religion = sunni
+primary_culture = malayan
+capital = 599	# Kelantan
+
+
+1426.1.1 = {
+	monarch = {
+		name = "Tengku"
+		dynasty = "Terengganu"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+1760.1.1 = {
+	monarch = {
+		name = "Long Yunus"
+		dynasty = "Pattani"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1795.1.1 = {
+	monarch = {
+		name = "Tengku Muhammad Sultan Mansur"
+		dynasty = "Terengganu"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

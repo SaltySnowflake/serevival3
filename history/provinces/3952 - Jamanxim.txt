@@ -1,0 +1,24 @@
+# - Jamanxim
+
+culture = tupinamba
+religion = pajelanca
+capital = "Novo Progresso"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 2 
+native_hostileness = 3
+discovered_by = south_american
+
+1755.1.1 = {
+	discovered_by = POR
+	owner = POR
+	controller = POR
+	add_core = POR
+	culture = portugese
+	religion = catholic
+	trade_goods = cocoa
+}

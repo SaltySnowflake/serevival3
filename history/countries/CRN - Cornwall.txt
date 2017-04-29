@@ -1,0 +1,17 @@
+government = feudal_monarchy
+#government_rank = 1
+technology_group = western
+primary_culture = cornish
+religion = catholic
+capital = 233	# Exeter
+
+1444.11.01 = {
+	monarch = {
+		name = "Arthur II"
+		dynasty = "Pendragon"
+		birth_date = 1410.7.19
+		adm = 1
+		dip = 4
+		mil = 6
+	}
+}

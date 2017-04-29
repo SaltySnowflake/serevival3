@@ -1,0 +1,45 @@
+#1088 - Wergaia
+
+culture = aboriginal
+religion = tjukurpa
+capital = "Wergaia"
+trade_goods = wool
+hre = no
+base_tax = 3 #1 
+base_production = 3 #1
+base_manpower = 2 #1
+native_size = 10
+native_ferocity = 7
+native_hostileness = 5
+discovered_by = aboriginal
+
+1444.11.2 = {
+	owner = AB2
+	controller = AB2
+	add_core = AB2
+	is_city = yes
+}
+1444.11.6 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.7 = {
+	owner = AB2
+	controller = AB2
+	add_core = AB2
+	is_city = yes
+}
+1444.11.12 = {
+	owner = XXX
+	controller = XXX
+	add_core = XXX
+	is_city = no
+}
+1444.11.13 = {
+	owner = AB2
+	controller = AB2
+	add_core = AB2
+	is_city = yes
+}

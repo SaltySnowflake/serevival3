@@ -1,0 +1,16 @@
+government = feudal_monarchy
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 150	# Sofia
+historical_friend = CUM
+
+1444.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

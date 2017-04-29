@@ -1,0 +1,67 @@
+#960 - Onondaga
+
+owner = IRO
+controller = IRO
+culture = iroquois
+religion = orenda
+capital = "Onondaga"
+trade_goods = lumber
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = IRO
+native_size = 15
+native_ferocity = 7
+native_hostileness = 2
+discovered_by = north_american
+
+1444.11.2 = {
+	owner = XXJ
+	controller = XXJ
+	add_core = XXJ
+	remove_core = IRO
+}
+1444.11.6 = {
+	owner = IRO
+	controller = IRO
+	add_core = IRO
+	remove_core = XXJ
+}
+1444.11.7 = {
+	owner = XXJ
+	controller = XXJ
+	add_core = XXJ
+	remove_core = IRO
+}
+1444.11.11 = {
+	owner = IRO
+	controller = IRO
+	add_core = IRO
+	remove_core = XXJ
+}
+1444.11.12 = {
+	owner = XXJ
+	controller = XXJ
+	add_core = XXJ
+	remove_core = IRO
+}
+1575.1.1 = {
+	owner = IRO
+	controller = IRO
+	add_core = IRO
+}
+
+1615.1.1 = { discovered_by = FRA } # Étienne Brûlé 
+1629.1.1 = { discovered_by = ENG }
+1707.5.12 = { discovered_by = GBR }
+
+1784.10.22 = {
+	remove_core = XXJ
+	owner = USA
+	controller = USA
+	culture = american
+	religion = protestant 
+} #Second Treaty of Fort Stanwix, Iroquois confederacy no longer dominant
+1809.10.22 = { add_core = USA }

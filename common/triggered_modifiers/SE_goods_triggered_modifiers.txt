@@ -1,0 +1,35 @@
+nutmeg_control = {
+	potential = {
+		num_of_ports = 1
+		OR = {
+			NOT = {
+				capital_scope = {
+					continent = asia
+				}
+			}
+			technology_group = western
+		}
+		OR = {
+			NOT = {
+				capital_scope = {
+					continent = oceania
+				}
+			}
+			technology_group = western
+		}
+		has_discovered = 646
+	}
+
+	trigger = {
+		OR = {
+			owns = 646
+			any_subject_country = {
+				owns = 646
+			}
+		}
+		646 = { trade_goods = nutmeg }
+	}
+
+	trade_efficiency = 0.05
+	merchants = 1
+}

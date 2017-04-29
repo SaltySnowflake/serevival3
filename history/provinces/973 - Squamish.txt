@@ -1,0 +1,73 @@
+#973 - Squamish
+
+owner = SAL
+controller = SAL
+add_core = SAL
+is_city = yes
+culture = salish
+religion = sgaanaang
+capital = "Xwayxway"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = north_american
+
+extra_cost = 10
+
+add_permanent_province_modifier = {
+	name = fraiser_estuary_modifier
+	duration = -1
+}
+
+
+1444.11.2 = {
+	owner = SQU
+	controller = SQU
+	add_core = SQU
+	remove_core = SAL
+}
+1444.11.6 = {
+	owner = SAL
+	controller = SAL
+	add_core = SAL
+	remove_core = SQU
+}
+1444.11.7 = {
+	owner = SQU
+	controller = SQU
+	add_core = SQU
+	remove_core = SAL
+}
+1444.11.12 = {
+	owner = SAL
+	controller = SAL
+	add_core = SAL
+	remove_core = SQU
+}
+1444.11.13 = {
+	owner = SQU
+	controller = SQU
+	add_core = SQU
+	remove_core = SAL
+}
+
+
+1792.7.15 = {
+	discovered_by = GBR
+	discovered_by = SPA
+} #George Vancouver coordinates with the Spanish to explore region
+
+#1790.1.1 = {
+#	owner = SAL
+#	controller = SAL
+#	add_core = SAL
+#	trade_goods = fish
+#	is_city = yes 
+#} #Salish moved to Squamish Salish tribes did occupy large areas but were not a nation as such one province is enough
+#Changed my mind, two provinces so Salish arent nomadic
+#1850.1.1 = { remove_core = SQU }

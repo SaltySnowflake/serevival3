@@ -1,0 +1,39 @@
+########################################
+# Events for Gotaland
+#
+# written by Neprut
+########################################
+
+namespace = flavor_gta
+
+# Capital Improvement
+country_event = {
+	id = flavor_gta.1
+	title = flavor_gta.1.t
+	desc = flavor_gta.1.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_idea = found_gothenburg_in_gotaland
+		owns = 7
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = flavor_gta.1.a
+		if = {
+			limit = { NOT = { capital = 7 } }
+			set_capital = 7
+		}
+		7 = { 
+			rename_capital = "Göteborg"
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	
+}

@@ -1,0 +1,22 @@
+government = thing
+government_rank = 1
+primary_culture = faroese
+religion = catholic
+technology_group = western
+historical_friend = SHT
+historical_friend = ORK
+capital = 1979 #Faroes
+
+1399.1.1 = {
+	monarch = {
+		name = "þingi"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+1540.1.1 = { government = administrative_republic }
+
+1750.1.1 = { government = constitutional_republic }

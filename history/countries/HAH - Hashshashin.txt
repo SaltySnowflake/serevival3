@@ -1,0 +1,20 @@
+# Hashshashin
+government = theocratic_government
+technology_group = muslim
+primary_culture = persian
+religion = shiite
+capital = 428
+
+1382.10.26 = {
+	monarch = {
+		name = "Aarif"
+		dynasty = "Najadid"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1444.11.1 = {
+	add_treasury = 41
+	add_prestige = 279
+}

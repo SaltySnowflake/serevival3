@@ -1,0 +1,17 @@
+government = aboriginal_native_council
+government_rank = 1
+primary_culture = aboriginal
+religion = tjukurpa
+technology_group = aboriginal
+capital = 2736 #Nukunu
+
+1444.1.1 = {
+	monarch = {
+		name = "Elder Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+	
+}

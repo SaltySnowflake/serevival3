@@ -1,0 +1,9 @@
+government = ghazi_state
+government_rank = 1
+primary_culture = turkish
+religion = sunni
+technology_group = ottoman
+capital = 2304
+
+
+#No information found, EU4 should auto generate appropriate name from culture list

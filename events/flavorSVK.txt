@@ -1,0 +1,196 @@
+##################################
+# Events for Slovakia
+#
+# written by X-Factor
+#
+# modified by Neprut
+########################################
+
+namespace = flavor_svk
+
+# Academia Istropolitana SVK
+country_event = {
+	id = flavor_svk.1
+	title = flavor_svk.1.t
+	desc = flavor_svk.1.d
+	picture = UNIVERSITY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		primary_culture = slovak
+		is_year = 1465
+		NOT = { is_year = 1466 }
+		has_regency = no
+		owns = 1772 	# Pressburg
+	}
+	
+	mean_time_to_happen = { months = 12 }
+	
+	option = {
+		name = flavor_svk.1.a	
+		add_prestige = 10
+		add_papal_influence = 10
+	}
+}
+
+# St. Elisabeth Cathedral SVK
+country_event = {
+	id = flavor_svk.2
+	title = flavor_svk.2.t
+	desc = flavor_svk.2.d
+	picture = CATHEDRAL_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		primary_culture = slovak
+		is_year = 1508
+		NOT = { is_year = 1509 }
+		owns = 162		# Zemplen
+		religion = catholic
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = flavor_svk.2.a	
+		add_papal_influence = 20
+		162 = {
+		  add_cardinal = 1
+		  add_building = cathedral
+		}
+	}
+}
+
+# Juraj Janosik Start SVK
+country_event = {
+	id = flavor_svk.3
+	title = flavor_svk.3.t
+	desc = flavor_svk.3.d
+	picture = JANOSIK1_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		primary_culture = slovak
+		is_year = 1711
+		NOT = { is_year = 1712 }
+		owns = 154		# Spis
+	}
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = flavor_svk.3.a
+		add_stability = -1
+		add_country_modifier = {
+			name = "janosik_start1"
+			duration = 730
+		}
+		154 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+	option = {
+		name = flavor_svk.3.b
+		add_prestige = 15
+		add_stability = -1
+		add_adm_power = -60
+		add_dip_power = -60
+		add_mil_power = -60
+		add_country_modifier = {
+			name = "janosik_start2"
+			duration = 730
+		}
+	}
+}
+
+# Juraj Janosik Death SVK
+country_event = {
+	id = flavor_svk.4
+	title = flavor_svk.4.t
+	desc = flavor_svk.4.d
+	picture = JANOSIK2_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		primary_culture = slovak
+		is_year = 1713
+		NOT = { is_year = 1714 }
+		owns = 154
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = flavor_svk.4.a
+		add_stability_or_adm_power = yes
+		add_prestige = 15
+		add_army_tradition = 20
+		154 = {
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+	}
+}
+
+# Legend of Svatopluk SVK
+country_event = {
+	id = flavor_svk.5
+	title = flavor_svk.5.t
+	desc = flavor_svk.5.d
+	picture = SVATOPLUK_eventPicture
+		
+	trigger = {
+		primary_culture = slovak
+		OR = {
+			AND = {
+				is_year = 1494
+				NOT = { is_year = 1495 }
+			}
+			AND = {
+				is_year = 1594
+				NOT = { is_year = 1595 }
+			}
+			AND = {
+				is_year = 1694
+				NOT = { is_year = 1695 }
+			}
+			AND = {
+				is_year = 1794
+				NOT = { is_year = 1795 }
+			}			
+		}
+		NOT = { has_country_modifier = svatopluk_boost }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = flavor_svk.5.a	
+		add_prestige = 10
+		add_country_modifier = {
+			name = "svatopluk_boost"
+			duration = 3650
+		}
+	}
+}

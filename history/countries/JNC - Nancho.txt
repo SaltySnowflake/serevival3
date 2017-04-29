@@ -1,0 +1,5 @@
+government = shogunate
+primary_culture = yamato
+religion = shinto
+technology_group = chinese
+capital = 1832	# Yamato

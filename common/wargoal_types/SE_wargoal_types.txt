@@ -1,0 +1,84 @@
+free_occitan_province = {
+	type = take_province
+	
+	badboy_factor = 3 # we should really free them, not use a pretex to annex them
+	prestige_factor = 1
+	peace_cost_factor = 0.75
+	
+	allowed_provinces = {
+		OR = {
+			culture_group = occitanocatala
+			culture = occitain
+			culture = arpitan
+			culture = gascon
+		}
+		owner = {
+			NOT = { culture_group = occitanocatala }
+			NOT = { primary_culture = occitain }
+			NOT = { primary_culture = arpitan }
+			NOT = { primary_culture = gascon }
+		}
+	}
+	#allowed_provinces_are_eligible = yes # means we don't have to occupy them
+	
+	po_release_vassals = yes
+	po_release_annexed = yes
+	po_return_cores = yes
+	po_demand_provinces = yes # we don't really want that, but that's the only way to introduce a distinction between provinces
+
+	po_annex = no
+	po_revoke_cores = no
+	po_change_religion = no
+	po_form_personal_union = no
+	po_gold = no
+	po_become_vassal = no
+	po_concede_defeat = no
+	po_annul_treaties = no
+	po_change_government = no
+	po_revoke_elector = no
+	po_trade_power = no
+	po_humiliate = no
+	
+	deny_annex = yes
+	
+	war_name = LIBERATION_WAR_NAME
+}
+
+cathar_crusade = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 1.0	
+		
+		allowed_provinces = {
+			religion = cathar
+		}
+		
+		po_change_religion = yes
+		po_demand_provinces = yes
+		
+		country_desc = ALL_HERETICS
+		prov_desc = ALL_CATHAR_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 1.0	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		po_change_religion = yes
+		po_demand_provinces = yes
+		
+		country_desc = ALL_HERETICS
+		prov_desc = ALL_PROVS
+	}	
+	
+	allow_leader_change = yes
+	war_name = CRUSADE_WAR_NAME	
+}

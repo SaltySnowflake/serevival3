@@ -1,0 +1,68 @@
+country_decisions = {
+
+	serbian_empire = {
+		major = yes
+		potential = {
+			primary_culture = serbian
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = LAE }
+			NOT = {	tag = BOS }
+			NOT = { government_rank = 3 }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				tag = SER
+				NOT = { exists = SER }
+			}
+			legitimacy = 90
+			owns_core_province = 141
+			owns_core_province = 1827
+			owns_core_province = 1766
+			owns_or_vassal_of = 140
+			owns_or_vassal_of = 1828
+			owns_or_vassal_of = 139
+			owns_or_vassal_of = 1831
+			owns_core_province = 137
+			owns_core_province = 138
+			owns_core_province = 143
+			owns_core_province = 1853
+			owns_core_province = 148
+			owns_core_province = 144
+			owns_core_province = 147
+		}
+		effect = {
+			if = {
+				limit = { NOT = { tag = SER } }
+				change_tag = SER
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
+				}
+			}
+			set_government_rank = 3
+			set_capital = 1766
+			1766 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			balkan_region = {
+				limit = { NOT = { is_core = ROOT } }
+				add_permanent_claim = SER 
+			}
+			add_prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+}

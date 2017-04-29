@@ -1,0 +1,1 @@
+873 = "Astoria" # Multnomah							#USA name

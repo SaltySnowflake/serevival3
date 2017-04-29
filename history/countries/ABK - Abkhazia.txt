@@ -1,0 +1,17 @@
+government = feudal_monarchy
+primary_culture = abkhaz
+religion = orthodox
+technology_group = eastern
+capital = 1856
+government_rank = 1
+historical_rival = IME
+
+1444.11.1 = {
+	monarch = {
+		name = "Rabia"
+		dynasty = "Shervashidze"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
