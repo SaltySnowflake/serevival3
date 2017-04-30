@@ -999,8 +999,7 @@ cb_humiliate_rotw = {
 	war_goal = humiliate_rotw
 }
 
-
-# Reunification of China NepNep
+# Reunification of China NepNep Pira
 cb_chinese_unification = {
 	valid_for_subject = no
 
@@ -1013,20 +1012,21 @@ cb_chinese_unification = {
 			}
 			AND = {
 				NOT = { has_dlc = "Mandate of Heaven" }
+			OR ={	
 				culture_group = east_asian #Chinese
-			}
-			culture_group = east_asian #Chinese
-			primary_culture = miao
-			primary_culture = yi
-			primary_culture = bai
-			primary_culture = zhuang
-			OR = {	#Manchus won't get this unless they unify
+				primary_culture = miao
+				primary_culture = yi
+				primary_culture = bai
+				primary_culture = zhuang
+				OR = {	#Manchus won't get this unless they unify
 					tag = MCH
 					tag = QNG
 					NOT = { primary_culture = manchu }
+					}
+				}
 			}
 		}
-	}
+		
 		FROM = { #Applies against other powers in China unless they have the Mandate of Heaven
 			NOT = { is_subject_of = ROOT }
 			OR = {
@@ -1090,24 +1090,25 @@ cb_force_migration = {
 }
 
 # Forced our ally to break alliance
-	cb_forced_break_alliance = {
+cb_forced_break_alliance = {
 
-		valid_for_subject = no
-		is_triggered_only = yes
-		months = 120
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 120
 	
-		war_goal = superiority_insult
+	war_goal = superiority_insult
+}
+
+cb_force_tributary = {
+
+	valid_for_subject = no
+
+	prerequisites = {
+		has_dlc = "Mandate of Heaven"
+		is_emperor_of_china = yes
+		FROM = { is_subject = no }
+		is_neighbor_of = FROM
 	}
-
-	cb_force_tributary = {
-
-		valid_for_subject = no
-
-		prerequisites = {
-			has_dlc = "Mandate of Heaven"
-			is_emperor_of_china = yes
-			FROM = { is_subject = no }
-			is_neighbor_of = FROM
-		}
-	}
+	
+	war_goal = take_capital_force_tributary
 }

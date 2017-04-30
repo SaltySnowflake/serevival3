@@ -15,9 +15,11 @@ capital = 2697
 	}
 	add_piety = -0.15
 	heir = {
-		birth_date = 1430.1.1
 		name = "Kalangitan"
+		monarch_name = "Kalangitan"
 		dynasty = "Salamat"
+		birth_date = 1430.1.1
+		death_date = 1480.1.1
 		claim = 100
 		adm = 2
 		dip = 5

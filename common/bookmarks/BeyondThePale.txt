@@ -9,7 +9,6 @@ bookmark =
 	
 	country = TYR
 	country = TYC
-	country = ATM
 	country = KID
 	country = LAI
 	country = DMS

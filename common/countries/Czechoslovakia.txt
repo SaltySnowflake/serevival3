@@ -232,7 +232,6 @@ ship_names = {
 	Sebo
 	Parm
 	Hecky
-	Sokol
 	Tatranka
 	Halusky
 	Borovicka

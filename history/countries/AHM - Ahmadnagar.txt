@@ -12,7 +12,6 @@ fixed_capital = 544 # Cannot move capital away from this province & no power cos
 		ADM = 4
 		DIP = 3
 		MIL = 5
-		death_date = 1444.11.11 
 	}
 }
  

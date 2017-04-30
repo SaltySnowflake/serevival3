@@ -13,3 +13,4 @@ capital = 3700 # Andorra
 		adm = 3
 		mil = 3
 	}
+}

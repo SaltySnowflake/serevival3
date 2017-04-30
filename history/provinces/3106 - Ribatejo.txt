@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 1444.11.01 = { culture = andalucian religion = sunni remove_core = POR add_core = BAJ owner = BAJ add_local_autonomy = 0 }
-1444.11.11 = { culture = portugese religion = catholic add_core = POR remove_core = BAJ owner = POR add_local_autonomy -30 }
+1444.11.11 = { culture = portugese religion = catholic add_core = POR remove_core = BAJ owner = POR add_local_autonomy = -30 }
 
 1580.8.25 = { controller = SPA }
 1580.8.26 = { controller = POR }

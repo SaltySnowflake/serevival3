@@ -2293,7 +2293,7 @@ cloth = {
 				has_terrain = savannah
 				has_terrain = desert
 				has_terrain = glacier
-				has_terrain = steppes
+				has_terrain = steppe
 				has_climate = tropical
 			}
 		}
@@ -2383,7 +2383,7 @@ silk = {
 				has_terrain = jungle
 				has_terrain = savannah
 				has_terrain = desert
-				has_terrain = steppes
+				has_terrain = steppe
 				has_terrain = marsh
 			}
 		}
@@ -2474,7 +2474,7 @@ linen = {
 				has_terrain = savannah
 				has_terrain = desert
 				has_terrain = glacier
-				has_terrain = steppes	
+				has_terrain = steppe	
 				has_climate = tropical			
 			}
 		}
@@ -4190,7 +4190,7 @@ iron = {
 			OR = {
 				has_terrain = savannah
 				has_terrain = jungle
-				has_terrain = steppes
+				has_terrain = steppe
 			}
 		}
 		modifier = {
@@ -4289,7 +4289,7 @@ copper = {
 			OR = {
 				has_terrain = savannah
 				has_terrain = jungle
-				has_terrain = steppes
+				has_terrain = steppe
 			}
 		}
 		modifier = {
@@ -4377,7 +4377,7 @@ tin = {
 			OR = {
 				has_terrain = savannah
 				has_terrain = jungle
-				has_terrain = steppes
+				has_terrain = steppe
 			}
 		}
 		modifier = {
@@ -4475,7 +4475,7 @@ lead = {
 			OR = {
 				has_terrain = savannah
 				has_terrain = jungle
-				has_terrain = steppes
+				has_terrain = steppe
 			}
 		}
 		modifier = {
@@ -4567,7 +4567,7 @@ zinc = {
 			OR = {
 				has_terrain = savannah
 				has_terrain = jungle
-				has_terrain = steppes
+				has_terrain = steppe
 			}
 		}
 		modifier = {
@@ -4660,7 +4660,7 @@ mercury = {
 			OR = {
 				has_terrain = savannah
 				has_terrain = jungle
-				has_terrain = steppes
+				has_terrain = steppe
 				continent = africa
 			}
 		}
@@ -4757,7 +4757,7 @@ coal = {
 			OR = {
 				has_terrain = savannah
 				has_terrain = jungle
-				has_terrain = steppes
+				has_terrain = steppe
 			}
 		}
 		modifier = {
@@ -4891,7 +4891,7 @@ steel = {
 				has_terrain = savannah
 				has_terrain = desert
 				has_terrain = glacier
-				has_terrain = steppes
+				has_terrain = steppe
 				has_climate = tropical
 				continent = africa
 			}
@@ -5275,7 +5275,7 @@ paper = {
 			factor = 0.3
 			OR = {
 				has_terrain = savannah
-				has_terrain = steppes
+				has_terrain = steppe
 				has_climate = tropical
 			}
 		}

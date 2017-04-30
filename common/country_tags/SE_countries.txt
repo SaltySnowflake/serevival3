@@ -1,3 +1,7 @@
+#Unknown Home
+CNL = "countries/Carniola.txt"
+MLA = "countries/Mallorca.txt"
+
 ## EUROPE ##
 
 #Formables

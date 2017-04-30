@@ -240,9 +240,6 @@ legendary_trobador = {
 
 ### Malus during learning of trobador skill
 working_on_trobar = {
-	leader_land_shock = -1
-	leader_Land_fire = -1
-	leader_Land_siege = -1
 	diplomatic_reputation = -1
 	global_tax_modifier = -0.05
 	adm_tech_cost_modifier = 0.10
@@ -1039,13 +1036,13 @@ breidbach_education = {
 
 favorite_palace_big = {
 	diplomatic_reputation = 2
-	relations_decay_of_me = 0.2
+	improve_relation_modifier = 0.2
 	prestige_decay = -0.01
 }
 
 favorite_palace_small = {
 	diplomatic_reputation = 1
-	relations_decay_of_me = 0.1
+	improve_relation_modifier = 0.1
 	prestige_decay = -0.005
 }
 

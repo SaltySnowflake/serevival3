@@ -43,7 +43,7 @@ start_reconquista = {
 		modifier = {
 			factor = 10
 			iberia_region = {
-				type = any
+				type = all
 				owner = { religion_group = muslim }
 			}
 		}

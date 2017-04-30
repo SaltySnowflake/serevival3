@@ -64,5 +64,3 @@ fixed_capital = 1879 # Cannot move capital away from this province & no power co
 # 1549 To royal Domain
 
 1589.8.3 = { government = administrative_monarchy }
-
-1661.3.9 = { government = absolute_monarchy }

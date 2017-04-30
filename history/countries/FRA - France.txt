@@ -126,8 +126,6 @@ historical_rival = HAB
 	}
 }
 
-1444.11.11 = { capital = 183 # Paris }
-
 #1455.1.1 = { decision = land_recruiting_act }
 
 1461.7.22 = {
@@ -550,7 +548,7 @@ historical_rival = HAB
 
 1589.8.3 = { leader = { name = "François de Bonne"	type = general		rank = 1	fire = 3	shock = 3	manuever = 4	siege = 0	death_date = 1626.9.21 } }
 
-1589.8.8 = { government = absolute_monarchy }
+1589.8.8 = { government = despotic_monarchy }
 
 1598.4.13 = { clr_country_flag = religious_turmoil clr_country_flag = religious_intolerance  decision = enact_edict_de_nantes } # Edict of Nantes
 
