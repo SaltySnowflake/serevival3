@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 government = feudal_monarchy
 primary_culture = cosmopolitan_french
 add_accepted_culture = gascon
@@ -1105,7 +1104,7 @@ historical_rival = HAB
 		mil = 1
 	}
 }
-=======
+#=======
 government = feudal_monarchy
 primary_culture = cosmopolitan_french
 add_accepted_culture = gascon
@@ -2215,4 +2214,3 @@ historical_rival = HAB
 	}
 }
 }
->>>>>>> Apr29
