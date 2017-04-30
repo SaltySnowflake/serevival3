@@ -1,3 +1,6 @@
 government = constitutional_republic
 technology_group = indian
 capital = 522 # Delhi
+religion = hinduism
+primary_culture = kannada
+government_rank = 3

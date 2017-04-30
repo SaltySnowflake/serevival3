@@ -4,7 +4,6 @@ primary_culture = korean
 religion = confucianism
 technology_group = chinese
 capital = 735	# Hanseong
-historical_friend = WEI
 historical_friend = WUU
 historical_friend = SHU
 

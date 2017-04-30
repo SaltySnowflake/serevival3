@@ -28,16 +28,6 @@ capital = 1843	# Yama
 	}
 }
 	
-1444.1.1 = { 
-	monarch = {
-		name = "Morinobu"
-		dynasty = "Ashina"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
 1441.1.1 = {
 	heir = {
 		name = "Moriakira"
@@ -51,6 +41,18 @@ capital = 1843	# Yama
 		mil = 3
 	}
 }
+
+1444.1.1 = { 
+	monarch = {
+		name = "Morinobu"
+		dynasty = "Ashina"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+
 
 1451.1.1 = { 
 	monarch = {
@@ -164,6 +166,16 @@ capital = 1843	# Yama
 	}
 }
 
+1584.1.1 = { 
+	monarch = {
+		name = "Kaneomaru"
+		dynasty = "Ashina"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 1584.10.7 = {
 	heir = {
 		name = "Kaneomaru"
@@ -172,16 +184,6 @@ capital = 1843	# Yama
 		birth_date = 1584.10.7
 		death_date = 1586.12.31
 		claim = 90
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
-1584.1.1 = { 
-	monarch = {
-		name = "Kaneomaru"
-		dynasty = "Ashina"
 		adm = 3
 		dip = 3
 		mil = 3

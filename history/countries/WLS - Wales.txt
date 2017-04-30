@@ -17,4 +17,4 @@ capital = 242	# Gwynedd
 	}
 }
 
-1444.11.01 = { government_rank = 1 }
+1444.11.11 = { government_rank = 1 }

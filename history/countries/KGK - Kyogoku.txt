@@ -49,16 +49,6 @@ capital = 3722
 	}
 }
 
-1505.1.1 = { 
-	monarch = {
-		name = "Takakiyo"
-		dynasty = "Kyogoku"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
 1490.1.1 = {
 	heir = {
 		name = "Takanobu"
@@ -67,6 +57,16 @@ capital = 3722
 		birth_date = 1490.1.1
 		death_date = 1553.1.1
 		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1505.1.1 = { 
+	monarch = {
+		name = "Takakiyo"
+		dynasty = "Kyogoku"
 		adm = 3
 		dip = 3
 		mil = 3

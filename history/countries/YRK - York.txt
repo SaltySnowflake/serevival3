@@ -22,7 +22,6 @@ fixed_capital = 245
 		name = "Richard III Plantagenet"
 		dynasty = "York"
 		birth_date = 1411.09.21
-		death_date = 1460.12.30
 		adm = 4
 		dip = 2
 		mil = 5

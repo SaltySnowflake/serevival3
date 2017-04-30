@@ -33,7 +33,7 @@ LMV = "countries/LombardyVenetia.txt"
 LTH = "countries/Lotharingia.txt"
 MGB = "countries/Maghreb.txt"
 MGE	= "countries/MongolEmpire.txt"
-NNB = "countries/Nanbu.txt"
+#NNB = "countries/Nanbu.txt"  #no formation desison, most files werent made - Pirate - 2017.4.30
 OCC = "countries/Occitania.txt"
 OPR = "countries/OldPrussia.txt"
 SIK	= "countries/Sikh Empire.txt"
@@ -43,7 +43,7 @@ TSI = "countries/KingdomTwoSicilies.txt"
 UGR = "countries/Uralia.txt"
 VIN = "countries/Vinland.txt"
 WLN = "countries/Wallonia.txt"
-YYK = "countries/YnysyKedyrn.txt"
+#YYK = "countries/YnysyKedyrn.txt" #no formation desison, - Pirate - 2017.4.30
 
 #Colonial Nations
 ALK	= "countries/Alaska.txt"
@@ -357,7 +357,7 @@ AO0 = "countries/Awngthim.txt"
 
 ##'MURICA
 #Formables
-NTA	= "countries/NativeAmerica.txt"
+#NTA	= "countries/NativeAmerica.txt" #No formation desison - Pirate - 2017.4.30
 AGJ = "countries/Angola Janga.txt"
 #North
 AAI = "countries/Aani.txt"

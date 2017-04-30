@@ -6,7 +6,7 @@ capital = 542	# Golcanda
 fixed_capital = 542 # Cannot move capital away from this province & no power cost to move to it
 
 1444.1.1 = {
-	government_rank = 1
+	government_rank = 2
 	monarch = {
 		name = "Quli Qutb-ul-Mulk"
 		dynasty = "Qutb Shahi"
@@ -15,7 +15,6 @@ fixed_capital = 542 # Cannot move capital away from this province & no power cos
 		MIL = 6
 	}
 }
-1444.1.1 = { government_rank = 2 }
 
 1490.1.1 = {
 	monarch = {

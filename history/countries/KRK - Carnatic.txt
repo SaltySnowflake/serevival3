@@ -3,6 +3,7 @@ government_rank = 1
 technology_group = indian
 religion = shaivism	#Until 1710
 primary_culture = tamil
+capital = 2060
 
 1444.1.1 = {
 	monarch = {

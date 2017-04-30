@@ -5,7 +5,6 @@ religion = confucianism
 technology_group = chinese
 capital = 2745	# Hanseong
 historical_rival = NKR
-historical_friend = WEI
 historical_friend = WUU
 historical_friend = SHU
 

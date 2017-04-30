@@ -11,7 +11,6 @@ capital = 244	# Chester
 		name = "Humphrey"
 		dynasty = "Lancaster"
 		birth_date = 1390.10.02
-		death_date = 1447.02.23
 		adm = 4
 		dip = 5
 		mil = 2

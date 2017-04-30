@@ -30,6 +30,8 @@ capital = 4080	# Soyo
 	religion = catholic
 } #One of the many Mani Soyo convert to Catholicism.
 
+1506.6.2 = { religion = catholic }
+
 1520.1.1 = {
 	heir = {
 		name = "Miguel"
@@ -71,8 +73,6 @@ capital = 4080	# Soyo
 		mil = 2
 	}
 }
-
-1506.6.2 = { religion = catholic }
 
 1626.1.1 = {
 	monarch = {

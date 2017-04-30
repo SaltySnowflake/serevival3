@@ -1,7 +1,7 @@
 government = bureaucratic_despotism 	
 technology_group = chinese
 religion = confucianism
-primary_culture = han
+primary_culture = jianghuai
 capital = 1821	# Nanjing
 
 1368.1.1 = {
