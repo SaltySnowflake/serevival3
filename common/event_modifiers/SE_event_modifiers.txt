@@ -1,4 +1,6 @@
-################################################################################################## Modifiers for Shattered Europa - Neprut
+################################################################################################## Modifiers for Shattered Europa3 Pirate
+United_Japan = {  #used to block japan formation after first form
+}
 ##################################################################################################
 
 ##BT
@@ -412,7 +414,7 @@ cornwall_tin = {
 }
 #indo
 sumatra_spice = {
-	goods_produced = 2
+	trade_goods_size_modifier = 2
 }
 reformed_hindu = {
 	global_missionary_strength = 0.01
@@ -1050,7 +1052,6 @@ favorite_palace_small = {
 
 roman_culture = {
 	culture_conversion_cost = -0.35
-	accepted_culture_threshold = -0.15
 }
 
 britannia_build = {
@@ -1086,7 +1087,7 @@ military_reinforcement_grl = {
 }
 
 greenland_hunting = {
-	global_trade_goods_size = 0.5
+	global_trade_goods_size_modifier = 0.5
 }
 
 great_hunters_grl = {
@@ -1227,7 +1228,6 @@ mingo_traditions = {
 
 seminole_traditions = {
 	leader_land_manuever = 1
-	accepted_culture_threshold = -0.5
 }
 
 illiniwek_traditions = {
@@ -1262,7 +1262,7 @@ chichimeca_traditions = {
 
 exptribes_plagues = {
 	global_tax_modifier = -0.2
-	global_production_modifier = -0.2
+	production_efficiency = -0.2
 	global_manpower_modifier = -0.2
 	stability_cost_modifier = 0.5
 }
@@ -1272,7 +1272,7 @@ exptribes_plagues_taxes = {
 }
 
 exptribes_plagues_prod = {
-	local_production_modifier = -0.75
+	local_production_efficiency = -0.75
 }
 
 exptribes_plagues_mp = {

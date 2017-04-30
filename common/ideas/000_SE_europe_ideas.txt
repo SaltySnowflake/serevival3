@@ -182,7 +182,7 @@ ANV_ideas = {
 		global_unrest = -1
 	}
 	iron_and_wine = {
-		global_trade_goods_size_modifier = 0.15
+		global_trade_goods_size_modifier_modifier = 0.15
 	}
 }
 ###Created by Inkwizytor Zeketer
@@ -192,7 +192,7 @@ champagnian_ideas = {
 		land_morale = 0.10
 	}
 	bonus = {
-		global_trade_goods_size = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 	trigger = {
 		tag = CHP
@@ -351,7 +351,7 @@ HAI_ideas = {
 	}
 	free = yes
 	economic_diversity = {
-		global_trade_goods_size_modifier = 0.10
+		global_trade_goods_size_modifier_modifier = 0.10
 	}
 	low_countries_diplomacy = {
 		diplomatic_reputation = 1
@@ -412,7 +412,7 @@ karling_ideas = {
 }
 LIE_ideas = {
 	start = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier_modifier = 0.1
 		technology_cost = -0.05
 	}	
 	bonus = {
@@ -781,7 +781,7 @@ FAR_ideas = {
 		light_ship_cost = -0.20
 	}
 	break_the_trade_monopoly = {
-		global_trade_goods_size = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}
 	faroese_fishing_industry = {
 		production_efficiency = 0.15
@@ -813,7 +813,7 @@ GTA_ideas = {
 		build_cost = -0.2
 	}
 	invite_the_dutch_to_gothenburg = {
-		global_trade_goods_size = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}
 	found_university_in_gothenburg = {
 		technology_cost = -0.05
@@ -839,7 +839,7 @@ JMT_ideas = {
 		stability_cost_modifier = -0.15
 	}
 	trade_with_the_sami = {
-		global_trade_goods_size = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}
 	jamtish_highlands = {
 		hostile_attrition = 1
@@ -999,7 +999,7 @@ ICE_ideas = {
 		idea_cost = -0.10
 	}
 	break_the_trade_monopoly = {
-		global_trade_goods_size = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}	
 }
 GRL_ideas = {
@@ -1130,7 +1130,7 @@ AUG_ideas = {
 	}	
 	industrial_revival = {
 		production_efficiency = 0.1
-		global_trade_goods_size = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 }
 low_countries_ideas = {
@@ -1242,7 +1242,7 @@ BRU_ideas = {
 cologne_ideas = {
 	start = {
 		global_unrest = -1
-		global_trade_goods_size = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}	
 	bonus = {
 		siege_ability = 0.10
@@ -1536,7 +1536,7 @@ LUS_ideas = {
 		possible_mercenaries = 0.5
 	}
 	lus_german_immigrants = {
-		global_trade_goods_size_modifier = 0.2
+		global_trade_goods_size_modifier_modifier = 0.2
 	}
 }
 NUM_ideas = {
@@ -1914,7 +1914,7 @@ ING_ideas = {
 		defensiveness = 0.25
 	}
 	encourage_traders_finno = {
-		global_trade_goods_size = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}
 	invite_foreign_administrators_finno = {
 		advisor_pool = 1
@@ -1947,7 +1947,7 @@ KRL_ideas = {
 		defensiveness = 0.25
 	}
 	encourage_traders_finno = {
-		global_trade_goods_size = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}
 	karelian_traditions_kar = {	
 		infantry_power = 0.1
@@ -1990,7 +1990,7 @@ LAT_ideas = {
 		defensiveness = 0.25
 	}
 	fund_latvian_merchants = {
-		global_trade_goods_size = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}
 	create_latvian_upper_class = {
 		legitimacy = 1
@@ -2951,7 +2951,7 @@ CHR_ideas = {
 		defensiveness = 0.10
 	}
 	chr_black_earth = {
-		global_trade_goods_size_modifier = 0.10
+		global_trade_goods_size_modifier_modifier = 0.10
 	}
 	encourage_the_merchant_class = {
 		trade_efficiency = 0.1
@@ -3017,7 +3017,7 @@ VOL_ideas = {
 		hostile_attrition = 0.50
 	}
 	vol_black_earth = {
-		global_trade_goods_size_modifier = 0.10
+		global_trade_goods_size_modifier_modifier = 0.10
 	}
 	galician_volhynian_chronicle = {
 		core_creation = -0.15

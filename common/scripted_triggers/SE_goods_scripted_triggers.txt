@@ -139,7 +139,6 @@ rye_dev = {		#inverted
 		has_climate = arid
 		has_climate = tropical	
 		has_winter = mild_winter
-		has_winter = no_winter	
 		NOT = { 
 			OR = {
 				has_winter = normal_winter
@@ -183,7 +182,7 @@ rice_dev = {		#inverted
 	OR = {
 		trade_goods = rice
 		has_climate = arid
-		has_climate = actic
+		has_climate = arctic
 		NOT = {
 			OR = {
 				continent = asia
@@ -216,7 +215,6 @@ millet_dev = {		#inverted
 		has_terrain = desert
 		has_climate = arctic
 		AND = {
-			has_climate = temperate
 			NOT = { superregion = india_superregion }
 			NOT = { superregion = china_superregion }
 		}
@@ -664,7 +662,6 @@ silk_dev = {
 	}
 }
 linen_dev = {
-	has_climate = temperate
 	NOT = { has_terrain = desert }
 	NOT = { has_terrain = glacier }
 	NOT = { trade_goods = linen }

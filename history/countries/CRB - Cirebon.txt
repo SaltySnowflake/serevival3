@@ -60,79 +60,6 @@ capital = 624	# Banten
 	}
 }
 
-1568.1.1 = {
-	monarch = {
-		name = "Fatahillah"
-		dynasty = "Muara Jati"
-		adm = 2
-		dip = 3
-		mil = 2
-	}
-}
-
-1568.1.1 = {
-	heir = {
-		name = "Pangeran Mas"
-		monarch_name = "Pangeran Mas"
-		dynasty = "Muara Jati"
-		birth_date = 1552.1.1
-		death_Date = 1649.1.1
-		claim = 95
-		adm = 4
-		dip = 4
-		mil = 3
-	}
-}
-
-1570.1.1 = {
-	monarch = {
-		name = "Pangeran Mas"
-		dynasty = "Muara Jati"
-		adm = 4
-		dip = 4
-		mil = 3
-	}
-}
-
-1649.1.1 = {
-	monarch = {
-		name = "Rasmi"
-		dynasty = "Muara Jati"
-		adm = 2
-		dip = 4
-		mil = 3
-	}
-}
-
-1677.1.1 = {
-	monarch = {
-		name = "Martawijaya"
-		dynasty = "Muara Jati"
-		adm = 3
-		dip = 2
-		mil = 2
-	}
-}
-
-1703.1.1 = {
-	monarch = {
-		name = "Kanoman"
-		dynasty = "Muara Jati"
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
-1798.1.1 = {
-	monarch = {
-		name = "Anom"
-		dynasty = "Muara Jati"
-		adm = 1
-		dip = 1
-		mil = 2
-	}
-}
 1525.1.1 = {
 	heir = {
 		name = "Maulana yusuf"
@@ -170,14 +97,38 @@ capital = 624	# Banten
 		mil = 2
 	}
 }
- 
+
+1568.1.1 = {
+	monarch = {
+		name = "Fatahillah"
+		dynasty = "Muara Jati"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1568.1.1 = {
+	heir = {
+		name = "Pangeran Mas"
+		monarch_name = "Pangeran Mas"
+		dynasty = "Muara Jati"
+		birth_date = 1552.1.1
+		death_Date = 1649.1.1
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
 1570.1.1 = {
 	monarch = {
-		name = "Maulana Muhammad"
-		dynasty = "Gunungjati"
-		dip = 2
-		mil = 2
-		adm = 2
+		name = "Pangeran Mas"
+		dynasty = "Muara Jati"
+		adm = 4
+		dip = 4
+		mil = 3
 	}
 }
 
@@ -267,6 +218,16 @@ capital = 624	# Banten
 	}
 }
 
+1649.1.1 = {
+	monarch = {
+		name = "Rasmi"
+		dynasty = "Muara Jati"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
 1651.1.1 = {
 	monarch = {
 		name = "Haji Abunasr"
@@ -314,7 +275,16 @@ capital = 624	# Banten
 		mil = 2
 	}
 }
-		
+
+1677.1.1 = {
+	monarch = {
+		name = "Martawijaya"
+		dynasty = "Muara Jati"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}		
 
 1687.1.1 = {
 	monarch = {
@@ -358,6 +328,16 @@ capital = 624	# Banten
 		birth_date = 1690.1.1
 		death_date = 1750.1.1
 		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1703.1.1 = {
+	monarch = {
+		name = "Kanoman"
+		dynasty = "Muara Jati"
 		adm = 2
 		dip = 2
 		mil = 2
@@ -456,6 +436,16 @@ capital = 624	# Banten
 		claim = 95
 		adm = 2
 		dip = 2
+		mil = 2
+	}
+}
+
+1798.1.1 = {
+	monarch = {
+		name = "Anom"
+		dynasty = "Muara Jati"
+		adm = 1
+		dip = 1
 		mil = 2
 	}
 }

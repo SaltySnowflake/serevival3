@@ -26,13 +26,11 @@ national_focus = DIP
 
 1435.1.1 = { leader = {	name = "Richard Plantagenet"	type = general	rank = 1	fire = 2	shock = 4	manuever = 3	siege = 0	death_date = 1460.12.30 } }
 
-1444.11.11 = { capital = 236 } # London
-
 1445.4.23 = {
 	queen = {
 		country_of_origin = PRO
 		name = "Margaret"
-		dynasty = "de Anjou"
+		dynasty = "d'Anjou"
 		birth_date = 1430.3.23
 		death_date = 1471.4.11
 		female = yes
@@ -342,7 +340,7 @@ national_focus = DIP
 1534.1.1 = { 
  	# Act of Supremacy
  	religion = protestant
-	decision = suffragan_bishop_act
+	#decision = suffragan_bishop_act
 }
 
 1536.1.1 = {
@@ -685,7 +683,7 @@ national_focus = DIP
 	
 	# Cromwell and the Republic
 	religion = reformed
-	#government = republican_dictatorship
+	government = republican_dictatorship
 }
 
 1649.1.29 = { leader = { name = "Robert Blake"		type = admiral	rank = 0	fire = 4	shock = 4	manuever = 3	siege = 0	death_date = 1657.8.17 } }	
@@ -719,7 +717,7 @@ national_focus = DIP
 		regent = yes
 	}
 	religion = protestant
-	#government = noble_republic
+	government = noble_republic
 } # The protectorate is Abolished
 
 1660.5.29 = {
@@ -733,7 +731,7 @@ national_focus = DIP
 	}
 	
 	# The Restoration of the Stuarts
-	#government = absolute_monarchy
+	government = administrative_monarchy
 }
 
 1660.5.29 = {
@@ -751,6 +749,10 @@ national_focus = DIP
 	}
 }
 
+1660.5.29 = { leader = { name = "Prince Rupert"		type = admiral		rank = 2	fire = 4	shock = 4	manuever = 3	siege = 0	death_date = 1682.11.19 } }
+
+#1660.5.29 = { decision = tenures_abolition_act }
+
 1662.4.23 = {
 	queen = {
 		country_of_origin = POR
@@ -764,10 +766,6 @@ national_focus = DIP
 		mil = 1
 	}
 }
-
-1660.5.29 = { leader = { name = "Prince Rupert"		type = admiral		rank = 2	fire = 4	shock = 4	manuever = 3	siege = 0	death_date = 1682.11.19 } }
-
-#1660.5.29 = { decision = tenures_abolition_act }
 
 1668.1.1 = { leader = {	name = "Pierre-Esprit Radisson"	type = conquistador	rank = 6	fire = 1	shock = 1	manuever = 5	siege = 0	death_date = 1710.4.1 } }
 
@@ -873,7 +871,7 @@ national_focus = DIP
 		mil = 3
 	}
 	# The Glorious Revolution
-	#government = constitutional_monarchy
+	government = constitutional_monarchy
 }
 
 1689.2.15 = {

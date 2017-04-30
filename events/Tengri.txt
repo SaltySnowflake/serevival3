@@ -2538,7 +2538,7 @@ country_event = {
 		has_dlc = "The Cossacks"
 		religion = tengri_pagan_reformed
 		secondary_religion = nahuatl
-		num_of_vassals = 1
+		vassal = 1
 	}
 	
 	immediate = {

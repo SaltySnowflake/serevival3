@@ -114,6 +114,16 @@ capital = 1832
 	}
 }
 
+1548.9.15 = { 
+	monarch = {
+		name = "Sadatsugu"
+		dynasty = "Tsutsui"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 1549.3.31 = {
 	heir = {
 		name = "Junkei"
@@ -146,16 +156,6 @@ capital = 1832
 		birth_date = 1562.6.6
 		death_date = 1615.4.2
 		claim = 90
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
-1548.9.15 = { 
-	monarch = {
-		name = "Sadatsugu"
-		dynasty = "Tsutsui"
 		adm = 3
 		dip = 3
 		mil = 3

@@ -7222,7 +7222,7 @@ country_event = {
 	trigger = {
 		has_idea_group = influence_ideas
 		NOT = { has_country_modifier = "vassals_feel_safe" }
-		num_of_vassals = 1
+		vassal = 1
 	}
 
 	mean_time_to_happen = {
@@ -7286,7 +7286,7 @@ country_event = {
 	
 	trigger = {
 		has_idea_group = influence_ideas
-		num_of_vassals = 1
+		vassal = 1
 		NOT = { has_country_modifier = "firm_hand" }
 	}
 
@@ -7399,7 +7399,7 @@ country_event = {
 	
 	trigger = {
 		has_idea_group = influence_ideas
-		num_of_vassals = 1
+		vassal = 1
 		NOT = { has_country_modifier = "slow_negotiations" }
 	}
 

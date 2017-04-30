@@ -3,6 +3,7 @@ namespace = SE_shatteredgoods
 #	id = SE_shatteredgoods.999
 #	title = SE_shatteredgoods.999.t
 #	desc = SE_shatteredgoods.999.d
+#	picture = TRADEGOODS_eventPicture
 #	
 #	major = yes
 #	
@@ -17,6 +18,7 @@ country_event = {
 	id = SE_shatteredgoods.1
 	title = SE_shatteredgoods.1.t
 	desc = SE_shatteredgoods.1.d
+	picture = TRADEGOODS_eventPicture
 	
 	major = yes
 	
@@ -886,6 +888,7 @@ province_event = {
 	id = SE_shatteredgoods.11
 	title = SE_shatteredgoods.11.t
 	desc = SE_shatteredgoods.11.d
+	picture = TRADEGOODS_eventPicture
 	
 	is_triggered_only = yes
 	

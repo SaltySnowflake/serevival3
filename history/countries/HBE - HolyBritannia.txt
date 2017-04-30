@@ -1,4 +1,4 @@
-government = absolute_monarchy
+government = despotic_monarchy
 government_rank = 3
 primary_culture = breton
 religion = catholic

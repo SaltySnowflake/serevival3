@@ -12,7 +12,7 @@ nahuatl_reforms = {
 	}	
 
 	can_buy_idea = {
-		num_of_vassals = 5
+		vassal = 5
 		is_at_war = no
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		stability = 1

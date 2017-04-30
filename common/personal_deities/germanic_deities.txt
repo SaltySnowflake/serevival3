@@ -101,7 +101,7 @@ austro =
 
 fraujaz = 
 {
-	global_trade_goods_size = 0.1
+	global_trade_goods_size_modifier = 0.1
 	land_attrition = -0.10
 	
 	allow = { religion = germanic }

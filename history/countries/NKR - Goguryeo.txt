@@ -5,9 +5,7 @@ religion = confucianism
 technology_group = chinese
 capital = 1845	# Pyongyang
 historical_rival = SKR
-historical_rival = NIN
 historical_friend = SHU
-historical_friend = WEI
 historical_friend = WUU
 
 

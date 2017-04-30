@@ -79,7 +79,7 @@ country_event = {
 	desc = "leonardo.EVTDESC3"
 	picture = PAINTER_ARTIST_eventPicture
 	
-	fire-only_once = yes
+	fire_only_once = yes
 
 	trigger = {
 		OR = {

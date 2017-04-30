@@ -21,6 +21,7 @@ capital = 3001 # Skopje
 		name = "Marko"
 		monarch_name = "Marko II"
 		dynasty = "Mrnjavcevic"
+		claim = 95
 		birth_date = 1420.4.20
 		death_date = 1444.11.11
 		adm = 4

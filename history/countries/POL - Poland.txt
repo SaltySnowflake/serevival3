@@ -241,20 +241,6 @@ national_focus = ADM
 	}
 }
 
-1548.4.2 = {
-	monarch = {
-		name = "Zygmunt II August"
-		dynasty = Jagiellon
-		birth_date = 1520.8.1
-		adm = 3
-		dip = 3
-		mil = 1
-	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = infertile_personality
-	add_ruler_personality = industrious_personality
-}
-
 1543.5.6 = {
 	queen = {
 		country_of_origin = HAB
@@ -267,6 +253,20 @@ national_focus = ADM
 		dip = 0
 		mil = 0
 	}
+}
+
+1548.4.2 = {
+	monarch = {
+		name = "Zygmunt II August"
+		dynasty = Jagiellon
+		birth_date = 1520.8.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = infertile_personality
+	add_ruler_personality = industrious_personality
 }
 
 1550.12.7 = {

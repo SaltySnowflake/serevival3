@@ -27,7 +27,7 @@ ADE_ideas = {
 		missionaries = 1
 	}
 	palm_cultivation = {
-		global_trade_goods_size_modifier = 0.10
+		global_trade_goods_size_modifier_modifier = 0.10
 	}
 	zaydi_hill_tribes = {
 		hostile_attrition = 0.50
@@ -521,7 +521,7 @@ TAB_ideas = {
 		core_creation = -0.15
 	}
 	tolerant_land = {
-		accepted_culture_threshold = -0.15
+		num_accepted_cultures = 1
 		tolerance_heathen = 3
 	}
 	alborz_mountains = {
@@ -534,7 +534,7 @@ TAB_ideas = {
 		legitimacy = 1
 	}
 	silk_producer = {
-        global_trade_goods_size = 0.1
+        global_trade_goods_size_modifier = 0.1
 	}
 	mazandarini_writers = {
 		technology_cost = -0.075
@@ -890,7 +890,7 @@ changsheng_ideas = {
 		land_forcelimit_modifier = 0.2
 	}
 	plentiful_metals = {
-		global_trade_goods_size = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	river_trade = {
 		trade_steering = 0.15

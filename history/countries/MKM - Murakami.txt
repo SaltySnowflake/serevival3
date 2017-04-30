@@ -29,16 +29,6 @@ capital = 3721 # Chiisagata
 		mil = 3
 	}
 }
-	
-1458.1.1 = { 
-	monarch = {
-		name = "Masakiyo"
-		dynasty = "Murakami"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
 
 1455.1.1 = {
 	heir = {
@@ -48,6 +38,16 @@ capital = 3721 # Chiisagata
 		birth_date = 1455.1.1
 		death_date = 1490.1.1
 		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1458.1.1 = { 
+	monarch = {
+		name = "Masakiyo"
+		dynasty = "Murakami"
 		adm = 3
 		dip = 3
 		mil = 3

@@ -46,7 +46,7 @@ historical_friend = ICE
 
 1537.1.1 = { religion = protestant } # Christian III decrees Lutheranism as State Church
 
-1670.2.10 = { government = absolute_monarchy }
+1670.2.10 = { government = despotic_monarchy }
 
 1814.2.16 = {
 	monarch = {

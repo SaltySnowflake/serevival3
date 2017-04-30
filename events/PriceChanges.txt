@@ -22,7 +22,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		num_of_colonial_subjects = 1
+		colony = 1
 		NOT = { has_global_flag = triangle_happened }
 		any_subject_country = {
 			is_colonial_nation = yes
@@ -1823,7 +1823,7 @@ country_event = {
 
 	trigger = {
 		dip_tech = 16
-		num_of_colonial_subjects = 1
+		colony = 1
 		any_subject_country = {
 			is_colonial_nation = yes
 			OR = {
@@ -1880,7 +1880,7 @@ country_event = {
 
 	trigger = {
 		dip_tech = 16
-		num_of_colonial_subjects = 1
+		colony = 1
 		NOT = { has_global_flag = popularization_of_tobacco_happened }
 		any_subject_country = {
 			is_colonial_nation = yes
@@ -2594,7 +2594,7 @@ country_event = {
 			}
 		}
 		OR = {
-			num_of_colonial_subjects = 3
+			colony = 3
 			num_of_strong_trade_companies = 3 
 		} #must have overseas empire
 		is_subject = no
@@ -3041,7 +3041,7 @@ country_event = {
 			duration = -1
 		}
 		change_price = {
-			trade_goods = coppper
+			trade_goods = copper
 			key = INDUSTRIAL_REV
 			value = 0.6
 			duration = -1
@@ -3416,7 +3416,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		num_of_colonial_subjects = 1
+		colony = 1
 		any_subject_country = {
 			is_colonial_nation = yes
 			OR = {
@@ -3459,7 +3459,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		num_of_colonial_subjects = 1
+		colony = 1
 		any_subject_country = {
 			is_colonial_nation = yes
 			OR = {
@@ -3869,7 +3869,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		num_of_colonial_subjects = 1
+		colony = 1
 		NOT = { has_global_flag = obsidian_declined }
 		NOT = { has_global_flag = obsidian_declined2 }
 		any_subject_country = {

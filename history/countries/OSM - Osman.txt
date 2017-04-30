@@ -20,7 +20,6 @@ national_focus = MIL
 		manuever = 3
 		siege = 1
 		death_date = 1453.9.9
-		trait = inspirational_leader_general_personality
 	}
 }
 	

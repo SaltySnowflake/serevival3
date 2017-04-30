@@ -767,7 +767,7 @@ country_event = {
 			NOT = { has_country_modifier = colonial_enthusiasm }
 			NOT = { has_country_modifier = monetary_benefits }
 		}
-		num_of_colonial_subjects = 1
+		colony = 1
 	}
 
 	mean_time_to_happen = {
@@ -9352,7 +9352,7 @@ country_event = {
 	trigger = {
 		num_of_ports = 5
 		num_of_heavy_ship = 1
-		num_of_colonial_subjects = 1
+		colony = 1
 		any_rival_country = {
 			has_country_modifier = hire_privateers
 		}

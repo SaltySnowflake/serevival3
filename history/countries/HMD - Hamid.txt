@@ -23,6 +23,7 @@ capital = 326
 		dynasty = "Anakroglu"
 		birth_date = 1439.1.1
 		death_date = 1485.1.1
+		claim = 95
 		adm = 1
 		dip = 4
 		mil = 3

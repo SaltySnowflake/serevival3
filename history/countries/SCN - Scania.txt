@@ -7,18 +7,6 @@ historical_friend = NOR
 historical_friend = DAN
 capital = 6
 
-1444.11.01 = {
-	monarch = {
-		name = "Alette"
-		dynasty = "Rooksdóttir"
-		birth_date = 1428.2.16
-		adm = 3
-		dip = 6
-		mil = 1
-		female = yes
-	}
-}
-
 1444.10.31 = {
 	heir = {
 		name = "Henry"
@@ -30,5 +18,17 @@ capital = 6
 		adm = 4
 		dip = 5
 		mil = 3
+	}
+}
+
+1444.11.01 = {
+	monarch = {
+		name = "Alette"
+		dynasty = "Rooksdóttir"
+		birth_date = 1428.2.16
+		adm = 3
+		dip = 6
+		mil = 1
+		female = yes
 	}
 }

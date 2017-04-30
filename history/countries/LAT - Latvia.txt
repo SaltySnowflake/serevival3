@@ -1,7 +1,7 @@
 government = oligarchic_republic
 mercantilism = 25
 primary_culture = latvian
-religion = christian
+religion = catholic
 technology_group = western
 #historical_rival = XXX
 capital = 38 # Riga

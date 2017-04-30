@@ -931,7 +931,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					num_of_vassals = 1
+					vassal = 1
 				}
 				every_subject_country = {
 					country_event = { id = inti_events.23 }
@@ -958,7 +958,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					num_of_vassals = 1
+					vassal = 1
 				}
 				every_subject_country = {
 					country_event = { id = inti_events.23 }

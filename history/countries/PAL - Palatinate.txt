@@ -71,20 +71,6 @@ capital = 77	# Pfalz
 	add_ruler_personality = bold_fighter_personality
 }
 
-1445.10.18 = {
-	queen = {
-		country_of_origin = SAV
-		name = "Margaret"
-		dynasty = "di Savoia"
-		birth_date = 1420.8.7
-		death_date = 1479.9.30
-		female = yes
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
 1436.12.30 = {
 	heir = {
 		name = "Friedrich"
@@ -101,6 +87,20 @@ capital = 77	# Pfalz
 
 1444.11.06 = { elector = no }
 1444.11.11 = { elector = yes }
+
+1445.10.18 = {
+	queen = {
+		country_of_origin = SAV
+		name = "Margaret"
+		dynasty = "di Savoia"
+		birth_date = 1420.8.7
+		death_date = 1479.9.30
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
 
 1449.8.14 = {
 	monarch = {

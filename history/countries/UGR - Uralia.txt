@@ -1,0 +1,6 @@
+primary_culture = estonian
+capital = 35		#Osel/Saaremaa				
+government_rank = 3
+religion = orthodox
+technology_group = eastern
+government = feudal_monarchy

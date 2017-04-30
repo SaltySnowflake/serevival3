@@ -572,7 +572,7 @@ castillian_faction_rising2 = {
 		has_opinion = { who = CAS value = 50 }
 	}
 	
-	castillian_french_influence = 0.1
+	trobador_castillian_influence = 0.1
 }
 
 castillian_faction_rising1 = {
@@ -628,104 +628,6 @@ the_mandate_of_heaven_lost_SE = {
 	discipline = -0.1
 	stability_cost_modifier = 0.5
 	global_unrest = 10
-}
-
-#Japan
-shogun_vassal_relations_6 = {
-    potential = {
-        government = shogunate
-        num_of_vassals = 6
-        NOT = { num_of_vassals = 10 }
-    }
-
-    trigger = {
-		is_subject = no
-    }
-
-    diplomatic_upkeep = 2
-}
-
-shogun_vassal_relations_10 = {
-    potential = {
-        government = shogunate
-        num_of_vassals = 10
-        NOT = { num_of_vassals = 14 }
-    }
-
-    trigger = {
-		is_subject = no
-    }
-
-    diplomatic_upkeep = 6
-}
-
-shogun_vassal_relations_14 = {
-    potential = {
-        government = shogunate
-        num_of_vassals = 14
-        NOT = { num_of_vassals = 18 }
-    }
-
-    trigger = {
-		is_subject = no
-    }
-
-    diplomatic_upkeep = 10
-}
-
-shogun_vassal_relations_18 = {
-    potential = {
-        government = shogunate
-        num_of_vassals = 18
-        NOT = { num_of_vassals = 22 }
-    }
-
-    trigger = {
-		is_subject = no
-    }
-
-    diplomatic_upkeep = 14
-}
-
-shogun_vassal_relations_22 = {
-    potential = {
-        government = shogunate
-        num_of_vassals = 22
-		NOT = { num_of_vassals = 26 }
-    }
-
-    trigger = {
-		is_subject = no
-    }
-
-    diplomatic_upkeep = 18
-}
-
-shogun_vassal_relations_26 = {
-    potential = {
-        government = shogunate
-        num_of_vassals = 26
-		NOT = { num_of_vassals = 30 }
-    }
-
-    trigger = {
-		is_subject = no
-    }
-
-    diplomatic_upkeep = 22
-}
-
-shogun_vassal_relations_30 = {
-    potential = {
-        government = shogunate
-        num_of_vassals = 30
-    }
-
-    trigger = {
-		is_subject = no
-    }
-
-    diplomatic_upkeep = 26
 }
 
 ## Vinland

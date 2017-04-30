@@ -1,0 +1,6 @@
+government = feudal_monarchy
+primary_culture = abkhaz
+religion = orthodox
+technology_group = eastern
+capital = 1856
+government_rank = 1

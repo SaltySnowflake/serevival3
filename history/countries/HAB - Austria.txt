@@ -297,7 +297,7 @@ national_focus = ADM
 
 1551.7.19 = { add_accepted_culture = transylvanian }
 
-1556.10.2 = { government = absolute_monarchy }
+1556.10.2 = { government = despotic_monarchy }
 
 1560.1.1 = { leader = {	name = "Franz-Josef"           	type = general	rank = 0	fire = 3	shock = 3	manuever = 3	siege = 1	death_date = 1580.1.1 } }
 
@@ -821,7 +821,7 @@ national_focus = ADM
 		name = "Wilhelmine Amalia"
 		dynasty = "von Welf"
 		birth_date = 1673.4.21
-		death_date = 1742.4.42
+		death_date = 1742.4.12
 		female = yes
 		adm = 3
 		dip = 3

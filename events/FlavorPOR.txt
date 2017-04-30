@@ -22,7 +22,7 @@ country_event = {
 				NOT = { exists = POR }
 			}
 		}
-		num_of_colonial_subjects = 1
+		colony = 1
 	}
 
 	mean_time_to_happen = {
@@ -857,7 +857,7 @@ country_event = {
 				NOT = { exists = POR }
 			}
 		}
-		num_of_colonial_subjects = 1
+		colony = 1
 		south_america = {
 			country_or_vassal_holds = ROOT
 		}
