@@ -1,7 +1,11 @@
 ﻿l_english:
  #missing?
  NNB: "Nanbu"
- NNB_ADJ: "Nanbu"
+ NNB_ADJ: "Nanbun"
+ MLA: "Mallorca"
+ MLA_ADJ: "Mallorcan"
+ CNL: "Carniola"
+ CNL_ADJ: "Carniolan"
  #Formables
  #Europe
  ANV: "Angevin Empire"
