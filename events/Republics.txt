@@ -620,7 +620,7 @@ country_event = {
 	trigger = {
 		government = merchant_republic
 		num_of_ports = 1
-		NOT = { num_of_colonial_subjects = 1 }
+		NOT = { colony = 1 }
 		maritime_ideas = 2
 		OR = {
 			north_america = { has_discovered = ROOT }

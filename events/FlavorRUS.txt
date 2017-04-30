@@ -1117,12 +1117,13 @@ country_event = {
 	picture = DIPLOMACY_eventPicture
 
 	trigger = {
-			limit = {
-				has_terrain = steppe
-			}
-			add_local_autonomy = 50
+			any_known_country = {
+			AND = {
+				{is_neighbor_of = ROOT}
+				{Culture_group = east_asian}
+				}
+				}
 		NOT = { has_country_flag = RUS_had_event_3421 }
-		is_year = 1650
 		OR = {
 			exists = MNG
 			exists = QNG
@@ -1155,6 +1156,9 @@ country_event = {
 			}
 		}
 	}
+		
+
+
 	
 	mean_time_to_happen = { months = 200 }
 	

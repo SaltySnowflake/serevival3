@@ -81,7 +81,10 @@ country_event = {
 		}
 		NOT = { has_country_flag = had_crn2 }
 	}
-	mean_time_to_happen = { months = 36 }
+	
+	mean_time_to_happen = { 
+			months = 36 
+			}
 	
 	immediate = { set_country_flag = had_crn2 }	
 	

@@ -210,7 +210,7 @@ east_african_ideas = {
 		num_accepted_cultures = 1
 	}
 	coffee_cradle = {
-		global_trade_goods_size = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	indian_ocean = {
 		trade_range_modifier = 0.2

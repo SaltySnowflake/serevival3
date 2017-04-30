@@ -1,11 +1,11 @@
 ###cereals
-grain = { 
+grain = {
 	#grown all over temperate areas, more luxurious
 	#color = { 0.70 0.70 0.00 }
 	color = { 0.96 0.93 0.58 }
 	modifier = { land_forcelimit_modifier = 0.20 } #was .10
 	province = { land_forcelimit = 0.5 }
-	chance = { 
+	chance = {
 		factor = 35
 		modifier = {
 			factor = 0 #only old world nations in standard setup
@@ -226,7 +226,7 @@ barley = {
 	color = { 0.50 0.55 0.20 } 
 	modifier = { manpower_recovery_speed = 0.075 } 
 	province = { local_manpower_modifier = 0.10 }
-	chance = { 
+	chance = {
 		factor = 35
 		modifier = {
 			factor = 0 #only old world nations in standard setup

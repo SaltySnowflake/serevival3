@@ -545,7 +545,7 @@ country_event = {
 
 		is_year = 1500
 		NOT = { is_year = 1600 }
-		num_of_colonial_subjects = 3
+		colony = 3
 		
 	}
 
@@ -660,7 +660,7 @@ country_event = {
 		tag = SPA
 
 		owns = 224	# Andalucia
-		num_of_colonial_subjects = 3
+		colony = 3
 	}
 
 	mean_time_to_happen = { months = 120 }
@@ -1406,7 +1406,7 @@ country_event = {
 		religion = catholic
 		is_year = 1540
 		NOT = { is_year = 1570 }
-		num_of_colonial_subjects = 3 #colonial aristocracy exists
+		colony = 3 #colonial aristocracy exists
 		OR = {
 			north_america = {
 				country_or_vassal_holds = ROOT
@@ -2194,7 +2194,7 @@ country_event = {
 			government = constitutional_monarchy
 			government = enlightened_despotism
 		}
-		num_of_colonial_subjects = 3
+		colony = 3
 	}
 	
 	mean_time_to_happen = { months = 150 }
@@ -2253,7 +2253,7 @@ country_event = {
 	trigger = {
 		tag = SPA 
 		religion = catholic
-		num_of_colonial_subjects = 3
+		colony = 3
 		is_year = 1750
 		OR = {
 			government = constitutional_monarchy

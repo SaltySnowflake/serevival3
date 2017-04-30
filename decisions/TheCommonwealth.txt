@@ -41,7 +41,7 @@ country_decisions = {
 			owns_core_province = 43					# Danzig
 			owns_core_province = 1841				# Marienburg
 			senior_union_with = LIT
-			NOT = { num_of_unions = 2 }
+			NOT = { personal_union = 2 }
 			MAZ = { exists = no }
 		}
 		effect = {
@@ -167,7 +167,7 @@ country_decisions = {
 			owns_core_province = 280				# Kiev
 			owns_core_province = 1941				# Turov
 			senior_union_with = POL
-			NOT = { num_of_unions = 2 }
+			NOT = { personal_union = 2 }
 			MAZ = { exists = no }
 		}
 		effect = {

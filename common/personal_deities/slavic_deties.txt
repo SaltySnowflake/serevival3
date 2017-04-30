@@ -65,7 +65,7 @@ lada =
 veles = 
 {
 	leader_land_fire = 1
-	global_trade_goods_size = 0.1
+	global_trade_goods_size_modifier = 0.1
 	
 	allow = { religion = slavic_pagan_reformed }
 	sprite = 16

@@ -866,7 +866,6 @@ east_algonquin_council = {
 	trigger = {
 		culture_group = eastern_algonquian
 		government = native_council
-		is_protectorate = no
 		is_subject = no
 	}
 }
@@ -887,7 +886,6 @@ cent_algonquin_council = {
 	trigger = {
 		culture_group = central_algonquian
 		government = native_council
-		is_protectorate = no
 		is_subject = no
 	}
 }
@@ -911,9 +909,7 @@ subject_algonquin_council = {
 			culture_group = central_algonquian
 		}
 		government = native_council
-		OR = {
-			is_protectorate = yes
-			is_subject = yes
+		is_subject = yes
 		}
 	}
 }
@@ -1011,9 +1007,7 @@ subject_muskogee_council = {
 	trigger = {
 		culture_group = muskogean
 		government = native_council
-		OR = {
-			is_protectorate = yes
-			is_subject = yes
+		is_subject = yes
 		}
 	}
 }

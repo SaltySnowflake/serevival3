@@ -2063,9 +2063,9 @@ english_channel={
 	end=yes
 }
 white_sea={
-	location=1652
-	color={
-210 46 28 	}
+	color={ 
+210 46 28 }
+	Location=1652
 	outgoing={
 		name="north_sea"
 		path={
@@ -2080,9 +2080,9 @@ white_sea={
 	}
 }
 east_pacific={
+	color={ 
+42 231 38 }
 	location=1431
-	color={
-42 231 38 	}
 	outgoing={
 		name="australia"
 		path={
@@ -2106,9 +2106,9 @@ east_pacific={
 	}
 }
 thingvellir={
-	location=370
 	color={
 65 255 200 	}
+	location=370
 	outgoing={
 		name="north_sea"
 		path={
