@@ -1,706 +1,703 @@
-######################################
-#
-# Events for Chinese Factions. Id 11100-
-#
-######################################
+namespace = china_events
 
-### Eunuchs ###
+############################################################################
+#
+# Events for Chinese Factions
+# Reworked and given alternative effects for Mandate of Heaven / 1.20 by Henrik Lohmander.
+#
+############################################################################
 
-# Eunuch Offers His Service
+### Trade ###
+
+# Local Governor enacts trade trade laws
 country_event = {
-	id = 11000
-	title = "EVTNAME11000"
-	desc = "EVTDESC11000"
+	id = china_events.1
+	title = "china_events.1.t"
+	desc = "china_events.1.d"
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		faction_in_power = enuchs
+		any_owned_province = {
+			is_capital = no
+			is_state = yes
+			NOT = { has_province_modifier = chi_local_trade_regulations }
+			NOT = { has_province_modifier = chi_local_trade_down_turn }
+		}
+		OR = {
+			faction_in_power = enuchs
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = { #Atleast here
+				limit = {
+					is_capital = no
+					is_state = yes
+					NOT = { has_province_modifier = chi_local_trade_regulations }
+					NOT = { has_province_modifier = chi_local_trade_down_turn }
+				}
+				save_event_target_as = trade_problems_province
+			}
+			random_owned_province = { #But rather here
+				limit = {
+					is_capital = no
+					has_building = marketplace
+					NOT = { has_province_modifier = chi_local_trade_regulations }
+					NOT = { has_province_modifier = chi_local_trade_down_turn }
+				}
+				save_event_target_as = trade_problems_province
+			}
+			random_owned_province = { #Here would be even better
+				limit = {
+					is_capital = no
+					has_port = yes
+					NOT = { has_province_modifier = chi_local_trade_regulations }
+					NOT = { has_province_modifier = chi_local_trade_down_turn }
+				}
+				save_event_target_as = trade_problems_province
+			}
+			random_owned_province = { #Warmer
+				limit = {
+					is_capital = no
+					has_port = yes
+					has_building = marketplace
+					NOT = { has_province_modifier = chi_local_trade_regulations }
+					NOT = { has_province_modifier = chi_local_trade_down_turn }
+				}
+				save_event_target_as = trade_problems_province
+			}
+			random_owned_province = { #Best
+				limit = {
+					is_capital = no
+					has_province_modifier = center_of_trade_modifier
+					NOT = { has_province_modifier = chi_local_trade_regulations }
+					NOT = { has_province_modifier = chi_local_trade_down_turn }
+				}
+				save_event_target_as = trade_problems_province
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			stability = 1
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.1.a"
+		boost_eunuchs_effect = yes
+		reduce_mandate_effect = yes
+		if = {
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_legitimacy = -5
 		}
-		modifier = {
-			factor = 0.9
-			stability = 2
-		}
-		modifier = {
-			factor = 0.9
-			stability = 3
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
+		event_target:trade_problems_province = {
+			add_province_modifier = {
+				name = "chi_local_trade_regulations"
+				duration = 3650
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11000"
-		add_faction_influence = {
-			faction = enuchs
-			influence = 5
-		}
-		create_advisor = statesman
-	}
-	
-	option = {
-		name = "EVTOPTB11000"
-		add_faction_influence = {
-			faction = enuchs
-			influence = -5
+		name = "china_events.1.b"
+		reduce_eunuchs_effect = yes
+		add_mandate_effect = yes
+		event_target:trade_problems_province = {
+			add_province_modifier = {
+				name = "chi_local_trade_down_turn"
+				duration = 3650
+			}
 		}
 	}
 }
 
-#Eunuch Schemes for power
+# Trading Incident
 country_event = {
-	id = 11002
-	title = "EVTNAME11002"
-	desc = "EVTDESC11002"
-	picture = DEBATE_REPUBLICAN_eventPicture
+	id = china_events.2
+	title = "china_events.2.t"
+	desc = "china_events.2.d"
+	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
-		faction_in_power = enuchs
-		statesman = 3
+		OR = {
+			faction_in_power = enuchs
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
+		any_owned_province = {
+			has_port = yes
+			is_state = yes
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					is_state = yes
+				}
+				save_event_target_as = port_incident_location
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11002"
-		add_stability = -1
-		kill_advisor = statesman
-		add_faction_influence = {
-			faction = enuchs
-			influence = -5
-		}
+		name = "china_events.2.a"
+		reduce_legitimacy_small_effect = yes
+		boost_eunuchs_effect = yes
+		reduce_mandate_effect = yes
+		add_years_of_income = 0.3
 	}
 	
 	option = {
-		name = "EVTOPTB11002"
-		add_adm_power = 20
-		add_faction_influence = {
-			faction = enuchs
-			influence = 5
+		name = "china_events.2.b"
+		boost_temples_effect = yes
+		add_mandate_effect = yes
+		event_target:port_incident_location = {
+			area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "chi_order_restored"
+					duration = 3650
+				}
+			}
 		}
 	}
 }
 
 #Eunuchs Isolate the Emperor
 country_event = {
-	id = 11004
-	title = "EVTNAME11004"
-	desc = "EVTDESC11004"
+	id = china_events.3
+	title = "china_events.3.t"
+	desc = "china_events.3.d"
 	picture = COURT_eventPicture
 
 	trigger = {
-		faction_in_power = enuchs
+		OR = {
+			faction_in_power = enuchs
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			NOT = {
-				legitimacy = 80
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				legitimacy = 70
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				legitimacy = 60
-			}
-		}
-		modifier = {
-			factor = 1.4
-			stability = 1
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11004"
+		name = "china_events.3.a"
+		reduce_mandate_effect = yes
+		boost_eunuchs_effect = yes
 		add_stability_or_adm_power = yes
-		add_faction_influence = {
-			faction = enuchs
-			influence = 6
-		}
 	}
 	
 	option = {
-		name = "EVTOPTB11004"
-		add_prestige = 5
+		name = "china_events.3.b"
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_legitimacy = 10
+			add_dip_power = 50
+		}
+		reduce_meritocracy_large_effect = yes
+		reduce_eunuchs_effect = yes
 	}
 }
 
 # A Grave for a Eunuch
 country_event = {
-	id = 11006
-	title = "EVTNAME11006"
-	desc = "EVTDESC11006"
+	id = china_events.4
+	title = "china_events.4.t"
+	desc = "china_events.4.d"
 	picture = DEATH_OF_HEIR_eventPicture
 	
 	trigger = {
-		faction_in_power = enuchs
+		government = celestial_empire
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			economic_ideas = 4
-		}
-		modifier = {
-			factor = 0.8
-			economic_ideas = 5
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { economic_ideas = 4 }
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11006"
-		add_faction_influence = {
-			faction = enuchs
-			influence = -10
-		}
+		name = "china_events.4.a"
+		add_stability_or_adm_power = yes
+		reduce_mandate_effect = yes
+		reduce_eunuchs_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11006"
-		add_faction_influence = {
-			faction = enuchs
-			influence = -5
-		}
-		add_years_of_income = -0.1
+		name = "china_events.4.b"
+		boost_eunuchs_effect = yes
+		add_mandate_effect = yes
+		add_years_of_income = -0.25
 	}
 }
 
-# The Yellow River Trade
+# The Yellow River Dikes
 country_event = {
-	id = 11008
-	title = "EVTNAME11008"
-	desc = "EVTDESC11008"
+	id = china_events.5
+	title = "china_events.5.t"
+	desc = "china_events.5.d"
 	picture = MERCHANTS_TALKING_eventPicture
 	
 	trigger = {
-		faction_in_power = enuchs
+		government = celestial_empire
+		any_owned_province = {
+			region = north_china_region
+			NOT = { area = hebei_area }
+			NOT = { area = west_gansu_area }
+			is_state = yes
+		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			mercantilism = 60
-		}
-		modifier = {
-			factor = 0.9
-			mercantilism = 80
-		}
-		
-		modifier = {
-			factor = 1.5
-			NOT = {
-				mercantilism = 30
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.5.a"
+		add_years_of_income = -0.5
+		random_owned_province = {
+			limit = {
+				is_state = yes
+				is_capital = no
+				region = north_china_region
+				NOT = { area = hebei_area }
+				NOT = { area = west_gansu_area }
+			}
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				if = {
+					limit = { NOT = { prosperity = 100 } }
+					add_prosperity = 75
+				}
+				add_base_production = 2
+			}
+			if = {
+				limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 			}
 		}
+		boost_eunuchs_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTA11008"
-		add_country_modifier = {
-			name = mercantilism_modifier
-			duration = 3650
-		}
-		add_stability_or_adm_power = yes
-		add_dip_power = -30
-		add_faction_influence = {
-			faction = enuchs
-			influence = 6
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11008"
-		add_dip_power = 50
-		add_faction_influence = {
-			faction = enuchs
-			influence = -5
-		}
+		name = "china_events.5.b"
+		add_prestige = -5
+		reduce_eunuchs_effect = yes
 	}
 }
 
 # A Gift
 country_event = {
-	id = 11010
-	title = "EVTNAME11010"
-	desc = "EVTDESC11010"
+	id = china_events.6
+	title = "china_events.6.t"
+	desc = "china_events.6.d"
 	picture = IMPORTANT_STATUE_eventPicture
 	
 	trigger = {
-		faction_in_power = enuchs
+		government = celestial_empire 
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			prestige = 2
-		}
-		modifier = {
-			factor = 0.8
-			prestige = 30
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11010"
-		add_years_of_income = 0.2
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
-		}
+		name = "china_events.6.a"
+		add_years_of_income = 1
+		add_prestige = 10
+		reduce_mandate_effect = yes
+		boost_eunuchs_large_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11010"
-		add_faction_influence = {
-			faction = enuchs
-			influence = -1
-		}
+		name = "china_events.6.b"
+		add_corruption = -1
 	}
 }
 
 # Destitute Banknotes
 country_event = {
-	id = 11012
-	title = "EVTNAME11012"
-	desc = "EVTDESC11012"
+	id = china_events.7
+	title = "china_events.7.t"
+	desc = "china_events.7.d"
 	picture = ECONOMY_eventPicture
 	
 	trigger = {
-		faction_in_power = enuchs
-		inflation = 4
+		OR = {
+			faction_in_power = enuchs
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			inflation = 6
-		}
-		modifier = {
-			factor = 0.8
-			inflation = 10
-		}
-		modifier = {
-			factor = 0.9
-			inflation = 14
-		}
-		modifier = {
-			factor = 1.5
-			has_idea = national_bank
-		}
-		modifier = {
-			factor = 1.5
-			advisor = master_of_mint
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11012"
-		create_advisor = master_of_mint
-		add_years_of_income = 0.6
+		name = "china_events.7.a" #This all sounds very interesting.
+		trigger = { NOT  = { has_dlc = "Mandate of Heaven" } }
+		boost_eunuchs_effect = yes
+		add_years_of_income = -0.25
+		add_legitimacy = 10
+	}
+	
+	option = {
+		name = "china_events.7.b" #We cannot appear this weak, we must act!
+		trigger = { has_dlc = "Mandate of Heaven" }
+		add_mandate_effect = yes
+		add_years_of_income = -0.5
+	}
+	
+	option = {
+		name = "china_events.7.c" #I have trust in the Grand Secretariat.
+		reduce_eunuchs_effect = yes
+		reduce_mandate_effect = yes
 		add_inflation = 2
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11012"
-		add_stability = -1
-		add_inflation = -2
-		add_faction_influence = {
-			faction = enuchs
-			influence = -5
-		}
 	}
 }
 
 # Treasurer Empties Coffers
 country_event = {
-	id = 11014
-	title = "EVTNAME11014"
-	desc = "EVTDESC11014"
-	picture = ECONOMY_eventPicture
-	
-	trigger = {
-		faction_in_power = enuchs
-	}
-	
-	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				prestige = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			advisor = treasurer
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA11014"
-		add_years_of_income = -0.4
-		remove_advisor = treasurer
-		add_faction_influence = {
-			faction = enuchs
-			influence = -4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11014"
-		add_inflation = 2
-		add_faction_influence = {
-			faction = enuchs
-			influence = 5
-		}
-	}
-}
-
-# Eunuch Excells at Examination
-country_event = {
-	id = 11016
-	title = "EVTNAME11016"
-	desc = "EVTDESC11016"
+	id = china_events.8
+	title = "china_events.8.t"
+	desc = "china_events.8.d"
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
-		faction_in_power = enuchs
+		government = celestial_empire
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			economic_ideas = 4
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
-			}
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.8.a"
+		reduce_mandate_effect = yes
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_legitimacy = -10
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11016"
+		name = "china_events.8.b"
+		add_corruption = 1
+	}
+}
+
+# Optimus Excells at Examination
+# Good Event
+country_event = {
+	id = china_events.9
+	title = "china_events.9.t"
+	desc = "china_events.9.d"
+	picture = ADVISOR_eventPicture
+	
+	trigger = {
+		government = celestial_empire
+		num_of_cities = 2
+		any_owned_province = {
+			is_capital = no
+			is_state = yes
+		}
+	}
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.9.a"
 		define_advisor = {
 			type = philosopher
-			skill = 2
+			skill = 3
+			discount = yes
 		}
-		add_faction_influence = {
-			faction = enuchs
-			influence = 5
-		}
+		boost_bureaucrats_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11016"
-		add_adm_power = 20
-		add_faction_influence = {
-			faction = enuchs
-			influence = -5
+		name = "china_events.9.b"
+		random_owned_province = {
+			limit = {
+				is_state = yes
+				is_capital = no
+			}
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				if = {
+					limit = { NOT = { prosperity = 100 } }
+					add_prosperity = 75
+				}
+				area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "china_gifted_official"
+						duration = 3650
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+				}
+				add_base_production = 1
+			}
 		}
+		boost_eunuchs_effect = yes
 	}
 }
 
 # Eunuch Smokes Opium
 country_event = {
-	id = 11018
-	title = "EVTNAME11018"
-	desc = "EVTDESC11018"
+	id = china_events.10
+	title = "china_events.10.t"
+	desc = "china_events.10.d"
 	picture = COURT_eventPicture
 	
 	trigger = {
-		faction_in_power = enuchs
+		government = celestial_empire
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			NOT = {
-				prestige = 10
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				prestige = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 80
-			}
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11018"
-		add_prestige = -5
-		add_faction_influence = {
-			faction = enuchs
-			influence = 5
-		}
+		name = "china_events.10.a"
+		boost_temples_effect = yes
+		reduce_mandate_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11018"
-		add_years_of_income = 0.1
-		add_adm_power = -10
-		add_faction_influence = {
-			faction = enuchs
-			influence = -5
-		}
+		name = "china_events.10.b"
+		reduce_temples_effect = yes
+		reduce_meritocracy_large_effect = yes
 	}
 }
-
-### Bureaucrats ###
 
 #The Examinations of $YEAR$
 country_event = {
-	id = 11100
-	title = "EVTNAME11100"
-	desc = "EVTDESC11100"
+	id = china_events.11
+	title = "china_events.11.t"
+	desc = "china_events.11.d"
 	picture = UNIVERSITY_eventPicture
 	
 	trigger = {
-		faction_in_power = bureaucrats
-	}
-	
-	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			stability = 1
-		}
-		modifier = {
-			factor = 0.9
-			stability = 2
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = -1
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA11100"
-		add_adm_power = 30
-		add_prestige = 5
-		add_legitimacy = 5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11100"
-		add_adm_power = 40
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 6
-		}
-	}
-}
-
-# A Jade Seal
-country_event = {
-	id = 11102
-	title = "EVTNAME11102"
-	desc = "EVTDESC11102"
-	picture = IMPORTANT_STATUE_eventPicture
-	
-	trigger = {
-		faction_in_power = bureaucrats
-	}
-	
-	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			legitimacy = 70
-		}
-		modifier = {
-			factor = 0.9
-			legitimacy = 80
-		}
-		modifier = {
-			factor = 0.9
-			prestige = 105
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = -2
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA11102"
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -3
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11102"
-		add_prestige = 5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 3
-		}
-	}
-}
-
-# The Levy in $PROVINCENAME$
-province_event = {
-	id = 11104
-	title = "EVTNAME11104"
-	desc = "EVTDESC11104"
-	picture = REFORM_eventPicture
-	
-	trigger = {
-		base_manpower = 4
-		owner = {
+		OR = {
 			faction_in_power = bureaucrats
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 2500
-		modifier = {
-			factor = 0.9
-			owner = { army_tradition = 10 }
-		}
-		modifier = {
-			factor = 0.9
-			owner = { army_tradition = 20 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { NOT = { economic_ideas = 4 } }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { NOT = { stability = 1 } }
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA11104"
-		add_base_manpower = 2
-		owner = {
-			add_manpower = 1
-			add_army_tradition = 5
-			add_faction_influence = {
-				faction = bureaucrats
-				influence = 5
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
 			}
 		}
 	}
 	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
 	option = {
-		name = "EVTOPTB11104"
-		add_base_tax = 1
-		owner = {
-			add_years_of_income = 0.2
+		name = "china_events.11.a"
+		add_meritocracy_large_effect = yes
+		boost_bureaucrats_large_effect = yes
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
 			add_prestige = 5
-			add_faction_influence = {
-				faction = bureaucrats
-				influence = -5
+		}
+	}
+	
+	option = {
+		name = "china_events.11.b"
+		add_mandate_effect = yes
+		boost_bureaucrats_effect = yes
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_legitimacy = 10
+		}
+	}
+}
+
+# The Southern Elites
+country_event = {
+	id = china_events.12
+	title = "china_events.12.t"
+	desc = "china_events.12.d"
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_ruler_flag = quotas_discussed }
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
+		any_owned_province = {
+			region = south_china_region
+			is_state = yes
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = quotas_discussed
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.12.a" #We need Quotas!
+		reduce_meritocracy_large_effect = yes
+		add_mandate_effect = yes
+		boost_bureaucrats_effect = yes
+		if = {
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_dip_power = 50
+		}
+	}
+	
+	option = {
+		name = "china_events.12.b" #Northern Literati just don’t compare to southerners...
+		reduce_mandate_effect = yes
+		add_meritocracy_large_effect = yes
+		reduce_bureaucrats_effect = yes
+		if = {
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_years_of_income = 0.25
+		}
+		random_owned_area = {
+			limit = {
+				region = south_china_region
+				is_state = yes
+			}
+			add_local_autonomy = 15
+		}
+	}
+}
+
+# The Levy in X
+country_event = {
+	id = china_events.13
+	title = "china_events.13.t"
+	desc = "china_events.13.d"
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			faction_in_power = temples
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
+		any_owned_province = {
+			is_capital = no
+			is_state = yes
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_state = yes
+					is_capital = no
+				}
+				save_event_target_as = levy_province
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.13.a"
+		boost_temples_effect = yes
+		event_target:levy_province = {
+			add_base_manpower = 2
+		}
+	}
+	
+	option = {
+		name = "china_events.13.b"
+		boost_bureaucrats_effect = yes
+		boost_eunuchs_effect = yes
+		event_target:levy_province = {
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				if = {
+					limit = { NOT = { prosperity = 100 } }
+					add_prosperity = 50
+				}
+				add_base_tax = 1
+			}
+			if = {
+				limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+				add_base_tax = 2
 			}
 		}
 	}
@@ -708,308 +705,387 @@ province_event = {
 
 # Field Marshal Dishonored
 country_event = {
-	id = 11106
-	title = "EVTNAME11106"
-	desc = "EVTDESC11106"
-	picture = ECONOMY_eventPicture
+	id = china_events.14
+	title = "china_events.14.t"
+	desc = "china_events.14.d"
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = bureaucrats
+		OR = {
+			faction_in_power = temples
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+			has_country_modifier = lost_mandate_of_heaven
+		}
+		any_owned_province = {
+			fort_level = 2
+		}
+		has_leaders = {
+			value = 1
+			type = general
+			include_monarch = no
+			include_heir = no
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					fort_level = 2
+				}
+				save_event_target_as = corrupt_fort
+				set_province_flag = corrupt_fort_flag
+			}
+			random_owned_province = {
+				limit = {
+					fort_level = 2
+					NOT = { has_province_flag = corrupt_fort_flag }
+				}
+				save_event_target_as = corrupt_fort2
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			army_tradition = 10
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.14.a"
+		event_target:corrupt_fort = {
+			add_province_modifier = {
+				name = "chi_forts_underfunded"
+				duration = 3650
+			}
+			clr_province_flag = corrupt_fort_flag
 		}
-		modifier = {
-			factor = 0.9
-			army_tradition = 20
+		event_target:corrupt_fort2 = {
+			add_province_modifier = {
+				name = "chi_forts_underfunded"
+				duration = 3650
+			}
 		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
-		modifier = {
-			factor = 1.5
-			stability = 2
+		reduce_temples_effect = yes
+		kill_leader = {
+			type = general
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11106"
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -10
-		}
-		add_army_tradition = -5
-		add_war_exhaustion = 4
-	}
-	
-	option = {
-		name = "EVTOPTB11106"
-		add_army_tradition = 5
-		add_years_of_income = -0.1
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -2
+		name = "china_events.14.b"
+		boost_temples_effect = yes
+		reduce_mandate_effect = yes
+		add_mil_power = -50
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+					has_country_modifier = lost_mandate_of_heaven
+				}
+			}
+			add_legitimacy = -5
 		}
 	}
 }
 
 # Heir Controlled
 country_event = {
-	id = 11108
-	title = "EVTNAME11108"
-	desc = "EVTDESC11108"
+	id = china_events.15
+	title = "china_events.15.t"
+	desc = "china_events.15.d"
 	picture = DEBATE_REPUBLICAN_eventPicture
 	
 	trigger = {
-		faction_in_power = bureaucrats
+		government = celestial_empire
 		has_heir = yes
 		heir_age = 15
 	}
 	
+	is_triggered_only = yes
+	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			NOT = {
-				legitimacy = 80
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				legitimacy = 70
-			}
-		}
-		modifier = {
-			factor = 0.6
-			NOT = {
-				heir_claim = 70
-			}
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11108"
-		add_heir_claim = 10
-		add_legitimacy = 5
-		add_prestige = 5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
-		}
+		name = "china_events.15.a"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		boost_bureaucrats_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11108"
-		add_heir_claim = -10
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -5
+		name = "china_events.15.b"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		boost_temples_effect = yes
+	}
+	
+	option = {
+		name = "china_events.15.c"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		boost_temples_effect = yes
+	}
+	option = {
+		name = "china_events.15.e"
+		trigger = { has_dlc = "Mandate of Heaven" }
+		add_mandate_effect = yes
+	}
+	option = {
+		name = "china_events.15.f"
+		trigger = { has_dlc = "Mandate of Heaven" }
+		reduce_mandate_effect = yes
+		random_list = {
+			50 = { }
+			25 = { change_heir_dip = 1 }
+			25 = { change_heir_adm = 1 }
 		}
 	}
 }
 
-# Confucian Wisdom
+# 'When the people have enough, how can the ruler alone have too little?'
+# Based on Wang Ao's 8-legged essay.
 country_event = {
-	id = 11110
-	title = "EVTNAME11110"
-	desc = "EVTDESC11110"
-	picture = INVENTION_eventPicture
+	id = china_events.16
+	title = "china_events.16.t"
+	desc = "china_events.16.d"
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = bureaucrats
+		NOT = { has_country_modifier = chi_efficient_taxation }
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				meritocracy = 70
+			}
+		}
+		stability = 1
+		any_owned_province = {
+			is_state = yes
+			NOT = { devastation = 1 }
+			NOT = { has_province_modifier = chi_lowered_taxes_in_state }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_state = yes
+					NOT = { devastation = 1 }
+					NOT = { has_province_modifier = chi_lowered_taxes_in_state }
+				}
+				save_event_target_as = prosperity_boost_here
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			stability = 1
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.16.a"
+		boost_bureaucrats_effect = yes
+		if = {
+			limit = { has_dlc = "Mandate of Heaven" }
+			event_target:prosperity_boost_here = {
+				if = {
+					limit = { NOT = { prosperity = 100 } }
+					add_prosperity = 25
+				}
+				area = {
+					add_province_modifier = {
+						name = "chi_lowered_taxes_in_state"
+						duration = 1825
+					}
+				}
+			}
 		}
-		modifier = {
-			factor = 0.9
-			stability = 3
-		}
-		modifier = {
-			factor = 0.9
-			has_idea = patron_of_art
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_stability_or_adm_power = yes
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11110"
-		add_prestige = 5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 5
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11110"
-		add_adm_power = 25
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
+		name = "china_events.16.b"
+		reduce_bureaucrats_effect = yes
+		reduce_meritocracy_effect = yes
+		add_country_modifier = {
+			name = "chi_efficient_taxation"
+			duration = 3650
 		}
 	}
 }
 
 #Literati Publishes
 country_event = {
-	id = 11112
-	title = "EVTNAME11112"
-	desc = "EVTDESC11112"
-	picture = ECONOMY_eventPicture
+	id = china_events.17
+	title = "china_events.17.t"
+	desc = "china_events.17.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = bureaucrats
-	}
-	
-	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			stability = 1
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
 			}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTA11112"
-		add_prestige = 10
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 5
-		}
+	mean_time_to_happen = {
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTB11112"
-		add_prestige = -5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -5
-		}
+		name = "china_events.17.a"
+		add_meritocracy_effect = yes
+		boost_bureaucrats_effect = yes
+	}
+	
+	option = {
+		name = "china_events.17.b"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		reduce_bureaucrats_effect = yes
 	}
 }
 
 # Retainer Flogged
 country_event = {
-	id = 11114
-	title = "EVTNAME11114"
-	desc = "EVTDESC11114"
-	picture = DEBATE_REPUBLICAN_eventPicture
+	id = china_events.18
+	title = "china_events.18.t"
+	desc = "china_events.18.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = bureaucrats
-	}
-	
-	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
 			}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTA11114"
-		add_adm_power = 20
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 5
-		}
+	mean_time_to_happen = {
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTB11114"
-		add_adm_power = -20
-		add_legitimacy = 5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -5
-		}
+		name = "china_events.18.a"
+		boost_bureaucrats_effect = yes
+		reduce_mandate_effect = yes
+	}
+	
+	option = {
+		name = "china_events.18.b"
+		reduce_bureaucrats_effect = yes
+		reduce_meritocracy_large_effect = yes
 	}
 }
 
 # Drama on The Pearl River
 country_event = {
-	id = 11116
-	title = "EVTNAME11116"
-	desc = "EVTDESC11116"
+	id = china_events.19
+	title = "china_events.19.t"
 	picture = NAVAL_MILITARY_eventPicture
 	
+	is_triggered_only = yes
+	
+	desc = {
+		trigger = {
+			any_owned_province = {
+				OR = {
+					area = west_guangdong_area
+					area = guangdong_area
+					area = guangxi_area
+				}
+			}
+		}
+		desc = "china_events.19.d"
+	}
+	
+	desc = {
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					OR = {
+						area = west_guangdong_area
+						area = guangdong_area
+						area = guangxi_area
+					}
+				}
+			}
+		}
+		desc = "china_events.19.da"
+	}
+	
 	trigger = {
-		faction_in_power = bureaucrats
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				stability = -1
-			}
-		}
-		
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11116"
+		name = "china_events.19.a"
 		add_years_of_income = -0.5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -5
-		}
 	}
 	
 	option = {
-		name = "EVTOPTB11116"
-		add_stability = -1
-		add_prestige = 5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -5
+		name = "china_events.19.b"
+		reduce_mandate_large_effect = yes
+		if = {
+			limit = {
+				NOT = { 
+					has_dlc = "Mandate of Heaven"
+				}
+			}
+			add_stability = -1
+			add_legitimacy = -5
 		}
 	}
 }
 
 # Gold Mine Discovered
 country_event = {
-	id = 11118
-	title = "EVTNAME11118"
-	desc = "EVTDESC11118"
+	id = china_events.20
+	title = "china_events.20.t"
+	desc = "china_events.20.d"
 	picture = ECONOMY_eventPicture
 	
+	is_triggered_only = yes
+	
 	trigger = {
-		faction_in_power = bureaucrats
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				meritocracy = 70
+			}
+		}
 		NOT = { gold = 2 }
 		any_owned_province = {
 			NOT = { trade_goods = gold }
@@ -1019,25 +1095,11 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
-		modifier = {
-			factor = 0.9
-			stability = 2
-		}
-		modifier = {
-			factor = 0.9
-			stability = 3
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				stability = 0
-			}
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11118"
+		name = "china_events.20.a"
 		random_owned_province = {
 			limit = {
 				NOT = { trade_goods = gold }
@@ -1046,753 +1108,715 @@ country_event = {
 			}
 			change_trade_goods = gold
 		}
-		add_inflation = 3
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 5
-		}
+		boost_bureaucrats_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11118"
-		add_inflation = -2
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -5
-		}
+		name = "china_events.20.b"
+		add_inflation = -5
+		add_mandate_effect = yes
+		reduce_bureaucrats_effect = yes
 	}
 }
 
 # Bullion Leaves The Country
+
 country_event = {
-	id = 11120
-	title = "EVTNAME11120"
-	desc = "EVTDESC11120"
+	id = china_events.21
+	title = "china_events.21.t"
+	desc = "china_events.21.d"
 	picture = ECONOMY_eventPicture
 	
+	is_triggered_only = yes
+	
 	trigger = {
-		faction_in_power = bureaucrats
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 400
-		modifier = {
-			factor = 0.9
-			inflation = 10
-		}
-		modifier = {
-			factor = 0.9
-			inflation = 15
-		}
-		modifier = {
-			factor = 0.9
-			inflation = 20
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				inflation = 5
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.21.a" #Let local officials take the blame
+		reduce_eunuchs_effect = yes
+		boost_bureaucrats_effect = yes
+		reduce_mandate_effect = yes
+		if = {
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
 			}
-		}
-		modifier = {
-			factor = 1.5
-			has_idea = national_bank
+			add_inflation = 2
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11120"
+		name = "china_events.21.b" #Import more Bullion
+		boost_bureaucrats_effect = yes
+		reduce_eunuchs_effect = yes
 		add_years_of_income = -0.5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -3
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11120"
-		add_inflation = 1
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -1
-		}
 	}
 }
 
 # Renovating a Pagoda
 country_event = {
-	id = 11122
-	title = "EVTNAME11122"
-	desc = "EVTDESC11122"
+	id = china_events.22
+	title = "china_events.22.t"
+	desc = "china_events.22.d"
 	picture = FORT_eventPicture
 	
-	trigger = {
-		faction_in_power = bureaucrats
-	}
-	
-	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			has_idea = patron_of_art
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				prestige = 2
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA11122"
-		add_years_of_income = -0.6
-		add_prestige = 6
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 5
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11122"
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -5
-		}
-		add_prestige = -4
-	}
-}
-
-### Temple Faction ###
-
-# Outbreak of Buddhism
-province_event = {
-	id = 11200
-	title = "EVTNAME11200"
-	desc = "EVTDESC11200"
-	picture = BUDDHA_eventPicture
+	is_triggered_only = yes
 	
 	trigger = {
-		owner = {
-			faction_in_power = temples
-		}
-		base_tax = 5
-		base_manpower = 5
-		religion = confucianism
-		is_reformation_center = no
-	}
-	
-	mean_time_to_happen = {
-		months = 2500
-		modifier = {
-			factor = 0.8
-			unrest = 5
-		}
-		modifier = {
-			factor = 0.8
-			unrest = 7
-		}
-		modifier = {
-			factor = 0.9
-			unrest = 9
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				stability = 1
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
 			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				stability = 2
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA11200"
-		change_religion = mahayana
-		add_base_tax = 1
-		owner = {
-			add_prestige = 5
-			add_faction_influence = {
-				faction = temples
-				influence = -3
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11200"
-		add_base_tax = -2
-		add_base_manpower = -2
-		owner = {
-			add_faction_influence = {
-				faction = temples
-				influence = -1
-			}
-		}
-	}
-}
-
-# Crack down on heresy
-province_event = {
-	id = 11202
-	title = "EVTNAME11202"
-	desc = "EVTDESC11202"
-	picture = RELIGION_eventPicture
-	
-	trigger = {
-		is_core = ROOT
-		NOT = {
-			religion = confucianism
-		}
-		is_reformation_center = no
-		owner = {
-			faction_in_power = temples
-			religion = confucianism
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 2500
-		modifier = {
-			factor = 1.2
-			unrest = 5
-		}
-		modifier = {
-			factor = 1.2
-			unrest = 7
-		}
-		modifier = {
-			factor = 0.8
-			owner = {
-				stability = 1
-			}
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11202"
-		change_religion = confucianism
-		owner = {
-			add_faction_influence = {
-				faction = temples
-				influence = 3
-			}
-		}
+		name = "china_events.22.a"
+		add_years_of_income = -0.5
+		add_mandate_effect = yes
+		boost_bureaucrats_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11202"
-		owner = {
-			add_prestige = 5
-			add_faction_influence = {
-				faction = temples
-				influence = -5
-			}
-		}
+		name = "china_events.22.b"
+		add_prestige = -5
+		reduce_bureaucrats_effect = yes
 	}
 }
 
-# Temple Faction Diplomacy
+# Frontier Hero
 country_event = {
-	id = 11204
-	title = "EVTNAME11204"
-	desc = "EVTDESC11204"
+	id = china_events.23
+	title = "china_events.23.t"
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			faction_in_power = temples
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				imperial_mandate = 80
+			}
+		}
+		has_leaders = {
+			value = 1
+			type = general
+			include_monarch = no
+			include_heir = no
+		}
+	}
+	
+	desc = {
+		trigger = {
+			any_owned_province = {
+				has_province_modifier = domain_of_spouses_family #Ie, has both RoM and spouse
+			}
+		}
+		desc = china_events.23.d
+	}
+	
+	desc = {
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = domain_of_spouses_family
+				}
+			}
+		}
+		desc = china_events.23.da
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.23.a" #Charge with Corruption
+		boost_bureaucrats_effect = yes
+		add_corruption = 1
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = domain_of_spouses_family
+				}
+			}
+			add_province_modifier = {
+				name = "chi_upset_local_nobles"
+				duration = 3650
+			}
+		}
+		kill_leader = {
+			type = general
+		}
+	}
+	
+	option = {
+		name = "china_events.23.b" #Distance ourselves and end his carreer
+		reduce_temples_effect = yes
+		reduce_mandate_effect = yes
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = domain_of_spouses_family
+				}
+			}
+			remove_consort = yes
+			random_owned_province = {
+				limit = {
+					has_province_modifier = domain_of_spouses_family
+				}
+				remove_province_modifier = domain_of_spouses_family
+				area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "chi_upset_local_nobles"
+						duration = 3650
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_owned_province = {
+						has_province_modifier = domain_of_spouses_family
+					}
+				}
+			}
+			random_owned_area = {
+				limit = {
+					is_capital = no
+					is_state = yes
+				}
+				add_province_modifier = {
+					name = "chi_upset_local_nobles"
+					duration = 3650
+				}
+			}
+		}
+		kill_leader = {
+			type = general
+		}
+	}
+	
+	option = {
+		name = "china_events.23.c" #We can't touch him
+		boost_temples_effect = yes
+		reduce_mandate_large_effect = yes
+		if = {
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_legitimacy = -10
+		}
+	}
+}
+
+# Students by Purchase
+country_event = {
+	id = china_events.24
+	title = "china_events.24.t"
+	desc = "china_events.24.d"
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.24.a"
+		reduce_bureaucrats_effect = yes
+		reduce_meritocracy_effect = yes
+		add_years_of_income = 0.25
+	}
+	
+	option = {
+		name = "china_events.24.b"
+		boost_bureaucrats_effect = yes
+		add_prestige = 5
+	}
+}
+
+# Faction Diplomacy
+country_event = {
+	id = china_events.25
+	title = "china_events.25.t"
+	desc = "china_events.25.d"
 	picture = DIPLOMACY_eventPicture
 	
+	is_triggered_only = yes
+	
 	trigger = {
-		faction_in_power = bureaucrats
+		government = celestial_empire
 		any_known_country = {
-			NOT = {
-				has_opinion = { who = ROOT value = 100 }
+			any_owned_province = {
+				range = ROOT
+			}
+			NOT = { is_subject_of = ROOT }
+			any_active_trade_node = {
+				has_merchant = ROOT
 			}
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 500
+		days = 1
 	}
 	
-	option = {
-		name = "EVTOPTA11204"
-		random_country = {
-			limit = {
-				is_neighbor_of = ROOT
+	immediate = {
+		hidden_effect = {
+			random_known_country = {
+				limit = {
+					NOT = { is_subject_of = ROOT }
+				}
+				save_event_target_as = country_of_interest
 			}
-			add_opinion = { who = ROOT modifier = opinion_left_in_peace }
-		}
-		add_faction_influence = {
-			faction = temples
-			influence = -5
 		}
 	}
 	
 	option = {
-		name = "EVTOPTB11204"
-		random_country = {
-			limit = {
-				is_neighbor_of = ROOT
+		name = "china_events.25.a"
+		event_target:country_of_interest = {
+			add_opinion = {
+				who = ROOT
+				modifier = chi_trade_opportunity
 			}
+		}
+		boost_eunuchs_large_effect = yes
+	}
+	
+	option = {
+		name = "china_events.25.b"
+		event_target:country_of_interest = {
 			reverse_add_casus_belli = {
 				target = ROOT
-				type = cb_insult
-				months = 24
+				type = cb_trade_war_triggered
+				months = 36
 			}
 		}
-		add_mil_power = 20
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
+		boost_temples_large_effect = yes
 	}
 }
 
-# A Flair For Feet
+# The Favor of X
 country_event = {
-	id = 11206
-	title = "EVTNAME11206"
-	desc = "EVTDESC11206"
-	picture = ANGRY_MOB_eventPicture
+	id = china_events.26
+	title = "china_events.26.t"
+	desc = "china_events.26.d"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = temples
+		OR = {
+			government = celestial_empire
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 350
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.26.a"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		boost_eunuchs_effect = yes
+		if = {
+			limit = {
+				has_dlc = "Rights of Man"
+				has_consort = no
+			}
+			define_consort = {
+				country_of_origin = ROOT
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11206"
-		add_prestige = 10
-		random_owned_province = {
-			create_revolt = 3
-		}
-		random_owned_province = {
-			create_revolt = 2
-		}
-		add_faction_influence = {
-			faction = temples
-			influence = 4
+		name = "china_events.26.b"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		boost_temples_effect = yes
+		if = {
+			limit = {
+				has_dlc = "Rights of Man"
+				has_consort = no
+			}
+			define_consort = {
+				country_of_origin = ROOT
+			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTB11206"
-		add_prestige = -5
-		add_faction_influence = {
-			faction = temples
-			influence = -5
+		name = "china_events.26.c"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		boost_bureaucrats_effect = yes
+		if = {
+			limit = {
+				has_dlc = "Rights of Man"
+				has_consort = no
+			}
+			define_consort = {
+				country_of_origin = ROOT
+			}
 		}
+	}
+	
+	option = {
+		name = "china_events.26.dd"
+		trigger = { has_dlc = "Mandate of Heaven" }
+		add_mandate_effect = yes
 	}
 }
 
 # Imperial Insults
 country_event = {
-	id = 11208
-	title = "EVTNAME11208"
-	desc = "EVTDESC11208"
-	picture = DEBATE_REPUBLICAN_eventPicture
+	id = china_events.27
+	title = "china_events.27.t"
+	desc = "china_events.27.d"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = temples
+		OR = {
+			faction_in_power = temples
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
+		any_known_country = {
+			NOT = { is_subject_of = ROOT }
+			num_of_cities = 20
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_known_country = {
+				limit = {
+					NOT = { is_subject_of = ROOT }
+					num_of_cities = 20
+				}
+				save_event_target_as = country_of_interest
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 250
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 1.7
-			stability = 0
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11208"
-		random_country = {
-			limit = {
-				is_neighbor_of = ROOT
+		name = "china_events.27.a"
+		add_years_of_income = 0.35
+		add_prestige = 5
+		boost_eunuchs_effect = yes
+		event_target:country_of_interest = {
+			add_opinion = {
+				who = ROOT
+				modifier = chi_trade_opportunity
 			}
-			add_opinion = { who = ROOT modifier = opinion_pleased_apology }
-		}
-		add_faction_influence = {
-			faction = temples
-			influence = -6
 		}
 	}
 	option = {
-		name = "EVTOPTB11208"
-		random_country = {
-			limit = {
-				is_neighbor_of = ROOT
+		name = "china_events.27.b"
+		add_mandate_effect = yes
+		boost_temples_effect = yes
+		event_target:country_of_interest = {
+			reverse_add_casus_belli = {
+				target = ROOT
+				type = cb_insult
+				months = 36
 			}
-			add_opinion = { who = ROOT modifier = opinion_displeased }
-		}
-		add_faction_influence = {
-			faction = temples
-			influence = -4
 		}
 	}
 }
 
 # Army Inspections
 country_event = {
-	id = 11210
-	title = "EVTNAME11210"
-	desc = "EVTDESC11210"
+	id = china_events.28
+	title = "china_events.28.t"
+	desc = "china_events.28.d"
 	picture = LAND_MILITARY_eventPicture
 	
+	is_triggered_only = yes
+	
 	trigger = {
-		faction_in_power = temples
+		OR = {
+			faction_in_power = temples
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			army_size_percentage = 0.6
-		}
-		modifier = {
-			factor = 0.9
-			army_size_percentage = 0.7
-		}
-		modifier = {
-			factor = 0.9
-			army_tradition = 2
-		}
-		modifier = {
-			factor = 1.5
-			is_at_war = no
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11210"
-		add_army_tradition = 5
-		add_mil_power = 20
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
+		name = "china_events.28.a"
+		add_army_tradition = 20
+		boost_temples_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11210"
-		add_army_tradition = -5
-		add_faction_influence = {
-			faction = temples
-			influence = -5
+		name = "china_events.28.b"
+		add_army_tradition = -20
+		add_mandate_effect = yes
+		reduce_temples_effect = yes
+		if = {
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_stability_or_adm_power = yes
+			add_legitimacy = 5
 		}
 	}
 }
 
-# Temple Conspiracy
+# Failures of the Examination System
 country_event = {
-	id = 11212
-	title = "EVTNAME11212"
-	desc = "EVTDESC11212"
-	picture = LIBERUM_VETO_eventPicture
+	id = china_events.29
+	title = "china_events.29.t"
+	desc = "china_events.29.d"
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = temples
-		stability = -1
+		OR = {
+			government = celestial_empire
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				imperial_mandate = 90
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 40
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 60
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 80
-			}
-		}
-		modifier = {
-			factor = 1.5
-			prestige = 2
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11212"
-		add_stability_or_adm_power = yes
-		add_prestige = 5
-		add_faction_influence = {
-			faction = temples
-			influence = 10
+		name = "china_events.29.a"
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_legitimacy = 10
+			add_prestige = 5
 		}
+		add_mandate_effect = yes
 	}
-	
 	option = {
-		name = "EVTOPTB11212"
-		add_stability = -1
-		add_country_modifier = {
-			name = innovative_modifier
-			duration = 3650
-		}
-		add_prestige = -5
-		add_legitimacy = -5
-		add_faction_influence = {
-			faction = temples
-			influence = -10
+		name = "china_events.29.b"
+		add_meritocracy_effect = yes
+		boost_bureaucrats_effect = yes
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "Mandate of Heaven"
+				}
+			}
+			add_adm_power = 75
 		}
 	}
 }
 
 # Examining the Examinations
 country_event = {
-	id = 11214
-	title = "EVTNAME11214"
-	desc = "EVTDESC11214"
-	picture = DEBATE_REPUBLICAN_eventPicture
+	id = china_events.30
+	title = "china_events.30.t"
+	desc = "china_events.30.d"
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = temples
+		OR = {
+			government = celestial_empire
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+		}
+		NOT = {
+			has_country_modifier = chi_renewing_the_examination_essay
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 550
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
-		modifier = {
-			factor = 1.5
-			prestige = 40
-		}		
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11214"
-		add_adm_power = 35
-		add_faction_influence = {
-			faction = temples
-			influence = -5
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11214"
+		name = "china_events.30.a"
+		custom_tooltip = china_events.30.a.tt
+		add_mandate_effect = yes
 		add_stability_or_adm_power = yes
-		add_country_modifier = {
-			name = narrowminded_modifier
-			duration = 3650
+	}
+	
+	option = {
+		name = "china_events.30.b"
+		custom_tooltip = china_events.30.b.tt
+		reduce_mandate_effect = yes
+		if = {
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_legitimacy = -10
 		}
-		add_faction_influence = {
-			faction = temples
-			influence = 6
+		add_country_modifier = {
+			name = "chi_renewing_the_examination_essay"
+			duration = 3650
 		}
 	}
 }
 
-# A Gift From the Temple
+# The fall of X
 country_event = {
-	id = 11216
-	title = "EVTNAME11216"
-	desc = "EVTDESC11216"
-	picture = BUDDHA_eventPicture
+	id = china_events.31
+	title = "china_events.31.t"
+	desc = "china_events.31.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
 	
-	trigger = {
-		faction_in_power = temples
-		stability = 0
-	}
+	is_triggered_only = yes
 	
-	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				prestige = 30
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				prestige = 10
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				prestige = 0
-			}
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
+	option = {
+		name = "china_events.31.a"
+		add_adm_power = -75
+		add_dip_power = -75
+		add_mil_power = -75
+		add_years_of_income = -0.5
+		add_meritocracy_effect = yes
+		add_mandate_large_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTA11216"
-		add_adm_power = 25
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
+		name = "china_events.31.b"
+		add_stability_or_adm_power = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11216"
-		add_country_modifier = {
-			name = innovative_modifier
-			duration = 3650
-		}
-		add_prestige = -5
+		name = "china_events.31.c"
+		reduce_mandate_large_effect = yes
 		add_stability = -2
-		add_faction_influence = {
-			faction = temples
-			influence = -4
-		}
+		add_years_of_income = 1.5
 	}
 }
 
 # Records of the Grand Historian
 country_event = {
-	id = 11218
-	title = "EVTNAME11218"
-	desc = "EVTDESC11218"
-	picture = ECONOMY_eventPicture
+	id = china_events.32
+	title = "china_events.32.t"
+	desc = "china_events.32.d"
+	picture = ADVISOR_eventPicture
+	
+	desc = {
+		trigger = { has_dlc = "Mandate of Heaven" }
+		desc = china_events.32.d
+	}
+	
+	desc = {
+		trigger = {
+			NOT = { has_dlc = "Mandate of Heaven" }
+		}
+		desc = china_events.32.da
+	}
 	
 	trigger = {
-		faction_in_power = temples
+		OR = {
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+			}
+			AND = {
+				has_country_modifier = the_mandate_of_heaven
+				NOT = { legitimacy = 80 }
+			}
+		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 70
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 60
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				prestige = 2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
-		modifier = {
-			factor = 1.5
-			stability = 3
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.32.a"
+		add_mandate_effect = yes
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_stability_or_adm_power = yes
+			add_legitimacy = 5
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11218"
-		add_army_tradition = 5
-		add_navy_tradition = 5
-		add_prestige = 5
-		add_years_of_income = -0.6
-		add_legitimacy = 5
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11218"
-		add_prestige = 5
-		add_faction_influence = {
-			faction = temples
-			influence = -1
-		}
+		name = "china_events.32.b"
+		trigger = { has_dlc = "Mandate of Heaven" }
+		add_mandate_large_effect = yes
+		reduce_meritocracy_effect = yes
+		add_years_of_income = -0.5
 	}
 }
 
 # A Tibetan Monk
 country_event = {
-	id = 11220
+	id = china_events.33
 	title = "EVTNAME11220"
 	desc = "EVTDESC11220"
 	picture = BUDDHA_eventPicture
 	
+	is_triggered_only = yes
+	
 	trigger = {
 		faction_in_power = temples
-		exists = TIB
+		always = no #TODo
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			has_opinion = { who = TIB value = 100 }
-		}
-		modifier = {
-			factor = 0.8
-			has_opinion = { who = TIB value = 150 }
-		}
-		modifier = {
-			factor = 0.8
-			has_opinion = { who = TIB value = 175 }
-		}
-		modifier = {
-			factor = 1.5
-			stability = 0
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
+		days = 1
 	}
 	
 	option = {
@@ -1829,123 +1853,120 @@ country_event = {
 	}
 }
 
-# Burning of Books
+# The Four Treasures
 country_event = {
-	id = 11222
-	title = "EVTNAME11222"
-	desc = "EVTDESC11222"
-	picture = REVOLUTION_eventPicture
+	id = china_events.34
+	title = "china_events.34.t"
+	desc = "china_events.34.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		faction_in_power = temples
-		NOT = {
-			stability = -1
+		government = celestial_empire
+		OR = {
+			employed_advisor = {
+				type = treasurer
+			}
+			employed_advisor = {
+				type = philosopher
+			}
+			employed_advisor = {
+				type = artist
+			}
+			employed_advisor = {
+				type = master_of_mint
+			}
+			employed_advisor = {
+				type = natural_scientist
+			}
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			innovativeness_ideas = 4
-		}
-		modifier = {
-			factor = 0.8
-			innovativeness_ideas = 6
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { innovativeness_ideas = 4 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { innovativeness_ideas = 3 }
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11222"
-		add_country_modifier = {
-			name = narrowminded_modifier
-			duration = 3650
+		name = "china_events.34.a"
+		if = {
+			limit = { advisor = treasurer }
+			kill_advisor = treasurer
 		}
-		add_stability_or_adm_power = yes
-		random_owned_province = {
-			create_revolt = 5
+		if = {
+			limit = { advisor = philosopher }
+			kill_advisor = philosopher
 		}
-		add_faction_influence = {
-			faction = temples
-			influence = 4
+		if = {
+			limit = { advisor = artist }
+			kill_advisor = artist
 		}
+		if = {
+			limit = { advisor = master_of_mint }
+			kill_advisor = master_of_mint
+		}
+		if = {
+			limit = { advisor = natural_scientist }
+			kill_advisor = natural_scientist
+		}
+		add_adm_power = -50
+		reduce_meritocracy_large_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11222"
-		add_stability = -1
-		add_prestige = 10
-		add_faction_influence = {
-			faction = temples
-			influence = -4
+		name = "china_events.34.b"
+		reduce_mandate_large_effect = yes
+		if = {
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_legitimacy = -10
 		}
 	}
+	
 }
 
-# Burying of Scholars
+# Protecting the Frontier
 country_event = {
-	id = 11224
-	title = "EVTNAME11224"
-	desc = "EVTDESC11224"
+	id = china_events.35
+	title = "china_events.35.t"
+	desc = "china_events.35.d"
 	picture = DEBATE_REPUBLICAN_eventPicture
 	
+	is_triggered_only = yes
+	
 	trigger = {
-		faction_in_power = temples
-		innovativeness_ideas = 5
+		government = celestial_empire
+		OR = {
+			AND = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+				faction_in_power = temples
+			}
+			imperial_mandate = 80
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			innovativeness_ideas = 4
-		}
-		modifier = {
-			factor = 0.8
-			innovativeness_ideas = 6
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
-		modifier = {
-			factor = 1.5
-			stability = 2
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11224"
-		add_country_modifier = {
-			name = narrowminded_modifier
-			duration = 3650
+		name = "china_events.35.a"
+		boost_temples_effect = yes
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_legitimacy = 5
 		}
-		add_prestige = -5
-		add_adm_power = -35
-		add_faction_influence = {
-			faction = temples
-			influence = -5
-		}
+		add_mandate_effect = yes
+		add_years_of_income = -0.1
 	}
 	
 	option = {
-		name = "EVTOPTB11224"
-		add_country_modifier = {
-			name = narrowminded_modifier
-			duration = 3650
-		}
-		add_stability = -1
-		add_faction_influence = {
-			faction = temples
-			influence = -8
+		name = "china_events.35.b"
+		add_mil_power = 40
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_legitimacy = -5
 		}
 	}
 }
@@ -1954,564 +1975,438 @@ country_event = {
 
 # Jin Era Statue
 country_event = {
-	id = 11226
-	title = "EVTNAME11226"
-	desc = "EVTDESC11226"
+	id = china_events.36
+	title = "china_events.36.t"
+	desc = "china_events.36.d"
 	picture = IMPORTANT_STATUE_eventPicture
 	
 	trigger = {
-		OR = {
-			faction_in_power = temples
-			faction_in_power = bureaucrats
-			faction_in_power = enuchs
-		}
+		government = celestial_empire
 	}
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
+		days = 1
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "china_events.36.a"
+		add_meritocracy_effect = yes
+		boost_bureaucrats_effect = yes
+		add_adm_power = 10
+	}
+	
+	option = {
+		name = "china_events.36.b"
+		add_prestige = 10
+		boost_eunuchs_effect = yes
+		if = {
+			limit = {
+				any_owned_province = { has_province_modifier = domain_of_spouses_family }
+			}
+			random_owned_province = {
+				limit = { has_province_modifier = domain_of_spouses_family }
+				add_base_tax = 1
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11226"
-		add_stability_or_adm_power = yes
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11226"
-		add_years_of_income = 0.2
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11226"
-		add_prestige = 10
+		name = "china_events.36.c"
 		add_army_tradition = 10
-		add_legitimacy = 10
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
-		}
+		boost_temples_effect = yes
 	}
 }
 
 # The Classic of Music
 country_event = {
-	id = 11228
-	title = "EVTNAME11228"
-	desc = "EVTDESC11228"
-	picture = ECONOMY_eventPicture
+	id = china_events.37
+	title = "china_events.37.t"
+	picture = UNIVERSITY_eventPicture
+	
+	desc = {
+		trigger = { 
+			NOT = { has_dlc = "Mandate of Heaven" }
+		}
+		desc = china_events.37.d
+	}
+	
+	desc = {
+		trigger = {
+			has_dlc = "Mandate of Heaven"
+		}
+		desc = china_events.37.da
+	}
 	
 	trigger = {
 		OR = {
-			faction_in_power = temples
-			faction_in_power = bureaucrats
-			faction_in_power = enuchs
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 650
-		modifier = {
-			factor = 0.8
-			stability = 2
-		}
-		modifier = {
-			factor = 0.8
-			legitimacy = 80
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				stability = 0
+			government = celestial_empire
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
 			}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTA11228"
-		add_faction_influence = {
-			faction = enuchs
-			influence = 5
-		}
-		add_faction_influence = {
-			faction = temples
-			influence = 3
-		}
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTB11228"
-		add_faction_influence = {
-			faction = enuchs
-			influence = 5
-		}
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 3
-		}
+		name = "china_events.37.a"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		boost_bureaucrats_effect = yes
+	}
+	
+	option = {
+		name = "china_events.37.b"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		boost_eunuchs_effect = yes
+	}
+	
+	option = {
+		name = "china_events.37.c"
+		trigger = { has_dlc = "Mandate of Heaven" }
+		add_mandate_effect = yes
 	}
 }
 
 # Cheating at Examinations
 country_event = {
-	id = 11230
-	title = "EVTNAME11230"
-	desc = "EVTDESC11230"
+	id = china_events.38
+	title = "china_events.38.t"
+	desc = "china_events.38.d"
 	picture = UNIVERSITY_eventPicture
 	
 	trigger = {
 		OR = {
-			faction_in_power = temples
-			faction_in_power = bureaucrats
-			faction_in_power = enuchs
+ 			has_country_modifier = the_mandate_of_heaven_lost
+			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 550
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 70
-			}
-		}
-		modifier = {
-			factor = 1.5
-			legitimacy = 90
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11230"
+		name = "china_events.38.a"
+		reduce_bureaucrats_effect = yes
+		reduce_meritocracy_large_effect = yes
 		add_adm_power = -20
-		add_prestige = -2
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -6
-		}
 	}
 	
 	option = {
-		name = "EVTOPTB11230"
-		add_army_tradition = -5
-		add_navy_tradition = -5
-		add_faction_influence = {
-			faction = enuchs
-			influence = -6
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11230"
+		name = "china_events.38.b"
 		add_prestige = -10
-		add_faction_influence = {
-			faction = temples
-			influence = -6
+		reduce_mandate_effect = yes
+		if = {
+			limit = { has_country_modifier = lost_mandate_of_heaven }
+			add_legitimacy = -5
 		}
 	}
 }
 
 # Withdrawing Excess Paper
 country_event = {
-	id = 11232
-	title = "EVTNAME11232"
-	desc = "EVTDESC11232"
+	id = china_events.39
+	title = "china_events.39.t"
+	desc = "china_events.39.d"
 	picture = ECONOMY_eventPicture
 	
 	trigger = {
-		OR = {
-			faction_in_power = temples
-			faction_in_power = bureaucrats
-			faction_in_power = enuchs
-		}
-		inflation = 10
+		government = celestial_empire
 	}
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 650
-		modifier = {
-			factor = 0.8
-			inflation = 15
-		}
-		modifier = {
-			factor = 0.8
-			inflation = 20
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				stability = 0
-			}
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11232"
-		add_inflation = -3
-		add_years_of_income = -1
-		add_stability = -1
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
-		}
+		name = "china_events.39.a"
+		add_inflation = 2
+		boost_eunuchs_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11232"
-		add_inflation = -2
-		add_years_of_income = -0.6
-		add_prestige = -5
-		add_adm_power = -20
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11232"
-		add_inflation = -1
-		add_years_of_income = -0.3
-		add_prestige = 5
-		add_legitimacy = 5
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
+		name = "china_events.39.b"
+		add_mandate_large_effect = yes
+		boost_bureaucrats_effect = yes
+		add_years_of_income = -0.5
 	}
 }
 
 # Honoring The Ancestors
 country_event = {
-	id = 11234
-	title = "EVTNAME11234"
-	desc = "EVTDESC11234"
+	id = china_events.40
+	title = "china_events.40.t"
+	desc = "china_events.40.d"
 	picture = COURT_eventPicture
 	
 	trigger = {
-		OR = {
-			faction_in_power = temples
-			faction_in_power = bureaucrats
-			faction_in_power = enuchs
-		}
+		government = celestial_empire
 		religion = confucianism
 	}
 	
+	is_triggered_only = yes
+	
 	mean_time_to_happen = {
-		months = 650
-		
-		modifier = {
-			factor = 0.8
-			stability = 1
-		}
-		modifier = {
-			factor = 0.7
-			stability = 2
-		}
-		modifier = {
-			factor = 0.6
-			stability = 3
-		}
-		modifier = {
-			factor = 1.5
-			war_exhaustion = 3
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				legitimacy = 80
-			}
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				prestige = 10
-			}
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11234"
-		add_stability_or_adm_power = yes
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
-		}
+		name = "china_events.40.a"
+		boost_temples_effect = yes
+		add_adm_power = -50
+		add_mil_power = 50
 	}
 	
 	option = {
-		name = "EVTOPTB11234"
-		add_prestige = 5
-		add_army_tradition = 5
-		add_navy_tradition = 5
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
+		name = "china_events.40.b"
+		boost_bureaucrats_effect = yes
+		add_dip_power = -50
+		add_adm_power = 50
 	}
 	
 	option = {
-		name = "EVTOPTC11234"
-		add_years_of_income = 0.2
-		add_inflation = -1
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
-		}
+		name = "china_events.40.c"
+		boost_eunuchs_effect = yes
+		add_mil_power = -50
+		add_legitimacy = 5
+		add_meritocracy_effect = yes
 	}
 }
 
 # Bad Feng Shui
 country_event = {
-	id = 11236
-	title = "EVTNAME11236"
-	desc = "EVTDESC11236"
+	id = china_events.41
+	title = "china_events.41.t"
+	desc = "china_events.41.d"
 	picture = FORT_eventPicture
 	
 	trigger = {
-		OR = {
-			faction_in_power = temples
-			faction_in_power = bureaucrats
-			faction_in_power = enuchs
-		}
+		government = celestial_empire
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			stability = 1
-		}
-		modifier = {
-			factor = 1.5
-			legitimacy = 80
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11236"
-		add_prestige = -2
-		add_legitimacy = -20
-		add_faction_influence = {
-			faction = temples
-			influence = -4
+		name = "china_events.41.a"
+		trigger = {
+			NOT = { has_dlc = "Mandate of Heaven" }
 		}
+		reduce_bureaucrats_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11236"
+		name = "china_events.41.b"
+		trigger = {
+			NOT = { has_dlc = "Mandate of Heaven" }
+		}
+		reduce_eunuchs_effect = yes
+	}
+	
+	option = {
+		name = "china_events.41.c"
+		trigger = {
+			NOT = { has_dlc = "Mandate of Heaven" }
+		}
+		reduce_temples_effect = yes
+	}
+	option = {
+		name = "china_events.41.dd"
+		trigger = {
+			has_dlc = "Mandate of Heaven"
+		}
+		reduce_mandate_effect = yes
+	}
+	option = {
+		name = "china_events.41.e"
+		trigger = {
+			has_dlc = "Mandate of Heaven"
+		}
+		reduce_meritocracy_large_effect = yes
 		add_years_of_income = -0.5
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11236"
-		add_stability = -1
-		add_faction_influence = {
-			faction = enuchs
-			influence = -4
-		}
 	}
 }
 
 # Court Bickering
 country_event = {
-	id = 11238
-	title = "EVTNAME11238"
-	desc = "EVTDESC11238"
-	picture = LIBERUM_VETO_eventPicture
+	id = china_events.42
+	title = "china_events.42.t"
+	desc = "china_events.42.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
 	
 	trigger = {
 		OR = {
 			faction_in_power = temples
 			faction_in_power = bureaucrats
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				government = celestial_empire
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 650
-		modifier = {
-			factor = 0.9
-			NOT = {
-				legitimacy = 70
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				prestige = 2
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 1
-			}
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.42.a"
+		reduce_temples_effect = yes
+		add_army_tradition = -10
+	}
+	
+	option = {
+		name = "china_events.42.b"
+		reduce_bureaucrats_effect = yes
+		reduce_meritocracy_effect = yes
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_adm_power = -25
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11238"
-		add_army_tradition = -3
-		add_faction_influence = {
-			faction = temples
-			influence = -5
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11238"
-		add_prestige = -3
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -5
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11238"
-		add_legitimacy = 1
+		name = "china_events.42.c"
+		trigger = { has_dlc = "Mandate of Heaven" }
+		reduce_meritocracy_effect = yes
+		add_army_tradition = -10
+		add_mandate_effect = yes
 	}
 }
 
-# Choosing a Tomb
+# Choosing a Capital
 country_event = {
-	id = 11240
-	title = "EVTNAME11240"
-	desc = "EVTDESC11240"
-	picture = DEATH_OF_HEIR_eventPicture
+	id = china_events.43
+	title = "china_events.43.t"
+	desc = "china_events.43.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
 	
 	trigger = {
 		OR = {
-			faction_in_power = temples
-			faction_in_power = bureaucrats
-			faction_in_power = enuchs
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				government = celestial_empire
+				NOT = { tag = MNG }
+			}
+			AND = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+				NOT = { tag = MNG }
+				culture_group = east_asian #Chinese
+			}
 		}
-		prestige = 30
-	}
-	
-	mean_time_to_happen = {
-		months = 700
-		modifier = {
-			factor = 0.8
-			stability = 2
-		}
-		modifier = {
-			factor = 0.8
-			stability = 3
-		}
-		modifier = {
-			factor = 0.8
-			prestige = 50
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { stability = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { stability = 0 }
+		NOT = { tag = YUA }
+		NOT = { has_country_flag = eoc_capital_picked }
+		calc_true_if = {
+			owns_core_province = 1816
+			owns_core_province = 1821
+			owns_core_province = 700
+			owns_core_province = 1836
+			amount = 2
 		}
 	}
 	
 	immediate = {
 		hidden_effect = {
-			add_ruler_modifier = {
-				name = choosing_a_tomb_timer
-				hidden = yes
-			}
+			set_country_flag = eoc_capital_picked
 		}
 	}
 	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
 	option = {
-		name = "EVTOPTA11240"
-		if = {
-			limit = { is_lesser_in_union = no }
-			add_legitimacy = 20
+		name = "china_events.43.a" #Beijing
+		trigger = {
+			owns_core_province = 1816
 		}
-		add_adm_power = 45
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
+		set_capital = 1816
+		1816 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		add_mandate_effect = yes
+	}
+	option = {
+		name = "china_events.43.b" #Nanjing
+		trigger = {
+			owns_core_province = 1821
+		}
+		set_capital = 1821
+		1821 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		add_mandate_effect = yes
+	}
+	option = {
+		name = "china_events.43.c" #Chang'an
+		trigger = {
+			owns_core_province = 700
+		}
+		set_capital = 700
+		add_mandate_effect = yes
+		700 = {
+			change_province_name = "Chang'an"
+			rename_capital = "Chang'an"
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
 		}
 	}
 	option = {
-		name = "EVTOPTB11240"
-		if = {
-			limit = { is_lesser_in_union = no }
-			add_legitimacy = 20
+		name = "china_events.43.e" #Luoyang
+		trigger = {
+			owns_core_province = 1836
 		}
-		add_mil_power = 45
-		add_faction_influence = {
-			faction = temples
-			influence = 4
+		set_capital = 1836
+		1836 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
 		}
+		add_mandate_effect = yes
 	}
 	option = {
-		name = "EVTOPTC11240"
-		add_legitimacy = 20
-		add_dip_power = 45
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
-		}
+		name = "china_events.43.f" #Remain in our Ancestral Seat
+		add_prestige = 10
 	}
 }
 
 # The Gilded Pagoda
 country_event = {
-	id = 11242
+	id = china_events.44
 	title = "EVTNAME11242"
 	desc = "EVTDESC11242"
 	picture = FORT_eventPicture
 	
 	trigger = {
+		always = no #Todo
 		OR = {
 			faction_in_power = temples
 			faction_in_power = bureaucrats
@@ -2519,38 +2414,10 @@ country_event = {
 		}
 	}
 	
+	is_triggered_only = yes
+	
 	mean_time_to_happen = {
-		months = 550
-		modifier = {
-			factor = 0.8
-			stability = 1
-		}
-		modifier = {
-			factor = 0.8
-			stability = 2
-		}
-		modifier = {
-			factor = 0.9
-			prestige = 2
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				legitimacy = 60
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				stability = 2
-			}
-		}
+		days = 1
 	}
 	
 	option = {
@@ -2587,537 +2454,426 @@ country_event = {
 
 ### Events When Having Lost The Mandate of Heaven ###
 
-# The Shadow that Stalks the Corridor
+# Millenarianism / White Lotus Society
 country_event = {
-	id = 11300
-	title = "EVTNAME11300"
-	desc = "EVTDESC11300"
-	picture = ASSASSINATION_eventPicture
+	id = china_events.45
+	title = "china_events.45.t"
+	desc = "china_events.45.d"
+	picture = ANGRY_MOB_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
 		}
-		is_lesser_in_union = no
+		num_of_states = 2
 	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_area = {
+				limit = {
+					is_state = yes
+					NOT = { has_province_modifier = chinese_millenarianism_area }
+				}
+				set_province_flag = chinese_millenarianism
+			}
+		}
+	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.9
-			NOT = {
-				legitimacy = 70
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.45.a"
+		random_owned_area = {
+			limit = { has_province_flag = chinese_millenarianism }
+			clr_province_flag = chinese_millenarianism
+			add_province_modifier = {
+				name = "chinese_millenarianism_area"
+				duration = 3650
 			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 60
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			prestige = 2
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11300"
-		random_list = {
-			25 = {
-				kill_ruler = yes
-				add_stability = -1
-			}
-			50 = {
-				add_legitimacy = -15
-			}
-			25 = {
-				add_legitimacy = -20
-			}
+		name = "china_events.45.b"
+		every_province = { #Just to be Sure
+			limit = { has_province_flag = chinese_millenarianism }
+			clr_province_flag = chinese_millenarianism
 		}
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11300"
-		random_list = {
-			40 = {
-				kill_ruler = yes
-				add_stability = -1
-			}
-			60 = {
-				add_stability_or_adm_power = yes
-			}
-		}
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11300"
-		random_list = {
-			50 = {
-				kill_ruler = yes
-			}
-			50 = {
-				add_stability = 2
-				add_legitimacy = 20
-			}
-		}
+		add_adm_power = -50
+		add_mil_power = -50
 	}
 }
 
-# Bureaucrat Swindles the Treasury
+# Major River Floods
 country_event = {
-	id = 11302
-	title = "EVTNAME11302"
-	desc = "EVTDESC11302"
-	picture = ECONOMY_eventPicture
+	id = china_events.46
+	title = "china_events.46.t"
+	desc = "china_events.46.d"
+	picture = BAD_WITH_MONARCH_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 550
-		modifier = {
-			factor = 0.8
-			inflation = 5
-		}
-		modifier = {
-			factor = 0.8
-			inflation = 10
-		}
-		modifier = {
-			factor = 0.8
-			inflation = 15
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11302"
-		add_stability_or_adm_power = yes
-		add_years_of_income = -0.4
-		add_inflation = 3
-		add_faction_influence = {
-			faction = enuchs
-			influence = 3
-		}
+		name = "china_events.46.a"
+		add_years_of_income = -0.5
 	}
-
 	option = {
-		name = "EVTOPTB11302"
-		add_years_of_income = -0.2
-		add_inflation = 2
+		name = "china_events.46.b"
 		if = {
-			limit = { is_lesser_in_union = no }
-			add_legitimacy = 15
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_legitimacy = -10
 		}
-		add_faction_influence = {
-			faction = temples
-			influence = 3
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11302"
-		add_stability = -1
-		if = {
-			limit = { is_lesser_in_union = no }
-			add_legitimacy = -5
-		}
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 6
-		}
+		reduce_mandate_effect = yes
 	}
 }
 
 # Brigands on the Silk Road
 country_event = {
-	id = 11304
-	title = "EVTNAME11304"
-	desc = "EVTDESC11304"
+	id = china_events.47
+	title = "china_events.47.t"
+	desc = "china_events.47.d"
 	picture = ANGRY_MOB_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 21 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 10
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 20
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11304"
-		add_manpower = -2
-		add_war_exhaustion = 6
-		add_faction_influence = {
-			faction = enuchs
-			influence = 5
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11304"
+		name = "china_events.47.a"
 		add_country_modifier = {
-			name = "decentralization_modifier"
+			name = "chi_military_protecting_traders"
 			duration = 3650
 		}
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 5
-		}
 	}
 	
 	option = {
-		name = "EVTOPTC11304"
-		add_stability = -1
-		add_faction_influence = {
-			faction = temples
-			influence = 5
+		name = "china_events.47.b"
+		add_country_modifier = {
+			name = "chi_no_law_and_order"
+			duration = 3650
 		}
 	}
 }
 
-# Reputation for Cruelty
+# The Shadow that Stalks the Corridor (Ruler is growing Paranoid)
 country_event = {
-	id = 11306
-	title = "EVTNAME11306"
-	desc = "EVTDESC11306"
+	id = china_events.48
+	title = "china_events.48.t"
+	desc = "china_events.48.d"
 	picture = COURT_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 470
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 70
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 60
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				prestige = 2
-			}
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11306"
-		add_stability_or_adm_power = yes
-		add_dip_power = 20
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
+		name = "china_events.48.a" #Paranoia!
+		ai_chance = {
+			factor = 80
 		}
+		add_stability = -1
+		reduce_meritocracy_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11306"
-		add_adm_power = 20
+		name = "china_events.48.b" #Trust in those that want you dead.
+		ai_chance = {
+			factor = 20
+		}
+		reduce_mandate_effect = yes
+		boost_bureaucrats_effect = yes
 		if = {
-			limit = { is_lesser_in_union = no }
-			add_legitimacy = 30
-		}
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
+			limit = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+			}
+			add_legitimacy = -5
 		}
 	}
 }
 
 # Portentous Solar Eclipse
 country_event = {
-	id = 11308
-	title = "EVTNAME11308"
-	desc = "EVTDESC11308"
-	picture = COMET_SIGHTED_eventPicture
+	id = china_events.49
+	title = "china_events.49.t"
+	desc = "china_events.49.d"
+	picture = BAD_WITH_MONARCH_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
 		}
 	}
 	
+	is_triggered_only = yes
+	
 	mean_time_to_happen = {
-		months = 650
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 1.5
-			legitimacy = 80
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11308"
+		name = "china_events.49.a"
+		reduce_meritocracy_large_effect = yes
+		reduce_bureaucrats_effect = yes
 		add_stability = -1
-		add_faction_influence = {
-			faction = temples
-			influence = -3
-		}
 	}
 	
 	option = {
-		name = "EVTOPTB11308"
-		add_inflation = 4
-		add_faction_influence = {
-			faction = enuchs
-			influence = -3
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11308"
-		add_adm_power = -20
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -3
-		}
-	}
-}
-
-# Buddhist Resurgence
-country_event = {
-	id = 11310
-	title = "EVTNAME11310"
-	desc = "EVTDESC11310"
-	picture = BUDDHA_eventPicture
-	
-	trigger = {
-		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
-			has_country_modifier = the_mandate_of_heaven_lost_SE
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 250
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 80
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA11310"
-		random_owned_province = {
-			limit = {
-				NOT = {
-					religion = mahayana
-				}
-				is_reformation_center = no
-			}
-			change_religion = mahayana
-		}
-		random_owned_province = {
-			limit = {
-				NOT = {
-					religion = mahayana
-				}
-			}
-			change_religion = mahayana
-		}
-		add_faction_influence = {
-			faction = temples
-			influence = -4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11310"
-		add_stability = -1
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -4
-		}
-	}
-}
-
-# Temple Desecrated
-country_event = {
-	id = 11312
-	title = "EVTNAME11312"
-	desc = "EVTDESC11312"
-	picture = ST_PETERS_CHURCH_eventPicture
-	
-	trigger = {
-		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
-			has_country_modifier = the_mandate_of_heaven_lost_SE
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 450
-	}
-	
-	option = {
-		name = "EVTOPTA11312"
-		add_years_of_income = -0.4
-		add_faction_influence = {
-			faction = temples
-			influence = 3
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11312"
+		name = "china_events.49.b"
+		reduce_mandate_effect = yes
 		if = {
-			limit = { is_lesser_in_union = no }
+			limit = {
+				OR = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+					has_country_modifier = lost_mandate_of_heaven
+				}
+			}
 			add_legitimacy = -10
 		}
-		random_owned_province = {
-			limit = {
-				NOT = {
-					religion = mahayana
-				}
-				is_reformation_center = no
+	}
+}
+
+# Disloyal Officials
+country_event = {
+	id = china_events.50
+	title = "china_events.50.t"
+	desc = "china_events.50.d"
+	picture = ADVISOR_eventPicture
+	
+	trigger = {
+		OR = {
+ 			has_country_modifier = the_mandate_of_heaven_lost
+			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 21 }
 			}
-			change_religion = mahayana
 		}
-		add_faction_influence = {
-			faction = enuchs
-			influence = 3
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.50.a"
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			add_stability = -1
+		}
+		add_country_modifier = {
+			name = "chi_purging_officials"
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = "china_events.50.b"
+		reduce_mandate_effect = yes
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+					has_country_modifier = lost_mandate_of_heaven
+				}
+			}
+			add_legitimacy = -10
+		}
+	}
+}
+
+# Disloyal Vassals
+country_event = {
+	id = china_events.51
+	title = "china_events.51.t"
+	desc = "china_events.51.d"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		OR = {
+ 			has_country_modifier = the_mandate_of_heaven_lost
+			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 21 }
+			}
+		}
+		num_of_subjects = 1
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				save_event_target_as = unruly_subject
+			}
+		}
+	}
+	
+	option = {
+		name = "china_events.51.a"
+		every_subject_country = {
+			country_event = { id = china_events.62 }
+			add_opinion = {
+				who = ROOT
+				modifier = chi_low_mandate_subjects
+			}
+			add_liberty_desire = 20
 		}
 	}
 }
 
 # Plague Strikes the Court
 country_event = {
-	id = 11314
-	title = "EVTNAME11314"
-	desc = "EVTDESC11314"
+	id = china_events.52
+	title = "china_events.52.t"
+	desc = "china_events.52.d"
 	picture = PLAGUE_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
+		}
+		capital_scope = {
+			NOT = { has_province_modifier = severe_plague_local }
 		}
 	}
 	
+	is_triggered_only = yes
+	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 70
-			}
-		}
-		modifier = {
-			factor = 1.5
-			prestige = 2
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11314"
-		add_prestige = -10
-		add_legitimacy = -10
-		random_list = {
-			5 = {
-				kill_ruler = yes
-				add_stability = -1
+		name = "china_events.52.a"
+		reduce_mandate_large_effect = yes
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+					has_country_modifier = lost_mandate_of_heaven
+				}
 			}
-			95 = {
-				random_owned_province = {
-					add_base_tax = 1
+			add_adm_power = -35
+			add_dip_power = -35
+			add_mil_power = -35
+		}
+		capital_scope = {
+			area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = "severe_plague_local"
+					duration = 3650
 				}
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTB11314"
-		random_list = {
-			30 = {
-				kill_ruler = yes
-				add_stability = -1
+		name = "china_events.52.b"
+		reduce_mandate_effect = yes
+		reduce_meritocracy_large_effect = yes
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+					has_country_modifier = lost_mandate_of_heaven
+				}
 			}
-			70 = {
-				add_prestige = 10
-				add_stability_or_adm_power = yes
-				if = {
-					limit = { is_lesser_in_union = no }
-					add_legitimacy = 20
+			add_stability = -1
+		}
+		capital_scope = {
+			area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = "severe_plague_local"
+					duration = 3650
 				}
 			}
 		}
@@ -3126,536 +2882,602 @@ country_event = {
 
 # Daggers in the Dark
 country_event = {
-	id = 11316
-	title = "EVTNAME11316"
-	desc = "EVTDESC11316"
+	id = china_events.53
+	title = "china_events.53.t"
+	desc = "china_events.53.d"
 	picture = ASSASSINATION_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 350
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 80
-			}
-		}
-		
-		modifier = {
-			factor = 1.5
-			legitimacy = 80
-		}
-		modifier = {
-			factor = 1.5
-			prestige = 2
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11316"
-		add_legitimacy = -10
-		add_prestige = -10
-		add_faction_influence = {
-			faction = enuchs
-			influence = -4
-		}
+		name = "china_events.53.a"
+		add_mil_power = -25
+		add_dip_power = -25
+		add_adm_power = -25
 	}
 	
 	option = {
-		name = "EVTOPTB11316"
-		add_stability = -1
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11316"
-		add_manpower = -1
-		add_army_tradition = -10
-		add_faction_influence = {
-			faction = temples
-			influence = -4
+		name = "china_events.53.b"
+		add_country_modifier = {
+			name = "chi_unhealthy_political_climate"
+			duration = 3650
 		}
 	}
 }
 
 # The Concubine's Child
 country_event = {
-	id = 11318
-	title = "EVTNAME11318"
-	desc = "EVTDESC11318"
+	id = china_events.54
+	title = "china_events.54.t"
+	desc = "china_events.54.d"
 	picture = NEW_HEIR_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 21 }
+			}
 		}
 		has_heir = no
 	}
 	
+	is_triggered_only = yes
+	
 	mean_time_to_happen = {
-		months = 350
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 80
-			}
-		}
-		modifier = {
-			factor = 1.5
-			prestige = 2
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11318"
+		name = "china_events.54.a"
 		define_heir = {
+			age = 0
 			dynasty = ROOT
 			claim = 20
-			adm = 0
-			dip = 0
-			mil = 0
+			max_random_dip = 4
+			max_random_adm = 4
+			max_random_mil = 4
 		}
 		add_stability = -1
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11318"
-		add_dip_power = 20
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC11318"
-		add_prestige = -2
-		add_legitimacy = -20
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
-		}
 	}
 }
 
-# A Riding Accident
+# Riches of China
 country_event = {
-	id = 11320
-	title = "EVTNAME11320"
-	desc = "EVTDESC11320"
-	picture = DEATH_OF_HEIR_eventPicture
+	id = china_events.55
+	title = "china_events.55.t"
+	desc = "china_events.55.d"
+	picture = BATTLE_eventPicture
 	
 	trigger = {
-		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+		is_free_or_tributary_trigger = yes
+		any_neighbor_country = {
+			OR = {
+	 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+				has_country_modifier = lost_mandate_of_heaven
+				AND = {
+					has_dlc = "Mandate of Heaven"
+					is_emperor_of_china = yes
+					NOT = { imperial_mandate = 50 }
+				}
+			}
+			num_of_cities = 5
+			NOT = { alliance_with = ROOT }
+			any_owned_province = {
+				any_neighbor_province = {
+					owned_by = ROOT
+				}
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
-		has_heir = yes
-		has_female_heir = no
-		heir_age = 15
 	}
+	
 	
 	mean_time_to_happen = {
-		months = 550
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 80
+		months = 400
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_neighbor_country = {
+				limit = {
+					OR = {
+			 			has_country_modifier = the_mandate_of_heaven_lost
+			has_country_modifier = the_mandate_of_heaven_lost_SE
+						has_country_modifier = lost_mandate_of_heaven
+						AND = {
+							has_dlc = "Mandate of Heaven"
+							is_emperor_of_china = yes
+							NOT = { imperial_mandate = 50 }
+						}
+					}
+					num_of_cities = 5
+					NOT = { alliance_with = ROOT }
+				}
+				save_event_target_as = empire_of_china
+				random_owned_province = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+						any_neighbor_province = {
+							owned_by = ROOT
+						}
+					}
+					set_province_flag = here_be_china
+					save_event_target_as = chinese_border_province
+				}
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11320"
-		kill_heir = yes
-		add_faction_influence = {
-			faction = temples
-			influence = -6
+		name = "china_events.55.a"
+		tooltip = {
+			event_target:empire_of_china = {
+				random_owned_area = {
+					limit = { has_province_flag = here_be_china }
+					add_claim = ROOT
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:empire_of_china = {
+				country_event = { id = china_events.61 }
+			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTB11320"
-		kill_heir = yes
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -6
+		name = "china_events.55.b"
+		event_target:empire_of_china = {
+			add_opinion = {
+				who = ROOT
+				modifier = chi_did_not_seize_opportunity
+			}
 		}
-	}
-	
-	option = {
-		name = "EVTOPTC11320"
-		kill_heir = yes
-		add_faction_influence = {
-			faction = enuchs
-			influence = -6
+		hidden_effect = {
+			event_target:empire_of_china = {
+				every_owned_province = {
+					limit = { has_province_flag = here_be_china }
+					clr_province_flag = here_be_china
+				}
+			}
 		}
 	}
 }
 
 # Flawed Insights
 country_event = {
-	id = 11322
-	title = "EVTNAME11322"
-	desc = "EVTDESC11322"
-	picture = DEBATE_REPUBLICAN_eventPicture
+	id = china_events.56
+	title = "china_events.56.t"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	desc = {
+		trigger = {
+			NOT = { has_dlc = "Mandate of Heaven" }
+		}
+		desc = china_events.56.d
+	}
+	desc = {
+		trigger = {
+			has_dlc = "Mandate of heaven"
+		}
+		desc = china_events.56.da
+	}
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 400
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			legitimacy = 80
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11322"
+		name = "china_events.56.a"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
 		add_adm_power = -40
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -4
-		}
+		reduce_bureaucrats_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11322"
-		add_dip_power = -20
-		add_adm_power = -20
-		add_faction_influence = {
-			faction = enuchs
-			influence = -4
-		}
+		name = "china_events.56.b"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		add_dip_power = -60
+		reduce_eunuchs_effect = yes
 	}
 	
 	option = {
-		name = "EVTOPTB11322"
-		add_mil_power = -40
-		add_faction_influence = {
-			faction = temples
-			influence = -4
+		name = "china_events.56.c"
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		add_mil_power = -50
+		reduce_temples_effect = yes
+	}
+	
+	option = {
+		name = "china_events.56.dd"
+		trigger = { has_dlc = "Mandate of Heaven" }
+		reduce_mandate_effect = yes
+		if = {
+			limit = {
+				has_country_modifier = lost_mandate_of_heaven
+			}
+			add_legitimacy = -5
 		}
 	}
+	
 }
 
-# Gold turns to Lead
+# Global Unrest
 country_event = {
-	id = 11324
-	title = "EVTNAME11324"
-	desc = "EVTDESC11324"
-	picture = ECONOMY_eventPicture
+	id = china_events.57
+	title = "china_events.57.t"
+	desc = "china_events.57.d"
+	picture = BAD_WITH_MONARCH_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 21 }
+			}
 		}
+		#Does not actually check if there are any foreign cores under our control, if so only -1 stab.
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					any_core_country = {
+						NOT = { tag = ROOT }
+					}
+				}
+				random_core_country = {
+					limit = {
+						NOT = { tag = ROOT }
+					}
+					save_event_target_as = low_mandate_separatism_country
+					every_core_province = {
+						limit = { owned_by = ROOT }
+						set_province_flag = low_mandate_separatism
+					}
+				}
 			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_flag = low_mandate_separatism }
+					any_core_country = {
+						NOT = { tag = ROOT }
+					}
+				}
+				random_core_country = {
+					limit = {
+						NOT = { tag = ROOT }
+					}
+					save_event_target_as = low_mandate_separatism_country_2
+					every_core_province = {
+						limit = { owned_by = ROOT }
+						set_province_flag = low_mandate_separatism_2
+					}
+				}
 			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			legitimacy = 80
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				inflation = 10
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_flag = low_mandate_separatism }
+					any_core_country = {
+						NOT = { tag = ROOT }
+					}
+				}
+				random_core_country = {
+					limit = {
+						NOT = { tag = ROOT }
+					}
+					save_event_target_as = low_mandate_separatism_country_3
+					every_core_province = {
+						limit = { owned_by = ROOT }
+						set_province_flag = low_mandate_separatism_3
+					}
+				}
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11324"
-		add_years_of_income = -1
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
+		name = "china_events.57.a"
+		add_stability = -2
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = low_mandate_separatism
+				}
+			}
+			custom_tooltip = low_mandate_separatism_tooltip_1
 		}
-	}
-	
-	option = {
-		name = "EVTOPTB11324"
-		add_stability = -1
-		add_inflation = 2
-		add_faction_influence = {
-			faction = enuchs
-			influence = -4
+		hidden_effect = {
+			every_province = {
+				limit = { has_province_flag = low_mandate_separatism }
+				add_province_modifier = {
+					name = "chi_separatist_sentiments"
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = { has_province_flag = low_mandate_separatism }
+					has_province_flag = low_mandate_separatism_2
+				}
+			}
+			custom_tooltip = low_mandate_separatism_tooltip_2
+		}
+		hidden_effect = {
+			every_province = {
+				limit = { has_province_flag = low_mandate_separatism_2 }
+				add_province_modifier = {
+					name = "chi_separatist_sentiments"
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = { has_province_flag = low_mandate_separatism }
+					NOT = { has_province_flag = low_mandate_separatism_2 }
+					has_province_flag = low_mandate_separatism_3
+				}
+			}
+			custom_tooltip = low_mandate_separatism_tooltip_3
+		}
+		hidden_effect = {
+			every_province = {
+				limit = { has_province_flag = low_mandate_separatism_3 }
+				add_province_modifier = {
+					name = "chi_separatist_sentiments"
+					duration = 3650
+				}
+				clr_province_flag = low_mandate_separatism_3
+			}
+			every_province = {
+				limit = {
+					OR ={
+						has_province_flag = low_mandate_separatism
+						has_province_flag = low_mandate_separatism_2
+						has_province_flag = low_mandate_separatism_3
+					}
+				}
+				clr_province_flag = low_mandate_separatism
+				clr_province_flag = low_mandate_separatism_2
+				clr_province_flag = low_mandate_separatism_3
+			}
 		}
 	}
 }
 
 # Grand Secretary Howls at the Moon
 country_event = {
-	id = 11326
-	title = "EVTNAME11326"
-	desc = "EVTDESC11326"
+	id = china_events.58
+	title = "china_events.58.t"
+	desc = "china_events.58.d"
 	picture = ADVISOR_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 21 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 1
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.58.a" # This is not a Ramones' reference
+		reduce_mandate_effect = yes
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+					has_country_modifier = lost_mandate_of_heaven
+				}
 			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 1.5
-			legitimacy = 80
+			add_legitimacy = -15
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11326" # This is not a Ramones' reference
-		add_stability = -1
-		add_legitimacy = -10
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = 4
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB11326" # Neither is this
-		add_stability = -1
-		add_prestige = -10
-		kill_advisor = statesman
-		add_faction_influence = {
-			faction = bureaucrats
-			influence = -4
+		name = "china_events.58.b" # Neither is this
+		reduce_meritocracy_large_effect = yes
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+					has_country_modifier = lost_mandate_of_heaven
+				}
+			}
+			add_stability = -1
 		}
 	}
 }
 
 # Tax Barge Sinks
 country_event = {
-	id = 11328
-	title = "EVTNAME11328"
-	desc = "EVTDESC11328"
-	picture = SHIP_SAILING_eventPicture
+	id = china_events.59
+	title = "china_events.59.t"
+	desc = "china_events.59.d"
+	picture = BAD_WITH_MONARCH_eventPicture
 	
 	trigger = {
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 550
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				navy_tradition = 10
-			}
-		}
-		modifier = {
-			factor = 5
-			has_idea = superior_seamanship
-		}
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTA11328"
+		name = "china_events.59.a"
 		add_years_of_income = -0.5
-		add_faction_influence = {
-			faction = temples
-			influence = 4
-		}
 	}
 	
 	option = {
-		name = "EVTOPTB11328"
+		name = "china_events.59.b"
 		add_inflation = 2
-		add_legitimacy = -5
-		add_faction_influence = {
-			faction = temples
-			influence = -4
-		}
 	}
 }
 
 # False Edicts
 country_event = {
-	id = 11330
-	title = "EVTNAME11330"
-	desc = "EVTDESC11330"
-	picture = LIBERUM_VETO_eventPicture
+	id = china_events.60
+	title = "china_events.60.t"
+	desc = "china_events.60.d"
+	picture = BAD_WITH_MONARCH_eventPicture
 	
 	trigger = {
+		NOT = { has_country_modifier = chi_false_edicts_modifier }
 		OR = {
-			has_country_modifier = the_mandate_of_heaven_lost
+ 			has_country_modifier = the_mandate_of_heaven_lost
 			has_country_modifier = the_mandate_of_heaven_lost_SE
+			has_country_modifier = lost_mandate_of_heaven
+			AND = {
+				has_dlc = "Mandate of Heaven"
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 21 }
+			}
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
-		months = 450
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -1
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				stability = -2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			legitimacy = 80
-		}
-		modifier = {
-			factor = 2
-			legitimacy = 90
+		days = 1
+	}
+	
+	option = {
+		name = "china_events.60.a" #Pretend that they are ours
+		add_country_modifier = {
+			name = chi_false_edicts_modifier
+			duration = 3650
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA11330"
-		add_legitimacy = 20
-		add_country_modifier = {
-			name = "decentralization_modifier"
-			duration = 3650
-		}
-		add_faction_influence = {
-			faction = enuchs
-			influence = 4
+		name = "china_events.60.b" #Rescind them!
+		reduce_mandate_effect = yes
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_dlc = "Mandate of Heaven" }
+					has_country_modifier = lost_mandate_of_heaven
+				}
+			}
+			add_legitimacy = -10
 		}
 	}
+}
+
+# Notification from Riches of China
+country_event = {
+	id = china_events.61
+	title = "china_events.61.t"
+	desc = "china_events.61.d"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTB11330"
-		add_stability = -1
-		add_legitimacy = -30
-		add_country_modifier = {
-			name = "centralization_modifier"
-			duration = 3650
+		name = "china_events.61.a"
+		random_owned_area = {
+			limit = { has_province_flag = here_be_china }
+			add_claim = FROM
+			clr_province_flag = here_be_china
 		}
-		add_faction_influence = {
-			faction = enuchs
-			influence = -4
+	}
+}
+
+
+# Notification Unruly subject event
+country_event = {
+	id = china_events.62
+	title = "china_events.62.t"
+	desc = "china_events.62.d"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "china_events.62.a"
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = chi_low_mandate_subjects
+			}
 		}
 	}
 }

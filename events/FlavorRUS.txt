@@ -73,7 +73,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = { months = 38 }
-	}
+	
 
 	immediate = { set_country_flag = RUS_had_event_3202 }
 	
@@ -95,6 +95,7 @@ country_event = {
 			}
 		}
 	}
+}
 
 
 # Russian claims in the East
@@ -121,7 +122,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 60 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3404 }
 
@@ -136,7 +136,7 @@ country_event = {
 			add_permanent_claim = ROOT
 		}
 	}
-
+}
 
 # Russian claims on Poland-Lithuania
 country_event = {
@@ -270,7 +270,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 32 }
-	}
+	
 	
 	immediate = { set_country_flag = RUS_had_event_3406 }
 
@@ -297,7 +297,7 @@ country_event = {
 			add_permanent_claim = ROOT
 		}
 	}
-
+}
 
 # The Chosen Council
 country_event = {
@@ -322,7 +322,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 60 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3410 }
 
@@ -344,6 +343,7 @@ country_event = {
 			skill = 3
 		}
 	}
+}
 
 # The Sacking of Moscow
 country_event = {
@@ -369,7 +369,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 1 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3411 }
 
@@ -396,7 +395,7 @@ country_event = {
 			duration = 3650
 		}
 	}
-
+}
 
 # The Treasury Reform and the Abolishing of the Kormlenije System
 country_event = {
@@ -420,7 +419,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 300 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3413 }
 
@@ -453,7 +451,7 @@ country_event = {
 			duration = 9125
 		}
 	}
-
+}
 # The Russian Orthodox Church declared independent of Constantinople
 country_event = {
 	id = flavor_rus.9
@@ -478,7 +476,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 120 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3415 }
 
@@ -508,7 +505,7 @@ country_event = {
 			add_claim = ROOT
 		}
 	}
-
+}
 # The Peasantry is brought into Serfdom
 country_event = {
 	id = flavor_rus.10
@@ -572,7 +569,6 @@ country_event = {
 	}
 
 	mean_time_to_happen = { months = 100 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_1005 }
 
@@ -587,7 +583,7 @@ country_event = {
 		add_stability_or_adm_power = yes
 		add_patriarch_authority = -0.10
 	}
-
+}
 # Boris Morozov
 country_event = {
 	id = flavor_rus.12
@@ -611,7 +607,6 @@ country_event = {
 	}
 
 	mean_time_to_happen = { months = 120 }
-	}
 
 	immediate = { set_country_flag = RUS_had_event_3203 }
 	
@@ -633,7 +628,7 @@ country_event = {
 			}
 		}
 	}
-
+}
 
 # Full Serfdom enforced by Sobornoj Ulozjenije
 country_event = {
@@ -658,7 +653,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 300 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3417 }
 	
@@ -702,6 +696,7 @@ country_event = {
 		}		
 		
 	}
+}
 
 # Nikons Reform and the Raskolniks
 country_event = {
@@ -727,7 +722,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 300 }
-	}
 	
 	immediate = { set_country_flag = RUS_raskol_flag }
 
@@ -742,7 +736,8 @@ country_event = {
 		add_stability_or_adm_power = yes
 		add_patriarch_authority = -0.10
 	}
-
+}
+	
 # Raskol
 country_event = {
 	id = flavor_rus.15
@@ -973,7 +968,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 240 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3419 }
 
@@ -1012,6 +1006,7 @@ country_event = {
 			}
 		}
 	}
+}
 
 # Stepan Rasin's Cossack Uprising
 country_event = {
@@ -1040,7 +1035,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 200 }
-	}
 	
 	immediate = {
 		hidden_effect = {
@@ -1113,6 +1107,7 @@ country_event = {
 			add_local_autonomy = 50
 		}
 	}
+}
 
 # The Treaty of Nerchiinsk
 country_event = {
@@ -1162,7 +1157,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 200 }
-	}
+	
 	
 	immediate = {
 		hidden_effect = {
@@ -1280,6 +1275,7 @@ country_event = {
 			}
 		}
 	}
+}
 
 # The Great Northern Conflict
 country_event = {
@@ -1313,7 +1309,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 100 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3422 }
 
@@ -1348,7 +1343,8 @@ country_event = {
 		ai_chance = { factor = 25 }
 		add_prestige = -5
 	}
-
+}
+	
 # Governmental Reforms and the Absolutism
 country_event = {
 	id = flavor_rus.22
@@ -1372,7 +1368,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 60 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3426 }
 
@@ -1389,6 +1384,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 		add_stability_or_adm_power = yes
 	}
+}
 
 # The State take control of the Russian Church
 country_event = {
@@ -1413,7 +1409,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 60 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3427 }
 
@@ -1441,6 +1436,7 @@ country_event = {
 		ai_chance = { factor = 25 }
 		add_patriarch_authority = 0.25
 	}
+}
 
 # The Courland Succession of 1726
 country_event = {
@@ -1469,7 +1465,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 12 }
-	}
 	
 	immediate = {
 		hidden_effect = {
@@ -1524,6 +1519,7 @@ country_event = {
 			clr_country_flag = courland_succession
 		}
 	}
+}
 
 # The Duma and the Legislative Reform
 country_event = {
@@ -1548,7 +1544,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 60 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3432 }
 
@@ -1571,6 +1566,7 @@ country_event = {
 			duration = -1
 		}
 	}
+}
 
 # The Mercantilistic Reforms
 country_event = {
@@ -1594,7 +1590,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 200 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3434 }
 
@@ -1614,6 +1609,7 @@ country_event = {
 			duration = -1
 		}
 	}
+}
 
 # The Pugatchev Uprising
 country_event = {
@@ -1640,7 +1636,6 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { months = 32 }
-	}
 	
 	immediate = { set_country_flag = RUS_had_event_3435 }
 
@@ -1664,6 +1659,7 @@ country_event = {
 			}
 		}
 	}
+}
 
 # The Reactionary Policy
 country_event = {
