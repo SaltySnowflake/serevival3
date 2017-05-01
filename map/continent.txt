@@ -54,7 +54,6 @@ europe = {
 	
 	1323 #Crimea Trade Node
 	1320 #Constantinople Tradenode
-	1320 #Constantinople Tradenode
 	1297 #Genoa
 	1926 #Baltic
 	1652 #WhiteSea
