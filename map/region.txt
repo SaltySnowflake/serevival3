@@ -516,7 +516,6 @@ horn_of_africa_region = {
 		upper_nubia_area
 		sennar_area
 		dongola_area
-		hadiya_area
 		damot_area
 		aussa_area
 		shewa_area
@@ -531,7 +530,6 @@ east_africa_region = {
 		lower_zambezi_area
 		upper_zambezi_area
 		ruvuma_area
-		ngonde_area
 		mascarenes_area
 		madagascar_highlands_area
 		betsimasaraka_area
@@ -817,7 +815,6 @@ south_china_region = {
 		taiwan_area
 		south_jiangsu_area
 		hunan_area
-		henan_area
 	}
 }
 
@@ -851,9 +848,7 @@ brazil_region = {
 	areas = {
 		rio_grande_do_sol_area
 		minas_gerais_area
-		goias_area
 		mato_grosso_area
-		guapore_area
 		sao_paolo_area
 		rio_de_janeiro_area
 		bahia_area
