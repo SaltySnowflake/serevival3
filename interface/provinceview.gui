@@ -5936,7 +5936,63 @@ guiTypes = {
 			spriteType = "GFX_building_upgrade_icon"
 		}
 		
+### Shattered Europa Trade Goods
+	
+		iconType = {
+			name = "SEtradegoods_banner"
+			position = { x = 240 y = 291 }
+			spriteType = "GFX_banner_right_2"
+		}
+
+		instantTextBoxType={
+			name = "title_SEtradegoods"
+			position = {x = 291 y = 300 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 80
+			maxHeight = 18
+			text = "SEGOODS"	
+		}
+
+		iconType =
+		{
+			name ="SEtradegoods_icon"
+			spriteType = "GFX_diplomacy_traderights"
+			position = { x= 262 y = 292}
+			hint_tag = "hint_trade"
+		}
+	
+		checkboxType = {
+			name = "build_SEtradegoods"
+			position = { x = 268 y = 323 }
+			quadTextureSprite = "GFX_courthouse"
+		}
 		
+		instantTextBoxType={
+			name = "SEtradegoods_cost"
+			position = {x = 268 y = 373 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000Â¤"
+		}
+
+		
+		
+		
+		iconType = {
+			name = "manufactory_banner"
+			position = { x = 4 y = 388 }
+			spriteType = "GFX_banner_left_SE" ##Pirate SE3
+			}	
+			
+		iconType ={
+			name ="manufactory_icon"
+			spriteType = "GFX_macro_buildings_category_strip"
+			position = { x = 15 y = 391}
+			frame = 8
+		}	
 				
 		#### Shattered Manufactories
 		
@@ -5970,14 +6026,7 @@ guiTypes = {
 			maxHeight = 18
 			text = "2000Â¤"	
 		}
-		
-		
-		
-		iconType = {
-			name = "manufactory_banner"
-			position = { x = 4 y = 388 }
-			spriteType = "GFX_banner_left_SE" ##Pirate SE3
-			}
+		#End SE manufactorys
 			
 		instantTextBoxType={
 			name = "title_manufactory"
