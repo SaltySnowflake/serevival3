@@ -1,4 +1,11 @@
 ﻿l_english:
+#pi pi(or missing)
+ beta_israeli:0 "Israeli"
+ mizrahi:0 "Mizrahi"
+ sephardi:0 "Sephardi"
+ ashkenazi:0 "Ashkenazi"
+ bungi:0 "Bungi"
+ #other
  anglo_irish:0 "Old English"
  aquitanian:0 "Aquitanian"
  arpitan:0 "Arpitan"

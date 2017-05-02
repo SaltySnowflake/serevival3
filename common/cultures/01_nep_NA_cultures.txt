@@ -257,7 +257,7 @@ siouan = {
 			Wabasha Petette Tartunkanasiah Keejee Tarsega Wamadetunka Wannata Kokomako Shacope Penision Etaseepa 
 			Wakauhee Poehapa Takewapa Tenchzepart Mascpulochastosh Tetekarmunch Wasaota Oeyakoca Maktowahkeark 
 			Matowayouwe Makatozaza Belotonkatanga Nakapagigi Maktosabichis Mewatanihanska Thathanka Iyotake 
-			Iyapato Thasunke Witko Maphiya Luta Hehaka Sapa Sinte Gleska Ite Omagazu Ogle Luta Mahpiya
+			Iyapato Thasunke Witko Maphiya Luta Hehaka Sapa Sinte Gleska Ite Omagazu Ogle Mahpiya
 		}
 		female_names = {
 			Tasinasapewin Thasinamani Tasinahlahlawin Dohumme Chapa Chapawee Chumani Dowanhowee Ehawee Hantaywee Kimimela 
@@ -529,7 +529,7 @@ central_american = {
 			Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui 
 			Topiltzin Totoquihuaztli 
 			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl 
-			Xochipepe Xochipilli Yaotl Zipactonal Zolin
+			Xochipepe Xochipilli Zipactonal Zolin
 		}	
 		female_names = {
 			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin 
@@ -562,7 +562,7 @@ tonkawan = {
 	}
 	female_names = {
 		Elvamox Ethete Natane Bly Dae Cocheta Ekta Ela Elina Ila Imala Inayat Kushala Kusuma Liluye Lipika Lolaksi 
-		Lolotea Nascha Nashota Natane Nita Nitara Niti Nitika Nittawosew Onawa Onawah Preyasi Prita PreetiHalf Smita 
+		Lolotea Nascha Nashota Nita Nitara Niti Nitika Nittawosew Onawa Onawah Preyasi Prita PreetiHalf Smita 
 		Smriti Surabhi Tapi Tara
 	}
 }
@@ -1120,9 +1120,9 @@ na_dene = {
 			Popé Ku-htihth Galisteo Xenome Ollito Tagu Bolsas Naranjo Catiti
 		}
 		female_names = {
-			Ootcakao Kahavasooah Ootcakao Sacagawea Chipeta Tocmetone
+			Ootcakao Kahavasooah Sacagawea Chipeta Tocmetone
 		}
-	}
+	}	
 	kiowa = {
 		primary = KIO
 		dynasty_names = {
@@ -1137,7 +1137,7 @@ na_dene = {
 		}
 		female_names = {
 			Elvamox Ethete Natane Bly Dae Cocheta Ekta Ela Elina Ila Imala Inayat Kushala Kusuma Liluye Lipika Lolaksi 
-			Lolotea Nascha Nashota Natane Nita Nitara Niti Nitika Nittawosew Onawa Onawah Preyasi Prita PreetiHalf Smita 
+			Lolotea Nascha Nashota Nita Nitara Niti Nitika Nittawosew Onawa Onawah Preyasi Prita PreetiHalf Smita 
 			Smriti Surabhi Tapi Tara
 		}
 	}
@@ -1150,7 +1150,7 @@ na_dene = {
 			Popé Ku-htihth Galisteo Xenome Ollito Tagu Bolsas Naranjo Catiti
 		}
 		female_names = {
-			Ootcakao Kahavasooah Ootcakao Sacagawea Chipeta Tocmetone
+			Ootcakao Kahavasooah Sacagawea Chipeta Tocmetone
 		}
 	}
 	hopi = {
@@ -1162,7 +1162,7 @@ na_dene = {
 			Popé Ku-htihth Galisteo Xenome Ollito Tagu Bolsas Naranjo Catiti
 		}
 		female_names = {
-			Ootcakao Kahavasooah Ootcakao Sacagawea Chipeta Tocmetone
+			Ootcakao Kahavasooah Sacagawea Chipeta Tocmetone
 		}
 	}
 	zuni = {
@@ -1174,7 +1174,7 @@ na_dene = {
 			Popé Ku-htihth Galisteo Xenome Ollito Tagu Bolsas Naranjo Catiti
 		}
 		female_names = {
-			Ootcakao Kahavasooah Ootcakao Sacagawea Chipeta Tocmetone
+			Ootcakao Kahavasooah Sacagawea Chipeta Tocmetone
 		}
 	}
 }
@@ -1275,17 +1275,14 @@ septrional_creoles = {
 			Young Yelverton
 		}
 		male_names = {
-			Henry Edward Charles James William Richard Philip Henry Frederick Arthur Charles James Edgar Thomas Edmund 
+			Henry Edward Charles James William Richard Philip Frederick Arthur Edgar Thomas Edmund 
 			George John Jacob Humphrey Robert Stephen Adam Alexander Albert Alfred Ambrose Andrew Anthony Archibald 
 			Benjamin Christopher Daniel David Ernest Francis Geoffrey Guy Horatio Hugh Isaac Jeremy Jonathan Joseph 
-			Lawrence Matthew Nehemiah Oliver Samuel Sydney
-
-			Adam Alan Albert Alexander Alfred Andrew Anselm Arnold Arthur Aubrey Christopher David 		
-			Edmund Edward Eric Erik Eustace Fulk Folke Geoffrey George Gerald Gilbert Godfrey Gregory Guy 
-			Henry Hugh Humphrey Jocelyn John Jordan Laurence Lionel Mark Marcus Martin Matthew Maurice 
-			Michael Nicholas Paul Peter Philip Ralph Randolph Reginald Richard Robert Roger Simon Stephen 
-			Theobald Thomas Waleran Walter William Jacob Ambrose Anthony Archibald Benjamin Daniel Ernest 
-			Francis Horatio Isaac Jeremy Jonathan Joseph Lawrence Nehemiah Oliver Samuel Sydney 
+			Lawrence Matthew Nehemiah Oliver Samuel Sydney Alan Anselm Arnold Aubrey 		
+			Eric Erik Eustace Fulk Folke Gerald Gilbert Godfrey Gregory 
+			Jocelyn Jordan Laurence Lionel Mark Marcus Martin Maurice 
+			Michael Nicholas Paul Peter Ralph Randolph Reginald Roger Simon 
+			Theobald Waleran Walter
 		}
 		female_names = {
 			Jane Adela Adelaide Alice Amice Anne Anna Aveline Avelina Beatrice Blanche Catherine Cecilia 
@@ -1314,7 +1311,7 @@ septrional_creoles = {
 			Eugene Farquhar Fergus Fingal Finn Findlay Frang Francis Gavin Gilbride Gilbert Gilchrist 
 			Gillespie Gilpatrick Gilroy Giric Glenn Godfrey Gregor Gregory Hamish Hector Hugh Iain 
 			Indulf Jacob Kenneth Kentigern Lachlan Roland Laurence Lennon Lulach Macbeth Magnus Maldoven 
-			Maldred Malise Malmure Maoilios Marcas Marcus Matad Matthew Michael Morgan Muir Mungo 
+			Maldred Malise Malmure Maoilios Marcas Marcus Matad Matthew Michael Morgan Muir 
 			Murdoch Murray Neil Nigel Ninian Oscar Patrick Paul Peter Philip Radulf Ralph Ranald 
 			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
 			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
@@ -1326,7 +1323,7 @@ septrional_creoles = {
 			Donada Donella Edith Edna Effie Eilionoir Eimhir Emer Eithne Ela Eleanor Elspeth Euna Eva 
 			Fenella Fingola Flora Forflissa Galiena Glenna Gormelia Gormflaith Gruoch Helen Innes Iona 
 			Isabel Isla Isobel Jean Julia Juliana Kenna Kentigerna Kirstin Christina Lillias Elisabeth 
-			Lorna Malmure Maisie Malina Mariota Martha Marthoc Marjory Mary Maud Matilda Maura Maria 
+			Lorna Malmure Maisie Malina Mariota Martha Marthoc Marjory Maud Matilda Maura Maria 
 			Mirren Morag Mor Morna Moyna Mona Muriel Murron Nuala Finnguala Orabilia Peigi Margaret 
 			Rhonda Rodina Ronalda Ragnhild Ros Saundra Alexandra Sheena Shona Joan Sholto Slaine Sorcha 
 			Una
@@ -1445,10 +1442,8 @@ new_american = {
 		dynasty_names = {
 			"de Valois" "de Bourbon" Bonaparte "de la Tour" "de Anjou" 
 			"de Lorraine" "de Foix" "de Montfort" "de Blois" "de Penthievre" "de Dreux"
-			"de Rohan" "de Bar" "d'Albert" "d'Escoubleau" "de Neufville" 
-			"de Valois" "de Bourbon" "de la Tour" "de Anjou" 
-			"de Lorraine" "de Foix" "de Montfort" "de Blois" "de Penthievre" "de Dreux"
-			"de Rohan" "de Bar" "d'Albert" "d'Escoubleau" "de Neufville" "de Bourgogne"
+			"de Rohan" "d'Albert" "d'Escoubleau" "de Neufville" 
+			"de Bar" "de Bourgogne"
 			"de Castellane" "d'Auvergne" "de Montbéliard" "de Metz" 
 			#CKII Frankish
 			"de Laval" "de la Tour du Pin" "de La Trémoille" "de Créquy" "de Broglie"
