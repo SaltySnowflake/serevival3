@@ -69,11 +69,12 @@ country_decisions = {
 					}
 			is_free_or_tributary_trigger = yes
 			all_country = {
-				NOT = {
-					government = daimyo
-				}
-				NOT = {
-					government = indep_daimyo
+				OR = {
+					tag = ROOT
+					AND = {
+						NOT = { government = daimyo }
+						NOT = { government = indep_daimyo }
+					}
 				}
 			}
 		}

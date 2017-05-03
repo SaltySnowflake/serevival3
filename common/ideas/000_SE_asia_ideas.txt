@@ -27,7 +27,7 @@ ADE_ideas = {
 		missionaries = 1
 	}
 	palm_cultivation = {
-		global_trade_goods_size_modifier_modifier = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 	zaydi_hill_tribes = {
 		hostile_attrition = 0.50

@@ -912,7 +912,6 @@ subject_algonquin_council = {
 		is_subject = yes
 		}
 	}
-}
 
 iroquois_council = {
 	rank = {
@@ -1010,7 +1009,6 @@ subject_muskogee_council = {
 		is_subject = yes
 		}
 	}
-}
 
 shan_states = {
 	rank = {

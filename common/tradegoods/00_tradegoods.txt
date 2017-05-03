@@ -1872,7 +1872,7 @@ wine = {
 }
 beer = { 
 	color = { 0.45 0.15 0.15 }
-	modifier = { global_trade_goods_size_modifier = 0.05 }
+	modifier = { global_trade_goods_size_modifier_modifier = 0.05 }
 	province = { local_unrest = -1 }
 	#drink, colder areas where wine grapes weren't grown
 	chance = { 
@@ -5325,7 +5325,7 @@ munitions = {
 machinery = { 
 	#machinery, also old stuff like clockwork
 	color = { 0.35 0.25 0.10 }
-	modifier = { global_trade_goods_size = 0.1 }
+	modifier = { global_trade_goods_size_modifier = 0.1 }
 	province = { production_efficiency = 0.025 }
 	chance = { factor = 0 }
 }

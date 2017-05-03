@@ -182,7 +182,7 @@ ANV_ideas = {
 		global_unrest = -1
 	}
 	iron_and_wine = {
-		global_trade_goods_size_modifier_modifier = 0.15
+		global_trade_goods_size_modifier = 0.15
 	}
 }
 ###Created by Inkwizytor Zeketer
@@ -351,7 +351,7 @@ HAI_ideas = {
 	}
 	free = yes
 	economic_diversity = {
-		global_trade_goods_size_modifier_modifier = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 	low_countries_diplomacy = {
 		diplomatic_reputation = 1
@@ -412,7 +412,7 @@ karling_ideas = {
 }
 LIE_ideas = {
 	start = {
-		global_trade_goods_size_modifier_modifier = 0.1
+		global_trade_goods_size_modifier = 0.1
 		technology_cost = -0.05
 	}	
 	bonus = {
@@ -1536,7 +1536,7 @@ LUS_ideas = {
 		possible_mercenaries = 0.5
 	}
 	lus_german_immigrants = {
-		global_trade_goods_size_modifier_modifier = 0.2
+		global_trade_goods_size_modifier = 0.2
 	}
 }
 NUM_ideas = {
@@ -2951,7 +2951,7 @@ CHR_ideas = {
 		defensiveness = 0.10
 	}
 	chr_black_earth = {
-		global_trade_goods_size_modifier_modifier = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 	encourage_the_merchant_class = {
 		trade_efficiency = 0.1
@@ -3017,7 +3017,7 @@ VOL_ideas = {
 		hostile_attrition = 0.50
 	}
 	vol_black_earth = {
-		global_trade_goods_size_modifier_modifier = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 	galician_volhynian_chronicle = {
 		core_creation = -0.15

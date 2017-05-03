@@ -91,7 +91,7 @@ BEI_ideas = {
 		heir_chance = 0.25
 	}
 	chinese_immigrants = {
-		global_trade_goods_size = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	bei_thalassocracy = {
 		global_trade_power = 0.1
@@ -113,7 +113,7 @@ BEI_ideas = {
 ### Neondt
 BLI_ideas = {
 	start = {
-		global_trade_goods_size = 0.1
+		global_trade_goods_size_modifier = 0.1
 		light_ship_cost = -0.20		
 	}
 	bonus = {
@@ -199,7 +199,7 @@ MAJ_ideas = {
 		vassal_income = 0.15
 	}
 	bi_yearly_harvest = {
-		global_trade_goods_size_modifier = 0.10
+		global_trade_goods_size_modifier_modifier = 0.10
 	}
 	pan_asian_trade = {
 		merchants = 1

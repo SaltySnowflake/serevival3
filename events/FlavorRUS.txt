@@ -1118,11 +1118,11 @@ country_event = {
 
 	trigger = {
 			any_known_country = {
-			AND = {
-				{is_neighbor_of = ROOT}
-				{Culture_group = east_asian}
+				AND = {
+					is_neighbor_of = ROOT
+					culture_group = east_asian
 				}
-				}
+			}
 		NOT = { has_country_flag = RUS_had_event_3421 }
 		OR = {
 			exists = MNG
