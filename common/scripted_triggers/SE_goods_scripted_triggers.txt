@@ -85,8 +85,8 @@ wheat_dev = {		#inverted
 		has_winter = severe_winter
 		region = central_asia_region
 		region = siberia_region
-		NOT = { 
-			OR = { 
+		NOT = {
+			OR = {
 				owner = { barley = 1 }
 				owner = { rice = 1 }
 				owner = { millet = 1 }

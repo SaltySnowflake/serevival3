@@ -1,0 +1,107 @@
+country_decisions = {
+
+	Fix_capital = {
+		potential = {
+			tag = ENG
+			owns = 236
+			NOT = { capital = 236 }
+			NOT = { has_country_flag = fixed_capital }
+		}
+		allow = {
+			is_at_war = no
+			controls = 236	
+		}
+		effect = {
+			set_country_flag = fixed_capital
+			set_capital = 236
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+		Fix_capital2 = {
+		potential = {
+			tag = FRA
+			owns = 183
+			NOT = { capital = 183 }
+			NOT = { has_country_flag = fixed_capital }
+		}
+		allow = {
+			is_at_war = no
+			controls = 183	
+		}
+		effect = {
+			set_country_flag = fixed_capital
+			set_capital = 183
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+		Fix_capital3 = {
+		potential = {
+			tag = DAN
+			owns = 12
+			NOT = { capital = 12 }
+			NOT = { has_country_flag = fixed_capital }
+		}
+		allow = {
+			is_at_war = no
+			controls = 12
+		}
+		effect = {
+			set_country_flag = fixed_capital
+			set_capital = 12
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+		Fix_capital4 = {
+		potential = {
+			tag = TUR
+			owns = 149
+			NOT = { capital = 149 }
+			NOT = { has_country_flag = fixed_capital }
+		}
+		allow = {
+			is_at_war = no
+			controls = 149
+		}
+		effect = {
+			set_country_flag = fixed_capital
+			set_capital = 149
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+		Fix_capital5 = {
+		potential = {
+			tag = MOL
+			owns = 268
+			NOT = { capital = 268 }
+			NOT = { has_country_flag = fixed_capital }
+		}
+		allow = {
+			is_at_war = no
+			controls = 268
+		}
+		effect = {
+			set_country_flag = fixed_capital
+			set_capital = 268
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
