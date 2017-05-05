@@ -199,7 +199,7 @@ MAJ_ideas = {
 		vassal_income = 0.15
 	}
 	bi_yearly_harvest = {
-		global_trade_goods_size_modifier_modifier = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 	pan_asian_trade = {
 		merchants = 1
