@@ -97,8 +97,7 @@ province_event = {
 				owner = { ruler_has_personality = just_personality }	#1.18 ruler traits influence
 			}
 		}
-		change_native_hostileness = 1
-		create_native = 1
+		change_native_hostileness = 5
 		change_native_size = -2
 	}
 }

@@ -511,6 +511,7 @@ province_event = { # Just a text to point out province conversion
 	
 	trigger = {
 		always = yes
+		NOT = { is_year = 1440 }
 	}
 	
 	immediate = {

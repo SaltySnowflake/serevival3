@@ -23,27 +23,27 @@ country_event = {
 	option = {
 		name = regency.1.a
 		define_ruler = {
-			max_random_adm = 4
-			max_random_mil = 3
-			dip = 3
+			max_random_adm = 6
+			max_random_dip = 4
+			max_random_mil = 4
 		}
 	}
 
 	option = {
 		name = regency.1.b
 		define_ruler = {
-			max_random_adm = 3
-			mil = 3
-			max_random_dip = 4
+			max_random_adm = 4
+			max_random_dip = 6
+			max_random_mil = 4
 		}
 	}
 	
 	option = {
 		name = regency.1.c
 		define_ruler = { 
-			adm = 3
-			max_random_mil = 4
-			max_random_dip = 3
+			max_random_adm = 4
+			max_random_dip = 4
+			max_random_mil = 6
 		}
 	}
 	

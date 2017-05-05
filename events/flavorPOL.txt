@@ -1703,7 +1703,7 @@ country_event = {
 			limit = {
 				government = elective_monarchy
 			}
-			change_government = absolute_monarchy
+			change_government = despotic_monarchy
 		}
 	}
 }

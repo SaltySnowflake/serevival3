@@ -27,7 +27,7 @@ country_event = {
 		months = 200
 		modifier = {
 			factor = 0.75
-			government = absolute_monarchy
+			government = despotic_monarchy
 		}
 	}
 	option = {

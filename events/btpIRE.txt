@@ -26,14 +26,6 @@ country_event = {
 				NOT = { has_opinion = { who = ENG value = -100 } }
 			}	#Hates England makes acceptance less likely
 			modifier = {
-				factor = 4.0
-				NOT = { army_strength = { who = ENG value = 1.0 } }
-			}	#Does this condition even work???
-			modifier = {
-				factor = 10.0
-				total_development = ENG
-			}	#Does this condition even work???
-			modifier = {
 				factor = 2.0
 				ruler_has_personality = fierce_negotiator_personality
 			}	#Fierce Negotiaters don't accept defeat so easily
@@ -61,18 +53,6 @@ country_event = {
 				factor = 2.5
 				has_opinion = { who = ENG value = 180 }
 			}	#Higher opinion of England makes acceptance more likely
-			modifier = {
-				factor = 1.5
-				army_strength = { who = ENG value = 2.0 }
-			}	#Does this condition even work???
-			modifier = {
-				factor = 2.0
-				army_strength = { who = ENG value = 4.0 }
-			}	#Does this condition even work???
-			modifier = {
-				factor = 2.5
-				army_strength = { who = ENG value = 8.0 }
-			}	#Does this condition even work???
 		}
 		ENG = {
 			vassalize = ROOT

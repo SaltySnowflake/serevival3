@@ -44,14 +44,14 @@ country_event = {
 		name = "java.4a"
 		add_adm_power = 400
 		add_stability_or_adm_power = yes
-		change_government = absolute_monarchy
+		change_government = despotic_monarchy
 	}
 	option = { # reform the military
 		name = "java.4b"
 		add_mil_power = 400
 		add_army_tradition = 30
 		add_navy_tradition = 30
-		change_government = absolute_monarchy
+		change_government = despotic_monarchy
 	}
 	option = { # reform both
 		name = "java.4c"

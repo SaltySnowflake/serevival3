@@ -6,10 +6,9 @@ french_revolution = {
 			culture_group = french
 		}
 		capital_scope = { region = france_region }
-		num_of_cities = 7
+		num_of_cities = 15
 		is_subject = no
 		uses_doom = no
-		num_of_cities = 30
 		NOT = { revolution_target_exists = yes }
 		government = monarchy
 		is_year = 1700

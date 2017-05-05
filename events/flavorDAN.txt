@@ -265,7 +265,7 @@ country_event = {
 		is_year = 1650
 		NOT = { is_year = 1750 }
 		government = monarchy
-		NOT = { government = absolute_monarchy }
+		NOT = { government = despotic_monarchy }
 		is_subject = no
 	}
 	
@@ -274,7 +274,7 @@ country_event = {
 	option = {
 		name = "flavor_swe.EVTOPTA3232" # The King shall rule supreme
 		ai_chance = { factor = 90 }
-		change_government = absolute_monarchy
+		change_government = despotic_monarchy
 		add_stability = -1
 	}
 	option = {
@@ -1747,7 +1747,7 @@ country_event = {
 		}
 		is_year = 1600
 		NOT = { is_year = 1650 }
-		NOT = { government = absolute_monarchy }
+		NOT = { government = despotic_monarchy }
 	}
 	
 	mean_time_to_happen = {

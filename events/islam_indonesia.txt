@@ -197,7 +197,7 @@ country_event = {
 	mean_time_to_happen = { months = 3 }
 	option = {
 		name = "indislam.2a"
-		set_country_flag = indislamdrulera
+		set_ruler_flag = indislamdrulera # Maybe fix for infanaite unrest in indonesia, was Country flag
 		random_owned_province = {
 			limit = {
 				continent = asia
@@ -212,7 +212,7 @@ country_event = {
 	}
 	option = {
 		name = "indislam.2b"
-		set_country_flag = indislamrulerb
+		set_ruler_flag = indislamrulerb # Maybe fix for infanaite unrest in indonesia, was Country flag
 		every_owned_province = {
 			limit = { religion = sunni }
 			add_unrest = 10

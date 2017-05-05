@@ -24,7 +24,7 @@ country_event = {
 		government = dutch_republic
 		is_orangists_in_power = yes
 		any_neighbor_country = {
-			government = absolute_monarchy
+			government = despotic_monarchy
 			NOT = {
 				has_opinion_modifier = {
 					who = ROOT
@@ -52,7 +52,7 @@ country_event = {
 		clr_country_flag = supported_statists
 		every_neighbor_country = {
 			limit = {
-				government = absolute_monarchy
+				government = despotic_monarchy
 			}
 			add_opinion = {
 				who = ROOT
@@ -69,7 +69,7 @@ country_event = {
 		clr_country_flag = supported_orangists
 		every_neighbor_country = {
 			limit = {
-				government = absolute_monarchy
+				government = despotic_monarchy
 			}
 			add_opinion = {
 				who = ROOT

@@ -5,14 +5,13 @@ time_of_troubles = {
 		NOT = { has_country_flag = time_of_troubles }
 		OR = {
 			AND = {
-				OR = {
-					primary_culture = russian
-					primary_culture = novgorodian
-				}
+				primary_culture = russian
 				capital_scope = { region = russia_region }
 				num_of_cities = 7
 				NOT = { exists = RUS }
-			}
+				NOT = { tag = RUS }
+				}
+		
 			tag = RUS
 		}
 	}

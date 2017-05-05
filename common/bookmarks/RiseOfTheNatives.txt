@@ -7,6 +7,9 @@ bookmark =
 	center = 899
 	default = yes
 	
+	country = azt
+	
+	
 #	country = FLA
 #	country = BOH
 #	country = SLO

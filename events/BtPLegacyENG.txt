@@ -43,7 +43,7 @@ country_event = {
 					has_heir = no
 				}
 			}
-			add_adm_power = 50	#get adm points if heir is already 6 adm
+			add_adm_power = 100	#get adm points if heir is already 6 adm
 		}
 		define_advisor = {
 			type = theologian

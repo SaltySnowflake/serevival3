@@ -691,7 +691,7 @@ country_event = {
 	option = {			# Order has finally been restored
 		name = "flavor_eng.EVTOPTA9235"
 		trigger = { has_country_flag = supports_royalists }
-		change_government = absolute_monarchy
+		change_government = despotic_monarchy
 		clr_country_flag = supports_royalists
 		add_prestige = 50
 		add_stability = 2

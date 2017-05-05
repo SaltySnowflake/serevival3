@@ -1573,23 +1573,29 @@ country_event = {
 		is_year = 1700
 		NOT = {
 			slovakia_area = {
+				OR = {
  				owned_by = TUR
 				owned_by = OSM
 				owned_by = TRK
+				}
 			}
 		}
 		NOT = {
 			alfold_area = {
-				owned_by = TUR
+				OR = {
+ 				owned_by = TUR
 				owned_by = OSM
 				owned_by = TRK
+				}
 			}
 		}
 		NOT = {
 			transdanubia_area = {
-				owned_by = TUR
+				OR = {
+ 				owned_by = TUR
 				owned_by = OSM
 				owned_by = TRK
+				}
 			}
 		}
 

@@ -808,7 +808,7 @@ country_event = {
 		name = "flavor_swe.EVTOPTA3232"
 		ai_chance = { factor = 90 }
 		add_stability = -1
-		change_government = absolute_monarchy
+		change_government = despotic_monarchy
 		add_country_modifier = {
 			name = the_absolutism
 			duration = -1

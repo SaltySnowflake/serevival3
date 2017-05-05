@@ -4,47 +4,47 @@ namespace = BtPLegacy_flavour_ALB
 #Modified by Driaocht 16-9-28
 
 # Pal Gazulli
-country_event = {
-	id = BtPLegacy_flavour_ALB.1
-	title = "BtPLegacyALB.EVTNAME1"
-	desc = "BtPLegacyALB.EVTDESC1"
-	picture = DIPLOMACY_eventPicture
-
-	fire_only_once = yes
-	
-	trigger = {
-		is_year = 1435	#30 years old
-		NOT = { is_year = 1470 }
-		OR = {
-			AND = {
-				tag = ALB 
-				owns = 3182 #Scutari
-			}
-			AND = {
-				NOT = { exists = ALB }
-				OR = {
-					accepted_culture = albanian
-					primary_culture = albanian
-				}
-				owns = 3182 #Scutari
-			}
-		}
-		NOT = { advisor_exists = btp_adv_alb.1 }
-	}
-
-	mean_time_to_happen = {
-		months = 300
-	}
-
-	option = {				# Ok
-		name = "GLORYTOOURNATION"
-		add_dip_power = 25
-		define_advisor = {
-			name = "Pal Gazulli"
-			location = 3182 #Albania
-			skill = 1
-			type = diplomat
-			discount = yes 
-		}
-	}
-}
+#country_event = {
+#	id = BtPLegacy_flavour_ALB.1
+#	title = "BtPLegacyALB.EVTNAME1"
+#	desc = "BtPLegacyALB.EVTDESC1"
+#	picture = DIPLOMACY_eventPicture
+#
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		is_year = 1435	#30 years old
+#		NOT = { is_year = 1470 }
+#		OR = {
+#			AND = {
+#				tag = ALB 
+#				owns = 3182 #Scutari
+#			}
+#			AND = {
+#				NOT = { exists = ALB }
+#				OR = {
+#					accepted_culture = albanian
+#					primary_culture = albanian
+#				}
+#				owns = 3182 #Scutari
+#			}
+#		}
+#		NOT = { advisor_exists = btp_adv_alb.1 }
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 300
+#	}
+#
+#	option = {				# Ok
+#		name = "GLORYTOOURNATION"
+#		add_dip_power = 25
+#		define_advisor = {
+#			name = "Pal Gazulli"
+#			location = 3182 #Albania
+#			skill = 1
+#			type = diplomat
+#			discount = yes 
+#		}
+#	}
+#}
