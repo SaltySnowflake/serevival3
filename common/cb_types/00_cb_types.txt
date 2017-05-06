@@ -1064,8 +1064,15 @@ cb_take_mandate = {
 		is_neighbor_of = FROM
 		FROM = { is_emperor_of_china = yes }
 		OR = {
-			religion_group = pagan
-			religion_group = eastern
+			culture_group = altaic
+			culture_group = burman
+			culture_group = thai
+			culture_group = mon_khmer 
+			culture_group = malay
+			culture_group = korean_g
+			culture_group = japanese_g
+			culture_group = east_asian
+			culture_group = miao_g
 		}
 	}
 
