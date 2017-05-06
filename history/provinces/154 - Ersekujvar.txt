@@ -30,6 +30,7 @@ discovered_by = ottoman
 1440.1.1 = { unrest = 10 } # Struggles between the supporters of Ladislaus and Elisabeth of Hungary
 1443.1.1 = { unrest = 0 }
 
+1444.10.1 = {add_core = SLO owner = SLO add_local_autonomy = 0 }
 1444.11.11 = { add_core = HUN owner = HUN add_local_autonomy = 0 }
 
 1490.1.1 = { controller = HAB } # Occupied

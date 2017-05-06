@@ -1,8 +1,8 @@
 # 2160 - Ngaichow
 
-owner = MNG
-controller = MNG
-add_core = MNG
+owner = YUE
+controller = YUE
+add_core = YUE
 culture = chimin
 religion = confucianism
 capital = "Ngaichow"
@@ -21,8 +21,7 @@ discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
 
-1444.11.01 = { remove_core = MNG add_core = MIN owner = MIN add_local_autonomy = 0 }
-1444.11.11 = { add_core = MNG remove_core = MIN owner = MNG }
+1444.11.11 = { add_core = MNG owner = MNG add_local_autonomy = 0  }
 
 1514.1.1 = { discovered_by = POR }
 
