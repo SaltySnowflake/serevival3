@@ -2298,7 +2298,7 @@ country_event = {
 
 	option = {
 		name = "usa_dlc.EVTOPTB60" # Raise Provincial Militias
-		add_manpower = 20
+		add_yearly_manpower = 20
 		add_mil_power = 50
 		add_army_tradition = 10
 	}
@@ -2306,7 +2306,7 @@ country_event = {
 	option = {
 		name = "usa_dlc.EVTOPTC60" # Call for Volunteers
 		add_adm_power = 20
-		add_manpower = 10
+		add_yearly_manpower = 10
 	}
 }
 

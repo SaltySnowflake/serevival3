@@ -823,7 +823,7 @@ country_event = {
 
 	option = {
 		name = "tyw_events.19.a"
-		add_manpower = -2
+		add_yearly_manpower = -2
 	}
 	option = {
 		name = "tyw_events.19.b"

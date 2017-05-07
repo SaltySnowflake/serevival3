@@ -1,7 +1,144 @@
 # province id = rotation in degrees, 0 is pointing right, then ccw)
 # can be reloaded ingame by cmd: reloadtradewinds
-
-# North Atlantic Westerlies
-
-
-# Atlantic Northeasterlies
+ 
+ 
+#====--North Alantic--====#
+# Vanilla
+# Winds in the north (Westerlies)
+1571 = 70 #Changed: Normal 0
+1574 = 150 #Changed: Normal 30
+1570 = 15 #Changed: Normal -30
+1572 = 20 #Normal 20
+1573 = 15 #Changed: Normal -15
+1582 = 0 #Normal 0
+1569 = 10 #Normal 10
+1568 = 25 #Changed: Normal 40
+1565 = -15 #Normal -15
+1564 = 15 #Normal 15
+1479 = -20 #Normal -20
+ 
+# Winds in the south (Trade Winds)
+1472 = 230 #Normal 230
+1566 = 235 #Normal 235
+1471 = 245 #Normal 245
+1578 = 200 #Normal 200
+1470 = 190 #Normal 190
+1581 = 190 #Normal 190
+1579 = 200 #Normal 200
+1576 = 190 #Changed: Normal 170
+1577 = 190 #Changed: Normal 160
+# Added
+1496 = 0
+1497 = 0
+1924 = -15
+1501 = 40
+1499 = 15
+1492 = 15
+1494 = 15
+1495 = 10
+1498 = -15
+1567 = -35
+1563 = 0
+1500 = 25
+1495 = 25
+#====--South Alantic--====#
+#Trade Winds(South easterly)
+1469 = 180
+1467 = 180
+1586 = 150
+1466 = 170
+1597 = 170
+1585 = 165
+1464 = 165
+1463 = 160
+1462 = 140
+1468 = 180
+1584 = 180
+1530 = 175
+1531 = 195
+1596 = 220
+1591 = 240
+1532 = 230
+1589 = -75
+1590 = 240
+1533 = 230
+1534 = 230
+1535 = 270
+1598 = 180
+1601 = 160
+#Southern Westerlies
+1539 = 0
+1595 = 0
+1538 = 0
+1587 = 0
+1594 = 10
+1537 = 13
+1588 = 15
+1593 = 0
+1536 = -35
+1606 = 0
+1605 = 0
+1604 = 0
+1602 = 0
+1608 = 0
+1609 = 0
+1603 = 0
+1602 = 0
+1607 = 0
+1610 = 0
+1460 = 10
+1461 = -15
+# South indian Antartic
+1459 = 0
+1625 = 0
+1626 = 0
+1629 = 0
+1628 = 0
+1631 = 0
+1636 = 0
+1637 = 0
+1632 = 0
+1633 = 0
+1638 = 0
+1640 = 30
+1639 = 0
+1634 = 0
+1417 = 0
+1458 = 10
+1627 = 15
+#Southern Indian Ocean southeasterly
+1454 = 270
+1630 = 330
+1455 = 210
+1450 = 195
+1617 = 180
+1449 = 190
+1448 = 170
+1624 = 180
+1623 = 180
+1621 = 180
+1620 = 180
+1643 = 90
+1644 = 120
+1642 = 160
+1641 = 140
+1418 = 45
+1419 = 100
+1420 = 165
+#Northern Indian Ocean
+1452 = 200
+1615 = 200
+1451 = 200
+1339 = 200
+1338 = 200
+1337 = 200
+1332 = 210
+1333 = 210
+1336 = 220
+#Bay of Bengal Northereasterly
+1346 = 200
+1345 = 200
+1349 = 200
+1611 = 220
+1612 = 220
+1344 = 230

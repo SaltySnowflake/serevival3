@@ -583,7 +583,7 @@ country_event = {
 			limit = {
 				manpower_percentage = 0.5
 			}
-			add_manpower = -40
+			add_yearly_manpower = -40
 			
 			2315 = {
 				add_unit_construction = {
@@ -943,7 +943,7 @@ country_event = {
 				every_owned_province = { add_claim = TRK }
 			}
 		}
-		add_manpower = 12
+		add_yearly_manpower = 12
 		add_war_exhaustion = -5
 	}	
 }

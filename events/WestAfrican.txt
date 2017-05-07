@@ -320,7 +320,7 @@ province_event = {
 	option = {
 		name = "west_african.7.a"
 		owner = {
-			add_manpower = -1
+			add_yearly_manpower = -1
 			add_treasury = -25
 		}
 		set_province_flag = desert_border_patrols
@@ -1174,7 +1174,7 @@ country_event = {
 			}
 		}
 		add_treasury = 10
-		add_manpower = -1
+		add_yearly_manpower = -1
 	}
 
 	# Let them support the miltiary in other ways
@@ -1210,7 +1210,7 @@ country_event = {
 	# Send a party to explore
 	option = {
 		name = "west_african.24.a"
-		add_manpower = -3
+		add_yearly_manpower = -3
 		random_owned_province = {
 			limit = {
 				any_empty_neighbor_province = {

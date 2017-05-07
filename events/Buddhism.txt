@@ -595,7 +595,7 @@ country_event = {
 			}
 		}
 		add_karma = -10
-		add_manpower = 0.05
+		add_yearly_manpower = 0.05
 	}
 	#option = {
 	#	name = buddhism_events.9.c #Fine the Monasteries for any deserter found.

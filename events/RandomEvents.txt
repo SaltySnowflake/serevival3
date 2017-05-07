@@ -6981,7 +6981,7 @@ country_event = {
 			factor = 50
 		}
 		capital_scope = { add_base_tax = 1 }
-		add_manpower = -0.05
+		add_yearly_manpower = -0.05
 	}
 	option = {
 		name = "EVTOPTB729"
@@ -7335,7 +7335,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA735"
-		add_manpower = -0.25
+		add_yearly_manpower = -0.25
 	}
 	option = {
 		name = "EVTOPTB735"
@@ -7764,7 +7764,7 @@ country_event = {
 				war_exhaustion = 5
 			}
 		}
-		add_manpower = 0.15
+		add_yearly_manpower = 0.15
 		add_war_exhaustion = 1
 	}
 	option = {
@@ -7772,7 +7772,7 @@ country_event = {
 		ai_chance = {
 			factor = 2
 		}
-		add_manpower = 0.05
+		add_yearly_manpower = 0.05
 	}
 	option = {
 		name = "personality_options.742.a"
@@ -7796,7 +7796,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		add_manpower = 0.12
+		add_yearly_manpower = 0.12
 	}
 }
 

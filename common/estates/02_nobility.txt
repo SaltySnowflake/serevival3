@@ -37,7 +37,10 @@ estate_nobles =
 		NOT = { government = peasants_republic }
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { government = celestial_empire }
+		OR = {
+			NOT = { government = celestial_empire }
+			has_dlc = "Mandate of Heaven"
+		}
 		NOT = { government = celestial_empire_SE }
 		OR = {
 			NOT = { has_dlc = "Common Sense" }
@@ -101,6 +104,20 @@ estate_nobles =
 			NOT = { government = feudal_monarchy }
 		}		
 		influence = 5
+	}
+		influence_modifier = {
+		desc = EST_VAL_BLACK_ARMY
+		trigger = {
+			has_country_modifier = hun_black_army
+		}		
+		influence = -10
+	}
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE
+		trigger = {
+			government = celestial_empire
+		}		
+		influence = -10
 	}
 	
 	# Influence modifiers from Events:
@@ -239,6 +256,12 @@ estate_nobles =
 			religion = hinduism
 		}
 	}
+		custom_name = {
+		desc = estate_qinwang
+		trigger = {
+			government = celestial_empire
+		}
+	}
 	custom_name = {
 		desc = estate_mansabdars
 		trigger = {
@@ -268,6 +291,12 @@ estate_nobles =
 		desc = estate_planters
 		trigger = {
 			tag = USA
+		}
+	}
+		custom_name = {
+		desc = estate_bushi
+		trigger = {
+			culture_group = japanese_g
 		}
 	}
 
@@ -597,7 +626,7 @@ estate_nobles =
 						}	
 					}
 				}
-				add_manpower = 0.1
+				add_yearly_manpower = 0.1
 			}
 			if = {
 				limit = {
@@ -612,7 +641,7 @@ estate_nobles =
 						}	
 					}
 				}
-				add_manpower = 0.15
+				add_yearly_manpower = 0.15
 			}
 			if = {
 				limit = {
@@ -627,7 +656,7 @@ estate_nobles =
 						}	
 					}
 				}
-				add_manpower = 0.2
+				add_yearly_manpower = 0.2
 			}
 			if = {
 				limit = {
@@ -636,7 +665,7 @@ estate_nobles =
 						influence = 100
 					}
 				}
-				add_manpower = 0.25
+				add_yearly_manpower = 0.25
 			}	
 			add_estate_loyalty = {
 				estate = estate_nobles

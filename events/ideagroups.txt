@@ -461,7 +461,7 @@ country_event = {
 
 	option = {
 		name = ideagroups.112.a
-		add_manpower = 0.1
+		add_yearly_manpower = 0.1
 	}
 }
 
@@ -2873,7 +2873,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB831A"
-		add_manpower = -0.1
+		add_yearly_manpower = -0.1
 	}
 }
 
@@ -5490,7 +5490,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB842A"
-		add_manpower = -0.1
+		add_yearly_manpower = -0.1
 	}
 }
 
@@ -5633,7 +5633,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB6307"
-		add_manpower = -0.20
+		add_yearly_manpower = -0.20
 	}
 }
 
@@ -5883,7 +5883,7 @@ country_event = {
 		random_owned_province = {
 			add_base_manpower = 1
 		}
-		add_manpower = 5
+		add_yearly_manpower = 5
 	}
 }
 
@@ -6019,7 +6019,7 @@ country_event = {
 	
 	option = {
 		name = ideagroups.1408.a
-		add_manpower = 0.1
+		add_yearly_manpower = 0.1
 	}
 }
 

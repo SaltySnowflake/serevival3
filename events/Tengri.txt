@@ -2408,7 +2408,7 @@ country_event = {
 	}
 	option = {
 		name = tengri_events.49.b #Let them serve as soldiers!
-		add_manpower = 0.15
+		add_yearly_manpower = 0.15
 	}
 }
 

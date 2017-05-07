@@ -1028,7 +1028,7 @@ shirvan_area = { #3
 }
 
 circassia_area = { #4
-	463 2201 2197 2416 3262 3263 4156
+	463 2201 2197 2416 3262 3263
 }
 
 dagestan_area = { #3
@@ -3702,7 +3702,7 @@ nullsahel_area = {
 #might be missing from area #372?
 
 nullarab_area = {
-	1779
+	1779 4156
 }
 
 nullindo_area = {

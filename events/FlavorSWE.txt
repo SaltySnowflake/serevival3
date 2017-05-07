@@ -158,7 +158,7 @@ country_event = {
 	option = {		# Pick up the torch of freedom!
 		name = "flavor_swe.EVTOPTC3217"
 		ai_chance = { factor = 60 }
-		add_manpower = 10
+		add_yearly_manpower = 10
 		add_liberty_desire = 25
 		DAN = {
 			add_opinion = {

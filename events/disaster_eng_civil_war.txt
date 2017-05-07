@@ -30,7 +30,7 @@ country_event = {
 		name = "flavor_eng.EVTOPTA9225"
 		ai_chance = { factor = 50 }
 		set_country_flag = supports_parliamentarians
-		add_manpower = -0.25
+		add_yearly_manpower = -0.25
 		remove_country_modifier = eng_court_star_chamber
 		if = {
 			limit = { has_heir = yes }
@@ -64,7 +64,7 @@ country_event = {
 		name = "flavor_eng.EVTOPTB9225"
 		ai_chance = { factor = 50 }
 		set_country_flag = supports_royalists
-		add_manpower = -0.25
+		add_yearly_manpower = -0.25
 		random_owned_province = {
 			limit = {
 				region = british_isles_region
@@ -117,7 +117,7 @@ country_event = {
 		name = "flavor_eng.EVTOPTB9226"
 		ai_chance = { factor = 10 }
 		add_stability_or_adm_power = yes
-		add_manpower = 2
+		add_yearly_manpower = 2
 	}
 }
 
@@ -155,7 +155,7 @@ country_event = {
 		name = "flavor_eng.EVTOPTB9227"
 		ai_chance = { factor = 10 }
 		add_stability_or_adm_power = yes
-		add_manpower = 2
+		add_yearly_manpower = 2
 	}
 }
 
