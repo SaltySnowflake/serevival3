@@ -43,7 +43,7 @@ TSI = "countries/KingdomTwoSicilies.txt"
 UGR = "countries/Uralia.txt"
 VIN = "countries/Vinland.txt"
 WLN = "countries/Wallonia.txt"
-#YYK = "countries/YnysyKedyrn.txt" #no formation desison, - Pirate - 2017.4.30
+YYK = "countries/YnysyKedyrn.txt"
 
 #Colonial Nations
 ALK	= "countries/Alaska.txt"
