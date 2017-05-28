@@ -265,7 +265,8 @@ yukagyr = {
 
 evenks = {
 	manchu = {
-		graphical_culture = asiangfx
+		country = { has_banners = 1}
+		province = { local_has_banners = 1}
 		primary = MCH
 		dynasty_names = {
 			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
