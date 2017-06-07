@@ -1524,9 +1524,8 @@ old_asian = {
 		icon = 27
 		color = { 0.1 0.3 0.85 }
 		country = {
-			global_unrest = -2
-			global_regiment_cost = -0.1
-		}
+			cav_to_inf_ratio = 0.25
+			global_regiment_cost = -0.2
 		country_as_secondary = {
 			global_unrest = -2
 			global_regiment_cost = -0.1

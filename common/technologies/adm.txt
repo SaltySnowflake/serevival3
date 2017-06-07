@@ -92,7 +92,7 @@ technology = {
 
 	year = 1505
 	courthouse = yes
-	max_states = 5
+	max_states = 3
 
 }
 
@@ -130,7 +130,7 @@ technology = {
 	
 	administrative_monarchy	= yes 
 	administrative_republic	= yes
-	max_states = 6
+	max_states = 3
 }
 
 technology = {
@@ -172,9 +172,9 @@ technology = {
 	year = 1622
 	
 	university = yes	
-	max_states = 9
+	max_states = 5
 	
-	administrative_efficiency = 0.2
+	administrative_efficiency = 0.1
 	development_efficiency = 0.1
 }
 
@@ -197,9 +197,8 @@ technology = {
 	# Tech 20
 	year = 1661
 	
-	absolute_monarchy = yes
 	republican_dictatorship = yes
-	max_states = 12
+	max_states = 5
 }
 
 technology = {
@@ -225,7 +224,7 @@ technology = {
 	# Tech 23
 	year = 1700
 	
-	administrative_efficiency = 0.2
+	administrative_efficiency = 0.1
 	development_efficiency = 0.1
 }
 
@@ -234,7 +233,7 @@ technology = {
 	year = 1715
 	
 	counting_house = yes  
-	max_states = 15
+	max_states = 5
 }
 
 technology = {
@@ -257,9 +256,9 @@ technology = {
 	# Tech 27
 	year = 1760
 
-	administrative_efficiency = 0.2
+	administrative_efficiency = 0.1
 	development_efficiency = 0.1	
-	max_states = 18
+	max_states = 5
 }
 
 technology = {
@@ -293,7 +292,7 @@ technology = {
 	
 	revolutionary_republic = yes
 	revolutionary_empire = yes
-	max_states = 21
+	max_states = 5
 }
 
 technology = {

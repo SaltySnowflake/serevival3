@@ -960,7 +960,7 @@ moldavia_area = { #3
 }
 
 transylvania_area = { #5 (Eastern Hungary)
-	157 158 3152 4127 3154 4155
+	157 158 3152 4127 3154 
 }
 
 southern_transylvania_area = { #3
@@ -1785,7 +1785,7 @@ merv_area = { #3
 }
 
 luristan_area = { #4
-	413 2209 2210 2217 4170
+	413 2209 2210 2217
 }
 
 balkh_area = { #3
@@ -1811,7 +1811,7 @@ iraq_e_ajam_area = { #4
 }
 
 azerbaijan_area = { #3 #Southern Azerbaijan
-	414 2212 2215 4172
+	414 2212 2215
 }
 
 isfahan_area = { #3
@@ -3697,7 +3697,7 @@ nullmaghreb_area = {
 }
 
 nullsahel_area = {
-	1793 3742 3743 3747 3748 3749 3752 3753 3754 3770 3771 3781 3782 3784 3791)
+	1793 3742 3743 3747 3748 3749 3752 3753 3754 3770 3771 3781 3782 3784 3791 4155 4172
 }
 #might be missing from area #372?
 
