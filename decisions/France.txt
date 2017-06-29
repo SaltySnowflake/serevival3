@@ -6,7 +6,7 @@ country_decisions = {
 			OR = { 
 				culture_group = french
 				tag = FRA
-				tag = AVI
+				tag = ANV
 			}
 			normal_or_historical_nations = yes
 			OR = {
@@ -36,7 +36,7 @@ country_decisions = {
 			OR = { 
 				culture_group = french
 				tag = FRA
-				tag = AVI
+				tag = ANV
 			}
 			normal_or_historical_nations = yes
 			OR = {
@@ -73,7 +73,7 @@ country_decisions = {
 			OR = { 
 				culture_group = french
 				tag = FRA
-				tag = AVI
+				tag = ANV
 			}
 			normal_or_historical_nations = yes
 			OR = {

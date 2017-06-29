@@ -6,7 +6,7 @@ country_decisions = {
 				primary_culture = northumbrian
 				primary_culture = english
 				tag = GBR
-				tag = AVI
+				tag = ANV
 			}
 			capital_scope = { continent = europe }
 			dip_tech = 15
@@ -35,7 +35,7 @@ country_decisions = {
 				primary_culture = northumbrian
 				primary_culture = english
 				tag = GBR
-				tag = AVI
+				tag = ANV
 			}
 			capital_scope = { continent = europe }
 			NOT = { has_country_modifier = britanna_rules_the_waves }
