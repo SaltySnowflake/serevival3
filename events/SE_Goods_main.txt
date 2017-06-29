@@ -1046,6 +1046,7 @@ province_event = {
 			check_variable = { which = ores_variable value = 2 }
 			NOT = { check_variable = { which = ores_variable value = 3 } }
 		}
+		change_trade_goods = copper
 		hidden_effect = { set_variable = { which = ores_variable value = 0 } }
 	}
 	option = {
