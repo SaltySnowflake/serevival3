@@ -362,7 +362,7 @@ SEtradegoods = {
 			}
 			AND = {
 				trade_goods = copper 
-				owner = { copper = 33 }
+				owner = { copper = 3 }
 			}
 			AND = {
 				trade_goods = tin 
