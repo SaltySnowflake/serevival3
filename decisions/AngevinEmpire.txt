@@ -13,16 +13,16 @@ country_decisions = {
 				capital_scope = { region = france_region }
 				capital_scope = { region = british_isles_region }
 			}
-			OR = {
-				dynasty = "Plantagenet"
-				dynasty = "York"
-				dynasty = "Lancaster"
-				dynasty = "de Valois"
-				dynasty = "de Anjou"
-				dynasty = "de Dreux"
-				dynasty = "de Artois"
-				dynasty = "de Bourbon"
-				dynasty = "Turpen" #Why not ahhaah
+	#		OR = {
+	#			dynasty = "Plantagenet"
+	#			dynasty = "York"
+	#			dynasty = "Lancaster"
+	#			dynasty = "de Valois"
+	#			dynasty = "de Anjou"
+	#			dynasty = "de Dreux"
+	#			dynasty = "de Artois"
+	#			dynasty = "de Bourbon"
+	#			dynasty = "Turpen" #Why not ahhaah #Not fun ish tbh PirateAE - 2017-07-10
 			}
 			NOT = { exists = ANV }
 			NOT = { exists = GBR }

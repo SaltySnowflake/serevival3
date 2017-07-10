@@ -41,7 +41,7 @@ country_event = {
 		}
 	}
 	
-	immediate = { set_ruler_flag = the_old_ones_are_waking }
+	immediate = { set_country_flag = the_old_ones_are_waking }
 	
 	option = {
 		name = "oldgods.1.a"

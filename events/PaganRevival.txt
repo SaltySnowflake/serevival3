@@ -378,8 +378,8 @@ province_event = {
 	option = {		# Norse
 		trigger = {
 			OR = {
-				culture_group = scandinavian
-				primary_culture = normand
+				owner = { culture_group = scandinavian }
+				owner = { primary_culture = normand }
 			}
 		}
 		name = pagan_revival.3.a
@@ -399,19 +399,19 @@ province_event = {
 	option = {		# Gaelic
 		trigger = {
 			OR = {
-				culture_group = gaelic
-				culture_group = brythonic
-				culture_group = unified_celtic_group
+				owner = { culture_group = gaelic }
+				owner = { culture_group = brythonic }
+				owner = { culture_group = unified_celtic_group }
 				AND = {
-					culture_group = french
-					NOT = { primary_culture = normand }
+					owner = { culture_group = french }
+					NOT = { owner = { primary_culture = normand } }
 				}
 				AND = {
-					culture_group = iberian
-					NOT = { primary_culture = andalucian }
+					owner = { culture_group = iberian }
+					NOT = { owner = { primary_culture = andalucian } }
 				}
-				primary_culture = scottish
-				primary_culture = swiss
+				owner = { primary_culture = scottish }
+				owner = { primary_culture = swiss }
 			}
 		}
 		name = pagan_revival.3.a
@@ -429,7 +429,7 @@ province_event = {
 		}
 	}
 	option = {		# Finnish
-		trigger = { culture_group = finno_ugric }
+		trigger = { owner = { culture_group = finno_ugric } }
 		name = pagan_revival.3.a
 		ai_chance = { factor = 30 }
 		if = { 
@@ -447,8 +447,8 @@ province_event = {
 	option = {		# Slavic
 		trigger = {
 			OR = {
-				culture_group = east_slavic
-				culture_group = west_slavic
+				owner = { culture_group = east_slavic }
+				owner = { culture_group = west_slavic }
 			}
 		}
 		name = pagan_revival.3.a
@@ -468,8 +468,8 @@ province_event = {
 	option = {		# Romuva
 		trigger = {
 			OR = {
-				culture_group = baltic 
-				primary_culture = prussian
+				owner = { culture_group = baltic }
+				owner = { primary_culture = prussian }
 			}
 		}
 		name = pagan_revival.3.a
@@ -489,11 +489,11 @@ province_event = {
 	option = {		# Tengri
 		trigger = {
 			OR = {
-				culture_group = carpathian
-				culture_group = dacian
-				culture_group = turkish_g
-				culture_group = altaic
-				culture_group = evenks
+				owner = { culture_group = carpathian }
+				owner = { culture_group = dacian }
+				owner = { culture_group = turkish_g }
+				owner = { culture_group = altaic }
+				owner = { culture_group = evenks }
 			}
 		}
 		name = pagan_revival.3.a
@@ -513,12 +513,12 @@ province_event = {
 	option = {		# Hellenic
 		trigger = {
 			OR = {
-				culture_group = byzantine
-				culture_group = caucasian
-				culture_group = south_slavic
-				culture_group = illyrian
-				culture_group = latin
-				culture_group = occitanocatala
+				owner = { culture_group = byzantine }
+				owner = { culture_group = caucasian }
+				owner = { culture_group = south_slavic }
+				owner = { culture_group = illyrian }
+				owner = { culture_group = latin }
+				owner = { culture_group = occitanocatala }
 			}
 		}
 		name = pagan_revival.3.a
@@ -538,10 +538,10 @@ province_event = {
 	option = {		# Zoroastrian
 		trigger = {
 			OR = {
-				culture_group = iranian
-				culture_group = turkish_g
-				primary_culture = al_suryah_arabic
-				primary_culture = al_iraqiya_arabic
+				owner = { culture_group = iranian }
+				owner = { culture_group = turkish_g }
+				owner = { primary_culture = al_suryah_arabic }
+				owner = { primary_culture = al_iraqiya_arabic }
 			}
 		}
 		name = "SCA_DAHE.EVTOPTA1"
@@ -562,13 +562,13 @@ province_event = {
 		trigger = {
 			OR = {
 				AND = {
-					culture_group = germanic
-					NOT = { primary_culture = prussian }
-					NOT = { primary_culture = swiss }
+					owner = { culture_group = germanic }
+					NOT = { owner = { primary_culture = prussian } }
+					NOT = { owner = { primary_culture = swiss } }
 				}
 				AND = {
-					culture_group = british
-					NOT = { primary_culture = scottish }
+					owner = { culture_group = british }
+					NOT = { owner = { primary_culture = scottish } }
 				}
 			}
 		}
@@ -589,8 +589,8 @@ province_event = {
 	option = {		# Egyptian
 		trigger = {
 			OR = {
-				primary_culture = al_misr_arabic
-				primary_culture = saidi
+				owner = { primary_culture = al_misr_arabic }
+				owner = { primary_culture = saidi }
 			}
 		}
 		name = pagan_revival.3.a
@@ -610,9 +610,9 @@ province_event = {
 	option = {		# Arabian
 		trigger = {
 			OR = {
-				primary_culture = bedouin_arabic
-				primary_culture = omani_culture
-				primary_culture = yemeni_culture
+				owner = { primary_culture = bedouin_arabic }
+				owner = { primary_culture = omani_culture }
+				owner = { primary_culture = yemeni_culture }
 			}
 		}
 		name = pagan_revival.3.a
@@ -632,8 +632,8 @@ province_event = {
 	option = {		# Amanaiism
 		trigger = {
 			OR = {
-				culture_group = maghrebi
-				primary_culture = andalucian
+				owner = { culture_group = maghrebi }
+				owner = { primary_culture = andalucian }
 			}
 		}
 		name = pagan_revival.3.a

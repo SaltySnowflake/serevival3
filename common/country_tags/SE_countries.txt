@@ -357,7 +357,7 @@ AO0 = "countries/Awngthim.txt"
 
 ##'MURICA
 #Formables
-#NTA	= "countries/NativeAmerica.txt" #No formation desison - Pirate - 2017.4.30
+NTA	= "countries/NativeAmerica.txt" #No formation desison - Pirate - 2017.4.30
 AGJ = "countries/Angola Janga.txt"
 #North
 AAI = "countries/Aani.txt"

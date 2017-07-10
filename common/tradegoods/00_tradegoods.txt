@@ -5058,7 +5058,7 @@ nutmeg = {
 	#nutmeg and mace, super rare, indonesia
 	color = { 0.65 0.25 0.20 }
 	modifier = {  } #bonus tied to triggered modifier; owning the 646 island
-	province = { idea_cost = -0.5 }
+	province = { idea_cost = -0.1 }
 	chance = { 
 		factor = 20
 		modifier = {  

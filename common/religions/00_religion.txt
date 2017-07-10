@@ -315,6 +315,9 @@ christian = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
+			remove_church_aspect = random
+			remove_church_aspect = random
+			remove_church_aspect = random
 	
 			if = {
 				limit = {
@@ -698,6 +701,9 @@ christian = {
 			remove_country_modifier = the_test_act
 			remove_country_modifier = superintendent_office
 			remove_country_modifier = the_popery_act
+			remove_church_aspect = random
+			remove_church_aspect = random
+			remove_church_aspect = random
 			
 			if = {
 				limit = {
@@ -860,7 +866,7 @@ christian = {
 		
 		date = 1536.5.1
 		
-	#	fervor = yes
+		fervor = yes
 	}
 	
 	apostolic = {
@@ -965,6 +971,9 @@ christian = {
 				name = "conversion_zeal"
 				duration = 3650
 			}
+			remove_church_aspect = random
+			remove_church_aspect = random
+			remove_church_aspect = random
 		}
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {

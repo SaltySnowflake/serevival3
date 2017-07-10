@@ -1,0 +1,115 @@
+country_decisions = {
+
+	american_union = {
+		major = yes
+
+		potential = {
+			OR = {
+				culture_group = eskaleut
+				culture_group = central_algonquian
+				culture_group = eastern_algonquian
+				culture_group = plains_algonquian
+				culture_group = iroquoian
+				culture_group = muskogean
+				culture_group = siouan
+				culture_group = caddoan
+				culture_group = na_dene
+				culture_group = sonoran
+				culture_group = penutian
+			}
+			capital_scope = { continent = north_america }
+			NOT = { exists = NTA }
+			OR = {
+				ai = no
+				num_of_cities = 5
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			num_of_cities = 30
+		}
+		effect = {
+			change_tag = NTA
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+			}
+			change_government = constitutional_republic
+			set_government_rank = 3
+			north_america = {
+				limit = { NOT = { is_core = ROOT } }
+				add_permanent_claim = NTA 
+			}
+			hidden_effect = {
+				add_accepted_culture = aleutian
+				add_accepted_culture = inuit
+				add_accepted_culture = shawnee
+				add_accepted_culture = illini
+				add_accepted_culture = anishinabe
+				add_accepted_culture = cree
+				add_accepted_culture = mesquakie
+				add_accepted_culture = delaware
+				add_accepted_culture = abenaki
+				add_accepted_culture = mikmaq
+				add_accepted_culture = mahican
+				add_accepted_culture = powhatan
+				add_accepted_culture = pequot
+				add_accepted_culture = beothuk
+				add_accepted_culture = cheyenne
+				add_accepted_culture = blackfoot
+				add_accepted_culture = arapaho
+				add_accepted_culture = iroquois
+				add_accepted_culture = cherokee
+				add_accepted_culture = huron
+				add_accepted_culture = susquehannock
+				add_accepted_culture = creek
+				add_accepted_culture = choctaw
+				add_accepted_culture = chickasaw
+				add_accepted_culture = dakota
+				add_accepted_culture = nakota
+				add_accepted_culture = chiwere
+				add_accepted_culture = osage
+				add_accepted_culture = catawba
+				add_accepted_culture = wichita
+				add_accepted_culture = caddo
+				add_accepted_culture = pawnee
+				add_accepted_culture = apache
+				add_accepted_culture = navajo
+				add_accepted_culture = chipewyan
+				add_accepted_culture = haida
+				add_accepted_culture = athabascan
+				add_accepted_culture = pueblo
+				add_accepted_culture = piman
+				add_accepted_culture = shoshone
+				add_accepted_culture = kiowa
+				add_accepted_culture = salish
+				add_accepted_culture = chinook
+				add_accepted_culture = yokuts
+				add_accepted_culture = sahaptian
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+		}
+
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}
