@@ -23,7 +23,7 @@ country_decisions = {
 	#			dynasty = "de Artois"
 	#			dynasty = "de Bourbon"
 	#			dynasty = "Turpen" #Why not ahhaah #Not fun ish tbh PirateAE - 2017-07-10
-			}
+	#		}
 			NOT = { exists = ANV }
 			NOT = { exists = GBR }
 			NOT = { tag = PAP }
