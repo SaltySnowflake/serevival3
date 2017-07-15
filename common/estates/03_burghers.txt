@@ -25,10 +25,13 @@ estate_burghers =
 		NOT = { government = native_council }
 		NOT = { government = aboriginal_native_council }
 		NOT = { government = siberian_native_council }
+		OR = {
+			NOT = { government = celestial_empire }
+			NOT = { government = celestial_empire_SE }
+			has_dlc = "Mandate of Heaven"
+		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { government = celestial_empire }
-		NOT = { government = celestial_empire_SE }
 	}
 	
 	# If true, province can be granted to estate
