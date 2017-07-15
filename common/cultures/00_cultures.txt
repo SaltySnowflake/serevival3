@@ -4331,6 +4331,8 @@ east_asian = {	# Chinese Group
 		}
 	}
 	manchuqing = {
+		country = { has_banners = 1}
+		province = { local_has_banners = 1}
 		graphical_culture = asiangfx
 		primary = QNG
 		dynasty_names = {
