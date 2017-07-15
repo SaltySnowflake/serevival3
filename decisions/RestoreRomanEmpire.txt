@@ -38,8 +38,11 @@ country_decisions = {
 				legitimacy = 90
 				republican_tradition = 90
 			}
+			OR = {
+				religion_group = christian
+				religion = hellenic
+			}
 			prestige = 50
-		    adm_tech = 10
 			is_subject = no
 			is_at_war = no
 			is_nomad = no
@@ -90,6 +93,18 @@ country_decisions = {
 					}
 					change_culture = roman
 				}
+			}
+			if = {
+				limit = {
+					government = republic
+				}
+				change_government = roman_diarchy
+			}
+			if = {
+				limit = {
+					government = monarchy
+				}
+				change_government = absolute_empire
 			}
 			change_primary_culture = roman
 			custom_tooltip = restore_roman_empire_tt
