@@ -1262,9 +1262,9 @@ control_strategic_province = {
 
 	effect = {
 		FROM = {
-			add_prestige = 2
+			add_prestige = 5
 			add_treasury = 25
-			add_mercantilism =  0.01
+			add_mercantilism = 2
 		}
 	}
 	
