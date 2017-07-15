@@ -5,3 +5,4 @@ NDefines.NNationDesigner.RULER_MIN_AGE = 1
 NDefines.NNationDesigner.RULER_MAX_AGE = 60
 NDefines.NNationDesigner.HEIR_MAX_AGE = 40
 NDefines.NCountry.ALLOW_FEMALE_GENERALS = 1
+NDefines.NEconomy.MINIMUM_INTERESTS = 1
