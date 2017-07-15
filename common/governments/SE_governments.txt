@@ -432,16 +432,19 @@ occitan_republic = {
 	rank = {
 		1 = {
 			merchants = 1
-			caravan_power = 0.33	
+			caravan_power = 0.33
+			max_absolutism = -30	
 		}
 		2 = {
 			merchants = 1
-			caravan_power = 0.33	
+			caravan_power = 0.33
+			max_absolutism = -30	
 		}
 		3 = {	
 			merchants = 1
 			caravan_power = 0.33
 			global_autonomy = -0.025
+			max_absolutism = -30
 		}
 	}
 	
@@ -486,16 +489,19 @@ catalan_republic = {
 	rank = {
 		1 = {
 			merchants = 1
-			caravan_power = 0.33	
+			caravan_power = 0.33
+			max_absolutism = -30	
 		}
 		2 = {
 			merchants = 1
-			caravan_power = 0.33	
+			caravan_power = 0.33
+			max_absolutism = -30	
 		}
 		3 = {	
 			merchants = 1
 			caravan_power = 0.33
 			global_autonomy = -0.025
+			max_absolutism = -30
 		}
 	}
 	
@@ -687,16 +693,19 @@ thing = {
 			naval_forcelimit_modifier = 0.33
 			trade_efficiency = 0.10
 			global_autonomy = -0.025
+			max_absolutism = -30
 		}
 		2 = {
 			naval_forcelimit_modifier = 0.33
 			trade_efficiency = 0.10
-			global_autonomy = -0.05	
+			global_autonomy = -0.05
+			max_absolutism = -30	
 		}
 		3 = {
 			naval_forcelimit_modifier = 0.33
 			trade_efficiency = 0.10
 			global_autonomy = -0.075
+			max_absolutism = -30
 		}
 	}
 }
@@ -731,16 +740,19 @@ roman_diarchy = {
 			years_of_nationalism = -5
 			land_morale = 0.05
 			global_autonomy = -0.05
+			max_absolutism = -30
 		}
 		2 = {
 			years_of_nationalism = -5
 			land_morale = 0.1
 			global_autonomy = -0.075
+			max_absolutism = -30
 		}
 		3 = {
 			years_of_nationalism = -5
 			land_morale = 0.15
 			global_autonomy = -0.10
+			max_absolutism = -30
 		}
 	}
 	
@@ -845,14 +857,17 @@ american_republic = {
 		1 = {
 			stability_cost_modifier = -0.1
 			global_autonomy = -0.075
+			max_absolutism = -30
 		}
 		2 = {
 			stability_cost_modifier = -0.1
 			global_autonomy = -0.10
+			max_absolutism = -30
 		}
 		3 = {
 			stability_cost_modifier = -0.1
 			global_autonomy = -0.125
+			max_absolutism = -30
 		}
 	}
 
@@ -887,16 +902,19 @@ federal_republic = {
 			diplomatic_reputation = 1
 			global_spy_defence = 0.10
 			global_autonomy = -0.05
+			max_absolutism = -30
 		}
 		2 = {
 			diplomatic_reputation = 1
 			global_spy_defence = 0.10
 			global_autonomy = -0.075
+			max_absolutism = -30
 		}
 		3 = {
 			diplomatic_reputation = 1
 			global_spy_defence = 0.10
 			global_autonomy = -0.1
+			max_absolutism = -30
 		}
 	}
 
