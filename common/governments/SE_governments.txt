@@ -805,8 +805,6 @@ absolute_empire = {
 	valid_for_nation_designer = no
 	allow_convert = no
 	
-	has_parliament = yes
-	
 	ai_will_do = {
 		factor = 0
 	}
@@ -816,12 +814,11 @@ absolute_empire = {
 	rank = {
 		3 = {
 			discipline = 0.05
-			global_tax_modifier = 0.05
-			legitimacy = 0.5
-			prestige = 3
+			legitimacy = 1
+			prestige = 1
 			global_unrest = 2
-			stability_cost_modifier = 0.25
-			global_autonomy = -0.125
+			global_autonomy = -0.15
+			max_absolutism = 10
 		}
 	}
 	fixed_rank = 3
