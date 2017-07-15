@@ -689,6 +689,15 @@ SE_diplo_slot = {
 	}
 	trigger = {
 		NOT = { is_year = 1500 }
+		OR = {
+			government_rank = 2
+			AND = {
+				NOT = { government = tribal_despotism }
+				NOT = { government = tribal_kingdom }
+				NOT = { government = tribal_federation }
+				NOT = { government = tribal_democracy }
+			}
+		}
 	}
 	diplomatic_upkeep = -1
 }
