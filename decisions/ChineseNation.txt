@@ -1,0 +1,88 @@
+country_decisions = {
+	
+	chinese_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = CHN }
+			culture_group = east_asian	
+			OR = {
+				ai = no
+				num_of_cities = 15
+			}
+		}
+		allow = {
+			adm_tech = 20
+			is_subject = no
+			is_at_war = no
+			is_nomad = no
+			OR = {
+				is_emperor_of_china = yes
+				num_of_owned_provinces_with = {
+					value = 80
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+					}
+				}
+			}
+			
+			owns_core_province = 1816 # Beijing
+			owns_core_province = 1821 # Nanjing
+		}
+		effect = {
+			change_tag = CHN
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			set_government_rank = 3
+			set_capital = 1816
+			if = {
+				limit = {
+					government = republic
+				}
+				change_government = constitutional_republic
+			}
+			if = {
+				limit = {
+					government = monarchy
+				}
+				change_government = constitutional_monarchy
+			}
+			south_china_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CHN
+			}
+			xinan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CHN
+			}
+			north_china_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CHN
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
