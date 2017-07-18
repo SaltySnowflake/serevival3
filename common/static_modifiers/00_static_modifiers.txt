@@ -201,6 +201,8 @@ blockaded = {
 	ship_recruit_speed = 0.2
 	trade_goods_size_modifier = -0.5
 	province_trade_power_modifier = -0.75
+	local_monthly_devastation = 0.1
+
 }
 
 no_adjacent_controlled = {
@@ -249,6 +251,12 @@ development_scaled = {
 
 capital_city = {
 	fort_level = 1
+}
+
+
+patriarch_state = {
+	local_state_maintenance_modifier = 0.1
+	local_monthly_devastation = -0.05
 }
 
 # Multiplied in provinces of same religion.
@@ -484,6 +492,7 @@ base_values = {
 ai_nation = {
 	diplomats = 1 							# ai has to reserve a diplomat for short term action so it gets an extra to put it on equal footing with player
 	free_leader_pool = 1					# ai needs to have enough pool for 1 general & 1 admiral
+	sailors_recovery_speed = 0.25		
 }
 
 
@@ -746,6 +755,7 @@ num_of_marriages = {
 
 num_of_provinces = {
 	monthly_militarized_society = -0.01
+	
 	}
 
 # Multiplied by current Legitimacy - 50
@@ -807,8 +817,9 @@ recovery_motivation = {
 militarized_society = {
 
 	discipline = 0.10
-	manpower_recovery_speed = 0.33
-	land_maintenance_modifier = -0.33
+	manpower_recovery_speed = 0.20
+	land_maintenance_modifier = -0.20
+	
 	}
 
 
@@ -985,6 +996,10 @@ absolutism = {
 	core_decay_on_your_own = -0.5
 }
 
+streltsy_modifier = {
+	stability_cost_modifier = 1.0
+}
+
 power_projection = {
 	defensiveness = 0.1
 	global_trade_power = 0.2
@@ -1136,6 +1151,7 @@ discontent_sowed = {
 	republican_tradition = -0.2
 	devotion = -1
 	horde_unity = -1
+	meritocracy = -0.5
 }
 
 reputation_sabotaged = {
@@ -1224,18 +1240,18 @@ divert_trade = {
 
 karma_just_right =
 {
-	diplomatic_reputation = 1
+	diplomatic_reputation = 2
 	discipline = 0.05
 }
 
 karma_too_high =
 {
-	discipline = -0.05
+	diplomatic_reputation = 1
 }
 
 karma_too_low =
 {
-	diplomatic_reputation = -1
+	discipline = 0.025
 }
 
 ########################################

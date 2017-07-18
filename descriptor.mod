@@ -17,4 +17,4 @@ tags={
     "Fixes"
 }
 picture="Shattered.jpg"
-supported_version="1.21.*.*"
+supported_version="1.22.*.*"

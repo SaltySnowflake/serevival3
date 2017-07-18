@@ -236,19 +236,23 @@ country_decisions = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { government = occitan_monarchy }
-					NOT = { government = occitan_republic }
-					NOT = { government = catalan_monarchy }
-					NOT = { government = catalan_republic }
+					OR = {
+						NOT = { government = occitan_monarchy }
+						NOT = { government = occitan_republic }
+						NOT = { government = catalan_monarchy }
+						NOT = { government = catalan_republic }
+					}
 				}
 				change_government = theocratic_government
 			}
 			if = {
 				limit = {
+					OR = {
 					government = occitan_monarchy
 					government = occitan_republic
 					government = catalan_monarchy
 					government = catalan_republic
+					}
 				}
 				change_government = occitan_theocracy
 			}

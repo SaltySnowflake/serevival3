@@ -1,8 +1,5 @@
 # If you add religions, and use those tags, do not change them without changing everywhere they are used.
-# color = { 0.5 0.4 0.0 } 
-# color = { 0.4 0.9 0.1 } greenL
-# color = { 0.6 0.1 0.1 } red
-# color = { 0.5 0.5 0.5 } grey
+
 # Uses all 'modifiers' possible thats exported as a Modifier.
 
 christian = {
@@ -17,6 +14,8 @@ christian = {
 	flags_with_emblem_percentage = 33 # default == 0
 	flag_emblem_index_range = { 1 57 }
 
+	
+	
 	catholic = {
 		color = { 0.8 0.8 0 }
 		icon = 1
@@ -558,7 +557,7 @@ christian = {
 	}
 
 	orthodox = {
-		color = { 0.7 0.5 0 }
+		color = { 178 127 0 }
 		icon = 4
 		country = {
 			stability_cost_modifier = -0.1
@@ -585,6 +584,118 @@ christian = {
 		
 		has_patriarchs = yes		# Uses patriarch authority
 		misguided_heretic = yes		# Other christians hate them less
+		
+		orthodox_icons = {
+			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
+
+			icon_michael = {
+				discipline = 0.05
+				manpower_recovery_speed = 0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = no
+					}
+					modifier = {
+						factor = 3
+						is_in_important_war = yes
+					}
+				}
+			}
+
+			icon_eleusa = {
+				global_unrest = -3
+				harsh_treatment_cost = -0.25
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						NOT = {
+							calc_true_if = {
+								all_owned_province = {
+									unrest = 1
+								}
+								amount = 2
+							}
+						}
+					}
+					modifier = {
+						factor = 3
+						calc_true_if = {
+							all_owned_province = {
+								unrest = 1
+							}
+							amount = 5
+						}
+					}
+				}
+			}
+
+			icon_pancreator = {
+				development_cost = -0.10
+				build_cost = -0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 0
+				}
+			}
+	
+			icon_nicholas = {
+				improve_relation_modifier = 0.25
+				ae_impact = -0.1
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 0.5
+				}
+			}
+
+			icon_climacus = {
+				global_institution_spread = 0.25
+				embracement_cost = -0.2
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 0.8
+					modifier = {
+						factor = 0
+						NOT = {
+							calc_true_if = {
+								all_owned_province = {
+									current_institution = 1
+									NOT = { current_institution = 95 }
+								}
+								amount = 1
+							}
+						}
+					}
+					modifier = {
+						factor = 3
+						calc_true_if = {
+							all_owned_province = {
+								current_institution = 1
+								NOT = { current_institution = 95 }
+							}
+							amount = 5
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	coptic = {
@@ -1034,6 +1145,8 @@ christian = {
 		heretic = { BOGOMILIST FRATICELLI HUSSITE LOLLARD SOCINIAN }
 	}	
 	
+	harmonized_modifier = harmonized_christian
+	
 	crusade_name = CRUSADE
 }
 
@@ -1105,6 +1218,8 @@ muslim = {
 		uses_piety = yes				# Uses piety mechanics
 	}
 	
+	harmonized_modifier = harmonized_muslim
+	
 	crusade_name = JIHAD
 }
 
@@ -1140,6 +1255,8 @@ eastern = {
 		
 		heretic = { ZEN }
 		
+		harmonized_modifier = harmonized_buddhism
+		
 		uses_karma = yes
 	}
 	
@@ -1170,6 +1287,8 @@ eastern = {
 		heretic = { ZEN }
 		
 		uses_karma = yes
+		
+		harmonized_modifier = harmonized_vajrayana
 	}
 	
 	mahayana = {
@@ -1199,6 +1318,8 @@ eastern = {
 		heretic = { ZEN }
 		
 		uses_karma = yes
+		
+		harmonized_modifier = harmonized_mahayana
 	}
 
 	confucianism = {
@@ -1231,7 +1352,9 @@ eastern = {
 			global_unrest = -1
 		}
 		heretic = { SHUGENDO }
-		personal_deity = yes
+		uses_isolationism = yes
+		
+		harmonized_modifier = harmonized_shinto
 	}
 	
 	moism = {
@@ -1249,9 +1372,12 @@ eastern = {
 		uses_piety = yes
 		
 		heretic = { TAOIST }
+		
+		harmonized_modifier = harmonized_moism
 	}
 	
 	crusade_name = CRUSADE
+	
 }
 
 dharmic = {
@@ -1401,6 +1527,8 @@ dharmic = {
 		heretic = { TERAPANTHA }
 	}
 	
+	harmonized_modifier = harmonized_dharmic
+	
 	crusade_name = CRUSADE
 }
 
@@ -1429,6 +1557,7 @@ pagan = {
 	}
 	
 	crusade_name = HOLY_WAR
+	harmonized_modifier = harmonized_pagan
 }
 
 jewish_group = {
@@ -1503,6 +1632,9 @@ jewish_group = {
 	}
 	
 	crusade_name = HOLY_WAR
+	
+	harmonized_modifier = harmonized_jewish_group
+	
 }
 
 old_asian = {
@@ -1535,6 +1667,7 @@ old_asian = {
 		country = {
 			cav_to_inf_ratio = 0.25
 			global_regiment_cost = -0.2
+		}
 		country_as_secondary = {
 			global_unrest = -2
 			global_regiment_cost = -0.1
@@ -1615,6 +1748,9 @@ old_asian = {
 	}
 	
 	crusade_name = HOLY_WAR
+	
+	harmonized_modifier = harmonized_old_asian_group
+	
 }
 
 pacific_pagan = {
@@ -1792,6 +1928,8 @@ pacific_pagan = {
 	}
 	
 	crusade_name = HOLY_WAR
+	
+	harmonized_modifier = harmonized_pacific_pagan_group
 
 }
 
@@ -2118,6 +2256,8 @@ african_pagan = {
 	}
 	
 	crusade_name = HOLY_WAR
+	
+	harmonized_modifier = harmonized_african_pagan_group
 	
 }
 
@@ -2467,6 +2607,8 @@ american_pagan = {
 	
 	crusade_name = HOLY_WAR
 
+	harmonized_modifier = harmonized_american_pagan_group
+
 }
 
 european_pagan = {
@@ -2627,6 +2769,8 @@ european_pagan = {
 	}
 
 	crusade_name = HOLY_WAR
+	
+	harmonized_modifier = harmonized_european_pagan_group
 
 }
 
@@ -2651,6 +2795,9 @@ elder_gods = {
 		heretic = { ATHEIST }
 		fervor = yes
 	}
+
+	harmonized_modifier = harmonized_elder_gods
+	
 }
 
 no_religion = {
