@@ -43,8 +43,6 @@ scandinavia_region = {
 		western_norway
 		bothnia_area
 		subarctic_islands_area
-		laponia_area
-		baltic_islands_area
 		vastra_gotaland_area
 		ostra_svealand_area
 		iceland_area
@@ -179,17 +177,14 @@ iberia_region = {
 		upper_andalucia_area
 		castille_area
 		toledo_area
-		asturias_area
 		leon_area
 		alentejo_area
 		beieras_area
 		macaronesia_area
 		basque_area			#Can't figure this one out... appears to be basque country in vanilla??? only area not named area???
 		#BTADDITIONS
-		balearic_islands_area
 		extremadura_area
 		spanish_galicia_area
-		murcia_area
 	}
 }
 
@@ -357,7 +352,6 @@ mashriq_region = {
 		#BTADDITIONS
 		cyprus_area
 		tripoli_area
-		jordan_area
 	}
 }
 
@@ -435,12 +429,8 @@ arabia_region = {
 		najd_area
 		bahrain_area
 		oman_area
-		pirate_coast_area
 		dhofar_area
-		hadramut_area
 		yemen_area
-		ad_dahna_area
-		sarat_area
 		nullarab_area
 	}
 }
@@ -514,11 +504,7 @@ horn_of_africa_region = {
 		mogadishu_area
 		red_sea_coast_area
 		upper_nubia_area
-		sennar_area
-		dongola_area
-		damot_area
 		aussa_area
-		shewa_area
 	}
 }
 
@@ -526,7 +512,6 @@ east_africa_region = {
 	areas = {
 		northern_swahili_coast_area
 		central_swahili_coast_area
-		mozambique_area
 		lower_zambezi_area
 		upper_zambezi_area
 		ruvuma_area
@@ -537,9 +522,8 @@ east_africa_region = {
 		southern_madagascar
 		uticulo_makuana_area
 		jubba_area
-		east_african_islands_area
 		shire_area
-		mombasa_area
+		quelimane_area
 	}
 }
 
@@ -596,7 +580,6 @@ south_africa_region = {
 		south_african_plateau_area
 		cape_of_good_hope_area
 		zimbabwe_area
-		quelimane_area
 		butua_area
 		limpopo_area
 		transvall_area
