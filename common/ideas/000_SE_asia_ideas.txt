@@ -767,7 +767,10 @@ KHA_ideas = {
 		discipline = 0.05
 	}	
 	trigger = {
-		culture_group = altaic
+		OR = {
+			culture_group = altaic
+			tag = MGE
+		}
 	}
 	free = yes
 	the_greatest_empire = {
