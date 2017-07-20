@@ -74,6 +74,16 @@ country_decisions = {
 				}
 				add_permanent_claim = IBE
 			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { province_id = 127 } # Sardinia
+					NOT = { province_id = 1247 } # Corsica
+					NOT = { province_id = 2986 } # Sardinia
+				}
+				add_permanent_claim = IBE
+			}
+			
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300

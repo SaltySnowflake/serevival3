@@ -129,9 +129,19 @@ country_decisions = {
 			hidden_effect = {
 				iberia_region = {
 					limit = {
+						NOT = { owned_by = ROOT }
 						NOT = { area = macaronesia_area }
 						NOT = { area = alentejo_area }
 						NOT = { area = beieras_area }
+					}
+					add_permanent_claim = SPA
+				}
+				corsica_sardinia_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { province_id = 127 } # Sardinia
+						NOT = { province_id = 1247 } # Corsica
+						NOT = { province_id = 2986 } # Sardinia
 					}
 					add_permanent_claim = SPA
 				}
@@ -329,6 +339,15 @@ country_decisions = {
 					}
 					add_permanent_claim = SPA
 				}
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { province_id = 127 } # Sardinia
+					NOT = { province_id = 1247 } # Corsica
+					NOT = { province_id = 2986 } # Sardinia
+				}
+				add_permanent_claim = SPA
 			}
 		}
 		ai_will_do = {
