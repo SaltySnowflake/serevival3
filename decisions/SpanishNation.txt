@@ -102,7 +102,7 @@ country_decisions = {
 				custom_tooltip = ibasqueassim
 				hidden_effect = {
 					change_primary_culture = basqueiberia
-					every_core_province = { 
+					every_province = { 
 						limit = { culture = basque }
 						change_culture = basqueiberia
 					}

@@ -31,7 +31,7 @@ country_decisions = {
 				limit = { primary_culture = geatish }
 				change_primary_culture = swedish
 			}
-			every_core_province = {
+			every_province = {
 				limit = {
 					culture = geatish
 					NOT = { province_id = 25 }	#will not change Gotlands culture

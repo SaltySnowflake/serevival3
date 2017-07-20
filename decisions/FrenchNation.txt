@@ -91,7 +91,7 @@ country_decisions = {
 						limit = { primary_culture = breton }
 						change_primary_culture = bretonfrench
 					}
-					every_core_province = {
+					every_province = {
 						limit = { culture = breton }
 						change_culture = bretonfrench
 					}
@@ -102,7 +102,7 @@ country_decisions = {
 				custom_tooltip = fbasqueassim
 				hidden_effect = {
 					change_primary_culture = basquefrench
-					every_core_province = { 
+					every_province = { 
 						limit = { culture = basque }
 						change_culture = basquefrench
 					}

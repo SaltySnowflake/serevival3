@@ -80,11 +80,11 @@ country_decisions = {
 					limit = { primary_culture = cornish }
 					change_primary_culture = cornishbrit
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = welsh }
 					change_culture = welshbrit
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = cornish }
 					change_culture = cornishbrit
 				}
