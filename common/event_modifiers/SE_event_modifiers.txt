@@ -958,6 +958,43 @@ spreading_amanaiism_rituals = {
 	religion = yes
 }
 
+##################################################
+# Harmonized Modifiers
+##################################################
+
+harmonized_moism = {
+	tolerance_heathen = 1
+	religion = yes
+}
+
+harmonized_pacific_pagan = {
+	sailors_recovery_speed = 0.1
+	religion = yes
+}
+
+harmonized_animism = {
+	cavalry_power = 0.05
+	religion = yes
+}
+
+harmonized_american_pagan = {
+	global_trade_goods_size_modifier = 0.05
+	religion = yes
+}
+
+harmonized_european_pagan = {
+	technology_cost = -0.05
+	religion = yes
+}
+
+harmonized_elder_gods = {
+	yearly_harmony = -5
+	monarch_admin_power = 1
+	monarch_military_power = 1
+	monarch_diplomatic_power = 1
+	religion = yes
+}
+
 ## HRE Theocracy
 
 primas_germaniae_declined = { }
