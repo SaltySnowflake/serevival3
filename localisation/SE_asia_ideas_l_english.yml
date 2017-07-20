@@ -1,5 +1,24 @@
 ﻿l_english:
  #Arabia
+ ARB_ideas:0 "Arabian Ideas"
+ ARB_ideas_start:0 "Arabian Traditions"
+ ARB_ideas_bonus:0 "Arabian Ambition"
+ ARB_arab_indian_ocean_trade:0 "Indian Ocean Trade"
+ ARB_arab_indian_ocean_trade_desc:0 "Our sailors have been to the Swahili coasts and as far as Hindustan and even the Malay lands. We can play a critical role in the flow of goods between these wealthy regions."
+ ARB_arabian_horses:0 "Arabian Horses"
+ ARB_arabian_horses_desc:0 "Every cavalryman has heard that the best horses are Arabian horses, and who has a larger supply of these beauties than we do? Put some of our top horses to stud and watch as we produce a steady supply of the greatest horses known to man."
+ ARB_land_of_the_prophet:0 "Land of the Prophet"
+ ARB_land_of_the_prophet_desc:0 "The people of our lands were the first to hear the words of the Prophet Muhammad, peace be upon him. Every day we can see clans and tribes descended from people who lived in his day and heard his words. Though Islam may spread far and wide to the ends of the Earth, never forget that it started in this holy oasis of faith."
+ ARB_spreading_the_prophets_word:0 "Spreading the Prophet's Word"
+ ARB_spreading_the_prophets_word_desc:0 "There is no god but Allah, Muhammad is His messenger. By now, all men should know these holy words, but a shocking amount still dwell in the pitiable state of ignorance of Islam. Our missionaries are ready to spread the words of the Prophet."
+ ARB_legacy_of_the_first_conquest:0 "Legacy of the First Conquest"
+ ARB_legacy_of_the_first_conquest_desc:0 "The birth of Arabia was a time of many great victories under the Caliph, resulting in the great spread of Islam over much of North Africa and the Near East. Let us draw inspiration from those days as we strive for even greater victories."
+ ARB_coffea_arabica:0 "Coffea Arabica"
+ ARB_coffea_arabica_desc:0 "We hear that the Europeans cannot get enough of this ancient drink of ours. Coffeehouses are booming all over Europe and, though they have attempted to plant it elsewhere, the original coffee of Arabia will always be the best and most desirable."
+ ARB_arabia:0 "Arabia"
+ ARB_arabia_desc:0 "Although Arabia has many different clans, tribes and countries, all share in the use of the Arabic language, it forms the unifying feature of all Arabs. Under a strong leadership we can unite all Arabian lands under a single flag and one ruler."
+ 
+
  ADE_ideas: "Yemeni Ideas"
  ADE_ideas_start: "Yemeni Traditions"
  ADE_ideas_bonus: "Yemeni Ambitions"
