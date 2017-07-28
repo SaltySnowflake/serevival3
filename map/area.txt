@@ -577,7 +577,7 @@ bothnia_area = { #3
 }
 
 laponia_area = { #3
-	315 1777 4114 4151
+	315 1777 4151
 }
 
 karelia_area = { #5 (Karelia & Kola)
