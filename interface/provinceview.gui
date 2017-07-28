@@ -2645,6 +2645,7 @@ guiTypes = {
 				format = right
 			}	
 			
+			
 			# Orthodox Patriarch - TODO
 			iconType = {
 				name = "patriarch_bg"
@@ -6389,5 +6390,6 @@ guiTypes = {
 		}
 		
 	}	
+		
 		
 }

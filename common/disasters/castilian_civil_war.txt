@@ -3,33 +3,30 @@
 
 castilian_civil_war = {
 	potential = {
-		AND = {
-			OR = {
-				tag = CAS
-				tag = LON
-				tag = TOL
-			}
-			NOT = { exists = SPA }
+		OR = {
+			tag = CAS
+			tag = LON
+			tag = TOL
 		}
 		num_of_cities = 7
 		NOT = { has_country_flag = had_cas_civil_war }
-		is_subject = no
+		is_free_or_tributary_trigger = yes
 		exists = ARA
 		exists = POR
 		ARA = {
-			is_subject = no
+			is_free_or_tributary_trigger = yes
 		}
 		POR = {
-			is_subject = no
+			is_free_or_tributary_trigger = yes
 		}
 		government = monarchy
 		normal_or_historical_nations = yes
 		uses_doom = no
-		NOT = { is_year = 1500 }
 	}
 
 
 	can_start = {
+		current_age = age_of_discovery
 		is_at_war = no
 		has_any_disaster = no
 		has_heir = yes

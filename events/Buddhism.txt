@@ -48,6 +48,7 @@ country_event = {
 	option = {
 		name = buddhism_events.1.a #
 		add_karma = -15
+		reduce_meritocracy_effect = yes
 		if = {
 			limit = {
 				advisor = philosopher
@@ -316,7 +317,7 @@ country_event = {
 }
 
 #High Karma
-#1 ggoes even higher, 2 lowers it for a cost.
+#1 goes even higher, 2 lowers it for a cost.
 
 #Precedent of RULER
 country_event = {
@@ -595,7 +596,7 @@ country_event = {
 			}
 		}
 		add_karma = -10
-		add_yearly_manpower = 0.05
+		add_yearly_manpower = 0.5
 	}
 	#option = {
 	#	name = buddhism_events.9.c #Fine the Monasteries for any deserter found.
@@ -2001,30 +2002,22 @@ country_event = {
 		add_karma = -10
 		if = {
 			limit = {
-				owner = {
-					has_estate = estate_church
-				}
+				has_estate = estate_church
 				has_dlc = "The Cossacks"
 			}
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_church
-					loyalty = 10
-				}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
 			}
 		}
 		if = {
 			limit = {
-				owner = {
-					has_estate = estate_nobles
-				}
+				has_estate = estate_nobles
 				has_dlc = "The Cossacks"
 			}
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = -10
-				}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
 			}
 		}
 		random_owned_province = {
@@ -2071,30 +2064,22 @@ country_event = {
 		add_karma = -10
 		if = {
 			limit = {
-				owner = {
-					has_estate = estate_nobles
-				}
+				has_estate = estate_nobles
 				has_dlc = "The Cossacks"
 			}
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 10
-				}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
 			}
 		}
 		if = {
 			limit = {
-				owner = {
-					has_estate = estate_church
-				}
+				has_estate = estate_church
 				has_dlc = "The Cossacks"
 			}
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_church
-					loyalty = -10
-				}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
 			}
 		}
 		random_owned_province = {

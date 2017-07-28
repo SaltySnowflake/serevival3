@@ -10,17 +10,7 @@ fraiser_estuary_modifier = {
 	picture = "estuary_icon"
 }
 
-yukon_estuary_modifier = {
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-
 mackenzie_estuary_modifier = {
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-
-colorado_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
@@ -93,11 +83,6 @@ meuse_estuary_modifier = {
 }
 
 guadalquivir_estuary_modifier = {
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-
-dnieper_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
