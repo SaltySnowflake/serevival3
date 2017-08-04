@@ -342,6 +342,44 @@ dagestani_ideas = {
 		global_trade_power = 0.1
 	}
 }
+HIN_ideas = {
+	start = {
+		tolerance_heathen = 3
+		global_manpower_modifier = 0.2
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = HIN
+	}
+	free = yes
+ 	HIN_idea_one = {
+		merchants = 1
+	}
+ 	HIN_idea_two = {
+		administrative_efficiency = 0.05
+		max_states = 5
+	}
+ 	HIN_idea_three = {
+		land_morale = 0.15
+	}
+ 	HIN_idea_four = {
+		religious_unity = 0.5
+	}
+ 	HIN_idea_five = {
+		trade_efficiency = 0.1
+		sailor_maintenance_modifer = -0.1
+	}
+ 	HIN_idea_six = {
+		free_leader_pool = 1
+		yearly_corruption = -0.05
+	}
+ 	HIN_idea_seven = {
+		num_accepted_cultures = 1
+		global_spy_defence = 0.2
+	}
+}
 kalmyk_ideas = {
 	start = {
 		leader_land_manuever = 1

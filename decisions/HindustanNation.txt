@@ -99,6 +99,10 @@ country_decisions = {
 				}
 				add_permanent_claim = HIN
 			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			add_prestige = 10
 		}
 		ai_will_do = {
@@ -212,6 +216,10 @@ country_decisions = {
 				}
 				add_permanent_claim = HIN
 			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			add_prestige = 10
 		}
 		ai_will_do = {
@@ -319,6 +327,10 @@ country_decisions = {
 				}
 				add_permanent_claim = HIN
 			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			add_prestige = 10
 		}
 		ai_will_do = {
@@ -420,6 +432,10 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = HIN
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			add_prestige = 10
 		}
@@ -525,6 +541,10 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = HIN
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			add_prestige = 10
 		}
