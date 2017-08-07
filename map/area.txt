@@ -389,11 +389,11 @@ valencia_area = { #3
 }
 
 lower_andalucia_area = { #4
-	224 225 1749 1748 3098
+	224 225 1749 1748 3096 3098
 }
 
 upper_andalucia_area = { #3
-	222 223 226 3097
+	221 222 223 226 3097
 }
 
 castille_area = { #3
@@ -404,16 +404,12 @@ toledo_area = { #4
 	219 2751 2754 217 3300
 }
 
-asturias_area = { #4
-	207 1745 
-}
-
 basque_area = { #3
-	209 210
+	209 210 1745
 }
 
 leon_area = { #4
-	208 216 3101
+	207 208 216 3101
 }
 
 beieras_area = { #4
@@ -453,7 +449,7 @@ liguria_area = { #3
 }
 
 corsica_sardinia_area = { #3
-	127 1247 2986
+	127 333 1247 2986 5098 5095
 }
 
 sicily_area = { #4
@@ -545,7 +541,7 @@ skaneland_area = { #3
 }
 
 gotaland_area = { #4
-	2 3 3120 4166
+	2 3 25 3120 3121 4166
 }
 
 vastra_gotaland_area = { #Västra Götaland #4
@@ -556,15 +552,11 @@ svealand_area = { #5
 	4 5 8 1985
 }
 
-baltic_islands_area = { #2
-	25 3121
-}
-
 ostra_svealand_area = { #4
 	1 1930 3122 3123
 }
 
-norrland_area = { #4
+norrland_area = { #5
 	9 11 18 3124 4114
 }
 
@@ -572,16 +564,13 @@ finland_area = { #8
 	27 28 29 31 3127 3128 4123 3130
 }
 
-bothnia_area = { #3
-	19 4113 4152
+bothnia_area = { #4
+	19 4113 4151 4152
 }
 
-laponia_area = { #3
-	315 1777 4151
-}
 
 karelia_area = { #5 (Karelia & Kola)
-	32 309 1776 4124 
+	32 309 1776 1777 4124 
 }
 
 #Removed by Draiocht for BT
@@ -589,8 +578,8 @@ karelia_area = { #5 (Karelia & Kola)
 #
 #}
 
-northern_norway = { #3
-	10 20 21 3119 4153
+northern_norway = { #6
+	10 20 21 315 3119 4153
 }
 
 eastern_norway = { #3
@@ -1084,8 +1073,8 @@ syria_area = { #3
 	381 382 1849 5182 5179 
 }
 
-palestine_area = { #4
-	379 1854 5180 1855 
+palestine_area = { #6
+	379 380 1854 5180 5203 1855 
 }
 
 dulkadir_area = { # 3 +Kayseri
@@ -1126,54 +1115,37 @@ south_kurdistan_area = { #3
 # Arabia				               #
 ########################################
 
-bahrain_area = { #4
-	394 395 396 2347 
+bahrain_area = { #5
+	394 395 396 2333 2347
 }
 
-pirate_coast_area = { #4
+najd_area = { #7
 
-	397 398 404 2333
+	392 393 2335 2336 2337 2338 2339
 }
 
-najd_area = { #5
-
-	393 2332 2335 2336 2337 
-}
-
-ad_dahna_area = { #3
-
-	392 2338 2339
-}
 
 dhofar_area = { #3 (Dhofar + Masirah)
 
-	401 2341 2342
+	389 402 401 1099 2341 2342 2343
 }
 
-tabuk_area = { #3
+tabuk_area = { #4
 
-	383 2327 2328
+	383 2327 2328 5204
 }
 
-hejaz_area = { #5
+hejaz_area = { #6
 	color = { 0 203 19 }
-	384 385 2330 2331 2329
+	384 385 386 2330 2331 2332 2329
 }
 
 yemen_area = { #4
-	387 388 390 2344
+	387 388 390 391 2344 2345 2346
 }
 
-sarat_area = { # 5 Sarat Asir+North Yemen Highlands
-	386 391 2345 2346
-}
-
-hadramut_area = { #3
-	389 402 2343
-}
-
-oman_area = { #3
-	399 400 403
+oman_area = { #6
+	397 398 399 400 403 404
 }
 
 ########################################
@@ -1281,7 +1253,7 @@ betsimasaraka_area = { #3
 }
 
 sakalava_area = { #5
-	1193 1194 4022 4031 4032
+	1193 1194 4020 4022 4031 4032
 }
 
 southern_madagascar = { #4
@@ -1318,16 +1290,12 @@ ngonde_area = { #3
 	4041 4044 4045
 }
 
-mozambique_area = { #3
-	788 1195 4049
-}
-
 uticulo_makuana_area = { #3
 	4034 4035 4048
 }
 
-quelimane_area = { #3
-	1183 1186 1192
+quelimane_area = { #5
+	788 1183 1186 1192 1195
 }
 
 
@@ -1336,20 +1304,12 @@ limpopo_area = { #4
 	789 1181 1182 1800
 }
 
-central_swahili_coast_area = { #4
-	1196 1197 1198 1199
+central_swahili_coast_area = { #5
+	1196 1197 1198 1199 1200 1201 4049
 }
 
-northern_swahili_coast_area = { #3
-	1204 2774 2796
-}
-
-mombasa_area = { #3
-	1200 1202 1203
-}
-
-east_african_islands_area = { #3
-	1099 1201 4020
+northern_swahili_coast_area = { #5
+	1202 1203 1204 2774 2796
 }
 
 kenya_area = {	#5
@@ -1427,20 +1387,11 @@ kurdufan_area = { #3
 }
 
 lower_nubia_area = { #3
-	1234 2322 2323
+	1220 1228 1229 1234 2322 2323
 }
 
-dongola_area = { #3
-
-	1220 1228 1229
-}
-
-upper_nubia_area = { #5
-	1222 1226 1225 2797 2798
-}
-
-sennar_area = { #3
-	1217 2799 4033
+upper_nubia_area = { #7
+	1222 1226 1225 2797 2798 2799 4033
 }
 
 red_sea_coast_area = { #4
@@ -1451,36 +1402,28 @@ tigray_area = { #4
 	1227 2766 2767 2771
 }
 
-ifat_area = { #4
-	1211 1212 2773 2793 
+ifat_area = { #5
+	1211 1212 2761 2773 2793
 }
 
 somaliland_area = { #5
-	1209 2786 2789 2792 2790 
+	1209 2786 2789 2792 2790 	
 }
 
-southern_ethiopia_area = { #4
-	2757 2758 2759 4158
+southern_ethiopia_area = { #5
+	2757 2758 2759 2762 2763 
 }
 
-hadiya_area = { #3
-	1218 2756 2760
+hadiya_area = { #4
+	1213 1218 2756 2760 4158
 }
 
-central_ethiopia_area = { #5
-	1214 1223 1224 2769 2772
-}
-
-damot_area = { #3
-	2762 2763 2770 
+central_ethiopia_area = { #6
+	1214 1223 1224 2769 2770 2772
 }
 
 aussa_area = { #4
-	1215 2764 2765 2768
-}
-
-shewa_area = { #3
-	1213 2761 2791
+	1215 2764 2765 2768 2791
 }
 
 mogadishu_area = { #5
@@ -3206,10 +3149,6 @@ moravia_area = {
 	265 3144 3297 
 }
 
-balearic_islands_area = {
-	333 5098 5095 
-}
-
 ingria_area = {
 	30 33 34 
 }
@@ -3282,10 +3221,6 @@ cornwall_area = {
 	233 4130 
 }
 
-murcia_area = {
-	221 3096 
-}
-
 yorkshire_area = {
 	243 245 3023 1861 
 }
@@ -3332,11 +3267,7 @@ tagmudant_area = {
 	349 2465 5229 3744 4168
 }
 
-#BTPLegacyAsia
-
-jordan_area = {
-	380 5203 5204 
-}
+#BTPLegacyAsia 
 
 tripoli_area = {
 	378 5205 5170
@@ -3576,7 +3507,7 @@ centralafrica_area = {
 }
 
 sudan_area = {
-	3822 3829 3830 3831 3832
+	1217 3822 3829 3830 3831 3832
 }
 
 ##South Africa

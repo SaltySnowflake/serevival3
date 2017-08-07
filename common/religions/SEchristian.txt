@@ -352,7 +352,9 @@ christian = {
 		
 		has_patriarchs = yes		# Uses patriarch authority
 		misguided_heretic = yes		# Other christians hate them less
-	}	
+	}
+
+	harmonized_modifier = harmonized_christian
 	
 	crusade_name = CRUSADE
 }

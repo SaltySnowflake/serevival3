@@ -1256,7 +1256,7 @@ eastern = {
 		heretic = { ZEN }
 		
 		harmonized_modifier = harmonized_buddhism
-		
+
 		uses_karma = yes
 	}
 	
@@ -1286,6 +1286,8 @@ eastern = {
 		
 		heretic = { ZEN }
 		
+		harmonized_modifier = harmonized_vajrayana
+
 		uses_karma = yes
 		
 		harmonized_modifier = harmonized_vajrayana
@@ -1316,6 +1318,8 @@ eastern = {
 		}
 		
 		heretic = { ZEN }
+
+		harmonized_modifier = harmonized_mahayana
 		
 		uses_karma = yes
 		
@@ -1352,9 +1356,10 @@ eastern = {
 			global_unrest = -1
 		}
 		heretic = { SHUGENDO }
-		uses_isolationism = yes
-		
+
 		harmonized_modifier = harmonized_shinto
+
+		personal_deity = yes
 	}
 	
 	moism = {
@@ -1370,6 +1375,8 @@ eastern = {
 		}
 		
 		uses_piety = yes
+
+		harmonized_modifier = harmonized_moism
 		
 		heretic = { TAOIST }
 		
@@ -1526,6 +1533,8 @@ dharmic = {
 		
 		heretic = { TERAPANTHA }
 	}
+
+	harmonized_modifier = harmonized_dharmic
 	
 	harmonized_modifier = harmonized_dharmic
 	
@@ -1555,6 +1564,8 @@ pagan = {
 		
 		heretic = { SNAKE_CLAN }
 	}
+
+	harmonized_modifier = harmonized_animism
 	
 	crusade_name = HOLY_WAR
 	harmonized_modifier = harmonized_pagan
@@ -1630,6 +1641,8 @@ jewish_group = {
 		
 		heretic = { SAMARITAN }
 	}
+
+	harmonized_modifier = harmonized_jewish_group
 	
 	crusade_name = HOLY_WAR
 	
@@ -1746,6 +1759,8 @@ old_asian = {
 		
 		heretic = { MAZDAKI }
 	}
+
+	harmonized_modifier = harmonized_zoroastrian_group
 	
 	crusade_name = HOLY_WAR
 	
@@ -1926,6 +1941,8 @@ pacific_pagan = {
 		}
 		heretic = { BEAR_SPIRIT SNAKE_CLAN }
 	}
+
+	harmonized_modifier = harmonized_pacific_pagan
 	
 	crusade_name = HOLY_WAR
 	
@@ -2254,6 +2271,8 @@ african_pagan = {
 		fetishist_cult = yes
 		heretic = { BEAR_SPIRIT SNAKE_CLAN }
 	}
+
+	harmonized_modifier = harmonized_pagan
 	
 	crusade_name = HOLY_WAR
 	
@@ -2604,6 +2623,8 @@ american_pagan = {
 		uses_karma = yes		
 		heretic = { BEAR_SPIRIT SNAKE_CLAN }
 	}
+
+	harmonized_modifier = harmonized_american_pagan
 	
 	crusade_name = HOLY_WAR
 
@@ -2768,6 +2789,8 @@ european_pagan = {
 		heretic = { SNAKE_CLAN }
 	}
 
+	harmonized_modifier = harmonized_european_pagan
+
 	crusade_name = HOLY_WAR
 	
 	harmonized_modifier = harmonized_european_pagan_group
@@ -2797,7 +2820,6 @@ elder_gods = {
 	}
 
 	harmonized_modifier = harmonized_elder_gods
-	
 }
 
 no_religion = {

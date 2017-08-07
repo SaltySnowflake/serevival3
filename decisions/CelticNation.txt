@@ -107,28 +107,28 @@ country_decisions = {
 					limit = { primary_culture = cornish }
 					change_primary_culture = celtic_cornish_culture
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = irish }
 					change_culture = celtic_irish_culture
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = highland_scottish }
 					change_culture = celtic_highland_scottish_culture
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = gallgaidheil }
 					change_culture = celtic_gallgaidheil_culture
 				}
 				
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = welsh }
 					change_culture = celtic_welsh_culture
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = breton }
 					change_culture = celtic_breton_culture
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = cornish }
 					change_culture = celtic_cornish_culture
 				}

@@ -78,6 +78,9 @@ country_decisions = {
 			italy_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
+					NOT = { province_id = 333 } # Balearic isles
+					NOT = { province_id = 5095 } # Balearic isles
+					NOT = { province_id = 5098 } # Balearic isles
 				}
 				add_permanent_claim = ITL
 			}

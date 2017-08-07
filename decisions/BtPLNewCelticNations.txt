@@ -87,7 +87,7 @@ country_decisions = {
 			if = {
 				limit = { primary_culture = scottish }
 				change_primary_culture = highland_scottish
-				every_owned_province = {
+				every_province = {
 					limit = { culture = scottish }
 					change_culture = highland_scottish
 				}

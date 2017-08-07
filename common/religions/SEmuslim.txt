@@ -99,4 +99,5 @@ muslim = {
 		uses_piety = yes				# Uses piety mechanics
 	}
 	
+	harmonized_modifier = harmonized_muslim	
 }

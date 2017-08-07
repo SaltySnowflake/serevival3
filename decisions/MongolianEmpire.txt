@@ -1,0 +1,296 @@
+country_decisions = {
+
+	mongolian_empire = {
+		major = yes
+		potential = {
+			NOT = { exists = MGE }
+			NOT = { has_country_flag = formed_mongolian_empire_flag }
+			OR = {
+				culture_group = altaic
+				culture_group = tartar
+			}
+			OR = {
+				ai = no
+				num_of_cities = 20
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			legitimacy = 90
+			owns_core_province = 2190
+			owns_core_province = 454
+			owns_core_province = 464
+			owns_core_province = 303
+			owns_core_province = 2116
+			owns_core_province = 718
+			num_of_cities = 40	
+		}
+		effect = {
+			change_tag = MGE
+			
+			custom_tooltip = mongolassim
+
+			hidden_effect = {
+				if = {
+					limit = { primary_culture = mongol }
+					change_primary_culture = mongol_mongol
+				}
+				if = {
+					limit = { primary_culture = chahar }
+					change_primary_culture = mongol_chahar
+				}
+				if = {
+					limit = { primary_culture = khalkha }
+					change_primary_culture = mongol_khalkha
+				}
+				if = {
+					limit = { primary_culture = oirats }
+					change_primary_culture = mongol_oirats
+				}
+				if = {
+					limit = { primary_culture = buryat }
+					change_primary_culture = mongol_buryat
+				}
+				if = {
+					limit = { primary_culture = yugur }
+					change_primary_culture = mongol_yugur
+				}
+				if = {
+					limit = { primary_culture = kalmyk }
+					change_primary_culture = mongol_kalmyk
+				}
+				if = {
+					limit = { primary_culture = astrakhani }
+					change_primary_culture = mongol_astrakhani
+				}
+				if = {
+					limit = { primary_culture = bashkir }
+					change_primary_culture = mongol_bashkir
+				}
+				if = {
+					limit = { primary_culture = crimean }
+					change_primary_culture = mongol_crimean
+				}
+				if = {
+					limit = { primary_culture = kazani }
+					change_primary_culture = mongol_kazani
+				}
+				if = {
+					limit = { primary_culture = mishary }
+					change_primary_culture = mongol_mishary
+				}
+				if = {
+					limit = { primary_culture = nogaybak }
+					change_primary_culture = mongol_nogaybak
+				}
+				if = {
+					limit = { primary_culture = siberian }
+					change_primary_culture = mongol_siberian
+				}
+				if = {
+					limit = { primary_culture = qasim }
+					change_primary_culture = mongol_qasim
+				}
+				if = {
+					limit = { primary_culture = tuvan }
+					change_primary_culture = mongol_tuvan
+				}
+				if = {
+					limit = { primary_culture = altai }
+					change_primary_culture = mongol_altai
+				}
+				if = {
+					limit = { primary_culture = chuvash }
+					change_primary_culture = mongol_chuvash
+				}
+				if = {
+					limit = { primary_culture = uzbehk }
+					change_primary_culture = mongol_uzbehk
+				}
+				if = {
+					limit = { primary_culture = uyghur }
+					change_primary_culture = mongol_uyghur
+				}
+				if = {
+					limit = { primary_culture = chagatai }
+					change_primary_culture = mongol_chagatai
+				}
+				if = {
+					limit = { primary_culture = yakut }
+					change_primary_culture = mongol_yakut
+				}
+				if = {
+					limit = { primary_culture = khazak }
+					change_primary_culture = mongol_khazak
+				}
+				if = {
+					limit = { primary_culture = kirgiz }
+					change_primary_culture = mongol_kirgiz
+				}
+
+				every_province = { 
+					limit = { culture = mongol }
+					change_culture = mongol_mongol
+				}
+				every_province = { 
+					limit = { culture = chahar }
+					change_culture = mongol_chahar
+				}
+				every_province = { 
+					limit = { culture = khalkha }
+					change_culture = mongol_khalkha
+				}
+				every_province = { 
+					limit = { culture = oirats }
+					change_culture = mongol_oirats
+				}
+				every_province = { 
+					limit = { culture = buryat }
+					change_culture = mongol_buryat
+				}
+				every_province = { 
+					limit = { culture = yugur }
+					change_culture = mongol_yugur
+				}
+				every_province = { 
+					limit = { culture = kalmyk }
+					change_culture = mongol_kalmyk
+				}
+				every_province = { 
+					limit = { culture = astrakhani }
+					change_culture = mongol_astrakhani
+				}
+				every_province = { 
+					limit = { culture = bashkir }
+					change_culture = mongol_bashkir
+				}
+				every_province = { 
+					limit = { culture = crimean }
+					change_culture = mongol_crimean
+				}
+				every_province = { 
+					limit = { culture = kazani }
+					change_culture = mongol_kazani
+				}
+				every_province = { 
+					limit = { culture = mishary }
+					change_culture = mongol_mishary
+				}
+				every_province = { 
+					limit = { culture = nogaybak }
+					change_culture = mongol_nogaybak
+				}
+				every_province = { 
+					limit = { culture = siberian }
+					change_culture = mongol_siberian
+				}
+				every_province = { 
+					limit = { culture = qasim }
+					change_culture = mongol_qasim
+				}
+				every_province = { 
+					limit = { culture = tuvan }
+					change_culture = mongol_tuvan
+				}
+				every_province = { 
+					limit = { culture = altai }
+					change_culture = mongol_altai
+				}
+				every_province = { 
+					limit = { culture = chuvash }
+					change_culture = mongol_chuvash
+				}
+				every_province = { 
+					limit = { culture = uzbehk }
+					change_culture = mongol_uzbehk
+				}
+				every_province = { 
+					limit = { culture = uyghur }
+					change_culture = mongol_uyghur
+				}
+				every_province = { 
+					limit = { culture = chagatai }
+					change_culture = mongol_chagatai
+				}
+				every_province = { 
+					limit = { culture = yakut }
+					change_culture = mongol_yakut
+				}
+				every_province = { 
+					limit = { culture = khazak }
+					change_culture = mongol_khazak
+				}
+				every_province = { 
+					limit = { culture = kirgiz }
+					change_culture = mongol_kirgiz
+				}
+			}
+
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+
+			central_asia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			mongolia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			manchuria_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			crimea_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			caucasia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			persia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			khorasan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			baluchistan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			tibet_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			north_china_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			korea_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MGE
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+
+			if = {
+				limit = {
+					NOT = { has_idea_group = KHA_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_mongolian_empire_flag
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+}

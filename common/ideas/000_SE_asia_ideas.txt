@@ -1,4 +1,45 @@
 ##Arabia
+ARB_ideas = {
+	start = {
+		global_manpower_modifier = 0.15
+		land_attrition = -0.15
+	}
+	
+	bonus = {
+		leader_land_shock = 1
+	}
+	
+	trigger = {
+		tag = ARB
+	}
+	free = yes
+	
+	ARB_arab_indian_ocean_trade = {
+		trade_efficiency = 0.1
+	}
+	ARB_arabian_horses = {
+		cavalry_cost = -0.10
+		cavalry_power = 0.2
+	}
+	ARB_land_of_the_prophet = {
+		global_unrest = -1
+	}
+	ARB_spreading_the_prophets_word = {
+		global_missionary_strength = 0.02
+	}
+	ARB_legacy_of_the_first_conquest = {
+		land_morale = 0.1
+		shock_damage = 0.1
+	}
+	ARB_coffea_arabica = {
+		production_efficiency = 0.1
+	}
+	ARB_arabia = {
+		prestige = 1
+		idea_cost = -0.05
+	}
+}
+
 ADE_ideas = {
 	start = {
 		trade_range_modifier = 0.25
@@ -71,6 +112,45 @@ CIL_ideas = {
 	land_of_myths = {
 		prestige_from_land = 0.50
 		infantry_power = 0.10
+	}
+}
+CHN_ideas = {
+	start = {
+		global_manpower_modifier = 0.50
+		manpower_recovery_speed = 0.25
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = CHN
+	}
+	free = yes
+	
+	CHN_keju_examination = {
+		advisor_cost = -0.25
+	}
+	CHN_scholar_gentry = {
+		adm_tech_cost_modifier = -0.1
+		development_cost = -0.1
+	}
+	CHN_order_of_four_occupations = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	CHN_nation_of_rites_and_etiquette = {
+		province_trade_power_modifier = 0.30
+	}
+	CHN_firearm_training = {
+		fire_damage = 0.1
+	}
+	CHN_the_great_wall = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.2
+	}
+	CHN_middle_kingdom = {
+		production_efficiency = 0.15
 	}
 }
 ###Created by Inkwizytor Zeketer
@@ -260,6 +340,44 @@ dagestani_ideas = {
 	}
 	dag_derbent = {
 		global_trade_power = 0.1
+	}
+}
+HIN_ideas = {
+	start = {
+		tolerance_heathen = 3
+		global_manpower_modifier = 0.2
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = HIN
+	}
+	free = yes
+ 	HIN_idea_one = {
+		merchants = 1
+	}
+ 	HIN_idea_two = {
+		administrative_efficiency = 0.05
+		max_states = 5
+	}
+ 	HIN_idea_three = {
+		land_morale = 0.15
+	}
+ 	HIN_idea_four = {
+		religious_unity = 0.5
+	}
+ 	HIN_idea_five = {
+		trade_efficiency = 0.1
+		sailor_maintenance_modifer = -0.1
+	}
+ 	HIN_idea_six = {
+		free_leader_pool = 1
+		yearly_corruption = -0.05
+	}
+ 	HIN_idea_seven = {
+		num_accepted_cultures = 1
+		global_spy_defence = 0.2
 	}
 }
 kalmyk_ideas = {
@@ -728,7 +846,10 @@ KHA_ideas = {
 		discipline = 0.05
 	}	
 	trigger = {
-		culture_group = altaic
+		OR = {
+			culture_group = altaic
+			tag = MGE
+		}
 	}
 	free = yes
 	the_greatest_empire = {

@@ -4,6 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_arabia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -18,6 +19,7 @@ country_decisions = {
 				}
 			}
 			culture_group = turko_semitic #Arabic
+			NOT = { primary_culture = turkish }
 			NOT = { religion_group = christian }
 		}
 		allow = {
@@ -90,6 +92,13 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
+			set_country_flag = formed_arabia_flag
+			if = {
+				limit = {
+					NOT = { has_idea_group = ARB_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 		}
 		ai_will_do = {
 			factor = 0

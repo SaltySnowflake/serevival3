@@ -129,7 +129,7 @@ country_decisions = {
 			custom_tooltip = manchuassim
 			hidden_effect = {
 				change_primary_culture = manchuqing
-				every_core_province = {
+				every__province = {
 					limit = { culture = manchu }
 					change_culture = manchuqing
 				}

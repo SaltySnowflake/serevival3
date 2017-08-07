@@ -141,15 +141,15 @@ country_decisions = {
 					limit = { primary_culture = breton }
 					change_primary_culture = bretonfrench
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = breton }
 					change_culture = bretonfrench
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = welsh }
 					change_culture = welshbrit
 				}
-				every_core_province = { 
+				every_province = { 
 					limit = { culture = cornish }
 					change_culture = cornishbrit
 				}
@@ -186,16 +186,6 @@ country_decisions = {
 				add_accepted_culture = occitain
 				add_accepted_culture = arpitan
 				add_accepted_culture = bretonfrench
-			}
-			every_owned_province = {
-				limit = { 
-					NOT = { is_core = ROOT } 
-					OR = {
-						culture_group = british
-						culture_group = french
-					}
-				}
-				add_core = ANV
 			}
 			france_region = {
 				limit = { NOT = { is_core = ROOT } }
