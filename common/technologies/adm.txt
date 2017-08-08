@@ -200,7 +200,6 @@ technology = {
 	# Tech 20
 	year = 1661
 	allowed_idea_groups = 11
-	absolute_monarchy = yes
 	republican_dictatorship = yes
 	max_states = 6
 }
