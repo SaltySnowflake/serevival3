@@ -1,0 +1,24 @@
+####################################################
+######## Idea Variation by flogi
+####################################################
+
+development_raised = {
+		
+		development_cost = 0.1
+
+}
+
+
+dynastic_involvement = {
+		
+		ae_impact = 0.1
+
+}
+
+dynastic_change = {
+		
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
+
+
+}

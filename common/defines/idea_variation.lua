@@ -1,0 +1,15 @@
+NDefines.NDiplomacy.INFILTRATE_ADMINISTRATION_COST = 50
+NDefines.NDiplomacy.INFILTRATE_ADMINISTRATION_DURATION = 8
+NDefines.NCountry.PS_BUY_IDEA = 250
+NDefines.NCountry.FREE_IDEA_GROUP_COST  = 7
+NDefines.NCountry.IDEA_TO_TECH = -0.01
+NDefines.NCountry.MAX_ACTIVE_POLICIES = 7
+NDefines.NCountry.MINIMUM_POLICY_TIME = 3
+NDefines.NCountry.PS_RAISE_TARIFFS = 10
+NDefines.NCountry.PS_LOWER_TARIFFS = 5
+NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.35
+NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03
+NDefines.NEconomy.CARAVAN_FACTOR = 20.0
+NDefines.NEconomy.CARAVAN_POWER_MAX = 10
+NDefines.NMilitary.NAVAL_BASE_ENGAGEMENT_WIDTH = 750 		-- Number of ships that can fire per round
+NDefines.NMilitary.MERCENARY_SUPPORT_LIMIT_FRACTION = 0.1

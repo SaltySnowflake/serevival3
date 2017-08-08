@@ -1,0 +1,9 @@
+ai_startup_bonus = {
+	potential = {
+		ai = yes
+	}
+	trigger = {
+		ai = yes
+	}
+	idea_cost = -0.25
+}

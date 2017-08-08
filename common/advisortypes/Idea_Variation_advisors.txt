@@ -1,0 +1,265 @@
+######################################################
+##### Idea Variation Advisors by flogi
+######################################################
+
+idea_var_advisor_1 = {		# Administrator
+	monarch_power = ADM
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+	core_creation = -0.1
+	
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_2 = {		# Lawyer
+	monarch_power = DIP
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+	diplomatic_annexation_cost = -0.1
+	
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_3 = {		# Architect
+	monarch_power = ADM
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+	build_cost = -0.1
+
+	
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_4 = {		# Capitalist
+	monarch_power = ADM
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+	development_cost = -0.1
+	
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_5 = {		# General staff officier
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+	army_tradition = 1
+	navy_tradition = 1
+	
+	chance = {
+		factor = 1
+	}
+}
+
+
+idea_var_advisor_6 = {		# Humanist
+	monarch_power = ADM
+	
+	# Bonus
+	embracement_cost = -0.1
+	
+	chance = {
+		factor = 1
+	}
+}
+
+
+idea_var_advisor_7 = {		# Old Admiral
+	monarch_power = DIP
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+	naval_forcelimit_modifier = 0.25
+	
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+}
+
+idea_var_advisor_8 = {		# Judge
+	monarch_power = ADM
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+	
+	yearly_corruption = -0.1
+
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_9 = {		# Administrator
+	monarch_power = ADM
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	state_maintenance_modifier = -0.3
+
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_10 = {		# Colonist
+	monarch_power = DIP
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+	
+	global_colonial_growth = 10
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { num_of_colonists = 1 } }
+		}
+	}
+}
+
+idea_var_advisor_11 = {		
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	siege_ability = 0.15
+
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_12 = {		
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	infantry_power = 0.1
+
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_13 = {		
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	cavalry_power = 0.1
+	cav_to_inf_ratio = 0.1
+
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_14 = {		
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	artillery_power = 0.1
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { mil_tech = 7 } }
+		}
+		
+	}
+}
+
+idea_var_advisor_15 = {		
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	shock_damage = 0.075
+
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_16 = {		
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	shock_damage_received = -0.075
+
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_17 = {		
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	fire_damage = 0.075
+
+	chance = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_18 = {		
+	monarch_power = MIL
+	
+	skill_scaled_modifier = { meritocracy = 0.5 }
+	
+	# Bonus
+
+	fire_damage_received = -0.075
+
+	chance = {
+		factor = 1
+	}
+}

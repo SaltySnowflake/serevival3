@@ -47,20 +47,21 @@ estate_church =
 	# If true, country will get estate
 	trigger = {
 		NOT = { government = merchant_republic }
+		NOT = { government = veche_republic }
 		NOT = { government = trading_city }
 		NOT = { government = siberian_native_council }
-		NOT = { government = aboriginal_native_council }
 		NOT = { government = native_council }
 		NOT = { government = revolutionary_republic }
+
 		OR = {
 			NOT = { government = celestial_empire }
-			NOT = { government = celestial_empire_SE }
 			has_dlc = "Mandate of Heaven"
 		}
+
 		OR = {
 			NOT = { tag = USA }
 			government = theocracy
-		}
+		}		
 		is_nomad = no
 		is_colonial_nation = no
 	}
@@ -163,10 +164,7 @@ estate_church =
 		desc = EST_VAL_VERY_HIGH_INTI_AUTHORITY
 		trigger = {
 			has_dlc = "El Dorado"
-			OR = {
-				religion = inti
-				religion = chiminigagua
-			}
+			religion = inti
 			authority = 75
 		}	
 		influence = 15
@@ -175,10 +173,7 @@ estate_church =
 		desc = EST_VAL_HIGH_INTI_AUTHORITY
 		trigger = {
 			has_dlc = "El Dorado"
-			OR = {
-				religion = inti
-				religion = chiminigagua
-			}
+			religion = inti
 			authority = 50
 			NOT = { authority = 75 }
 		}	
@@ -193,6 +188,30 @@ estate_church =
 			}
 		}
 		influence = -40
+	}
+
+		influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE
+		trigger = {
+			government = celestial_empire
+		}		
+		influence = -10
+	}
+
+	influence_modifier = {
+		desc = Idea_Variation_estate_2
+		trigger = {
+			has_idea = diktatur3
+		}
+		influence = -10
+	}
+
+	influence_modifier = {
+		desc = Idea_Variation_estate_6
+		trigger = {
+			has_active_policy = idea_variation_act_36    # Society Surveillance
+		}
+		influence = -10
 	}
 	
 	# Loyalty modifiers
@@ -271,9 +290,39 @@ estate_church =
 	loyalty_modifier = {
 		desc = EST_VAL_FULL_RELIGIOUS
 		trigger = {
+			OR = {
 			full_idea_group = religious_ideas
+			full_idea_group = katholisch0
+			full_idea_group = protestant0
+			full_idea_group = reformiert0
+			full_idea_group = orthodox0
+			full_idea_group = islam0
+			full_idea_group = cathar0
+			full_idea_group = shinto0
+			full_idea_group = norse0
+			full_idea_group = budda0
+			full_idea_group = confuci0 
+			full_idea_group = hindu0
+			full_idea_group = tengri0
+			}
 		}
 		loyalty = 10
+	}
+
+	loyalty_modifier = {
+		desc = Idea_Variation_estate_1
+		trigger = {
+			has_idea = propaganda2
+		}
+		loyalty = 15
+	}
+
+	loyalty_modifier = {
+		desc = Idea_Variation_estate_7
+		trigger = {
+			has_active_policy = idea_variation_act_36    # Society Surveillance
+		}
+		loyalty = 50
 	}
 	
 	custom_name = {
@@ -290,6 +339,15 @@ estate_church =
 		desc = estate_brahmins
 		trigger = {
 			religion = hinduism
+		}
+	}
+	custom_name = {
+		desc = estate_gentry
+		trigger = {
+			OR = {
+				government = celestial_empire
+				culture_group = east_asian
+			}
 		}
 	}
 	custom_name = {

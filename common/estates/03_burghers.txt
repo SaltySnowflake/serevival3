@@ -20,18 +20,18 @@ estate_burghers =
 	# If true, country will get estate
 	trigger = {	
 		NOT = { government = merchant_republic }
+		NOT = { government = veche_republic }
 		NOT = { government = trading_city }
 		NOT = { government = revolutionary_republic }
 		NOT = { government = native_council }
-		NOT = { government = aboriginal_native_council }
-		NOT = { government = siberian_native_council }
+		NOT = { government = siberian_native_council }	
 		OR = {
 			NOT = { government = celestial_empire }
-			NOT = { government = celestial_empire_SE }
 			has_dlc = "Mandate of Heaven"
 		}
 		is_nomad = no
 		is_colonial_nation = no
+
 	}
 	
 	# If true, province can be granted to estate
@@ -158,8 +158,8 @@ estate_burghers =
 			capital_scope = {
 				OR = {
 					area = central_swahili_coast_area
-					area = mombasa_area
 					area = mozambique_area
+					area = mombasa_area
 					area = northern_swahili_coast_area
 					area = mogadishu_area
 				}
@@ -197,6 +197,13 @@ estate_burghers =
 		influence = 10
 	}
 	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE
+		trigger = {
+			government = celestial_empire
+		}		
+		influence = -10
+	}
+	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
 			OR = {
@@ -217,12 +224,48 @@ estate_burghers =
 		}
 		loyalty = -20
 	}
+	
 	loyalty_modifier = {
-		desc = EST_VAL_FULL_PLUTOCRATIC
+		desc = Idea_Variation_estate_1
 		trigger = {
-			full_idea_group = plutocracy_ideas
+			full_idea_group = propaganda0
 		}
-		loyalty = 10
+		loyalty = 15
+	}
+	loyalty_modifier = {
+		desc = Idea_Variation_estate_3
+		trigger = {
+			full_idea_group = gesundheit0
+		}
+		loyalty = 25
+	}
+	loyalty_modifier = {
+		desc = Idea_Variation_estate_5
+		trigger = {
+			full_idea_group = republik0
+		}
+		loyalty = 25
+	}
+	loyalty_modifier = {
+		desc = Idea_Variation_estate_7
+		trigger = {
+			has_active_policy = idea_variation_act_36  
+		}
+		loyalty = 25
+	}
+	influence_modifier = {
+		desc = Idea_Variation_estate_6
+		trigger = {
+			has_active_policy = idea_variation_act_36 
+		}	
+		influence = -10
+	}
+	influence_modifier = {
+		desc = Idea_Variation_estate_2
+		trigger = {
+			full_idea_group = diktatur0
+		}	
+		influence = -10
 	}
 	
 	#Custom Names
@@ -230,6 +273,12 @@ estate_burghers =
 		desc = estate_bourgeoisie
 		trigger = {
 			culture_group = french
+		}
+	}
+	custom_name = {
+		desc = estate_shangbang
+		trigger = {
+			culture_group = east_asian
 		}
 	}
 	custom_name = {

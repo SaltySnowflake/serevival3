@@ -14,7 +14,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}
 		stability = 0
 	}	
 
@@ -32,7 +35,7 @@ country_event = {
 			}
 			add_estate_loyalty = {
 				estate = estate_burghers
-				loyalty = -10
+				loyalty = -5
 			}
 		}
 	}
@@ -48,7 +51,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}
 	}
 
 	mean_time_to_happen = {
@@ -73,7 +79,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}	
 	}
 	
 	mean_time_to_happen = {
@@ -96,7 +105,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}	
 	}		
 	
 	mean_time_to_happen = {
@@ -121,7 +133,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}	
 	}
 
 	mean_time_to_happen = {
@@ -130,6 +145,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB813A"
+		add_meritocracy_effect = yes
 		random_list = {
 			10 = { create_advisor = natural_scientist }
 			10 = { create_advisor = artist }
@@ -147,7 +163,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}	
 	}		
 
 	mean_time_to_happen = {
@@ -175,7 +194,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		OR = {
 		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}
 		NOT = {	has_country_modifier =  "freesubjects_modifier" }
 		NOT = {	has_country_modifier =  "serf_exploitation" }
 	}
@@ -203,7 +225,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}
 		NOT = {	has_country_modifier =  "freesubjects_modifier" }
 		NOT = {	has_country_modifier =  "serfdom_modifier" }
 	}
@@ -275,7 +300,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}
 	}
 
 	mean_time_to_happen = {
@@ -310,7 +338,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}	
 		NOT = {	has_country_modifier =  "unhappy_merchants" }
 		NOT = {	has_country_modifier =  "plutocracy_modifier" }
 	}
@@ -384,7 +415,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}
 		war_exhaustion = 5
 	}
 
@@ -418,7 +452,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = aristocracy_ideas	
+		OR = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}
 	}
 
 	mean_time_to_happen = {
@@ -451,7 +488,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		OR = {
 		has_idea_group = aristocracy_ideas
+		has_idea_group = monarchie0
+		}
 		NOT = { manpower_percentage = 0.9 }
 	}
 
@@ -461,7 +501,7 @@ country_event = {
 
 	option = {
 		name = ideagroups.112.a
-		add_yearly_manpower = 0.1
+		add_manpower = 0.1
 	}
 }
 
@@ -479,7 +519,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 	}
 	
 	mean_time_to_happen = {
@@ -514,7 +554,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 	}	
 
 	mean_time_to_happen = {
@@ -537,7 +577,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 	}	
 
 	mean_time_to_happen = {
@@ -546,6 +586,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB802A"
+		add_meritocracy_effect = yes
 		random_list = {
 			10 = { define_advisor = { type = treasurer skill = 2 }  }
 			10 = { define_advisor = { type = trader skill = 2 }  }
@@ -564,7 +605,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		any_owned_province = {
 			NOT = { culture = ROOT }			
 		}
@@ -599,7 +640,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		any_owned_province = {
 			culture = ROOT
 			NOT = { religion = ROOT }
@@ -642,7 +683,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_idea_group = plutocracy_ideas	
+		has_idea_group = republik0	
 	}		
 
 	mean_time_to_happen = {
@@ -665,7 +706,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas	
+		has_idea_group = republik0	
 	}		
 
 	mean_time_to_happen = {
@@ -688,7 +729,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas	
+		has_idea_group = republik0	
 	}		
 	
 	mean_time_to_happen = {
@@ -724,7 +765,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas	
+		has_idea_group = republik0	
 		NOT = {	has_country_modifier =  "happy_people" }
 
 	}
@@ -762,7 +803,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		NOT = {	has_country_modifier =  "serfdom_modifier" }
 		NOT = {	has_country_modifier =  "freesubjects_modifier" }
 	}
@@ -833,26 +874,26 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas	
+		has_idea_group = republik0	
 	}
 
 	mean_time_to_happen = {
 		days = 1
 		modifier = {
 			factor = 1.05
-			plutocracy_ideas = 4
+			republik0 = 4
 		}
 		modifier = {
 			factor = 1.05
-			plutocracy_ideas = 5
+			republik0 = 5
 		}
 		modifier = {
 			factor = 1.05
-			plutocracy_ideas = 6
+			republik0 = 6
 		}
 		modifier = {
 			factor = 1.05
-			plutocracy_ideas = 7
+			republik0 = 7
 		}
 	}
 
@@ -882,7 +923,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		NOT = {	has_country_modifier =  "aristocracy_modifier" }
 	}
 
@@ -920,7 +961,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas	
+		has_idea_group = republik0	
 		NOT = {	has_country_modifier =  "mercenaries_to_the_standard" }
 	}
 
@@ -943,7 +984,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		is_at_war = yes	
 		NOT = {	has_country_modifier =  "for_freedom" }
 	}
@@ -977,7 +1018,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		NOT = {	has_country_modifier =  "our_rights" }
 	}
 
@@ -1010,8 +1051,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
-		NOT = { mercantilism = 95 }
+		has_idea_group = republik0
+		NOT = { mercantilism = 0.95 }
 
 	}
 
@@ -1042,7 +1083,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		NOT = {	has_country_modifier =  "agricultural_boom" }
 	}
 
@@ -1065,7 +1106,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		NOT = { religious_unity = 1.0 }
 		NOT = {	has_country_modifier =  "tolerance_for_all" }
 	}
@@ -1099,7 +1140,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = plutocracy_ideas
+		has_idea_group = republik0
 		is_at_war = yes
 		NOT = {	has_country_modifier =  "to_the_colours" }
 	}
@@ -1181,6 +1222,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB820A"
+		add_meritocracy_effect = yes
 		random_list = {
 			10 = { create_advisor = natural_scientist }
 			10 = { create_advisor = statesman }
@@ -1247,7 +1289,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = scientific_revolution
+		has_idea = scientific_revolution	
 		NOT = {	has_country_modifier =  "mil_boost" }
 		NOT = {	has_country_modifier =  "adm_boost" }
 		NOT = {	has_country_modifier =  "dip_boost" }
@@ -1294,7 +1336,7 @@ country_event = {
 	
 	trigger = {
 		has_idea_group = innovativeness_ideas
-		is_year = 1700	
+		current_age = age_of_revolutions
 		NOT = {	has_country_modifier =  "revolution_suffers" }
 	}
 
@@ -1434,9 +1476,36 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		
+		}
+		NOT = { religion = jewish } #Has no heretic religions
 		NOT = { government = papal_government }
 		NOT = { government = theocratic_government }
+		OR = {
+			NOT = { religion = catholic }
+			AND = {
+				religion = catholic
+				OR = {
+					is_religion_enabled = protestant
+					is_religion_enabled = reformed
+				}
+			}
+		}
 		any_owned_province = {
 			has_owner_religion = yes
 			is_reformation_center = no
@@ -1457,9 +1526,8 @@ country_event = {
 					is_religion_enabled = reformed
 				}
 				random_list = {
-					55 = { set_country_flag = protestant_heresy }
+					70 = { set_country_flag = protestant_heresy }
 					30 = { set_country_flag = reformed_heresy }
-					15 = { set_country_flag = random_heresy }
 				}
 			}
 			if = {
@@ -1468,57 +1536,80 @@ country_event = {
 					is_religion_enabled = protestant
 					NOT = { is_religion_enabled = reformed }
 				}
-				random_list = {
-					65 = { set_country_flag = protestant_heresy }
-					35 = { set_country_flag = random_heresy }
-				}
+				set_country_flag = protestant_heresy
 			}
 			if = {
 				limit = {
-					religion = catholic
-					NOT = { is_religion_enabled = protestant }
-					NOT = { is_religion_enabled = reformed }
+					OR = {
+						religion = protestant
+						religion = reformed
+					}
 				}
-				set_country_flag = random_heresy
-			}
-			if = {
-				limit = {
-					west_christian_religion = yes
-					NOT = { religion = catholic }
-				}
-				set_country_flag = random_heresy
+				set_country_flag = catholic_heresy
 			}
 			# Orthodox
 			if = {
 				limit = {
-					east_christian_religion = yes
+					religion = orthodox
 					is_religion_enabled = protestant
 					is_religion_enabled = reformed
 				}
 				random_list = {
-					33 = { set_country_flag = protestant_heresy }
-					33 = { set_country_flag = reformed_heresy }
-					34 = { set_country_flag = random_heresy }
+					70 = { set_country_flag = protestant_heresy }
+					30 = { set_country_flag = reformed_heresy }
 				}
 			}
 			if = {
 				limit = {
-					east_christian_religion = yes
+					religion = orthodox
 					is_religion_enabled = protestant
 					NOT = { is_religion_enabled = reformed }
 				}
+				set_country_flag = protestant_heresy
+			}
+			if = {
+				limit = {
+					religion = orthodox
+					NOT = {
+						OR = {
+							is_religion_enabled = protestant
+							is_religion_enabled = reformed						
+						}
+					}
+				}
+				set_country_flag = catholic_heresy
+			}
+			# Coptic
+			if = {
+				limit = {
+					religion = coptic
+					is_religion_enabled = protestant
+					is_religion_enabled = reformed
+				}
 				random_list = {
-					65 = { set_country_flag = protestant_heresy }
-					35 = { set_country_flag = random_heresy }
+					70 = { set_country_flag = protestant_heresy }
+					30 = { set_country_flag = reformed_heresy }
 				}
 			}
 			if = {
 				limit = {
-					east_christian_religion = yes
-					NOT = { is_religion_enabled = protestant }
+					religion = coptic
+					is_religion_enabled = protestant
 					NOT = { is_religion_enabled = reformed }
 				}
-				set_country_flag = random_heresy
+				set_country_flag = protestant_heresy
+			}
+			if = {
+				limit = {
+					religion = coptic
+					NOT = {
+						OR = {
+							is_religion_enabled = protestant
+							is_religion_enabled = reformed						
+						}
+					}
+				}
+				set_country_flag = catholic_heresy
 			}
 		}
 	}
@@ -1541,7 +1632,9 @@ country_event = {
 			clr_country_flag = protestant_heresy
 		}
 		if = {
-			limit = { has_country_flag = reformed_heresy }
+			limit = {
+				has_country_flag = reformed_heresy
+			}
 			random_owned_province = {
 				limit = {
 					has_owner_religion = yes
@@ -1553,7 +1646,9 @@ country_event = {
 			clr_country_flag = reformed_heresy
 		}
 		if = {
-			limit = { has_country_flag = catholic_heresy }
+			limit = {
+				has_country_flag = catholic_heresy
+			}
 			random_owned_province = {
 				limit = {
 					has_owner_religion = yes
@@ -1564,44 +1659,35 @@ country_event = {
 			}
 			clr_country_flag = catholic_heresy
 		}
+		# Muslim
 		if = {
-			limit = { has_country_flag = random_heresy }
+			limit = {
+				religion_group = muslim
+			}
 			random_owned_province = {
 				limit = {
 					has_owner_religion = yes
-					is_reformation_center = no
 					NOT = { has_province_modifier = heresy }
 				}
 				change_religion = heretic
 			}
-			clr_country_flag = random_heresy
 		}
 		# Others
 		if = {
-			limit = { NOT = { religion_group = christian } }
+			limit = {
+				NOT = { religion_group = christian }
+				NOT = { religion_group = muslim }
+			}
 			random_owned_province = {
 				limit = {
 					has_owner_religion = yes
 					NOT = { has_province_modifier = heresy }
 				}
-				change_religion = heretic
+				add_province_modifier = {
+					name = "heresy"
+					duration = 730
+				}
 			}
-		}
-		if = {
-			limit = { uses_piety = yes }
-			add_piety = -0.15
-		}
-		if = {
-			limit = { uses_fervor = yes }
-			add_fervor = -15
-		}
-		if = {
-			limit = { uses_patriarch_authority = yes }
-			add_patriarch_authority = -0.05
-		}
-		if = {
-			limit = { uses_karma = yes }
-			add_karma = -15
 		}
 	}
 }
@@ -1616,7 +1702,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas	
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}	
 	}		
 	
 	mean_time_to_happen = {
@@ -1629,7 +1730,7 @@ country_event = {
 	}
 }
 
-# A holy person has arrived
+# A holy man has arrived
 country_event = {
 	id = ideagroups.402
 	title = "EVTNAME823"
@@ -1639,7 +1740,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas	
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}	
 	}		
 	
 	mean_time_to_happen = {
@@ -1649,6 +1765,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB823A"
 		add_piety = 0.05
+		add_meritocracy_effect = yes
 		define_advisor = {
 			type = theologian
 			skill = 2
@@ -1667,7 +1784,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		at_war_with_religious_enemy = yes
 	}
 	
@@ -1702,7 +1834,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		is_at_war = no
 		has_border_with_religious_enemy = yes
 		NOT = { had_recent_war = 5 }
@@ -1743,7 +1890,7 @@ country_event = {
 	}
 }
 
-# Church Mobilizes Population
+# Church Mobilises Population
 country_event = {
 	id = ideagroups.405
 	title = "EVTNAME6158"
@@ -1753,7 +1900,23 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
+		NOT = { stability = 3 }
 	}
 	
 	mean_time_to_happen = {
@@ -1764,7 +1927,6 @@ country_event = {
 		name = "EVTOPTA6158"
 		add_piety = 0.05
 		add_stability_or_adm_power = yes
-
 		if = {
 			limit = {
 				has_dlc = "The Cossacks"
@@ -1788,7 +1950,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		NOT = { has_country_modifier = religious_deviants }
 	}
 	
@@ -1835,8 +2012,8 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		add_piety = 0.15
 		add_stability = -1
+		add_piety = 0.15
 		if = {
 			limit = {
 				has_dlc = "The Cossacks"
@@ -1848,6 +2025,7 @@ country_event = {
 			}
 		}
 		
+	}
 	}
 }
 
@@ -1861,7 +2039,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		NOT = {	has_country_modifier =  "missionary_zeal" }
 		
 	}	
@@ -1910,6 +2103,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA6161"
 		add_stability = -1
+		
 	}
 
 	option = {
@@ -1932,12 +2126,28 @@ country_event = {
 	id = ideagroups.409
 	title = "EVTNAME6332"
 	desc = "EVTDESC6332"
-	picture = RELIGION_eventPicture
+	picture = ELECTION_REPUBLICAN_eventPicture
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
+		NOT = { stability = 3 }
 	}
 
 	mean_time_to_happen = {
@@ -1961,8 +2171,23 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
-		is_year = 1700
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
+		current_age = age_of_revolutions
 	}
 
 	mean_time_to_happen = {
@@ -1978,8 +2203,8 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB6333"
-		add_piety = -0.2
 		add_stability = -1
+		add_piety = -0.2
 	}
 }
 
@@ -1993,7 +2218,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		NOT = { religious_unity = 1.0 }
 	}
 
@@ -2028,7 +2268,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		at_war_with_religious_enemy = yes
 		war_exhaustion = 5
  	}
@@ -2064,7 +2319,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		any_owned_province = {
 			has_owner_religion = no
 			is_reformation_center = no
@@ -2102,7 +2372,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		any_owned_province = {
 			is_reformation_center = no
 			has_owner_religion = no
@@ -2141,7 +2426,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		NOT = { stability = 2 }
 	}
 
@@ -2182,7 +2482,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		NOT = { prestige = 90 }
 	}
 
@@ -2192,8 +2507,8 @@ country_event = {
 
 	option = {
 		name = ideagroups.416.a
-		add_piety = 0.05
 		add_prestige = 10
+		add_piety = 0.05
 		if = {
 			limit = {
 				has_dlc = "The Cossacks"
@@ -2217,7 +2532,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = religious_ideas
+		OR = {
+		has_idea_group = religious_ideas   
+		has_idea_group = katholisch0
+		has_idea_group = protestant0
+		has_idea_group = reformiert0
+		has_idea_group = orthodox0
+		has_idea_group = islam0
+		has_idea_group = cathar0
+		has_idea_group = shinto0
+		has_idea_group = norse0
+		has_idea_group = budda0
+		has_idea_group = confuci0 
+		has_idea_group = hindu0
+		has_idea_group = tengri0
+		has_idea_group = coptic0
+		}
 		NOT = {	has_country_modifier =  "love_of_devoted" }
 
 	}
@@ -2678,21 +3008,21 @@ country_event = {
 	option = {
 		name = ideagroups.604.b
 		trigger = {
-			uses_blessings = yes
+			religion = catholic
 		}
 		add_papal_influence = 20
 	}
 	option = {
 		name = ideagroups.604.b
 		trigger = {
-			uses_patriarch_authority = yes
+			religion = orthodox
 		}
 		add_patriarch_authority = 0.05
 	}
 	option = {
 		name = ideagroups.604.b
 		trigger = {
-			uses_piety = yes
+			religion_group = muslim
 		}
 		add_piety = 0.5
 	}
@@ -2873,7 +3203,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB831A"
-		add_yearly_manpower = -0.1
+		add_manpower = -0.1
 	}
 }
 
@@ -3265,7 +3595,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "EVTOPTB833B"
 		add_corruption = 0.5
@@ -3316,6 +3645,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB835A"
+		add_meritocracy_effect = yes
 		create_advisor = fortification_expert
 	}
 }
@@ -3401,6 +3731,7 @@ country_event = {
 			}
 		}
 	}
+
 }
 
 # Military Improvements
@@ -3526,8 +3857,10 @@ country_event = {
 		mil_tech = 2
 		any_owned_province = {
 			fort_level = 1
+
+
 			NOT = { has_province_modifier = local_fortress }
-			NOT = { has_province_modifier = fort_in_disrepair }
+			NOT = {has_province_modifier = fort_in_disrepair }
 			is_colony = no
 			is_core = ROOT
 			controlled_by = ROOT
@@ -3546,8 +3879,8 @@ country_event = {
 				NOT = { has_province_modifier = local_fortress }
 				NOT = { has_province_modifier = fort_in_disrepair }
 				is_colony = no
-				is_core = ROOT
-				controlled_by = ROOT				
+				is_core = ROOT		
+				controlled_by = ROOT		
 			}
 			add_province_modifier = {
 				name = "local_fortress"
@@ -3737,7 +4070,11 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+	
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = business_booming }
 	}
 
@@ -3764,7 +4101,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = "out_of_date_commerce" }
 	}
 	
@@ -3795,7 +4135,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = "adventuring_merchants" }
 		NOT = { has_country_modifier = "poor_merchants" }
 	}
@@ -3823,7 +4166,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = "adventuring_merchants" }
 		NOT = { has_country_modifier = "poor_merchants" }
 	}
@@ -3856,7 +4202,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = "trade_policy_working" }
 		NOT = { has_country_modifier = "trade_policy_failing" }
 	}
@@ -3884,7 +4233,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = "trade_policy_working" }
 		NOT = { has_country_modifier = "trade_policy_failing" }
 	}
@@ -3916,7 +4268,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		any_active_trade_node = {
 			NOT = {
 				has_trade_modifier = {
@@ -3962,7 +4317,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = "competitive_advantage" }
 	}
 	
@@ -3989,7 +4347,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = "cooperation_with_merchant_class" }
 		NOT = { has_country_modifier = "trade_collapse" }
 	}
@@ -4027,7 +4388,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { mercantilism = 95 }
 	}
 	
@@ -4051,7 +4415,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		OR = {
 		has_idea_group = trade_ideas
+		has_idea_group = handel0
+		}
 		NOT = { has_country_modifier = "cooperation_with_merchant_class" }
 		NOT = { has_country_modifier = "trade_collapse" }
 	}
@@ -4537,6 +4904,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB841A"
+		add_meritocracy_effect = yes
 		create_advisor = naval_reformer
 	}
 }
@@ -5055,6 +5423,7 @@ country_event = {
 	
 	trigger = {
 		has_idea_group = economic_ideas	
+
 	}	
 
 	mean_time_to_happen = {
@@ -5376,7 +5745,7 @@ country_event = {
 		religion_group = christian
 		any_owned_province = {
 			is_overseas = yes
-			is_pagan_trigger = yes
+			religion_group = pagan
 			NOT = { has_province_modifier = evangelical_system }
 		}
 	}
@@ -5390,7 +5759,7 @@ country_event = {
 		random_owned_province = {
 			limit = { 
 				is_overseas = yes
-				is_pagan_trigger = yes
+				religion_group = pagan
 			}
 			add_province_modifier = {
 				name = evangelical_system
@@ -5490,7 +5859,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB842A"
-		add_yearly_manpower = -0.1
+		add_manpower = -0.1
 	}
 }
 
@@ -5548,6 +5917,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB844A"
+		add_meritocracy_effect = yes
 		create_advisor = commandant
 	}
 }
@@ -5633,7 +6003,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB6307"
-		add_yearly_manpower = -0.20
+		add_manpower = -0.20
 	}
 }
 
@@ -5857,6 +6227,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB847A"
+		add_meritocracy_effect = yes
 		create_advisor = army_organiser
 	}
 }
@@ -5883,7 +6254,7 @@ country_event = {
 		random_owned_province = {
 			add_base_manpower = 1
 		}
-		add_yearly_manpower = 5
+		add_manpower = 5
 	}
 }
 
@@ -6019,7 +6390,7 @@ country_event = {
 	
 	option = {
 		name = ideagroups.1408.a
-		add_yearly_manpower = 0.1
+		add_manpower = 0.1
 	}
 }
 
@@ -6785,7 +7156,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 		NOT = { has_country_modifier = "hardened_oak" }
 	}
 
@@ -6812,7 +7186,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 	}
 
 	mean_time_to_happen = {
@@ -6840,7 +7217,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 		NOT = { has_country_modifier = "patriotic_curriculum" }
 		NOT = { has_country_modifier = "maintenance_curriculum" }
 	}
@@ -6878,7 +7258,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 		NOT = { has_country_modifier = "galley_veterans" }
 		NOT = { has_country_modifier = "heavy_ship_veterans" }
 	}
@@ -6914,7 +7297,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 		any_owned_province = { has_port = yes }
 	}
 
@@ -6949,7 +7335,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 	}
 
 	mean_time_to_happen = {
@@ -6972,7 +7361,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 		any_owned_province = {
 			has_port = yes
 		}
@@ -7003,7 +7395,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 		NOT = { has_country_modifier = "grieving_sailors" }
 	}
 
@@ -7035,7 +7430,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 	}
 
 	mean_time_to_happen = {
@@ -7058,7 +7456,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 		NOT = { has_country_modifier = "repairing_decayed_ships" }
 		NOT = { has_country_modifier = "rotting_wood" }
 		any_owned_province = {
@@ -7097,7 +7498,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = naval_ideas
+		OR = {
+		has_idea_group = gross0
+		has_idea_group = galle0
+		}
 		any_owned_province = {
 			has_port = yes
 			NOT = { has_province_modifier = shipyard_fire }

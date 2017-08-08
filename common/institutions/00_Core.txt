@@ -47,30 +47,37 @@ feudalism = {
 					}
 				}
 			}
-			culture = persian
-			culture = azerbaijani
-			culture = kurdish
-			culture = armenian
-			culture = mazandarani
-			culture = turkish
-			culture = omani_culture
-			culture = yemeni_culture
-			culture_group = byzantine
-			culture_group = dravidian
-			culture_group = east_asian
-			culture_group = east_slavic
-			culture_group = eastern_aryan
-			culture_group = japanese_g
-			culture_group = korean_g
-			culture_group = scandinavian
-			culture_group = west_slavic
-			culture_group = western_aryan
-			province_id = 383
-			province_id = 412
-			province_id = 2327
-			province_id = 2329
-			province_id = 2331
-			province_id = 2999
+			AND = {
+				owner = { is_playing_custom_nation = no }
+				OR = {
+					culture = persian
+					culture = azerbaijani
+					culture = kurdish
+					culture = armenian
+					culture = mazandarani
+					culture = turkish
+					culture = omani_culture
+					culture = yemeni_culture
+					culture = swahili
+					culture = manchu
+					culture_group = byzantine
+					culture_group = dravidian
+					culture_group = east_asian
+					culture_group = east_slavic
+					culture_group = eastern_aryan
+					culture_group = japanese_g
+					culture_group = korean_g
+					culture_group = scandinavian
+					culture_group = west_slavic
+					culture_group = western_aryan
+					province_id = 383
+					province_id = 412
+					province_id = 2327
+					province_id = 2329
+					province_id = 2331
+					province_id = 2999
+				}
+			}
 			AND = {
 				region = horn_of_africa_region
 				owner = { NOT = { government = tribal_federation } }
@@ -100,7 +107,6 @@ feudalism = {
 					technology_group = north_american
 					technology_group = south_american
 					technology_group = sub_saharan
-					technology_group = aboriginal
 				}
 			}
 			AND = {
@@ -113,7 +119,6 @@ feudalism = {
 					#NOT = { government = tribal_democracy }
 					#NOT = { government = native_council }
 					#NOT = { government = tribal_kingdom }
-					NOT = { technology_group = aboriginal }
 				}
 			}
 			is_year = 1700
@@ -222,7 +227,6 @@ feudalism = {
 					NOT = { government = siberian_native_council }
 					NOT = { government = native_council }
 					NOT = { government = steppe_horde }
-					NOT = { government = aboriginal_native_council }
 				}
 			}
 		}
@@ -236,11 +240,42 @@ feudalism = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_feudalism_embraced
+				is_owned_by_trade_company = no
 				owner = {
 					has_institution = feudalism
 				}
 			}
 		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				has_idea = gesellschaft3
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_gesellschaft
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = gesellschaft3
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				has_idea = patron_of_art_2
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_innovativ
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = patron_of_art_2
+				}
+			}
+		}
+		
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -496,8 +531,38 @@ renaissance = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_renaissance_embraced
+				is_owned_by_trade_company = no
 				owner = {
 					has_institution = renaissance
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				has_idea = gesellschaft3
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_gesellschaft
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = gesellschaft3
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				has_idea = patron_of_art_2
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_innovativ
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = patron_of_art_2
 				}
 			}
 		}
@@ -704,7 +769,7 @@ new_world_i = {
 					has_port = yes
 					is_capital = yes
 				}
-				NOT = {
+				owner = {
 					capital_scope = {
 						NOT = { continent = north_america }
 						NOT = { continent = south_america }
@@ -762,8 +827,37 @@ new_world_i = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_new_world_i_embraced
+				is_owned_by_trade_company = no
 				owner = {
 					has_institution = new_world_i
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				has_idea = gesellschaft3
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_gesellschaft
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = gesellschaft3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				has_idea = patron_of_art_2
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_innovativ
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = patron_of_art_2
 				}
 			}
 		}
@@ -998,6 +1092,7 @@ printing_press = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_owner_protestant
+				is_owned_by_trade_company = no
 				owner = {
 					OR = {
 						religion = protestant
@@ -1046,8 +1141,37 @@ printing_press = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_printing_press_embraced
+				is_owned_by_trade_company = no
 				owner = {
 					has_institution = printing_press
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				has_idea = gesellschaft3
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_gesellschaft
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = gesellschaft3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				has_idea = patron_of_art_2
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_innovativ
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = patron_of_art_2
 				}
 			}
 		}
@@ -1222,11 +1346,11 @@ global_trade = {
 			province_trade_power = 25
 		}
 		modifier = {
-			factor = 0.16 #Not Scaled
+			factor = 1.2 #Not Scaled
 			province_trade_power = 35
 		}
 		modifier = {
-			factor = 1.4 #Not Scaled
+			factor = 1.6 #Not Scaled
 			province_trade_power = 45
 		}
 		modifier = {
@@ -1337,8 +1461,37 @@ global_trade = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_global_trade_embraced
+				is_owned_by_trade_company = no
 				owner = {
 					has_institution = global_trade
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				has_idea = gesellschaft3
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_gesellschaft
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = gesellschaft3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				has_idea = patron_of_art_2
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_innovativ
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = patron_of_art_2
 				}
 			}
 		}
@@ -1607,8 +1760,38 @@ manufactories = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_manufactories_embraced
+				is_owned_by_trade_company = no
 				owner = {
 					has_institution = manufactories
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				has_idea = gesellschaft3
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_gesellschaft
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = gesellschaft3
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				has_idea = patron_of_art_2
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_innovativ
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = patron_of_art_2
 				}
 			}
 		}
@@ -1792,7 +1975,7 @@ enlightenment = {
 				tooltip = tooltip_philosopher_capital
 				is_capital = yes
 				owner = {
-					has_advisor = philosopher
+					advisor = philosopher
 					dip_tech = 20
 				}
 			}
@@ -1803,7 +1986,7 @@ enlightenment = {
 				tooltip = tooltip_scientist_capital
 				is_capital = yes
 				owner = {
-					has_advisor = natural_scientist
+					advisor = natural_scientist
 					dip_tech = 20
 				}
 			}
@@ -1848,8 +2031,37 @@ enlightenment = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_enlightenment_embraced
+				is_owned_by_trade_company = no
 				owner = {
 					has_institution = enlightenment
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				has_idea = gesellschaft3
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_gesellschaft
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = gesellschaft3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				has_idea = patron_of_art_2
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_innovativ
+				owner = {
+					#full_idea_group = gesellschaft0
+					has_idea = patron_of_art_2
 				}
 			}
 		}

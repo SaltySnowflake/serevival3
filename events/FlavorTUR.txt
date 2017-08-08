@@ -1,7 +1,5 @@
 ########################################
-# Major Flavor Events                  
-#
-# modified by Neprut
+# Major Flavor Events                  #
 ########################################
 
 namespace = flavor_tur
@@ -15,9 +13,11 @@ country_event = {
 	picture = REFORM_eventPicture
 
 
+	fire_only_once = yes
+
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur1 }
+		tag = TUR
+
 		is_year = 1444
 		NOT = { is_year = 1481 }
 		capital = 151
@@ -26,19 +26,22 @@ country_event = {
 			VEN = {
 				any_active_trade_node = {
 					province_id = 1320
+					has_merchant = PREV
 				}
 			}
 			GEN = {
 				any_active_trade_node = {
 					province_id = 1320
+					has_merchant = PREV
 				}
 			}
 		}
     }
 	
-	mean_time_to_happen = { months = 100 }	
+	mean_time_to_happen = {
+		months = 100
+	}
 	
-	immediate = { set_country_flag = had_tur1 }
 	
 	option = {		# End trade agreements with Venice and Genoa
 		name = "flavor_tur.EVTOPTA3352"
@@ -124,17 +127,19 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3354"
 	picture = REFORM_eventPicture
 	
+	fire_only_once = yes
+
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur2 }
+		tag = TUR
 		is_year = 1450
 		NOT = { is_year = 1550 }
 		MIL = 3
 	}
 	
-	mean_time_to_happen = { months = 300 }	
+	mean_time_to_happen = {
+		months = 300
+	}
 	
-	immediate = { set_country_flag = had_tur2 }
 	
 	option = {		# Great Army Reform
 		name = "flavor_tur.EVTOPTA3354"
@@ -169,21 +174,19 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3357"
 	picture = UNIVERSITY_eventPicture
 	
+	
+	fire_only_once = yes
+
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur3 }
-		OR = {
-			has_idea = timariot_system
-			has_idea = karamanid_cavalry
-			has_idea = akinci_cavalry
-			has_idea = ismail_bey_complex
-		}
+		tag = TUR
+		has_idea = timariot_system
 		has_country_modifier = the_devshirme_system
 	}
 	
-	mean_time_to_happen = { months = 100 }
+	mean_time_to_happen = {
+		months = 100
+	}
 	
-	immediate = { set_country_flag = had_tur3 }
 	
 	option = {		# Found the Enderun
 		name = "flavor_tur.EVTOPTA3357"
@@ -209,17 +212,20 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3358"
 	picture = REFORM_eventPicture
 	
+	
+	fire_only_once = yes
+
 	trigger = {
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur4 }
+		tag = TUR
 		is_year = 1450
 		NOT = { is_year = 1500 }
 		religion_group = muslim
 	}
 	
-	mean_time_to_happen = { months = 150 }
+	mean_time_to_happen = {
+		months = 150
+	}
 	
-	immediate = { set_country_flag = had_tur4 }
 	
 	option = {		# Codify the 'Laws of the Forefathers'
 		name = "flavor_tur.EVTOPTA3358"
@@ -346,28 +352,30 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3362"
 	picture = BATTLE_eventPicture
 	
+	fire_only_once = yes
+	
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur5 }
+		tag = TUR
 		is_year = 1550
 		any_neighbor_country = {
 			tag = PER
 			any_owned_province = {
-				NOT = { is_core = ROOT }
-				NOT = { is_claim = ROOT }
+				NOT = { is_core = TUR }
+				NOT = { is_claim = TUR }
 				any_neighbor_province = {
-					owned_by = ROOT
+					owned_by = TUR
 				}
 			}
 		}
-		PER = { is_subject = no }
+		PER = { is_free_or_tributary_trigger = yes }
 		NOT = { alliance_with = PER }
 		NOT = { war_with = PER }
     }
 	
-	mean_time_to_happen = { months = 250 }
+	mean_time_to_happen = {
+		months = 250
+	}
 	
-	immediate = { set_country_flag = had_tur5 }
 
 	option = {		# Fan the Flames of War
 		name = "flavor_tur.EVTOPTA3362"
@@ -381,13 +389,13 @@ country_event = {
 		PER = {
 			random_owned_province = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = { is_core = TUR }
+					NOT = { is_claim = TUR }
 					any_neighbor_province = {
-						owned_by = ROOT
+						owned_by = TUR
 					}
 				}
-				add_claim = ROOT
+				add_claim = TUR
 			}
 			add_opinion = {
 				who = ROOT
@@ -452,17 +460,19 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3366"
 	picture = COURT_eventPicture
 
+
+	fire_only_once = yes
+	
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur6 }
+		tag = TUR
 		is_at_war = no
 		is_year = 1520
 		NOT = { is_year = 1566 }
 	}
 	
-	mean_time_to_happen = { months = 25 }
-	
-	immediate = { set_country_flag = had_tur6 }
+	mean_time_to_happen = {
+		months = 25
+	}
 	
 	option = {		# Expand the Royal Bureaucracy
 		name = "flavor_tur.EVTOPTA3366"
@@ -473,9 +483,10 @@ country_event = {
 				NOT = { stability = 0 }
 			}
 		}
-		add_stability = -1
+		add_stability = -2
 		add_ruler_modifier = {
 			name = expanded_royal_bureaucracy
+		duration = 14600
 		}
 	}
 	option = {		# Limited reforms
@@ -509,18 +520,22 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3367"
 	picture = REFORM_eventPicture
 	
+	fire_only_once = yes
+
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur7 }
+		tag = TUR
 		is_year = 1500
 		NOT = { is_year = 1520 }
 		is_at_war = no
-		any_owned_province = { has_port = yes }
-    }
+		any_owned_province = {
+			has_port = yes
+		}
+    	}
 	
-	mean_time_to_happen = { months = 25 }
+	mean_time_to_happen = {
+		months = 25
+	}
 	
-	immediate = { set_country_flag = had_tur7 }
 	
 	option = {		# Build the Imperial Halic Shipyard
 		name = "flavor_tur.EVTOPTA3367"
@@ -571,17 +586,17 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur8 }
+		tag = TUR
 		is_year = 1450
 		NOT = { is_year = 1500 }
 		is_at_war = no
 		NOT = { legitimacy = 50 }
     	}
 	
-	mean_time_to_happen = { months = 150 }
+	mean_time_to_happen = {
+		months = 150
+	}
 	
-	immediate = { set_country_flag = had_tur8 }
 
 	option = {		# Crush Cem's rebellion
 		name = "flavor_tur.EVTOPTA3368"
@@ -621,8 +636,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur9 }
+		tag = TUR
 		is_year = 1500
 		NOT = { is_year = 1550 }
 		is_at_war = no
@@ -632,10 +646,11 @@ country_event = {
 		}
     }
 	
-	mean_time_to_happen = { months = 150 }
+	mean_time_to_happen = {
+		months = 150
+	}
 	
 	immediate = {
-		set_country_flag = had_tur9
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
@@ -679,14 +694,19 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3371"
 	picture = COURT_eventPicture
 	
+	
+	fire_only_once = yes
+
+	
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur10 }
+		tag = TUR
 		is_at_war = no
+		
 		owns = 361 # Cairo
 		owns = 358 # Alexandria
 		owns = 382 # Damascus
 		owns = 379 # Jerusalem
+		
 		religion_group = muslim
 		any_owned_province = {
 			province_id = 361		# Cairo
@@ -694,9 +714,10 @@ country_event = {
 		NOT = { adm_power = 599 }
 	}
 	
-	mean_time_to_happen = { months = 36 }
+	mean_time_to_happen = {
+		months = 36
+	}
 	
-	immediate = { set_country_flag = had_tur10 }
 
 	option = {		# Assume the title of Caliph
 		name = "flavor_tur.EVTOPTA3371"
@@ -714,21 +735,22 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3373"
 	picture = ANGRY_MOB_eventPicture
 	
+	fire_only_once = yes
 	trigger ={
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur11 }
+		tag = TUR
 		NOT = { exists = MAM }
 		any_owned_province = {
 			is_core = MAM
 			culture = al_misr_arabic
 			can_spawn_rebels = nationalist_rebels
 		}
-    }
+    	}
 	
-	mean_time_to_happen = { months = 240 }
+	mean_time_to_happen = {
+		months = 240
+	}
 	
 	immediate = {
-		set_country_flag = had_tur11
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
@@ -784,17 +806,20 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3374"
 	picture = UNIVERSITY_eventPicture
 	
+	
+	fire_only_once = yes
+	
 	trigger = {
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur12 }
+		tag = TUR
 		is_year = 1519
 		NOT = { is_year = 1560 }
 		owns = 151
 	}
 	
-	mean_time_to_happen = { months = 100 }
+	mean_time_to_happen = {
+		months = 100
+	}
 	
-	immediate = { set_country_flag = had_tur12 }
 
 	option = {		# Appoint him royal architect
 		name = "flavor_tur.EVTOPTA3374"
@@ -828,16 +853,20 @@ country_event = {
 	picture = REFORM_eventPicture
 	
 	trigger = {
-		primary_culture = turkish
 		NOT = { has_country_flag = TUR_had_event_3375 }
 		is_year = 1500
 		NOT = { is_year = 1600 }
+		tag = TUR
 		owns = 151
     }
 	
-	mean_time_to_happen = { months = 200 }
+	mean_time_to_happen = {
+		months = 200
+	}
 	
-	immediate = { set_country_flag = TUR_had_event_3375 }
+	immediate = {
+		set_country_flag = TUR_had_event_3375
+	}
 
 	option = {		# Codify the Ottoman Laws
 		name = "flavor_tur.EVTOPTA3375"
@@ -861,9 +890,10 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3377"
 	picture = COURT_eventPicture
 	
+	fire_only_once = yes
+
 	trigger = {
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur13 }
+		tag = TUR
 		is_year = 1600
 		NOT = { is_year = 1650 }
 		is_female = no
@@ -873,15 +903,31 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = { months = 100 }
-	
-	immediate = { set_country_flag = had_tur13 }
+	mean_time_to_happen = {
+		months = 100
+	}
 	
 	option = {		# Wed Kösem
 		name = "flavor_tur.EVTOPTA3377"
 		ai_chance = { factor = 90 }
 		add_ruler_modifier = {
 			name = kosem_sultana
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man"
+				has_consort = no
+			}
+			define_consort = {
+				name = "Kösem Sultan"
+				adm = 5
+				dip = 4
+				mil = 5
+				female = yes
+			}
+			hidden_effect = {
+				add_queen_personality = incorruptible_personality
+			}
 		}
 	}
 	option = {		# Choose another wife
@@ -908,18 +954,19 @@ country_event = {
 	desc = "flavor_tur.EVTDESC3384"
 	picture = DEATH_OF_HEIR_eventPicture
 	
+	fire_only_once = yes
+	
 	trigger = {
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur14 }
+		tag = TUR
 		has_ruler_modifier = kosem_sultana
 		NOT = {
 			has_global_flag = wih_kosem_tur_flag
 		}
 	}
 	
-	mean_time_to_happen = { months = 300 }
-	
-	immediate = { set_country_flag = had_tur14 }
+	mean_time_to_happen = {
+		months = 300
+	}
 	
 	option = {		# Kösem is murdered
 		name = "flavor_tur.EVTOPTA3384"
@@ -933,17 +980,18 @@ country_event = {
 	title = "flavor_tur.EVTNAME3385"
 	desc = "flavor_tur.EVTDESC3385"
 	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
 
 	trigger = {
-		primary_culture = turkish
-		NOT = { has_country_flag = had_tur15 }
+		tag = TUR
 		is_year = 1600
 		NOT = { is_year = 1650 }
 	}
 	
-	mean_time_to_happen = { months = 100 }
-	
-	immediate = { set_country_flag = had_tur15 }
+	mean_time_to_happen = {
+		months = 100
+	}
 	
 	option = {		# Support the Köprülü Family
 		name = "flavor_tur.EVTOPTA3385"
@@ -980,8 +1028,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		is_year = 1600
 		NOT = { is_year = 1650 }
     	}
@@ -1016,11 +1063,10 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		is_year = 1600
 		exists = PER
-		PER = { is_subject = no }
+		PER = { is_free_or_tributary_trigger = yes }
 		NOT = { alliance_with = PER }
 		NOT = { war_with = PER }
 		NOT = {
@@ -1095,10 +1141,10 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 0
-				army_size = FROM
+				army_size = TUR
 			}
 		}
-		FROM = {
+		TUR = {
 			add_opinion = {
 				who = ROOT
 				modifier = full_reconciliation
@@ -1115,10 +1161,10 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0.5
-				army_size = FROM
+				army_size = TUR
 			}
 		}
-		FROM = {
+		TUR = {
 			add_opinion = {
 				who = ROOT
 				modifier = moderate_treaty
@@ -1134,14 +1180,14 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 4
-				NOT = { army_size = FROM }
+				NOT = { army_size = TUR }
 			}
 		}
 		add_prestige = 5
 		hidden_effect = {
 			clr_country_flag = full_reconciliation
 			clr_country_flag = moderate_treaty
-			FROM = {
+			TUR = {
 				country_event = { id = flavor_tur.3 days = 10 }
 			}
 		}
@@ -1215,8 +1261,7 @@ country_event = {
 
 	
 	trigger ={
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		is_year = 1700
 		NOT = { exists = TUN }
 		any_owned_province = {
@@ -1291,8 +1336,7 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger ={
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		is_year = 1700
 		NOT = { exists = TRI }
 		any_owned_province = {
@@ -1366,13 +1410,12 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger ={
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		is_year = 1700
 		war_with = RUS
 		
 		egypt_region = {
-			owned_by = ROOT
+			owned_by = TUR
 			culture = al_misr_arabic
 			can_spawn_rebels = nationalist_rebels
 		}
@@ -1440,8 +1483,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger ={
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		is_year = 1700
 	}
 	
@@ -1493,8 +1535,7 @@ country_event = {
 
 	
 	trigger ={
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		capital = 151
 		religion_group = muslim
 		NOT = { exists = BYZ }
@@ -1530,7 +1571,7 @@ country_event = {
 				factor = 0.5
 				any_neighbor_country = {
 					religion = orthodox
-					army_size = ROOT
+					army_size = TUR
 				}
 			}
 		}
@@ -1560,8 +1601,7 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger ={
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		is_year = 1700
 		NOT = { is_year = 1800 }
 		any_owned_province = {
@@ -1634,8 +1674,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		primary_culture = turkish
-		num_of_cities = 6
+		tag = TUR
 		is_year = 1600
 		has_country_modifier = the_provincial_system
 		
@@ -1716,14 +1755,20 @@ country_event = {
 	major = yes
 	
 	trigger ={
-		primary_culture = turkish
-		num_of_cities = 6
-		army_tradition = 50
+	
+		tag = TUR
 		OR = {
 			adm = 5
 			dip = 5
 			mil = 5
-		}		
+		}
+		
+		OR = {
+		army_tradition = 50
+		has_estate = estate_janissary
+		}
+
+			
 	}
 	
 	mean_time_to_happen = {
@@ -1733,10 +1778,18 @@ country_event = {
 	
 	option = {		# Continue building up the Janissaries
 		name = "flavor_tur.EVTOPTA100"
+		
+		if = {
+				limit = {
+					NOT = { has_dlc = "Common Sense" }
+				}
 		add_country_modifier = {
 			name = tur_janissary
 			duration = -1
 		}
+		}
+		
+		
 		custom_tooltip = janissary_disaster_notifier
 		set_country_flag = janissary_timer
 	}
@@ -1744,6 +1797,7 @@ country_event = {
 		name = "flavor_tur.EVTOPTB100"
 		ai_chance = { factor = 0 }
 		add_prestige = -5
+		set_country_flag = NO_JANISSARIES
 	}
 }
 
@@ -1789,7 +1843,10 @@ country_event = {
 	picture = MILITARY_CAMP_eventPicture
 	
 	trigger ={
+		OR = {
 		has_country_modifier = tur_janissary
+		has_estate = estate_janissary
+		}
 		NOT = { has_disaster = janissary_decadence }
 	}
 	
@@ -1797,13 +1854,32 @@ country_event = {
 	
 	option = {		# Give a reward and higher wages
 		name = "flavor_tur.EVTOPTA102"
+		if = {
+				limit = {
+					has_country_modifier = tur_janissary
+				}
 		add_years_of_income = -0.5
+		}
+		if = {
+				limit = {
+					has_estate = estate_janissary
+				}
+		add_estate_loyalty = {
+				estate = estate_janissary
+				loyalty = -15
+			}
+		}
+		
 	}
 	option = {		# Refuse such blackmail
 		name = "flavor_tur.EVTOPTB102"
 		add_ruler_modifier = {
 			name = janissaries_denied_reward
 		}
+		add_estate_loyalty = {
+				estate = estate_janissary
+				loyalty = -25
+			}
 	}
 }
 
@@ -1816,7 +1892,10 @@ country_event = {
 	picture = LAND_MILITARY_eventPicture
 
 	trigger = {
+		OR = {
 		has_country_modifier = tur_janissary
+		has_estate = estate_janissary
+		}
 		NOT = { has_disaster = janissary_decadence }
 		NOT = {
 			has_country_modifier = tur_janissaries_timer
@@ -1853,13 +1932,42 @@ country_event = {
 	
 	option = {
 		name = "flavor_tur.EVTOPTA111"
+		if = {
+				limit = {
+					has_country_modifier = tur_janissary
+				}
 		add_years_of_income = -0.5
+		}
+		if = {
+				limit = {
+					has_estate = estate_janissary
+				}
+		add_estate_loyalty = {
+				estate = estate_janissary
+				loyalty = 15
+			}
+		}
 	}
 	option = {
 		name = "flavor_tur.EVTOPTB111"
-		add_ruler_modifier = {
+		if = {
+				limit = {
+					has_country_modifier = tur_janissary
+				}
+			add_ruler_modifier = {
 			name = tur_janissaries_salary
+			}
 		}
+		if = {
+				limit = {
+					has_estate = estate_janissary
+				}
+		add_estate_loyalty = {
+				estate = estate_janissary
+				loyalty = 10
+			}
+		}
+		
 	}
 	option = {
 		name = "flavor_tur.EVTOPTC111"
@@ -1883,7 +1991,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		OR = {
 		has_country_modifier = tur_janissary
+		has_estate = estate_janissary
+		}
 		NOT = { has_disaster = janissary_decadence }
     	}
 	
@@ -1920,10 +2031,7 @@ country_event = {
 	
 	trigger = {
 		has_country_modifier = tur_janissary
-		NOT = { 
-			primary_culture = turkish
-			num_of_cities = 6
-		}
+		NOT = { tag = TUR }
     }
 	
 	mean_time_to_happen = {
@@ -1933,9 +2041,18 @@ country_event = {
 	
 	immediate = {
 		remove_country_modifier = tur_janissary
+		set_country_flag = NO_JANISSARIES
 	}
 	
 	option = {		# Ok.
 		name = "flavor_tur.106.a"
 	}
 }
+
+
+
+
+
+
+
+

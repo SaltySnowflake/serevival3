@@ -1,0 +1,139 @@
+dev_nerv_700 = {
+	potential = {
+		total_development = 700
+		NOT = {
+		total_development = 800
+		}
+	}
+	trigger = {
+		total_development = 700
+		NOT = {
+		total_development = 800
+		}
+	}
+	development_cost = 0.1
+}
+
+dev_nerv_800 = {
+	potential = {
+		total_development = 800
+		NOT = {
+		total_development = 900
+		}
+	}
+	trigger = {
+		total_development = 800
+		NOT = {
+		total_development = 900
+		}
+	}
+	development_cost = 0.15
+}
+
+dev_nerv_900 = {
+	potential = {
+		total_development = 900
+		NOT = {
+		total_development = 1000
+		}
+	}
+	trigger = {
+		total_development = 900
+		NOT = {
+		total_development = 1000
+		}
+	}
+	development_cost = 0.2
+}
+
+dev_nerv_1000 = {
+	potential = {
+		total_development = 1000
+		NOT = {
+		total_development = 1100
+		}
+	}
+	trigger = {
+		total_development = 1000
+		NOT = {
+		total_development = 1100
+		}
+	}
+	development_cost = 0.25
+}
+
+dev_nerv_1100 = {
+	potential = {
+		total_development = 1100
+		NOT = {
+		total_development = 1200
+		}
+	}
+	trigger = {
+		total_development = 1100
+		NOT = {
+		total_development = 1200
+		}
+	}
+	development_cost = 0.3
+}
+
+dev_nerv_1200 = {
+	potential = {
+		total_development = 1200
+		NOT = {
+		total_development = 1300
+		}
+	}
+	trigger = {
+		total_development = 1200
+		NOT = {
+		total_development = 1300
+		}
+	}
+	development_cost = 0.35
+}
+
+dev_nerv_1300 = {
+	potential = {
+		total_development = 1300
+		NOT = {
+		total_development = 1400
+		}
+	}
+	trigger = {
+		total_development = 1300
+		NOT = {
+		total_development = 1400
+		}
+	}
+	development_cost = 0.4
+}
+
+dev_nerv_1400 = {
+	potential = {
+		total_development = 1400
+		NOT = {
+		total_development = 1500
+		}
+	}
+	trigger = {
+		total_development = 1400
+		NOT = {
+		total_development = 1500
+		}
+	}
+	development_cost = 0.45
+}
+
+dev_nerv_1400 = {
+	potential = {
+		total_development = 1500
+
+	}
+	trigger = {
+		total_development = 1500
+
+	}
+	development_cost = 0.5
+}

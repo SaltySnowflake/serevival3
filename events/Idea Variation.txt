@@ -1,0 +1,2138 @@
+##########################################
+#### Freier Kardinalssitz für Spieler mit der katholischen Idee
+##########################################
+
+namespace = flogi_ideas
+
+country_event = {
+
+	id = flogi_ideas.1
+	title = flogi_ideas.12
+	desc = flogi_ideas.13
+	
+	picture = POPE_PREACHING_eventPicture
+		
+	trigger = {
+		ai = no
+		papacy_active = yes
+		religion = catholic
+		has_idea = katholisch1
+		NOT = { has_country_flag = kardinal_frei }
+		NOT = { tag = PAP }
+		NOT = { num_of_cardinals = 7 }	
+
+		}
+
+	immediate = { set_country_flag = kardinal_frei }
+
+	
+	mean_time_to_happen = {
+
+	days = 1
+		}
+
+
+	option = {
+		name = "flogi_ideas.14"
+
+	if = {
+		limit = {
+			capital_scope = { has_cardinal = yes }
+			}
+		 random_owned_province = {
+
+		limit = { NOT = { has_cardinal = yes }}
+	
+			add_cardinal = yes
+				}
+
+			}
+
+	if = {
+		limit = { capital_scope = { NOT = { has_cardinal = yes }}}
+		capital_scope = {	
+
+			add_cardinal = yes
+
+				}
+			}
+		}
+	}
+	
+	
+################################################################
+#### Automatic Idea Group Change Religion 
+################################################################	
+	
+country_event = {
+
+	id = flogi_ideas.2
+	title = flogi_ideas.22
+	desc = flogi_ideas.23
+	
+	picture = POPE_PREACHING_eventPicture
+		
+	trigger = {
+		# protestant_reformation #(flag)
+		OR = {
+		religion = protestant
+		religion = reformed
+		}
+		has_idea_group = katholisch0
+		religious_unity = 0.8
+		
+		}
+		
+		immediate = { 
+		
+		# Protestant Part
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = katholisch1
+		NOT = { has_idea = katholisch2 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = katholisch2
+		NOT = { has_idea = katholisch3 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = katholisch3
+		NOT = { has_idea = katholisch4 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = katholisch4
+		NOT = { has_idea = katholisch5 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		add_idea = protestant4
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = katholisch5
+		NOT = { has_idea = katholisch6 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		add_idea = protestant4
+		add_idea = protestant5
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = katholisch6
+		NOT = { has_idea = katholisch7 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		add_idea = protestant4
+		add_idea = protestant5
+		add_idea = protestant6
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = katholisch7
+		
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		add_idea = protestant4
+		add_idea = protestant5
+		add_idea = protestant6
+		add_idea = protestant7
+		}
+		
+		# Reformed Part
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = katholisch1
+		NOT = { has_idea = katholisch2 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = katholisch2
+		NOT = { has_idea = katholisch3 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = katholisch3
+		NOT = { has_idea = katholisch4 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = katholisch4
+		NOT = { has_idea = katholisch5 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		add_idea = reformiert4
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = katholisch5
+		NOT = { has_idea = katholisch6 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		add_idea = reformiert4
+		add_idea = reformiert5
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = katholisch6
+		NOT = { has_idea = katholisch7 }
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		add_idea = reformiert4
+		add_idea = reformiert5
+		add_idea = reformiert6
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = katholisch7
+		
+		}
+		remove_idea_group = katholisch0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		add_idea = reformiert4
+		add_idea = reformiert5
+		add_idea = reformiert6
+		add_idea = reformiert7
+		}
+		
+		
+		}
+		
+		mean_time_to_happen = {
+
+	days = 1
+		}
+
+
+	option = {
+		name = "flogi_ideas.24"
+		add_prestige = 10
+		
+		}
+}
+
+
+
+country_event = {
+
+	id = flogi_ideas.8
+	title = flogi_ideas.82
+	desc = flogi_ideas.83
+	
+	picture = POPE_PREACHING_eventPicture
+		
+	trigger = {
+
+		OR = {
+		religion = catholic
+		religion = reformed
+		}
+		has_idea_group = protestant0
+		religious_unity = 0.8
+		
+		}
+		
+		immediate = { 
+		
+		
+		# Catholic Part
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = protestant1
+		NOT = { has_idea = protestant2 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = protestant2
+		NOT = { has_idea = protestant3 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = protestant3
+		NOT = { has_idea = protestant4 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = protestant4
+		NOT = { has_idea = protestant5 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		add_idea = katholisch4
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = protestant5
+		NOT = { has_idea = protestant6 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		add_idea = katholisch4
+		add_idea = katholisch5
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = protestant6
+		NOT = { has_idea = protestant7 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		add_idea = katholisch4
+		add_idea = katholisch5
+		add_idea = katholisch6
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = protestant7
+		
+		}
+		remove_idea_group = protestant0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		add_idea = katholisch4
+		add_idea = katholisch5
+		add_idea = katholisch6
+		add_idea = katholisch7
+		}
+		
+		# Reformed Part
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = protestant1
+		NOT = { has_idea = protestant2 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = protestant2
+		NOT = { has_idea = protestant3 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = protestant3
+		NOT = { has_idea = protestant4 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = protestant4
+		NOT = { has_idea = protestant5 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		add_idea = reformiert4
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = protestant5
+		NOT = { has_idea = protestant6 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		add_idea = reformiert4
+		add_idea = reformiert5
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = protestant6
+		NOT = { has_idea = protestant7 }
+		}
+		remove_idea_group = protestant0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		add_idea = reformiert4
+		add_idea = reformiert5
+		add_idea = reformiert6
+		}
+		
+		if = {
+		limit = {
+		religion = reformed
+		has_idea = protestant7
+		
+		}
+		remove_idea_group = protestant0
+		add_idea_group = reformiert0
+		add_idea = reformiert1
+		add_idea = reformiert2
+		add_idea = reformiert3
+		add_idea = reformiert4
+		add_idea = reformiert5
+		add_idea = reformiert6
+		add_idea = reformiert7
+		}
+		
+		
+		
+		
+		}
+		
+		mean_time_to_happen = {
+
+	days = 1
+		}
+
+
+	option = {
+		name = "flogi_ideas.84"
+		add_prestige = 10
+		
+		}
+}
+
+
+country_event = {
+
+	id = flogi_ideas.9
+	title = flogi_ideas.92
+	desc = flogi_ideas.93
+	
+	picture = POPE_PREACHING_eventPicture
+		
+	trigger = {
+
+		OR = {
+		religion = protestant
+		religion = catholic
+		}
+		has_idea_group = reformiert0
+		religious_unity = 0.8
+		
+		}
+		
+		immediate = { 
+		
+		# Catholic Part
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = reformiert1
+		NOT = { has_idea = reformiert2 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = reformiert2
+		NOT = { has_idea = reformiert3 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = reformiert3
+		NOT = { has_idea = reformiert4 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = reformiert4
+		NOT = { has_idea = reformiert5 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		add_idea = katholisch4
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = reformiert5
+		NOT = { has_idea = reformiert6 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		add_idea = katholisch4
+		add_idea = katholisch5
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = reformiert6
+		NOT = { has_idea = reformiert7 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		add_idea = katholisch4
+		add_idea = katholisch5
+		add_idea = katholisch6
+		}
+		
+		if = {
+		limit = {
+		religion = catholic
+		has_idea = reformiert7
+		
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = katholisch0
+		add_idea = katholisch1
+		add_idea = katholisch2
+		add_idea = katholisch3
+		add_idea = katholisch4
+		add_idea = katholisch5
+		add_idea = katholisch6
+		add_idea = katholisch7
+		}
+		
+		
+		# Protestant Part
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = reformiert1
+		NOT = { has_idea = reformiert2 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = reformiert2
+		NOT = { has_idea = reformiert3 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = reformiert3
+		NOT = { has_idea = reformiert4 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = reformiert4
+		NOT = { has_idea = reformiert5 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		add_idea = protestant4
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = reformiert5
+		NOT = { has_idea = reformiert6 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		add_idea = protestant4
+		add_idea = protestant5
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = reformiert6
+		NOT = { has_idea = reformiert7 }
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		add_idea = protestant4
+		add_idea = protestant5
+		add_idea = protestant6
+		}
+		
+		if = {
+		limit = {
+		religion = protestant
+		has_idea = reformiert7
+		
+		}
+		remove_idea_group = reformiert0
+		add_idea_group = protestant0
+		add_idea = protestant1
+		add_idea = protestant2
+		add_idea = protestant3
+		add_idea = protestant4
+		add_idea = protestant5
+		add_idea = protestant6
+		add_idea = protestant7
+		}
+		
+		
+		}
+		
+		mean_time_to_happen = {
+
+	days = 1
+		}
+
+
+	option = {
+		name = "flogi_ideas.94"
+		add_prestige = 10
+		
+		}
+}
+
+
+
+################################################################
+#### Development Decision
+################################################################
+
+
+country_event = {
+
+	id = flogi_ideas.3
+	title = flogi_ideas.32
+	desc = flogi_ideas.33
+	
+	picture = CITY_DEVELOPMENT_eventPicture
+		
+	
+	is_triggered_only = yes	
+
+
+	option = {
+		name = "flogi_ideas.34"
+
+
+
+			add_years_of_income = -0.15
+			
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+			
+			}
+				
+				
+			if = {
+			limit = { total_development = 50 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+	
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+				}
+			
+
+
+			if = {
+			limit = { total_development = 100 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+				}	
+				
+			
+			if = {
+			limit = { total_development = 150 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+				
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+				}
+				
+		
+			if = {
+			limit = { total_development = 250 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+				
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+			
+				}
+				
+			
+			
+			if = {
+			limit = { total_development = 400 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+				
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+			
+				}
+		
+
+			if = {
+			limit = { total_development = 500 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+				
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+			
+				}
+			if = {
+			limit = { total_development = 700 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+				
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+			
+				}
+
+			if = {
+			limit = { total_development = 800 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+				
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+			
+				}
+
+			if = {
+			limit = { total_development = 1000 }
+			add_years_of_income = -0.15
+			random_owned_province = {
+			limit = {
+				is_state = yes
+				}
+				
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower 1
+						}
+			
+				}		
+
+		}
+}
+
+
+################################
+#### Regierungswechsel, Ideengruppen Korrektur
+################################
+
+
+
+country_event = {          # Aristokratie ---> Republik/Monarchie
+
+	id = flogi_ideas.4
+	title = flogi_ideas.42
+	desc = flogi_ideas.43
+	
+	OVEREXTENSION_eventPicture
+		
+	trigger = {
+		
+		OR = {
+		government = monarchy
+		government = republic
+		}
+		has_idea_group = aristocracy_ideas
+		
+		}
+		
+		immediate = { 
+		
+		# Monarchie Teil
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = noble_knights
+		NOT = { has_idea = local_nobility }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = local_nobility
+		NOT = { has_idea = serfdom }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = serfdom
+		NOT = { has_idea = noble_officers }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = noble_officers
+		NOT = { has_idea = international_nobility }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = international_nobility
+		NOT = { has_idea = noble_resilience }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = noble_resilience
+		NOT = { has_idea = military_traditions }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		add_idea = monarchie6
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = military_traditions
+		
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		add_idea = monarchie6
+		add_idea = monarchie7
+		}
+		
+		
+		# Republik Teil
+		if = {
+		limit = {
+		government = republic
+		has_idea = noble_knights
+		NOT = { has_idea = local_nobility }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = republik0
+		add_idea = republik1
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = local_nobility
+		NOT = { has_idea = serfdom }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = serfdom
+		NOT = { has_idea = noble_officers }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = noble_officers
+		NOT = { has_idea = international_nobility }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = international_nobility
+		NOT = { has_idea = noble_resilience }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = noble_resilience
+		NOT = { has_idea = military_traditions }
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		add_idea = republik6
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = military_traditions
+		
+		}
+		remove_idea_group = aristocracy_ideas
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		add_idea = republik6
+		add_idea = republik7
+		}
+		
+		
+		
+		
+		
+		}
+		
+		mean_time_to_happen = {
+
+	days = 10
+		}
+
+
+	option = {
+		name = "flogi_ideas.44"
+		add_prestige = 5
+		
+		}
+}
+
+
+################################
+#### Regierungswechsel, Ideengruppen Korrektur
+################################
+
+
+
+country_event = {          # Republik ---> Monarchie/Aristokratie/Diktatur
+
+	id = flogi_ideas.5
+	title = flogi_ideas.52
+	desc = flogi_ideas.53
+	
+	picture = OVEREXTENSION_eventPicture
+		
+	trigger = {
+		
+		OR = {
+		government = monarchy
+		government = theocracy
+		government = dictatorship
+		}
+		has_idea_group = republik0
+		
+		}
+		
+		immediate = { 
+		
+	# Monarchie Teil
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = republik1
+		NOT = { has_idea = republik2 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = republik2
+		NOT = { has_idea = republik3 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = republik3
+		NOT = { has_idea = republik4 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = republik4
+		NOT = { has_idea = republik5 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = republik5
+		NOT = { has_idea = republik6 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = republik6
+		NOT = { has_idea = republik7 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		add_idea = monarchie6
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = republik7
+		
+		}
+		remove_idea_group = republik0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		add_idea = monarchie6
+		add_idea = monarchie7
+		}
+		
+		
+			# Theokratie Teil
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = republik1
+		NOT = { has_idea = republik2 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = republik2
+		NOT = { has_idea = republik3 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = republik3
+		NOT = { has_idea = republik4 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = republik4
+		NOT = { has_idea = republik5 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = republik5
+		NOT = { has_idea = republik6 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = republik6
+		NOT = { has_idea = republik7 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		add_idea = noble_resilience
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = republik7
+		
+		}
+		remove_idea_group = republik0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		add_idea = noble_resilience
+		add_idea = military_traditions
+		}
+		
+		
+		# Diktatur Teil
+		if = {
+		limit = {
+		government = dictatorship
+		has_idea = republik1
+		NOT = { has_idea = republik2 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = diktatur0
+		add_idea = diktatur1
+		}
+		
+		if = {
+		limit = {
+		government = dictatorship
+		has_idea = republik2
+		NOT = { has_idea = republik3 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = diktatur0
+		add_idea = diktatur1
+		add_idea = diktatur2
+		}
+		
+		if = {
+		limit = {
+		government = dictatorship
+		has_idea = republik3
+		NOT = { has_idea = republik4 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = diktatur0
+		add_idea = diktatur1
+		add_idea = diktatur2
+		add_idea = diktatur3
+		}
+		
+		if = {
+		limit = {
+		government = dictatorship
+		has_idea = republik4
+		NOT = { has_idea = republik5 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = diktatur0
+		add_idea = diktatur1
+		add_idea = diktatur2
+		add_idea = diktatur3
+		add_idea = diktatur4
+		}
+		
+		if = {
+		limit = {
+		government = dictatorship
+		has_idea = republik5
+		NOT = { has_idea = republik6 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = diktatur0
+		add_idea = diktatur1
+		add_idea = diktatur2
+		add_idea = diktatur3
+		add_idea = diktatur4
+		add_idea = diktatur5
+		}
+		
+		if = {
+		limit = {
+		government = dictatorship
+		has_idea = republik6
+		NOT = { has_idea = republik7 }
+		}
+		remove_idea_group = republik0
+		add_idea_group = diktatur0
+		add_idea = diktatur1
+		add_idea = diktatur2
+		add_idea = diktatur3
+		add_idea = diktatur4
+		add_idea = diktatur5
+		add_idea = diktatur6
+		}
+		
+		if = {
+		limit = {
+		government = dictatorship
+		has_idea = republik7
+		
+		}
+		remove_idea_group = republik0
+		add_idea_group = diktatur0
+		add_idea = diktatur1
+		add_idea = diktatur2
+		add_idea = diktatur3
+		add_idea = diktatur4
+		add_idea = diktatur5
+		add_idea = diktatur6
+		add_idea = diktatur7
+		}
+		
+		
+		
+		
+		
+		
+		}
+		
+		mean_time_to_happen = {
+
+	days = 10
+		}
+
+
+	option = {
+		name = "flogi_ideas.54"
+		add_prestige = 5
+		
+		}
+}
+
+################################
+#### Regierungswechsel, Ideengruppen Korrektur
+################################
+
+
+
+country_event = {          # Monarchie ---> Republik/Aristokratie
+
+	id = flogi_ideas.6
+	title = flogi_ideas.62
+	desc = flogi_ideas.63
+	
+	picture = OVEREXTENSION_eventPicture
+		
+	trigger = {
+		
+		OR = {
+		government = republic
+		government = theocracy
+		}
+		has_idea_group = monarchie0
+		
+		}
+		
+		immediate = { 
+		
+		# republik Teil
+		if = {
+		limit = {
+		government = republic
+		has_idea = monarchie1
+		NOT = { has_idea = monarchie2 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = republik0
+		add_idea = republik1
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = monarchie2
+		NOT = { has_idea = monarchie3 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = monarchie3
+		NOT = { has_idea = monarchie4 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = monarchie4
+		NOT = { has_idea = monarchie5 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = monarchie5
+		NOT = { has_idea = monarchie6 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = monarchie6
+		NOT = { has_idea = monarchie7 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		add_idea = republik6
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = monarchie7
+		
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		add_idea = republik6
+		add_idea = republik7
+		}
+		
+		
+		# Theokratie Teil
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = monarchie1
+		NOT = { has_idea = monarchie2 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = monarchie2
+		NOT = { has_idea = monarchie3 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = monarchie3
+		NOT = { has_idea = monarchie4 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = monarchie4
+		NOT = { has_idea = monarchie5 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = monarchie5
+		NOT = { has_idea = monarchie6 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = monarchie6
+		NOT = { has_idea = monarchie7 }
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		add_idea = noble_resilience
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = monarchie7
+		
+		}
+		remove_idea_group = monarchie0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		add_idea = noble_resilience
+		add_idea = military_traditions
+		}
+		
+		
+		
+		
+		
+		}
+		
+		mean_time_to_happen = {
+
+	days = 10
+		}
+
+
+	option = {
+		name = "flogi_ideas.64"
+		add_prestige = 5
+		
+		}
+}
+
+################################
+#### Regierungswechsel, Ideengruppen Korrektur
+################################
+
+
+
+country_event = {          # Diktatur ---> Aristokratie/Monarchie/Republik
+
+	id = flogi_ideas.7
+	title = flogi_ideas.72
+	desc = flogi_ideas.73
+	
+	picture = OVEREXTENSION_eventPicture
+		
+	trigger = {
+		
+		OR = {
+		government = republic
+		government = theocracy
+		government = monarchy
+		}
+		has_idea_group = diktatur0
+		
+		}
+		
+		immediate = { 
+		
+		# Republik Teil
+		if = {
+		limit = {
+		government = republic
+		has_idea = diktatur1
+		NOT = { has_idea = diktatur2 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = republik0
+		add_idea = republik1
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = diktatur2
+		NOT = { has_idea = diktatur3 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = diktatur3
+		NOT = { has_idea = diktatur4 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = diktatur4
+		NOT = { has_idea = diktatur5 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = diktatur5
+		NOT = { has_idea = diktatur6 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = diktatur6
+		NOT = { has_idea = diktatur7 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		add_idea = republik6
+		}
+		
+		if = {
+		limit = {
+		government = republic
+		has_idea = diktatur7
+		
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = republik0
+		add_idea = republik1
+		add_idea = republik2
+		add_idea = republik3
+		add_idea = republik4
+		add_idea = republik5
+		add_idea = republik6
+		add_idea = republik7
+		}
+		
+		# Monarchie Teil
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = diktatur1
+		NOT = { has_idea = diktatur2 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = diktatur2
+		NOT = { has_idea = diktatur3 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = diktatur3
+		NOT = { has_idea = diktatur4 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = diktatur4
+		NOT = { has_idea = diktatur5 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = diktatur5
+		NOT = { has_idea = diktatur6 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = diktatur6
+		NOT = { has_idea = diktatur7 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		add_idea = monarchie6
+		}
+		
+		if = {
+		limit = {
+		government = monarchy
+		has_idea = diktatur7
+		
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = monarchie0
+		add_idea = monarchie1
+		add_idea = monarchie2
+		add_idea = monarchie3
+		add_idea = monarchie4
+		add_idea = monarchie5
+		add_idea = monarchie6
+		add_idea = monarchie7
+		}
+		
+		
+		
+		
+		# Theokratie Teil
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = diktatur1
+		NOT = { has_idea = diktatur2 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = diktatur2
+		NOT = { has_idea = diktatur3 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = diktatur3
+		NOT = { has_idea = diktatur4 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = diktatur4
+		NOT = { has_idea = diktatur5 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = diktatur5
+		NOT = { has_idea = diktatur6 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = diktatur6
+		NOT = { has_idea = diktatur7 }
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		add_idea = noble_resilience
+		}
+		
+		if = {
+		limit = {
+		government = theocracy
+		has_idea = diktatur7
+		
+		}
+		remove_idea_group = diktatur0
+		add_idea_group = aristocracy_ideas
+		add_idea = noble_knights
+		add_idea = local_nobility
+		add_idea = serfdom
+		add_idea = noble_officers
+		add_idea = international_nobility
+		add_idea = noble_resilience
+		add_idea = military_traditions
+		}
+		
+		
+		
+		
+		
+		}
+		
+		mean_time_to_happen = {
+
+	days = 10
+		}
+
+
+	option = {
+		name = "flogi_ideas.74"
+		add_prestige = 5
+		
+		}
+}
+	
