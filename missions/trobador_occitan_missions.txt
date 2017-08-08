@@ -1264,7 +1264,7 @@ control_strategic_province = {
 		FROM = {
 			add_prestige = 5
 			add_treasury = 25
-			add_mercantilism = 2
+			add_mercantilism = 1
 		}
 	}
 	
