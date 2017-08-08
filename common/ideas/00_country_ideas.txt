@@ -1459,11 +1459,11 @@ BOH_ideas = {
 ITA_ideas = {
 	start = {
 		global_trade_power = 0.20
-		development_cost = -0.15
+		development_cost = -0.10
 	}
 	
 	bonus = {
-		defensiveness = 0.20
+		infantry_power = 0.1
 	}
 	
 	trigger = {
@@ -1492,7 +1492,6 @@ ITA_ideas = {
 	}
 	italian_tax_reform = {
 		mercenary_discipline = 0.05
-		infantry_power = 0.1
 	}
 	heir_to_the_empire = {
 		prestige = 1
