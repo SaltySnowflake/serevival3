@@ -50,7 +50,7 @@ technology = {
 technology = {
 	# Tech 3
 	year = 1440
-
+	allowed_idea_groups = 1
 	production_efficiency	=	0.05
 	may_support_rebels = yes
 }
@@ -60,6 +60,7 @@ technology = {
 	year = 1453
 	# Temple
 	temple = yes
+	allowed_idea_groups = 2
 	
 }
 
@@ -67,7 +68,7 @@ technology = {
 	# Tech 5
 	year = 1466
 
-	allowed_idea_groups = 1
+	allowed_idea_groups = 3
 	production_efficiency	 =	0.05
 }
 
@@ -84,15 +85,17 @@ technology = {
 	year = 1492
 	
 	#Noble Republic
-	allowed_idea_groups = 2	
+	allowed_idea_groups = 4
+	noble_republic = yes 
 }
 
 technology = {
 	# Tech 8
 
 	year = 1505
+	allowed_idea_groups = 5
 	courthouse = yes
-	max_states = 3
+	max_states = 5
 
 }
 
@@ -103,6 +106,7 @@ technology = {
 	#The Scythe
 	production_efficiency 	=	0.05
 	farm_estate = yes
+	
 
 }
 
@@ -110,7 +114,7 @@ technology = {
 	# Tech 10
 	year = 1531
 	
-	allowed_idea_groups = 3
+	allowed_idea_groups = 6
 	theocratic_government = yes
 	SEtradegoods = yes
 }
@@ -130,7 +134,8 @@ technology = {
 	
 	administrative_monarchy	= yes 
 	administrative_republic	= yes
-	max_states = 3
+	allowed_idea_groups = 7
+	max_states = 6
 }
 
 technology = {
@@ -146,7 +151,7 @@ technology = {
 	year = 1583
 	
 	plantations = yes
-	allowed_idea_groups	= 4
+	allowed_idea_groups	= 8
 }
 
 technology = {
@@ -161,7 +166,7 @@ technology = {
 	# Tech 16
 	year = 1609
 	
-	
+		allowed_idea_groups = 9
 	production_efficiency 	=	0.05
 
 
@@ -172,9 +177,8 @@ technology = {
 	year = 1622
 	
 	university = yes	
-	max_states = 5
-	
-	administrative_efficiency = 0.1
+	max_states = 9	
+	administrative_efficiency = 0.2
 	development_efficiency = 0.1
 }
 
@@ -182,7 +186,7 @@ technology = {
 	# Tech 18
 	year = 1635
 	
-	allowed_idea_groups	= 5
+	allowed_idea_groups	= 10
 }
 
 technology = {
@@ -197,8 +201,9 @@ technology = {
 	# Tech 20
 	year = 1661
 	
+	allowed_idea_groups = 11
 	republican_dictatorship = yes
-	max_states = 5
+	max_states = 6
 }
 
 technology = {
@@ -213,7 +218,7 @@ technology = {
 	# Tech 22
 	year = 1687
 	
-	allowed_idea_groups = 6
+	allowed_idea_groups = 12
 	constitutional_monarchy = yes
 	constitutional_republic = yes  
 
@@ -224,16 +229,16 @@ technology = {
 	# Tech 23
 	year = 1700
 	
-	administrative_efficiency = 0.1
+	administrative_efficiency = 0.2
 	development_efficiency = 0.1
 }
 
 technology = {
 	# Tech 24
 	year = 1715
-	
+	allowed_idea_groups = 13
+	max_states = 15
 	counting_house = yes  
-	max_states = 5
 }
 
 technology = {
@@ -249,16 +254,16 @@ technology = {
 	# Tech 26
 	year = 1745
 	
-	allowed_idea_groups 	= 	7
+	allowed_idea_groups 	= 	14
 }
 
 technology = {
 	# Tech 27
 	year = 1760
 
-	administrative_efficiency = 0.1
+	administrative_efficiency = 0.2
 	development_efficiency = 0.1	
-	max_states = 5
+	max_states = 18
 }
 
 technology = {
@@ -266,6 +271,7 @@ technology = {
 	year = 1775
 	
 	#Rotherham Plough
+	allowed_idea_groups = 15
 	production_efficiency 	=	0.05
 }
 
@@ -273,7 +279,7 @@ technology = {
 	# Tech 29
 	year = 1790
 	
-	allowed_idea_groups = 8
+	allowed_idea_groups = 16
 	enlightened_despotism = yes
 	bureaucratic_despotism = yes
 }
@@ -292,7 +298,7 @@ technology = {
 	
 	revolutionary_republic = yes
 	revolutionary_empire = yes
-	max_states = 5
+	max_states = 21
 }
 
 technology = {
