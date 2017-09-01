@@ -898,7 +898,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_resource_icon"
 		texturefile = "gfx//interface//resources.tga"
-		noOfFrames = 81 #Pirate SE3
+		noOfFrames = 44 #Pirate SE3
 		loadType = "INGAME"
 	}
 	
